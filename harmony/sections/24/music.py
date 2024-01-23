@@ -282,7 +282,11 @@ def perc2(m):
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(run, "o<| mf")
+            baca.hairpin(
+                (),
+                "o<| mf",
+                pieces=[run],
+            )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
@@ -372,9 +376,10 @@ def va(m):
         baca.pitch(o, "F4")
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
@@ -386,7 +391,11 @@ def va(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o],
+        )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#3")
         baca.scp_spanner(
@@ -409,9 +418,10 @@ def vc1(m):
             baca.triple_staccato(u)
         # NOTE: text spanner must currently come before pitched trill spanner
         baca.scp_spanner(
-            o.leaves()[5:12],
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o.leaves()[5:12]],
         )
         for run in baca.select.runs(o)[1:-1]:
             run = baca.select.rleak(run)
@@ -431,9 +441,10 @@ def vc1(m):
         )
         for run in runs:
             baca.scp_spanner(
-                baca.select.rleak(run),
+                (),
                 "P =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F4"),
@@ -462,9 +473,10 @@ def vc2(m):
         baca.pitch(o, "F4")
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
@@ -478,7 +490,11 @@ def vc2(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o],
+        )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#2")
         baca.scp_spanner(
@@ -501,9 +517,10 @@ def cb1(m):
             baca.triple_staccato(u)
         # NOTE: text spanner must currently come before pitched trill spanner
         baca.scp_spanner(
-            o.leaves()[5:12],
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o.leaves()[5:12]],
         )
         for run in baca.select.runs(o)[1:-1]:
             run = baca.select.rleak(run)
@@ -524,9 +541,10 @@ def cb1(m):
         for run in runs:
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.scp_spanner(
-                run,
+                (),
                 "P =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "E4", do_not_transpose=True)
@@ -555,9 +573,10 @@ def cb2(m):
         baca.pitch(o, "E4", do_not_transpose=True)
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
@@ -571,7 +590,11 @@ def cb2(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o],
+        )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")
         baca.scp_spanner(
@@ -606,10 +629,11 @@ def composites(cache):
             elif name == "cb2":
                 tweak = abjad.Tweak(r"- \tweak staff-padding 5.5")
             baca.scp_spanner(
-                o.leaves(),
+                (),
                 "T2 -> T4",
                 tweak,
                 bookend=True,
+                pieces=[o.leaves()],
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -619,7 +643,11 @@ def composites(cache):
             baca.flat_glissando(o)
             baca.dynamic(o.phead(0), "pp")
         with baca.scope(m.get(7, 8)) as o:
-            baca.hairpin(o.rleaves(), "(pp) < f")
+            baca.hairpin(
+                (),
+                "(pp) < f",
+                pieces=[o.rleaves()],
+            )
         with baca.scope(m.get(1, 9)) as o:
             baca.override.dls_staff_padding(o, 4)
 

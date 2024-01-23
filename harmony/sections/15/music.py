@@ -349,7 +349,11 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-superball-markup",
@@ -451,9 +455,10 @@ def va(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb3")
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.pitch(o, "F4")
@@ -466,9 +471,10 @@ def va(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.bow_speed_spanner(
-                run,
+                (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
 
 
@@ -478,13 +484,18 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "A2")
@@ -495,9 +506,17 @@ def vc1(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(run, "o<| f")
+                baca.hairpin(
+                    (),
+                    "o<| f",
+                    pieces=[run],
+                )
             elif i == 1:
-                baca.hairpin(run[:-1], "o<| fff-scratch")
+                baca.hairpin(
+                    (),
+                    "o<| fff-scratch",
+                    pieces=[run[:-1]],
+                )
 
 
 def vc2(m):
@@ -506,7 +525,11 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[3]) as o:
         baca.literal(
             o.leaf(0),
@@ -523,16 +546,18 @@ def vc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "G2")
@@ -543,9 +568,17 @@ def vc2(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(run, "o<| f")
+                baca.hairpin(
+                    (),
+                    "o<| f",
+                    pieces=[run],
+                )
             elif i == 1:
-                baca.hairpin(run[:-1], "o<| fff-scratch")
+                baca.hairpin(
+                    (),
+                    "o<| fff-scratch",
+                    pieces=[run[:-1]],
+                )
 
 
 def cb1(m):
@@ -554,7 +587,11 @@ def cb1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[3]) as o:
         baca.literal(
             o.leaf(0),
@@ -576,16 +613,18 @@ def cb1(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "G#1")
@@ -596,9 +635,17 @@ def cb1(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(run, "o<| f")
+                baca.hairpin(
+                    (),
+                    "o<| f",
+                    pieces=[run],
+                )
             elif i == 1:
-                baca.hairpin(run[:-1], "o<| fff-scratch")
+                baca.hairpin(
+                    (),
+                    "o<| fff-scratch",
+                    pieces=[run[:-1]],
+                )
 
 
 def cb2(m):
@@ -607,7 +654,11 @@ def cb2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[3]) as o:
         baca.literal(
             o.leaf(0),
@@ -624,16 +675,18 @@ def cb2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")
@@ -644,9 +697,17 @@ def cb2(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(run, "o<| f")
+                baca.hairpin(
+                    (),
+                    "o<| f",
+                    pieces=[run],
+                )
             elif i == 1:
-                baca.hairpin(run[:-1], "o<| fff-scratch")
+                baca.hairpin(
+                    (),
+                    "o<| fff-scratch",
+                    pieces=[run[:-1]],
+                )
 
 
 def composites(cache):

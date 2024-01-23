@@ -250,16 +250,21 @@ def va(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.hairpin(baca.select.tleaves(o, rleak=True), "mf >o niente")
+        baca.hairpin(
+            (),
+            "mf >o niente",
+            pieces=[baca.select.tleaves(o, rleak=True)],
+        )
         baca.markup(
             o.pleaf(0),
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "C4")
@@ -312,8 +317,9 @@ def cb2(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "ff")
         baca.pizzicato_spanner(
-            baca.select.tleaves(o, rleak=True),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 6.5"),
+            pieces=[baca.select.tleaves(o, rleak=True)],
         )
         baca.markup(
             o.pheads(),
@@ -337,13 +343,18 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.tuplet_bracket_up(o)
-            baca.hairpin(baca.select.tleaves(o, rleak=True), "mp >o niente")
+            baca.hairpin(
+                (),
+                "mp >o niente",
+                pieces=[baca.select.tleaves(o, rleak=True)],
+            )
             with baca.scope(baca.select.rleak(o.leaves()[-2:])) as u:
                 if name in ("va", "vc1", "vc2"):
                     baca.bow_speed_spanner(
-                        u,
+                        (),
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                        pieces=[u],
                     ),
                     baca.metric_modulation_spanner(
                         (),
@@ -353,9 +364,10 @@ def composites(cache):
                     )
                 elif name == "cb1":
                     baca.bow_speed_spanner(
-                        u,
+                        (),
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 8"),
+                        pieces=[u],
                     )
                     baca.metric_modulation_spanner(
                         (),
@@ -369,7 +381,11 @@ def composites(cache):
             for run in abjad.select.runs(o):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
-            baca.hairpin(baca.select.tleaves(o, rleak=True), "o<| ff")
+            baca.hairpin(
+                (),
+                "o<| ff",
+                pieces=[baca.select.tleaves(o, rleak=True)],
+            )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 2)) as o:

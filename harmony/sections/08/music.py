@@ -347,9 +347,10 @@ def vc2(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "B2")
         baca.hairpin(
-            o.leaves()[-2:],
+            (),
             "(p) >o",
             bookend=False,
+            pieces=[o.leaves()[-2:]],
         )
         baca.damp_spanner(
             (),
@@ -427,7 +428,12 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.pitch(o, "Bb2")
-        baca.hairpin(o.leaves()[-2:], "(p) >o", bookend=False)
+        baca.hairpin(
+            (),
+            "(p) >o",
+            bookend=False,
+            pieces=[o.leaves()[-2:]],
+        )
         baca.damp_spanner(
             (),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),

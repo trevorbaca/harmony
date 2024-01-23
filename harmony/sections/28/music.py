@@ -326,7 +326,11 @@ def perc2(m):
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(run, "f >o niente")
+            baca.hairpin(
+                (),
+                "f >o niente",
+                pieces=[run],
+            )
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
@@ -398,10 +402,11 @@ def va(cache):
             left_broken=True,
         )
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poc. scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "<G4 Ab4 Bb4>")
@@ -419,9 +424,10 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
 
 

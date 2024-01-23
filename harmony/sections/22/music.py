@@ -550,12 +550,17 @@ def va(m):
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "o< f")
+        baca.hairpin(
+            (),
+            "o< f",
+            pieces=[o],
+        )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
+            pieces=[o.leaves()],
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "alto")
@@ -581,12 +586,17 @@ def va(m):
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o],
+        )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
+            pieces=[o.leaves()],
         )
 
 
@@ -647,12 +657,17 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 1.5)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "o< f")
+        baca.hairpin(
+            (),
+            "o< f",
+            pieces=[o],
+        )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
+            pieces=[o.leaves()],
         )
     with baca.scope(m[4]) as o:
         baca.override.tuplet_bracket_staff_padding(o, 3)
@@ -682,12 +697,17 @@ def vc2(m):
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o],
+        )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
+            pieces=[o.leaves()],
         )
     with baca.scope(m[13]) as o:
         baca.override.tuplet_bracket_staff_padding(o, 3)
@@ -698,12 +718,17 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "o< f")
+        baca.hairpin(
+            (),
+            "o< f",
+            pieces=[o],
+        )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
+            pieces=[o.leaves()],
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -774,13 +799,18 @@ def cb2(m):
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o],
+        )
         baca.override.dls_staff_padding(o, 4)
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
+            pieces=[o.leaves()],
         )
 
 

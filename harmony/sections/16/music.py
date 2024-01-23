@@ -370,8 +370,9 @@ def va(m):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F4")
@@ -379,9 +380,10 @@ def va(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.bow_speed_spanner(
-                run,
+                (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "D4"),
@@ -392,9 +394,10 @@ def va(m):
         )
         baca.dynamic(o.phead(0), "pp")
         baca.bow_speed_spanner(
-            o.rleaves(),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[o.rleaves()],
             right_broken=True,
         )
 
@@ -415,7 +418,11 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "D#3")
         baca.dynamic(o.phead(0), "pp")
@@ -444,7 +451,11 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "C#3")
         baca.dynamic(o.phead(0), "pp")
@@ -474,15 +485,20 @@ def cb1(m):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G#1")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(o, "E3 D#3")
         for run in baca.select.runs(o):
@@ -499,8 +515,9 @@ def cb1(m):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
 
 
@@ -521,15 +538,20 @@ def cb2(m):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(o, "C#3 D3")
         for run in baca.select.runs(o):
@@ -546,8 +568,9 @@ def cb2(m):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
 
 

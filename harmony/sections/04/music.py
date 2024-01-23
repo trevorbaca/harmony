@@ -584,8 +584,9 @@ def cb1(cache):
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "Aqs4", do_not_transpose=True)
             baca.pizzicato_spanner(
-                baca.select.rleaves(o, grace=False),
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                pieces=[baca.select.rleaves(o, grace=False)],
             )
             baca.markup(o.pleaf(0), r"\baca-eleven-e")
             baca.markup(
@@ -604,8 +605,9 @@ def cb2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.pizzicato_spanner(
-            baca.select.rleaves(o, grace=False),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleaves(o, grace=False)],
         )
         baca.markup(
             o.pleaf(0),

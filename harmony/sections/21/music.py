@@ -471,11 +471,12 @@ def va(m):
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
             baca.scp_spanner(
-                o.leaves(),
+                (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=-1,
                 left_broken=True,
+                pieces=[o.leaves()],
             )
     with baca.scope(m[1]) as o:
         baca.metric_modulation_spanner(
@@ -490,9 +491,10 @@ def va(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.bow_speed_spanner(
-                run,
+                (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[5]) as o:
         baca.accent(o.pheads())
@@ -500,8 +502,9 @@ def va(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "mf")
         baca.pizzicato_spanner(
-            baca.select.rleak(o.tleaves(), count=2),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(o.tleaves(), count=2)],
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -516,18 +519,20 @@ def vc1(m):
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
             baca.scp_spanner(
-                o.tleaves(),
+                (),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=-1,
+                pieces=[o.tleaves()],
             )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -543,17 +548,19 @@ def vc2(m):
             baca.pitch(o, "Dqf3")
             baca.dynamic(o.phead(0), "p")
             baca.bow_speed_spanner(
-                baca.select.rleak(baca.select.ltleaves(o)),
+                (),
                 "poco scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[baca.select.rleak(baca.select.ltleaves(o))],
             )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -569,18 +576,20 @@ def cb1(m):
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
             baca.scp_spanner(
-                o.tleaves(),
+                (),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=-1,
+                pieces=[o.tleaves()],
             )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -597,22 +606,33 @@ def cb2(m):
             baca.pitch(o, "E1")
             baca.flat_glissando(o)
             baca.scp_spanner(
-                o.leaves(),
+                (),
                 "P1 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=-1,
+                pieces=[o.leaves()],
             )
     with baca.scope(m[1]) as o:
-        baca.hairpin(o.rleaves(), "mf >o niente")
+        baca.hairpin(
+            (),
+            "mf >o niente",
+            pieces=[o.rleaves()],
+        )
     with baca.scope(m[4]) as o:
-        baca.hairpin(o.rleaves(), "mf >o", bookend=False)
+        baca.hairpin(
+            (),
+            "mf >o",
+            bookend=False,
+            pieces=[o.rleaves()],
+        )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -628,7 +648,11 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1])
-                baca.hairpin(run, "o<| f")
+                baca.hairpin(
+                    (),
+                    "o<| f",
+                    pieces=[run],
+                )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 5)) as o:

@@ -393,7 +393,11 @@ def perc2(m):
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(run, "f >o niente")
+            baca.hairpin(
+                (),
+                "f >o niente",
+                pieces=[run],
+            )
         baca.markup(
             o.pleaf(0),
             r"\baca-slate-brush-markup",
@@ -405,7 +409,11 @@ def perc2(m):
         baca.stem_tremolo(o.pleaves()[:2])
         for run in baca.select.runs(o)[:1]:
             run = baca.select.rleak(run)
-            baca.hairpin(run, "f >o niente")
+            baca.hairpin(
+                (),
+                "f >o niente",
+                pieces=[run],
+            )
         baca.markup(
             o.pleaf(2),
             r"\baca-slate-scrape-markup",
@@ -472,9 +480,10 @@ def va(cache):
         baca.flat_glissando(o)
         baca.dynamic(o.phead(0), "mp")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
