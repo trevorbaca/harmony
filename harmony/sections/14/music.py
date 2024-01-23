@@ -703,8 +703,9 @@ def va(cache):
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.hairpin(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             "f >o niente",
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
         baca.metric_modulation_spanner(
             (),
@@ -744,7 +745,11 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpin(o.plts(), '"ff" "ff"')
+        baca.hairpin(
+            (),
+            '"ff" "ff"',
+            pieces=[o.plts()],
+        )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -753,7 +758,11 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
             baca.override.note_head_style_harmonic_black(u)
@@ -769,8 +778,9 @@ def vc1(cache):
             m = cache[name]
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             "mf >o niente",
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 4),
@@ -840,7 +850,11 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[5]) as o:
         baca.override.tuplet_bracket_up(o)
@@ -909,7 +923,11 @@ def cb1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
             baca.override.note_head_style_harmonic_black(u)
@@ -925,8 +943,9 @@ def cb1(cache):
             m = cache[name]
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             "mf >o niente",
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -973,7 +992,11 @@ def cb2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
@@ -1009,24 +1032,46 @@ def composites(cache):
     for name in ["va", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.hairpin(o.tleaves(), "o< mp")
+            baca.hairpin(
+                (),
+                "o< mp",
+                pieces=[o.tleaves()],
+            )
             baca.scp_spanner(
-                o.tleaves(),
+                (),
                 "T1 -> P1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=True,
+                pieces=[o.tleaves()],
             )
         with baca.scope(m.get(6, 9)) as o:
-            baca.hairpin(o.run(0), "o< mp")
-            baca.hairpin(o.run(1), "o< mf")
-            baca.hairpin(o.run(2), "o< f")
-            baca.hairpin(o.run(3), "o< ff")
+            baca.hairpin(
+                (),
+                "o< mp",
+                pieces=[o.run(0)],
+            )
+            baca.hairpin(
+                (),
+                "o< mf",
+                pieces=[o.run(1)],
+            )
+            baca.hairpin(
+                (),
+                "o< f",
+                pieces=[o.run(2)],
+            )
+            baca.hairpin(
+                (),
+                "o< ff",
+                pieces=[o.run(3)],
+            )
             for run in baca.select.runs(o):
                 baca.scp_spanner(
-                    run,
+                    (),
                     "T1 -> P1",
                     abjad.Tweak(r"- \tweak staff-padding 3"),
                     bookend=True,
+                    pieces=[run],
                 )
         with baca.scope(m[11]) as o:
             pheads = baca.select.pheads(o)
@@ -1044,8 +1089,9 @@ def composites(cache):
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
             )
             baca.half_clt_spanner(
-                baca.select.rleak(baca.select.ltleaves(o)),
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[baca.select.rleak(baca.select.ltleaves(o))],
             )
 
 

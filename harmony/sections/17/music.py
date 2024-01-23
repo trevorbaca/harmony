@@ -475,10 +475,11 @@ def va(cache):
         baca.pitch(o, "D4")
         baca.flat_glissando(o, hide_middle_stems=True, left_broken=True)
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F4")
@@ -486,17 +487,23 @@ def va(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.bow_speed_spanner(
-                run,
+                (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D4")
-        baca.hairpin(o.rleaves(), "pp >o niente")
+        baca.hairpin(
+            (),
+            "pp >o niente",
+            pieces=[o.rleaves()],
+        )
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
 
 
@@ -531,7 +538,11 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
         baca.scp_spanner(
@@ -574,7 +585,11 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
         baca.scp_spanner(
@@ -617,7 +632,11 @@ def cb1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
         baca.scp_spanner(
@@ -660,7 +679,11 @@ def cb2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(o.tleaves(), "f <| fff-scratch")
+        baca.hairpin(
+            (),
+            "f <| fff-scratch",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
         baca.scp_spanner(
@@ -693,11 +716,19 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.hairpin(o.tleaves(), "p < f")
+            baca.hairpin(
+                (),
+                "p < f",
+                pieces=[o.tleaves()],
+            )
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[5]) as o:
-            baca.hairpin(o.rleaves(), "f >o niente")
+            baca.hairpin(
+                (),
+                "f >o niente",
+                pieces=[o.rleaves()],
+            )
         for n in [1, 5]:
             with baca.scope(m[n]) as o:
                 baca.triple_staccato(o.pheads())

@@ -527,7 +527,11 @@ def perc2(m):
         baca.stem_tremolo(o.pleaf(0))
         for run in baca.select.runs(o)[:1]:
             run = baca.select.rleak(run)
-            baca.hairpin(run, "f >o niente")
+            baca.hairpin(
+                (),
+                "f >o niente",
+                pieces=[run],
+            )
         baca.markup(
             o.pleaf(0),
             r"\baca-slate-brush-markup",
@@ -610,9 +614,10 @@ def va(cache):
         baca.pitch(o, "Ab4")
         baca.dynamic(o.phead(0), "mp")
         baca.bow_speed_spanner(
-            baca.select.rleak(o.ltleaves()),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.ltleaves())],
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
@@ -630,10 +635,11 @@ def va(cache):
         baca.pitch(o.plts()[:-1], "Ab4")
         baca.dynamic(o.phead(0), "p")
         baca.bow_speed_spanner(
-            o.leaves(),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[o.leaves()],
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o.plts(), "<G4 Ab4 Bb4>")
@@ -653,9 +659,10 @@ def va(cache):
         )
         baca.dynamic(o.phead(0), "p")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         baca.markup(
             o.pleaf(0),
@@ -710,9 +717,10 @@ def vc1(cache):
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     for item in [(4, 5), 9]:
         with baca.scope(m.get(item)) as o:
@@ -827,9 +835,10 @@ def cb1(cache):
         baca.clef(o.leaf(0), "bass")
         baca.dynamic(o.phead(0), "p")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     for item in [(4, 5), 9]:
         with baca.scope(m.get(item)) as o:

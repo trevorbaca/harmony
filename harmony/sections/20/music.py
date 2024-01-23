@@ -400,15 +400,20 @@ def va(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.bow_speed_spanner(
-                run,
+                (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[2]) as o:
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[o],
+        )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 8)) as o:
@@ -498,7 +503,11 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 2)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[o],
+        )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 10)) as o:
@@ -518,7 +527,11 @@ def cb1(m):
     with baca.scope(m[2]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpin(o, "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[o],
+        )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 10)) as o:
@@ -577,7 +590,11 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1]),
-                baca.hairpin(run, "o<| f")
+                baca.hairpin(
+                    (),
+                    "o<| f",
+                    pieces=[run],
+                )
         with baca.scope(m.get(3, 10)) as o:
             library.bridge_staff_position(o)
             baca.stem_tremolo(o.pleaves())

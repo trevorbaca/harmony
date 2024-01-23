@@ -503,7 +503,11 @@ def perc2(m):
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(run, "f >o niente")
+            baca.hairpin(
+                (),
+                "f >o niente",
+                pieces=[run],
+            )
         baca.markup(
             o.pleaf(0),
             r"\baca-slate-brush-markup",
@@ -787,7 +791,11 @@ def composites(cache):
         with baca.scope(m[8]) as o:
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads()[1:])
-            baca.hairpin(o, "o< f")
+            baca.hairpin(
+                (),
+                "o< f",
+                pieces=[o],
+            )
         with baca.scope(m[9]) as o:
             baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
@@ -800,14 +808,19 @@ def composites(cache):
                 baca.clef(o.leaf(0), "bass")
                 for run in baca.select.runs(o):
                     run = baca.select.rleak(run)
-                    baca.hairpin(run, "o<| ff")
+                    baca.hairpin(
+                        (),
+                        "o<| ff",
+                        pieces=[run],
+                    )
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
                 baca.scp_spanner(
-                    baca.select.tleaves(o, rleak=True),
+                    (),
                     "P1 =|",
                     abjad.Tweak(r"- \tweak staff-padding 3"),
+                    pieces=[baca.select.tleaves(o, rleak=True)],
                 )
 
 

@@ -187,9 +187,10 @@ def cb2(m):
         baca.pitch(o, "A1")
         baca.flat_glissando(o.leaves()[:1], left_broken=True)
         baca.hairpin(
-            o.rleaves(),
+            (),
             "ff >o niente",
             left_broken=True,
+            pieces=[o.rleaves()],
         )
         baca.scp_spanner(
             (),

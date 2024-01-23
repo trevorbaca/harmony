@@ -571,7 +571,11 @@ def perc1(m):
     with baca.scope(m[7]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-superball-markup",
@@ -580,7 +584,11 @@ def perc1(m):
     with baca.scope(m[8]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(run, "o<| f")
+            baca.hairpin(
+                (),
+                "o<| f",
+                pieces=[run],
+            )
     with baca.scope(m[10]) as o:
         library.triangle_staff_position(o)
         baca.flat_glissando(o.leaves()[:-1])
@@ -606,7 +614,11 @@ def perc2(m):
         library.bass_drum_staff_position(o)
         baca.flat_glissando(o, left_broken=True)
         baca.stem_tremolo(o.pleaf(-1))
-        baca.hairpin(o.rleaves(), "(p) >o niente")
+        baca.hairpin(
+            (),
+            "(p) >o niente",
+            pieces=[o.rleaves()],
+        )
     with baca.scope(m[2]) as o:
         library.tam_tam_staff_position(o)
         library.damp_rest_after_each_ptail(o)
@@ -754,16 +766,18 @@ def va(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D3")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "ff >o niente",
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
         baca.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            (),
             "mf >o niente",
+            pieces=[baca.select.tleaves(o, rleak=True)],
         )
         baca.markup(
             o.pleaf(0),
@@ -771,9 +785,10 @@ def va(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "alto")
@@ -848,7 +863,12 @@ def vc1(m):
 def vc2(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D2")
-        baca.hairpin(o.rleaves(), "ff >o niente", left_broken=True)
+        baca.hairpin(
+            (),
+            "ff >o niente",
+            left_broken=True,
+            pieces=[o.rleaves()],
+        )
     with baca.scope(m[6]) as o:
         baca.clef(o.phead(-1), "bass")
     for item in [2, (4, 5), 10]:
@@ -929,9 +949,10 @@ def cb2(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D2")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "ff >o niente",
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     for item in [2, (4, 5), 10]:
         with baca.scope(m.get(item)) as o:
@@ -1022,7 +1043,11 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[6]) as o:
             baca.stop_on_string(o.rest(1))
-            baca.hairpin(o.leaves()[1:3], "o<| ff")
+            baca.hairpin(
+                (),
+                "o<| ff",
+                pieces=[o.leaves()[1:3]],
+            )
             baca.accent(o.phead(-1))
             baca.stem_tremolo(o.plt(-1))
             baca.dynamic(o.phead(-1), "p")

@@ -517,7 +517,11 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.phead(1))
         baca.dynamic(o.phead(0), "mp")
-        baca.hairpin(baca.select.rleak(o.pleaves()[1:]), "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[baca.select.rleak(o.pleaves()[1:])],
+        )
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-struck-then-superball-markup",
@@ -527,7 +531,11 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.dynamic(o.phead(0), "mp")
         baca.laissez_vibrer(o.phead(1))
-        baca.hairpin(baca.select.rleak(o.pleaves()[1:]), "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[baca.select.rleak(o.pleaves()[1:])],
+        )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[3]) as o:
@@ -571,7 +579,11 @@ def perc1(cache):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(baca.select.rleak(o.pleaves()), "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[baca.select.rleak(o.pleaves())],
+        )
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-superball-markup",
@@ -580,15 +592,27 @@ def perc1(cache):
     with baca.scope(m[9]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(baca.select.rleak(o.pleaves()), "o< mp")
+        baca.hairpin(
+            (),
+            "o< mp",
+            pieces=[baca.select.rleak(o.pleaves())],
+        )
     with baca.scope(m[10]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(baca.select.rleak(o.pleaves()), "o< mp")
+        baca.hairpin(
+            (),
+            "o< mp",
+            pieces=[baca.select.rleak(o.pleaves())],
+        )
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(baca.select.rleak(o.pleaves()), "o< mp")
+        baca.hairpin(
+            (),
+            "o< mp",
+            pieces=[baca.select.rleak(o.pleaves())],
+        )
     with baca.scope(m.get(8, 11)) as o:
         baca.override.tuplet_bracket_up(o)
         baca.override.dls_staff_padding(o, 6)
@@ -764,16 +788,18 @@ def va(cache):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D4"),
         baca.dynamic(o.phead(0), "pp")
         baca.bow_speed_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "alto")
@@ -851,7 +877,11 @@ def vc1(cache):
         baca.pitch(o, "D3")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(run, "mp -- niente")
+            baca.hairpin(
+                (),
+                "mp -- niente",
+                pieces=[run],
+            )
             baca.damp_spanner(
                 (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -976,8 +1006,9 @@ def cb1(cache):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
@@ -1103,8 +1134,9 @@ def cb2(cache):
             full=True,
         )
         baca.half_clt_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
@@ -1215,7 +1247,11 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[6]) as o:
             baca.triple_staccato(o.pheads())
-            baca.hairpin(o.tleaves(), "p < f")
+            baca.hairpin(
+                (),
+                "p < f",
+                pieces=[o.tleaves()],
+            )
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:

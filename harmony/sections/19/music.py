@@ -644,7 +644,11 @@ def perc1(cache):
         baca.accent(o.phead(0))
         baca.laissez_vibrer(o.phead(1))
         baca.dynamic(o.phead(0), "mp")
-        baca.hairpin(baca.select.rleak(o.pleaves()[1:]), "o< mf")
+        baca.hairpin(
+            (),
+            "o< mf",
+            pieces=[baca.select.rleak(o.pleaves()[1:])],
+        )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
@@ -1076,7 +1080,11 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(4, 9)) as o:
             baca.stem_tremolo(o.pleaves())
-            baca.hairpin(o, "o< fff-scratch")
+            baca.hairpin(
+                (),
+                "o< fff-scratch",
+                pieces=[o],
+            )
             baca.override.dls_staff_padding(o, 4 + 2)
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
     for name in ["va", "vc1", "vc2", "cb1"]:

@@ -493,9 +493,10 @@ def va(m):
         baca.override.dls_staff_padding(o, 4),
         for run in baca.select.runs(o):
             baca.bow_speed_spanner(
-                baca.select.rleak(run),
+                (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -544,9 +545,10 @@ def vc1(m):
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
             baca.bow_speed_spanner(
-                baca.select.rleak(run),
+                (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m.get(1, 4)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -641,9 +643,10 @@ def vc2(m):
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
             baca.bow_speed_spanner(
-                baca.select.rleak(run),
+                (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -690,8 +693,9 @@ def cb1(m):
         baca.staff_lines(o.leaf(0), 5)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pizzicato_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
         baca.markup(
@@ -703,7 +707,11 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "E1"),
         baca.flat_glissando(o)
-        baca.hairpin(o, "mf > p")
+        baca.hairpin(
+            (),
+            "mf > p",
+            pieces=[o],
+        )
         baca.scp_spanner(
             (),
             "P1 -> T1",
@@ -755,8 +763,9 @@ def cb2(m):
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pizzicato_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         baca.markup(
             o.pleaf(0),
