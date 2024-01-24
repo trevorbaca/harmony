@@ -993,7 +993,7 @@ def cb1(cache):
             (),
             "P2 -> P4 -> P1 -> P3 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            final_piece_spanner=False,
+            do_not_start_spanner_on_final_piece=True,
             pieces=baca.select.plts(leaves),
         )
     with baca.scope(m[7]) as o:
