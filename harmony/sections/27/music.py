@@ -471,10 +471,9 @@ def perc1(m):
         baca.damp(o.phead(0))
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(6, 7)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[baca.select.rleak(o.tleaves(), count=2)],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.tleaves(), count=2),
+            staff_padding=10.5,
         )
     with baca.scope(m[9]) as o:
         library.brake_drum_staff_position(o)
@@ -491,11 +490,10 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:2],
             left_broken=True,
-            pieces=[o.leaves()[:2]],
+            staff_padding=8,
         )
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -548,10 +546,9 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(6, 7)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[baca.select.rleak(o.tleaves(), count=2)],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.tleaves(), count=2),
+            staff_padding=10.5,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -598,10 +595,9 @@ def hp(m):
     with baca.scope(m.get(6, 7)) as o:
         baca.pitch(o, "Bb4")
         baca.snap_pizzicato(o.pheads())
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(o.tleaves(), count=2)],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.tleaves(), count=2),
+            staff_padding=5.5,
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -864,10 +860,9 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "f")
         baca.dynamic(o.phead(2), "pp")
     with baca.scope(m.get(3, 4)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[o.leaves()[4:13]],
+        baca.spanners.metric_modulation(
+            o.leaves()[4:13],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.damp_spanner(

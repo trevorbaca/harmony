@@ -486,11 +486,10 @@ def hp(m):
         baca.pitch(o, "D5")
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:2],
             left_broken=True,
-            pieces=[o.leaves()[:2]],
+            staff_padding=8,
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -535,11 +534,10 @@ def hp(m):
             abjad.Tweak(r"- \tweak self-alignment-X 0"),
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[baca.select.rleak(o.leaves()[-1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[-1:]),
             right_broken=True,
+            staff_padding=10.5,
         )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -644,10 +642,9 @@ def vc1(m):
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[o.leaves()[:9]],
+        baca.spanners.metric_modulation(
+            o.leaves()[:9],
+            staff_padding=8,
         )
 
 
@@ -770,10 +767,9 @@ def cb2(m):
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(o.leaves()[1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[1:]),
+            staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")

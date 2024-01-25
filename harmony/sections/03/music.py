@@ -534,10 +534,9 @@ def vc1(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[o.leaves()[2:9]],
+        baca.spanners.metric_modulation(
+            o.leaves()[2:9],
+            staff_padding=8,
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -600,10 +599,9 @@ def vc1(m):
                 pieces=[u],
                 right_broken=True,
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=8,
                 right_broken=True,
             )
 
@@ -692,10 +690,9 @@ def cb1(m):
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pizzicato_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.pizzicato(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
         baca.markup(
@@ -762,10 +759,9 @@ def cb2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pizzicato_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.pizzicato(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
         baca.markup(
             o.pleaf(0),

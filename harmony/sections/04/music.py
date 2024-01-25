@@ -366,19 +366,17 @@ def perc2(m):
         baca.dynamic(o.phead(0), "p-sub")
     with baca.scope(m.get(8, 9)) as o:
         library.purpleheart_staff_positions(o, [2])
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.rleak(o.pleaves())],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.pleaves()),
+            staff_padding=3,
         )
     with baca.scope(m[11]) as o:
         library.purpleheart_staff_positions(o, [0])
         baca.dynamic(o.phead(0), "f-sub")
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.pleaves()),
+            staff_padding=3,
             right_broken=True,
-            pieces=[baca.select.rleak(o.pleaves())],
         )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 5.5)
@@ -460,11 +458,10 @@ def vc1(cache):
     name = "vc1"
     m = cache[name]
     with baca.scope(m.get(1, 6)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:3],
+            staff_padding=8,
             left_broken=True,
-            pieces=[o.leaves()[:3]],
         )
     for item in [(1, 8), 11]:
         with baca.scope(m.get(item)) as o:
@@ -583,10 +580,9 @@ def cb1(cache):
     for item in [(1, 6), 8, 11]:
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "Aqs4", do_not_transpose=True)
-            baca.pizzicato_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[baca.select.rleaves(o, grace=False)],
+            baca.spanners.pizzicato(
+                baca.select.rleaves(o, grace=False),
+                staff_padding=5.5,
             )
             baca.markup(o.pleaf(0), r"\baca-eleven-e")
             baca.markup(
@@ -604,10 +600,9 @@ def cb2(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
-        baca.pizzicato_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleaves(o, grace=False)],
+        baca.spanners.pizzicato(
+            baca.select.rleaves(o, grace=False),
+            staff_padding=5.5,
         )
         baca.markup(
             o.pleaf(0),

@@ -335,10 +335,9 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 pieces=[u],
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=8,
             )
     with baca.scope(m.get(2, 3)) as o:
         baca.pitch(o, "E3")
@@ -348,10 +347,9 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 pieces=[u],
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=8,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3")
@@ -365,10 +363,9 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 pieces=[u],
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=8,
             )
     with baca.scope(m[10]) as o:
         baca.pitch(o.leaves(grace=False), "G3")
@@ -490,10 +487,9 @@ def perc1(m):
     with baca.scope(m.get(3, 8)) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(o.leaves()[2:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[2:]),
+            staff_padding=8,
         )
     with baca.scope(m.get(10, 14)) as o:
         library.triangle_staff_position(o)
@@ -998,11 +994,10 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
                 if name in ("va", "vc1", "vc2"):
-                    baca.metric_modulation_spanner(
-                        (),
-                        abjad.Tweak(r"- \tweak staff-padding 8"),
+                    baca.spanners.metric_modulation(
+                        u,
                         left_broken=True,
-                        pieces=[u],
+                        staff_padding=8,
                     )
                     baca.bow_speed_spanner(
                         (),
@@ -1011,11 +1006,10 @@ def composites(cache):
                         pieces=[u],
                     )
                 elif name == "cb1":
-                    baca.metric_modulation_spanner(
-                        (),
-                        abjad.Tweak(r"- \tweak staff-padding 10.5"),
+                    baca.spanners.metric_modulation(
+                        u,
                         left_broken=True,
-                        pieces=[u],
+                        staff_padding=10.5,
                     )
                     baca.bow_speed_spanner(
                         (),

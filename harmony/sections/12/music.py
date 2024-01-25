@@ -486,11 +486,10 @@ def bfl(cache):
             "o< mf >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.rleaves(),
             left_broken=True,
-            pieces=[o.rleaves()],
+            staff_padding=8,
         )
     with baca.scope(m[3]) as o:
         baca.hairpin(
@@ -575,11 +574,10 @@ def bfl(cache):
             bookend=False,
             pieces=baca.select.lparts(leaves, [2, 4]),
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(o.leaves()[-2:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[-2:]),
             right_broken=True,
+            staff_padding=8,
         )
     with baca.scope(m.get(11, 15)) as o:
         # baca.pitch(o.leaves()[-2:], "Dtqf5")

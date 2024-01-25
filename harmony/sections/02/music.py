@@ -458,10 +458,9 @@ def perc1(cache):
         with baca.scope(o.plts(grace=False)) as u:
             library.bass_drum_staff_position(u)
             baca.override.dls_staff_padding(u, 6),
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[o.leaves(grace=False)[2:8]],
+        baca.spanners.metric_modulation(
+            o.leaves(grace=False)[2:8],
+            staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -528,10 +527,9 @@ def perc2(m):
         )
     with baca.scope(m.get(5, 6)) as o:
         library.slate_staff_position(o)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[baca.select.rleak(baca.select.runs(o)[:1])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(baca.select.runs(o)[:1]),
+            staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -796,10 +794,9 @@ def vc1(cache):
             baca.dynamic(u, '"ff"')
             baca.override.dls_staff_padding(u, 6),
     with baca.scope(m.get(6, 7)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[o.leaves()[1:5]],
+        baca.spanners.metric_modulation(
+            o.leaves()[1:5],
+            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -943,11 +940,10 @@ def cb1(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:4],
+            staff_padding=5.5,
             left_broken=True,
-            pieces=[o.leaves()[:4]],
         )
     with baca.scope(m.get(2, 5)) as o:
         baca.clef(o.leaf(0), "treble")

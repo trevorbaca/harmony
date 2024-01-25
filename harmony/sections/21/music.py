@@ -361,10 +361,9 @@ def perc1(m):
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[o.leaves()[2:]],
+        baca.spanners.metric_modulation(
+            o.leaves()[2:],
+            staff_padding=10.5,
         )
 
 
@@ -398,10 +397,9 @@ def perc2(m):
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:]) as u:
             baca.override.dls_staff_padding(u, 6),
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 10.5"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=10.5,
             )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -454,11 +452,10 @@ def hp(m):
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(o.leaves()[-3:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[-3:]),
             right_broken=True,
+            staff_padding=8,
         ),
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -479,11 +476,10 @@ def va(m):
                 pieces=[o.leaves()],
             )
     with baca.scope(m[1]) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.rleaves(),
             left_broken=True,
-            pieces=[o.rleaves()],
+            staff_padding=8,
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptails())
@@ -501,10 +497,9 @@ def va(m):
         baca.laissez_vibrer(o.ptails())
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "mf")
-        baca.pizzicato_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(o.tleaves(), count=2)],
+        baca.spanners.pizzicato(
+            baca.select.rleak(o.tleaves(), count=2),
+            staff_padding=8,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:

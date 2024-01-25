@@ -1529,19 +1529,15 @@ number.18.Percussion.2.Music = {
         - \tweak staff-padding 6
         ^ \baca-purpleheart-markup
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 10.5
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
 

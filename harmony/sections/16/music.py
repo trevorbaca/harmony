@@ -253,11 +253,10 @@ def bfl(m):
                 pieces=[u],
                 right_broken=True,
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
                 right_broken=True,
+                staff_padding=8,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

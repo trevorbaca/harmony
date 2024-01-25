@@ -2508,19 +2508,15 @@ number.3.Cello.1.Music = {
           %! SPANNER_START
         \bacaStartTextSpanDamp
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
 

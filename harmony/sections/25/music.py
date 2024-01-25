@@ -343,10 +343,9 @@ def perc1(m):
     with baca.scope(m[3]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(2, 3)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[o.leaves()[1:8]],
+        baca.spanners.metric_modulation(
+            o.leaves()[1:8],
+            staff_padding=10.5,
         )
     with baca.scope(m.get(5, 9)) as o:
         library.brake_drum_staff_position(o)
@@ -369,11 +368,10 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:2],
             left_broken=True,
-            pieces=[o.leaves()[:2]],
+            staff_padding=8,
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -450,10 +448,9 @@ def hp(m):
             )
     with baca.scope(m.get(2, 3)) as o:
         library.whisk_staff_position(o)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[o.leaves()[1:8]],
+        baca.spanners.metric_modulation(
+            o.leaves()[1:8],
+            staff_padding=10.5,
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -702,10 +699,9 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             baca.dynamic(o.phead(0), "pp")
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[baca.select.tleaves(o, rleak=True)],
+            baca.spanners.metric_modulation(
+                baca.select.tleaves(o, rleak=True),
+                staff_padding=8,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

@@ -388,11 +388,10 @@ def perc2(m):
                 abjad.Tweak(r"- \tweak self-alignment-X 1"),
                 abjad.Tweak(r"- \tweak staff-padding 7"),
             )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+        baca.spanners.metric_modulation(
+            baca.select.rleak(baca.select.runs(o)[:1]),
+            staff_padding=5.5,
             left_broken=True,
-            pieces=[baca.select.rleak(baca.select.runs(o)[:1])],
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -507,10 +506,9 @@ def va(m):
     with baca.scope(m.get(3, 4)) as o:
         baca.pitch(o, "F3")
         with baca.scope(o.leaves()[1:11]) as u:
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=8,
             )
             baca.bow_speed_spanner(
                 (),
@@ -528,10 +526,9 @@ def va(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=[baca.select.rleak(baca.select.ltleaves(run))],
             )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[o.rleaves()],
+        baca.spanners.metric_modulation(
+            o.rleaves(),
+            staff_padding=5.5,
             right_broken=True,
         )
     with baca.scope(m.get(1, 5)) as o:
@@ -584,10 +581,9 @@ def vc1(m):
             baca.accent(u)
         baca.dynamic(o.pleaf(2), "mf")
         baca.override.tuplet_bracket_up(o.leaves()[3:])
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[o.leaves()[4:11]],
+        baca.spanners.metric_modulation(
+            o.leaves()[4:11],
+            staff_padding=5.5,
         )
         baca.damp_spanner(
             (),
@@ -705,10 +701,9 @@ def cb1(m):
             pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o.plts()[:-1], 4)
-        baca.pizzicato_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.pizzicato(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
         baca.markup(
@@ -778,10 +773,9 @@ def cb2(m):
             bookend=False,
             pieces=baca.select.plts(o),
         )
-        baca.pizzicato_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.pizzicato(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
         baca.markup(
             o.pleaf(0),

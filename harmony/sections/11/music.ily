@@ -950,19 +950,15 @@ number.11.BassFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! METRIC_MODULATION_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! METRIC_MODULATION_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "MM"
       %! METRIC_MODULATION_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! METRIC_MODULATION_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanMetricModulation
       %! EXPLICIT_DYNAMIC
@@ -3200,7 +3196,7 @@ number.11.Cello.1.Music = {
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \tweak staff-padding 12.0
+        - \tweak staff-padding 12
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation

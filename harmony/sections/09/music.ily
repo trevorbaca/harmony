@@ -839,19 +839,15 @@ number.9.Viola.Music = {
           %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
           %! BOW_SPEED_SPANNER
@@ -1030,19 +1026,15 @@ number.9.Cello.1.Music = {
           %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
           %! BOW_SPEED_SPANNER
@@ -1223,19 +1215,15 @@ number.9.Cello.2.Music = {
           %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
           %! BOW_SPEED_SPANNER
@@ -1423,19 +1411,15 @@ number.9.Contrabass.1.Music = {
           %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 10.5
           %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
           %! BOW_SPEED_SPANNER

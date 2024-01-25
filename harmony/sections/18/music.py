@@ -500,10 +500,9 @@ def bfl(m):
                 bookend=False,
                 pieces=[run],
             )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(o.run(0))],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.run(0)),
+            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 6)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -689,10 +688,9 @@ def perc2(cache):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[baca.select.rleak(o.runs()[-1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.runs()[-1:]),
+            staff_padding=10.5,
             right_broken=True,
         )
 
@@ -1112,10 +1110,9 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+        baca.spanners.metric_modulation(
+            baca.select.tleaves(o, rleak=True),
+            staff_padding=8,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
