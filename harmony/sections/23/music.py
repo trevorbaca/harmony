@@ -290,10 +290,9 @@ def bfl(cache):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run), count=2)
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[run],
+        baca.spanners.covered(
+            run,
+            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o, 4)

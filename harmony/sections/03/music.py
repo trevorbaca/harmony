@@ -311,11 +311,10 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+        baca.spanners.covered(
+            baca.select.rleak(baca.select.ltleaves(o)),
             items=r"\baca-cov-markup =|",
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F#3"),
@@ -326,10 +325,9 @@ def bfl(m):
             "mf-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.covered(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -529,10 +527,9 @@ def vc1(m):
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
-        baca.damp_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+        baca.spanners.damp(
+            baca.select.rleak(baca.select.tleaves(o)),
+            staff_padding=5.5,
         )
         baca.spanners.metric_modulation(
             o.leaves()[2:9],
@@ -593,11 +590,10 @@ def vc1(m):
         baca.accent(baca.select.pheads(o.leaves()[4:]))
         baca.dynamic(o.phead(-2), "mf")
         with baca.scope(baca.select.rleak(o.leaves()[4:])) as u:
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[u],
+            baca.spanners.damp(
+                u,
                 right_broken=True,
+                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,
@@ -630,10 +626,9 @@ def vc2(m):
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
-        baca.damp_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+        baca.spanners.damp(
+            baca.select.rleak(baca.select.tleaves(o)),
+            staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")

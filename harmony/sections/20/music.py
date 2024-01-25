@@ -261,10 +261,9 @@ def bfl(m):
     with baca.scope(m.get(3, 10)) as o:
         baca.pitch(o, "Eb3")
         baca.dynamic(o.phead(0), "pp-sempre")
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.covered(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

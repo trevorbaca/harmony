@@ -349,11 +349,10 @@ def bfl(m):
             baca.dynamic(o.phead(0), "mp")
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
-                baca.covered_spanner(
-                    (),
-                    abjad.Tweak(r"- \tweak staff-padding 3"),
+                baca.spanners.covered(
+                    run,
                     items=r"\baca-cov-markup =|",
-                    pieces=[run],
+                    staff_padding=3,
                 )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")

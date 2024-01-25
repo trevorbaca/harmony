@@ -969,10 +969,9 @@ def vc2(cache):
         baca.pitch(o, "C3")
         baca.clef(o.leaf(0), "bass")
         baca.dynamic(o.phead(0), "mp")
-        baca.damp_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+        baca.spanners.damp(
+            baca.select.rleak(baca.select.tleaves(o)),
+            staff_padding=3,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -1092,10 +1091,9 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
-        baca.damp_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+        baca.spanners.damp(
+            baca.select.rleak(baca.select.tleaves(o)),
+            staff_padding=3,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)

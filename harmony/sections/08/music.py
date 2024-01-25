@@ -165,11 +165,10 @@ def bfl(m):
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 4)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
-            baca.covered_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[u],
+            baca.spanners.covered(
+                u,
                 right_broken=True,
+                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,
@@ -350,12 +349,11 @@ def vc2(cache):
             bookend=False,
             pieces=[o.leaves()[-2:]],
         )
-        baca.damp_spanner(
-            (),
+        baca.spanners.damp(
+            o.rleaves(),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
-            pieces=[o.rleaves()],
+            staff_padding=3,
         )
     with baca.scope(m.get(3, 6)) as o:
         baca.stem_tremolo(o.pleaves())
@@ -432,12 +430,11 @@ def cb2(cache):
             bookend=False,
             pieces=[o.leaves()[-2:]],
         )
-        baca.damp_spanner(
-            (),
+        baca.spanners.damp(
+            o.rleaves(),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
-            pieces=[o.rleaves()],
+            staff_padding=3,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.stem_tremolo(o.pleaves())

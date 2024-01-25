@@ -577,10 +577,9 @@ def bfl(m):
     with baca.scope(m[9]) as o:
         baca.pitch(o, "F3")
         baca.dynamic(o.phead(0), "mf")
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[o.rleaves()],
+        baca.spanners.covered(
+            o.rleaves(),
+            staff_padding=5.5,
         )
     with baca.scope(m[12]) as o:
         baca.pitches(
@@ -613,10 +612,9 @@ def bfl(m):
             baca.dynamic(o.phead(0), "pp")
             for run in baca.select.runs(o):
                 run = baca.select.rleak(baca.select.ltleaves(run), count=2)
-                baca.covered_spanner(
-                    (),
-                    abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                    pieces=[run],
+                baca.spanners.covered(
+                    run,
+                    staff_padding=5.5,
                 )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o, 4)

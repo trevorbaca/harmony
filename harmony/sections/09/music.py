@@ -158,11 +158,10 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "G3")
         with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
-            baca.covered_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.spanners.covered(
+                u,
                 left_broken=True,
-                pieces=[u],
+                staff_padding=3,
             )
             baca.spanners.metric_modulation(
                 u,
@@ -173,10 +172,9 @@ def bfl(m):
         baca.pitch(o, "Gb3")
         baca.color_fingerings(o.pheads(), [0, 1, 2])
         baca.dynamic(o.phead(0), "mp")
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.covered(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)

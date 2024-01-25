@@ -785,10 +785,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D4"),
@@ -846,10 +845,9 @@ def vc1(cache):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
@@ -880,10 +878,9 @@ def vc1(cache):
                 "mp -- niente",
                 pieces=[run],
             )
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
 
 
@@ -919,10 +916,9 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
@@ -1003,10 +999,9 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
@@ -1130,10 +1125,9 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
