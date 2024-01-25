@@ -234,12 +234,12 @@ def bfl(m):
                 pieces=baca.select.lparts(run, [1, 2]),
             )
             if i == 0:
-                baca.trill_spanner(
+                baca.spanners.trill(
                     run,
                     alteration="m2",
                 )
             elif i == 1:
-                baca.trill_spanner(
+                baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                     alteration="m2",
@@ -253,7 +253,7 @@ def bfl(m):
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
@@ -363,7 +363,7 @@ def hp(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
@@ -473,7 +473,7 @@ def vc1(m):
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )

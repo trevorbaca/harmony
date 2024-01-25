@@ -294,7 +294,7 @@ def bfl(m):
                 (3, 4),
             ),
         )
-        baca.trill_spanner(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -306,7 +306,7 @@ def bfl(m):
         baca.pitch(o.run(0), "F#5")
     with baca.scope(m.get(4, 5)) as o:
         with baca.scope(baca.select.rleak(baca.select.runs(o)[:1])) as u:
-            baca.trill_spanner(
+            baca.spanners.trill(
                 u,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             )
@@ -437,7 +437,7 @@ def hp(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Db1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
@@ -459,7 +459,7 @@ def hp(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Db1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f-ancora")

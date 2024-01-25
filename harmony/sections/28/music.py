@@ -229,7 +229,7 @@ def bfl(m):
                     abjad.select.leaves(run), (4, 5)
                 ),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 baca.select.rleak(run),
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -248,7 +248,7 @@ def bfl(m):
             pieces=baca.select.clparts(o, [1]),
         )
         baca.dynamic(o.rleaf(-1), "p")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
@@ -483,7 +483,7 @@ def vc1(cache):
             pieces=baca.select.clparts(o, [1]),
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
@@ -550,7 +550,7 @@ def vc2(cache):
             pieces=baca.select.clparts(o, [1]),
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
@@ -578,7 +578,7 @@ def cb1(cache):
                 "niente o< mp >o niente",
                 pieces=baca.select.lparts(rrun, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 rrun,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             )
@@ -622,7 +622,7 @@ def cb1(cache):
             pieces=baca.select.clparts(o, [1]),
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )

@@ -273,7 +273,7 @@ def bfl(m):
                     abjad.select.leaves(run), (4, 5)
                 ),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 baca.select.rleak(run),
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -289,7 +289,7 @@ def bfl(m):
                 forbid_al_niente_to_bar_line=True,
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -317,7 +317,7 @@ def bfl(m):
                     abjad.select.leaves(run), (4, 5)
                 ),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 baca.select.rleak(run),
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"

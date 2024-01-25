@@ -281,12 +281,12 @@ def bfl(cache):
                 pieces=baca.select.lparts(run, [1, 2]),
             )
             if i == 0:
-                baca.trill_spanner(
+                baca.spanners.trill(
                     run,
                     alteration="m2",
                 )
             elif i == 1:
-                baca.trill_spanner(
+                baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                     alteration="m2",

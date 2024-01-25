@@ -312,9 +312,9 @@ def bfl(cache):
                     pieces=[run],
                 )
             elif i == 1:
-                baca.trill_spanner(run)
+                baca.spanners.trill(run)
             elif i == 2:
-                baca.trill_spanner(
+                baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 )

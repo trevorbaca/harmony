@@ -205,7 +205,7 @@ def bfl(m):
                 "niente o< mf >o",
                 pieces=baca.select.lparts(run, [1, 2 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -225,7 +225,7 @@ def bfl(m):
                 forbid_al_niente_to_bar_line=True,
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -383,7 +383,7 @@ def va(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
@@ -431,7 +431,7 @@ def vc1(m):
                 "niente o<| mp |>o",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
@@ -480,7 +480,7 @@ def vc2(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
@@ -530,7 +530,7 @@ def cb1(m):
                 "niente o<| mp |>o",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",
@@ -580,7 +580,7 @@ def cb2(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",

@@ -1147,7 +1147,7 @@ def composites(cache):
                 left_broken=True,
                 pieces=[o.rleaves()],
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 o.rleaves(),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 left_broken=True,
