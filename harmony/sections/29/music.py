@@ -130,7 +130,7 @@ def CB2(voice, time_signatures):
 def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Bb4")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         )
@@ -175,7 +175,7 @@ def hp(m):
 def cb1(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Bb4", do_not_transpose=True)
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
@@ -226,7 +226,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.pitch(o, "Bb4")
-            baca.trill_spanner(
+            baca.spanners.trill(
                 baca.select.tleaves(o, rleak=True),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 alteration="Cb5",

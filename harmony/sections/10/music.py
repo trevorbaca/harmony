@@ -599,7 +599,7 @@ def va(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "A5")
-        baca.trill_spanner(baca.select.tleaves(o, rleak=True))
+        baca.spanners.trill(baca.select.tleaves(o, rleak=True))
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -702,7 +702,7 @@ def vc1(m):
         baca.pitch(o, "B4")
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gqs6"),
-        baca.trill_spanner(baca.select.tleaves(o, rleak=True)),
+        baca.spanners.trill(baca.select.tleaves(o, rleak=True)),
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -790,7 +790,7 @@ def vc2(m):
         baca.pitch(o, "Dqs4")
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F#5")
-        baca.trill_spanner(baca.select.tleaves(o, rleak=True))
+        baca.spanners.trill(baca.select.tleaves(o, rleak=True))
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -907,7 +907,7 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Dqf6", do_not_transpose=True)
-        baca.trill_spanner(baca.select.tleaves(o, rleak=True))
+        baca.spanners.trill(baca.select.tleaves(o, rleak=True))
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",

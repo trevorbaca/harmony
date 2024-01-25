@@ -328,7 +328,7 @@ def bfl(m):
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
@@ -352,7 +352,7 @@ def bfl(m):
             pieces=baca.select.clparts(o.leaves(), [1]),
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -495,7 +495,7 @@ def hp(m):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
@@ -517,7 +517,7 @@ def hp(m):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(
             o.phead(0),
@@ -611,7 +611,7 @@ def vc1(m):
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -632,7 +632,7 @@ def vc1(m):
             pieces=baca.select.clparts(o.leaves(), [1]),
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -741,7 +741,7 @@ def cb1(m):
             pieces=baca.select.clparts(o.leaves(), [1]),
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),

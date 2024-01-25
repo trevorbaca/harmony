@@ -272,7 +272,7 @@ def bfl(cache):
                     abjad.select.leaves(run), (4, 5)
                 ),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 baca.select.rleak(run),
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"

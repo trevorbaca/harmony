@@ -567,7 +567,7 @@ def bfl(m):
                     (3, 4),
                 ),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 u,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -600,7 +600,7 @@ def bfl(m):
                     (3, 4),
                 ),
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 u,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -831,7 +831,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 9)) as o:
-        baca.ottava(o.tleaves())
+        baca.spanners.ottava(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 5.5)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(
@@ -850,7 +850,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[12]) as o:
-        baca.ottava(o.tleaves())
+        baca.spanners.ottava(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 5.5)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
@@ -1013,7 +1013,7 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             pieces=[o.leaves()[1:8]],
         )
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
             alteration="Fqs5",
         )
@@ -1071,7 +1071,7 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.trill_spanner(baca.select.tleaves(o, rleak=True)),
+            baca.spanners.trill(baca.select.tleaves(o, rleak=True)),
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 2)) as o:

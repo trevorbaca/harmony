@@ -389,7 +389,7 @@ def bfl(cache):
                 abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
-        baca.trill_spanner(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         )
@@ -423,7 +423,7 @@ def bfl(cache):
                 abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
-        baca.trill_spanner(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         )
@@ -439,7 +439,7 @@ def bfl(cache):
                 abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
-        baca.trill_spanner(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         )

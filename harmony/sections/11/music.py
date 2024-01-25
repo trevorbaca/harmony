@@ -689,12 +689,12 @@ def hp(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "C1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "C1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(
             o.phead(0),
@@ -754,7 +754,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "C1")
-        baca.ottava_bassa(o.tleaves())
+        baca.spanners.ottava_bassa(o.tleaves())
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 4)
@@ -818,7 +818,7 @@ def vc1(m):
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.rleak(o.leaves()[-2:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         )
@@ -899,7 +899,7 @@ def cb1(m):
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
-        baca.trill_spanner(
+        baca.spanners.trill(
             baca.select.rleak(abjad.select.leaves(o)[-2:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         )
@@ -993,7 +993,7 @@ def composites(cache):
                 "o<| mp |>o niente",
                 pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
-            baca.trill_spanner(baca.select.tleaves(o, rleak=True))
+            baca.spanners.trill(baca.select.tleaves(o, rleak=True))
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 5)) as o:
@@ -1011,7 +1011,7 @@ def composites(cache):
                 "pp <| mp |> pp",
                 pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
-            baca.trill_spanner(baca.select.tleaves(o, rleak=True))
+            baca.spanners.trill(baca.select.tleaves(o, rleak=True))
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[8]) as o:
@@ -1031,7 +1031,7 @@ def composites(cache):
                 pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
                 right_broken=True,
             )
-            baca.trill_spanner(
+            baca.spanners.trill(
                 baca.select.tleaves(o, rleak=True),
                 right_broken=True,
             )
