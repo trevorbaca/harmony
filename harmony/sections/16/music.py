@@ -368,10 +368,9 @@ def va(m):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F4")
@@ -407,10 +406,9 @@ def vc1(m):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "A2")
@@ -427,10 +425,9 @@ def vc1(m):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
 
 
@@ -440,10 +437,9 @@ def vc2(m):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G2")
@@ -460,10 +456,9 @@ def vc2(m):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
 
 
@@ -483,10 +478,9 @@ def cb1(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G#1")
@@ -513,10 +507,9 @@ def cb1(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=8,
         )
 
 
@@ -536,10 +529,9 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
@@ -566,10 +558,9 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.half_clt_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+        baca.spanners.half_clt(
+            baca.select.rleak(baca.select.ltleaves(o)),
+            staff_padding=8,
         )
 
 

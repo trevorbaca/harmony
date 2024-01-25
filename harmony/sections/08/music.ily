@@ -446,23 +446,18 @@ number.8.BassFlute.Music = {
 
         r4
           %! COVERED_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! COVERED_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-covered-markup
           %! COVERED_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
           %! COVERED_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! COVERED_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanCovered
           %! METRIC_MODULATION_SPANNER

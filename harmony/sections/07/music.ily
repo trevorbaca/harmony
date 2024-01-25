@@ -771,7 +771,7 @@ number.7.BassFlute.Music = {
         - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
           %! COVERED_SPANNER
           %! SPANNER_START
-        - \tweak staff-padding 5.5
+        - \tweak staff-padding 3
           %! COVERED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanCovered
@@ -3038,23 +3038,18 @@ number.7.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanDamp
     \revert DynamicLineSpanner.staff-padding
@@ -3779,23 +3774,18 @@ number.7.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
       %! DAMP_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanDamp
     \revert DynamicLineSpanner.staff-padding

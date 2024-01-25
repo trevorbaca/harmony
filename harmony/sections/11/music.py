@@ -443,10 +443,9 @@ def bfl(cache):
         baca.pitch(o, "G3")
     with baca.scope(m.get(5, 6)) as o:
         with baca.scope(o.leaves()[1:9]) as u:
-            baca.covered_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[u],
+            baca.spanners.covered(
+                u,
+                staff_padding=3,
             )
             baca.spanners.metric_modulation(
                 u,

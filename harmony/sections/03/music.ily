@@ -2488,23 +2488,18 @@ number.3.Cello.1.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
           %! DAMP_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! DAMP_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-damp-markup
           %! DAMP_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
           %! DAMP_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! DAMP_SPANNER
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanDamp
           %! METRIC_MODULATION_SPANNER

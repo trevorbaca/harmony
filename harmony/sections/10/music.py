@@ -330,10 +330,9 @@ def bfl(cache):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:8]) as u:
-            baca.covered_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[u],
+            baca.spanners.covered(
+                u,
+                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,
@@ -342,10 +341,9 @@ def bfl(cache):
     with baca.scope(m.get(2, 3)) as o:
         baca.pitch(o, "E3")
         with baca.scope(o.leaves()[4:9]) as u:
-            baca.covered_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[u],
+            baca.spanners.covered(
+                u,
+                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,
@@ -358,10 +356,9 @@ def bfl(cache):
         baca.pitch(o, "E3")
     with baca.scope(m.get(7, 8)) as o:
         with baca.scope(o.leaves()[1:8]) as u:
-            baca.covered_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[u],
+            baca.spanners.covered(
+                u,
+                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,

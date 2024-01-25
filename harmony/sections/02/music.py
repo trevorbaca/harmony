@@ -379,11 +379,10 @@ def bfl(cache):
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 3),
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+        baca.spanners.covered(
+            baca.select.rleak(baca.select.ltleaves(o)),
             items=r"\baca-cov-markup =|",
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.pitch(o, "Ab4")
@@ -692,10 +691,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
         for plt in baca.select.plts(o):
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.rleak(plt)],
+            baca.spanners.damp(
+                baca.select.rleak(plt),
+                staff_padding=3,
             )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -880,10 +878,9 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.rleak(plt)],
+            baca.spanners.damp(
+                baca.select.rleak(plt),
+                staff_padding=3,
             )
     with baca.scope(m[7]) as o:
         baca.interpolate_pitches(o, "G2", "F2")
@@ -1096,10 +1093,9 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
-                pieces=[baca.select.rleak(plt)],
+            baca.spanners.damp(
+                baca.select.rleak(plt),
+                staff_padding=3 + 1,
             )
     with baca.scope(m[7]) as o:
         baca.interpolate_pitches(o, "G2", "F#2")

@@ -538,10 +538,9 @@ def vcs(cache):
     for name in ["vc1", "vc2"]:
         for item in [(1, 6), 8, 11]:
             with baca.scope(cache[name].get(item)) as o:
-                baca.damp_spanner(
-                    (),
-                    abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                    pieces=[baca.select.rleak(baca.select.ltleaves(o), grace=False)],
+                baca.spanners.damp(
+                    baca.select.rleak(baca.select.ltleaves(o), grace=False),
+                    staff_padding=5.5,
                 )
 
 

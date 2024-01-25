@@ -397,10 +397,9 @@ def bfl(cache):
         baca.pitch(o, "E3")
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
-        baca.covered_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+        baca.spanners.covered(
+            baca.select.tleaves(o, rleak=True),
+            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")
@@ -802,18 +801,16 @@ def vc1(cache):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
     with baca.scope(m[11]) as o:
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
         baca.dynamic(
             o.phead(0),
@@ -892,10 +889,9 @@ def vc2(cache):
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.damp_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
+            baca.spanners.damp(
+                run,
+                staff_padding=3,
             )
 
 
@@ -998,10 +994,9 @@ def cb2(cache):
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
-        baca.damp_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+        baca.spanners.damp(
+            baca.select.rleak(baca.select.tleaves(o)),
+            staff_padding=3,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -1086,10 +1081,9 @@ def composites(cache):
                 "ppp",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
             )
-            baca.half_clt_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            baca.spanners.half_clt(
+                baca.select.rleak(baca.select.ltleaves(o)),
+                staff_padding=8,
             )
 
 
