@@ -549,7 +549,7 @@ def vc1(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=True,
+            bookend=-1,
             pieces=[o.leaves()],
         )
 
@@ -596,7 +596,7 @@ def vc2(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=True,
+            bookend=-1,
             pieces=[o.leaves()],
         )
 
@@ -643,7 +643,7 @@ def cb1(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=True,
+            bookend=-1,
             pieces=[o.leaves()],
         )
 
@@ -690,7 +690,7 @@ def cb2(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=True,
+            bookend=-1,
             pieces=[o.leaves()],
         )
 
