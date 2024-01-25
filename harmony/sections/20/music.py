@@ -318,11 +318,10 @@ def perc2(m):
         library.bass_drum_staff_position(o)
         baca.accent(o.pheads())
         baca.laissez_vibrer(o.ptails())
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:3],
             left_broken=True,
-            pieces=[o.leaves()[:3]],
+            staff_padding=8,
         )
     with baca.scope(m[2]) as o:
         library.tam_tam_staff_position(o)
@@ -368,10 +367,9 @@ def hp(m):
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m.get(1, 2)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[o.leaves()[1:]],
+        baca.spanners.metric_modulation(
+            o.leaves()[1:],
+            staff_padding=8,
         )
     with baca.scope(m.get(3, 10)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -450,10 +448,9 @@ def va(m):
                 pieces=[u],
                 right_broken=True,
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=8,
                 right_broken=True,
             )
 
@@ -565,10 +562,9 @@ def cb2(m):
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o.leaves()[1:], 6)
     with baca.scope(m.get(2, 4)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[baca.select.rleak(abjad.select.leaves(o)[1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(abjad.select.leaves(o)[1:]),
+            staff_padding=8,
         )
     with baca.scope(m[10]) as o:
         baca.override.rest_extra_offset(o.rest(-1), (-1.5, 0))

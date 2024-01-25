@@ -711,11 +711,10 @@ def perc2(cache):
     with baca.scope(m[1]) as o:
         baca.dynamic(o.rest(1), "ff-ancora")
         baca.override.dls_staff_padding(o, 5)
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:2],
             left_broken=True,
-            pieces=[o.leaves()[:2]],
+            staff_padding=10.5,
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -785,11 +784,10 @@ def perc2(cache):
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            pieces=[baca.select.rleak(o.leaves()[-1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[-1:]),
             right_broken=True,
+            staff_padding=10.5,
         )
 
 
@@ -1008,10 +1006,9 @@ def cb2(cache):
             pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[o.leaves()[1:8]],
+        baca.spanners.metric_modulation(
+            o.leaves()[1:8],
+            staff_padding=8,
         )
         baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
@@ -1037,10 +1034,9 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "pp")
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(12, 13)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(o.leaves()[4:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[4:]),
+            staff_padding=5.5,
         )
 
 

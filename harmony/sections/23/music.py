@@ -388,11 +388,10 @@ def hp(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F#4")
         baca.laissez_vibrer(o.ptails())
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+        baca.spanners.metric_modulation(
+            o.leaves()[:2],
             left_broken=True,
-            pieces=[o.leaves()[:2]],
+            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E4")
@@ -492,10 +491,9 @@ def vc1(cache):
         baca.override.tuplet_bracket_down(o)
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(o.leaves()[1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[1:]),
+            staff_padding=5.5,
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
@@ -585,10 +583,9 @@ def cb1(cache):
         baca.pitch(o, "E1")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.rleak(o.leaves()[1:])],
+        baca.spanners.metric_modulation(
+            baca.select.rleak(o.leaves()[1:]),
+            staff_padding=5.5,
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(

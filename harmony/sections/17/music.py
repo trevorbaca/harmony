@@ -270,11 +270,10 @@ def bfl(m):
                 left_broken=True,
                 pieces=[u],
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.spanners.metric_modulation(
+                u,
                 left_broken=True,
-                pieces=[u],
+                staff_padding=8,
             )
     with baca.scope(m[2]) as o:
         baca.pitches(
@@ -310,10 +309,9 @@ def bfl(m):
                 u,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             )
-            baca.metric_modulation_spanner(
-                (),
-                abjad.Tweak(r"- \tweak staff-padding 9"),
-                pieces=[u],
+            baca.spanners.metric_modulation(
+                u,
+                staff_padding=9,
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)

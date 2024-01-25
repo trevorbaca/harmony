@@ -707,10 +707,9 @@ def va(cache):
             "f >o niente",
             pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.pleaves(o, grace=False)[:4]],
+        baca.spanners.metric_modulation(
+            baca.select.pleaves(o, grace=False)[:4],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -875,10 +874,9 @@ def vc2(cache):
             pieces=baca.select.plts(o),
         )
     with baca.scope(m.get(5, 6)) as o:
-        baca.metric_modulation_spanner(
-            (),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=[o.leaves()[1:-3]],
+        baca.spanners.metric_modulation(
+            o.leaves()[1:-3],
+            staff_padding=8,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.override.dls_staff_padding(o, 6)
