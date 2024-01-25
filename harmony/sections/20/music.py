@@ -446,7 +446,7 @@ def va(m):
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                bookend=True,
+                bookend=-1,
                 pieces=[u],
                 right_broken=True,
             )

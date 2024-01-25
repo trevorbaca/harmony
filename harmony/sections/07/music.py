@@ -891,7 +891,7 @@ def cb1(cache):
             (),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=True,
+            bookend=-1,
             left_broken=True,
             pieces=[o.leaves()],
         )
@@ -941,7 +941,7 @@ def cb1(cache):
             (),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=True,
+            bookend=-1,
             pieces=[o.leaves()],
         )
     with baca.scope(m[7]) as o:

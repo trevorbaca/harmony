@@ -632,7 +632,7 @@ def composites(cache):
                 (),
                 "T2 -> T4",
                 tweak,
-                bookend=True,
+                bookend=-1,
                 pieces=[o.leaves()],
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
