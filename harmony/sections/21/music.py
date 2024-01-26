@@ -608,17 +608,14 @@ def cb2(m):
                 pieces=[o.leaves()],
             )
     with baca.scope(m[1]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "mf >o niente",
-            pieces=[o.rleaves()],
         )
     with baca.scope(m[4]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "mf >o",
-            bookend=False,
-            pieces=[o.rleaves()],
         )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
@@ -643,10 +640,9 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1])
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run,
                     "o<| f",
-                    pieces=[run],
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

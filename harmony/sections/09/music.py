@@ -247,10 +247,9 @@ def va(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.tleaves(o, rleak=True),
             "mf >o niente",
-            pieces=[baca.select.tleaves(o, rleak=True)],
         )
         baca.markup(
             o.pleaf(0),
@@ -339,10 +338,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.tuplet_bracket_up(o)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                baca.select.tleaves(o, rleak=True),
                 "mp >o niente",
-                pieces=[baca.select.tleaves(o, rleak=True)],
             )
             with baca.scope(baca.select.rleak(o.leaves()[-2:])) as u:
                 if name in ("va", "vc1", "vc2"):
@@ -375,10 +373,9 @@ def composites(cache):
             for run in abjad.select.runs(o):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                baca.select.tleaves(o, rleak=True),
                 "o<| ff",
-                pieces=[baca.select.tleaves(o, rleak=True)],
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

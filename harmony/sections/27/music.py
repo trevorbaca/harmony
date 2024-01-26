@@ -525,10 +525,9 @@ def perc2(m):
         baca.stem_tremolo(o.pleaf(0))
         for run in baca.select.runs(o)[:1]:
             run = baca.select.rleak(run)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "f >o niente",
-                pieces=[run],
             )
         baca.markup(
             o.pleaf(0),

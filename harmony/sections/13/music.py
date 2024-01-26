@@ -374,10 +374,9 @@ def perc1(cache):
     with baca.scope(m[5]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
         baca.markup(
             o.pleaf(0),
@@ -515,16 +514,14 @@ def va(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[:2],
             "mp >o niente",
             left_broken=True,
-            pieces=[o.leaves()[:2]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves(grace=False)[2:],
             "mf >o niente",
-            pieces=[o.leaves(grace=False)[2:]],
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -549,10 +546,9 @@ def va(cache):
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "D3")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "(mp) >o niente",
-            pieces=[o.rleaves()],
         )
         baca.scp_spanner(
             (),
@@ -567,16 +563,14 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[:2],
             "mp >o niente",
             left_broken=True,
-            pieces=[o.leaves()[:2]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves(grace=False)[2:],
             "mf >o niente",
-            pieces=[o.leaves(grace=False)[2:]],
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -602,10 +596,9 @@ def vc1(cache):
     with baca.scope(m[4]) as o:
         with baca.scope(o.plt(0)) as u:
             baca.pitch(u, "D2")
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                u,
                 "(mp) >o niente",
-                pieces=[u],
             )
         baca.scp_spanner(
             (),
@@ -626,11 +619,10 @@ def vc2(cache):
             baca.pitch(u, "F3"),
             baca.stem_tremolo(u)
         baca.pitch(o.plts()[1:], "C3")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.plts()[:1]),
             "mp >o niente",
             left_broken=True,
-            pieces=[baca.select.rleak(o.plts()[:1])],
         )
         baca.dynamic(o.pleaf(-1), "mp")
         baca.spanners.damp(
@@ -645,10 +637,9 @@ def vc2(cache):
         )
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[:-1],
             "(mp) >o niente",
-            pieces=[o.leaves()[:-1]],
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "C3")
@@ -664,16 +655,14 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[:2],
             "mp >o niente",
             left_broken=True,
-            pieces=[o.leaves()[:2]],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves(grace=False)[2:],
             "mf >o niente",
-            pieces=[o.leaves(grace=False)[2:]],
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -706,10 +695,9 @@ def cb1(cache):
             m = cache[name]
     with baca.scope(m[4]) as o:
         with baca.scope(o.plt(0)) as u:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                u,
                 "(mp) >o niente",
-                pieces=[u],
             )
         baca.scp_spanner(
             (),
@@ -730,11 +718,10 @@ def cb2(cache):
             baca.pitch(u, "Eb2")
             baca.stem_tremolo(u)
         baca.pitch(o.plts()[1:], "B2")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.plts()[:1]),
             "mp >o niente",
             left_broken=True,
-            pieces=[baca.select.rleak(o.plts()[:1])],
         )
         baca.dynamic(o.pleaf(-1), "mp")
         baca.spanners.damp(
@@ -749,10 +736,9 @@ def cb2(cache):
         )
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[:-1],
             "(mp) >o niente",
-            pieces=[o.leaves()[:-1]],
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "B2")

@@ -186,11 +186,10 @@ def cb2(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "A1")
         baca.flat_glissando(o.leaves()[:1], left_broken=True)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "ff >o niente",
             left_broken=True,
-            pieces=[o.rleaves()],
         )
         baca.scp_spanner(
             (),

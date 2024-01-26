@@ -438,10 +438,9 @@ def va(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "pp >o niente",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -539,10 +538,9 @@ def vc2(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "pp >o niente",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -615,11 +613,9 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "E1")
         baca.flat_glissando(o)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "ff >o",
-            bookend=False,
-            pieces=[o.rleaves()],
         )
         baca.scp_spanner(
             (),
@@ -631,10 +627,9 @@ def cb2(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "pp >o niente",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),

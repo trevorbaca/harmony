@@ -516,10 +516,9 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.phead(1))
         baca.dynamic(o.phead(0), "mp")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.pleaves()[1:]),
             "o< mf",
-            pieces=[baca.select.rleak(o.pleaves()[1:])],
         )
         baca.markup(
             o.pleaf(0),
@@ -530,10 +529,9 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.dynamic(o.phead(0), "mp")
         baca.laissez_vibrer(o.phead(1))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.pleaves()[1:]),
             "o< mf",
-            pieces=[baca.select.rleak(o.pleaves()[1:])],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -578,10 +576,9 @@ def perc1(cache):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.pleaves()),
             "o< mf",
-            pieces=[baca.select.rleak(o.pleaves())],
         )
         baca.markup(
             o.pleaf(0),
@@ -591,26 +588,23 @@ def perc1(cache):
     with baca.scope(m[9]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.pleaves()),
             "o< mp",
-            pieces=[baca.select.rleak(o.pleaves())],
         )
     with baca.scope(m[10]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.pleaves()),
             "o< mp",
-            pieces=[baca.select.rleak(o.pleaves())],
         )
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.pleaves()),
             "o< mp",
-            pieces=[baca.select.rleak(o.pleaves())],
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.override.tuplet_bracket_up(o)
@@ -873,10 +867,9 @@ def vc1(cache):
         baca.pitch(o, "D3")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "mp -- niente",
-                pieces=[run],
             )
             baca.spanners.damp(
                 run,
@@ -1238,10 +1231,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[6]) as o:
             baca.triple_staccato(o.pheads())
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.tleaves(),
                 "p < f",
-                pieces=[o.tleaves()],
             )
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]

@@ -624,10 +624,9 @@ def perc1(m):
     with baca.scope(m[10]) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.tleaves()),
             "o< mf",
-            pieces=[baca.select.rleak(o.tleaves())],
         )
         baca.markup(
             o.pleaf(0),
@@ -636,17 +635,15 @@ def perc1(m):
         )
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.tleaves()),
             "o< f",
-            pieces=[baca.select.rleak(o.tleaves())],
         )
     with baca.scope(m[15]) as o:
         library.bass_drum_staff_position(o)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.tleaves()),
             "o< ff",
-            pieces=[baca.select.rleak(o.tleaves())],
         )
     with baca.scope(m.get(10, 15)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -957,10 +954,9 @@ def va(cache):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.plts()[-1:]),
             "f >o niente",
-            pieces=[baca.select.rleak(o.plts()[-1:])],
         )
         for run in baca.select.runs(o)[:-1]:
             run = baca.select.rleak(run)
@@ -1101,8 +1097,8 @@ def vc1(cache):
         baca.hairpin(
             (),
             "f >o niente",
-            pieces=[baca.select.rleak(o.plts()[-1:])],
             right_broken=True,
+            pieces=[baca.select.rleak(o.plts()[-1:])],
         )
         baca.override.dls_staff_padding(o, 4)
     for item in [1, (6, 7), (10, 15)]:
@@ -1168,10 +1164,9 @@ def vc2(m):
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.tleaves()),
             "mf >o niente",
-            pieces=[baca.select.rleak(o.tleaves())],
         )
         baca.scp_spanner(
             (),
@@ -1201,10 +1196,9 @@ def vc2(m):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.plts()[-1:]),
             "f >o niente",
-            pieces=[baca.select.rleak(o.plts()[-1:])],
         )
     for item in [1, (6, 7), (10, 15)]:
         with baca.scope(m.get(item)) as o:
@@ -1334,10 +1328,9 @@ def cb2(m):
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                u,
                 "mf >o niente",
-                pieces=[u],
             )
             baca.scp_spanner(
                 (),

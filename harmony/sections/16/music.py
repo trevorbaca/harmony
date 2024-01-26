@@ -415,10 +415,9 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f <| fff-scratch",
-            pieces=[o.tleaves()],
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "D#3")
@@ -446,10 +445,9 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f <| fff-scratch",
-            pieces=[o.tleaves()],
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "C#3")
@@ -487,10 +485,9 @@ def cb1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f <| fff-scratch",
-            pieces=[o.tleaves()],
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(o, "E3 D#3")
@@ -538,10 +535,9 @@ def cb2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f <| fff-scratch",
-            pieces=[o.tleaves()],
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(o, "C#3 D3")
