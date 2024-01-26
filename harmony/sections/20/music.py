@@ -406,10 +406,9 @@ def va(m):
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "o< mf",
-            pieces=[o],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -499,10 +498,9 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 2)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "o< mf",
-            pieces=[o],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -523,10 +521,9 @@ def cb1(m):
     with baca.scope(m[2]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "o< mf",
-            pieces=[o],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -585,10 +582,9 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1]),
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run,
                     "o<| f",
-                    pieces=[run],
                 )
         with baca.scope(m.get(3, 10)) as o:
             library.bridge_staff_position(o)

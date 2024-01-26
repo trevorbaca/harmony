@@ -674,10 +674,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
     with baca.scope(m[6]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[1:3],
             "pp >o niente",
-            pieces=[o.leaves()[1:3]],
         )
     with baca.scope(m.get(4, 6)) as o:
         baca.pitch(o.plts(grace=False), "Bb3")
@@ -709,10 +708,9 @@ def va(cache):
     with baca.scope(m.get(7, 8)) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.tleaves(o, rleak=True),
             "mf >o niente",
-            pieces=[baca.select.tleaves(o, rleak=True)],
         )
         baca.bow_speed_spanner(
             (),
@@ -921,10 +919,9 @@ def cb1(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.flat_glissando(o, "E1")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mf > p",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -972,10 +969,9 @@ def cb2(m):
         )
     with baca.scope(m[6]) as o:
         baca.flat_glissando(o, "E1")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "p < f",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -1020,10 +1016,9 @@ def composites(cache):
             for run in abjad.select.runs(o):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                baca.select.rleak(o.tleaves()),
                 "o<| ff",
-                pieces=[baca.select.rleak(o.tleaves())],
             )
 
 

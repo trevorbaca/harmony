@@ -568,10 +568,9 @@ def perc1(m):
     with baca.scope(m[7]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
         baca.markup(
             o.pleaf(0),
@@ -581,10 +580,9 @@ def perc1(m):
     with baca.scope(m[8]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[10]) as o:
         library.triangle_staff_position(o)
@@ -611,10 +609,9 @@ def perc2(m):
         library.bass_drum_staff_position(o)
         baca.flat_glissando(o, left_broken=True)
         baca.stem_tremolo(o.pleaf(-1))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "(p) >o niente",
-            pieces=[o.rleaves()],
         )
     with baca.scope(m[2]) as o:
         library.tam_tam_staff_position(o)
@@ -760,19 +757,17 @@ def hp(cache):
 def va(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D3")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "ff >o niente",
             left_broken=True,
-            pieces=[o.rleaves()],
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.tleaves(o, rleak=True),
             "mf >o niente",
-            pieces=[baca.select.tleaves(o, rleak=True)],
         )
         baca.markup(
             o.pleaf(0),
@@ -857,11 +852,10 @@ def vc1(m):
 def vc2(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D2")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "ff >o niente",
             left_broken=True,
-            pieces=[o.rleaves()],
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.phead(-1), "bass")
@@ -941,11 +935,10 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D2")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "ff >o niente",
             left_broken=True,
-            pieces=[o.rleaves()],
         )
     for item in [2, (4, 5), 10]:
         with baca.scope(m.get(item)) as o:
@@ -1036,10 +1029,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[6]) as o:
             baca.stop_on_string(o.rest(1))
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.leaves()[1:3],
                 "o<| ff",
-                pieces=[o.leaves()[1:3]],
             )
             baca.accent(o.phead(-1))
             baca.stem_tremolo(o.plt(-1))

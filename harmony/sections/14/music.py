@@ -701,10 +701,9 @@ def va(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.tleaves(o, grace=False, rleak=True),
             "f >o niente",
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
         baca.spanners.metric_modulation(
             baca.select.pleaves(o, grace=False)[:4],
@@ -756,10 +755,9 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
@@ -775,10 +773,9 @@ def vc1(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.tleaves(o, grace=False, rleak=True),
             "mf >o niente",
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 4),
@@ -846,10 +843,9 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[5]) as o:
@@ -917,10 +913,9 @@ def cb1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
@@ -936,10 +931,9 @@ def cb1(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.tleaves(o, grace=False, rleak=True),
             "mf >o niente",
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -986,10 +980,9 @@ def cb2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B2")
@@ -1025,10 +1018,9 @@ def composites(cache):
     for name in ["va", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.tleaves(),
                 "o< mp",
-                pieces=[o.tleaves()],
             )
             baca.scp_spanner(
                 (),
@@ -1038,25 +1030,21 @@ def composites(cache):
                 pieces=[o.tleaves()],
             )
         with baca.scope(m.get(6, 9)) as o:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.run(0),
                 "o< mp",
-                pieces=[o.run(0)],
             )
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.run(1),
                 "o< mf",
-                pieces=[o.run(1)],
             )
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.run(2),
                 "o< f",
-                pieces=[o.run(2)],
             )
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.run(3),
                 "o< ff",
-                pieces=[o.run(3)],
             )
             for run in baca.select.runs(o):
                 baca.scp_spanner(

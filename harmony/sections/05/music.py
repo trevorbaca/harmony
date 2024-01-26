@@ -334,10 +334,9 @@ def perc1(m):
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [-2, 0, -2, 0, 0])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "p < f",
-            pieces=[o.tleaves()],
         )
         baca.markup(
             o.pleaf(0),
@@ -346,10 +345,9 @@ def perc1(m):
         )
     with baca.scope(m[3]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f > p",
-            pieces=[o.tleaves()],
         )
     with baca.scope(m.get(2, 3)) as o:
         baca.override.dls_staff_padding(o, 5.5)
@@ -395,10 +393,9 @@ def perc2(m):
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [-2, 0, 0, -2, 0])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "p < f",
-            pieces=[o.tleaves()],
         )
         baca.markup(
             o.pleaf(0),
@@ -407,10 +404,9 @@ def perc2(m):
         )
     with baca.scope(m[3]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f > p",
-            pieces=[o.tleaves()],
         )
     with baca.scope(m.get(2, 3)) as o:
         baca.override.dls_staff_padding(o, 5.5)
@@ -464,10 +460,9 @@ def hp(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "F4 D4 A4 G3 B3 E3")
         baca.glissando(o.tleaves())
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             '"f" >o niente',
-            pieces=[o.rleaves()],
         )
         baca.markup(
             o.pleaf(0),
@@ -623,10 +618,9 @@ def vc2(m):
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                u,
                 "mf >o niente",
-                pieces=[u],
             )
             baca.scp_spanner(
                 (),
@@ -660,10 +654,9 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "E1"),
         baca.flat_glissando(o)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mf > p",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -748,10 +741,9 @@ def cb2(m):
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                u,
                 "mf >o niente",
-                pieces=[u],
             )
             baca.scp_spanner(
                 (),
@@ -796,16 +788,14 @@ def strings(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[4]) as o:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o,
                 '! o< "f"',
-                pieces=[o],
             )
         with baca.scope(m[5]) as o:
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                o.rleaves(),
                 '"f" >o niente',
-                pieces=[o.rleaves()],
             )
         with baca.scope(m.get(4, 5)) as o:
             pheads = baca.select.pheads(o)

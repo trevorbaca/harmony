@@ -347,10 +347,9 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
         baca.markup(
             o.pleaf(0),
@@ -482,10 +481,9 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
@@ -504,16 +502,14 @@ def vc1(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run,
                     "o<| f",
-                    pieces=[run],
                 )
             elif i == 1:
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run[:-1],
                     "o<| fff-scratch",
-                    pieces=[run[:-1]],
                 )
 
 
@@ -523,10 +519,9 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[3]) as o:
         baca.literal(
@@ -566,16 +561,14 @@ def vc2(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run,
                     "o<| f",
-                    pieces=[run],
                 )
             elif i == 1:
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run[:-1],
                     "o<| fff-scratch",
-                    pieces=[run[:-1]],
                 )
 
 
@@ -585,10 +578,9 @@ def cb1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[3]) as o:
         baca.literal(
@@ -633,16 +625,14 @@ def cb1(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run,
                     "o<| f",
-                    pieces=[run],
                 )
             elif i == 1:
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run[:-1],
                     "o<| fff-scratch",
-                    pieces=[run[:-1]],
                 )
 
 
@@ -652,10 +642,9 @@ def cb2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpin(
-                (),
+            baca.spanners.hairpin(
+                run,
                 "o<| f",
-                pieces=[run],
             )
     with baca.scope(m[3]) as o:
         baca.literal(
@@ -695,16 +684,14 @@ def cb2(m):
         for i, run in enumerate(runs):
             if i == 0:
                 run = baca.select.rleak(run)
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run,
                     "o<| f",
-                    pieces=[run],
                 )
             elif i == 1:
-                baca.hairpin(
-                    (),
+                baca.spanners.hairpin(
+                    run[:-1],
                     "o<| fff-scratch",
-                    pieces=[run[:-1]],
                 )
 
 
