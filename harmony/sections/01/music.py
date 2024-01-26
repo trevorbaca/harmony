@@ -232,10 +232,9 @@ def perc1(m):
         baca.instrument_name(o.leaf(0), r"\harmony-percussion-i-markup")
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[-2:],
             "o<| f",
-            pieces=[o.leaves()[-2:]],
         )
         baca.markup(
             o.pleaf(0),
@@ -245,15 +244,13 @@ def perc1(m):
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptail(0))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(o.leaves()[:1]),
             "o<| mf",
-            pieces=[baca.select.rleak(o.leaves()[:1])],
         )
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[-2:],
             "o<| f",
-            pieces=[o.leaves()[-2:]],
         )
     for n in [1, 2]:
         with baca.scope(m[n]) as o:
@@ -263,10 +260,9 @@ def perc1(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f > p",
-            pieces=[o.tleaves()],
         )
         baca.override.dls_staff_padding(o, 5.5)
         baca.markup(
@@ -295,10 +291,9 @@ def perc2(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.tleaves(),
             "f > p",
-            pieces=[o.tleaves()],
         )
         baca.override.dls_staff_padding(o, 5.5)
         baca.markup(
@@ -432,10 +427,9 @@ def vc2(m):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mf >o niente",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -514,10 +508,9 @@ def cb2(m):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mf >o niente",
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
