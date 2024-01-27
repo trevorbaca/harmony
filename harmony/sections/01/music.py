@@ -373,9 +373,8 @@ def vc1(m):
         baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [4, 5]),
             "o< f >o niente",
-            pieces=baca.select.lparts(leaves, [4, 5]),
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
@@ -452,9 +451,8 @@ def cb1(m):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [4, 7]),
             "o< f >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [4, 7]),
         )
         baca.override.dls_staff_padding(o, 4)
         leaves = baca.select.rleak(baca.select.ltleaves(o))

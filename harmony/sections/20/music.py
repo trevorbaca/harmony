@@ -229,9 +229,8 @@ def bfl(m):
         for i, run in enumerate(runs):
             run = baca.select.rleak(run)
             baca.hairpin(
-                (),
+                baca.select.lparts(run, [1, 2]),
                 "o< f >o niente",
-                pieces=baca.select.lparts(run, [1, 2]),
             )
             if i == 0:
                 baca.spanners.trill(
@@ -249,9 +248,8 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                (),
+                baca.select.lparts(run, [1, 1 + 1]),
                 "o< mp >o niente",
-                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.spanners.trill(
                 run,
@@ -287,9 +285,8 @@ def perc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                (),
+                baca.select.lparts(run, [1, 1 + 1]),
                 "o< pp >o niente",
-                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
         baca.markup(
             o.pleaf(0),
@@ -464,9 +461,8 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                (),
+                baca.select.lparts(run, [1, 1 + 1]),
                 "o< mp >o niente",
-                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.spanners.trill(
                 run,

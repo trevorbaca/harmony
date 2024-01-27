@@ -230,21 +230,18 @@ def hp(cache):
         )
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "p < mf > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(8, 9)) as o:
         baca.pitch(o, "<C6 Db6 Eb6>")
@@ -270,21 +267,18 @@ def va(cache):
         )
     with baca.scope(m[2]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < mf > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(1, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -314,21 +308,18 @@ def vc1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "p < mf > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(2, 9)) as o:
         baca.pitch(o, "<C5 Db5 Eb5>")
@@ -364,15 +355,13 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(3, 9)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -399,15 +388,13 @@ def cb1(cache):
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "p < f > p",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.pitch(o, "<C5 Db5 Eb5>", do_not_transpose=True)
@@ -443,9 +430,8 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "treble")

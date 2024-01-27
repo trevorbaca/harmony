@@ -288,10 +288,9 @@ def bfl(m):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3"),
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             "pp p",
             bookend=False,
-            pieces=baca.select.plts(o),
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
@@ -451,10 +450,9 @@ def hp(m):
         baca.pitch(o, "C#4")
         baca.accent(o.pheads())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             "pp p",
             bookend=False,
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[4]) as o:
@@ -564,10 +562,9 @@ def vc1(m):
             baca.staff_lines(u, 5)
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            (),
+            baca.select.plts(o)[1:],
             "p mp",
             bookend=False,
-            pieces=baca.select.plts(o)[1:],
         )
     with baca.scope(m.get(2, 3)) as o:
         with baca.scope(o.pheads()[2:]) as u:
@@ -672,10 +669,9 @@ def cb1(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             "pp ppp",
             bookend=False,
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[3]) as o:
@@ -685,10 +681,9 @@ def cb1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             "pp p mp",
             bookend=False,
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o.plts()[:-1], 4)
         baca.spanners.pizzicato(
@@ -719,10 +714,9 @@ def cb2(m):
     with baca.scope(m[1]) as o:
         baca.flat_glissando(o, "E1", left_broken=True)
         baca.hairpin(
-            (),
+            [o],
             "o< f",
             left_broken=True,
-            pieces=[o],
         )
         baca.scp_spanner(
             (),
@@ -757,10 +751,9 @@ def cb2(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             "pp p",
             bookend=False,
-            pieces=baca.select.plts(o),
         )
         baca.spanners.pizzicato(
             baca.select.rleak(baca.select.ltleaves(o)),

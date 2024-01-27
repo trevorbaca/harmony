@@ -342,9 +342,8 @@ def bfl(cache):
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p <| mf |> p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
         baca.override.dls_staff_padding(o, 3)
     with baca.scope(m[6]) as o:
@@ -391,30 +390,26 @@ def bfl(cache):
     with baca.scope(m[8]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p <| mp |> p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
     with baca.scope(m[9]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p <| mf |> p",
-                pieces=baca.select.clparts(clpart, [1]),
             ),
     with baca.scope(m[10]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p <| f |> p",
-                pieces=baca.select.clparts(clpart, [1]),
             ),
     with baca.scope(m[11]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p <| ff |> p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
 
 
@@ -577,16 +572,14 @@ def hp(cache):
     with baca.scope(m[1]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p < f > p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
     with baca.scope(m.get(2, 5)) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "(p) < f > p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -622,30 +615,26 @@ def hp(cache):
     with baca.scope(m[8]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p < mp > p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
     with baca.scope(m[9]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "(p) < mf > p",
-                pieces=baca.select.clparts(clpart, [1]),
             ),
     with baca.scope(m[10]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "(p) < f > p",
-                pieces=baca.select.clparts(clpart, [1]),
             ),
     with baca.scope(m[11]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "(p) < ff > p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
 
 
@@ -762,9 +751,8 @@ def vc1(cache):
         baca.accent(baca.select.pheads(baca.select.rleaves(o)))
         leaves = baca.select.rleaves(o, count=2)
         baca.hairpin(
-            (),
+            baca.select.mgroups(leaves, [1, 2]),
             "o< f >o niente",
-            pieces=baca.select.mgroups(leaves, [1, 2]),
         )
         baca.override.dls_staff_padding(o, 6)
         leaves = baca.select.rleak(baca.select.ltleaves(o))

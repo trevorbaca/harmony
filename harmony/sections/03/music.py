@@ -495,10 +495,9 @@ def va(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o, 6),
 
@@ -512,10 +511,9 @@ def vc1(m):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[2]) as o:
         baca.hairpin(
-            (),
+            baca.select.plts(o)[1:],
             "p mp",
             bookend=False,
-            pieces=baca.select.plts(o)[1:],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
@@ -556,11 +554,10 @@ def vc1(m):
         )
         leaves = o.rleaves(count=3)[1:]
         baca.hairpin(
-            (),
+            baca.select.plts(leaves),
             # '"ff" "f" mf mp p pp ppp ppp',
             '"f" mf mp p pp ppp ppp',
             bookend=False,
-            pieces=baca.select.plts(leaves),
         )
     with baca.scope(m[8]) as o:
         baca.override.tuplet_number_text(o.leaves(), r"\markup 5:4")
@@ -709,10 +706,9 @@ def cb1(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o, 6)
 
@@ -796,10 +792,9 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.accent(o.pheads())
             baca.hairpin(
-                (),
+                baca.select.plts(o),
                 "pp p mp mf f",
                 bookend=False,
-                pieces=baca.select.plts(o),
             )
 
 
