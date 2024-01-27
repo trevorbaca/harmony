@@ -482,7 +482,7 @@ def va(m):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 4),
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -494,7 +494,7 @@ def va(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
@@ -510,7 +510,7 @@ def vc1(m):
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[2]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o)[1:],
             "p mp",
             bookend=False,
@@ -530,7 +530,7 @@ def vc1(m):
         baca.pitch(o, "E4"),
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -553,7 +553,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         leaves = o.rleaves(count=3)[1:]
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(leaves),
             # '"ff" "f" mf mp p pp ppp ppp',
             '"f" mf mp p pp ppp ppp',
@@ -606,7 +606,7 @@ def vc2(m):
                 u,
                 "mf >o niente",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -623,7 +623,7 @@ def vc2(m):
         baca.pitch(o, "Eqf4")
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -642,7 +642,7 @@ def vc2(m):
                 baca.select.rleak(run),
                 "mf >o niente",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -690,7 +690,7 @@ def cb1(m):
             o,
             "mf > p",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -705,7 +705,7 @@ def cb1(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
@@ -728,7 +728,7 @@ def cb2(m):
                 u,
                 "mf >o niente",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -755,7 +755,7 @@ def cb2(m):
             o,
             "p < f",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -774,7 +774,7 @@ def cb2(m):
                 baca.select.rleak(run),
                 "mf >o niente",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -791,7 +791,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.accent(o.pheads())
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
                 bookend=False,

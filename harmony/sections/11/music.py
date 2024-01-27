@@ -430,7 +430,7 @@ def bfl(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
             "o< mf >o niente",
         )
@@ -453,7 +453,7 @@ def bfl(cache):
     with baca.scope(m[7]) as o:
         baca.breathe(o.pleaf(-1))
         for clpart in baca.select.clparts(o, [2]):
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -466,7 +466,7 @@ def bfl(cache):
         baca.breathe(pleaves)
         for clpart in baca.select.clparts(o, [4]):
             clpart = baca.select.rleak(clpart)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -475,7 +475,7 @@ def bfl(cache):
             )
     with baca.scope(m.get(7, 8)) as o:
         baca.pitch(o, "Dtqf5")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1, 2, 3]),
             'o< "f" >o niente o< "f" >o niente',
         )
@@ -490,7 +490,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[10]) as o:
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             "o< mf >o niente",
         )
@@ -522,7 +522,7 @@ def perc1(m):
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< p >o niente",
         )
@@ -536,12 +536,12 @@ def perc1(m):
         baca.flat_glissando(o.pleaves())
         baca.stem_tremolo(o.pleaves()),
         leaves = o.leaves()[:3]
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< p > pp",
         ),
         leaves = o.leaves()[5:8]
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "pp < mp > pp",
         )
@@ -583,7 +583,7 @@ def perc1(m):
         baca.flat_glissando(o.leaves()[:-1])
         baca.stem_tremolo(o.pheads())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
             "o< p > pp pp < p > pp < p >o niente",
             abjad.Tweak(r"- \tweak staff-padding 10"),
@@ -723,7 +723,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         library.whisk_staff_position(o)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.run(0), [1, 3]),
             'o< "f" >o niente',
         )
@@ -766,7 +766,7 @@ def va(m):
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -794,7 +794,7 @@ def vc1(m):
         baca.override.tuplet_bracket_up(o)
         baca.override.note_head_style_harmonic(o.pleaves())
         leaves = baca.select.rleak(o.leaves()[-2:])
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             "o<| mp |>o niente",
         )
@@ -872,7 +872,7 @@ def cb1(m):
         baca.override.tuplet_bracket_up(o)
         baca.override.note_head_style_harmonic(o.pleaves())
         leaves = baca.select.rleak(abjad.select.leaves(o)[-2:])
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             "o<| mp |>o niente",
         )
@@ -964,7 +964,7 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "o<| mp |>o niente",
             )
@@ -975,12 +975,12 @@ def composites(cache):
             baca.flat_glissando(o.pleaves())
             baca.override.note_head_style_harmonic(o.pleaves())
             leaves = o.leaves()[:3]
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "o<| p |> pp",
             )
             leaves = o.leaves()[5:8]
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "pp <| mp |> pp",
             )
@@ -998,7 +998,7 @@ def composites(cache):
             baca.override.note_head_style_harmonic(o.pleaves())
             baca.flat_glissando(o.rleaves(), right_broken=True)
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
                 right_broken=True,

@@ -265,7 +265,7 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
@@ -408,7 +408,7 @@ def va(cache):
         baca.pitch(o, "E3")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "ff")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -425,7 +425,7 @@ def va(cache):
         baca.pitch(o, "E3")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T -> P -> T",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -439,7 +439,7 @@ def va(cache):
             o,
             "pp >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -456,7 +456,7 @@ def vc1(cache):
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "ff")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -475,7 +475,7 @@ def vc1(cache):
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T -> P",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -491,7 +491,7 @@ def vc1(cache):
             staff_padding=5.5,
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -506,7 +506,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Dqf3")
         baca.dynamic(o.phead(0), "p")
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
@@ -526,7 +526,7 @@ def vc2(cache):
         baca.pitch(o, "Dqf3")
         baca.flat_glissando(o, hide_middle_stems=True)
         baca.dynamic(o.phead(0), "p")
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -539,7 +539,7 @@ def vc2(cache):
             o,
             "pp >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -556,7 +556,7 @@ def cb1(cache):
         baca.pitch(o, "E1")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "ff")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -582,7 +582,7 @@ def cb1(cache):
             staff_padding=5.5,
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -614,7 +614,7 @@ def cb2(cache):
             o.rleaves(),
             "ff >o",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P3 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -628,7 +628,7 @@ def cb2(cache):
             o,
             "pp >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),

@@ -213,7 +213,7 @@ def bfl(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -236,7 +236,7 @@ def bfl(m):
     with baca.scope(m[9]) as o:
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -245,7 +245,7 @@ def bfl(m):
             )
     with baca.scope(m[10]) as o:
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -377,7 +377,7 @@ def va(m):
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -391,7 +391,7 @@ def va(m):
             right_broken=True,
         )
         baca.dynamic(o.phead(0), "pp")
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),

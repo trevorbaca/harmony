@@ -262,7 +262,7 @@ def bfl(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
             "o< mp >o !",
         )
@@ -273,13 +273,13 @@ def bfl(cache):
             r"\baca-seven-e-flat",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
             'o< "f" >o niente',
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -449,7 +449,7 @@ def hp(cache):
 def va(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -465,7 +465,7 @@ def va(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -485,7 +485,7 @@ def vc1(m):
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -536,7 +536,7 @@ def vc2(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -544,7 +544,7 @@ def vc2(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -600,7 +600,7 @@ def cb1(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -608,7 +608,7 @@ def cb1(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -659,7 +659,7 @@ def cb2(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -667,7 +667,7 @@ def cb2(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),

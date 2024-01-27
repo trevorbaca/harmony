@@ -356,7 +356,7 @@ def bfl(m):
                 )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 3]),
             "pp < p >o",
             bookend=False,
@@ -365,7 +365,7 @@ def bfl(m):
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             "(T) -> A -> (T)",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -375,7 +375,7 @@ def bfl(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             leaves = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
@@ -385,7 +385,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
             leaves = baca.select.rleak(run)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
@@ -402,7 +402,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
@@ -601,7 +601,7 @@ def va(cache):
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P2 -> P1 -> P3 -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -622,7 +622,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P2 -> O -> P2 -> P1 -> P3",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -631,7 +631,7 @@ def vc1(cache):
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -653,7 +653,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "O -> P2 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -670,7 +670,7 @@ def vc2(cache):
         baca.pitch(o.pleaves()[1:-1], "C5")
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 2, 3, 2]),
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -686,7 +686,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> P2 -> O -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -706,7 +706,7 @@ def cb1(cache):
     with baca.scope(m[9]) as o:
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.override.note_head_transparent(o.pleaves()[1:-1])
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 3, 2]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -722,7 +722,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -743,7 +743,7 @@ def cb2(cache):
         baca.pitch(o.pleaves()[1:-1], "C5", do_not_transpose=True)
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -757,7 +757,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[4]) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(o, [1, 1 + 1]),
                 "pp < p > pp",
             )
@@ -798,7 +798,7 @@ def composites(cache):
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
-                baca.scp_spanner(
+                baca.piecewise.scp(
                     (),
                     "P1 =|",
                     abjad.Tweak(r"- \tweak staff-padding 3"),

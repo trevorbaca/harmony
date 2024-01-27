@@ -222,7 +222,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
@@ -239,7 +239,7 @@ def bfl(m):
             leaves,
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "p < mp >",
         )
@@ -257,7 +257,7 @@ def perc1(m):
         library.triangle_staff_position(o)
         baca.flat_glissando(o.pleaves(), hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "p < mp > p p < mp > p",
         )
@@ -285,7 +285,7 @@ def perc1(m):
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -7]))
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "p < mp >",
         )
@@ -370,7 +370,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.override.dls_staff_padding(o, 4)
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
@@ -394,7 +394,7 @@ def va(cache):
             hide_middle_stems=True,
             left_broken=True,
         )
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poc. scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -416,7 +416,7 @@ def va(cache):
             "p-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -431,7 +431,7 @@ def vc1(cache):
         baca.pitches(o, "E6 C#6")
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.cmgroups(o.rleaves(), [2, 3]),
             "o< mp >o",
             bookend=False,
@@ -443,7 +443,7 @@ def vc1(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m[5]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 3, 1 + 1]),
             "pp -- ! < mp >o niente",
         )
@@ -460,7 +460,7 @@ def vc1(cache):
     with baca.scope(m.get(7, 10)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#6")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "niente o< pp >o ! o< pp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< pp >o ! o< p >o !"
@@ -494,7 +494,7 @@ def vc2(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitches(o, "A5 C#6")
         baca.glissando(o.tleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.cmgroups(o.rleaves(), [2, 3]),
             "o< mp >o",
             bookend=False,
@@ -506,7 +506,7 @@ def vc2(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m[5]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2, 3, 2 + 1]),
             "pp -- ! < mp -- ! >o niente",
         )
@@ -524,7 +524,7 @@ def vc2(cache):
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A5")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "niente o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
             " o< pp >o ! o< p >o ! o< pp >o !"
@@ -560,7 +560,7 @@ def cb1(cache):
         baca.pitch(o, "C#4", do_not_transpose=True)
         for run in baca.select.runs(o):
             rrun = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(rrun, [1, 1 + 1]),
                 "niente o< mp >o niente",
             )
@@ -575,7 +575,7 @@ def cb1(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m[5]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 3, 2 + 1]),
             "pp -- ! < mp >o niente",
         )
@@ -593,7 +593,7 @@ def cb1(cache):
     with baca.scope(m.get(7, 10)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#4", do_not_transpose=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "niente o< pp >o ! o< pp >o ! o< p >o ! o< p >o !"
             " o< pp >o ! o< pp >o ! o< p >o !"
@@ -628,12 +628,12 @@ def cb2(cache):
             hide_middle_stems=True,
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 2]),
             "o< ff >o",
             bookend=False,
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -648,7 +648,7 @@ def cb2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 1, 1 + 1]),
             "pp -- ! < mp >o niente",
         )
@@ -676,12 +676,12 @@ def cb2(cache):
             allow_hidden=True,
             right_broken=True,
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [2, 1, 2]),
             "o< ff (ff) >o niente",
             right_broken=True,
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),

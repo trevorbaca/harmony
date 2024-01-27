@@ -287,7 +287,7 @@ def bfl(m):
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3"),
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp p",
             bookend=False,
@@ -449,7 +449,7 @@ def hp(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "C#4")
         baca.accent(o.pheads())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp p",
             bookend=False,
@@ -482,7 +482,7 @@ def va(m):
         baca.pitch(o, "Eb3"),
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -502,7 +502,7 @@ def va(m):
                 u,
                 staff_padding=8,
             )
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -512,7 +512,7 @@ def va(m):
         baca.pitch(o, "Eb3")
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -534,7 +534,7 @@ def vc1(m):
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -561,7 +561,7 @@ def vc1(m):
             baca.override.clef_x_extent_false(u)
             baca.staff_lines(u, 5)
     with baca.scope(m[3]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o)[1:],
             "p mp",
             bookend=False,
@@ -598,7 +598,7 @@ def vc2(m):
         baca.pitch(o, "Eqf4"),
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -619,7 +619,7 @@ def vc2(m):
                 u,
                 "mf >o niente",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -655,7 +655,7 @@ def cb1(m):
             o,
             "mf > p",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -668,7 +668,7 @@ def cb1(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp ppp",
             bookend=False,
@@ -680,7 +680,7 @@ def cb1(m):
         baca.pitch(o, "Aqs4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp p mp",
             bookend=False,
@@ -713,12 +713,12 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[1]) as o:
         baca.flat_glissando(o, "E1", left_broken=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [o],
             "o< f",
             left_broken=True,
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "(T1) -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -739,7 +739,7 @@ def cb2(m):
                 u,
                 "mf >o niente",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -750,7 +750,7 @@ def cb2(m):
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp p",
             bookend=False,

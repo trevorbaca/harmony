@@ -323,7 +323,7 @@ def bfl(m):
         baca.pitch(o, "Gqs5")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "o< mp >o niente",
             )
@@ -343,7 +343,7 @@ def bfl(m):
             )
     with baca.scope(m.get(5, 10)) as o:
         baca.pitch(o, "Gqs5")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o.leaves(), [1]),
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
@@ -374,7 +374,7 @@ def perc1(m):
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "o< pp >o niente",
             )
@@ -547,7 +547,7 @@ def va(m):
             o,
             "o< f",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -559,11 +559,11 @@ def va(m):
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
             "o< ff >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -579,7 +579,7 @@ def va(m):
             o,
             "pp >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -594,7 +594,7 @@ def vc1(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "o< mp >o niente",
             )
@@ -612,7 +612,7 @@ def vc1(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#5")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o.leaves(), [1]),
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
@@ -646,7 +646,7 @@ def vc2(m):
             o,
             "o< f",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -662,11 +662,11 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 3)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
             "o< ff >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 7.5"),
@@ -682,7 +682,7 @@ def vc2(m):
             o,
             "pp >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -702,7 +702,7 @@ def cb1(m):
             o,
             "o< f",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -713,7 +713,7 @@ def cb1(m):
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "Cqf5")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o.leaves(), [1]),
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
@@ -756,11 +756,11 @@ def cb2(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
             "o< ff >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -778,7 +778,7 @@ def cb2(m):
             "pp >o niente",
         )
         baca.override.dls_staff_padding(o, 4)
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),

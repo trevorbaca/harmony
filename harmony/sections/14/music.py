@@ -382,7 +382,7 @@ def bfl(cache):
             baca.override.accidental_font_size(u, -3),
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o niente",
         )
@@ -402,7 +402,7 @@ def bfl(cache):
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
         )
@@ -411,7 +411,7 @@ def bfl(cache):
             o,
             abjad.sequence.rotate(library.warble_pitches(), -1),
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o niente",
         )
@@ -424,7 +424,7 @@ def bfl(cache):
             o,
             abjad.sequence.rotate(library.warble_pitches(), -2),
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o niente",
         )
@@ -443,7 +443,7 @@ def bfl(cache):
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
             run = baca.select.rleaves(run)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -566,7 +566,7 @@ def perc2(cache):
             '"ff"',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o)[1:],
             # '"ff" "ff" "ff" "f" "f" mf mp p pp',
             '"ff" "ff" "f" "f" mf mp p pp',
@@ -635,7 +635,7 @@ def hp(cache):
     with baca.scope(m[5]) as o:
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< mf >o niente",
         )
@@ -730,7 +730,7 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [o.plts()],
             '"ff" "ff"',
         )
@@ -773,7 +773,7 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             '"ff" "ff" "f" "f" mf mp p',
         )
@@ -816,7 +816,7 @@ def vc2(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             '"ff" "ff"',
         )
@@ -846,7 +846,7 @@ def vc2(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o),
             '"ff" "ff" "f" mf mp p pp',
         )
@@ -1006,7 +1006,7 @@ def composites(cache):
                 o.tleaves(),
                 "o< mp",
             )
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "T1 -> P1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1031,7 +1031,7 @@ def composites(cache):
                 "o< ff",
             )
             for run in baca.select.runs(o):
-                baca.scp_spanner(
+                baca.piecewise.scp(
                     (),
                     "T1 -> P1",
                     abjad.Tweak(r"- \tweak staff-padding 3"),

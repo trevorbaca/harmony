@@ -229,17 +229,17 @@ def hp(cache):
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[1]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "p < mf > p",
         )
     with baca.scope(m[3]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
         )
     with baca.scope(m[5]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff > p",
         )
@@ -266,17 +266,17 @@ def va(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m[2]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < mf > p",
         )
     with baca.scope(m[4]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
         )
     with baca.scope(m[6]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
         )
@@ -307,17 +307,17 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m[2]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "p < mf > p",
         )
     with baca.scope(m[4]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
         )
     with baca.scope(m[6]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
         )
@@ -354,12 +354,12 @@ def vc2(cache):
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < f > p",
         )
     with baca.scope(m[6]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
         )
@@ -387,12 +387,12 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m[4]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "p < f > p",
         )
     with baca.scope(m[6]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
         )
@@ -429,7 +429,7 @@ def cb2(cache):
     with baca.scope(m[5]) as o:
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[6]) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "(p) < ff >o niente",
         )

@@ -262,7 +262,7 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D5")
         with baca.scope(o.leaves()[:3]) as u:
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -285,7 +285,7 @@ def bfl(m):
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()),
                 (3, 4),
@@ -471,7 +471,7 @@ def va(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "D4")
         baca.flat_glissando(o, hide_middle_stems=True, left_broken=True)
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -483,7 +483,7 @@ def va(cache):
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -495,7 +495,7 @@ def va(cache):
             o.rleaves(),
             "pp >o niente",
         )
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -508,7 +508,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E3"),
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -540,7 +540,7 @@ def vc1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -554,7 +554,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -586,7 +586,7 @@ def vc2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -600,7 +600,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E3"),
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -632,7 +632,7 @@ def cb1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -646,7 +646,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D3"),
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -678,7 +678,7 @@ def cb2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -697,7 +697,7 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |>o niente",
             )

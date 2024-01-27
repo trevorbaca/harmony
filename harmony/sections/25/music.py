@@ -266,7 +266,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
@@ -280,7 +280,7 @@ def bfl(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
@@ -289,7 +289,7 @@ def bfl(m):
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
@@ -306,7 +306,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
@@ -467,7 +467,7 @@ def va(cache):
         baca.pitch(o, "Ab4")
         baca.flat_glissando(o)
         baca.dynamic(o.phead(0), "mp")
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -475,7 +475,7 @@ def va(cache):
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P2 -> P1 -> P3 -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -483,7 +483,7 @@ def va(cache):
             pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m.get(5, 10)) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
@@ -517,7 +517,7 @@ def vc1(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P2 -> O -> P2 -> P1 -> P3",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -526,7 +526,7 @@ def vc1(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
@@ -558,7 +558,7 @@ def vc2(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "O -> P2 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -567,7 +567,7 @@ def vc2(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
@@ -601,7 +601,7 @@ def cb1(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> P2 -> O -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -610,7 +610,7 @@ def cb1(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
@@ -643,7 +643,7 @@ def cb2(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -652,7 +652,7 @@ def cb2(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
