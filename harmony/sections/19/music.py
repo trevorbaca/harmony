@@ -560,12 +560,8 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
             baca.hairpin(
-                (),
+                abjad.select.partition_by_ratio(abjad.select.leaves(u), (3, 4)),
                 "o< mp >o niente",
-                pieces=abjad.select.partition_by_ratio(
-                    abjad.select.leaves(u),
-                    (3, 4),
-                ),
             )
             baca.spanners.trill(
                 u,
@@ -592,12 +588,8 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
             baca.hairpin(
-                (),
+                abjad.select.partition_by_ratio(abjad.select.leaves(u), (3, 4)),
                 "o< mf >o niente",
-                pieces=abjad.select.partition_by_ratio(
-                    abjad.select.leaves(u),
-                    (3, 4),
-                ),
             )
             baca.spanners.trill(
                 u,
@@ -876,9 +868,8 @@ def va(cache):
         baca.override.tuplet_bracket_up(o)
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.clparts(o.tleaves(), [1]),
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
-            pieces=baca.select.clparts(o.tleaves(), [1]),
         )
         baca.dynamic(baca.select.rleak(o.leaves()[-1:])[-1], "niente")
     for item in [(1, 2), (4, 9), 12]:
@@ -997,10 +988,9 @@ def cb2(cache):
         baca.pitch(o, "E5", do_not_transpose=True)
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
         baca.spanners.metric_modulation(
@@ -1044,9 +1034,8 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                (),
+                baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |>o niente",
-                pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.override.dynamic_text_x_offset(o.pleaf(-1), -0.25)
@@ -1057,9 +1046,8 @@ def composites(cache):
             baca.flat_glissando(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                (),
+                baca.select.lparts(leaves, [2, 1 + 1]),
                 "o< mp >o niente",
-                pieces=baca.select.lparts(leaves, [2, 1 + 1]),
             )
     for name in ["vc1", "vc2"]:
         m = cache[name]

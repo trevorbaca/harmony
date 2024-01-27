@@ -357,10 +357,9 @@ def bfl(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 3]),
             "pp < p >o",
             bookend=False,
-            pieces=baca.select.lparts(o.rleaves(), [1, 3]),
         )
         baca.spanners.trill(
             baca.select.tleaves(o, rleak=True),
@@ -377,10 +376,9 @@ def bfl(m):
         for run in baca.select.runs(o):
             leaves = baca.select.rleak(run)
             baca.hairpin(
-                (),
+                baca.select.lparts(leaves, [1, 1 + 1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
-                pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
             baca.spanners.trill(
                 baca.select.tleaves(run, rleak=True),
@@ -405,11 +403,8 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                (),
+                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
-                pieces=abjad.select.partition_by_ratio(
-                    abjad.select.leaves(run), (4, 5)
-                ),
             )
             baca.spanners.trill(
                 baca.select.rleak(run),
@@ -637,10 +632,9 @@ def vc1(cache):
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=baca.select.plts(o),
         )
         baca.untie(o.leaves())
         baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "<A4 B4 C5>")
@@ -677,11 +671,10 @@ def vc2(cache):
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 2, 3, 2]),
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
-            pieces=baca.select.lparts(o, [1, 2, 3, 2]),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -714,11 +707,10 @@ def cb1(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [2, 3, 2]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
-            pieces=baca.select.lparts(o, [2, 3, 2]),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -752,10 +744,9 @@ def cb2(cache):
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [2, 1, 1]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=baca.select.lparts(o, [2, 1, 1]),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -767,9 +758,8 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[4]) as o:
             baca.hairpin(
-                (),
+                baca.select.lparts(o, [1, 1 + 1]),
                 "pp < p > pp",
-                pieces=baca.select.lparts(o, [1, 1 + 1]),
             )
             if name != "va":
                 baca.clef(o.leaf(0), "treble")

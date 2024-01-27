@@ -267,11 +267,8 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                (),
+                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
-                pieces=abjad.select.partition_by_ratio(
-                    abjad.select.leaves(run), (4, 5)
-                ),
             )
             baca.spanners.trill(
                 baca.select.rleak(run),
@@ -284,10 +281,9 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                (),
+                baca.select.lparts(run, [1, 1 + 1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
-                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.spanners.trill(
                 run,
@@ -311,11 +307,8 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                (),
+                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
-                pieces=abjad.select.partition_by_ratio(
-                    abjad.select.leaves(run), (4, 5)
-                ),
             )
             baca.spanners.trill(
                 baca.select.rleak(run),
@@ -491,13 +484,12 @@ def va(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.hairpin(
-            (),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- niente",
-            pieces=abjad.select.partition_by_counts(
+            abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -535,13 +527,12 @@ def vc1(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            (),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
-            " mf < ff-scratch -- niente",
-            pieces=abjad.select.partition_by_counts(
+            abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
+            " mf < ff-scratch -- niente",
         )
         baca.override.note_head_transparent(o.leaves()[1:-1])
         baca.untie(o.leaves())
@@ -577,13 +568,12 @@ def vc2(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            (),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- niente",
-            pieces=abjad.select.partition_by_counts(
+            abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -621,13 +611,12 @@ def cb1(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            (),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- niente",
-            pieces=abjad.select.partition_by_counts(
+            abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -664,13 +653,12 @@ def cb2(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            (),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- niente",
-            pieces=abjad.select.partition_by_counts(
+            abjad.select.partition_by_counts(
                 baca.select.plts(o.rleaves()),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())

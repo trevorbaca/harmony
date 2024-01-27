@@ -482,9 +482,8 @@ def bfl(cache):
             m = cache[name]
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             "o< mf >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.spanners.metric_modulation(
             o.rleaves(),
@@ -493,30 +492,26 @@ def bfl(cache):
         )
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             "o< mp >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             "o< p >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[7]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             "o< pp >o niente",
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
-            pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
     with baca.scope(m[10]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -589,13 +584,10 @@ def bfl(cache):
         )
         baca.pitch(o.leaves()[-2:], "B4")
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]),
             'o< "f" >o niente o< p >o niente'
             ' o< "f" >o niente o< p >o niente'
             ' o< "f" >o niente o< f >o niente',
-            pieces=baca.select.lparts(
-                o.rleaves(), [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]
-            ),
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -782,10 +774,9 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 4]),
             "o< mf >o",
             bookend=False,
-            pieces=baca.select.lparts(leaves, [1, 4]),
         )
         baca.markup(
             o.pleaf(0),
@@ -1166,10 +1157,9 @@ def composites(cache):
             baca.accent(o.pheads())
             baca.dynamic(o.pheads()[1:-1], "sffp")
             baca.hairpin(
-                (),
+                [baca.select.rleak(o.plts()[-1:])],
                 "sffp >o niente",
                 right_broken=True,
-                pieces=[baca.select.rleak(o.plts()[-1:])],
             )
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

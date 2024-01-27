@@ -268,9 +268,8 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
-            pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
         baca.spanners.metric_modulation(
             o.leaves()[:3],
@@ -282,9 +281,8 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 1 + 1]),
             "o<| f |>o niente",
-            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -315,9 +313,8 @@ def bfl(cache):
         )
         baca.breathe(o.pleaf(1))
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             'o< "f" >o niente',
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
@@ -473,9 +470,8 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 1 + 1]),
             "o< mf >o niente",
-            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),

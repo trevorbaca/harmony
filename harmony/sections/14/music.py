@@ -383,11 +383,8 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
         baca.hairpin(
-            (),
+            abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o niente",
-            pieces=abjad.select.partition_by_ratio(
-                abjad.select.leaves(o.tleaves()), (3, 4)
-            ),
         )
         baca.spanners.trill(
             o.tleaves(),
@@ -406,9 +403,8 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
-            pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.pitches(
@@ -416,11 +412,8 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -1),
         )
         baca.hairpin(
-            (),
+            abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o niente",
-            pieces=abjad.select.partition_by_ratio(
-                abjad.select.leaves(o.tleaves()), (3, 4)
-            ),
         )
         baca.spanners.trill(
             o.tleaves(),
@@ -432,11 +425,8 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -2),
         )
         baca.hairpin(
-            (),
+            abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o niente",
-            pieces=abjad.select.partition_by_ratio(
-                abjad.select.leaves(o.tleaves()), (3, 4)
-            ),
         )
         baca.spanners.trill(
             o.tleaves(),
@@ -577,10 +567,9 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.hairpin(
-            (),
+            baca.select.plts(o)[1:],
             # '"ff" "ff" "ff" "f" "f" mf mp p pp',
             '"ff" "ff" "f" "f" mf mp p pp',
-            pieces=baca.select.plts(o)[1:],
         )
         baca.markup(
             o.pleaf(0),
@@ -647,9 +636,8 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 1 + 1]),
             "o< mf >o niente",
-            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),
@@ -743,9 +731,8 @@ def vc1(cache):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            (),
+            [o.plts()],
             '"ff" "ff"',
-            pieces=[o.plts()],
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
@@ -787,9 +774,8 @@ def vc1(cache):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             '"ff" "ff" "f" "f" mf mp p',
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[9]) as o:
@@ -831,9 +817,8 @@ def vc2(cache):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             '"ff" "ff"',
-            pieces=baca.select.plts(o),
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
@@ -862,9 +847,8 @@ def vc2(cache):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            (),
+            baca.select.plts(o),
             '"ff" "ff" "f" mf mp p pp',
-            pieces=baca.select.plts(o),
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.spanners.metric_modulation(

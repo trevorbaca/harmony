@@ -375,12 +375,11 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[10]) as o:
         baca.hairpin(
-            (),
-            "o< mp >o",
-            forbid_al_niente_to_bar_line=True,
-            pieces=abjad.select.partition_by_counts(
+            abjad.select.partition_by_counts(
                 baca.select.pleaves(o, grace=False), [2, 1]
             ),
+            "o< mp >o",
+            forbid_al_niente_to_bar_line=True,
         )
         baca.text_spanner(
             (),
@@ -393,32 +392,28 @@ def bfl(cache):
         )
     with baca.scope(m.get(11)) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 1]),
             "o< mf >o",
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.lparts(o, [1, 1]),
         )
     with baca.scope(m.get(12)) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 1]),
             "o< f >o",
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.lparts(o, [1, 1]),
         )
     with baca.scope(m.get(13)) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 1]),
             "o< mf >o",
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.select.lparts(o, [1, 1]),
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.pitch(o.leaves(grace=False), "G4")
     with baca.scope(m[14]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 3]),
             "o< mp >o niente",
-            pieces=baca.select.lparts(o, [1, 3]),
         )
     with baca.scope(m.get(13, 14)) as o:
         baca.pitch(o.leaves(grace=False), "G#4")
@@ -452,9 +447,8 @@ def perc1(m):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 1 + 1]),
             "o< p >o niente",
-            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         baca.markup(
@@ -673,9 +667,8 @@ def va(m):
         ),
         baca.glissando(o.tleaves())
         baca.hairpin(
-            (),
+            baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o niente",
-            pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
             right_broken=True,
         )
         baca.scp_spanner(
@@ -762,9 +755,8 @@ def vc1(m):
         ),
         baca.glissando(o.tleaves())
         baca.hairpin(
-            (),
+            baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o niente",
-            pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
         )
         baca.scp_spanner(
             (),
@@ -849,9 +841,8 @@ def vc2(m):
         )
         baca.glissando(o.tleaves())
         baca.hairpin(
-            (),
+            baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o niente",
-            pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
             right_broken=True,
         )
         baca.scp_spanner(
@@ -878,9 +869,8 @@ def cb1(m):
         )
     with baca.scope(m.get(12, 15)) as o:
         baca.hairpin(
-            (),
+            baca.select.mgroups(o.rleaves(), [1, 1, 3]),
             "(pp) >o niente o< mf >o niente",
-            pieces=baca.select.mgroups(o.rleaves(), [1, 1, 3]),
         )
     with baca.scope(m.get(13, 15)) as o:
         baca.interpolate_pitches(o, "F#2", "D2")
@@ -968,9 +958,8 @@ def cb2(m):
         )
         baca.glissando(o.tleaves())
         baca.hairpin(
-            (),
+            baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o niente",
-            pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
             right_broken=True,
         )
         baca.scp_spanner(
@@ -1021,9 +1010,8 @@ def composites(cache):
             baca.override.note_head_style_harmonic(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                (),
+                baca.select.lparts(leaves, [1, 1 + 1]),
                 "o<| mp |>o niente",
-                pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
     for name in ["vc1", "vc2", "cb2"]:
         m = cache[name]

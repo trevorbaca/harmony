@@ -306,9 +306,8 @@ def bfl(m):
         baca.stem_tremolo(abjad.select.get(o.plts(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "o<| ff |> p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F#3")
@@ -394,9 +393,8 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                (),
+                baca.select.clparts(clpart, [1]),
                 "p < ff > p",
-                pieces=baca.select.clparts(clpart, [1]),
             )
         baca.markup(
             o.pleaf(0),
@@ -610,9 +608,8 @@ def cb2(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Ab1")
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             'o< "mf" >o niente',
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.scp_spanner(
             (),
@@ -628,10 +625,9 @@ def cb2(m):
             right_broken=True,
         )
         baca.hairpin(
-            (),
+            [o.rleaves()],
             "o< f",
             right_broken=True,
-            pieces=[o.rleaves()],
         )
         baca.scp_spanner(
             (),
@@ -666,45 +662,40 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             baca.hairpin(
-                (),
+                baca.select.plts(o),
                 "pp p mp mf f",
                 bookend=False,
-                pieces=baca.select.plts(o),
             )
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
             baca.hairpin(
-                (),
+                baca.select.plts(o),
                 "mf mp p pp pp pp",
                 bookend=False,
-                pieces=baca.select.plts(o),
             )
     for name in ["va", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             baca.hairpin(
-                (),
+                baca.select.plts(o),
                 'pp p mp mf "f"',
                 bookend=False,
-                pieces=baca.select.plts(o),
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
         baca.hairpin(
-            (),
+            baca.select.plts(o)[1:],
             'p mp mf "f"',
             bookend=False,
-            pieces=baca.select.plts(o)[1:],
         )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
             baca.hairpin(
-                (),
+                baca.select.plts(o),
                 "mf mp p pp pp pp",
                 bookend=False,
-                pieces=baca.select.plts(o),
             )
     for name in ["bfl", "hp", "va", "vc1", "vc2", "cb1"]:
         m = cache[name]

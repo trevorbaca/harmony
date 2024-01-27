@@ -217,9 +217,8 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.hairpin(
-                (),
+                baca.select.lparts(baca.select.rleaves(o), [1, 3]),
                 "pp < p >o niente",
-                pieces=baca.select.lparts(baca.select.rleaves(o), [1, 3]),
             )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]

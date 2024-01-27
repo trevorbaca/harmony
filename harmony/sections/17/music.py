@@ -286,12 +286,11 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         baca.hairpin(
-            (),
-            "o< mp >o niente",
-            pieces=abjad.select.partition_by_ratio(
+            abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()),
                 (3, 4),
             ),
+            "o< mp >o niente",
         )
         baca.spanners.trill(
             o.tleaves(),
@@ -699,9 +698,8 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                (),
+                baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |>o niente",
-                pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.override.dynamic_text_x_offset(o.pleaf(-1), -0.25)
