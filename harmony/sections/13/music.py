@@ -267,7 +267,7 @@ def bfl(cache):
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
         )
@@ -280,7 +280,7 @@ def bfl(cache):
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o<| f |>o niente",
         )
@@ -295,7 +295,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[4]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -312,13 +312,13 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.breathe(o.pleaf(1))
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
             'o< "f" >o niente',
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -469,7 +469,7 @@ def hp(cache):
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< mf >o niente",
         )
@@ -546,7 +546,7 @@ def va(cache):
             o.rleaves(),
             "(mp) >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -596,7 +596,7 @@ def vc1(cache):
                 u,
                 "(mp) >o niente",
             )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -695,7 +695,7 @@ def cb1(cache):
                 u,
                 "(mp) >o niente",
             )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),

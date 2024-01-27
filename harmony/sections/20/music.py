@@ -228,7 +228,7 @@ def bfl(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 2]),
                 "o< f >o niente",
             )
@@ -247,7 +247,7 @@ def bfl(m):
         baca.pitch(o, "Gqs5")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "o< mp >o niente",
             )
@@ -284,7 +284,7 @@ def perc1(m):
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "o< pp >o niente",
             )
@@ -393,7 +393,7 @@ def va(m):
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.bow_speed_spanner(
+            baca.piecewise.bow_speed(
                 (),
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -435,7 +435,7 @@ def va(m):
         baca.triple_staccato(o.pheads()[1:])
         baca.dynamic(o.phead(1), "p")
         with baca.scope(baca.select.rleak(o.leaves()[3:])) as u:
-            baca.scp_spanner(
+            baca.piecewise.scp(
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -460,7 +460,7 @@ def vc1(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
                 "o< mp >o niente",
             )

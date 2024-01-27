@@ -191,7 +191,7 @@ def cb2(m):
             "ff >o niente",
             left_broken=True,
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -216,7 +216,7 @@ def composites(cache):
     for name in ["bfl", "va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleaves(o), [1, 3]),
                 "pp < p >o niente",
             )

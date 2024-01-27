@@ -458,7 +458,7 @@ def bfl(m):
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(u), (3, 4)),
                 "o< mp >o niente",
             )
@@ -478,7 +478,7 @@ def bfl(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -489,7 +489,7 @@ def bfl(m):
         baca.pitch(o, "D4")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.text_spanner(
+            baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -739,7 +739,7 @@ def hp(m):
             library.whisk_staff_position(o)
             baca.flat_glissando(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 2 + 1]),
                 'o< "mf" >o niente',
             )
@@ -781,7 +781,7 @@ def va(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D4"),
         baca.dynamic(o.phead(0), "pp")
-        baca.bow_speed_spanner(
+        baca.piecewise.bow_speed(
             (),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -840,7 +840,7 @@ def vc1(cache):
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -910,7 +910,7 @@ def vc2(cache):
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -993,7 +993,7 @@ def cb1(cache):
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1013,11 +1013,11 @@ def cb1(cache):
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[9]) as o:
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 2 + 1]),
             "o< p >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "O -> P4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1026,11 +1026,11 @@ def cb1(cache):
         )
     with baca.scope(m[10]) as o:
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 2 + 1]),
             "o< p >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "O -> P4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1039,11 +1039,11 @@ def cb1(cache):
         )
     with baca.scope(m[11]) as o:
         leaves = baca.select.tleaves(o, rleak=True)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 1 + 1]),
             "o< p >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "O -> P4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1070,7 +1070,7 @@ def cb2(cache):
         )
     with baca.scope(m[2]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "o<| mp |>o niente o<| mp |>o",
             forbid_al_niente_to_bar_line=True,
@@ -1115,7 +1115,7 @@ def cb2(cache):
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1156,7 +1156,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [2, 1 + 1]),
                 "o< mp >o niente",
             )
@@ -1173,7 +1173,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [2, 1 + 1]),
                 "o< f >o niente",
             )
@@ -1186,7 +1186,7 @@ def composites(cache):
         with baca.scope(m[3]) as o:
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |>o niente",
             )
@@ -1201,7 +1201,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[8]) as o:
             leaves = baca.select.tleaves(o, rleak=True)
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "o< mp >o niente",
             )
@@ -1225,7 +1225,7 @@ def composites(cache):
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.clparts(o.tleaves(), [1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,

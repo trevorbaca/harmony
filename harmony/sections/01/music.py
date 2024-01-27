@@ -202,7 +202,7 @@ def bfl(cache):
             "mf-mp",
         )
         baca.override.dls_staff_padding(o, 5)
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -372,12 +372,12 @@ def vc1(m):
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
         baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(leaves, [4, 5]),
             "o< f >o niente",
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -430,7 +430,7 @@ def vc2(m):
             o,
             "mf >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -450,13 +450,13 @@ def cb1(m):
         baca.pitch(o, "A1")
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [4, 7]),
             "o< f >o niente",
         )
         baca.override.dls_staff_padding(o, 4)
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -510,7 +510,7 @@ def cb2(m):
             o,
             "mf >o niente",
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "P1 =|",
             abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),

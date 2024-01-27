@@ -305,7 +305,7 @@ def bfl(m):
         baca.pitch(o, "Ab4")
         baca.stem_tremolo(abjad.select.get(o.plts(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "o<| ff |> p",
             )
@@ -392,7 +392,7 @@ def hp(cache):
     with baca.scope(m[9]) as o:
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p < ff > p",
             )
@@ -428,7 +428,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -476,7 +476,7 @@ def vc1(cache):
             "ff-p",
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -510,7 +510,7 @@ def vc2(cache):
             "ff-p",
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -561,7 +561,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
-        baca.text_spanner(
+        baca.piecewise.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -607,11 +607,11 @@ def cb2(m):
     with baca.scope(m.get(8, 9)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Ab1")
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
             'o< "mf" >o niente',
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -624,12 +624,12 @@ def cb2(m):
             allow_hidden=True,
             right_broken=True,
         )
-        baca.hairpin(
+        baca.piecewise.hairpin(
             [o.rleaves()],
             "o< f",
             right_broken=True,
         )
-        baca.scp_spanner(
+        baca.piecewise.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -661,7 +661,7 @@ def composites(cache):
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
                 bookend=False,
@@ -669,7 +669,7 @@ def composites(cache):
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
                 bookend=False,
@@ -677,14 +677,14 @@ def composites(cache):
     for name in ["va", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.plts(o),
                 'pp p mp mf "f"',
                 bookend=False,
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
-        baca.hairpin(
+        baca.piecewise.hairpin(
             baca.select.plts(o)[1:],
             'p mp mf "f"',
             bookend=False,
@@ -692,7 +692,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
-            baca.hairpin(
+            baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
                 bookend=False,
