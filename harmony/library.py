@@ -18,7 +18,7 @@ def AG(*arguments):
 
 
 def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
-    return baca.OBGC(
+    return baca.rhythm.OBGC(
         grace_note_numerators,
         nongrace_note_numerator,
         grace_leaf_duration=abjad.Duration(1, 20),
