@@ -804,7 +804,6 @@ def vc1(m):
         baca.spanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
-            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.spanners.metric_modulation(
@@ -883,7 +882,6 @@ def cb1(m):
         baca.spanners.trill(
             abjad.select.leaves(o)[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
-            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.spanners.metric_modulation(
@@ -974,7 +972,6 @@ def composites(cache):
             )
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -993,7 +990,6 @@ def composites(cache):
             )
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -1016,7 +1012,6 @@ def composites(cache):
             baca.spanners.trill(
                 baca.select.tleaves(o),
                 right_broken=True,
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

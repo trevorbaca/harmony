@@ -235,14 +235,12 @@ def bfl(m):
                 baca.spanners.trill(
                     run,
                     alteration="m2",
-                    with_next_leaf=True,
                 )
             elif i == 1:
                 baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                     alteration="m2",
-                    with_next_leaf=True,
                 )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gqs5")
@@ -255,7 +253,6 @@ def bfl(m):
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
-                with_next_leaf=True,
             )
     with baca.scope(m.get(3, 10)) as o:
         baca.pitch(o, "Eb3")
@@ -467,7 +464,6 @@ def vc1(m):
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                with_next_leaf=True,
             )
         baca.markup(
             o.pleaf(0),

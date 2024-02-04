@@ -231,7 +231,6 @@ def bfl(m):
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
-                with_next_leaf=True,
             )
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A4")
@@ -248,7 +247,6 @@ def bfl(m):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
-            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -480,7 +478,6 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
             harmonic=True,
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -545,7 +542,6 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
             harmonic=True,
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -571,7 +567,6 @@ def cb1(cache):
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-                with_next_leaf=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -614,7 +609,6 @@ def cb1(cache):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),

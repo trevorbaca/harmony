@@ -589,7 +589,6 @@ def va(m):
         baca.pitch(o, "A5")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -694,7 +693,6 @@ def vc1(m):
         baca.pitch(o, "Gqs6"),
         baca.spanners.trill(
             baca.select.tleaves(o),
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -784,7 +782,6 @@ def vc2(m):
         baca.pitch(o, "F#5")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -902,7 +899,6 @@ def cb2(m):
         baca.pitch(o, "Dqf6", do_not_transpose=True)
         baca.spanners.trill(
             baca.select.tleaves(o),
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),

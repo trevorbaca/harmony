@@ -569,7 +569,6 @@ def bfl(m):
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
-                with_next_leaf=True,
             )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "F3")
@@ -598,7 +597,6 @@ def bfl(m):
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
-                with_next_leaf=True,
             )
     for n in [11, 13]:
         with baca.scope(m[n]) as o:
@@ -1002,7 +1000,6 @@ def cb2(cache):
         baca.spanners.trill(
             baca.select.tleaves(o),
             alteration="Fqs5",
-            with_next_leaf=True,
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.pitch(o, "<A#5 B5 C6>", do_not_transpose=True)
@@ -1057,7 +1054,6 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

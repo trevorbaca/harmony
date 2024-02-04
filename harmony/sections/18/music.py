@@ -468,7 +468,6 @@ def bfl(m):
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
-                with_next_leaf=True,
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "D4")
@@ -946,7 +945,6 @@ def cb1(cache):
             baca.spanners.trill(
                 run,
                 alteration="Fqs5",
-                with_next_leaf=True,
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[2]) as o:
@@ -1011,7 +1009,6 @@ def cb1(cache):
             baca.spanners.trill(
                 run,
                 alteration="Fqs5",
-                with_next_leaf=True,
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[9]) as o:
@@ -1146,7 +1143,6 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="Fqs5",
-            with_next_leaf=True,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
 
@@ -1170,7 +1166,6 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
@@ -1190,7 +1185,6 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -1222,7 +1216,6 @@ def composites(cache):
             # excluded cb1 because of current gliss / trill order contention
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
@@ -1254,7 +1247,6 @@ def composites(cache):
                 # large right padding because open-volta follows in next section
                 abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
