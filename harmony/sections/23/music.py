@@ -270,10 +270,11 @@ def bfl(cache):
                 "o< mp >o niente",
             )
             baca.spanners.trill(
-                baca.select.rleak(run),
+                run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                with_next_leaf=True,
             )
     with baca.scope(m.get(4, 6)) as o:
         baca.pitch(o, "<B3 Dqf4>")

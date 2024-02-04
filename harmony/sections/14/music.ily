@@ -688,8 +688,6 @@ number.14.BassFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-          %! SPANNER_STOP
-        \stopTrillSpan
         ]
         \revert Accidental.X-offset
         \revert Accidental.Y-offset
@@ -722,6 +720,8 @@ number.14.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \stopTrillSpan
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(0 . 0)
 
@@ -937,13 +937,13 @@ number.14.BassFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-          %! SPANNER_STOP
-        \stopTrillSpan
         ]
 
     }
 
     r2
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [BassFlute.Music measure 7]
     R1 * 4/4
@@ -1039,8 +1039,6 @@ number.14.BassFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-          %! SPANNER_STOP
-        \stopTrillSpan
         ]
         \revert Accidental.X-offset
         \revert Accidental.Y-offset
@@ -1073,6 +1071,8 @@ number.14.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \stopTrillSpan
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(0 . 0)
 

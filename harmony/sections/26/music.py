@@ -409,10 +409,11 @@ def bfl(m):
                 "o< mp >o niente",
             )
             baca.spanners.trill(
-                baca.select.rleak(run),
+                run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                with_next_leaf=True,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

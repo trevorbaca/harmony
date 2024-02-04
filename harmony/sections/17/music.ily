@@ -517,8 +517,6 @@ number.17.BassFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-          %! SPANNER_STOP
-        \stopTrillSpan
         ]
         \revert Accidental.X-offset
         \revert Accidental.Y-offset
@@ -528,6 +526,8 @@ number.17.BassFlute.Music = {
     }
 
     r2
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [BassFlute.Music measure 3]
     \stopStaff

@@ -801,8 +801,9 @@ def vc1(m):
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.spanners.trill(
-            baca.select.rleak(o.leaves()[-2:]),
+            o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.spanners.metric_modulation(
@@ -879,8 +880,9 @@ def cb1(m):
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.spanners.trill(
-            baca.select.rleak(abjad.select.leaves(o)[-2:]),
+            abjad.select.leaves(o)[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.spanners.metric_modulation(

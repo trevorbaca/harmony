@@ -199,39 +199,39 @@ def bfl(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o, "F5")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 2 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 2 + 1]),
                 "niente o< mf >o",
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                with_next_leaf=True,
             )
             baca.piecewise.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 9"),
-                pieces=baca.select.lparts(run, [1, 2 + 1]),
+                pieces=baca.select.lparts(baca.select.rleak(run), [1, 2 + 1]),
             )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                with_next_leaf=True,
             )
             baca.piecewise.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
-                pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
             )
     with baca.scope(m.get(1, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -378,11 +378,11 @@ def va(m):
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
+                with_next_leaf=True,
             )
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D4 C#4")
@@ -419,16 +419,16 @@ def vc1(m):
             pieces=[o.leaves()[5:12]],
         )
         for run in baca.select.runs(o)[1:-1]:
-            run = baca.select.rleak(run)
             baca.pitch(run, "F4")
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "niente o<| mp |>o",
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
+                with_next_leaf=True,
             )
         runs = abjad.select.get(
             abjad.select.runs(baca.select.rleak(o.leaves())), [0, -1]
@@ -472,11 +472,11 @@ def vc2(m):
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
+                with_next_leaf=True,
             )
         # NOTE: current clef / after-grace contention:
         baca.clef(o.leaf(-1), "bass")
@@ -515,16 +515,16 @@ def cb1(m):
             pieces=[o.leaves()[5:12]],
         )
         for run in baca.select.runs(o)[1:-1]:
-            run = baca.select.rleak(run)
             baca.pitch(run, "E4", do_not_transpose=True)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "niente o<| mp |>o",
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",
+                with_next_leaf=True,
             )
         runs = abjad.select.get(
             abjad.select.runs(baca.select.rleak(o.leaves())), [0, -1]
@@ -569,11 +569,11 @@ def cb2(m):
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",
+                with_next_leaf=True,
             )
         # NOTE: current clef / after-grace contention:
         baca.clef(o.leaf(-1), "bass")

@@ -271,29 +271,30 @@ def bfl(m):
                 "o< mp >o niente",
             )
             baca.spanners.trill(
-                baca.select.rleak(run),
+                run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                with_next_leaf=True,
             )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                with_next_leaf=True,
             )
             baca.piecewise.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
-                pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
             )
     with baca.scope(m.get(5, 10)) as o:
         baca.pitches(
@@ -311,10 +312,11 @@ def bfl(m):
                 "o< mp >o niente",
             )
             baca.spanners.trill(
-                baca.select.rleak(run),
+                run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                with_next_leaf=True,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

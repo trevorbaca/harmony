@@ -301,19 +301,23 @@ def bfl(cache):
         )
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
-            run = baca.select.rleak(run)
             if i == 0:
                 baca.spanners.covered(
                     run,
                     items=r"\baca-cov-markup =|",
                     staff_padding=3,
+                    with_next_leaf=True,
                 )
             elif i == 1:
-                baca.spanners.trill(run)
+                baca.spanners.trill(
+                    run,
+                    with_next_leaf=True,
+                )
             elif i == 2:
                 baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                    with_next_leaf=True,
                 )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

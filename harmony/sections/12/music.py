@@ -1128,9 +1128,10 @@ def composites(cache):
                 left_broken=True,
             )
             baca.spanners.trill(
-                o.rleaves(),
+                o,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 left_broken=True,
+                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

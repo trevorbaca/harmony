@@ -227,10 +227,11 @@ def bfl(m):
                 "o< mp >o niente",
             )
             baca.spanners.trill(
-                baca.select.rleak(run),
+                run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                with_next_leaf=True,
             )
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A4")
@@ -568,8 +569,9 @@ def cb1(cache):
                 "niente o< mp >o niente",
             )
             baca.spanners.trill(
-                rrun,
+                run,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                with_next_leaf=True,
             )
         baca.markup(
             o.pleaf(0),

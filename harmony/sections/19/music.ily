@@ -803,8 +803,6 @@ number.19.BassFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-          %! SPANNER_STOP
-        \stopTrillSpan
         ]
         \revert Accidental.X-offset
         \revert Accidental.Y-offset
@@ -814,6 +812,8 @@ number.19.BassFlute.Music = {
     }
 
     r2
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     % [BassFlute.Music measure 2]
     R1 * 4/4
@@ -1146,8 +1146,6 @@ number.19.BassFlute.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \!
-          %! SPANNER_STOP
-        \stopTrillSpan
         ]
         \revert Accidental.X-offset
         \revert Accidental.Y-offset
@@ -1158,6 +1156,8 @@ number.19.BassFlute.Music = {
 
     % [BassFlute.Music measure 13]
     r4
+      %! SPANNER_STOP
+    \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
