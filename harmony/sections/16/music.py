@@ -228,8 +228,9 @@ def bfl(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            with_next_leaf=True,
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "D5")

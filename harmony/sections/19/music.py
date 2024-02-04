@@ -986,7 +986,7 @@ def cb2(cache):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "E5", do_not_transpose=True)
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
@@ -998,8 +998,9 @@ def cb2(cache):
             staff_padding=8,
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             alteration="Fqs5",
+            with_next_leaf=True,
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.pitch(o, "<A#5 B5 C6>", do_not_transpose=True)
@@ -1032,7 +1033,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.stem_tremolo(o.pleaves())
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |>o niente",
@@ -1044,7 +1045,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.flat_glissando(o.pleaves())
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [2, 1 + 1]),
                 "o< mp >o niente",
@@ -1052,7 +1053,10 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.spanners.trill(baca.select.tleaves(o, rleak=True)),
+            baca.spanners.trill(
+                baca.select.tleaves(o),
+                with_next_leaf=True,
+            )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 2)) as o:

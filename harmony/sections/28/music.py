@@ -245,8 +245,9 @@ def bfl(m):
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -474,10 +475,11 @@ def vc1(cache):
         )
         baca.dynamic(o.rleaf(-1), "niente")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
             harmonic=True,
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -538,10 +540,11 @@ def vc2(cache):
         )
         baca.dynamic(o.rleaf(-1), "niente")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
             harmonic=True,
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -607,8 +610,9 @@ def cb1(cache):
         )
         baca.dynamic(o.rleaf(-1), "niente")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),

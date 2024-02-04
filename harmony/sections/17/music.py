@@ -696,7 +696,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.stem_tremolo(o.pleaves())
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
                 "o<| mp |> pp pp <| mp |>o niente",

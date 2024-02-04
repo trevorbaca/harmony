@@ -254,8 +254,9 @@ def bfl(cache):
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.covered(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             staff_padding=3,
+            with_next_leaf=True,
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "<Eb3 Eb4 Bb4>")

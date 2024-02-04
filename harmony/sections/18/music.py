@@ -738,7 +738,7 @@ def hp(m):
         with baca.scope(m[n]) as o:
             library.whisk_staff_position(o)
             baca.flat_glissando(o.pleaves())
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 2 + 1]),
                 'o< "mf" >o niente',
@@ -1012,7 +1012,7 @@ def cb1(cache):
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[9]) as o:
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 2 + 1]),
             "o< p >o niente",
@@ -1025,7 +1025,7 @@ def cb1(cache):
             pieces=[o.tleaves()],
         )
     with baca.scope(m[10]) as o:
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 2 + 1]),
             "o< p >o niente",
@@ -1038,7 +1038,7 @@ def cb1(cache):
             pieces=[o.tleaves()],
         )
     with baca.scope(m[11]) as o:
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 1 + 1]),
             "o< p >o niente",
@@ -1090,8 +1090,9 @@ def cb2(cache):
             direction=abjad.DOWN,
         )
         baca.spanners.metric_modulation(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             staff_padding=8,
+            with_next_leaf=True,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1137,7 +1138,7 @@ def cb2(cache):
         # NOTE: currently glissando must lexically precede trill spanner
         baca.flat_glissando(o.leaves()[:-1])
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.rleak(baca.select.tleaves(o)),
             # large right padding because open-volta follows in next section
             abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1155,7 +1156,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [2, 1 + 1]),
                 "o< mp >o niente",
@@ -1163,7 +1164,10 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.spanners.trill(baca.select.tleaves(o, rleak=True))
+            baca.spanners.trill(
+                baca.select.tleaves(o),
+                with_next_leaf=True,
+            )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
@@ -1172,7 +1176,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [2, 1 + 1]),
                 "o< f >o niente",
@@ -1180,7 +1184,10 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.spanners.trill(baca.select.tleaves(o, rleak=True))
+            baca.spanners.trill(
+                baca.select.tleaves(o),
+                with_next_leaf=True,
+            )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[3]) as o:
@@ -1200,7 +1207,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[8]) as o:
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "o< mp >o niente",
@@ -1209,7 +1216,10 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[8]) as o:
             # excluded cb1 because of current gliss / trill order contention
-            baca.spanners.trill(baca.select.tleaves(o, rleak=True))
+            baca.spanners.trill(
+                baca.select.tleaves(o),
+                with_next_leaf=True,
+            )
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[3]) as o:
@@ -1236,10 +1246,11 @@ def composites(cache):
         with baca.scope(m.get(9, 11)) as o:
             # excluded cb2 because of gliss / trill order contention
             baca.spanners.trill(
-                baca.select.tleaves(o, rleak=True),
+                baca.select.tleaves(o),
                 # large right padding because open-volta follows in next section
                 abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

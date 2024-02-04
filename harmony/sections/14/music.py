@@ -395,13 +395,14 @@ def bfl(cache):
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.covered(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             staff_padding=3,
+            with_next_leaf=True,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
@@ -634,7 +635,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[5]) as o:
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< mf >o niente",
@@ -690,8 +691,9 @@ def va(cache):
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.spanners.hairpin(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            baca.select.tleaves(o, grace=False),
             "f >o niente",
+            with_next_leaf=True,
         )
         baca.spanners.metric_modulation(
             baca.select.pleaves(o, grace=False)[:4],
@@ -761,8 +763,9 @@ def vc1(cache):
             m = cache[name]
     with baca.scope(m[5]) as o:
         baca.spanners.hairpin(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            baca.select.tleaves(o, grace=False),
             "mf >o niente",
+            with_next_leaf=True,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 4),
@@ -916,8 +919,9 @@ def cb1(cache):
             m = cache[name]
     with baca.scope(m[5]) as o:
         baca.spanners.hairpin(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            baca.select.tleaves(o, grace=False),
             "mf >o niente",
+            with_next_leaf=True,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())

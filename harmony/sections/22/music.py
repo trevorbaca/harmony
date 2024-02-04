@@ -350,10 +350,11 @@ def bfl(m):
         )
         baca.dynamic(o.rleaf(-1), "niente")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="A5",
+            with_next_leaf=True,
         )
     with baca.scope(m[13]) as o:
         baca.pitch(o, "Eb3")
@@ -619,9 +620,10 @@ def vc1(m):
         )
         baca.dynamic(o.rleaf(-1), "niente")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -720,9 +722,10 @@ def cb1(m):
         )
         baca.dynamic(o.rleaf(-1), "niente")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            with_next_leaf=True,
         )
         baca.markup(o.pleaf(0), r"\baca-seven-d")
         baca.markup(

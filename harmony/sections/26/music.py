@@ -362,8 +362,9 @@ def bfl(m):
             bookend=False,
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            with_next_leaf=True,
         )
         baca.piecewise.text(
             (),
@@ -381,8 +382,9 @@ def bfl(m):
                 forbid_al_niente_to_bar_line=True,
             )
             baca.spanners.trill(
-                baca.select.tleaves(run, rleak=True),
+                baca.select.tleaves(run),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                with_next_leaf=True,
             )
             leaves = baca.select.rleak(run)
             baca.piecewise.text(
@@ -595,9 +597,10 @@ def va(cache):
     with baca.scope(m.get(4, 7)) as o:
         baca.pitch(o, "Bb4")
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
+            with_next_leaf=True,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
@@ -764,9 +767,10 @@ def composites(cache):
             if name != "va":
                 baca.clef(o.leaf(0), "treble")
                 baca.spanners.trill(
-                    baca.select.tleaves(o, rleak=True),
+                    baca.select.tleaves(o),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                     alteration="Cb5",
+                    with_next_leaf=True,
                 )
             if name in ("vc1", "vc2"):
                 baca.pitch(o, "Bb4")
@@ -802,7 +806,7 @@ def composites(cache):
                     (),
                     "P1 =|",
                     abjad.Tweak(r"- \tweak staff-padding 3"),
-                    pieces=[baca.select.tleaves(o, rleak=True)],
+                    pieces=[baca.select.rleak(baca.select.tleaves(o))],
                 )
 
 

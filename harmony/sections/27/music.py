@@ -382,7 +382,7 @@ def bfl(cache):
             bookend=False,
             direction=abjad.DOWN,
             lilypond_id=2,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
         baca.piecewise.text(
             (),
@@ -421,8 +421,9 @@ def bfl(cache):
             "pp < p >o niente",
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            with_next_leaf=True,
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "G3")
@@ -699,9 +700,10 @@ def vc1(cache):
             direction=abjad.DOWN,
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
+            with_next_leaf=True,
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -757,9 +759,10 @@ def vc2(cache):
             direction=abjad.DOWN,
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
+            with_next_leaf=True,
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -814,8 +817,9 @@ def cb1(cache):
             direction=abjad.DOWN,
         )
         baca.spanners.trill(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            with_next_leaf=True,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "bass")
