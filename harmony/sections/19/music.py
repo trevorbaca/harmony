@@ -569,6 +569,7 @@ def bfl(m):
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                with_next_leaf=True,
             )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "F3")
@@ -597,6 +598,7 @@ def bfl(m):
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                with_next_leaf=True,
             )
     for n in [11, 13]:
         with baca.scope(m[n]) as o:

@@ -296,6 +296,7 @@ def bfl(m):
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            with_next_leaf=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F#5")
@@ -303,14 +304,16 @@ def bfl(m):
     with baca.scope(m[5]) as o:
         baca.pitch(o.run(0), "F#5")
     with baca.scope(m.get(4, 5)) as o:
-        with baca.scope(baca.select.rleak(baca.select.runs(o)[:1])) as u:
+        with baca.scope(baca.select.runs(o)[:1]) as u:
             baca.spanners.trill(
                 u,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                with_next_leaf=True,
             )
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=9,
+                with_next_leaf=True,
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)

@@ -322,15 +322,15 @@ def bfl(m):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "Gqs5")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "o< mp >o niente",
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
+                with_next_leaf=True,
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Eb3")
@@ -594,14 +594,14 @@ def vc1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "o< mp >o niente",
             )
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                with_next_leaf=True,
             )
         baca.markup(
             o.pleaf(0),
