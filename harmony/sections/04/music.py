@@ -576,7 +576,6 @@ def cb1(cache):
             baca.spanners.pizzicato(
                 o,
                 staff_padding=5.5,
-                with_next_leaf=True,
             )
             baca.markup(o.pleaf(0), r"\baca-eleven-e")
             baca.markup(
@@ -595,7 +594,7 @@ def cb2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.spanners.pizzicato(
-            baca.select.rleaves(o, grace=False),
+            o,
             staff_padding=5.5,
         )
         baca.markup(

@@ -689,7 +689,6 @@ def cb1(m):
         baca.spanners.pizzicato(
             baca.select.ltleaves(o),
             staff_padding=5.5,
-            with_next_leaf=True,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
         baca.markup(
@@ -759,7 +758,6 @@ def cb2(m):
         baca.spanners.pizzicato(
             baca.select.ltleaves(o),
             staff_padding=5.5,
-            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
