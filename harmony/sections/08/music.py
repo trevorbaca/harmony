@@ -164,7 +164,7 @@ def bfl(m):
         baca.pitch(o, "Ab3")
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 4)
-        with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
+        with baca.scope(o.leaves()[1:]) as u:
             baca.spanners.covered(
                 u,
                 right_broken=True,
@@ -174,6 +174,7 @@ def bfl(m):
                 u,
                 right_broken=True,
                 staff_padding=8,
+                with_next_leaf=True,
             )
 
 

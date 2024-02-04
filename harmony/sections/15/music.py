@@ -256,7 +256,6 @@ def bfl(cache):
         baca.spanners.covered(
             baca.select.tleaves(o),
             staff_padding=3,
-            with_next_leaf=True,
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "<Eb3 Eb4 Bb4>")
@@ -306,7 +305,6 @@ def bfl(cache):
                     run,
                     items=r"\baca-cov-markup =|",
                     staff_padding=3,
-                    with_next_leaf=True,
                 )
             elif i == 1:
                 baca.spanners.trill(

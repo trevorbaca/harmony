@@ -312,7 +312,7 @@ def bfl(m):
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.covered(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             items=r"\baca-cov-markup =|",
             staff_padding=3,
         )
@@ -326,7 +326,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
         baca.spanners.covered(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:

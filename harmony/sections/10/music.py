@@ -329,7 +329,7 @@ def bfl(cache):
         baca.pitch(o, "Eb3")
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(1, 2)) as o:
-        with baca.scope(o.leaves()[2:8]) as u:
+        with baca.scope(o.leaves()[2:7]) as u:
             baca.spanners.covered(
                 u,
                 staff_padding=5.5,
@@ -337,10 +337,11 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
+                with_next_leaf=True,
             )
     with baca.scope(m.get(2, 3)) as o:
         baca.pitch(o, "E3")
-        with baca.scope(o.leaves()[4:9]) as u:
+        with baca.scope(o.leaves()[4:8]) as u:
             baca.spanners.covered(
                 u,
                 staff_padding=5.5,
@@ -348,6 +349,7 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
+                with_next_leaf=True,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3")
@@ -355,7 +357,7 @@ def bfl(cache):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "E3")
     with baca.scope(m.get(7, 8)) as o:
-        with baca.scope(o.leaves()[1:8]) as u:
+        with baca.scope(o.leaves()[1:7]) as u:
             baca.spanners.covered(
                 u,
                 staff_padding=5.5,
@@ -363,6 +365,7 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
+                with_next_leaf=True,
             )
     with baca.scope(m[10]) as o:
         baca.pitch(o.leaves(grace=False), "G3")

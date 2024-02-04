@@ -398,7 +398,6 @@ def bfl(cache):
         baca.spanners.covered(
             baca.select.tleaves(o),
             staff_padding=3,
-            with_next_leaf=True,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")

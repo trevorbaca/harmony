@@ -381,7 +381,7 @@ def bfl(m):
             forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m.get(6, 7)) as o:
-        with baca.scope(o.leaves()[1:8]) as u:
+        with baca.scope(o.leaves()[1:7]) as u:
             baca.spanners.covered(
                 u,
                 staff_padding=3,
@@ -389,6 +389,7 @@ def bfl(m):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
+                with_next_leaf=True,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb5"),
