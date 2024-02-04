@@ -687,8 +687,9 @@ def cb1(m):
         )
         baca.override.dls_staff_padding(o.plts()[:-1], 4)
         baca.spanners.pizzicato(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=5.5,
+            with_next_leaf=True,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
         baca.markup(
@@ -756,8 +757,9 @@ def cb2(m):
             bookend=False,
         )
         baca.spanners.pizzicato(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=5.5,
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),

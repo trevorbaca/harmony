@@ -673,8 +673,9 @@ def cb1(m):
         baca.staff_lines(o.leaf(0), 5)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.spanners.pizzicato(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=5.5,
+            with_next_leaf=True,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
         baca.markup(
@@ -739,8 +740,9 @@ def cb2(m):
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.spanners.pizzicato(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=5.5,
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),

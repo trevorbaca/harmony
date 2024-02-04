@@ -498,8 +498,9 @@ def va(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.pizzicato(
-            baca.select.rleak(o.tleaves(), count=2),
+            baca.select.rleak(o.tleaves()),
             staff_padding=8,
+            with_next_leaf=True,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
