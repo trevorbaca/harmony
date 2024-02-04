@@ -801,7 +801,7 @@ def strings(cache):
                 full=True,
             )
             baca.spanners.half_clt(
-                baca.select.rleak(baca.select.ltleaves(o)),
+                baca.select.ltleaves(o),
                 staff_padding=8,
             )
 

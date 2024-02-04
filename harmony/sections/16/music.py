@@ -369,7 +369,7 @@ def va(m):
             full=True,
         )
         baca.spanners.half_clt(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:
@@ -473,7 +473,7 @@ def cb1(m):
             full=True,
         )
         baca.spanners.half_clt(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
@@ -501,7 +501,7 @@ def cb1(m):
             full=True,
         )
         baca.spanners.half_clt(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=8,
         )
 
@@ -523,7 +523,7 @@ def cb2(m):
             full=True,
         )
         baca.spanners.half_clt(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
@@ -551,7 +551,7 @@ def cb2(m):
             full=True,
         )
         baca.spanners.half_clt(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=8,
         )
 
