@@ -498,7 +498,6 @@ def va(m):
         baca.spanners.pizzicato(
             baca.select.rleak(o.tleaves()),
             staff_padding=8,
-            with_next_leaf=True,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:

@@ -317,7 +317,6 @@ def cb2(m):
         baca.spanners.pizzicato(
             baca.select.tleaves(o),
             staff_padding=6.5,
-            with_next_leaf=True,
         )
         baca.markup(
             o.pheads(),
