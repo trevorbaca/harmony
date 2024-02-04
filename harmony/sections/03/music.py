@@ -522,7 +522,7 @@ def vc1(m):
             staff_padding=5.5,
         )
         baca.spanners.metric_modulation(
-            o.leaves()[2:9],
+            o.leaves()[2:8],
             staff_padding=8,
         )
     with baca.scope(m[4]) as o:
@@ -588,7 +588,6 @@ def vc1(m):
                 u,
                 staff_padding=8,
                 right_broken=True,
-                with_next_leaf=True,
             )
 
 

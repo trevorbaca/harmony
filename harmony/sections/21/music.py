@@ -360,7 +360,7 @@ def perc1(m):
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
         baca.spanners.metric_modulation(
-            o.leaves()[2:],
+            o.leaves()[2:-1],
             staff_padding=10.5,
         )
 
@@ -396,7 +396,7 @@ def perc2(m):
         with baca.scope(o.leaves()[2:]) as u:
             baca.override.dls_staff_padding(u, 6),
             baca.spanners.metric_modulation(
-                u,
+                u[:-1],
                 staff_padding=10.5,
             )
     with baca.scope(m[4]) as o:
@@ -451,7 +451,7 @@ def hp(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[-3:]),
+            o.leaves()[-3:],
             right_broken=True,
             staff_padding=8,
         ),
@@ -475,7 +475,7 @@ def va(m):
             )
     with baca.scope(m[1]) as o:
         baca.spanners.metric_modulation(
-            o.rleaves(),
+            o,
             left_broken=True,
             staff_padding=8,
         )

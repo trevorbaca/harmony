@@ -499,7 +499,7 @@ def bfl(m):
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(abjad.select.leaves(o)[3:7]),
+            abjad.select.leaves(o)[3:7],
             staff_padding=8,
         )
     with baca.scope(m[5]) as o:
@@ -527,7 +527,7 @@ def bfl(m):
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[3:7]),
+            o.leaves()[3:7],
             staff_padding=8,
         )
     with baca.scope(m.get(3, 6)) as o:
@@ -769,7 +769,7 @@ def hp(m):
     with baca.scope(m.get(4, 5)) as o:
         baca.override.tuplet_bracket_up(o)
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[4:8]),
+            o.leaves()[4:8],
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -801,7 +801,7 @@ def hp(m):
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 6),
         baca.spanners.metric_modulation(
-            baca.select.rleak(baca.select.tleaves(o), count=2),
+            baca.select.rleak(baca.select.tleaves(o), count=1),
             staff_padding=5.5,
         )
     with baca.scope(m[10]) as o:
@@ -840,7 +840,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.spanners.metric_modulation(
-            baca.select.rleak(baca.select.pleaves(o)),
+            baca.select.pleaves(o),
             right_broken=True,
             staff_padding=5.5,
         )
@@ -857,7 +857,7 @@ def va(cache):
             pieces=[baca.select.rleak(o.tleaves())],
         )
         baca.spanners.metric_modulation(
-            o.leaves()[:3],
+            o.leaves()[:2],
             left_broken=True,
             staff_padding=5.5,
         )

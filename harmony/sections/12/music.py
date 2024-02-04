@@ -486,7 +486,7 @@ def bfl(cache):
             "o< mf >o niente",
         )
         baca.spanners.metric_modulation(
-            o.rleaves(),
+            o,
             left_broken=True,
             staff_padding=8,
         )
@@ -570,7 +570,7 @@ def bfl(cache):
             pieces=baca.select.lparts(leaves, [2, 4]),
         )
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[-2:]),
+            o.leaves()[-2:],
             right_broken=True,
             staff_padding=8,
         )

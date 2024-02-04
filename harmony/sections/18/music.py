@@ -497,7 +497,7 @@ def bfl(m):
                 pieces=[run],
             )
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.run(0)),
+            o.run(0),
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 6)) as o:
@@ -679,7 +679,7 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.runs()[-1:]),
+            o.runs()[-1:],
             staff_padding=10.5,
             right_broken=True,
         )
@@ -1090,7 +1090,6 @@ def cb2(cache):
         baca.spanners.metric_modulation(
             baca.select.tleaves(o),
             staff_padding=8,
-            with_next_leaf=True,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")

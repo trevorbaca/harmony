@@ -385,7 +385,7 @@ def perc2(m):
                 abjad.Tweak(r"- \tweak staff-padding 7"),
             )
         baca.spanners.metric_modulation(
-            baca.select.rleak(baca.select.runs(o)[:1]),
+            baca.select.runs(o)[:1],
             staff_padding=5.5,
             left_broken=True,
         )
@@ -497,16 +497,15 @@ def va(m):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(3, 4)) as o:
         baca.pitch(o, "F3")
-        with baca.scope(o.leaves()[1:11]) as u:
+        with baca.scope(o.leaves()[1:10]) as u:
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
             )
-            baca.piecewise.bow_speed(
-                (),
-                "XFB =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                pieces=[u],
+            baca.spanners.xfb(
+                u,
+                staff_padding=5.5,
+                with_next_leaf=True,
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "Eb3")
@@ -519,7 +518,7 @@ def va(m):
                 pieces=[baca.select.rleak(baca.select.ltleaves(run))],
             )
         baca.spanners.metric_modulation(
-            o.rleaves(),
+            o,
             staff_padding=5.5,
             right_broken=True,
         )
@@ -573,7 +572,7 @@ def vc1(m):
         baca.dynamic(o.pleaf(2), "mf")
         baca.override.tuplet_bracket_up(o.leaves()[3:])
         baca.spanners.metric_modulation(
-            o.leaves()[4:11],
+            o.leaves()[4:10],
             staff_padding=5.5,
         )
         baca.spanners.damp(

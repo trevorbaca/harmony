@@ -244,13 +244,13 @@ def bfl(m):
                 pieces=[run],
             )
     with baca.scope(m[10]) as o:
-        with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
+        with baca.scope(o.leaves()[1:]) as u:
             baca.piecewise.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
-                pieces=[u],
+                pieces=[baca.select.rleak(u)],
                 right_broken=True,
             )
             baca.spanners.metric_modulation(

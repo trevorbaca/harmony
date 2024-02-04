@@ -313,7 +313,7 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.laissez_vibrer(o.ptails())
         baca.spanners.metric_modulation(
-            o.leaves()[:3],
+            o.leaves()[:2],
             left_broken=True,
             staff_padding=8,
         )
@@ -362,7 +362,7 @@ def hp(m):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m.get(1, 2)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[1:],
+            o.leaves()[1:-1],
             staff_padding=8,
         )
     with baca.scope(m.get(3, 10)) as o:
@@ -432,13 +432,13 @@ def va(m):
             baca.override.dls_staff_padding(u, 4)
         baca.triple_staccato(o.pheads()[1:])
         baca.dynamic(o.phead(1), "p")
-        with baca.scope(baca.select.rleak(o.leaves()[3:])) as u:
+        with baca.scope(o.leaves()[3:]) as u:
             baca.piecewise.scp(
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=-1,
-                pieces=[u],
+                pieces=[baca.select.rleak(u)],
                 right_broken=True,
             )
             baca.spanners.metric_modulation(
@@ -552,7 +552,7 @@ def cb2(m):
         baca.override.dls_staff_padding(o.leaves()[1:], 6)
     with baca.scope(m.get(2, 4)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(abjad.select.leaves(o)[1:]),
+            abjad.select.leaves(o)[1:],
             staff_padding=8,
         )
     with baca.scope(m[10]) as o:

@@ -386,7 +386,7 @@ def hp(m):
         baca.pitch(o, "F#4")
         baca.laissez_vibrer(o.ptails())
         baca.spanners.metric_modulation(
-            o.leaves()[:2],
+            o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
         )
@@ -488,7 +488,7 @@ def vc1(cache):
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[1:]),
+            o.leaves()[1:],
             staff_padding=5.5,
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
@@ -579,7 +579,7 @@ def cb1(cache):
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[1:]),
+            o.leaves()[1:],
             staff_padding=5.5,
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))

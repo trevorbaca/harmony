@@ -389,7 +389,6 @@ def bfl(m):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
-                with_next_leaf=True,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb5"),
@@ -403,7 +402,7 @@ def bfl(m):
     with baca.scope(m.get(7, 8)) as o:
         baca.override.tuplet_bracket_staff_padding(o, 6.5)
         baca.spanners.metric_modulation(
-            o.leaves()[4:9],
+            o.leaves()[4:8],
             staff_padding=11.5,
         )
     with baca.scope(m.get(1, 8)) as o:
@@ -545,7 +544,7 @@ def hp(cache):
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6)
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[:2]),
+            o.leaves()[:2],
             left_broken=True,
             staff_padding=5.5,
         )
@@ -621,7 +620,7 @@ def hp(cache):
         baca.override.dls_staff_padding(o, 6 + 2)
     with baca.scope(m.get(7, 8)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[5:10],
+            o.leaves()[5:9],
             staff_padding=8,
         )
 
@@ -658,7 +657,7 @@ def va(cache):
             baca.override.note_head_style_harmonic(run)
         baca.espressivo(baca.select.pheads(o, grace=False)[1:])
         baca.spanners.metric_modulation(
-            o.leaves()[7:12],
+            o.leaves()[7:11],
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
@@ -696,7 +695,7 @@ def va(cache):
         baca.espressivo(o.pheads(grace=False)[1:])
     with baca.scope(m.get(5, 6)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[2:6],
+            o.leaves()[2:5],
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
@@ -785,7 +784,7 @@ def vc1(cache):
         baca.espressivo(o.pheads()[-4:])
         baca.dynamic(o.phead(0), "pp")
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[-4:]),
+            o.leaves()[-4:],
             right_broken=True,
             staff_padding=5.5,
         )

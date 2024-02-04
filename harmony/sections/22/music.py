@@ -481,7 +481,7 @@ def hp(m):
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
         baca.spanners.metric_modulation(
-            o.leaves()[:2],
+            o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
         )
@@ -529,7 +529,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[-1:]),
+            o.leaves()[-1:],
             right_broken=True,
             staff_padding=10.5,
         )
@@ -629,7 +629,7 @@ def vc1(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[:9],
+            o.leaves()[:8],
             staff_padding=8,
         )
 
@@ -747,7 +747,7 @@ def cb2(m):
     with baca.scope(m.get(3, 4)) as o:
         baca.override.dls_staff_padding(o, 6)
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[1:]),
+            o.leaves()[1:],
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:

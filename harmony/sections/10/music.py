@@ -337,7 +337,6 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
-                with_next_leaf=True,
             )
     with baca.scope(m.get(2, 3)) as o:
         baca.pitch(o, "E3")
@@ -349,7 +348,6 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
-                with_next_leaf=True,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3")
@@ -365,7 +363,6 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
-                with_next_leaf=True,
             )
     with baca.scope(m[10]) as o:
         baca.pitch(o.leaves(grace=False), "G3")
@@ -482,7 +479,7 @@ def perc1(m):
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[2:]),
+            o.leaves()[2:],
             staff_padding=8,
         )
     with baca.scope(m.get(10, 14)) as o:
@@ -987,7 +984,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
+            with baca.scope(o.leaves()[:2]) as u:
                 if name in ("va", "vc1", "vc2"):
                     baca.spanners.metric_modulation(
                         u,
@@ -998,7 +995,7 @@ def composites(cache):
                         (),
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                        pieces=[u],
+                        pieces=[baca.select.rleak(u)],
                     )
                 elif name == "cb1":
                     baca.spanners.metric_modulation(
@@ -1010,7 +1007,7 @@ def composites(cache):
                         (),
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 8"),
-                        pieces=[u],
+                        pieces=[baca.select.rleak(u)],
                     )
             baca.spanners.hairpin(
                 o.leaves()[:2],

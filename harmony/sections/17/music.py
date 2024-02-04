@@ -271,7 +271,7 @@ def bfl(m):
                 pieces=[u],
             )
             baca.spanners.metric_modulation(
-                u,
+                u[:2],
                 left_broken=True,
                 staff_padding=8,
             )
@@ -311,7 +311,6 @@ def bfl(m):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=9,
-                with_next_leaf=True,
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
