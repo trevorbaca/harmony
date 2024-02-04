@@ -441,7 +441,7 @@ def bfl(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "G3")
     with baca.scope(m.get(5, 6)) as o:
-        with baca.scope(o.leaves()[1:9]) as u:
+        with baca.scope(o.leaves()[1:8]) as u:
             baca.spanners.covered(
                 u,
                 staff_padding=3,
@@ -449,6 +449,7 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=5.5,
+                with_next_leaf=True,
             )
     with baca.scope(m[7]) as o:
         baca.breathe(o.pleaf(-1))

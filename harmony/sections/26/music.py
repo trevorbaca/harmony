@@ -348,7 +348,6 @@ def bfl(m):
             baca.pitch(o, "C3")
             baca.dynamic(o.phead(0), "mp")
             for run in baca.select.runs(o):
-                run = baca.select.rleak(run)
                 baca.spanners.covered(
                     run,
                     items=r"\baca-cov-markup =|",

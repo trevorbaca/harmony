@@ -575,7 +575,7 @@ def bfl(m):
         baca.pitch(o, "F3")
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.covered(
-            o.rleaves(),
+            o,
             staff_padding=5.5,
         )
     with baca.scope(m[12]) as o:
@@ -605,7 +605,7 @@ def bfl(m):
             baca.pitch(o, "Eb3")
             baca.dynamic(o.phead(0), "pp")
             for run in baca.select.runs(o):
-                run = baca.select.rleak(baca.select.ltleaves(run), count=2)
+                run = baca.select.rleak(baca.select.ltleaves(run))
                 baca.spanners.covered(
                     run,
                     staff_padding=5.5,

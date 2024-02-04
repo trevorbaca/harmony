@@ -157,7 +157,7 @@ def CB2(voice, time_signatures):
 def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "G3")
-        with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
+        with baca.scope(o.leaves()[:2]) as u:
             baca.spanners.covered(
                 u,
                 left_broken=True,
@@ -167,13 +167,14 @@ def bfl(m):
                 u,
                 left_broken=True,
                 staff_padding=5.5,
+                with_next_leaf=True,
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gb3")
         baca.color_fingerings(o.pheads(), [0, 1, 2])
         baca.dynamic(o.phead(0), "mp")
         baca.spanners.covered(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 2)) as o:
