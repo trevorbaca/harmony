@@ -1054,7 +1054,7 @@ def composites(cache):
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
             )
             baca.spanners.half_clt(
-                baca.select.rleak(baca.select.ltleaves(o)),
+                baca.select.ltleaves(o),
                 staff_padding=8,
             )
 
