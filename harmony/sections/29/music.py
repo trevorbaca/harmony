@@ -133,7 +133,6 @@ def bfl(m):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-            with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o.leaves(), 4)
@@ -180,7 +179,6 @@ def cb1(m):
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
-            with_next_leaf=True,
         )
 
 
@@ -230,7 +228,6 @@ def composites(cache):
                 baca.select.tleaves(o),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 alteration="Cb5",
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

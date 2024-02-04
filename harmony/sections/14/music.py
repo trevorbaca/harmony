@@ -389,7 +389,6 @@ def bfl(cache):
         baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
-            with_next_leaf=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "E3")
@@ -419,7 +418,6 @@ def bfl(cache):
         baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
-            with_next_leaf=True,
         )
     with baca.scope(m[9]) as o:
         baca.pitches(
@@ -433,7 +431,6 @@ def bfl(cache):
         baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
-            with_next_leaf=True,
         )
     with baca.scope(m.get(6, 9)) as o:
         with baca.scope(o.tleaves()) as u:

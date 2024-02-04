@@ -275,7 +275,6 @@ def bfl(m):
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
-                with_next_leaf=True,
             )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#5")
@@ -288,7 +287,6 @@ def bfl(m):
             baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                with_next_leaf=True,
             )
             baca.piecewise.text(
                 (),
@@ -316,7 +314,6 @@ def bfl(m):
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
-                with_next_leaf=True,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

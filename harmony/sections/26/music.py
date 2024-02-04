@@ -363,7 +363,6 @@ def bfl(m):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
-            with_next_leaf=True,
         )
         baca.piecewise.text(
             (),
@@ -383,7 +382,6 @@ def bfl(m):
             baca.spanners.trill(
                 baca.select.tleaves(run),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                with_next_leaf=True,
             )
             leaves = baca.select.rleak(run)
             baca.piecewise.text(
@@ -412,7 +410,6 @@ def bfl(m):
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
-                with_next_leaf=True,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -600,7 +597,6 @@ def va(cache):
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
-            with_next_leaf=True,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
@@ -770,7 +766,6 @@ def composites(cache):
                     baca.select.tleaves(o),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                     alteration="Cb5",
-                    with_next_leaf=True,
                 )
             if name in ("vc1", "vc2"):
                 baca.pitch(o, "Bb4")
