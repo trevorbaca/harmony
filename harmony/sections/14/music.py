@@ -785,14 +785,12 @@ def vc1(cache):
         baca.staff_lines(o.leaf(0), 5)
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.damp(
                 run,
                 staff_padding=3,
             )
     with baca.scope(m[11]) as o:
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.damp(
                 run,
                 staff_padding=3,
@@ -870,7 +868,6 @@ def vc2(cache):
         )
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.damp(
                 run,
                 staff_padding=3,
@@ -975,7 +972,7 @@ def cb2(cache):
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=3,
         )
     with baca.scope(m.get(6, 9)) as o:

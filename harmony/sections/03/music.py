@@ -518,7 +518,7 @@ def vc1(m):
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=5.5,
         )
         baca.spanners.metric_modulation(
@@ -578,7 +578,7 @@ def vc1(m):
         baca.pitch(o.leaves()[4:], "F#3")
         baca.accent(baca.select.pheads(o.leaves()[4:]))
         baca.dynamic(o.phead(-2), "mf")
-        with baca.scope(baca.select.rleak(o.leaves()[4:])) as u:
+        with baca.scope(o.leaves()[4:]) as u:
             baca.spanners.damp(
                 u,
                 right_broken=True,
@@ -588,6 +588,7 @@ def vc1(m):
                 u,
                 staff_padding=8,
                 right_broken=True,
+                with_next_leaf=True,
             )
 
 
@@ -615,7 +616,7 @@ def vc2(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:

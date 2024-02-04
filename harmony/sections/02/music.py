@@ -675,7 +675,7 @@ def va(cache):
         )
         for plt in baca.select.plts(o):
             baca.spanners.damp(
-                baca.select.rleak(plt),
+                plt,
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
@@ -859,7 +859,7 @@ def vc2(cache):
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
             baca.spanners.damp(
-                baca.select.rleak(plt),
+                plt,
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
@@ -1070,7 +1070,7 @@ def cb2(cache):
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
             baca.spanners.damp(
-                baca.select.rleak(plt),
+                plt,
                 staff_padding=3 + 1,
             )
     with baca.scope(m[7]) as o:

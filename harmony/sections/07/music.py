@@ -801,7 +801,7 @@ def vc2(cache):
         baca.pitch(o, "B2"),
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
             staff_padding=3,
         )
@@ -821,7 +821,7 @@ def vc2(cache):
         baca.pitch(o, "B2"),
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=3,
         )
     with baca.scope(m[6]) as o:
@@ -848,7 +848,7 @@ def vc2(cache):
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             right_broken=True,
             staff_padding=3,
         )
@@ -946,7 +946,7 @@ def cb2(m):
         baca.pitch(o, "Bb2"),
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=3,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -957,7 +957,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=3,
         )
     with baca.scope(m[6]) as o:
@@ -985,7 +985,7 @@ def cb2(m):
         baca.pitch(o, "Bb2")
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             right_broken=True,
             staff_padding=3,
         )

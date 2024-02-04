@@ -340,7 +340,7 @@ def vc2(cache):
             "(p) >o",
         )
         baca.spanners.damp(
-            o.rleaves(),
+            o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
             staff_padding=3,
@@ -415,7 +415,7 @@ def cb2(cache):
             "(p) >o",
         )
         baca.spanners.damp(
-            o.rleaves(),
+            o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
             staff_padding=3,
