@@ -449,7 +449,6 @@ def bfl(cache):
             baca.spanners.metric_modulation(
                 u,
                 staff_padding=5.5,
-                with_next_leaf=True,
             )
     with baca.scope(m[7]) as o:
         baca.breathe(o.pleaf(-1))
@@ -496,7 +495,7 @@ def bfl(cache):
             "o< mf >o niente",
         )
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.runs()[-1:]),
+            o.runs()[-1:],
             right_broken=True,
             staff_padding=5.5,
         )
@@ -636,7 +635,7 @@ def perc2(m):
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[2:]),
+            o.leaves()[2:],
             staff_padding=10.5,
         )
     with baca.scope(m[8]) as o:
@@ -715,7 +714,7 @@ def hp(cache):
         baca.snap_pizzicato(o.pheads())
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[5:]),
+            o.leaves()[5:],
             staff_padding=8,
         )
     with baca.scope(m.get(1, 7)) as o:
@@ -806,9 +805,9 @@ def vc1(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         )
     with baca.scope(m.get(1, 2)) as o:
+        # TODO: pitched trill suppresses start of text spanner
         baca.spanners.metric_modulation(
-            # TODO: pitched trill suppresses start of text spanner
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             staff_padding=12,
         )
     with baca.scope(m[6]) as o:
@@ -884,9 +883,9 @@ def cb1(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         )
     with baca.scope(m.get(1, 2)) as o:
+        # TODO: pitched trill suppresses start of text spanner
         baca.spanners.metric_modulation(
-            # TODO: pitched trill suppresses start of text spanner
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             staff_padding=10.5,
         )
     for item in [(1, 2), (4, 5), 10]:
@@ -1037,7 +1036,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(6, 7)) as o:
             baca.spanners.metric_modulation(
-                baca.select.rleak(o.leaves()[4:]),
+                o.leaves()[4:],
                 staff_padding=5.5,
             )
 

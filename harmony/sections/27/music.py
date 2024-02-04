@@ -466,7 +466,7 @@ def perc1(m):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.tleaves(), count=2),
+            baca.select.rleak(o.tleaves(), count=1),
             staff_padding=10.5,
         )
     with baca.scope(m[9]) as o:
@@ -485,7 +485,7 @@ def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
         baca.spanners.metric_modulation(
-            o.leaves()[:2],
+            o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
         )
@@ -540,7 +540,7 @@ def perc2(m):
         )
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.tleaves(), count=2),
+            baca.select.rleak(o.tleaves(), count=1),
             staff_padding=10.5,
         )
     with baca.scope(m.get(6, 9)) as o:
@@ -589,7 +589,7 @@ def hp(m):
         baca.pitch(o, "Bb4")
         baca.snap_pizzicato(o.pheads())
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.tleaves(), count=2),
+            baca.select.rleak(o.tleaves(), count=1),
             staff_padding=5.5,
         )
     with baca.scope(m.get(4, 9)) as o:
@@ -850,7 +850,7 @@ def cb2(cache):
         baca.dynamic(o.phead(2), "pp")
     with baca.scope(m.get(3, 4)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[4:13],
+            o.leaves()[4:12],
             staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:

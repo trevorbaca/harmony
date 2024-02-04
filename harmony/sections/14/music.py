@@ -695,7 +695,7 @@ def va(cache):
             with_next_leaf=True,
         )
         baca.spanners.metric_modulation(
-            baca.select.pleaves(o, grace=False)[:4],
+            baca.select.pleaves(o, grace=False)[:3],
             staff_padding=5.5,
         )
     with baca.scope(m.get(6, 9)) as o:
@@ -852,7 +852,7 @@ def vc2(cache):
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[1:-3],
+            o.leaves()[1:-4],
             staff_padding=8,
         )
     with baca.scope(m.get(5, 9)) as o:

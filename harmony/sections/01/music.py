@@ -399,7 +399,7 @@ def vc1(m):
             baca.override.dls_staff_padding(u, 6)
         baca.override.dls_staff_padding(o.pheads()[-1:], 6)
         baca.spanners.metric_modulation(
-            o.leaves()[2:-2],
+            o.leaves()[2:-3],
             staff_padding=5.5,
         )
 
@@ -473,7 +473,7 @@ def cb1(m):
         baca.dynamic(o.phead(0), "sfp")
         baca.override.dls_staff_padding(o, 6)
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[-4:]),
+            o.leaves()[-4:],
             right_broken=True,
             staff_padding=5.5 + 1,
         )

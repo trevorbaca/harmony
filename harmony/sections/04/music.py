@@ -362,14 +362,14 @@ def perc2(m):
     with baca.scope(m.get(8, 9)) as o:
         library.purpleheart_staff_positions(o, [2])
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.pleaves()),
+            o.pleaves(),
             staff_padding=3,
         )
     with baca.scope(m[11]) as o:
         library.purpleheart_staff_positions(o, [0])
         baca.dynamic(o.phead(0), "f-sub")
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.pleaves()),
+            o.pleaves(),
             staff_padding=3,
             right_broken=True,
         )
@@ -453,7 +453,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 6)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[:3],
+            o.leaves()[:2],
             staff_padding=8,
             left_broken=True,
         )

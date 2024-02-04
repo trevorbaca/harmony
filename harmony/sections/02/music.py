@@ -450,7 +450,7 @@ def perc1(cache):
             library.bass_drum_staff_position(u)
             baca.override.dls_staff_padding(u, 6),
         baca.spanners.metric_modulation(
-            o.leaves(grace=False)[2:8],
+            o.leaves(grace=False)[2:7],
             staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
@@ -518,7 +518,7 @@ def perc2(m):
     with baca.scope(m.get(5, 6)) as o:
         library.slate_staff_position(o)
         baca.spanners.metric_modulation(
-            baca.select.rleak(baca.select.runs(o)[:1]),
+            baca.select.runs(o)[:1],
             staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
@@ -774,7 +774,7 @@ def vc1(cache):
             baca.override.dls_staff_padding(u, 6),
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[1:5],
+            o.leaves()[1:4],
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
@@ -916,7 +916,7 @@ def cb1(cache):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.spanners.metric_modulation(
-            o.leaves()[:4],
+            o.leaves()[:3],
             staff_padding=5.5,
             left_broken=True,
         )

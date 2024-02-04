@@ -336,7 +336,7 @@ def perc1(m):
         library.slate_staff_position(o)
     with baca.scope(m.get(2, 3)) as o:
         baca.spanners.metric_modulation(
-            o.leaves()[1:8],
+            o.leaves()[1:7],
             staff_padding=10.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -361,7 +361,7 @@ def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
         baca.spanners.metric_modulation(
-            o.leaves()[:2],
+            o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
         )
@@ -439,7 +439,7 @@ def hp(m):
     with baca.scope(m.get(2, 3)) as o:
         library.whisk_staff_position(o)
         baca.spanners.metric_modulation(
-            o.leaves()[1:8],
+            o.leaves()[1:7],
             staff_padding=10.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -687,7 +687,6 @@ def composites(cache):
             baca.spanners.metric_modulation(
                 baca.select.tleaves(o),
                 staff_padding=8,
-                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

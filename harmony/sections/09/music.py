@@ -167,7 +167,6 @@ def bfl(m):
                 u,
                 left_broken=True,
                 staff_padding=5.5,
-                with_next_leaf=True,
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gb3")
@@ -345,13 +344,13 @@ def composites(cache):
                 "mp >o niente",
                 with_next_leaf=True,
             )
-            with baca.scope(baca.select.rleak(o.leaves()[-2:])) as u:
+            with baca.scope(o.leaves()[-2:]) as u:
                 if name in ("va", "vc1", "vc2"):
                     baca.piecewise.bow_speed(
                         (),
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                        pieces=[u],
+                        pieces=[baca.select.rleak(u)],
                     ),
                     baca.spanners.metric_modulation(
                         u,
@@ -363,7 +362,7 @@ def composites(cache):
                         (),
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 8"),
-                        pieces=[u],
+                        pieces=[baca.select.rleak(u)],
                     )
                     baca.spanners.metric_modulation(
                         u,

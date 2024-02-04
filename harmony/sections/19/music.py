@@ -701,7 +701,7 @@ def perc2(cache):
         baca.dynamic(o.rest(1), "ff-ancora")
         baca.override.dls_staff_padding(o, 5)
         baca.spanners.metric_modulation(
-            o.leaves()[:2],
+            o.leaves()[:1],
             left_broken=True,
             staff_padding=10.5,
         )
@@ -774,7 +774,7 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[-1:]),
+            o.leaves()[-1:],
             right_broken=True,
             staff_padding=10.5,
         )
@@ -994,7 +994,7 @@ def cb2(cache):
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
         baca.spanners.metric_modulation(
-            o.leaves()[1:8],
+            o.leaves()[1:7],
             staff_padding=8,
         )
         baca.spanners.trill(
@@ -1022,7 +1022,7 @@ def cb2(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(12, 13)) as o:
         baca.spanners.metric_modulation(
-            baca.select.rleak(o.leaves()[4:]),
+            o.leaves()[4:],
             staff_padding=5.5,
         )
 

@@ -174,7 +174,6 @@ def bfl(m):
                 u,
                 right_broken=True,
                 staff_padding=8,
-                with_next_leaf=True,
             )
 
 
@@ -295,7 +294,7 @@ def vc1(cache):
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[1:])
         baca.spanners.metric_modulation(
-            o.rleaves(),
+            o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
             staff_padding=5.5,
