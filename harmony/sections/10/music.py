@@ -388,7 +388,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m.get(11)) as o:
         baca.piecewise.hairpin(
@@ -435,7 +435,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -445,7 +445,7 @@ def perc1(m):
     with baca.scope(m[2]) as o:
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< p >o niente",
@@ -584,7 +584,10 @@ def va(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "A5")
-        baca.spanners.trill(baca.select.tleaves(o, rleak=True))
+        baca.spanners.trill(
+            baca.select.tleaves(o),
+            with_next_leaf=True,
+        )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -598,8 +601,9 @@ def va(m):
             baca.pitch(o, "C#4")
             baca.flat_glissando(o.pleaves())
             baca.spanners.hairpin(
-                baca.select.tleaves(o, rleak=True),
+                baca.select.tleaves(o),
                 "mf >o niente",
+                with_next_leaf=True,
             )
             baca.piecewise.bow_speed(
                 (),
@@ -685,7 +689,10 @@ def vc1(m):
         baca.pitch(o, "B4")
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gqs6"),
-        baca.spanners.trill(baca.select.tleaves(o, rleak=True)),
+        baca.spanners.trill(
+            baca.select.tleaves(o),
+            with_next_leaf=True,
+        )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -772,7 +779,10 @@ def vc2(m):
         baca.pitch(o, "Dqs4")
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F#5")
-        baca.spanners.trill(baca.select.tleaves(o, rleak=True))
+        baca.spanners.trill(
+            baca.select.tleaves(o),
+            with_next_leaf=True,
+        )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -887,7 +897,10 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Dqf6", do_not_transpose=True)
-        baca.spanners.trill(baca.select.tleaves(o, rleak=True))
+        baca.spanners.trill(
+            baca.select.tleaves(o),
+            with_next_leaf=True,
+        )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
@@ -1008,7 +1021,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
-            leaves = baca.select.tleaves(o, rleak=True)
+            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "o<| mp |>o niente",
@@ -1021,8 +1034,9 @@ def composites(cache):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
                 baca.spanners.hairpin(
-                    baca.select.tleaves(o, rleak=True),
+                    baca.select.tleaves(o),
                     "o<| ff",
+                    with_next_leaf=True,
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

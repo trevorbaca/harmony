@@ -686,8 +686,9 @@ def composites(cache):
             baca.dynamic(o.phead(0), "pp")
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
             baca.spanners.metric_modulation(
-                baca.select.tleaves(o, rleak=True),
+                baca.select.tleaves(o),
                 staff_padding=8,
+                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

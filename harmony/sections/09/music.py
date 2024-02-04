@@ -248,8 +248,9 @@ def va(m):
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
         baca.spanners.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             "mf >o niente",
+            with_next_leaf=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -313,8 +314,9 @@ def cb2(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "ff")
         baca.spanners.pizzicato(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             staff_padding=6.5,
+            with_next_leaf=True,
         )
         baca.markup(
             o.pheads(),
@@ -339,8 +341,9 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.override.tuplet_bracket_up(o)
             baca.spanners.hairpin(
-                baca.select.tleaves(o, rleak=True),
+                baca.select.tleaves(o),
                 "mp >o niente",
+                with_next_leaf=True,
             )
             with baca.scope(baca.select.rleak(o.leaves()[-2:])) as u:
                 if name in ("va", "vc1", "vc2"):
@@ -374,8 +377,9 @@ def composites(cache):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
             baca.spanners.hairpin(
-                baca.select.tleaves(o, rleak=True),
+                baca.select.tleaves(o),
                 "o<| ff",
+                with_next_leaf=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

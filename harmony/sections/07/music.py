@@ -651,7 +651,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
         for run in abjad.select.runs(o, grace=True):
             baca.override.note_head_style_harmonic(run)
@@ -688,7 +688,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
         for run in abjad.select.runs(o, grace=True):
             baca.override.note_head_style_harmonic(run)
@@ -702,8 +702,9 @@ def va(cache):
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
         baca.spanners.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             "mf >o niente",
+            with_next_leaf=True,
         )
         baca.piecewise.bow_speed(
             (),
@@ -761,7 +762,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 9"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         ),
         for run in abjad.select.runs(o, grace=True):
             baca.override.note_head_style_harmonic(run)
@@ -774,7 +775,7 @@ def vc1(cache):
                 (),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.tleaves(o, rleak=True)],
+                pieces=[baca.select.rleak(baca.select.tleaves(o))],
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "B4")
@@ -903,7 +904,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
         for run in abjad.select.runs(o, grace=True):
             baca.override.note_head_style_harmonic(run)

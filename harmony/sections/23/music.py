@@ -412,7 +412,7 @@ def va(cache):
             (),
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "<G4 Ab4 Bb4>")
@@ -460,7 +460,7 @@ def vc1(cache):
             (),
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -560,7 +560,7 @@ def cb1(cache):
             (),
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")

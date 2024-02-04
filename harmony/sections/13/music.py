@@ -266,7 +266,7 @@ def bfl(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
@@ -279,7 +279,7 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o<| f |>o niente",
@@ -302,7 +302,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "Dtqf5")
@@ -468,7 +468,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.tleaves(o, rleak=True)
+        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
             "o< mf >o niente",

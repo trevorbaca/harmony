@@ -435,7 +435,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -483,7 +483,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -517,7 +517,7 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -568,7 +568,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     for item in [(1, 6), 8, 11]:
         with baca.scope(m.get(item)) as o:

@@ -372,7 +372,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3"),
@@ -662,7 +662,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Gqf4"),
@@ -711,7 +711,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
 
 
@@ -739,7 +739,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -802,7 +802,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
 
 
@@ -819,15 +819,16 @@ def vc2(cache):
         )
         baca.stem_tremolo(o.pleaves())
         baca.spanners.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             "mf >o niente",
+            with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 5),
         baca.piecewise.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -849,7 +850,7 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -878,7 +879,7 @@ def vc2(cache):
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -903,7 +904,7 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
 
 
@@ -945,7 +946,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1003,7 +1004,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
 
 
@@ -1019,15 +1020,16 @@ def cb2(cache):
         )
         baca.stem_tremolo(o.pleaves())
         baca.spanners.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            baca.select.tleaves(o),
             "mf >o niente",
+            with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 5)
         baca.piecewise.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1054,7 +1056,7 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1088,7 +1090,7 @@ def cb2(cache):
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.tleaves(o, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1118,7 +1120,7 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
+            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
 
 
