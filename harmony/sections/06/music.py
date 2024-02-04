@@ -1119,7 +1119,7 @@ def vc2(m):
             pieces=[baca.select.rleak(o.runs()[-1:])],
         )
     with baca.scope(m.get(3, 4)) as o:
-        with baca.scope(baca.select.rleak(o.runs()[:1])) as u:
+        with baca.scope(o.runs()[:1]) as u:
             baca.pitch(u, "B2"),
             baca.spanners.damp(
                 u,
@@ -1130,7 +1130,7 @@ def vc2(m):
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             staff_padding=3,
         )
     with baca.scope(m.get(6, 7)) as o:
@@ -1215,7 +1215,7 @@ def cb1(m):
     with baca.scope(m[4]) as o:
         baca.override.note_head_style_harmonic(o.pleaf(0))
     with baca.scope(m.get(3, 4)) as o:
-        with baca.scope(baca.select.rleak(o.runs()[:1])) as u:
+        with baca.scope(o.runs()[:1]) as u:
             baca.pitch(u, "Bb2")
             baca.spanners.damp(
                 u,

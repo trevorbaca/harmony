@@ -577,7 +577,7 @@ def vc1(m):
             staff_padding=5.5,
         )
         baca.spanners.damp(
-            baca.select.rleak(abjad.select.leaves(o)[4:]),
+            abjad.select.leaves(o)[4:],
             staff_padding=8,
         )
         baca.override.dls_staff_padding(o.leaves()[4:-1], 4)
@@ -630,7 +630,7 @@ def vc2(m):
         baca.accent(o.phead(0))
         baca.dynamic(o.phead(0), "pp")
         baca.spanners.damp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             staff_padding=3,
         )
     with baca.scope(m.get(1, 3)) as o:

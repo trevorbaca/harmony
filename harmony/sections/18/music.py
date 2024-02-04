@@ -833,7 +833,6 @@ def vc1(cache):
         baca.pitch(o, "D#3")
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.damp(
                 run,
                 staff_padding=3,
@@ -861,10 +860,10 @@ def vc1(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D3")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 "mp -- niente",
+                with_next_leaf=True,
             )
             baca.spanners.damp(
                 run,
@@ -903,7 +902,6 @@ def vc2(cache):
         baca.pitch(o, "C#3")
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.damp(
                 run,
                 staff_padding=3,
