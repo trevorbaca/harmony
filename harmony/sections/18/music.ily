@@ -1719,7 +1719,10 @@ number.18.Harp.Music = {
 
     % [Harp.Music measure 6]
     \once \override DynamicLineSpanner.staff-padding = 5
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
     \once \override Staff.OttavaBracket.staff-padding = 8
+      %! EXPLICIT_OTTAVA
       %! SPANNER_START
     \ottava -1
     df,,!1.
@@ -1731,6 +1734,9 @@ number.18.Harp.Music = {
     \laissezVibrer
 
     % [Harp.Music measure 7]
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
+      %! EXPLICIT_OTTAVA
       %! SPANNER_STOP
     \ottava 0
     \stopStaff
