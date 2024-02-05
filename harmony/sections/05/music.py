@@ -781,7 +781,7 @@ def strings(cache):
         with baca.scope(m[4]) as o:
             baca.spanners.hairpin(
                 o,
-                '! o< "f"',
+                'o< "f"',
             )
         with baca.scope(m[5]) as o:
             baca.spanners.hairpin(
