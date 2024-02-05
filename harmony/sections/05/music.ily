@@ -2093,8 +2093,6 @@ number.5.Cello.1.Music = {
     f2.
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! SPANNER_STOP
-    \!
       %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
@@ -2481,8 +2479,6 @@ number.5.Cello.2.Music = {
     f2.
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! SPANNER_STOP
-    \!
       %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
@@ -2951,8 +2947,6 @@ number.5.Contrabass.1.Music = {
     f'2.
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! SPANNER_STOP
-    \!
       %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
@@ -3417,8 +3411,6 @@ number.5.Contrabass.2.Music = {
     f'2
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! SPANNER_STOP
-    \!
       %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
