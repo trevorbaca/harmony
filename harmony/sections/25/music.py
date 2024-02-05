@@ -270,7 +270,7 @@ def bfl(m):
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -284,7 +284,7 @@ def bfl(m):
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -309,7 +309,7 @@ def bfl(m):
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -335,7 +335,7 @@ def perc1(m):
     with baca.scope(m[3]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(2, 3)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:7],
             staff_padding=10.5,
         )
@@ -360,7 +360,7 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
@@ -438,7 +438,7 @@ def hp(m):
             )
     with baca.scope(m.get(2, 3)) as o:
         library.whisk_staff_position(o)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:7],
             staff_padding=10.5,
         )
@@ -684,7 +684,7 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             baca.dynamic(o.phead(0), "pp")
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 baca.select.tleaves(o),
                 staff_padding=8,
             )

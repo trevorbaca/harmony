@@ -382,11 +382,11 @@ def bfl(m):
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 staff_padding=3,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=8,
             )
@@ -401,7 +401,7 @@ def bfl(m):
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
         baca.override.tuplet_bracket_staff_padding(o, 6.5)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[4:8],
             staff_padding=11.5,
         )
@@ -543,7 +543,7 @@ def hp(cache):
         library.whisk_staff_position(o)
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
             staff_padding=5.5,
@@ -619,7 +619,7 @@ def hp(cache):
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6 + 2)
     with baca.scope(m.get(7, 8)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[5:9],
             staff_padding=8,
         )
@@ -656,7 +656,7 @@ def va(cache):
         for run in abjad.select.runs(o, grace=True):
             baca.override.note_head_style_harmonic(run)
         baca.espressivo(baca.select.pheads(o, grace=False)[1:])
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[7:11],
             staff_padding=5.5,
         )
@@ -694,7 +694,7 @@ def va(cache):
             baca.override.note_head_style_harmonic(run)
         baca.espressivo(o.pheads(grace=False)[1:])
     with baca.scope(m.get(5, 6)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:5],
             staff_padding=5.5,
         )
@@ -783,7 +783,7 @@ def vc1(cache):
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[-4:])
         baca.dynamic(o.phead(0), "pp")
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[-4:],
             right_broken=True,
             staff_padding=5.5,
@@ -799,7 +799,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2"),
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
             staff_padding=3,
@@ -819,7 +819,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2"),
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -846,7 +846,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             right_broken=True,
             staff_padding=3,
@@ -944,7 +944,7 @@ def cb2(m):
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "Bb2"),
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -955,7 +955,7 @@ def cb2(m):
             "p-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -983,7 +983,7 @@ def cb2(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb2")
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             right_broken=True,
             staff_padding=3,

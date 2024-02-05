@@ -378,7 +378,7 @@ def bfl(cache):
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 3),
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.ltleaves(o),
             items=r"\baca-cov-markup =|",
             staff_padding=3,
@@ -449,7 +449,7 @@ def perc1(cache):
         with baca.scope(o.plts(grace=False)) as u:
             library.bass_drum_staff_position(u)
             baca.override.dls_staff_padding(u, 6),
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves(grace=False)[2:7],
             staff_padding=10.5,
         )
@@ -517,7 +517,7 @@ def perc2(m):
         )
     with baca.scope(m.get(5, 6)) as o:
         library.slate_staff_position(o)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.runs(o)[:1],
             staff_padding=10.5,
         )
@@ -674,7 +674,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
         for plt in baca.select.plts(o):
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 plt,
                 staff_padding=3,
             )
@@ -773,7 +773,7 @@ def vc1(cache):
             baca.dynamic(u, '"ff"')
             baca.override.dls_staff_padding(u, 6),
     with baca.scope(m.get(6, 7)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:4],
             staff_padding=8,
         )
@@ -858,7 +858,7 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 plt,
                 staff_padding=3,
             )
@@ -915,7 +915,7 @@ def cb1(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:3],
             staff_padding=5.5,
             left_broken=True,
@@ -1069,7 +1069,7 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 plt,
                 staff_padding=3 + 1,
             )

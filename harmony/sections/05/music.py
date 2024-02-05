@@ -281,7 +281,7 @@ def bfl(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.ltleaves(o),
             staff_padding=3,
         )
@@ -384,7 +384,7 @@ def perc2(m):
                 abjad.Tweak(r"- \tweak self-alignment-X 1"),
                 abjad.Tweak(r"- \tweak staff-padding 7"),
             )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.runs(o)[:1],
             staff_padding=5.5,
             left_broken=True,
@@ -498,11 +498,11 @@ def va(m):
     with baca.scope(m.get(3, 4)) as o:
         baca.pitch(o, "F3")
         with baca.scope(o.leaves()[1:10]) as u:
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=8,
             )
-            baca.spanners.xfb(
+            baca.rspanners.xfb(
                 u,
                 staff_padding=5.5,
             )
@@ -516,7 +516,7 @@ def va(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=[baca.select.rleak(baca.select.ltleaves(run))],
             )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o,
             staff_padding=5.5,
             right_broken=True,
@@ -570,11 +570,11 @@ def vc1(m):
             baca.accent(u)
         baca.dynamic(o.pleaf(2), "mf")
         baca.override.tuplet_bracket_up(o.leaves()[3:])
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[4:10],
             staff_padding=5.5,
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             abjad.select.leaves(o)[4:],
             staff_padding=8,
         )
@@ -627,7 +627,7 @@ def vc2(m):
         baca.pitch(o, "F3"),
         baca.accent(o.phead(0))
         baca.dynamic(o.phead(0), "pp")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -684,7 +684,7 @@ def cb1(m):
             bookend=False,
         )
         baca.override.dls_staff_padding(o.plts()[:-1], 4)
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             baca.select.ltleaves(o),
             staff_padding=5.5,
         )
@@ -753,7 +753,7 @@ def cb2(m):
             "pp p",
             bookend=False,
         )
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             baca.select.ltleaves(o),
             staff_padding=5.5,
         )
@@ -798,7 +798,7 @@ def strings(cache):
                 abjad.Tweak(r"- \tweak staff-padding 4"),
                 full=True,
             )
-            baca.spanners.half_clt(
+            baca.rspanners.half_clt(
                 baca.select.ltleaves(o),
                 staff_padding=8,
             )

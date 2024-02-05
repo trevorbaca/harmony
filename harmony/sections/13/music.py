@@ -271,7 +271,7 @@ def bfl(cache):
             baca.select.lparts(leaves, [1, 2 + 1]),
             "o<| f |>o niente",
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
             staff_padding=8,
@@ -438,7 +438,7 @@ def perc2(cache):
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             abjad.select.leaves(o)[3:],
             staff_padding=10.5,
         )
@@ -489,7 +489,7 @@ def hp(cache):
             baca.dynamic(u, "f-ancora")
             baca.snap_pizzicato(u)
     with baca.scope(m.get(3, 4)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             abjad.select.leaves(o)[1:8],
             staff_padding=5.5,
         )
@@ -497,7 +497,7 @@ def hp(cache):
         baca.pitch(o, "E4")
         baca.snap_pizzicato(o.pheads())
     with baca.scope(m.get(4, 5)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             abjad.select.leaves(o)[6:],
             staff_padding=5.5,
         )
@@ -621,7 +621,7 @@ def vc2(cache):
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o.plts()[1:],
             staff_padding=3,
         )
@@ -640,7 +640,7 @@ def vc2(cache):
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "C3")
         baca.pitch(o.plts()[1:], "F3")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o.plts()[:1],
             staff_padding=3,
         )
@@ -720,7 +720,7 @@ def cb2(cache):
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o.plts()[1:],
             staff_padding=3,
         )
@@ -739,7 +739,7 @@ def cb2(cache):
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "B2")
         baca.pitch(o.plts()[1:], "Eb2")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o.plts()[:1],
             staff_padding=3,
         )
@@ -761,7 +761,7 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 5)) as o:
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 o.leaves()[-4:],
                 staff_padding=8,
             )

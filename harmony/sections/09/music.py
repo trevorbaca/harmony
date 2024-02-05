@@ -158,12 +158,12 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "G3")
         with baca.scope(o.leaves()[:2]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 left_broken=True,
                 staff_padding=3,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 left_broken=True,
                 staff_padding=5.5,
@@ -172,7 +172,7 @@ def bfl(m):
         baca.pitch(o, "Gb3")
         baca.color_fingerings(o.pheads(), [0, 1, 2])
         baca.dynamic(o.phead(0), "mp")
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.ltleaves(o),
             staff_padding=5.5,
         )
@@ -313,7 +313,7 @@ def cb2(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "ff")
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             baca.select.tleaves(o),
             staff_padding=6.5,
         )
@@ -352,7 +352,7 @@ def composites(cache):
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
                         pieces=[baca.select.rleak(u)],
                     ),
-                    baca.spanners.metric_modulation(
+                    baca.rspanners.metric_modulation(
                         u,
                         right_broken=True,
                         staff_padding=8,
@@ -364,7 +364,7 @@ def composites(cache):
                         abjad.Tweak(r"- \tweak staff-padding 8"),
                         pieces=[baca.select.rleak(u)],
                     )
-                    baca.spanners.metric_modulation(
+                    baca.rspanners.metric_modulation(
                         u,
                         right_broken=True,
                         staff_padding=10.5,

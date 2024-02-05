@@ -203,7 +203,7 @@ def bfl(m):
                 baca.select.lparts(baca.select.rleak(run), [1, 2 + 1]),
                 "niente o< mf >o",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -221,7 +221,7 @@ def bfl(m):
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -322,7 +322,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[-1:],
             right_broken=True,
             staff_padding=10.5,
@@ -376,7 +376,7 @@ def va(m):
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
@@ -421,7 +421,7 @@ def vc1(m):
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "niente o<| mp |>o",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
@@ -440,7 +440,7 @@ def vc1(m):
         baca.pitch(o, "F4"),
         baca.triple_staccato(o.phead(0))
     with baca.scope(m.get(3, 4)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:-1],
             staff_padding=5.5,
         )
@@ -468,7 +468,7 @@ def vc2(m):
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
@@ -515,7 +515,7 @@ def cb1(m):
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "niente o<| mp |>o",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",
@@ -535,7 +535,7 @@ def cb1(m):
         baca.pitch(o, "E4", do_not_transpose=True)
         baca.triple_staccato(o.phead(0))
     with baca.scope(m.get(3, 4)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:-1],
             staff_padding=5.5,
         )
@@ -563,7 +563,7 @@ def cb2(m):
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
         for run in baca.select.runs(o):
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",

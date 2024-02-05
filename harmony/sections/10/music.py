@@ -330,22 +330,22 @@ def bfl(cache):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:7]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 staff_padding=5.5,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=8,
             )
     with baca.scope(m.get(2, 3)) as o:
         baca.pitch(o, "E3")
         with baca.scope(o.leaves()[4:8]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 staff_padding=5.5,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=8,
             )
@@ -356,11 +356,11 @@ def bfl(cache):
         baca.pitch(o, "E3")
     with baca.scope(m.get(7, 8)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 staff_padding=5.5,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=8,
             )
@@ -478,7 +478,7 @@ def perc1(m):
     with baca.scope(m.get(3, 8)) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:],
             staff_padding=8,
         )
@@ -584,7 +584,7 @@ def va(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "A5")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
         )
         baca.markup(
@@ -688,7 +688,7 @@ def vc1(m):
         baca.pitch(o, "B4")
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gqs6"),
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
         )
         baca.markup(
@@ -777,7 +777,7 @@ def vc2(m):
         baca.pitch(o, "Dqs4")
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F#5")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
         )
         baca.markup(
@@ -894,7 +894,7 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Dqf6", do_not_transpose=True)
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
         )
         baca.markup(
@@ -986,7 +986,7 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             with baca.scope(o.leaves()[:2]) as u:
                 if name in ("va", "vc1", "vc2"):
-                    baca.spanners.metric_modulation(
+                    baca.rspanners.metric_modulation(
                         u,
                         left_broken=True,
                         staff_padding=8,
@@ -998,7 +998,7 @@ def composites(cache):
                         pieces=[baca.select.rleak(u)],
                     )
                 elif name == "cb1":
-                    baca.spanners.metric_modulation(
+                    baca.rspanners.metric_modulation(
                         u,
                         left_broken=True,
                         staff_padding=10.5,
