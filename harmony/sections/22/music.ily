@@ -2272,9 +2272,9 @@ number.22.Harp.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     \laissezVibrer
+
       %! SPANNER_STOP
     \ottava 0
-
     r4
 
     % [Harp.Music measure 4]
@@ -2368,9 +2368,9 @@ number.22.Harp.Music = {
     % [Harp.Music measure 10]
     d,,4
     \laissezVibrer
+
       %! SPANNER_STOP
     \ottava 0
-
     r2
     \revert Staff.OttavaBracket.staff-padding
 

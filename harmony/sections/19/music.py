@@ -818,7 +818,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 9)) as o:
-        baca.spanners.ottava(o.tleaves())
+        baca.rspanners.ottava(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 5.5)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(
@@ -837,7 +837,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[12]) as o:
-        baca.spanners.ottava(o.tleaves())
+        baca.rspanners.ottava(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 5.5)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "pp")

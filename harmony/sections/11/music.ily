@@ -2079,9 +2079,9 @@ number.11.Harp.Music = {
 
     c,,2
     \repeatTie
+
       %! SPANNER_STOP
     \ottava 0
-
     r4
     - \baca-damp
 
@@ -2134,9 +2134,9 @@ number.11.Harp.Music = {
 
     c,,8
     \repeatTie
+
       %! SPANNER_STOP
     \ottava 0
-
     r8
     - \baca-damp
 
@@ -2394,9 +2394,9 @@ number.11.Harp.Music = {
 
     c,,8
     \repeatTie
+
       %! SPANNER_STOP
     \ottava 0
-
     r8
     - \baca-damp
     \revert DynamicLineSpanner.staff-padding

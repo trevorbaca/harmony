@@ -3227,12 +3227,12 @@ number.19.Harp.Music = {
     % [Harp.Music measure 9]
     <g''' a''' bf'''!>1
     :32
-      %! SPANNER_STOP
-    \ottava 0
     \revert DynamicLineSpanner.staff-padding
     \revert Staff.OttavaBracket.staff-padding
 
     % [Harp.Music measure 10]
+      %! SPANNER_STOP
+    \ottava 0
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
@@ -3283,12 +3283,12 @@ number.19.Harp.Music = {
         - \tweak X-offset 4
         - \tweak staff-padding 4
         ^ \baca-bisb-markup
-          %! SPANNER_STOP
-        \ottava 0
 
     }
 
     % [Harp.Music measure 13]
+      %! SPANNER_STOP
+    \ottava 0
     \override DynamicLineSpanner.staff-padding = 4
     fs'!8
       %! EXPLICIT_DYNAMIC_COLOR
