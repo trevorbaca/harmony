@@ -311,7 +311,7 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.ltleaves(o),
             items=r"\baca-cov-markup =|",
             staff_padding=3,
@@ -325,7 +325,7 @@ def bfl(m):
             "mf-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.ltleaves(o),
             staff_padding=3,
         )
@@ -517,11 +517,11 @@ def vc1(m):
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=5.5,
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:8],
             staff_padding=8,
         )
@@ -579,12 +579,12 @@ def vc1(m):
         baca.accent(baca.select.pheads(o.leaves()[4:]))
         baca.dynamic(o.phead(-2), "mf")
         with baca.scope(o.leaves()[4:]) as u:
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 u,
                 right_broken=True,
                 staff_padding=5.5,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=8,
                 right_broken=True,
@@ -614,7 +614,7 @@ def vc2(m):
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=5.5,
         )
@@ -672,7 +672,7 @@ def cb1(m):
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             baca.select.ltleaves(o),
             staff_padding=5.5,
         )
@@ -738,7 +738,7 @@ def cb2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             baca.select.ltleaves(o),
             staff_padding=5.5,
         )

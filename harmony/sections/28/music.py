@@ -226,7 +226,7 @@ def bfl(m):
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -244,7 +244,7 @@ def bfl(m):
             "p < mp >",
         )
         baca.dynamic(o.rleaf(-1), "p")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
@@ -473,7 +473,7 @@ def vc1(cache):
             forbid_al_niente_to_bar_line=True,
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
@@ -537,7 +537,7 @@ def vc2(cache):
             forbid_al_niente_to_bar_line=True,
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
@@ -564,7 +564,7 @@ def cb1(cache):
                 baca.select.lparts(rrun, [1, 1 + 1]),
                 "niente o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             )
@@ -606,7 +606,7 @@ def cb1(cache):
             forbid_al_niente_to_bar_line=True,
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )

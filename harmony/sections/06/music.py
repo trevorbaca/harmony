@@ -498,7 +498,7 @@ def bfl(m):
             "o<| f |>o niente",
         )
     with baca.scope(m.get(3, 4)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             abjad.select.leaves(o)[3:7],
             staff_padding=8,
         )
@@ -526,7 +526,7 @@ def bfl(m):
             "o<| f |>o niente",
         )
     with baca.scope(m.get(5, 6)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[3:7],
             staff_padding=8,
         )
@@ -537,7 +537,7 @@ def bfl(m):
     with baca.scope(m.get(7, 8)) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.ltleaves(o),
             staff_padding=5.5,
         )
@@ -768,7 +768,7 @@ def hp(m):
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.tuplet_bracket_up(o)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[4:8],
             staff_padding=5.5,
         )
@@ -800,7 +800,7 @@ def hp(m):
     with baca.scope(m.get(7, 8)) as o:
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 6),
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.rleak(baca.select.tleaves(o), count=1),
             staff_padding=5.5,
         )
@@ -839,7 +839,7 @@ def hp(m):
             r"\baca-whisk-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.pleaves(o),
             right_broken=True,
             staff_padding=5.5,
@@ -856,7 +856,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(o.tleaves())],
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
             staff_padding=5.5,
@@ -1121,7 +1121,7 @@ def vc2(m):
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(o.runs()[:1]) as u:
             baca.pitch(u, "B2"),
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 u,
                 staff_padding=3,
             )
@@ -1129,7 +1129,7 @@ def vc2(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o.tleaves(),
             staff_padding=3,
         )
@@ -1217,7 +1217,7 @@ def cb1(m):
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(o.runs()[:1]) as u:
             baca.pitch(u, "Bb2")
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 u,
                 staff_padding=3,
             )

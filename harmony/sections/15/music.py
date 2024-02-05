@@ -253,7 +253,7 @@ def bfl(cache):
         baca.pitch(o, "E3")
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
-        baca.spanners.covered(
+        baca.rspanners.covered(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -301,17 +301,17 @@ def bfl(cache):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.spanners.covered(
+                baca.rspanners.covered(
                     run,
                     items=r"\baca-cov-markup =|",
                     staff_padding=3,
                 )
             elif i == 1:
-                baca.spanners.trill(
+                baca.rspanners.trill(
                     run,
                 )
             elif i == 2:
-                baca.spanners.trill(
+                baca.rspanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 )

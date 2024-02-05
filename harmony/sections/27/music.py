@@ -352,7 +352,7 @@ def bfl(cache):
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -407,7 +407,7 @@ def bfl(cache):
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -419,7 +419,7 @@ def bfl(cache):
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             "pp < p >o niente",
         )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
@@ -465,7 +465,7 @@ def perc1(m):
         baca.damp(o.phead(0))
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(6, 7)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.rleak(o.tleaves(), count=1),
             staff_padding=10.5,
         )
@@ -484,7 +484,7 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
@@ -539,7 +539,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(6, 7)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.rleak(o.tleaves(), count=1),
             staff_padding=10.5,
         )
@@ -588,7 +588,7 @@ def hp(m):
     with baca.scope(m.get(6, 7)) as o:
         baca.pitch(o, "Bb4")
         baca.snap_pizzicato(o.pheads())
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             baca.select.rleak(o.tleaves(), count=1),
             staff_padding=5.5,
         )
@@ -697,7 +697,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
@@ -755,14 +755,14 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.ltleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             staff_padding=3,
@@ -812,7 +812,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
@@ -849,12 +849,12 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "f")
         baca.dynamic(o.phead(2), "pp")
     with baca.scope(m.get(3, 4)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[4:12],
             staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
-        baca.spanners.damp(
+        baca.rspanners.damp(
             abjad.select.leaves(o)[4:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             staff_padding=3,
@@ -893,7 +893,7 @@ def cb2(cache):
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.ltleaves(o),
             staff_padding=3,
         )
@@ -923,7 +923,7 @@ def composites(cache):
             )
         with baca.scope(m.get(4, 5)) as o:
             baca.dynamic(o.phead(0), "pp")
-            baca.spanners.damp(
+            baca.rspanners.damp(
                 baca.select.ltleaves(o),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                 staff_padding=3,

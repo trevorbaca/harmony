@@ -270,7 +270,7 @@ def bfl(m):
                 left_broken=True,
                 pieces=[u],
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u[:2],
                 left_broken=True,
                 staff_padding=8,
@@ -292,7 +292,7 @@ def bfl(m):
             ),
             "o< mp >o niente",
         )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -304,11 +304,11 @@ def bfl(m):
         baca.pitch(o.run(0), "F#5")
     with baca.scope(m.get(4, 5)) as o:
         with baca.scope(baca.select.runs(o)[:1]) as u:
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 u,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=9,
             )

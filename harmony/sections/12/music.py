@@ -485,7 +485,7 @@ def bfl(cache):
             baca.select.lparts(o.rleaves(), [1, 2]),
             "o< mf >o niente",
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o,
             left_broken=True,
             staff_padding=8,
@@ -569,7 +569,7 @@ def bfl(cache):
             bookend=False,
             pieces=baca.select.lparts(leaves, [2, 4]),
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[-2:],
             right_broken=True,
             staff_padding=8,
@@ -957,7 +957,7 @@ def vc2(cache):
         baca.pitch(o, "C3")
         baca.clef(o.leaf(0), "bass")
         baca.dynamic(o.phead(0), "mp")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -1077,7 +1077,7 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
-        baca.spanners.damp(
+        baca.rspanners.damp(
             baca.select.tleaves(o),
             staff_padding=3,
         )
@@ -1127,7 +1127,7 @@ def composites(cache):
                 "mp >o niente",
                 left_broken=True,
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 o,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 left_broken=True,

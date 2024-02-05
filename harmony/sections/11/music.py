@@ -442,11 +442,11 @@ def bfl(cache):
         baca.pitch(o, "G3")
     with baca.scope(m.get(5, 6)) as o:
         with baca.scope(o.leaves()[1:8]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 staff_padding=3,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 staff_padding=5.5,
             )
@@ -494,7 +494,7 @@ def bfl(cache):
             baca.select.lparts(leaves, [1, 2]),
             "o< mf >o niente",
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.runs()[-1:],
             right_broken=True,
             staff_padding=5.5,
@@ -634,7 +634,7 @@ def perc2(m):
     with baca.scope(m[7]) as o:
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(6, 7)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:],
             staff_padding=10.5,
         )
@@ -713,7 +713,7 @@ def hp(cache):
         baca.pitch(o, "E4")
         baca.snap_pizzicato(o.pheads())
     with baca.scope(m.get(6, 7)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[5:],
             staff_padding=8,
         )
@@ -800,13 +800,13 @@ def vc1(m):
             "o<| mp |>o niente",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
-        baca.spanners.trill(
+        baca.rspanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         )
     with baca.scope(m.get(1, 2)) as o:
         # TODO: pitched trill suppresses start of text spanner
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.tleaves(),
             staff_padding=12,
         )
@@ -878,13 +878,13 @@ def cb1(m):
             "o<| mp |>o niente",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
-        baca.spanners.trill(
+        baca.rspanners.trill(
             abjad.select.leaves(o)[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         )
     with baca.scope(m.get(1, 2)) as o:
         # TODO: pitched trill suppresses start of text spanner
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.tleaves(),
             staff_padding=10.5,
         )
@@ -969,7 +969,7 @@ def composites(cache):
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "o<| mp |>o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 baca.select.tleaves(o),
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
@@ -987,7 +987,7 @@ def composites(cache):
                 baca.select.lparts(leaves, [1, 1 + 1]),
                 "pp <| mp |> pp",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 baca.select.tleaves(o),
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
@@ -1008,7 +1008,7 @@ def composites(cache):
                 "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
                 right_broken=True,
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 baca.select.tleaves(o),
                 right_broken=True,
             )
@@ -1035,7 +1035,7 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(6, 7)) as o:
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 o.leaves()[4:],
                 staff_padding=5.5,
             )

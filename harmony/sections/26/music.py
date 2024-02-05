@@ -348,7 +348,7 @@ def bfl(m):
             baca.pitch(o, "C3")
             baca.dynamic(o.phead(0), "mp")
             for run in baca.select.runs(o):
-                baca.spanners.covered(
+                baca.rspanners.covered(
                     run,
                     items=r"\baca-cov-markup =|",
                     staff_padding=3,
@@ -360,7 +360,7 @@ def bfl(m):
             "pp < p >o",
             bookend=False,
         )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
@@ -379,7 +379,7 @@ def bfl(m):
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 baca.select.tleaves(run),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -405,7 +405,7 @@ def bfl(m):
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -437,7 +437,7 @@ def perc1(m):
     with baca.scope(m[8]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:-1],
             staff_padding=5.5,
         )
@@ -460,7 +460,7 @@ def perc1(m):
     with baca.scope(m[10]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(9, 10)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[3:-1],
             staff_padding=10.5,
         )
@@ -516,7 +516,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             abjad.select.leaves(o)[-1:],
             right_broken=True,
             staff_padding=10.5,
@@ -566,7 +566,7 @@ def hp(cache):
             )
     with baca.scope(m.get(7, 8)) as o:
         library.whisk_staff_position(o)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:-1],
             staff_padding=8,
         )
@@ -593,7 +593,7 @@ def va(cache):
     m = cache[name]
     with baca.scope(m.get(4, 7)) as o:
         baca.pitch(o, "Bb4")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
@@ -762,7 +762,7 @@ def composites(cache):
             )
             if name != "va":
                 baca.clef(o.leaf(0), "treble")
-                baca.spanners.trill(
+                baca.rspanners.trill(
                     baca.select.tleaves(o),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                     alteration="Cb5",

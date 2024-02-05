@@ -279,12 +279,12 @@ def bfl(cache):
                 "o< f >o niente",
             )
             if i == 0:
-                baca.spanners.trill(
+                baca.rspanners.trill(
                     run,
                     alteration="m2",
                 )
             elif i == 1:
-                baca.spanners.trill(
+                baca.rspanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                     alteration="m2",
@@ -359,7 +359,7 @@ def perc1(m):
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[2:-1],
             staff_padding=10.5,
         )
@@ -395,7 +395,7 @@ def perc2(m):
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:]) as u:
             baca.override.dls_staff_padding(u, 6),
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u[:-1],
                 staff_padding=10.5,
             )
@@ -450,7 +450,7 @@ def hp(m):
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[-3:],
             right_broken=True,
             staff_padding=8,
@@ -474,7 +474,7 @@ def va(m):
                 pieces=[o.leaves()],
             )
     with baca.scope(m[1]) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o,
             left_broken=True,
             staff_padding=8,
@@ -495,7 +495,7 @@ def va(m):
         baca.laissez_vibrer(o.ptails())
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "mf")
-        baca.spanners.pizzicato(
+        baca.rspanners.pizzicato(
             baca.select.rleak(o.tleaves()),
             staff_padding=8,
         )

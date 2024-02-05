@@ -165,12 +165,12 @@ def bfl(m):
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 4)
         with baca.scope(o.leaves()[1:]) as u:
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 u,
                 right_broken=True,
                 staff_padding=5.5,
             )
-            baca.spanners.metric_modulation(
+            baca.rspanners.metric_modulation(
                 u,
                 right_broken=True,
                 staff_padding=8,
@@ -293,7 +293,7 @@ def vc1(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[1:])
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
@@ -338,7 +338,7 @@ def vc2(cache):
             o.leaves()[-2:],
             "(p) >o",
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
@@ -413,7 +413,7 @@ def cb2(cache):
             o.leaves()[-2:],
             "(p) >o",
         )
-        baca.spanners.damp(
+        baca.rspanners.damp(
             o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,

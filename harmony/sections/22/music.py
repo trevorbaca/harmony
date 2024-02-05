@@ -326,7 +326,7 @@ def bfl(m):
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
@@ -336,7 +336,7 @@ def bfl(m):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 run,
                 staff_padding=5.5,
             )
@@ -348,7 +348,7 @@ def bfl(m):
             forbid_al_niente_to_bar_line=True,
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -359,7 +359,7 @@ def bfl(m):
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.spanners.covered(
+            baca.rspanners.covered(
                 run,
                 staff_padding=5.5,
             )
@@ -480,7 +480,7 @@ def hp(m):
         baca.pitch(o, "D5")
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
@@ -528,7 +528,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak self-alignment-X 0"),
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[-1:],
             right_broken=True,
             staff_padding=10.5,
@@ -596,7 +596,7 @@ def vc1(m):
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
@@ -616,7 +616,7 @@ def vc1(m):
             forbid_al_niente_to_bar_line=True,
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -628,7 +628,7 @@ def vc1(m):
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:8],
             staff_padding=8,
         )
@@ -717,7 +717,7 @@ def cb1(m):
             forbid_al_niente_to_bar_line=True,
         )
         baca.dynamic(o.rleaf(-1), "niente")
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -746,7 +746,7 @@ def cb2(m):
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:],
             staff_padding=5.5,
         )

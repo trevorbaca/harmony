@@ -269,7 +269,7 @@ def bfl(cache):
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
                 "o< mp >o niente",
             )
-            baca.spanners.trill(
+            baca.rspanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
@@ -288,7 +288,7 @@ def bfl(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
         # TODO: indent?
-        baca.spanners.covered(
+        baca.rspanners.covered(
             run,
             staff_padding=5.5,
         )
@@ -385,7 +385,7 @@ def hp(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F#4")
         baca.laissez_vibrer(o.ptails())
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
             staff_padding=8,
@@ -487,7 +487,7 @@ def vc1(cache):
         baca.override.tuplet_bracket_down(o)
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:],
             staff_padding=5.5,
         )
@@ -578,7 +578,7 @@ def cb1(cache):
         baca.pitch(o, "E1")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
-        baca.spanners.metric_modulation(
+        baca.rspanners.metric_modulation(
             o.leaves()[1:],
             staff_padding=5.5,
         )
