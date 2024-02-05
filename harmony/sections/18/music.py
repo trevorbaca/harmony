@@ -708,7 +708,7 @@ def hp(m):
         baca.override.dls_staff_padding(o, 7)
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Db1")
-        baca.rspanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava(o.tleaves(), -1)
         baca.laissez_vibrer(o.ptails())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.dynamic(o.phead(0), "f")

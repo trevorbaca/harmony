@@ -675,12 +675,12 @@ def hp(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "C1")
-        baca.rspanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava(o.tleaves(), -1)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "C1")
-        baca.rspanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava(o.tleaves(), -1)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(
             o.phead(0),
@@ -738,7 +738,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "C1")
-        baca.rspanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava(o.tleaves(), -1)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 4)
