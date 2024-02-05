@@ -356,7 +356,7 @@ def hp(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.rspanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava(o.tleaves(), -1)
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
