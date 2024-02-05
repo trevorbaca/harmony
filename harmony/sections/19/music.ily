@@ -3173,6 +3173,9 @@ number.19.Harp.Music = {
     {
 
         % [Harp.Music measure 4]
+          %! EXPLICIT_OTTAVA_COLOR
+        \once \override Staff.OttavaBracket.color = #blue
+          %! EXPLICIT_OTTAVA
           %! SPANNER_START
         \ottava 1
         \override DynamicLineSpanner.staff-padding = 6
@@ -3231,6 +3234,9 @@ number.19.Harp.Music = {
     \revert Staff.OttavaBracket.staff-padding
 
     % [Harp.Music measure 10]
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
+      %! EXPLICIT_OTTAVA
       %! SPANNER_STOP
     \ottava 0
     \stopStaff
@@ -3270,7 +3276,10 @@ number.19.Harp.Music = {
 
         % [Harp.Music measure 12]
         \once \override DynamicLineSpanner.staff-padding = 6
+          %! EXPLICIT_OTTAVA_COLOR
+        \once \override Staff.OttavaBracket.color = #blue
         \once \override Staff.OttavaBracket.staff-padding = 5.5
+          %! EXPLICIT_OTTAVA
           %! SPANNER_START
         \ottava 1
         <g''' a''' bf'''!>1
@@ -3287,6 +3296,9 @@ number.19.Harp.Music = {
     }
 
     % [Harp.Music measure 13]
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
+      %! EXPLICIT_OTTAVA
       %! SPANNER_STOP
     \ottava 0
     \override DynamicLineSpanner.staff-padding = 4

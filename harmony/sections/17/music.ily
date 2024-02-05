@@ -1053,9 +1053,12 @@ number.17.Harp.Music = {
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
     \once \override Staff.OttavaBracket.staff-padding = 8
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
+      %! EXPLICIT_OTTAVA
       %! SPANNER_START
     \ottava -1
       %! EXPLICIT_BAR_EXTENT
@@ -1094,6 +1097,9 @@ number.17.Harp.Music = {
     \set Staff.shortInstrumentName = \harmony-hp-markup %@%
 
     % [Harp.Music measure 2]
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
+      %! EXPLICIT_OTTAVA
       %! SPANNER_STOP
     \ottava 0
     R1 * 4/4
@@ -1175,6 +1181,9 @@ number.17.Harp.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
+      %! EXPLICIT_OTTAVA
       %! SPANNER_START
     \ottava -1
     df,,!4
@@ -1189,6 +1198,9 @@ number.17.Harp.Music = {
     \revert Staff.OttavaBracket.staff-padding
 
     % [Harp.Music measure 6]
+      %! EXPLICIT_OTTAVA_COLOR
+    \once \override Staff.OttavaBracket.color = #blue
+      %! EXPLICIT_OTTAVA
       %! SPANNER_STOP
     \ottava 0
     \stopStaff
