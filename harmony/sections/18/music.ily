@@ -1723,7 +1723,6 @@ number.18.Harp.Music = {
     \once \override Staff.OttavaBracket.color = #blue
     \once \override Staff.OttavaBracket.staff-padding = 8
       %! EXPLICIT_OTTAVA
-      %! SPANNER_START
     \ottava -1
     df,,!1.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1737,7 +1736,6 @@ number.18.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_STOP
     \ottava 0
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0

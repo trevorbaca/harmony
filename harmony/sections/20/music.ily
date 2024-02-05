@@ -1752,7 +1752,6 @@ number.20.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_START
     \ottava -1
     d,,4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1765,7 +1764,6 @@ number.20.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_STOP
     \ottava 0
     r4
       %! METRIC_MODULATION_SPANNER

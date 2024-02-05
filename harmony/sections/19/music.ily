@@ -3176,7 +3176,6 @@ number.19.Harp.Music = {
           %! EXPLICIT_OTTAVA_COLOR
         \once \override Staff.OttavaBracket.color = #blue
           %! EXPLICIT_OTTAVA
-          %! SPANNER_START
         \ottava 1
         \override DynamicLineSpanner.staff-padding = 6
           %! FERMATA_MEASURE_NEXT_BAR_EXTENT
@@ -3237,7 +3236,6 @@ number.19.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_STOP
     \ottava 0
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0
@@ -3280,7 +3278,6 @@ number.19.Harp.Music = {
         \once \override Staff.OttavaBracket.color = #blue
         \once \override Staff.OttavaBracket.staff-padding = 5.5
           %! EXPLICIT_OTTAVA
-          %! SPANNER_START
         \ottava 1
         <g''' a''' bf'''!>1
         :32
@@ -3299,7 +3296,6 @@ number.19.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_STOP
     \ottava 0
     \override DynamicLineSpanner.staff-padding = 4
     fs'!8
