@@ -1059,7 +1059,6 @@ number.17.Harp.Music = {
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
       %! EXPLICIT_OTTAVA
-      %! SPANNER_START
     \ottava -1
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1100,7 +1099,6 @@ number.17.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_STOP
     \ottava 0
     R1 * 4/4
       %! DURATION_MULTIPLIER
@@ -1184,7 +1182,6 @@ number.17.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_START
     \ottava -1
     df,,!4
       %! REDUNDANT_DYNAMIC_COLOR
@@ -1201,7 +1198,6 @@ number.17.Harp.Music = {
       %! EXPLICIT_OTTAVA_COLOR
     \once \override Staff.OttavaBracket.color = #blue
       %! EXPLICIT_OTTAVA
-      %! SPANNER_STOP
     \ottava 0
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0
