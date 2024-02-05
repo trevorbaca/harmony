@@ -1758,9 +1758,9 @@ number.20.Harp.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     \laissezVibrer
+
       %! SPANNER_STOP
     \ottava 0
-
     r4
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP

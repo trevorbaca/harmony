@@ -1085,8 +1085,6 @@ number.17.Harp.Music = {
     \laissezVibrer
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Harp”)"
-      %! SPANNER_STOP
-    \ottava 0
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -1096,6 +1094,8 @@ number.17.Harp.Music = {
     \set Staff.shortInstrumentName = \harmony-hp-markup %@%
 
     % [Harp.Music measure 2]
+      %! SPANNER_STOP
+    \ottava 0
     R1 * 4/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
@@ -1184,13 +1184,13 @@ number.17.Harp.Music = {
       %! REDUNDANT_DYNAMIC
     \baca-f-ancora
     \laissezVibrer
-      %! SPANNER_STOP
-    \ottava 0
     \revert DynamicLineSpanner.staff-padding
     \revert Staff.OttavaBracket.staff-padding
     \revert Staff.OttavaBracket.staff-padding
 
     % [Harp.Music measure 6]
+      %! SPANNER_STOP
+    \ottava 0
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff

@@ -434,7 +434,7 @@ def hp(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Db1")
-        baca.spanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava_bassa(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
@@ -456,7 +456,7 @@ def hp(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Db1")
-        baca.spanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava_bassa(o.tleaves())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f-ancora")

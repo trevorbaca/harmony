@@ -1729,10 +1729,10 @@ number.18.Harp.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     \laissezVibrer
-      %! SPANNER_STOP
-    \ottava 0
 
     % [Harp.Music measure 7]
+      %! SPANNER_STOP
+    \ottava 0
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff

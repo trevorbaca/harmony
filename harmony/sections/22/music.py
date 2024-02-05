@@ -488,7 +488,7 @@ def hp(m):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.spanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava_bassa(o.tleaves())
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
@@ -510,7 +510,7 @@ def hp(m):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.spanners.ottava_bassa(o.tleaves())
+        baca.rspanners.ottava_bassa(o.tleaves())
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(
             o.phead(0),
