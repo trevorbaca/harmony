@@ -1124,7 +1124,7 @@ def composites(cache):
             baca.flat_glissando(o, left_broken=True)
             baca.spanners.hairpin(
                 o.rleaves(),
-                "mp >o niente",
+                ">o niente",
                 left_broken=True,
             )
             baca.rspanners.trill(

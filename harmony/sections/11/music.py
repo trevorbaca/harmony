@@ -751,7 +751,7 @@ def va(m):
         baca.pitch(o, "D3")
         baca.spanners.hairpin(
             o.rleaves(),
-            "ff >o niente",
+            ">o niente",
             left_broken=True,
         )
     with baca.scope(m[6]) as o:
@@ -846,7 +846,7 @@ def vc2(m):
         baca.pitch(o, "D2")
         baca.spanners.hairpin(
             o.rleaves(),
-            "ff >o niente",
+            ">o niente",
             left_broken=True,
         )
     with baca.scope(m[6]) as o:
@@ -928,7 +928,7 @@ def cb2(m):
         baca.pitch(o, "D2")
         baca.spanners.hairpin(
             o.rleaves(),
-            "ff >o niente",
+            ">o niente",
             left_broken=True,
         )
     for item in [2, (4, 5), 10]:

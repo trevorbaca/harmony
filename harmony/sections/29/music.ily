@@ -1237,15 +1237,6 @@ number.29.Contrabass.2.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     a,1. * 2/3
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_STOP
-    \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"2" #"3"
       %! REAPPLIED_INSTRUMENT_ALERT

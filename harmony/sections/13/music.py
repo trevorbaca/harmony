@@ -512,7 +512,7 @@ def va(cache):
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
             o.leaves()[:2],
-            "mp >o niente",
+            ">o niente",
             left_broken=True,
         )
         baca.spanners.hairpin(
@@ -561,7 +561,7 @@ def vc1(cache):
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
             o.leaves()[:2],
-            "mp >o niente",
+            ">o niente",
             left_broken=True,
         )
         baca.spanners.hairpin(
@@ -617,7 +617,7 @@ def vc2(cache):
         baca.pitch(o.plts()[1:], "C3")
         baca.spanners.hairpin(
             baca.select.rleak(o.plts()[:1]),
-            "mp >o niente",
+            ">o niente",
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
@@ -653,7 +653,7 @@ def cb1(cache):
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
             o.leaves()[:2],
-            "mp >o niente",
+            ">o niente",
             left_broken=True,
         )
         baca.spanners.hairpin(
@@ -716,7 +716,7 @@ def cb2(cache):
         baca.pitch(o.plts()[1:], "B2")
         baca.spanners.hairpin(
             baca.select.rleak(o.plts()[:1]),
-            "mp >o niente",
+            ">o niente",
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
