@@ -1734,10 +1734,8 @@ number.27.Percussion.2.Music = {
         r4..
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
         \revert TupletBracket.direction
 

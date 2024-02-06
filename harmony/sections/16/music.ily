@@ -1795,10 +1795,8 @@ number.16.Cello.1.Music = {
     a,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \repeatTie
 
@@ -2146,10 +2144,8 @@ number.16.Cello.2.Music = {
     g,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \repeatTie
 
@@ -2473,10 +2469,8 @@ number.16.Contrabass.1.Music = {
     gs,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \repeatTie
 
@@ -2833,10 +2827,8 @@ number.16.Contrabass.2.Music = {
     fs,8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \repeatTie
 
