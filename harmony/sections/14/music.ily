@@ -645,10 +645,8 @@ number.14.BassFlute.Music = {
         c''32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -683,10 +681,8 @@ number.14.BassFlute.Music = {
         b'32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -812,10 +808,8 @@ number.14.BassFlute.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
@@ -845,10 +839,8 @@ number.14.BassFlute.Music = {
     r2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -894,10 +886,8 @@ number.14.BassFlute.Music = {
         b'32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -932,10 +922,8 @@ number.14.BassFlute.Music = {
         c''32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
         ]
 
@@ -996,10 +984,8 @@ number.14.BassFlute.Music = {
         bf'!32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1034,10 +1020,8 @@ number.14.BassFlute.Music = {
         cs''!32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -1742,10 +1726,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
 
         r16
@@ -1763,10 +1745,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
 
         r16
@@ -1784,10 +1764,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
 
         r4
@@ -1808,10 +1786,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
 
         r16
@@ -1831,10 +1807,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mf
 
         r16
@@ -1855,10 +1829,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
 
         r4
@@ -1880,10 +1852,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
 
         r16
@@ -1904,10 +1874,8 @@ number.14.Percussion.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \pp
         \revert Stem.direction
 
@@ -2113,10 +2081,8 @@ number.14.Harp.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2135,10 +2101,8 @@ number.14.Harp.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
 
@@ -2908,10 +2872,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
 
         r8.
@@ -2932,10 +2894,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
         \revert Stem.direction
 
@@ -3135,10 +3095,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -3150,10 +3108,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-ff
 
     }
@@ -3169,10 +3125,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
 
         r4
@@ -3190,10 +3144,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! REDUNDANT_DYNAMIC_COLOR
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
 
         r16
@@ -3214,10 +3166,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mf
 
         r16
@@ -3236,10 +3186,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
 
         r4
@@ -3259,10 +3207,8 @@ number.14.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         \revert Stem.direction
 
@@ -3489,10 +3435,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
 
     r8
@@ -3509,10 +3453,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
 
     r8
@@ -3524,10 +3466,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
     \revert Stem.direction
 
@@ -3688,10 +3628,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
 
     r8.
@@ -3701,10 +3639,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-ff
 
     r8.
@@ -3719,10 +3655,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
 
     r16
@@ -3737,10 +3671,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
 
     r16
@@ -3752,10 +3684,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mp
 
     r8.
@@ -3768,10 +3698,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
 
     r8.
@@ -3788,10 +3716,8 @@ number.14.Cello.2.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pp
     \revert Stem.direction
 
