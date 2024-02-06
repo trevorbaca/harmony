@@ -1749,10 +1749,8 @@ number.8.Cello.2.Music = {
     b,1 * 15/16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-p-parenthesized
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"15" #"16"
@@ -2345,10 +2343,8 @@ number.8.Contrabass.2.Music = {
     bf1 * 15/16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-p-parenthesized
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"15" #"16"

@@ -1707,10 +1707,8 @@ number.13.Viola.Music.item.1 = {
     df!2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1892,10 +1890,8 @@ number.13.Viola.Music = {
     d1.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-mp-parenthesized
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2003,10 +1999,8 @@ number.13.Cello.1.Music.item.1 = {
     c2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2177,10 +2171,8 @@ number.13.Cello.1.Music = {
     d,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-mp-parenthesized
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2493,10 +2485,8 @@ number.13.Cello.2.Music = {
     c1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-mp-parenthesized
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2632,10 +2622,8 @@ number.13.Contrabass.1.Music.item.1 = {
     b2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2806,10 +2794,8 @@ number.13.Contrabass.1.Music = {
     d1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-mp-parenthesized
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3129,10 +3115,8 @@ number.13.Contrabass.2.Music = {
     b1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-mp-parenthesized
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START

@@ -793,10 +793,8 @@ number.1.Percussion.1.Music = {
         c'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 6
@@ -964,10 +962,8 @@ number.1.Percussion.2.Music = {
         c'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 6
@@ -1804,10 +1800,8 @@ number.1.Cello.2.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! DAMP_SPANNER
       %! SPANNER_STOP
@@ -2356,10 +2350,8 @@ number.1.Contrabass.2.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! DAMP_SPANNER
       %! SPANNER_STOP

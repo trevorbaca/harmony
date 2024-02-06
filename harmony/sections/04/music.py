@@ -323,6 +323,7 @@ def perc1(cache):
         baca.spanners.hairpin(
             o.tleaves(),
             "f > p",
+            debug=True,
         )
     with baca.scope(m.get(5, 6)) as o:
         library.purpleheart_staff_positions(o, [0, 2, 0, 2, 2])
