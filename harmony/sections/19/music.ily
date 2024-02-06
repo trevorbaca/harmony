@@ -1522,10 +1522,8 @@ number.19.Percussion.1.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
 
     r2
@@ -3753,10 +3751,8 @@ number.19.Viola.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -4295,10 +4291,8 @@ number.19.Cello.1.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -4800,10 +4794,8 @@ number.19.Cello.2.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -5382,10 +5374,8 @@ number.19.Contrabass.1.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -5923,10 +5913,8 @@ number.19.Contrabass.2.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-fff-scratch
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style

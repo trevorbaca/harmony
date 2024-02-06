@@ -654,10 +654,8 @@ number.5.Percussion.1.Music = {
         c'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
         ]
         \revert Stem.direction
@@ -714,10 +712,8 @@ number.5.Percussion.1.Music = {
         a16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
         \revert DynamicLineSpanner.staff-padding
@@ -1026,10 +1022,8 @@ number.5.Percussion.2.Music = {
         a8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
         ]
         \revert Stem.direction
@@ -1080,10 +1074,8 @@ number.5.Percussion.2.Music = {
         c'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
         \revert DynamicLineSpanner.staff-padding
@@ -1439,10 +1431,8 @@ number.5.Harp.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
 
     ef'!2.
@@ -2139,10 +2129,8 @@ number.5.Cello.1.Music = {
     b,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
     - \tweak staff-padding 4
     - \baca-full-upbow
@@ -2248,11 +2236,9 @@ number.5.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
@@ -2426,10 +2412,8 @@ number.5.Cello.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -2521,10 +2505,8 @@ number.5.Cello.2.Music = {
     e4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
     - \tweak staff-padding 4
     - \baca-full-upbow
@@ -2630,11 +2612,9 @@ number.5.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
@@ -2750,10 +2730,8 @@ number.5.Contrabass.1.Music = {
     e,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -2987,10 +2965,8 @@ number.5.Contrabass.1.Music = {
     a4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
     - \tweak staff-padding 4
     - \baca-full-upbow
@@ -3092,11 +3068,9 @@ number.5.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
@@ -3299,10 +3273,8 @@ number.5.Contrabass.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3447,10 +3419,8 @@ number.5.Contrabass.2.Music = {
     a2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
     - \tweak staff-padding 4
     - \baca-full-upbow
@@ -3552,11 +3522,9 @@ number.5.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER

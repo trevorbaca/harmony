@@ -2278,10 +2278,8 @@ number.7.Viola.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -2366,11 +2364,9 @@ number.7.Viola.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
@@ -2660,10 +2656,8 @@ number.7.Cello.1.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ff
 
     % [Cello.1.Music measure 8]
@@ -2997,10 +2991,8 @@ number.7.Cello.2.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ff
 
     % [Cello.2.Music measure 8]
@@ -3386,10 +3378,8 @@ number.7.Contrabass.1.Music = {
     e,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3420,10 +3410,8 @@ number.7.Contrabass.1.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ff
 
     % [Contrabass.1.Music measure 8]
@@ -3701,10 +3689,8 @@ number.7.Contrabass.2.Music = {
     e,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3734,10 +3720,8 @@ number.7.Contrabass.2.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ff
 
     % [Contrabass.2.Music measure 8]

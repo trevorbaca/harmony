@@ -772,10 +772,8 @@ number.3.Percussion.1.Music = {
         a16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
         \revert Stem.direction
@@ -832,10 +830,8 @@ number.3.Percussion.1.Music = {
         a16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
         \revert DynamicLineSpanner.staff-padding
@@ -956,10 +952,8 @@ number.3.Percussion.1.Music = {
         c'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
 
@@ -1021,10 +1015,8 @@ number.3.Percussion.1.Music = {
         c'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
         ]
         \revert DynamicLineSpanner.staff-padding
@@ -1127,10 +1119,8 @@ number.3.Percussion.2.Music = {
         c'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
         \revert Stem.direction
@@ -1181,10 +1171,8 @@ number.3.Percussion.2.Music = {
         c'16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
         \revert DynamicLineSpanner.staff-padding
@@ -1291,10 +1279,8 @@ number.3.Percussion.2.Music = {
         a16
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         ]
 
@@ -1353,10 +1339,8 @@ number.3.Percussion.2.Music = {
         a8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
         ]
         \revert DynamicLineSpanner.staff-padding
@@ -2661,10 +2645,8 @@ number.3.Cello.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -2878,10 +2860,8 @@ number.3.Cello.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -2954,10 +2934,8 @@ number.3.Cello.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3248,10 +3226,8 @@ number.3.Contrabass.1.Music = {
     e,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3515,10 +3491,8 @@ number.3.Contrabass.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3724,10 +3698,8 @@ number.3.Contrabass.2.Music = {
     e,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3804,10 +3776,8 @@ number.3.Contrabass.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -3880,10 +3850,8 @@ number.3.Contrabass.2.Music = {
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP

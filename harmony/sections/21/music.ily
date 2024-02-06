@@ -1797,10 +1797,8 @@ number.21.Cello.1.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     r4
@@ -1824,10 +1822,8 @@ number.21.Cello.1.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     % [Cello.1.Music measure 3]
@@ -2125,10 +2121,8 @@ number.21.Cello.2.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     r4
@@ -2152,10 +2146,8 @@ number.21.Cello.2.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     % [Cello.2.Music measure 3]
@@ -2456,10 +2448,8 @@ number.21.Contrabass.1.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     r4
@@ -2483,10 +2473,8 @@ number.21.Contrabass.1.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     % [Contrabass.1.Music measure 3]
@@ -2789,10 +2777,8 @@ number.21.Contrabass.2.Music = {
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
 
     ef!8.
@@ -2814,10 +2800,8 @@ number.21.Contrabass.2.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     r4
@@ -2841,10 +2825,8 @@ number.21.Contrabass.2.Music = {
     - \baca-stop-on-string
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
 
     % [Contrabass.2.Music measure 3]
