@@ -4213,12 +4213,13 @@ number.4.Contrabass.2.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
+      %! RIGHT_BROKEN
+      %! SPANNER_STOP
+    \!
+      %! ANCHOR_NOTE
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-    \!
 
 }
 

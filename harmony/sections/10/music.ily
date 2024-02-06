@@ -2968,6 +2968,7 @@ number.10.Viola.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
+      %! SPANNER_STOP
     \!
 
 }
@@ -4074,6 +4075,7 @@ number.10.Cello.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
+      %! SPANNER_STOP
     \!
 
 }
@@ -5013,6 +5015,7 @@ number.10.Contrabass.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
+      %! SPANNER_STOP
     \!
 
 }
