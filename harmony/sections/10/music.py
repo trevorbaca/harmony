@@ -671,7 +671,7 @@ def va(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 4]),
-            "o< ff >o niente",
+            "o< ff >o !",
             right_broken=True,
         )
         baca.piecewise.scp(
@@ -849,7 +849,7 @@ def vc2(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 4]),
-            "o< ff >o niente",
+            "o< ff >o !",
             right_broken=True,
         )
         baca.piecewise.scp(
@@ -968,7 +968,7 @@ def cb2(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 4]),
-            "o< ff >o niente",
+            "o< ff >o !",
             right_broken=True,
         )
         baca.piecewise.scp(

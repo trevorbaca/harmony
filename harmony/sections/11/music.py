@@ -1005,7 +1005,7 @@ def composites(cache):
             leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
-                "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
+                "o<| mp |> pp pp <| mp |> ! <| mp |>o !",
                 right_broken=True,
             )
             baca.rspanners.trill(

@@ -626,7 +626,7 @@ def cb2(m):
         )
         baca.piecewise.hairpin(
             [o.rleaves()],
-            "o< f",
+            "o< !",
             right_broken=True,
         )
         baca.piecewise.scp(
