@@ -723,7 +723,7 @@ def vc1(cache):
         baca.pitch(o, "E4")
         baca.piecewise.hairpin(
             [o],
-            "f >o niente",
+            ">o niente",
             left_broken=True,
         )
         baca.piecewise.bow_speed(
@@ -862,7 +862,7 @@ def cb1(cache):
         baca.flat_glissando(o, "E1", left_broken=True)
         baca.piecewise.hairpin(
             [o.rleaves()],
-            "ff >o",
+            ">o",
             bookend=False,
             left_broken=True,
         )

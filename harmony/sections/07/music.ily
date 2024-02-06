@@ -2449,15 +2449,6 @@ number.7.Cello.1.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     e'1 * 15/16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_STOP
-    \f
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"15" #"16"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -3168,15 +3159,6 @@ number.7.Contrabass.1.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     e,4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_STOP
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_STOP
-    \ff
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
       %! LEFT_BROKEN
