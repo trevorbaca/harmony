@@ -637,7 +637,7 @@ def cb2(cache):
             (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
         baca.markup(
@@ -685,7 +685,7 @@ def cb2(cache):
             (),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.lparts(o.rleaves(), [3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
             right_broken=True,
         )

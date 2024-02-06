@@ -478,7 +478,7 @@ def va(cache):
             (),
             "P2 -> P1 -> P3 -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -520,7 +520,7 @@ def vc1(cache):
             (),
             "P2 -> O -> P2 -> P1 -> P3",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -561,7 +561,7 @@ def vc2(cache):
             (),
             "O -> P2 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -604,7 +604,7 @@ def cb1(cache):
             (),
             "P1 -> P2 -> O -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -646,7 +646,7 @@ def cb2(cache):
             (),
             "P1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m.get(5, 10)) as o:

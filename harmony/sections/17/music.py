@@ -512,7 +512,7 @@ def vc1(cache):
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[2]) as o:
@@ -544,7 +544,7 @@ def vc1(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 
@@ -558,7 +558,7 @@ def vc2(cache):
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[2]) as o:
@@ -590,7 +590,7 @@ def vc2(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 
@@ -604,7 +604,7 @@ def cb1(cache):
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[2]) as o:
@@ -636,7 +636,7 @@ def cb1(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 
@@ -650,7 +650,7 @@ def cb2(cache):
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[2]) as o:
@@ -682,7 +682,7 @@ def cb2(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 

@@ -1331,7 +1331,7 @@ def cb2(m):
             (),
             "T1 -> P2 -> T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [2, 1, 1, 2]),
         )
     with baca.scope(m.get(1, 15)) as o:

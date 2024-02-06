@@ -854,7 +854,7 @@ def va(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[10]) as o:
@@ -912,7 +912,7 @@ def vc1(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[10]) as o:
@@ -973,7 +973,7 @@ def vc2(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1031,7 +1031,7 @@ def cb1(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1093,7 +1093,7 @@ def cb2(cache):
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1147,7 +1147,7 @@ def composites(cache):
                     (),
                     "T4 -> O",
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                    bookend=-1,
+                    bookend=True,
                     pieces=[baca.select.rleak(baca.select.ltleaves(o))],
                 )
             elif name in ("cb1", "cb2"):
@@ -1155,7 +1155,7 @@ def composites(cache):
                     (),
                     "(T4) -> O",
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                    bookend=-1,
+                    bookend=True,
                     pieces=[baca.select.rleak(baca.select.ltleaves(o))],
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

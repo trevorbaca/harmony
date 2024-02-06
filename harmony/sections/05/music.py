@@ -657,7 +657,7 @@ def cb1(m):
             (),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.tleaves()],
         )
     with baca.scope(m[2]) as o:
@@ -720,7 +720,7 @@ def cb2(m):
             (),
             "(T1) -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
     with baca.scope(m[2]) as o:
