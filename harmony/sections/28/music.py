@@ -678,7 +678,7 @@ def cb2(cache):
         )
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [2, 1, 2]),
-            "o< ff (ff) >o niente",
+            "o< ff (ff) >o !",
             right_broken=True,
         )
         baca.piecewise.scp(

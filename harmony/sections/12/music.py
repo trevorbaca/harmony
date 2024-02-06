@@ -1166,7 +1166,7 @@ def composites(cache):
             baca.dynamic(o.pheads()[1:-1], "sffp")
             baca.piecewise.hairpin(
                 [baca.select.rleak(o.plts()[-1:])],
-                "sffp >o niente",
+                "sffp >o !",
                 right_broken=True,
             )
     for name in ["vc1", "vc2", "cb1", "cb2"]:

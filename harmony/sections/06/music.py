@@ -1086,7 +1086,7 @@ def vc1(cache):
         )
         baca.piecewise.hairpin(
             [baca.select.rleak(o.plts()[-1:])],
-            "f >o niente",
+            "f >o !",
             right_broken=True,
         )
         baca.override.dls_staff_padding(o, 4)
@@ -1260,7 +1260,7 @@ def cb1(m):
         )
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 2]),
-            "o< mf > p < f > p < ff >o niente",
+            "o< mf > p < f > p < ff >o !",
             right_broken=True,
         )
         baca.piecewise.scp(
