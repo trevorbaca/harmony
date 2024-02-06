@@ -768,10 +768,8 @@ number.9.Viola.Music = {
     cs'!1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
     - \tweak staff-padding 5.5
     ^ \harmony-match-harp-decay-markup
@@ -833,10 +831,8 @@ number.9.Viola.Music = {
         c'2.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
@@ -1020,10 +1016,8 @@ number.9.Cello.1.Music = {
         b'2.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
@@ -1209,10 +1203,8 @@ number.9.Cello.2.Music = {
         dqs'!2.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
@@ -1405,10 +1397,8 @@ number.9.Contrabass.1.Music = {
         f'2.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \mp
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
