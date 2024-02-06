@@ -678,7 +678,7 @@ def va(m):
             (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
         )
 
@@ -767,7 +767,7 @@ def vc1(m):
             (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
         )
 
@@ -856,7 +856,7 @@ def vc2(m):
             (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
         )
 
@@ -886,7 +886,7 @@ def cb1(m):
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [1, 2]),
         )
 
@@ -975,7 +975,7 @@ def cb2(m):
             (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
         )
 

@@ -469,7 +469,7 @@ def va(m):
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                bookend=-1,
+                bookend=True,
                 left_broken=True,
                 pieces=[o.leaves()],
             )
@@ -515,7 +515,7 @@ def vc1(m):
                 (),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                bookend=-1,
+                bookend=True,
                 pieces=[o.tleaves()],
             )
     with baca.scope(m[5]) as o:
@@ -572,7 +572,7 @@ def cb1(m):
                 (),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                bookend=-1,
+                bookend=True,
                 pieces=[o.tleaves()],
             )
     with baca.scope(m[5]) as o:
@@ -602,7 +602,7 @@ def cb2(m):
                 (),
                 "P1 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                bookend=-1,
+                bookend=True,
                 pieces=[o.leaves()],
             )
     with baca.scope(m[1]) as o:

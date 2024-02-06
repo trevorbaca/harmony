@@ -430,7 +430,7 @@ def va(cache):
             (),
             "T -> P -> T",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [2, 1]),
         )
     with baca.scope(m[7]) as o:
@@ -444,7 +444,7 @@ def va(cache):
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 
@@ -480,7 +480,7 @@ def vc1(cache):
             (),
             "T -> P",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
     with baca.scope(m.get(6, 7)) as o:
@@ -544,7 +544,7 @@ def vc2(cache):
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 
@@ -619,7 +619,7 @@ def cb2(cache):
             (),
             "P3 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
     with baca.scope(m[7]) as o:
@@ -633,7 +633,7 @@ def cb2(cache):
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            bookend=-1,
+            bookend=True,
             pieces=[o.leaves()],
         )
 

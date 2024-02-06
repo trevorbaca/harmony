@@ -437,7 +437,7 @@ def va(m):
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                bookend=-1,
+                bookend=True,
                 pieces=[baca.select.rleak(u)],
                 right_broken=True,
             )

@@ -394,7 +394,7 @@ def va(m):
             (),
             "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
 
@@ -451,7 +451,7 @@ def vc1(m):
             (),
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
 
@@ -488,7 +488,7 @@ def vc2(m):
             (),
             "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
 
@@ -546,7 +546,7 @@ def cb1(m):
             (),
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
 
@@ -583,7 +583,7 @@ def cb2(m):
             (),
             "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            bookend=-1,
+            bookend=True,
             pieces=baca.select.plts(o.leaves()),
         )
 
@@ -613,7 +613,7 @@ def composites(cache):
                 (),
                 "T2 -> T4",
                 tweak,
-                bookend=-1,
+                bookend=True,
                 pieces=[o.leaves()],
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
