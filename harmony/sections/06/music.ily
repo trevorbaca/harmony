@@ -4267,13 +4267,14 @@ number.6.Cello.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
+      %! RIGHT_BROKEN
+      %! SPANNER_STOP
+    \!
+      %! ANCHOR_NOTE
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-    \!
 
 }
 
@@ -5695,12 +5696,13 @@ number.6.Contrabass.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
+      %! SPANNER_STOP
+    \!
+      %! ANCHOR_NOTE
+      %! RIGHT_BROKEN
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-    \!
 
 }
 

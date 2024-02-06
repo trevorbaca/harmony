@@ -3124,17 +3124,17 @@ number.5.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
+      %! EXPLICIT_DYNAMIC
       %! LEFT_BROKEN
-      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! REDUNDANT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! LEFT_BROKEN
-      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #(x11-color 'DeepPink1)
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
       %! LEFT_BROKEN
-      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \<
     \glissando

@@ -90,16 +90,6 @@
                 value="Bfl.",
             ),
         ],
-        "Cello.1.Music": [
-            baca.Memento(
-                context="Cello.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.StartHairpin",
-                synthetic_offset=None,
-                value=">o",
-            )
-        ],
         "Cello.1.Staff": [
             baca.Memento(
                 context="Cello.1.Music",
@@ -193,16 +183,6 @@
                 synthetic_offset=None,
                 value="Vc. II",
             ),
-        ],
-        "Contrabass.1.Music": [
-            baca.Memento(
-                context="Contrabass.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.StartHairpin",
-                synthetic_offset=None,
-                value=">o",
-            )
         ],
         "Contrabass.1.Staff": [
             baca.Memento(

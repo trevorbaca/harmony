@@ -3026,10 +3026,11 @@ number.11.Viola.Music = {
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
       %! SPANNER_STOP
-    \stopTrillSpan
+    \!
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
-    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
@@ -3721,10 +3722,11 @@ number.11.Cello.1.Music = {
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
       %! SPANNER_STOP
-    \stopTrillSpan
+    \!
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
-    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
@@ -4374,10 +4376,11 @@ number.11.Cello.2.Music = {
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
       %! SPANNER_STOP
-    \stopTrillSpan
+    \!
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
-    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
@@ -5077,10 +5080,11 @@ number.11.Contrabass.1.Music = {
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
       %! SPANNER_STOP
-    \stopTrillSpan
+    \!
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
-    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 
@@ -5736,10 +5740,11 @@ number.11.Contrabass.2.Music = {
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
       %! SPANNER_STOP
-    \stopTrillSpan
+    \!
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
-    \!
+      %! SPANNER_STOP
+    \stopTrillSpan
 
 }
 

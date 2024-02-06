@@ -247,16 +247,6 @@
                 value="Cb. I",
             ),
         ],
-        "Contrabass.2.Music": [
-            baca.Memento(
-                context="Contrabass.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.StartHairpin",
-                synthetic_offset=None,
-                value="o<",
-            )
-        ],
         "Contrabass.2.Staff": [
             baca.Memento(
                 context="Contrabass.2.Music",

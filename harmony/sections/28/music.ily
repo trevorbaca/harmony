@@ -7491,12 +7491,13 @@ number.28.Contrabass.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
+      %! SPANNER_STOP
+    \!
+      %! ANCHOR_NOTE
+      %! RIGHT_BROKEN
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-    \!
 
 }
 
