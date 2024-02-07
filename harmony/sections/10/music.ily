@@ -1233,13 +1233,10 @@ number.10.BassFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     gs''!4 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
 
     % [BassFlute.Music measure 15]
     r16
@@ -1455,10 +1452,7 @@ number.10.Percussion.1.Music = {
     \revert Stem.direction
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Percussion.1.Music measure 3]
@@ -1720,15 +1714,12 @@ number.10.Percussion.1.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -2209,15 +2200,12 @@ number.10.Harp.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -2345,10 +2333,7 @@ number.10.Viola.Music = {
     \set Staff.shortInstrumentName = \harmony-va-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -2433,10 +2418,7 @@ number.10.Viola.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -2520,15 +2502,12 @@ number.10.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
               %! BOW_SPEED_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanBowSpeed
@@ -2632,15 +2611,12 @@ number.10.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! BOW_SPEED_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanBowSpeed
@@ -3066,10 +3042,7 @@ number.10.Cello.1.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -3138,10 +3111,7 @@ number.10.Cello.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3514,18 +3484,14 @@ number.10.Cello.1.Music = {
       %! HIDDEN
       %! NOTE
     d1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
 
 }
 
@@ -3622,10 +3588,7 @@ number.10.Cello.2.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -3694,10 +3657,7 @@ number.10.Cello.2.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4173,10 +4133,7 @@ number.10.Contrabass.1.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -4515,18 +4472,14 @@ number.10.Contrabass.1.Music = {
       %! HIDDEN
       %! NOTE
     d1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
 
 }
 
@@ -4642,10 +4595,7 @@ number.10.Contrabass.2.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan

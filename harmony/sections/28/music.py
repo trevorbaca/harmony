@@ -224,7 +224,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
-                "o< mp >o niente",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -322,7 +322,7 @@ def perc2(m):
             run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
-                "f >o niente",
+                "f >o !",
             )
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
@@ -445,7 +445,7 @@ def vc1(cache):
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 3, 1 + 1]),
-            "pp -- ! < mp >o niente",
+            "pp -- ! < mp >o !",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -508,7 +508,7 @@ def vc2(cache):
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2, 3, 2 + 1]),
-            "pp -- ! < mp -- ! >o niente",
+            "pp -- ! < mp -- ! >o !",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -562,7 +562,7 @@ def cb1(cache):
             rrun = baca.select.rleak(run)
             baca.piecewise.hairpin(
                 baca.select.lparts(rrun, [1, 1 + 1]),
-                "niente o< mp >o niente",
+                "niente o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -577,7 +577,7 @@ def cb1(cache):
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 3, 2 + 1]),
-            "pp -- ! < mp >o niente",
+            "pp -- ! < mp >o !",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -650,7 +650,7 @@ def cb2(cache):
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 1, 1 + 1]),
-            "pp -- ! < mp >o niente",
+            "pp -- ! < mp >o !",
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())

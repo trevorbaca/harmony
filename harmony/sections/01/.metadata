@@ -137,16 +137,6 @@
                 value=1,
             ),
         ],
-        "Cello.2.Music": [
-            baca.Memento(
-                context="Cello.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "Cello.2.Staff": [
             baca.Memento(
                 context="Cello.2.Music",
@@ -240,16 +230,6 @@
                 synthetic_offset=None,
                 value=1,
             ),
-        ],
-        "Contrabass.2.Music": [
-            baca.Memento(
-                context="Contrabass.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Contrabass.2.Staff": [
             baca.Memento(

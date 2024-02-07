@@ -41,16 +41,6 @@
     "first_measure_number": 266,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "BassFlute.Music": [
-            baca.Memento(
-                context="BassFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "BassFlute.Staff": [
             baca.Memento(
                 context="BassFlute.Music",
@@ -92,16 +82,6 @@
                 synthetic_offset=None,
                 value="Bfl.",
             ),
-        ],
-        "Cello.1.Music": [
-            baca.Memento(
-                context="Cello.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Cello.1.Staff": [
             baca.Memento(
@@ -145,16 +125,6 @@
                 value="Vc. I",
             ),
         ],
-        "Cello.2.Music": [
-            baca.Memento(
-                context="Cello.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "Cello.2.Staff": [
             baca.Memento(
                 context="Cello.2.Music",
@@ -197,16 +167,6 @@
                 value="Vc. II",
             ),
         ],
-        "Contrabass.1.Music": [
-            baca.Memento(
-                context="Contrabass.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "Contrabass.1.Staff": [
             baca.Memento(
                 context="Contrabass.1.Music",
@@ -248,16 +208,6 @@
                 synthetic_offset=None,
                 value="Cb. I",
             ),
-        ],
-        "Contrabass.2.Music": [
-            baca.Memento(
-                context="Contrabass.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Contrabass.2.Staff": [
             baca.Memento(
@@ -476,16 +426,6 @@
                 synthetic_offset=None,
                 value="1/4",
             ),
-        ],
-        "Viola.Music": [
-            baca.Memento(
-                context="Viola.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Viola.Staff": [
             baca.Memento(

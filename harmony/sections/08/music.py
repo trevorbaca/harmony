@@ -278,7 +278,7 @@ def va(cache):
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
-            "(p) < ff >o niente",
+            "(p) < ff >o !",
         )
     with baca.scope(m.get(1, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -319,7 +319,7 @@ def vc1(cache):
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
-            "(p) < ff >o niente",
+            "(p) < ff >o !",
         )
     with baca.scope(m.get(2, 9)) as o:
         baca.pitch(o, "<C5 Db5 Eb5>")
@@ -361,7 +361,7 @@ def vc2(cache):
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
-            "(p) < ff >o niente",
+            "(p) < ff >o !",
         )
     with baca.scope(m.get(3, 9)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -394,7 +394,7 @@ def cb1(cache):
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
-            "(p) < ff >o niente",
+            "(p) < ff >o !",
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.pitch(o, "<C5 Db5 Eb5>", do_not_transpose=True)
@@ -431,7 +431,7 @@ def cb2(cache):
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
-            "(p) < ff >o niente",
+            "(p) < ff >o !",
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "treble")

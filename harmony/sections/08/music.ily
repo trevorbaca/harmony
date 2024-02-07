@@ -379,11 +379,6 @@ number.8.BassFlute.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     R1 * 3/4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -1263,15 +1258,12 @@ number.8.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
@@ -1562,15 +1554,12 @@ number.8.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -1866,15 +1855,12 @@ number.8.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -2117,15 +2103,12 @@ number.8.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -2388,15 +2371,12 @@ number.8.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(0 . 2)
 

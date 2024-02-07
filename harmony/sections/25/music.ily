@@ -633,10 +633,7 @@ number.25.BassFlute.Music = {
         a'32
 
         af'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -984,10 +981,7 @@ number.25.BassFlute.Music = {
         bf'!32
 
         a'32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
 
@@ -1084,10 +1078,7 @@ number.25.BassFlute.Music = {
         b'32
 
         bf'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
 
@@ -1190,10 +1181,7 @@ number.25.BassFlute.Music = {
         af'!32
 
         g'32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
 
@@ -1290,10 +1278,7 @@ number.25.BassFlute.Music = {
         a'32
 
         af'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
 
@@ -1396,10 +1381,7 @@ number.25.BassFlute.Music = {
         gs'!32
 
         a'32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
 
@@ -1496,10 +1478,7 @@ number.25.BassFlute.Music = {
         g'32
 
         gs'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -1946,10 +1925,7 @@ number.25.Percussion.2.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -1988,10 +1964,7 @@ number.25.Percussion.2.Music = {
     ]
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -2022,10 +1995,7 @@ number.25.Percussion.2.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -2064,10 +2034,7 @@ number.25.Percussion.2.Music = {
     ]
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -2099,10 +2066,7 @@ number.25.Percussion.2.Music = {
     \revert Stem.direction
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -2144,10 +2108,7 @@ number.25.Percussion.2.Music = {
     ]
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r2

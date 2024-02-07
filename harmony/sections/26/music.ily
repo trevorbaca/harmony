@@ -1137,10 +1137,7 @@ number.26.BassFlute.Music = {
         a'32
 
         af'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -1156,10 +1153,10 @@ number.26.BassFlute.Music = {
 
     % [BassFlute.Music measure 10]
     c'4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \mp
       %! COVERED_SPANNER
       %! SPANNER_START
@@ -1464,11 +1461,6 @@ number.26.Percussion.2.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     R1 * 4/4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -1595,10 +1587,7 @@ number.26.Percussion.2.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1

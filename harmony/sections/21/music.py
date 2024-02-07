@@ -276,7 +276,7 @@ def bfl(cache):
         for i, run in enumerate(runs):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 2]),
-                "o< f >o niente",
+                "o< f >o !",
             )
             if i == 0:
                 baca.rspanners.trill(
@@ -608,7 +608,7 @@ def cb2(m):
     with baca.scope(m[1]) as o:
         baca.spanners.hairpin(
             o.rleaves(),
-            "mf >o niente",
+            "mf >o !",
         )
     with baca.scope(m[4]) as o:
         baca.spanners.hairpin(

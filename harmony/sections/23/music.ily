@@ -599,10 +599,7 @@ number.23.BassFlute.Music = {
         bf'!32
 
         a'32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -667,10 +664,10 @@ number.23.BassFlute.Music = {
     \startStaff
     <b' dqf''!>4
     - \espressivo
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \mp
 
     <b' dqf''!>4
@@ -1543,10 +1540,7 @@ number.23.Viola.Music = {
     {
 
         cs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -1596,10 +1590,10 @@ number.23.Viola.Music = {
         c'8
         :32
         - \accent
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
         \pp
 
         r4
@@ -2188,10 +2182,7 @@ number.23.Cello.2.Music = {
     {
 
         cs!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -2238,10 +2229,10 @@ number.23.Cello.2.Music = {
         c'8.
         :32
         - \accent
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
         \pp
 
         r8
@@ -2769,10 +2760,7 @@ number.23.Contrabass.2.Music = {
     {
 
         cs!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP

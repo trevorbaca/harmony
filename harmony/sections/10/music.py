@@ -413,7 +413,7 @@ def bfl(cache):
     with baca.scope(m[14]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 3]),
-            "o< mp >o niente",
+            "o< mp >o !",
         )
     with baca.scope(m.get(13, 14)) as o:
         baca.pitch(o.leaves(grace=False), "G#4")
@@ -448,7 +448,7 @@ def perc1(m):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
-            "o< p >o niente",
+            "o< p >o !",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         baca.markup(
@@ -495,7 +495,7 @@ def perc1(m):
     with baca.scope(m.get(14)) as o:
         baca.spanners.hairpin(
             o.rleaves(),
-            "(p) >o niente",
+            "(p) >o !",
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o.leaves(), 6)
@@ -554,7 +554,7 @@ def hp(cache):
     with baca.scope(m.get(12)) as o:
         baca.spanners.hairpin(
             o.rleaves(),
-            "(mf) >o niente",
+            "(mf) >o !",
         )
     with baca.scope(m.get(2, 12)) as o:
         baca.markup(
@@ -601,7 +601,7 @@ def va(m):
             baca.flat_glissando(o.pleaves())
             baca.spanners.hairpin(
                 baca.select.tleaves(o),
-                "mf >o niente",
+                "mf >o !",
                 with_next_leaf=True,
             )
             baca.piecewise.bow_speed(
@@ -761,7 +761,7 @@ def vc1(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 4]),
-            "o< ff >o niente",
+            "o< ff >o !",
         )
         baca.piecewise.scp(
             (),
@@ -877,7 +877,7 @@ def cb1(m):
     with baca.scope(m.get(12, 15)) as o:
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [1, 1, 3]),
-            "(pp) >o niente o< mf >o niente",
+            "(pp) >o niente o< mf >o !",
         )
     with baca.scope(m.get(13, 15)) as o:
         baca.interpolate_pitches(o, "F#2", "D2")
@@ -1011,7 +1011,7 @@ def composites(cache):
                     )
             baca.spanners.hairpin(
                 o.leaves()[:2],
-                "mp >o niente",
+                "mp >o !",
             )
     for name in ["va", "vc1", "vc2", "cb2"]:
         m = cache[name]
@@ -1020,7 +1020,7 @@ def composites(cache):
             leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
-                "o<| mp |>o niente",
+                "o<| mp |>o !",
             )
     for name in ["vc1", "vc2", "cb2"]:
         m = cache[name]

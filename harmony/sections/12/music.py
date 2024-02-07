@@ -483,7 +483,7 @@ def bfl(cache):
     with baca.scope(m[1]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            "o< mf >o niente",
+            "o< mf >o !",
         )
         baca.rspanners.metric_modulation(
             o,
@@ -493,17 +493,17 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            "o< mp >o niente",
+            "o< mp >o !",
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            "o< p >o niente",
+            "o< p >o !",
         )
     with baca.scope(m[7]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            "o< pp >o niente",
+            "o< pp >o !",
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "B4")
@@ -511,7 +511,7 @@ def bfl(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
     with baca.scope(m[10]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -840,14 +840,14 @@ def va(cache):
     with baca.scope(m.get(2, 4)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(5, 8)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "f >o niente",
+            "f >o !",
             with_next_leaf=True,
         )
         baca.piecewise.scp(
@@ -896,7 +896,7 @@ def vc1(cache):
     with baca.scope(m[2]) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -904,7 +904,7 @@ def vc1(cache):
     with baca.scope(m.get(3, 8)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "f >o niente",
+            "f >o !",
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 4 + 2)
@@ -966,7 +966,7 @@ def vc2(cache):
     with baca.scope(m.get(3, 8)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "f >o niente",
+            "f >o !",
             with_next_leaf=True,
         )
         baca.piecewise.scp(
@@ -1016,7 +1016,7 @@ def cb1(cache):
     with baca.scope(m[2]) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -1024,7 +1024,7 @@ def cb1(cache):
     with baca.scope(m.get(3, 8)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "f >o niente",
+            "f >o !",
             with_next_leaf=True,
         )
         baca.piecewise.scp(
@@ -1086,7 +1086,7 @@ def cb2(cache):
     with baca.scope(m.get(3, 8)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "f >o niente",
+            "f >o !",
             with_next_leaf=True,
         )
         baca.piecewise.scp(
@@ -1124,7 +1124,7 @@ def composites(cache):
             baca.flat_glissando(o, left_broken=True)
             baca.spanners.hairpin(
                 o.rleaves(),
-                ">o niente",
+                ">o !",
                 left_broken=True,
             )
             baca.rspanners.trill(

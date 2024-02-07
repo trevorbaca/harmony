@@ -871,10 +871,7 @@ number.6.BassFlute.Music = {
     {
 
         r4.
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
 
         e'''4 * 1/2
@@ -939,13 +936,10 @@ number.6.BassFlute.Music = {
     % [BassFlute.Music measure 4]
     e'''4 * 1/2
     :32
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -991,10 +985,7 @@ number.6.BassFlute.Music = {
     \>
 
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
@@ -1054,10 +1045,7 @@ number.6.BassFlute.Music = {
     {
 
         r4.
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
 
         e'''4 * 1/2
@@ -1122,13 +1110,10 @@ number.6.BassFlute.Music = {
     % [BassFlute.Music measure 6]
     e'''4 * 1/2
     :32
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1174,10 +1159,7 @@ number.6.BassFlute.Music = {
     \>
 
     r1
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
@@ -3535,18 +3517,14 @@ number.6.Viola.Music = {
       %! HIDDEN
       %! NOTE
     c'1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
       %! ANCHOR_NOTE
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
@@ -4645,10 +4623,7 @@ number.6.Cello.2.Music = {
 
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -4943,18 +4918,14 @@ number.6.Cello.2.Music = {
       %! HIDDEN
       %! NOTE
     b'1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
       %! ANCHOR_NOTE
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
@@ -5086,15 +5057,12 @@ number.6.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! SCP_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanSCP
@@ -5124,10 +5092,10 @@ number.6.Contrabass.1.Music = {
     r4
 
     bf!2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \p
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -5832,15 +5800,12 @@ number.6.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! SCP_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanSCP
@@ -6109,10 +6074,7 @@ number.6.Contrabass.2.Music = {
 
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -6351,18 +6313,14 @@ number.6.Contrabass.2.Music = {
       %! HIDDEN
       %! NOTE
     d1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
 
 }
 

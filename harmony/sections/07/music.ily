@@ -596,10 +596,7 @@ number.7.BassFlute.Music = {
     \>
 
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [BassFlute.Music measure 2]
@@ -673,10 +670,7 @@ number.7.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r2.
@@ -737,10 +731,7 @@ number.7.BassFlute.Music = {
 
     % [BassFlute.Music measure 6]
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -777,10 +768,10 @@ number.7.BassFlute.Music = {
         \bacaStartTextSpanMetricModulation
 
         af'!4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
         \mf
 
     }
@@ -915,10 +906,7 @@ number.7.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
@@ -1617,15 +1605,12 @@ number.7.Harp.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(0 . 2)
 
@@ -2004,11 +1989,6 @@ number.7.Viola.Music = {
                 bf
                 d''
             >8 * 2/5
-              %! REAPPLIED_DYNAMIC_COLOR
-              %! REAPPLIED_DYNAMIC
-            - \tweak color #(x11-color 'green4)
-              %! REAPPLIED_DYNAMIC
-            _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
@@ -2250,10 +2230,7 @@ number.7.Viola.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -2335,18 +2312,14 @@ number.7.Viola.Music = {
       %! HIDDEN
       %! NOTE
     c'1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
       %! ANCHOR_NOTE
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
@@ -2470,13 +2443,10 @@ number.7.Cello.1.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     e'4 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
@@ -2758,11 +2728,6 @@ number.7.Cello.2.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -3462,11 +3427,6 @@ number.7.Contrabass.2.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

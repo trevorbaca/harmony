@@ -403,7 +403,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
-                "o< mp >o niente",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -496,7 +496,7 @@ def perc2(m):
             run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
-                "f >o niente",
+                "f >o !",
             )
         baca.markup(
             o.pleaf(0),

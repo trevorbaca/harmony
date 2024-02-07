@@ -813,10 +813,7 @@ number.9.Viola.Music = {
     % [Viola.Music measure 2]
     \override TupletBracket.direction = #up
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
@@ -871,10 +868,7 @@ number.9.Viola.Music = {
         \>
 
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         \revert DynamicLineSpanner.staff-padding
         \revert TupletBracket.direction
@@ -1052,10 +1046,7 @@ number.9.Cello.1.Music = {
         \>
 
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         \revert DynamicLineSpanner.staff-padding
         \revert TupletBracket.direction
@@ -1235,10 +1226,7 @@ number.9.Cello.2.Music = {
         \>
 
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         \revert DynamicLineSpanner.staff-padding
         \revert TupletBracket.direction
@@ -1425,10 +1413,7 @@ number.9.Contrabass.1.Music = {
         \>
 
         r4
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         \revert DynamicLineSpanner.staff-padding
         \revert TupletBracket.direction

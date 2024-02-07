@@ -653,10 +653,7 @@ number.22.BassFlute.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -1711,20 +1708,17 @@ number.22.Percussion.1.Music = {
     \revert Stem.direction
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Percussion.1.Music measure 4]
     \override Stem.direction = #down
     \override TupletBracket.direction = #up
     d'4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \pp
     - \tweak staff-padding 7
     ^ \baca-slate-scrape-markup
@@ -2846,10 +2840,7 @@ number.22.Viola.Music = {
     {
 
         d'8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -2920,10 +2911,7 @@ number.22.Viola.Music = {
     {
 
         cs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -2975,10 +2963,10 @@ number.22.Viola.Music = {
         c'8
         :32
         - \accent
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
         \pp
 
         r8
@@ -3099,10 +3087,7 @@ number.22.Cello.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4486,10 +4471,7 @@ number.22.Cello.2.Music = {
     {
 
         f'8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -4557,10 +4539,7 @@ number.22.Cello.2.Music = {
     {
 
         cs!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -4608,10 +4587,10 @@ number.22.Cello.2.Music = {
         c'16
         :32
         - \accent
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! REDUNDANT_DYNAMIC_COLOR
+          %! REDUNDANT_DYNAMIC
+        - \tweak color #(x11-color 'DeepPink1)
+          %! REDUNDANT_DYNAMIC
         \pp
         ~
 
@@ -6037,10 +6016,7 @@ number.22.Contrabass.2.Music = {
     {
 
         cs!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -6112,10 +6088,7 @@ number.22.Contrabass.2.Music = {
     {
 
         cs!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -6154,10 +6127,10 @@ number.22.Contrabass.2.Music = {
     c'8.
     :32
     - \accent
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \pp
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT

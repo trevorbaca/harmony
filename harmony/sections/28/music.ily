@@ -584,10 +584,7 @@ number.28.BassFlute.Music = {
         g'32
 
         gs'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -2120,10 +2117,7 @@ number.28.Percussion.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     r1
@@ -2835,15 +2829,12 @@ number.28.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -4241,15 +4232,12 @@ number.28.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -5525,10 +5513,7 @@ number.28.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 2]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5578,10 +5563,7 @@ number.28.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 4]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5686,15 +5668,12 @@ number.28.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -7116,15 +7095,12 @@ number.28.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(0 . 2)
 

@@ -349,7 +349,7 @@ def bfl(m):
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(o, [1]),
-                "o<| f |>o niente",
+                "o<| f |>o !",
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "Bb5")
@@ -357,13 +357,13 @@ def bfl(m):
         leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| mf |>o niente",
+            "o<| mf |>o !",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(3), -2)
     with baca.scope(m[6]) as o:
@@ -396,7 +396,7 @@ def bfl(m):
         leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o< f >o niente",
+            "o< f >o !",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
@@ -558,7 +558,7 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            "o< mf >o niente",
+            "o< mf >o !",
         )
         baca.override.dls_staff_padding(o, 4),
         baca.markup(
@@ -669,7 +669,7 @@ def va(cache):
     with baca.scope(m[6]) as o:
         baca.spanners.hairpin(
             o.leaves()[1:3],
-            "pp >o niente",
+            "pp >o !",
         )
     with baca.scope(m.get(4, 6)) as o:
         baca.pitch(o.plts(grace=False), "Bb3")
@@ -703,7 +703,7 @@ def va(cache):
         baca.flat_glissando(o.pleaves())
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
         baca.piecewise.bow_speed(
@@ -723,7 +723,7 @@ def vc1(cache):
         baca.pitch(o, "E4")
         baca.piecewise.hairpin(
             [o],
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.piecewise.bow_speed(

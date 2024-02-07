@@ -470,10 +470,7 @@ number.21.BassFlute.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -529,13 +526,10 @@ number.21.BassFlute.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
     R1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
       %! SPANNER_STOP
     \stopTrillSpan
       %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
@@ -2767,10 +2761,7 @@ number.21.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 2]
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     ef!8.

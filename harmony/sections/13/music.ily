@@ -492,10 +492,7 @@ number.13.BassFlute.Music = {
     \repeatTie
 
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [BassFlute.Music measure 2]
@@ -568,10 +565,7 @@ number.13.BassFlute.Music = {
 
     % [BassFlute.Music measure 4]
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     <<
@@ -1498,10 +1492,7 @@ number.13.Harp.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Harp.Music measure 2]
@@ -1692,17 +1683,17 @@ number.13.Viola.Music.item.1 = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \>
 
@@ -1769,10 +1760,7 @@ number.13.Viola.Music = {
     \set Staff.shortInstrumentName = \harmony-va-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     <<
@@ -1832,10 +1820,7 @@ number.13.Viola.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Viola.Music measure 2]
@@ -1924,15 +1909,12 @@ number.13.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! SCP_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanSCP
@@ -1978,17 +1960,17 @@ number.13.Cello.1.Music.item.1 = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \>
 
@@ -2052,10 +2034,7 @@ number.13.Cello.1.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     <<
@@ -2111,10 +2090,7 @@ number.13.Cello.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Cello.1.Music measure 2]
@@ -2180,10 +2156,7 @@ number.13.Cello.1.Music = {
     \repeatTie
 
     d,8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \repeatTie
 
@@ -2345,10 +2318,7 @@ number.13.Cello.2.Music = {
     \repeatTie
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     c2.
@@ -2479,10 +2449,7 @@ number.13.Cello.2.Music = {
     \repeatTie
 
     c8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \repeatTie
 
@@ -2591,17 +2558,17 @@ number.13.Contrabass.1.Music.item.1 = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \>
 
@@ -2665,10 +2632,7 @@ number.13.Contrabass.1.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     <<
@@ -2724,10 +2688,7 @@ number.13.Contrabass.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Contrabass.1.Music measure 2]
@@ -2793,10 +2754,7 @@ number.13.Contrabass.1.Music = {
     \repeatTie
 
     d8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \repeatTie
 
@@ -2961,10 +2919,7 @@ number.13.Contrabass.2.Music = {
     \repeatTie
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     b2.
@@ -3099,10 +3054,7 @@ number.13.Contrabass.2.Music = {
     \repeatTie
 
     b8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \repeatTie
 
