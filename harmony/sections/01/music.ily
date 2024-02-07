@@ -1601,10 +1601,7 @@ number.1.Cello.1.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
@@ -1838,10 +1835,7 @@ number.1.Cello.2.Music = {
 
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -2083,10 +2077,7 @@ number.1.Contrabass.1.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -2382,10 +2373,7 @@ number.1.Contrabass.2.Music = {
 
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP

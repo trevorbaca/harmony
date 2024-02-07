@@ -384,7 +384,7 @@ def bfl(cache):
             baca.override.accidental_y_offset(u, -2),
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
-            "o< mp >o niente",
+            "o< mp >o !",
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -404,7 +404,7 @@ def bfl(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
     with baca.scope(m[6]) as o:
         baca.pitches(
@@ -413,7 +413,7 @@ def bfl(cache):
         )
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
-            "o< mp >o niente",
+            "o< mp >o !",
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -426,7 +426,7 @@ def bfl(cache):
         )
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
-            "o< mp >o niente",
+            "o< mp >o !",
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -637,7 +637,7 @@ def hp(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
-            "o< mf >o niente",
+            "o< mf >o !",
         )
         baca.markup(
             o.pleaf(0),
@@ -691,7 +691,7 @@ def va(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
-            "f >o niente",
+            "f >o !",
             with_next_leaf=True,
         )
         baca.rspanners.metric_modulation(
@@ -763,7 +763,7 @@ def vc1(cache):
     with baca.scope(m[5]) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -916,7 +916,7 @@ def cb1(cache):
     with baca.scope(m[5]) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
     with baca.scope(m.get(6, 9)) as o:

@@ -794,10 +794,7 @@ number.19.BassFlute.Music = {
         b'32
 
         bf'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -1133,10 +1130,7 @@ number.19.BassFlute.Music = {
         b'32
 
         bf'!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -3470,10 +3464,7 @@ number.19.Viola.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Viola.Music measure 2]
@@ -4110,10 +4101,7 @@ number.19.Cello.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Cello.1.Music measure 2]
@@ -4171,10 +4159,7 @@ number.19.Cello.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4599,10 +4584,7 @@ number.19.Cello.2.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Cello.2.Music measure 2]
@@ -4660,10 +4642,7 @@ number.19.Cello.2.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5137,10 +5116,7 @@ number.19.Contrabass.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Contrabass.1.Music measure 2]
@@ -5212,10 +5188,7 @@ number.19.Contrabass.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
 
@@ -5745,10 +5718,7 @@ number.19.Contrabass.2.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan

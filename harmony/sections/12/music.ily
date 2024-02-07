@@ -821,13 +821,10 @@ number.12.BassFlute.Music = {
     % [BassFlute.Music measure 2]
     b''4 * 1/2
     :32
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
@@ -882,10 +879,7 @@ number.12.BassFlute.Music = {
     \repeatTie
 
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [BassFlute.Music measure 3]
@@ -946,15 +940,12 @@ number.12.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 5/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -1032,15 +1023,12 @@ number.12.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 5/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -1118,15 +1106,12 @@ number.12.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 5/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -2839,17 +2824,17 @@ number.12.Viola.Music.item.1 = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \>
     - \tweak stencil ##f
@@ -2953,10 +2938,7 @@ number.12.Viola.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3039,10 +3021,7 @@ number.12.Viola.Music = {
     % [Viola.Music measure 5]
     \override DynamicLineSpanner.staff-padding = 4
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     bf!4
@@ -3148,15 +3127,12 @@ number.12.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
@@ -3458,17 +3434,17 @@ number.12.Cello.1.Music.item.1 = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \>
 
@@ -3566,10 +3542,7 @@ number.12.Cello.1.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3629,10 +3602,7 @@ number.12.Cello.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -3790,15 +3760,12 @@ number.12.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -4194,10 +4161,7 @@ number.12.Cello.2.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4389,15 +4353,12 @@ number.12.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -4703,17 +4664,17 @@ number.12.Contrabass.1.Music.item.1 = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC
       %! SPANNER_START
     \>
 
@@ -4811,10 +4772,7 @@ number.12.Contrabass.1.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4874,10 +4832,7 @@ number.12.Contrabass.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -5052,15 +5007,12 @@ number.12.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 
@@ -5475,10 +5427,7 @@ number.12.Contrabass.2.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5678,15 +5627,12 @@ number.12.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(0 . 2)
 

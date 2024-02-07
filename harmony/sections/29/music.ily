@@ -261,15 +261,12 @@ number.29.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTrillSpan
 
@@ -662,15 +659,12 @@ number.29.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTrillSpan
 
@@ -813,15 +807,12 @@ number.29.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTrillSpan
 
@@ -964,15 +955,12 @@ number.29.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTrillSpan
 
@@ -1115,15 +1103,12 @@ number.29.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTrillSpan
 
@@ -1305,15 +1290,12 @@ number.29.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
             d1 * 6/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
+              %! SPANNER_STOP
+            \!
 
         }
 

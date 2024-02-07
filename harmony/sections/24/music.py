@@ -386,7 +386,7 @@ def va(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#3")
@@ -480,7 +480,7 @@ def vc2(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#2")
@@ -575,7 +575,7 @@ def cb2(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")

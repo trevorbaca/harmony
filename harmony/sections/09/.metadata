@@ -85,16 +85,6 @@
                 value="Bfl.",
             ),
         ],
-        "Cello.1.Music": [
-            baca.Memento(
-                context="Cello.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "Cello.1.Staff": [
             baca.Memento(
                 context="Cello.1.Music",
@@ -137,16 +127,6 @@
                 value="Vc. I",
             ),
         ],
-        "Cello.2.Music": [
-            baca.Memento(
-                context="Cello.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "Cello.2.Staff": [
             baca.Memento(
                 context="Cello.2.Music",
@@ -188,16 +168,6 @@
                 synthetic_offset=None,
                 value="Vc. II",
             ),
-        ],
-        "Contrabass.1.Music": [
-            baca.Memento(
-                context="Contrabass.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Contrabass.1.Staff": [
             baca.Memento(
@@ -468,16 +438,6 @@
                 synthetic_offset=None,
                 value="6/4",
             ),
-        ],
-        "Viola.Music": [
-            baca.Memento(
-                context="Viola.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
         ],
         "Viola.Staff": [
             baca.Memento(

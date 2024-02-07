@@ -324,7 +324,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
-                "o< mp >o niente",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -375,7 +375,7 @@ def perc1(m):
             run = baca.select.rleak(run)
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1 + 1]),
-                "o< pp >o niente",
+                "o< pp >o !",
             )
         baca.markup(
             o.pleaf(0),
@@ -560,7 +560,7 @@ def va(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
-            "o< ff >o niente",
+            "o< ff >o !",
         )
         baca.piecewise.scp(
             (),
@@ -576,7 +576,7 @@ def va(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
         baca.piecewise.scp(
             (),
@@ -594,7 +594,7 @@ def vc1(m):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
-                "o< mp >o niente",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -662,7 +662,7 @@ def vc2(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
-            "o< ff >o niente",
+            "o< ff >o !",
         )
         baca.piecewise.scp(
             (),
@@ -678,7 +678,7 @@ def vc2(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
         baca.piecewise.scp(
             (),
@@ -756,7 +756,7 @@ def cb2(m):
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
-            "o< ff >o niente",
+            "o< ff >o !",
         )
         baca.piecewise.scp(
             (),
@@ -773,7 +773,7 @@ def cb2(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
         baca.override.dls_staff_padding(o, 4)
         baca.piecewise.scp(

@@ -679,10 +679,7 @@ number.14.BassFlute.Music = {
         as'!32
 
         b'32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -837,10 +834,7 @@ number.14.BassFlute.Music = {
     \repeatTie
 
     r2.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -920,10 +914,7 @@ number.14.BassFlute.Music = {
         b'32
 
         c''32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
 
@@ -1018,10 +1009,7 @@ number.14.BassFlute.Music = {
         c''32
 
         cs''!32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -2099,10 +2087,7 @@ number.14.Harp.Music = {
     \>
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
 
@@ -2218,11 +2203,6 @@ number.14.Viola.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r2
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2419,10 +2399,7 @@ number.14.Viola.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert NoteHead.style
 
@@ -3051,10 +3028,7 @@ number.14.Cello.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -4085,10 +4059,7 @@ number.14.Contrabass.1.Music = {
       %! ONE_VOICE_COMMAND
     \oneVoice
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
     \revert NoteHead.style
 

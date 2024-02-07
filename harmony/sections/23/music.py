@@ -267,7 +267,7 @@ def bfl(cache):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
-                "o< mp >o niente",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -438,7 +438,7 @@ def va(cache):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
         baca.piecewise.scp(
             (),
@@ -538,7 +538,7 @@ def vc2(cache):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
         baca.piecewise.scp(
             (),
@@ -627,7 +627,7 @@ def cb2(cache):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o,
-            "pp >o niente",
+            "pp >o !",
         )
         baca.piecewise.scp(
             (),

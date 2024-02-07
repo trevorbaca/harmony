@@ -2013,11 +2013,6 @@ number.18.Viola.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3059,11 +3054,6 @@ number.18.Cello.1.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -3782,11 +3772,6 @@ number.18.Cello.2.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -4845,11 +4830,6 @@ number.18.Contrabass.1.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -5583,11 +5563,6 @@ number.18.Contrabass.2.Music = {
       %! EXPLICIT_STAFF_LINES
     \startStaff
     r4
-      %! REAPPLIED_DYNAMIC_COLOR
-      %! REAPPLIED_DYNAMIC
-    - \tweak color #(x11-color 'green4)
-      %! REAPPLIED_DYNAMIC
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente"))
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR

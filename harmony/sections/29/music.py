@@ -188,7 +188,7 @@ def cb2(m):
         baca.flat_glissando(o.leaves()[:1], left_broken=True)
         baca.spanners.hairpin(
             o.rleaves(),
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.piecewise.scp(
@@ -218,7 +218,7 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleaves(o), [1, 3]),
-                "pp < p >o niente",
+                "pp < p >o !",
             )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]

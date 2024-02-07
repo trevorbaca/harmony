@@ -3257,10 +3257,7 @@ number.24.Viola.Music = {
     {
 
         cs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -3273,10 +3270,10 @@ number.24.Viola.Music = {
     fs!4
     :32
     - \accent
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \pp
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4538,10 +4535,7 @@ number.24.Cello.2.Music = {
     {
 
         cs!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -4554,10 +4548,10 @@ number.24.Cello.2.Music = {
     fs,!2
     :32
     - \accent
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \pp
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5814,10 +5808,7 @@ number.24.Contrabass.2.Music = {
     {
 
         cs'!8
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
           %! SCP_SPANNER
           %! SPANNER_STOP
@@ -5830,10 +5821,10 @@ number.24.Contrabass.2.Music = {
     fs,!8.
     :32
     - \accent
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
     \pp
     [
       %! SCP_SPANNER

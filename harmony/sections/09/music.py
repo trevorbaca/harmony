@@ -249,7 +249,7 @@ def va(m):
         baca.flat_glissando(o.pleaves())
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
         baca.markup(
@@ -341,7 +341,7 @@ def composites(cache):
             baca.override.tuplet_bracket_up(o)
             baca.spanners.hairpin(
                 baca.select.tleaves(o),
-                "mp >o niente",
+                "mp >o !",
                 with_next_leaf=True,
             )
             with baca.scope(o.leaves()[-2:]) as u:

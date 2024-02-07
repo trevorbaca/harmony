@@ -269,7 +269,7 @@ def bfl(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2 + 1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
         baca.rspanners.metric_modulation(
             o.leaves()[:2],
@@ -282,7 +282,7 @@ def bfl(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -471,7 +471,7 @@ def hp(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1 + 1]),
-            "o< mf >o niente",
+            "o< mf >o !",
         )
         baca.markup(
             o.pleaf(0),
@@ -512,12 +512,12 @@ def va(cache):
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
             o.leaves()[:2],
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.spanners.hairpin(
             o.leaves(grace=False)[2:],
-            "mf >o niente",
+            "mf >o !",
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -544,7 +544,7 @@ def va(cache):
         baca.pitch(o, "D3")
         baca.spanners.hairpin(
             o.rleaves(),
-            "(mp) >o niente",
+            "(mp) >o !",
         )
         baca.piecewise.scp(
             (),
@@ -561,12 +561,12 @@ def vc1(cache):
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
             o.leaves()[:2],
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.spanners.hairpin(
             o.leaves(grace=False)[2:],
-            "mf >o niente",
+            "mf >o !",
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -594,7 +594,7 @@ def vc1(cache):
             baca.pitch(u, "D2")
             baca.spanners.hairpin(
                 u,
-                "(mp) >o niente",
+                "(mp) >o !",
             )
         baca.piecewise.scp(
             (),
@@ -617,7 +617,7 @@ def vc2(cache):
         baca.pitch(o.plts()[1:], "C3")
         baca.spanners.hairpin(
             baca.select.rleak(o.plts()[:1]),
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
@@ -635,7 +635,7 @@ def vc2(cache):
         baca.repeat_tie(o.leaf(0))
         baca.spanners.hairpin(
             o.leaves()[:-1],
-            "(mp) >o niente",
+            "(mp) >o !",
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "C3")
@@ -653,12 +653,12 @@ def cb1(cache):
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
             o.leaves()[:2],
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.spanners.hairpin(
             o.leaves(grace=False)[2:],
-            "mf >o niente",
+            "mf >o !",
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -693,7 +693,7 @@ def cb1(cache):
         with baca.scope(o.plt(0)) as u:
             baca.spanners.hairpin(
                 u,
-                "(mp) >o niente",
+                "(mp) >o !",
             )
         baca.piecewise.scp(
             (),
@@ -716,7 +716,7 @@ def cb2(cache):
         baca.pitch(o.plts()[1:], "B2")
         baca.spanners.hairpin(
             baca.select.rleak(o.plts()[:1]),
-            ">o niente",
+            ">o !",
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
@@ -734,7 +734,7 @@ def cb2(cache):
         baca.repeat_tie(o.leaf(0))
         baca.spanners.hairpin(
             o.leaves()[:-1],
-            "(mp) >o niente",
+            "(mp) >o !",
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "B2")

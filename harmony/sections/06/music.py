@@ -481,12 +481,12 @@ def bfl(m):
         leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
             forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m[4]) as o:
@@ -495,7 +495,7 @@ def bfl(m):
         leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.rspanners.metric_modulation(
@@ -509,12 +509,12 @@ def bfl(m):
         leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
         leaves = baca.select.rleak(abjad.select.leaves(o)[-2:])
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
             forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m[6]) as o:
@@ -523,7 +523,7 @@ def bfl(m):
         leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
-            "o<| f |>o niente",
+            "o<| f |>o !",
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.rspanners.metric_modulation(
@@ -946,7 +946,7 @@ def va(cache):
         )
         baca.spanners.hairpin(
             baca.select.rleak(o.plts()[-1:]),
-            "f >o niente",
+            "f >o !",
         )
         for run in baca.select.runs(o)[:-1]:
             run = baca.select.rleak(run)
@@ -1155,7 +1155,7 @@ def vc2(m):
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.spanners.hairpin(
             baca.select.rleak(o.tleaves()),
-            "mf >o niente",
+            "mf >o !",
         )
         baca.piecewise.scp(
             (),
@@ -1187,7 +1187,7 @@ def vc2(m):
         )
         baca.spanners.hairpin(
             baca.select.rleak(o.plts()[-1:]),
-            "f >o niente",
+            "f >o !",
         )
     for item in [1, (6, 7), (10, 15)]:
         with baca.scope(m.get(item)) as o:
@@ -1202,7 +1202,7 @@ def cb1(m):
         baca.flat_glissando(o)
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [2, 4]),
-            "o< p >o niente",
+            "o< p >o !",
         )
         baca.piecewise.scp(
             (),
@@ -1279,7 +1279,7 @@ def cb2(m):
         baca.flat_glissando(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [3, 3]),
-            "o< p >o niente",
+            "o< p >o !",
         )
         baca.piecewise.scp(
             (),
@@ -1313,7 +1313,7 @@ def cb2(m):
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
             baca.spanners.hairpin(
                 u,
-                "mf >o niente",
+                "mf >o !",
             )
             baca.piecewise.scp(
                 (),
@@ -1325,7 +1325,7 @@ def cb2(m):
         baca.flat_glissando(o.pleaves(), "E1")
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [2, 1, 1, 3]),
-            "o< f > p < ff >o niente",
+            "o< f > p < ff >o !",
         )
         baca.piecewise.scp(
             (),

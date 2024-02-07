@@ -508,10 +508,7 @@ number.17.BassFlute.Music = {
         cs''!32
 
         c''32
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-        - \tweak color #blue
-          %! EXPLICIT_DYNAMIC
+          %! SPANNER_STOP
         \!
         ]
         \revert Accidental.X-offset
@@ -1439,15 +1436,12 @@ number.17.Viola.Music = {
               %! HIDDEN
               %! NOTE
             c'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! BOW_SPEED_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanBowSpeed
@@ -1720,10 +1714,7 @@ number.17.Cello.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Cello.1.Music measure 3]
@@ -1872,13 +1863,10 @@ number.17.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
     R1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
 
 }
 
@@ -2133,10 +2121,7 @@ number.17.Cello.2.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Cello.2.Music measure 3]
@@ -2284,13 +2269,10 @@ number.17.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
     R1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
 
 }
 
@@ -2540,10 +2522,7 @@ number.17.Contrabass.1.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Contrabass.1.Music measure 3]
@@ -2672,13 +2651,10 @@ number.17.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
     R1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
 
 }
 
@@ -2941,10 +2917,7 @@ number.17.Contrabass.2.Music = {
     \revert NoteHead.style
 
     r4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
 
     % [Contrabass.2.Music measure 3]
@@ -3079,13 +3052,10 @@ number.17.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
     R1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
       %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(0 . 2)
 
