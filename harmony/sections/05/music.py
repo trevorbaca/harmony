@@ -615,7 +615,7 @@ def vc2(m):
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
             baca.spanners.hairpin(
                 u,
-                "mf >o niente",
+                "mf >o !",
             )
             baca.piecewise.scp(
                 (),
@@ -735,7 +735,7 @@ def cb2(m):
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
             baca.spanners.hairpin(
                 u,
-                "mf >o niente",
+                "mf >o !",
             )
             baca.piecewise.scp(
                 (),

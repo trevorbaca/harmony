@@ -752,7 +752,7 @@ def vc1(cache):
         leaves = baca.select.rleaves(o, count=2)
         baca.piecewise.hairpin(
             baca.select.mgroups(leaves, [1, 2]),
-            "o< f >o niente",
+            "o< f >o !",
         )
         baca.override.dls_staff_padding(o, 6)
         leaves = baca.select.rleak(baca.select.ltleaves(o))
@@ -820,7 +820,7 @@ def vc2(cache):
         baca.stem_tremolo(o.pleaves())
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 5),
@@ -872,7 +872,7 @@ def vc2(cache):
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.spanners.hairpin(
             o,
-            "mf >o niente",
+            "mf >o !",
         )
         baca.override.dls_staff_padding(o, 4),
         baca.piecewise.scp(
@@ -955,7 +955,7 @@ def cb1(cache):
         baca.accent(o.pheads())
         baca.spanners.hairpin(
             o.rleaves(),
-            "f >o niente",
+            "f >o !",
         )
         baca.override.dls_staff_padding(o, 4),
         leaves = baca.select.rleak(baca.select.ltleaves(o))
@@ -1021,7 +1021,7 @@ def cb2(cache):
         baca.stem_tremolo(o.pleaves())
         baca.spanners.hairpin(
             baca.select.tleaves(o),
-            "mf >o niente",
+            "mf >o !",
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 5)
@@ -1083,7 +1083,7 @@ def cb2(cache):
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.spanners.hairpin(
             o,
-            "mf >o niente",
+            "mf >o !",
         )
         baca.override.dls_staff_padding(o, 3),
         baca.piecewise.scp(
