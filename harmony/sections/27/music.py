@@ -405,7 +405,7 @@ def bfl(cache):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
-                "o< mp >o niente",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -417,7 +417,7 @@ def bfl(cache):
         baca.pitch(o, "Bb4")
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1 + 1]),
-            "pp < p >o niente",
+            "pp < p >o !",
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),
@@ -521,7 +521,7 @@ def perc2(m):
             run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
-                "f >o niente",
+                "f >o !",
             )
         baca.markup(
             o.pleaf(0),
@@ -883,7 +883,7 @@ def cb2(cache):
         baca.pitch(o, "A1")
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            "o< mp >o niente",
+            "o< mp >o !",
         )
         baca.markup(
             o.pleaf(0),
@@ -919,7 +919,7 @@ def composites(cache):
         with baca.scope(m[7]) as o:
             baca.piecewise.hairpin(
                 baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
-                "niente o< mp >o niente o< mp >o niente",
+                "niente o< mp >o niente o< mp >o !",
             )
         with baca.scope(m.get(4, 5)) as o:
             baca.dynamic(o.phead(0), "pp")
