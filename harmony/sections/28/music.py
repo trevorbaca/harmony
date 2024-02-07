@@ -462,7 +462,7 @@ def vc1(cache):
         baca.pitch(o, "C#6")
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
-            "niente o< pp >o ! o< pp >o ! o< p >o ! o< pp >o !"
+            "o< pp >o ! o< pp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< pp >o ! o< p >o !"
             " o< p >o ! o< mp >o ! o< mf >o ! o< mp >o !"
             " o< mp >o ! o< mf >o ! o< mf >o !"
@@ -526,7 +526,7 @@ def vc2(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
-            "niente o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
+            "o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
             " o< pp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< mp >o ! o< mp >o ! o< mf >o !"
             " o< mf >o ! o< mp >o ! o< mf >o !"
@@ -562,7 +562,7 @@ def cb1(cache):
             rrun = baca.select.rleak(run)
             baca.piecewise.hairpin(
                 baca.select.lparts(rrun, [1, 1 + 1]),
-                "niente o< mp >o !",
+                "o< mp >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -595,7 +595,7 @@ def cb1(cache):
         baca.pitch(o, "C#4", do_not_transpose=True)
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
-            "niente o< pp >o ! o< pp >o ! o< p >o ! o< p >o !"
+            "o< pp >o ! o< pp >o ! o< p >o ! o< p >o !"
             " o< pp >o ! o< pp >o ! o< p >o !"
             " o< mp >o ! o< mp >o ! o< p >o ! o< mp >o !"
             " o< mf >o ! o< mf >o ! o< f >o !"

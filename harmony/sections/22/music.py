@@ -344,10 +344,11 @@ def bfl(m):
         baca.pitch(o, "Gqs5")
         baca.piecewise.hairpin(
             baca.select.clparts(o.leaves(), [1]),
-            "niente o< mp >o",
+            "! o< mp >o",
+            # TODO: set to-barline ##t on final diminuendo:
             forbid_al_niente_to_bar_line=True,
         )
-        baca.dynamic(o.rleaf(-1), "niente")
+        baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -612,10 +613,11 @@ def vc1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.clparts(o.leaves(), [1]),
-            "niente o< mp >o",
+            "! o< mp >o",
+            # TODO: set to-barline ##t on final diminuendo:
             forbid_al_niente_to_bar_line=True,
         )
-        baca.dynamic(o.rleaf(-1), "niente")
+        baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
@@ -713,10 +715,11 @@ def cb1(m):
         baca.pitch(o, "Cqf5")
         baca.piecewise.hairpin(
             baca.select.clparts(o.leaves(), [1]),
-            "niente o< mp >o",
+            "! o< mp >o",
+            # TODO: set to-barline ##t on final diminuendo:
             forbid_al_niente_to_bar_line=True,
         )
-        baca.dynamic(o.rleaf(-1), "niente")
+        baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),

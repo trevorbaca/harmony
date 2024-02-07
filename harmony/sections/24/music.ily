@@ -424,11 +424,6 @@ number.24.BassFlute.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     f'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
     [
@@ -505,10 +500,7 @@ number.24.BassFlute.Music = {
     \repeatTie
 
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -516,11 +508,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     f'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -588,10 +575,7 @@ number.24.BassFlute.Music = {
     \repeatTie
 
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -600,11 +584,6 @@ number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 2]
     f'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -672,10 +651,7 @@ number.24.BassFlute.Music = {
     \repeatTie
 
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -683,11 +659,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     f'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -755,10 +726,7 @@ number.24.BassFlute.Music = {
     \repeatTie
 
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -767,11 +735,6 @@ number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 3]
     f'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -839,10 +802,7 @@ number.24.BassFlute.Music = {
     \repeatTie
 
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -850,11 +810,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     f'''8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -922,10 +877,7 @@ number.24.BassFlute.Music = {
     \repeatTie
 
     r8.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -939,11 +891,6 @@ number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 5]
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1003,10 +950,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1014,11 +958,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1076,10 +1015,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1087,11 +1023,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1152,10 +1083,7 @@ number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 6]
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1163,11 +1091,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1225,10 +1148,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1236,11 +1156,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1300,10 +1215,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1311,11 +1223,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1374,10 +1281,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1385,11 +1289,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1449,10 +1348,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1460,11 +1356,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1522,10 +1413,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1534,11 +1422,6 @@ number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 8]
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1598,10 +1481,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1609,11 +1489,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1671,10 +1546,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1682,11 +1554,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1747,10 +1614,7 @@ number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 9]
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1758,11 +1622,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1820,10 +1679,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1831,11 +1687,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1895,10 +1746,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -1906,11 +1754,6 @@ number.24.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1968,10 +1811,7 @@ number.24.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -2934,11 +2774,6 @@ number.24.Viola.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -3010,10 +2845,7 @@ number.24.Viola.Music = {
     \>
 
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3023,11 +2855,6 @@ number.24.Viola.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3071,10 +2898,7 @@ number.24.Viola.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3084,11 +2908,6 @@ number.24.Viola.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -3140,10 +2959,7 @@ number.24.Viola.Music = {
 
     % [Viola.Music measure 3]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3153,11 +2969,6 @@ number.24.Viola.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -3200,10 +3011,7 @@ number.24.Viola.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3658,11 +3466,6 @@ number.24.Cello.1.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -3721,10 +3524,7 @@ number.24.Cello.1.Music = {
     \repeatTie
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -3734,11 +3534,6 @@ number.24.Cello.1.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -3791,10 +3586,7 @@ number.24.Cello.1.Music = {
 
     % [Cello.1.Music measure 3]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -4202,11 +3994,6 @@ number.24.Cello.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -4278,10 +4065,7 @@ number.24.Cello.2.Music = {
     \>
 
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4291,11 +4075,6 @@ number.24.Cello.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4339,10 +4118,7 @@ number.24.Cello.2.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4352,11 +4128,6 @@ number.24.Cello.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -4408,10 +4179,7 @@ number.24.Cello.2.Music = {
 
     % [Cello.2.Music measure 3]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4421,11 +4189,6 @@ number.24.Cello.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     f'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4476,10 +4239,7 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4923,11 +4683,6 @@ number.24.Contrabass.1.Music = {
       %! SPANNER_START
     \pitchedTrill
     e'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -4986,10 +4741,7 @@ number.24.Contrabass.1.Music = {
     \repeatTie
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -4999,11 +4751,6 @@ number.24.Contrabass.1.Music = {
       %! SPANNER_START
     \pitchedTrill
     e'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -5056,10 +4803,7 @@ number.24.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 3]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP
@@ -5475,11 +5219,6 @@ number.24.Contrabass.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     e'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -5551,10 +5290,7 @@ number.24.Contrabass.2.Music = {
     \>
 
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5564,11 +5300,6 @@ number.24.Contrabass.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     e'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5612,10 +5343,7 @@ number.24.Contrabass.2.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5625,11 +5353,6 @@ number.24.Contrabass.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     e'4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -5681,10 +5404,7 @@ number.24.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 3]
     r2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5694,11 +5414,6 @@ number.24.Contrabass.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     e'8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5749,10 +5464,7 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTrillSpan

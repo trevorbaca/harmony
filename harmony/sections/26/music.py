@@ -376,8 +376,7 @@ def bfl(m):
             leaves = baca.select.rleak(run)
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 1 + 1]),
-                "niente o< p >o",
-                forbid_al_niente_to_bar_line=True,
+                "o< p >o !",
             )
             baca.rspanners.trill(
                 baca.select.tleaves(run),
