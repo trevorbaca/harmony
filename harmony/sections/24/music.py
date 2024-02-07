@@ -201,7 +201,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 2 + 1]),
-                "niente o< mf >o",
+                "o< mf >o !",
             )
             baca.rspanners.trill(
                 run,
@@ -218,7 +218,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
-                "niente o< p >o",
+                "o< p >o !",
                 forbid_al_niente_to_bar_line=True,
             )
             baca.rspanners.trill(
@@ -419,7 +419,7 @@ def vc1(m):
             baca.pitch(run, "F4")
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
-                "niente o<| mp |>o",
+                "o<| mp |>o !",
             )
             baca.rspanners.trill(
                 run,
@@ -513,7 +513,7 @@ def cb1(m):
             baca.pitch(run, "E4", do_not_transpose=True)
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
-                "niente o<| mp |>o",
+                "o<| mp |>o !",
             )
             baca.rspanners.trill(
                 run,
@@ -600,7 +600,7 @@ def composites(cache):
                 run = baca.select.rleak(run)
                 baca.piecewise.hairpin(
                     baca.select.lparts(run, [1, 1 + 1]),
-                    "niente o<| mp |>o",
+                    "o<| mp |>o !",
                 )
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]

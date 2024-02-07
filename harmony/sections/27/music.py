@@ -349,7 +349,7 @@ def bfl(cache):
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
                 baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
-                "niente o< p >o",
+                "o< p >o !",
                 forbid_al_niente_to_bar_line=True,
             )
             baca.rspanners.trill(
@@ -676,7 +676,7 @@ def vc1(cache):
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
             baca.select.plts(o),
-            "pp -- ! < mp >",
+            "pp -- ! < mp >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         baca.untie(o.leaves())
@@ -731,7 +731,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 2, 3, 2]),
-            "pp -- ! < mp -- ! >",
+            "pp -- ! < mp -- ! >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
         )
@@ -788,7 +788,7 @@ def cb1(cache):
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 3, 2]),
-            "pp -- ! < mp >",
+            "pp -- ! < mp >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
         )
@@ -863,7 +863,7 @@ def cb2(cache):
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
-            "pp -- ! < mp >",
+            "pp -- ! < mp >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         baca.untie(o.leaves())
@@ -919,7 +919,7 @@ def composites(cache):
         with baca.scope(m[7]) as o:
             baca.piecewise.hairpin(
                 baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
-                "niente o< mp >o niente o< mp >o !",
+                "o< mp >o niente o< mp >o !",
             )
         with baca.scope(m.get(4, 5)) as o:
             baca.dynamic(o.phead(0), "pp")

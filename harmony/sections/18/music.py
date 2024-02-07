@@ -741,7 +741,7 @@ def hp(m):
             leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
                 baca.select.lparts(leaves, [1, 2 + 1]),
-                'o< "mf" >o niente',
+                'o< "mf" >o !',
             )
     with baca.scope(m.get(9, 11)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -1070,7 +1070,7 @@ def cb2(cache):
         baca.stem_tremolo(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
-            "o<| mp |>o niente o<| mp |>o",
+            "o<| mp |>o ! o<| mp |>o",
             forbid_al_niente_to_bar_line=True,
         )
         baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
@@ -1231,10 +1231,11 @@ def composites(cache):
         with baca.scope(m.get(9, 11)) as o:
             baca.piecewise.hairpin(
                 baca.select.clparts(o.tleaves(), [1]),
-                "niente o< p >o",
+                "! o< p >o",
+                # TODO: set to-barline ##t on final diminuendo:
                 forbid_al_niente_to_bar_line=True,
             )
-            baca.dynamic(o.rleaf(-1), "niente")
+            baca.spanners.hairpin(o.rleaf(-1), "!")
     for name in ["va", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:

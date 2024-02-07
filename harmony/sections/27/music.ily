@@ -697,11 +697,6 @@ number.27.BassFlute.Music = {
     r8
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -759,10 +754,7 @@ number.27.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -770,11 +762,6 @@ number.27.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     [
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -834,10 +821,7 @@ number.27.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -845,11 +829,6 @@ number.27.BassFlute.Music = {
     \stopTrillSpan
 
     fs'''!8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -907,10 +886,7 @@ number.27.BassFlute.Music = {
     \>
 
     r8
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -2729,6 +2705,9 @@ number.27.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2746,11 +2725,6 @@ number.27.Cello.1.Music = {
       %! SPANNER_START
     \pitchedTrill
     cs'''!4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak staff-padding 1.5
     _ \baca-string-i-markup
       %! DURATION_MULTIPLIER
@@ -3243,6 +3217,9 @@ number.27.Cello.2.Music = {
       %! SPANNER_STOP
     \!
     ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3264,11 +3241,6 @@ number.27.Cello.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     a''4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak staff-padding 1.5
     _ \baca-string-i-markup
       %! DURATION_MULTIPLIER
@@ -3772,6 +3744,9 @@ number.27.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3791,11 +3766,6 @@ number.27.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 7]
     \override NoteHead.style = #'harmonic
     cs'!4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak staff-padding 1.5
     _ \baca-string-iii-markup
       %! DURATION_MULTIPLIER
@@ -4302,6 +4272,9 @@ number.27.Contrabass.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mp
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START

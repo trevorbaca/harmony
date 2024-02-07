@@ -2862,11 +2862,6 @@ number.28.Cello.1.Music = {
       %! SPANNER_START
     \pitchedTrill
     cs'''!4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak padding 1
     _ \baca-string-i-markup
       %! DURATION_MULTIPLIER
@@ -4265,11 +4260,6 @@ number.28.Cello.2.Music = {
       %! SPANNER_START
     \pitchedTrill
     a''4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak padding 1
     _ \baca-string-i-markup
       %! DURATION_MULTIPLIER
@@ -5460,11 +5450,6 @@ number.28.Contrabass.1.Music = {
       %! REAPPLIED_STAFF_LINES
     \startStaff
     cs'!4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak padding 1
     _ \baca-string-iii-markup
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -5520,11 +5505,6 @@ number.28.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 3]
     cs'!4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5699,11 +5679,6 @@ number.28.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
     \startStaff
     cs'!4 * 1/2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
     - \tweak padding 1
     _ \baca-string-iii-markup
       %! DURATION_MULTIPLIER
