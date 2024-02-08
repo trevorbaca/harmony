@@ -877,7 +877,7 @@ def cb1(m):
     with baca.scope(m.get(12, 15)) as o:
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [1, 1, 3]),
-            "(pp) >o niente o< mf >o !",
+            "(pp) >o ! o< mf >o !",
         )
     with baca.scope(m.get(13, 15)) as o:
         baca.interpolate_pitches(o, "F#2", "D2")

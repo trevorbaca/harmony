@@ -919,7 +919,7 @@ def composites(cache):
         with baca.scope(m[7]) as o:
             baca.piecewise.hairpin(
                 baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
-                "o< mp >o niente o< mp >o !",
+                "o< mp >o ! o< mp >o !",
             )
         with baca.scope(m.get(4, 5)) as o:
             baca.dynamic(o.phead(0), "pp")

@@ -460,7 +460,7 @@ def hp(m):
         baca.glissando(o.tleaves())
         baca.spanners.hairpin(
             o.rleaves(),
-            '"f" >o niente',
+            '"f" >o !',
         )
         baca.markup(
             o.pleaf(0),
@@ -786,7 +786,7 @@ def strings(cache):
         with baca.scope(m[5]) as o:
             baca.spanners.hairpin(
                 o.rleaves(),
-                '"f" >o niente',
+                '"f" >o !',
             )
         with baca.scope(m.get(4, 5)) as o:
             pheads = baca.select.pheads(o)

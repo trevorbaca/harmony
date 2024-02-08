@@ -275,7 +275,7 @@ def bfl(cache):
         )
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            'o< "f" >o niente',
+            'o< "f" >o !',
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
