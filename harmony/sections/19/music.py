@@ -869,9 +869,9 @@ def va(cache):
         baca.stem_tremolo(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
-            "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
+            "o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
+            with_next_leaf=True,
         )
-        baca.dynamic(baca.select.rleak(o.leaves()[-1:])[-1], "niente")
     for item in [(1, 2), (4, 9), 12]:
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "<G#5 A5 Bb5>")
@@ -989,7 +989,7 @@ def cb2(cache):
         leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
-            "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o !",
+            "o<| mp |>o ! o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
             forbid_al_niente_to_bar_line=True,
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix

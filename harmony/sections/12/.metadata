@@ -40,16 +40,6 @@
     "first_measure_number": 99,
     "has_anchor_skip": True,
     "persistent_indicators": {
-        "BassFlute.Music": [
-            baca.Memento(
-                context="BassFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="niente",
-            )
-        ],
         "BassFlute.Staff": [
             baca.Memento(
                 context="BassFlute.Music",

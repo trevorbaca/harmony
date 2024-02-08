@@ -4353,10 +4353,7 @@ number.10.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 13]
     fs!1.
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SCP_SPANNER
       %! SPANNER_STOP

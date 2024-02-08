@@ -610,7 +610,7 @@ def cb2(m):
         baca.pitch(o, "Ab1")
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 2]),
-            'o< "mf" >o niente',
+            'o< "mf" >o !',
         )
         baca.piecewise.scp(
             (),

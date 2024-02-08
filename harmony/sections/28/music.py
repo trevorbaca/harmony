@@ -469,10 +469,10 @@ def vc1(cache):
             " o< mf >o ! o< f >o ! o< f >o ! o< mf >o !"
             " o< f >o ! o< mf >o ! o< mf >o !"
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
-            " o< p >o ! o< pp >o ! o< pp >o",
+            " o< p >o ! o< pp >o ! o< pp >o !",
             forbid_al_niente_to_bar_line=True,
+            with_next_leaf=True,
         )
-        baca.dynamic(o.rleaf(-1), "niente")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -533,10 +533,10 @@ def vc2(cache):
             " o< mp >o ! o< mf >o ! o< f >o ! o< f >o !"
             " o< mf >o ! o< f >o ! o< mf >o !"
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
-            " o< pp >o ! o< p >o ! o< pp >o",
+            " o< pp >o ! o< p >o ! o< pp >o !",
             forbid_al_niente_to_bar_line=True,
+            with_next_leaf=True,
         )
-        baca.dynamic(o.rleaf(-1), "niente")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -602,10 +602,10 @@ def cb1(cache):
             " o< f >o ! o< f >o ! o< mf >o ! o< f >o !"
             " o< f >o ! o< mf >o ! o< mf >o !"
             " o< mp >o ! o< mp >o ! o< p >o ! o< pp >o !"
-            " o< p >o ! o< p >o ! o< pp >o",
+            " o< p >o ! o< p >o ! o< pp >o !",
             forbid_al_niente_to_bar_line=True,
+            with_next_leaf=True,
         )
-        baca.dynamic(o.rleaf(-1), "niente")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),

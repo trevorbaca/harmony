@@ -802,10 +802,7 @@ number.11.BassFlute.Music = {
 
     % [BassFlute.Music measure 8]
     dtqf'''!4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
@@ -891,15 +888,12 @@ number.11.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTextSpan
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
@@ -2250,13 +2244,10 @@ number.11.Harp.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     c'4 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! SPANNER_STOP
+    \!
     \revert Stem.direction
 
     r8

@@ -585,9 +585,7 @@ def bfl(cache):
         baca.pitch(o.leaves()[-2:], "B4")
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]),
-            'o< "f" >o niente o< p >o niente'
-            ' o< "f" >o niente o< p >o niente'
-            ' o< "f" >o niente o< f >o niente',
+            'o< "f" >o ! o< p >o !' ' o< "f" >o ! o< p >o !' ' o< "f" >o ! o< f >o !',
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o, 4)

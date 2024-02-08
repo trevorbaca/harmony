@@ -728,7 +728,7 @@ def hp(m):
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
-                'o< "f" >o niente',
+                'o< "f" >o !',
             )
         baca.markup(
             o.pleaf(0),
@@ -763,7 +763,7 @@ def hp(m):
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
-                'o< "f" >o niente',
+                'o< "f" >o !',
             )
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:

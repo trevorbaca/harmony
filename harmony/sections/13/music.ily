@@ -707,15 +707,12 @@ number.13.BassFlute.Music = {
               %! HIDDEN
               %! NOTE
             b'1 * 1/4
-              %! EXPLICIT_DYNAMIC_COLOR
-              %! EXPLICIT_DYNAMIC
-            - \tweak color #blue
-              %! EXPLICIT_DYNAMIC
-            \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
               %! SPANNER_STOP
             \stopTextSpan
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT

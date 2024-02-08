@@ -477,7 +477,7 @@ def bfl(cache):
         baca.pitch(o, "Dtqf5")
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1, 2, 3]),
-            'o< "f" >o niente o< "f" >o niente',
+            'o< "f" >o ! o< "f" >o !',
         )
         baca.markup(
             o.pleaf(0),
@@ -725,7 +725,7 @@ def hp(cache):
         library.whisk_staff_position(o)
         baca.piecewise.hairpin(
             baca.select.lparts(o.run(0), [1, 3]),
-            'o< "f" >o niente',
+            'o< "f" >o !',
         )
         baca.override.dls_staff_padding(o, 6)
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)

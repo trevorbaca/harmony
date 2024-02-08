@@ -3991,18 +3991,14 @@ number.28.Cello.1.Music = {
       %! HIDDEN
       %! NOTE
     b'1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \stopTrillSpan
@@ -5389,18 +5385,14 @@ number.28.Cello.2.Music = {
       %! HIDDEN
       %! NOTE
     b'1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \stopTrillSpan
@@ -6806,18 +6798,14 @@ number.28.Contrabass.1.Music = {
       %! HIDDEN
       %! NOTE
     b'1 * 1/4
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! ANCHOR_NOTE
-      %! EXPLICIT_DYNAMIC
-    \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SPANNER_STOP
+    \!
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \stopTrillSpan
