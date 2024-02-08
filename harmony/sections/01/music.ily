@@ -2014,15 +2014,6 @@ number.1.Contrabass.1.Music = {
     - \baca-text-spanner-left-text "P4"
       %! SCP_SPANNER
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P1"
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.stencil-align-dir-y #center
-      %! SCP_SPANNER
-      %! SPANNER_START
     - \tweak staff-padding 3
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2042,11 +2033,26 @@ number.1.Contrabass.1.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
     ]
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-invisible-line
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
     a,4
     :32
+      %! SCP_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
 
