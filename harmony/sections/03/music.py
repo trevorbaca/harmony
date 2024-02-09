@@ -483,7 +483,7 @@ def va(m):
         baca.override.dls_staff_padding(o, 4),
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
