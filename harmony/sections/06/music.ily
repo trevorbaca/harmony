@@ -4166,19 +4166,15 @@ number.6.Cello.1.Music = {
       %! RIGHT_BROKEN
     \f
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "scr."
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC
@@ -4846,19 +4842,15 @@ number.6.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "scr."
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC

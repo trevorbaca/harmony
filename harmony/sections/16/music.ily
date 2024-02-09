@@ -1430,19 +1430,15 @@ number.16.Viola.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "poco scr."
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
     \glissando
