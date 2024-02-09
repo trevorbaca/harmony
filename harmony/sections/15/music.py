@@ -467,10 +467,9 @@ def va(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.piecewise.bow_speed(
-                (),
+                [run],
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
             )
 
 

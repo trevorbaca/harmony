@@ -605,10 +605,9 @@ def va(m):
                 with_next_leaf=True,
             )
             baca.piecewise.bow_speed(
-                (),
+                [baca.select.rleak(baca.select.ltleaves(o))],
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.rleak(baca.select.ltleaves(o))],
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.untie(o.pleaves())
@@ -992,10 +991,9 @@ def composites(cache):
                         staff_padding=8,
                     )
                     baca.piecewise.bow_speed(
-                        (),
+                        [baca.select.rleak(u)],
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                        pieces=[baca.select.rleak(u)],
                     )
                 elif name == "cb1":
                     baca.rspanners.metric_modulation(
@@ -1004,10 +1002,9 @@ def composites(cache):
                         staff_padding=10.5,
                     )
                     baca.piecewise.bow_speed(
-                        (),
+                        [baca.select.rleak(u)],
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 8"),
-                        pieces=[baca.select.rleak(u)],
                     )
             baca.spanners.hairpin(
                 o.leaves()[:2],

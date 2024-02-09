@@ -472,11 +472,10 @@ def va(cache):
         baca.pitch(o, "D4")
         baca.flat_glissando(o, hide_middle_stems=True, left_broken=True)
         baca.piecewise.bow_speed(
-            (),
+            [baca.select.rleak(baca.select.ltleaves(o))],
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F4")
@@ -484,10 +483,9 @@ def va(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.piecewise.bow_speed(
-                (),
+                [run],
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D4")
@@ -496,10 +494,9 @@ def va(cache):
             "pp >o !",
         )
         baca.piecewise.bow_speed(
-            (),
+            [baca.select.rleak(baca.select.ltleaves(o))],
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
 
 
