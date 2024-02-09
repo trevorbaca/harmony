@@ -2406,10 +2406,6 @@ number.7.Cello.1.Music = {
       %! BOW_SPEED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak bound-details.right.padding -1.5
-      %! BOW_SPEED_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
     - \tweak staff-padding 3.5
       %! BOW_SPEED_SPANNER
       %! LEFT_BROKEN
@@ -2450,9 +2446,6 @@ number.7.Cello.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! SPANNER_STOP
     \!
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_STOP
-    \bacaStopTextSpanBowSpeed
 
     % [Cello.1.Music measure 2]
     <c'' df''! ef''!>2.
@@ -2464,6 +2457,9 @@ number.7.Cello.1.Music = {
     \p
     - \tweak padding 1.5
     ^ \baca-quasi-bisb-markup
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
 
     % [Cello.1.Music measure 3]
     \stopStaff
@@ -2547,14 +2543,6 @@ number.7.Cello.1.Music = {
     r16
       %! SPANNER_STOP
     \stopTextSpan
-
-    e'16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \f
-    [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -2567,20 +2555,28 @@ number.7.Cello.1.Music = {
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
+
+    e'16
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+    \f
+    [
     ~
 
     e'16
     ]
 
     r16
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_STOP
-    \bacaStopTextSpanBowSpeed
 
     r1
 
     % [Cello.1.Music measure 7]
     r4
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_STOP
+    \bacaStopTextSpanBowSpeed
 
     b'2
       %! EXPLICIT_DYNAMIC

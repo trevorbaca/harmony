@@ -782,7 +782,7 @@ def va(cache):
         baca.pitch(o, "D4"),
         baca.dynamic(o.phead(0), "pp")
         baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
+            baca.select.rleak(o),
             "poco scr. =|",
             staff_padding=3,
         )

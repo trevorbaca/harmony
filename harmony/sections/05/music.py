@@ -483,7 +483,7 @@ def va(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -510,7 +510,7 @@ def va(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(baca.select.ltleaves(run))],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -531,7 +531,7 @@ def vc1(m):
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -594,7 +594,7 @@ def vc2(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
