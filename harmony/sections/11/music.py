@@ -767,9 +767,8 @@ def va(m):
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:

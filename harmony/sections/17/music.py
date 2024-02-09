@@ -481,10 +481,8 @@ def va(cache):
         baca.pitch(o, "F4")
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.piecewise.bow_speed(
-                [run],
-                "XFB =|",
+            baca.rspanners.xfb(
+                run,
                 staff_padding=3,
             )
     with baca.scope(m[5]) as o:

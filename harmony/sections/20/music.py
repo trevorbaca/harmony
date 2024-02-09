@@ -390,10 +390,8 @@ def va(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.piecewise.bow_speed(
-                [run],
-                "XFB =|",
+            baca.rspanners.xfb(
+                run,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:

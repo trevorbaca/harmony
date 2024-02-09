@@ -483,10 +483,8 @@ def va(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.piecewise.bow_speed(
-                [run],
-                "XFB =|",
+            baca.rspanners.xfb(
+                run,
                 staff_padding=3,
             )
     with baca.scope(m[5]) as o:
@@ -520,9 +518,8 @@ def vc1(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=5.5,
         )
     for n in [2, 5]:
@@ -546,9 +543,8 @@ def vc2(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=3,
         )
     for n in [2, 5]:
@@ -574,9 +570,8 @@ def cb1(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=5.5,
         )
     for n in [2, 5]:
@@ -613,9 +608,8 @@ def cb2(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=3,
         )
     for n in [2, 5]:
