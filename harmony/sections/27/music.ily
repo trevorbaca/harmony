@@ -2041,6 +2041,9 @@ number.27.Viola.Music = {
     - \baca-text-spanner-left-text "XFB"
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
     - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -2212,6 +2215,9 @@ number.27.Viola.Music = {
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 5

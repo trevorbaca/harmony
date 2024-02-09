@@ -465,10 +465,8 @@ def va(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         for run in baca.select.runs(o):
-            run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.piecewise.bow_speed(
-                [run],
-                "XFB =|",
+            baca.rspanners.xfb(
+                run,
                 staff_padding=3,
             )
 

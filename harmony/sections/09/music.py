@@ -257,9 +257,8 @@ def va(m):
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -345,20 +344,18 @@ def composites(cache):
             )
             with baca.scope(o.leaves()[-2:]) as u:
                 if name in ("va", "vc1", "vc2"):
-                    baca.piecewise.bow_speed(
-                        [baca.select.rleak(u)],
-                        "XFB =|",
+                    baca.rspanners.xfb(
+                        u,
                         staff_padding=5.5,
-                    ),
+                    )
                     baca.rspanners.metric_modulation(
                         u,
                         right_broken=True,
                         staff_padding=8,
                     )
                 elif name == "cb1":
-                    baca.piecewise.bow_speed(
-                        [baca.select.rleak(u)],
-                        "XFB =|",
+                    baca.rspanners.xfb(
+                        u,
                         staff_padding=8,
                     )
                     baca.rspanners.metric_modulation(

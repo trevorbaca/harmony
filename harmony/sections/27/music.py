@@ -602,9 +602,8 @@ def va(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Ab4")
         baca.dynamic(o.phead(0), "mp")
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(o.ltleaves())],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -622,9 +621,8 @@ def va(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o.plts()[:-1], "Ab4")
         baca.dynamic(o.phead(0), "p")
-        baca.piecewise.bow_speed(
-            [o.leaves()],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.plt(0),
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             staff_padding=3,
         )

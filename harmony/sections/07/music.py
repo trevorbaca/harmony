@@ -706,9 +706,8 @@ def va(cache):
             "mf >o !",
             with_next_leaf=True,
         )
-        baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
-            "XFB =|",
+        baca.rspanners.xfb(
+            o.pleaves(),
             staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:

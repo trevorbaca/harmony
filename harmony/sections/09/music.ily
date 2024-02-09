@@ -781,6 +781,9 @@ number.9.Viola.Music = {
     - \baca-text-spanner-left-text "XFB"
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
+    - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
     - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -847,6 +850,9 @@ number.9.Viola.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -1027,6 +1033,9 @@ number.9.Cello.1.Music = {
         - \baca-text-spanner-left-text "XFB"
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
         - \tweak staff-padding 5.5
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
@@ -1205,6 +1214,9 @@ number.9.Cello.2.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -1392,6 +1404,9 @@ number.9.Contrabass.1.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8

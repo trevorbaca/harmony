@@ -604,9 +604,8 @@ def va(m):
                 "mf >o !",
                 with_next_leaf=True,
             )
-            baca.piecewise.bow_speed(
-                [baca.select.rleak(baca.select.ltleaves(o))],
-                "XFB =|",
+            baca.rspanners.xfb(
+                o.pleaves(),
                 staff_padding=3,
             )
     with baca.scope(m.get(10, 15)) as o:
@@ -990,9 +989,8 @@ def composites(cache):
                         left_broken=True,
                         staff_padding=8,
                     )
-                    baca.piecewise.bow_speed(
-                        [baca.select.rleak(u)],
-                        "XFB =|",
+                    baca.rspanners.xfb(
+                        u,
                         staff_padding=5.5,
                     )
                 elif name == "cb1":
@@ -1001,9 +999,8 @@ def composites(cache):
                         left_broken=True,
                         staff_padding=10.5,
                     )
-                    baca.piecewise.bow_speed(
-                        [baca.select.rleak(u)],
-                        "XFB =|",
+                    baca.rspanners.xfb(
+                        u,
                         staff_padding=8,
                     )
             baca.spanners.hairpin(
