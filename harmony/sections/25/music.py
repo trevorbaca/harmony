@@ -468,7 +468,7 @@ def va(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")

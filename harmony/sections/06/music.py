@@ -853,7 +853,7 @@ def va(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.tleaves())],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
         baca.rspanners.metric_modulation(
             o.leaves()[:2],
@@ -892,7 +892,7 @@ def va(cache):
             baca.piecewise.bow_speed(
                 [u],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
         baca.dynamic(o.phead(-1), "f")
     with baca.scope(m[5]) as o:
@@ -927,7 +927,7 @@ def va(cache):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -950,12 +950,12 @@ def va(cache):
             baca.piecewise.bow_speed(
                 [run],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.runs()[-1:])],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     for item in [1, (6, 15)]:
         with baca.scope(m.get(item)) as o:
@@ -973,7 +973,7 @@ def vc1(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.tleaves())],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         for run in abjad.select.runs(o, grace=True):
@@ -1007,7 +1007,7 @@ def vc1(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.runs()[-1:])],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         for run in abjad.select.runs(o, grace=True):
@@ -1041,7 +1041,7 @@ def vc1(cache):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -1061,13 +1061,13 @@ def vc1(cache):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.runs()[-1:])],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
+            staff_padding=3,
         )
         baca.dynamic(
             o.phead(0),
@@ -1092,7 +1092,7 @@ def vc2(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.tleaves())],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1104,7 +1104,7 @@ def vc2(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.runs()[-1:])],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(o.runs()[:1]) as u:
@@ -1128,7 +1128,7 @@ def vc2(m):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1157,13 +1157,13 @@ def vc2(m):
             baca.piecewise.bow_speed(
                 [run],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
         baca.piecewise.bow_speed(
             [baca.select.rleak(o.runs()[-1:])],
             "scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
+            staff_padding=3,
         )
         baca.dynamic(
             o.phead(0),

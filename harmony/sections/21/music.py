@@ -487,7 +487,7 @@ def va(m):
             baca.piecewise.bow_speed(
                 [run],
                 "XFB =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[5]) as o:
         baca.accent(o.pheads())
@@ -523,7 +523,7 @@ def vc1(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            staff_padding=5.5,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -541,7 +541,7 @@ def vc2(m):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(baca.select.ltleaves(o))],
                 "poco scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
@@ -549,7 +549,7 @@ def vc2(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -577,7 +577,7 @@ def cb1(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            staff_padding=5.5,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -616,7 +616,7 @@ def cb2(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:

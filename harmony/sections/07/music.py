@@ -709,7 +709,7 @@ def va(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
@@ -729,7 +729,7 @@ def vc1(cache):
             [o.leaves()],
             "scr. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -1.5"),
-            abjad.Tweak(r"- \tweak staff-padding 3.5"),
+            staff_padding=3.5,
             left_broken=True,
         )
     with baca.scope(m[2]) as o:
@@ -772,7 +772,7 @@ def vc1(cache):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(baca.select.tleaves(o))],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "B4")
@@ -829,7 +829,7 @@ def vc2(cache):
             baca.piecewise.bow_speed(
                 [run],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "Dqs4")
