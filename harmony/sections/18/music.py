@@ -784,7 +784,7 @@ def va(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "poco scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "alto")

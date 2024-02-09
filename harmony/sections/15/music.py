@@ -469,7 +469,7 @@ def va(m):
             baca.piecewise.bow_speed(
                 [run],
                 "XFB =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
 
 

@@ -474,8 +474,8 @@ def va(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "poco scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
+            staff_padding=3,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F4")
@@ -485,7 +485,7 @@ def va(cache):
             baca.piecewise.bow_speed(
                 [run],
                 "XFB =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D4")
@@ -496,7 +496,7 @@ def va(cache):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "poco scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
 
 

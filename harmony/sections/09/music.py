@@ -260,7 +260,7 @@ def va(m):
         baca.piecewise.bow_speed(
             [baca.select.rleak(baca.select.ltleaves(o))],
             "XFB =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "C4")
@@ -348,7 +348,7 @@ def composites(cache):
                     baca.piecewise.bow_speed(
                         [baca.select.rleak(u)],
                         "XFB =|",
-                        abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                        staff_padding=5.5,
                     ),
                     baca.rspanners.metric_modulation(
                         u,
@@ -359,7 +359,7 @@ def composites(cache):
                     baca.piecewise.bow_speed(
                         [baca.select.rleak(u)],
                         "XFB =|",
-                        abjad.Tweak(r"- \tweak staff-padding 8"),
+                        staff_padding=8,
                     )
                     baca.rspanners.metric_modulation(
                         u,

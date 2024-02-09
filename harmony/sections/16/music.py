@@ -380,7 +380,7 @@ def va(m):
             baca.piecewise.bow_speed(
                 [run],
                 "XFB =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "D4"),
@@ -393,8 +393,8 @@ def va(m):
         baca.piecewise.bow_speed(
             [o.rleaves()],
             "poco scr. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
+            staff_padding=3,
         )
 
 

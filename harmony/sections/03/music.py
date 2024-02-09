@@ -485,7 +485,7 @@ def va(m):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -532,7 +532,7 @@ def vc1(m):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m.get(1, 4)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -624,7 +624,7 @@ def vc2(m):
             baca.piecewise.bow_speed(
                 [baca.select.rleak(run)],
                 "scr. =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")

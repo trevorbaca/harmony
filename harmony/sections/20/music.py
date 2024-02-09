@@ -394,7 +394,7 @@ def va(m):
             baca.piecewise.bow_speed(
                 [run],
                 "XFB =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
             )
     with baca.scope(m[2]) as o:
         baca.override.tuplet_bracket_up(o)
