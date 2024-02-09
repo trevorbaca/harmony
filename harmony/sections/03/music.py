@@ -483,10 +483,9 @@ def va(m):
         baca.override.dls_staff_padding(o, 4),
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                (),
+                [baca.select.rleak(run)],
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -531,10 +530,9 @@ def vc1(m):
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                (),
+                [baca.select.rleak(run)],
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m.get(1, 4)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -624,10 +622,9 @@ def vc2(m):
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                (),
+                [baca.select.rleak(run)],
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[baca.select.rleak(run)],
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")

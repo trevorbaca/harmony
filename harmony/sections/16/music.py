@@ -378,10 +378,9 @@ def va(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.ltleaves(run))
             baca.piecewise.bow_speed(
-                (),
+                [run],
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                pieces=[run],
             )
     with baca.scope(m.get(9, 10)) as o:
         baca.pitch(o, "D4"),
@@ -392,10 +391,9 @@ def va(m):
         )
         baca.dynamic(o.phead(0), "pp")
         baca.piecewise.bow_speed(
-            (),
+            [o.rleaves()],
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=[o.rleaves()],
             right_broken=True,
         )
 
