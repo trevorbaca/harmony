@@ -535,7 +535,7 @@ def vc2(m):
             baca.clef(o.leaf(0), "bass")
             baca.pitch(o, "Dqf3")
             baca.dynamic(o.phead(0), "p")
-            baca.piecewise.bow_speed(
+            baca.mspanners.bow_speed(
                 baca.select.rleak(o),
                 "poco scr. =|",
                 staff_padding=3,

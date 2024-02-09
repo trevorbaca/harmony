@@ -643,7 +643,7 @@ def va(cache):
             right_broken=True,
         )
         baca.dynamic(o.phead(0), "p")
-        baca.piecewise.bow_speed(
+        baca.mspanners.bow_speed(
             baca.select.rleak(o),
             "poco scr. =|",
             staff_padding=3,
@@ -699,7 +699,7 @@ def vc1(cache):
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
-        baca.piecewise.bow_speed(
+        baca.mspanners.bow_speed(
             baca.select.rleak(o),
             "poco scr. =|",
             staff_padding=3,
@@ -813,7 +813,7 @@ def cb1(cache):
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.dynamic(o.phead(0), "p")
-        baca.piecewise.bow_speed(
+        baca.mspanners.bow_speed(
             baca.select.rleak(o),
             "poco scr. =|",
             staff_padding=3,
