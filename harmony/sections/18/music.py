@@ -1314,7 +1314,6 @@ def persist_score(score, environment):
         score,
         *baca.tags.instrument_color_tags(),
         *baca.tags.short_instrument_name_color_tags(),
-        baca.tags.RHYTHM_ANNOTATION_SPANNER,
     )
     baca.tags.activate(
         score,
