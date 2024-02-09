@@ -395,7 +395,7 @@ def va(cache):
             left_broken=True,
         )
         baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
+            baca.select.rleak(o),
             "poc. scr. =|",
             left_broken=True,
             staff_padding=3,
@@ -416,7 +416,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.piecewise.bow_speed(
-            [baca.select.rleak(baca.select.ltleaves(o))],
+            baca.select.rleak(o),
             "poco scr. =|",
             staff_padding=3,
         )

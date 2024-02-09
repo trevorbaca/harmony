@@ -851,7 +851,7 @@ def va(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.tleaves())],
+            baca.select.rleak(o.pleaves()),
             "scr. =|",
             staff_padding=3,
         )
@@ -890,7 +890,7 @@ def va(cache):
         with baca.scope(baca.select.rleak(baca.select.runs(o)[-1:])) as u:
             baca.pitch(u, "Eb3")
             baca.piecewise.bow_speed(
-                [u],
+                u,
                 "scr. =|",
                 staff_padding=3,
             )
@@ -925,7 +925,7 @@ def va(cache):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -946,14 +946,13 @@ def va(cache):
             "f >o !",
         )
         for run in baca.select.runs(o)[:-1]:
-            run = baca.select.rleak(run)
             baca.piecewise.bow_speed(
-                [run],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.runs()[-1:])],
+            baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             staff_padding=3,
         )
@@ -971,7 +970,7 @@ def vc1(cache):
         baca.clef(o.leaf(0), "treble")
         baca.dynamic(o.phead(0), "f")
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.tleaves())],
+            baca.select.rleak(o.pleaves()),
             "scr. =|",
             staff_padding=3,
         )
@@ -1005,7 +1004,7 @@ def vc1(cache):
         baca.pitch(o.plt(-1), "E4")
         baca.dynamic(o.phead(-1), "f")
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.runs()[-1:])],
+            baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             staff_padding=3,
         )
@@ -1039,7 +1038,7 @@ def vc1(cache):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -1059,12 +1058,12 @@ def vc1(cache):
     with baca.scope(m.get(10, 15)) as o:
         for run in baca.select.runs(o)[:-1]:
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.runs()[-1:])],
+            baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             right_broken=True,
             staff_padding=3,
@@ -1090,7 +1089,7 @@ def vc2(m):
         baca.clef(o.leaf(0), "treble")
         baca.dynamic(o.phead(0), "f")
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.tleaves())],
+            baca.select.rleak(o.pleaves()),
             "scr. =|",
             staff_padding=3,
         )
@@ -1102,7 +1101,7 @@ def vc2(m):
         baca.pitch(o.plt(-1), "Eqf4")
         baca.dynamic(o.phead(-1), "f")
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.runs()[-1:])],
+            baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             staff_padding=3,
         )
@@ -1126,7 +1125,7 @@ def vc2(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(run)],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -1153,14 +1152,13 @@ def vc2(m):
     with baca.scope(m.get(10, 15)) as o:
         baca.clef(o.leaf(0), "treble")
         for run in baca.select.runs(o)[:-1]:
-            run = baca.select.rleak(run)
             baca.piecewise.bow_speed(
-                [run],
+                baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
             )
         baca.piecewise.bow_speed(
-            [baca.select.rleak(o.runs()[-1:])],
+            baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             right_broken=True,
             staff_padding=3,

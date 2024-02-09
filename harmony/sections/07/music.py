@@ -725,9 +725,8 @@ def vc1(cache):
             left_broken=True,
         )
         baca.piecewise.bow_speed(
-            [o.leaves()],
+            baca.select.rleak(o),
             "scr. =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding -1.5"),
             staff_padding=3.5,
             left_broken=True,
         )
@@ -769,7 +768,7 @@ def vc1(cache):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.piecewise.bow_speed(
-                [baca.select.rleak(baca.select.tleaves(o))],
+                baca.select.rleak(o),
                 "scr. =|",
                 staff_padding=3,
             )
@@ -826,7 +825,7 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.piecewise.bow_speed(
-                [run],
+                run,
                 "scr. =|",
                 staff_padding=3,
             )

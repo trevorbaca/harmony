@@ -389,7 +389,7 @@ def va(m):
         )
         baca.dynamic(o.phead(0), "pp")
         baca.piecewise.bow_speed(
-            [o.rleaves()],
+            baca.select.rleak(o),
             "poco scr. =|",
             right_broken=True,
             staff_padding=3,
