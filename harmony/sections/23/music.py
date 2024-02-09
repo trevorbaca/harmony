@@ -507,7 +507,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Dqf3")
         baca.dynamic(o.phead(0), "p")
-        baca.piecewise.bow_speed(
+        baca.mspanners.bow_speed(
             baca.select.rleak(o),
             "poco scr. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
@@ -526,7 +526,7 @@ def vc2(cache):
         baca.pitch(o, "Dqf3")
         baca.flat_glissando(o, hide_middle_stems=True)
         baca.dynamic(o.phead(0), "p")
-        baca.piecewise.bow_speed(
+        baca.mspanners.bow_speed(
             baca.select.rleak(o),
             "poco scr. =|",
             staff_padding=3,

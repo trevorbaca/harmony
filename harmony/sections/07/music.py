@@ -724,7 +724,7 @@ def vc1(cache):
             ">o !",
             left_broken=True,
         )
-        baca.piecewise.bow_speed(
+        baca.mspanners.bow_speed(
             baca.select.rleak(o),
             "scr. =|",
             staff_padding=3.5,
@@ -767,7 +767,7 @@ def vc1(cache):
         baca.pitch(o, "E4")
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.piecewise.bow_speed(
+            baca.mspanners.bow_speed(
                 baca.select.rleak(o),
                 "scr. =|",
                 staff_padding=3,
@@ -824,7 +824,7 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.piecewise.bow_speed(
+            baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
                 staff_padding=3,

@@ -482,7 +482,7 @@ def va(m):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 4),
         for run in baca.select.runs(o):
-            baca.piecewise.bow_speed(
+            baca.mspanners.bow_speed(
                 baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
@@ -529,7 +529,7 @@ def vc1(m):
         baca.pitch(o, "E4"),
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            baca.piecewise.bow_speed(
+            baca.mspanners.bow_speed(
                 baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
@@ -621,7 +621,7 @@ def vc2(m):
         baca.pitch(o, "Eqf4")
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            baca.piecewise.bow_speed(
+            baca.mspanners.bow_speed(
                 baca.select.rleak(run),
                 "scr. =|",
                 staff_padding=3,
