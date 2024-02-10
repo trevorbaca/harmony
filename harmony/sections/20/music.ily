@@ -623,19 +623,14 @@ number.20.BassFlute.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \baca-pp-sempre
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-covered-markup
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! COVERED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanCovered
         ~
@@ -868,7 +863,6 @@ number.20.BassFlute.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! COVERED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanCovered
 
@@ -1898,42 +1892,31 @@ number.20.Viola.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     \laissezVibrer
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
 
     r4
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 
     bf!4
     \laissezVibrer
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
 
@@ -1944,7 +1927,6 @@ number.20.Viola.Music = {
         % [Viola.Music measure 2]
         \override TupletBracket.direction = #up
         d'8
-          %! BOW_SPEED_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanBowSpeed
         [
@@ -2242,31 +2224,24 @@ number.20.Viola.Music = {
       %! SPANNER_START
     \bacaStartTextSpanMetricModulation
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P4"
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-right-text "T1"
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
     - \tweak stencil ##f
@@ -2346,7 +2321,6 @@ number.20.Viola.Music = {
     \bacaStopTextSpanMetricModulation
       %! ANCHOR_NOTE
       %! RIGHT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
 

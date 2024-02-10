@@ -1197,31 +1197,24 @@ number.29.Contrabass.2.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T1"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-right-text "T4+"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -1267,7 +1260,6 @@ number.29.Contrabass.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     a,8
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
     ]
