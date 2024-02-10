@@ -2191,7 +2191,6 @@ number.4.Cello.1.Music.item.1 = {
     - \tweak self-alignment-X -0.5
       %! EXPLICIT_DYNAMIC
     \baca-ff-p
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
       %! SPANNER_START
@@ -2248,19 +2247,14 @@ number.4.Cello.1.Music = {
     \mf
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
       %! LEFT_BROKEN
@@ -2436,7 +2430,6 @@ number.4.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-              %! DAMP_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanDamp
 
@@ -2472,19 +2465,14 @@ number.4.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     [
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
     ~
@@ -2640,19 +2628,14 @@ number.4.Cello.1.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
     - \tweak stencil ##f
@@ -2709,7 +2692,6 @@ number.4.Cello.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
@@ -2735,7 +2717,6 @@ number.4.Cello.2.Music.item.1 = {
     - \tweak self-alignment-X -0.5
       %! EXPLICIT_DYNAMIC
     \baca-ff-p
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
       %! SPANNER_START
@@ -2792,19 +2773,14 @@ number.4.Cello.2.Music = {
     \pp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
     - \tweak stencil ##f
@@ -2960,7 +2936,6 @@ number.4.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-              %! DAMP_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanDamp
 
@@ -2995,19 +2970,14 @@ number.4.Cello.2.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \pp
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
     - \tweak stencil ##f
@@ -3164,19 +3134,14 @@ number.4.Cello.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
     - \tweak stencil ##f
@@ -3223,7 +3188,6 @@ number.4.Cello.2.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
 
@@ -3250,7 +3214,6 @@ number.4.Contrabass.1.Music.item.1 = {
     - \tweak self-alignment-X -0.5
       %! EXPLICIT_DYNAMIC
     \baca-ff-p
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
       %! SPANNER_START
@@ -3319,19 +3282,14 @@ number.4.Contrabass.1.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
     [
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -3485,7 +3443,6 @@ number.4.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-              %! PIZZICATO_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanPizzicato
 
@@ -3522,19 +3479,14 @@ number.4.Contrabass.1.Music = {
     - \tweak padding 1.5
     _ \baca-string-iv-markup
     ^ \baca-eleven-e
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
@@ -3671,19 +3623,14 @@ number.4.Contrabass.1.Music = {
     - \tweak padding 1.5
     _ \baca-string-iv-markup
     ^ \baca-eleven-e
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
@@ -3725,7 +3672,6 @@ number.4.Contrabass.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
@@ -3788,19 +3734,14 @@ number.4.Contrabass.2.Music = {
     _ \baca-string-iv-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
     - \tweak stencil ##f
@@ -3965,7 +3906,6 @@ number.4.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-              %! PIZZICATO_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanPizzicato
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
@@ -4010,16 +3950,12 @@ number.4.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
     \startStaff
     af,!2.
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T1"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -4091,7 +4027,6 @@ number.4.Contrabass.2.Music = {
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
               %! SPANNER_STOP
             \!
-              %! SCP_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanSCP
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
@@ -4122,16 +4057,12 @@ number.4.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
     \startStaff
     e,2.
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T1"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -4214,7 +4145,6 @@ number.4.Contrabass.2.Music = {
       %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
 

@@ -1373,31 +1373,24 @@ number.21.Viola.Music = {
       %! SPANNER_START
     \bacaStartTextSpanMetricModulation
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P4"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-right-text "T1"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1422,7 +1415,6 @@ number.21.Viola.Music = {
 
     e'4
     - \baca-staccati #3
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
 
@@ -1439,42 +1431,31 @@ number.21.Viola.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     \laissezVibrer
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
 
     r4
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 
     bf!4
     \laissezVibrer
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
 
@@ -1502,7 +1483,6 @@ number.21.Viola.Music = {
               %! HIDDEN
               %! NOTE
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-              %! BOW_SPEED_SPANNER
               %! SPANNER_STOP
             \bacaStopTextSpanBowSpeed
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
@@ -1540,31 +1520,24 @@ number.21.Viola.Music = {
       %! EXPLICIT_DYNAMIC
     \p
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P4"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-right-text "T1"
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
       %! LEFT_BROKEN
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
 
@@ -1582,7 +1555,6 @@ number.21.Viola.Music = {
 
     e'4
     - \baca-staccati #3
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
 
@@ -1604,19 +1576,14 @@ number.21.Viola.Music = {
           %! EXPLICIT_DYNAMIC
         \mf
         \laissezVibrer
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
-          %! PIZZICATO_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanPizzicato
 
@@ -1642,7 +1609,6 @@ number.21.Viola.Music = {
     }
 
     r4
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
     \revert DynamicLineSpanner.staff-padding
@@ -1717,25 +1683,18 @@ number.21.Cello.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-solid-line-with-arrow
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "T"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-right-text "P"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.padding 0.5
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
 
@@ -1744,7 +1703,6 @@ number.21.Cello.1.Music = {
 
         e,4
         - \baca-staccati #3
-          %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
 
@@ -1859,25 +1817,18 @@ number.21.Cello.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-solid-line-with-arrow
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "T"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-right-text "P"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.padding 0.5
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
 
@@ -1886,7 +1837,6 @@ number.21.Cello.1.Music = {
 
         e,4
         - \baca-staccati #3
-          %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
 
@@ -1916,19 +1866,14 @@ number.21.Cello.1.Music = {
     \pp
     ^ \baca-eleven-e-flat
     [
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2000,7 +1945,6 @@ number.21.Cello.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 
@@ -2055,16 +1999,12 @@ number.21.Cello.2.Music = {
     \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "poco scr."
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2091,7 +2031,6 @@ number.21.Cello.2.Music = {
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
     r4
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2177,16 +2116,12 @@ number.21.Cello.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \p
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "poco scr."
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2214,22 +2149,16 @@ number.21.Cello.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
     - \tweak stencil ##f
@@ -2300,7 +2229,6 @@ number.21.Cello.2.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 
@@ -2374,25 +2302,18 @@ number.21.Contrabass.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-solid-line-with-arrow
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "T"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-right-text "P"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.padding 0.5
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
 
@@ -2401,7 +2322,6 @@ number.21.Contrabass.1.Music = {
 
         e,4
         - \baca-staccati #3
-          %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
 
@@ -2516,25 +2436,18 @@ number.21.Contrabass.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \p
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-solid-line-with-arrow
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "T"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-right-text "P"
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.padding 0.5
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
 
@@ -2543,7 +2456,6 @@ number.21.Contrabass.1.Music = {
 
         e,4
         - \baca-staccati #3
-          %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
 
@@ -2572,19 +2484,14 @@ number.21.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     ^ \baca-seven-e-flat
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2652,7 +2559,6 @@ number.21.Contrabass.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 
@@ -2710,25 +2616,18 @@ number.21.Contrabass.2.Music = {
     \mf
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-right-text "T1"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -2770,7 +2669,6 @@ number.21.Contrabass.2.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     e,4
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
 
@@ -2849,25 +2747,18 @@ number.21.Contrabass.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \mf
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-solid-line-with-arrow
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-right-text "T1"
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
-      %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -2902,7 +2793,6 @@ number.21.Contrabass.2.Music = {
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
     e,4
-      %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
 
@@ -2914,19 +2804,14 @@ number.21.Contrabass.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pp
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
     - \tweak stencil ##f
@@ -2992,7 +2877,6 @@ number.21.Contrabass.2.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 

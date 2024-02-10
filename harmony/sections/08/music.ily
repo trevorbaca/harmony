@@ -440,19 +440,14 @@ number.8.BassFlute.Music = {
     {
 
         r4
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-covered-markup
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-          %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! COVERED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanCovered
           %! METRIC_MODULATION_SPANNER
@@ -521,7 +516,6 @@ number.8.BassFlute.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! COVERED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_STOP
     \bacaStopTextSpanCovered
@@ -1645,27 +1639,21 @@ number.8.Cello.2.Music = {
     \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.right.padding 4.5
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1736,7 +1724,6 @@ number.8.Cello.2.Music = {
     \p
     - \tweak padding 1.5
     ^ \baca-quasi-bisb-markup
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2197,27 +2184,21 @@ number.8.Contrabass.2.Music = {
     \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.right.padding 4.5
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2300,7 +2281,6 @@ number.8.Contrabass.2.Music = {
     \p
     - \tweak padding 1.5
     ^ \baca-quasi-bisb-markup
-      %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
       %! EXPLICIT_CLEF_REDRAW_COLOR

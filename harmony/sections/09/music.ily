@@ -189,23 +189,18 @@ number.9.BassFlute.Music = {
     \mf
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
-      %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
-      %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-      %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanCovered
@@ -236,7 +231,6 @@ number.9.BassFlute.Music = {
     g'2
 
     r2.
-      %! COVERED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanCovered
       %! METRIC_MODULATION_SPANNER
@@ -251,19 +245,14 @@ number.9.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     [
-      %! COVERED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! COVERED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
-      %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-      %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! COVERED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanCovered
 
@@ -338,7 +327,6 @@ number.9.BassFlute.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! COVERED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanCovered
 
@@ -773,19 +761,14 @@ number.9.Viola.Music = {
     \mf
     - \tweak staff-padding 5.5
     ^ \harmony-match-harp-decay-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC
@@ -818,7 +801,6 @@ number.9.Viola.Music = {
     r2.
       %! SPANNER_STOP
     \!
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
 
@@ -844,19 +826,14 @@ number.9.Viola.Music = {
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -914,7 +891,6 @@ number.9.Viola.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! ANCHOR_NOTE
@@ -1025,19 +1001,14 @@ number.9.Cello.1.Music = {
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -1095,7 +1066,6 @@ number.9.Cello.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! ANCHOR_NOTE
@@ -1208,19 +1178,14 @@ number.9.Cello.2.Music = {
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -1278,7 +1243,6 @@ number.9.Cello.2.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! ANCHOR_NOTE
@@ -1398,19 +1362,14 @@ number.9.Contrabass.1.Music = {
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak bound-details.left-broken.text \baca-left-broken-xfb-markup
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
-          %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC
@@ -1468,7 +1427,6 @@ number.9.Contrabass.1.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! ANCHOR_NOTE
@@ -1596,19 +1554,14 @@ number.9.Contrabass.2.Music = {
     - \tweak staff-padding 3
     ^ \baca-thirteen-a
     _ \baca-string-iii-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 6.5
-      %! PIZZICATO_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanPizzicato
 
@@ -1657,7 +1610,6 @@ number.9.Contrabass.2.Music = {
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! ANCHOR_NOTE
-      %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
 
