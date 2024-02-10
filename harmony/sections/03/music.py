@@ -313,7 +313,7 @@ def bfl(m):
         baca.dynamic(o.phead(0), "mf")
         baca.rspanners.covered(
             baca.select.ltleaves(o),
-            items=r"\baca-cov-markup =|",
+            descriptor=r"\baca-cov-markup =|",
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
