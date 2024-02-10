@@ -303,7 +303,7 @@ def bfl(cache):
             if i == 0:
                 baca.rspanners.covered(
                     run,
-                    items=r"\baca-cov-markup =|",
+                    descriptor=r"\baca-cov-markup =|",
                     staff_padding=3,
                 )
             elif i == 1:

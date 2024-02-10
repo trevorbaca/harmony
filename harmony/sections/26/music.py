@@ -350,7 +350,7 @@ def bfl(m):
             for run in baca.select.runs(o):
                 baca.rspanners.covered(
                     run,
-                    items=r"\baca-cov-markup =|",
+                    descriptor=r"\baca-cov-markup =|",
                     staff_padding=3,
                 )
     with baca.scope(m[4]) as o:

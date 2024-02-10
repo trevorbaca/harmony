@@ -218,7 +218,7 @@ def bfl(cache):
         baca.override.dls_staff_padding(o, 3)
         baca.rspanners.covered(
             baca.select.ltleaves(o),
-            items=r"\baca-cov-markup =|",
+            descriptor=r"\baca-cov-markup =|",
             staff_padding=3,
         )
 
