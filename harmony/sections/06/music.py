@@ -1143,7 +1143,7 @@ def vc2(m):
             baca.select.rleak(o.tleaves()),
             "mf >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1187,7 +1187,7 @@ def cb1(m):
             baca.select.lparts(o.rleaves(), [2, 4]),
             "o< p >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1211,7 +1211,7 @@ def cb1(m):
                 baca.select.lparts(u, [6, 5, 3, 2]),
                 "o< mf > p < f",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "T1 -> P1 -> T1 -> P1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1246,7 +1246,7 @@ def cb1(m):
             "o< mf > p < f > p < ff >o !",
             right_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1264,7 +1264,7 @@ def cb2(m):
             baca.select.lparts(o.rleaves(), [3, 3]),
             "o< p >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1278,7 +1278,7 @@ def cb2(m):
                 "o< mp > p < f",
                 bookend=False,
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1298,7 +1298,7 @@ def cb2(m):
                 u,
                 "mf >o !",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1310,7 +1310,7 @@ def cb2(m):
             baca.select.mgroups(o.rleaves(), [2, 1, 1, 3]),
             "o< f > p < ff >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> P2 -> T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),

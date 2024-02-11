@@ -612,7 +612,7 @@ def cb2(m):
             baca.select.lparts(o.rleaves(), [1, 2]),
             'o< "mf" >o !',
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -630,7 +630,7 @@ def cb2(m):
             "o< !",
             right_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),

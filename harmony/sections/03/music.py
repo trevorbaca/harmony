@@ -604,7 +604,7 @@ def vc2(m):
                 u,
                 "mf >o !",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -639,7 +639,7 @@ def vc2(m):
                 baca.select.rleak(run),
                 "mf >o !",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -687,7 +687,7 @@ def cb1(m):
             o,
             "mf > p",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -725,7 +725,7 @@ def cb2(m):
                 u,
                 "mf >o !",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -752,7 +752,7 @@ def cb2(m):
             o,
             "p < f",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -771,7 +771,7 @@ def cb2(m):
                 baca.select.rleak(run),
                 "mf >o !",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),

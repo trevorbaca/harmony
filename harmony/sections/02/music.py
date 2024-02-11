@@ -756,7 +756,7 @@ def vc1(cache):
         )
         baca.override.dls_staff_padding(o, 6)
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P2 -> P4 -> P1 -> P3 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -824,7 +824,7 @@ def vc2(cache):
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 5),
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -875,7 +875,7 @@ def vc2(cache):
             "mf >o !",
         )
         baca.override.dls_staff_padding(o, 4),
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -959,7 +959,7 @@ def cb1(cache):
         )
         baca.override.dls_staff_padding(o, 4),
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P2 -> P4 -> P1 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1024,7 +1024,7 @@ def cb2(cache):
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 5)
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1085,7 +1085,7 @@ def cb2(cache):
             "mf >o !",
         )
         baca.override.dls_staff_padding(o, 3),
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),

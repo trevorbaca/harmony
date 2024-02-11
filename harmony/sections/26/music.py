@@ -599,7 +599,7 @@ def va(cache):
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P2 -> P1 -> P3 -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -620,7 +620,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P2 -> O -> P2 -> P1 -> P3",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -651,7 +651,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "O -> P2 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -684,7 +684,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 -> P2 -> O -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -720,7 +720,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -796,7 +796,7 @@ def composites(cache):
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
-                baca.piecewise.scp(
+                baca.mspanners.scp(
                     (),
                     "P1 =|",
                     abjad.Tweak(r"- \tweak staff-padding 3"),

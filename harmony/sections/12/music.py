@@ -848,7 +848,7 @@ def va(cache):
             "f >o !",
             with_next_leaf=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -861,7 +861,7 @@ def va(cache):
             o,
             "p >o",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -906,7 +906,7 @@ def vc1(cache):
             with_next_leaf=True,
         )
         baca.override.dls_staff_padding(o, 4 + 2)
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -919,7 +919,7 @@ def vc1(cache):
             o,
             "p >o",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -967,7 +967,7 @@ def vc2(cache):
             "f >o !",
             with_next_leaf=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -981,7 +981,7 @@ def vc2(cache):
             o,
             "p >o",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1025,7 +1025,7 @@ def cb1(cache):
             "f >o !",
             with_next_leaf=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1039,7 +1039,7 @@ def cb1(cache):
             o,
             "p >o",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1087,7 +1087,7 @@ def cb2(cache):
             "f >o !",
             with_next_leaf=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1101,7 +1101,7 @@ def cb2(cache):
             o,
             "p >o",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1141,7 +1141,7 @@ def composites(cache):
             baca.accent(o.pheads())
             baca.dynamic(o.phead(0), "p")
             if name in ("va", "vc1", "vc2"):
-                baca.piecewise.scp(
+                baca.mspanners.scp(
                     (),
                     "T4 -> O",
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1149,7 +1149,7 @@ def composites(cache):
                     pieces=[baca.select.rleak(baca.select.ltleaves(o))],
                 )
             elif name in ("cb1", "cb2"):
-                baca.piecewise.scp(
+                baca.mspanners.scp(
                     (),
                     "(T4) -> O",
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),

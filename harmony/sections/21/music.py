@@ -465,7 +465,7 @@ def va(m):
             baca.pitch(o, "E4")
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -508,7 +508,7 @@ def vc1(m):
             baca.pitch(o, "E2")
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -560,7 +560,7 @@ def cb1(m):
             baca.pitch(o, "E1")
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -588,7 +588,7 @@ def cb2(m):
         with baca.scope(m[n]) as o:
             baca.pitch(o, "E1")
             baca.flat_glissando(o)
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P1 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),

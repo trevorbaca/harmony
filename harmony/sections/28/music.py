@@ -631,7 +631,7 @@ def cb2(cache):
             "o< ff >o",
             bookend=False,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -679,7 +679,7 @@ def cb2(cache):
             "o< ff (ff) >o !",
             right_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),

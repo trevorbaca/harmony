@@ -547,7 +547,7 @@ def va(m):
             o,
             "o< f",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -563,7 +563,7 @@ def va(m):
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
             "o< ff >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -579,7 +579,7 @@ def va(m):
             o,
             "pp >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -646,7 +646,7 @@ def vc2(m):
             o,
             "o< f",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -666,7 +666,7 @@ def vc2(m):
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
             "o< ff >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 7.5"),
@@ -682,7 +682,7 @@ def vc2(m):
             o,
             "pp >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -702,7 +702,7 @@ def cb1(m):
             o,
             "o< f",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -761,7 +761,7 @@ def cb2(m):
             abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
             "o< ff >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -779,7 +779,7 @@ def cb2(m):
             "pp >o !",
         )
         baca.override.dls_staff_padding(o, 4)
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),

@@ -1006,7 +1006,7 @@ def composites(cache):
                 o.tleaves(),
                 "o< mp",
             )
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "T1 -> P1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1031,7 +1031,7 @@ def composites(cache):
                 "o< ff",
             )
             for run in baca.select.runs(o):
-                baca.piecewise.scp(
+                baca.mspanners.scp(
                     (),
                     "T1 -> P1",
                     abjad.Tweak(r"- \tweak staff-padding 3"),

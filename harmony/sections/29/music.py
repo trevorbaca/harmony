@@ -191,7 +191,7 @@ def cb2(m):
             ">o !",
             left_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),

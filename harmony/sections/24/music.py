@@ -369,7 +369,7 @@ def va(m):
         baca.clef(o.leaf(0), "alto")
         baca.pitch(o, "F4")
         # NOTE: text spanner must currently lexically precede pitched trill
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -390,7 +390,7 @@ def va(m):
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -409,7 +409,7 @@ def vc1(m):
             baca.pitch(u, "F4")
             baca.triple_staccato(u)
         # NOTE: text spanner must currently come before pitched trill spanner
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -430,7 +430,7 @@ def vc1(m):
             abjad.select.runs(baca.select.rleak(o.leaves())), [0, -1]
         )
         for run in runs:
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -447,7 +447,7 @@ def vc1(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -461,7 +461,7 @@ def vc2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F4")
         # NOTE: text spanner must currently lexically precede pitched trill
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -484,7 +484,7 @@ def vc2(m):
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#2")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -503,7 +503,7 @@ def cb1(m):
             baca.pitch(u, "E4", do_not_transpose=True)
             baca.triple_staccato(u)
         # NOTE: text spanner must currently come before pitched trill spanner
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -525,7 +525,7 @@ def cb1(m):
         )
         for run in runs:
             run = baca.select.rleak(baca.select.ltleaves(run))
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -542,7 +542,7 @@ def cb1(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -556,7 +556,7 @@ def cb2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "E4", do_not_transpose=True)
         # NOTE: text spanner must currently lexically precede pitched trill
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -579,7 +579,7 @@ def cb2(m):
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -609,7 +609,7 @@ def composites(cache):
                 tweak = abjad.Tweak(r"- \tweak staff-padding 3")
             elif name == "cb2":
                 tweak = abjad.Tweak(r"- \tweak staff-padding 5.5")
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "T2 -> T4",
                 tweak,
