@@ -546,7 +546,7 @@ def va(cache):
             o.rleaves(),
             "(mp) >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -596,7 +596,7 @@ def vc1(cache):
                 u,
                 "(mp) >o !",
             )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -695,7 +695,7 @@ def cb1(cache):
                 u,
                 "(mp) >o !",
             )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),

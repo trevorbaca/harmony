@@ -672,7 +672,7 @@ def va(m):
             "o< ff >o !",
             right_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -761,7 +761,7 @@ def vc1(m):
             baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -850,7 +850,7 @@ def vc2(m):
             "o< ff >o !",
             right_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -866,7 +866,7 @@ def cb1(m):
         baca.pitch(o, "F#1")
         baca.flat_glissando(o)
         baca.dynamic(o.phead(0), "pp")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -880,7 +880,7 @@ def cb1(m):
     with baca.scope(m.get(13, 15)) as o:
         baca.interpolate_pitches(o, "F#2", "D2")
         baca.glissando(o.tleaves(), hide_middle_note_heads=True)
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -969,7 +969,7 @@ def cb2(m):
             "o< ff >o !",
             right_broken=True,
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 8"),

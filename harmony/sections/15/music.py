@@ -450,7 +450,7 @@ def hp(cache):
 def va(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -483,7 +483,7 @@ def vc1(m):
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -534,7 +534,7 @@ def vc2(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -542,7 +542,7 @@ def vc2(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -598,7 +598,7 @@ def cb1(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -606,7 +606,7 @@ def cb1(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -657,7 +657,7 @@ def cb2(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 ||",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -665,7 +665,7 @@ def cb2(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),

@@ -430,7 +430,7 @@ def va(m):
         baca.triple_staccato(o.pheads()[1:])
         baca.dynamic(o.phead(1), "p")
         with baca.scope(o.leaves()[3:]) as u:
-            baca.piecewise.scp(
+            baca.mspanners.scp(
                 (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),

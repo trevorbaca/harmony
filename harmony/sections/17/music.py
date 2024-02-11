@@ -503,7 +503,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E3"),
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -535,7 +535,7 @@ def vc1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -549,7 +549,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -581,7 +581,7 @@ def vc2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -595,7 +595,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E3"),
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -627,7 +627,7 @@ def cb1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -641,7 +641,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D3"),
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -673,7 +673,7 @@ def cb2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),

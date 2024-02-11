@@ -838,7 +838,7 @@ def vc1(cache):
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -907,7 +907,7 @@ def vc2(cache):
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -990,7 +990,7 @@ def cb1(cache):
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1014,7 +1014,7 @@ def cb1(cache):
             baca.select.lparts(leaves, [2, 2 + 1]),
             "o< p >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "O -> P4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1027,7 +1027,7 @@ def cb1(cache):
             baca.select.lparts(leaves, [2, 2 + 1]),
             "o< p >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "O -> P4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1040,7 +1040,7 @@ def cb1(cache):
             baca.select.lparts(leaves, [2, 1 + 1]),
             "o< p >o !",
         )
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "O -> P4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -1112,7 +1112,7 @@ def cb2(cache):
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
-        baca.piecewise.scp(
+        baca.mspanners.scp(
             (),
             "T4 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
