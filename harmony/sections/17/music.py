@@ -506,9 +506,9 @@ def vc1(cache):
         baca.mspanners.scp(
             (),
             "T4 -> P1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.tleaves()],
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -538,9 +538,9 @@ def vc1(cache):
         baca.mspanners.scp(
             (),
             "P4 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
 
 
@@ -552,9 +552,9 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "T4 -> P1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.tleaves()],
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -584,9 +584,9 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "P4 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
 
 
@@ -598,9 +598,9 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "T4 -> P1",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.tleaves()],
+            staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -630,9 +630,9 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "P4 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=5.5,
         )
 
 
@@ -644,9 +644,9 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "T4 -> P1",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.tleaves()],
+            staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -676,9 +676,9 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P4 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=5.5,
         )
 
 

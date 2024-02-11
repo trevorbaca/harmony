@@ -675,9 +675,9 @@ def va(m):
         baca.mspanners.scp(
             (),
             "T1 -> P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
+            staff_padding=8,
         )
 
 
@@ -764,9 +764,9 @@ def vc1(m):
         baca.mspanners.scp(
             (),
             "T1 -> P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
+            staff_padding=8,
         )
 
 
@@ -853,9 +853,9 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "T1 -> P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
+            staff_padding=8,
         )
 
 
@@ -869,8 +869,8 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.mgroups(o.rleaves(), [2, 1, 1, 1, 1, 2, 1, 1, 2]),
+            staff_padding=3,
         )
     with baca.scope(m.get(12, 15)) as o:
         baca.piecewise.hairpin(
@@ -883,9 +883,9 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [1, 2]),
+            staff_padding=3,
         )
 
 
@@ -972,9 +972,9 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T4 -> P1 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [3, 3]),
+            staff_padding=8,
         )
 
 

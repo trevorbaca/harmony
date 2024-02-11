@@ -372,8 +372,8 @@ def va(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
         for run in baca.select.runs(o):
             baca.rspanners.trill(
@@ -393,9 +393,9 @@ def va(m):
         baca.mspanners.scp(
             (),
             "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
 
 
@@ -412,8 +412,8 @@ def vc1(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[o.leaves()[5:12]],
+            staff_padding=5.5,
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "F4")
@@ -433,8 +433,8 @@ def vc1(m):
             baca.mspanners.scp(
                 (),
                 "P =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=[baca.select.rleak(run)],
+                staff_padding=3,
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F4"),
@@ -450,9 +450,9 @@ def vc1(m):
         baca.mspanners.scp(
             (),
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
 
 
@@ -464,8 +464,8 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
         for run in baca.select.runs(o):
             baca.rspanners.trill(
@@ -487,9 +487,9 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
 
 
@@ -506,8 +506,8 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[o.leaves()[5:12]],
+            staff_padding=5.5,
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "E4", do_not_transpose=True)
@@ -528,8 +528,8 @@ def cb1(m):
             baca.mspanners.scp(
                 (),
                 "P =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=[run],
+                staff_padding=3,
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "E4", do_not_transpose=True)
@@ -545,9 +545,9 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
 
 
@@ -559,8 +559,8 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
         for run in baca.select.runs(o):
             baca.rspanners.trill(
@@ -582,9 +582,9 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
 
 

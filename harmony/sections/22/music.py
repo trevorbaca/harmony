@@ -550,9 +550,9 @@ def va(m):
         baca.mspanners.scp(
             (),
             "T4 -> O",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "alto")
@@ -566,11 +566,11 @@ def va(m):
         baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
             ),
+            staff_padding=5.5,
         )
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D4 C#4")
@@ -582,9 +582,9 @@ def va(m):
         baca.mspanners.scp(
             (),
             "T2 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
 
 
@@ -649,9 +649,9 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "T4 -> O",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
         baca.override.tuplet_bracket_staff_padding(o, 3)
@@ -669,11 +669,11 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 7.5"),
             bookend=True,
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
             ),
+            staff_padding=7.5,
         )
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D3 C#3")
@@ -685,9 +685,9 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "T2 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
     with baca.scope(m[13]) as o:
         baca.override.tuplet_bracket_staff_padding(o, 3)
@@ -705,9 +705,9 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "T4 -> O",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -764,11 +764,11 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T4 -> O -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
             ),
+            staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[12]) as o:
@@ -782,9 +782,9 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T2 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
 
 

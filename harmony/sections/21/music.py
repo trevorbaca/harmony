@@ -468,10 +468,10 @@ def va(m):
             baca.mspanners.scp(
                 (),
                 "P4 -> T1",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=True,
                 left_broken=True,
                 pieces=[o.leaves()],
+                staff_padding=3,
             )
     with baca.scope(m[1]) as o:
         baca.rspanners.metric_modulation(
@@ -511,9 +511,9 @@ def vc1(m):
             baca.mspanners.scp(
                 (),
                 "T -> P",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=True,
                 pieces=[o.tleaves()],
+                staff_padding=5.5,
             )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
@@ -563,9 +563,9 @@ def cb1(m):
             baca.mspanners.scp(
                 (),
                 "T -> P",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=True,
                 pieces=[o.tleaves()],
+                staff_padding=5.5,
             )
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
@@ -591,9 +591,9 @@ def cb2(m):
             baca.mspanners.scp(
                 (),
                 "P1 -> T1",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=True,
                 pieces=[o.leaves()],
+                staff_padding=3,
             )
     with baca.scope(m[1]) as o:
         baca.spanners.hairpin(

@@ -602,9 +602,9 @@ def va(cache):
         baca.mspanners.scp(
             (),
             "P2 -> P1 -> P3 -> P2",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "<G4 Ab4 Bb4>")
@@ -623,9 +623,9 @@ def vc1(cache):
         baca.mspanners.scp(
             (),
             "P2 -> O -> P2 -> P1 -> P3",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -654,9 +654,9 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "O -> P2 -> P1",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -687,9 +687,9 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "P1 -> P2 -> O -> P2",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -723,9 +723,9 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P1 -> P2 -> O",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -799,8 +799,8 @@ def composites(cache):
                 baca.mspanners.scp(
                     (),
                     "P1 =|",
-                    abjad.Tweak(r"- \tweak staff-padding 3"),
                     pieces=[baca.select.rleak(baca.select.tleaves(o))],
+                    staff_padding=3,
                 )
 
 

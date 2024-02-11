@@ -433,10 +433,10 @@ def va(m):
             baca.mspanners.scp(
                 (),
                 "P4 -> T1",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=True,
                 pieces=[baca.select.rleak(u)],
                 right_broken=True,
+                staff_padding=3,
             )
             baca.rspanners.metric_modulation(
                 u,
