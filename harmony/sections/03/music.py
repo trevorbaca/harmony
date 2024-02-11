@@ -607,7 +607,7 @@ def vc2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                pieces=[u],
+                pieces=u,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:
@@ -643,7 +643,7 @@ def vc2(m):
                 (),
                 "P1 =|",
                 bookend=False,
-                pieces=[baca.select.rleak(run)],
+                pieces=baca.select.rleak(run),
                 staff_padding=3,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
@@ -728,7 +728,7 @@ def cb2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                pieces=[u],
+                pieces=u,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:
@@ -775,7 +775,7 @@ def cb2(m):
                 (),
                 "P1 =|",
                 bookend=False,
-                pieces=[baca.select.rleak(run)],
+                pieces=baca.select.rleak(run),
                 staff_padding=3,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
