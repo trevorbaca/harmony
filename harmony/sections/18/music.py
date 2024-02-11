@@ -481,9 +481,9 @@ def bfl(m):
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=False,
                 pieces=[run],
+                staff_padding=3,
             )
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o, "D4")
@@ -492,9 +492,9 @@ def bfl(m):
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=False,
                 pieces=[run],
+                staff_padding=3,
             )
         baca.rspanners.metric_modulation(
             o.run(0),

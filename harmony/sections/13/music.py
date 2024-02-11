@@ -299,10 +299,10 @@ def bfl(cache):
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "Dtqf5")
@@ -321,9 +321,9 @@ def bfl(cache):
             baca.mspanners.text(
                 (),
                 "T -> A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=baca.select.lparts(clpart, [1, 1 + 1]),
+                staff_padding=5.5,
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)

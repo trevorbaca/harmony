@@ -385,10 +385,10 @@ def bfl(cache):
             (),
             r"\harmony-g-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m.get(11)) as o:
         baca.piecewise.hairpin(
@@ -432,10 +432,10 @@ def bfl(cache):
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -541,15 +541,15 @@ def hp(cache):
             (),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
+            staff_padding=3,
         )
     with baca.scope(m.get(10, 11)) as o:
         baca.mspanners.text(
             (),
             "0 pul. / beat -> 8 pul. / beat -> 0 pul. / beat",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            staff_padding=3,
         )
     with baca.scope(m.get(12)) as o:
         baca.spanners.hairpin(

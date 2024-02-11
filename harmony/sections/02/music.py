@@ -369,10 +369,10 @@ def bfl(cache):
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3"),
@@ -659,10 +659,10 @@ def va(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Gqf4"),
@@ -708,10 +708,10 @@ def va(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
 
 
@@ -736,10 +736,10 @@ def vc1(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -798,10 +798,10 @@ def vc1(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
 
 
@@ -845,10 +845,10 @@ def vc2(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -898,10 +898,10 @@ def vc2(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
 
 
@@ -940,10 +940,10 @@ def cb1(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=10,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -996,10 +996,10 @@ def cb1(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=10,
         )
 
 
@@ -1047,10 +1047,10 @@ def cb2(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=10,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1110,10 +1110,10 @@ def cb2(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=10,
         )
 
 

@@ -359,8 +359,8 @@ def bfl(cache):
             baca.mspanners.text(
                 (),
                 "A -> T -> A",
-                abjad.Tweak(r"- \tweak staff-padding 10"),
                 pieces=baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                staff_padding=10,
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o.plts(grace=False), "Ab3")
@@ -377,18 +377,18 @@ def bfl(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             lilypond_id=2,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
         baca.mspanners.text(
             (),
             "A =|",
-            abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             pieces=[o.rleaves()],
+            staff_padding=10,
         )
     with baca.scope(m[5]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "pp-ppp")

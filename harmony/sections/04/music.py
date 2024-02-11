@@ -433,10 +433,10 @@ def va(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -481,10 +481,10 @@ def vc1(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -515,10 +515,10 @@ def vc2(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -566,10 +566,10 @@ def cb1(cache):
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=10,
         )
     for item in [(1, 6), 8, 11]:
         with baca.scope(m.get(item)) as o:

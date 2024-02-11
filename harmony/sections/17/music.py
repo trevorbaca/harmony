@@ -265,10 +265,10 @@ def bfl(m):
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 left_broken=True,
                 pieces=[u],
+                staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(
                 u[:2],
