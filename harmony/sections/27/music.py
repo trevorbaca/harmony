@@ -609,10 +609,9 @@ def va(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
         baca.mspanners.scp(
-            (),
+            baca.select.plts(o),
             "P2 -> P1 -> P3 -> P2",
             bookend=True,
-            pieces=baca.select.plts(o),
             staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
@@ -661,10 +660,9 @@ def vc1(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#2")
         baca.mspanners.scp(
-            (),
+            baca.select.plts(o.leaves()),
             "P2 -> O -> P2 -> P1 -> P3",
             bookend=True,
-            pieces=baca.select.plts(o.leaves()),
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -715,10 +713,9 @@ def vc2(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#2")
         baca.mspanners.scp(
-            (),
+            baca.select.plts(o.leaves()),
             "O -> P2 -> P1",
             bookend=True,
-            pieces=baca.select.plts(o.leaves()),
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -772,10 +769,9 @@ def cb1(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#1")
         baca.mspanners.scp(
-            (),
+            baca.select.plts(o.leaves()),
             "P1 -> P2 -> O -> P2",
             bookend=True,
-            pieces=baca.select.plts(o.leaves()),
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -831,10 +827,9 @@ def cb2(cache):
         baca.pitch(o.leaves()[:4], "F#1")
         baca.pitch(o.plts()[-3:], "Gb2")
         baca.mspanners.scp(
-            (),
+            [o.leaves()[:3]],
             "P1 -> P2",
             bookend=True,
-            pieces=[o.leaves()[:3]],
             staff_padding=5.5,
         )
         baca.accent(o.pheads()[1:3])

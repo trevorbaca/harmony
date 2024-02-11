@@ -614,9 +614,8 @@ def vc2(m):
                 "mf >o !",
             )
             baca.mspanners.scp(
-                (),
+                u,
                 "P1 =|",
-                pieces=u,
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
@@ -650,10 +649,9 @@ def cb1(m):
             "mf > p",
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "P1 -> T1",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -713,10 +711,9 @@ def cb2(m):
             left_broken=True,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.lparts(o.leaves(), [2, 3]),
             "(T1) -> P2 -> O",
             bookend=True,
-            pieces=baca.select.lparts(o.leaves(), [2, 3]),
             staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
@@ -734,9 +731,8 @@ def cb2(m):
                 "mf >o !",
             )
             baca.mspanners.scp(
-                (),
+                u,
                 "P1 =|",
-                pieces=u,
                 staff_padding=5.5,
             )
     with baca.scope(m[3]) as o:
