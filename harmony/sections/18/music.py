@@ -839,10 +839,9 @@ def vc1(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "T4 -> P1",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:
@@ -908,10 +907,9 @@ def vc2(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "T4 -> P1",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:
@@ -991,10 +989,9 @@ def cb1(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "T4 -> P1",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:
@@ -1015,10 +1012,9 @@ def cb1(cache):
             "o< p >o !",
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "O -> P4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
     with baca.scope(m[10]) as o:
@@ -1028,10 +1024,9 @@ def cb1(cache):
             "o< p >o !",
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "O -> P4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
     with baca.scope(m[11]) as o:
@@ -1041,10 +1036,9 @@ def cb1(cache):
             "o< p >o !",
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "O -> P4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         ),
     with baca.scope(m.get(9, 11)) as o:
@@ -1113,10 +1107,9 @@ def cb2(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "T4 -> P1",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:

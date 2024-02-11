@@ -192,11 +192,10 @@ def cb2(m):
             left_broken=True,
         )
         baca.mspanners.scp(
-            (),
+            [o.leaves()],
             "T1 -> T4+",
             bookend=True,
             left_broken=True,
-            pieces=[o.leaves()],
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:

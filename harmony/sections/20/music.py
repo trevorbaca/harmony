@@ -431,10 +431,9 @@ def va(m):
         baca.dynamic(o.phead(1), "p")
         with baca.scope(o.leaves()[3:]) as u:
             baca.mspanners.scp(
-                (),
+                [baca.select.rleak(u)],
                 "P4 -> T1",
                 bookend=True,
-                pieces=[baca.select.rleak(u)],
                 right_broken=True,
                 staff_padding=3,
             )

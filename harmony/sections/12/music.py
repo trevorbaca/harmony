@@ -849,10 +849,9 @@ def va(cache):
             with_next_leaf=True,
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "P4 -> T4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
     with baca.scope(m[10]) as o:
@@ -862,9 +861,8 @@ def va(cache):
             "p >o",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.ltleaves(o)),
             "T1 =|",
-            pieces=baca.select.rleak(baca.select.ltleaves(o)),
             staff_padding=5.5,
         )
     for item in [(5, 8), (11, 15)]:
@@ -907,10 +905,9 @@ def vc1(cache):
         )
         baca.override.dls_staff_padding(o, 4 + 2)
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "P4 -> T4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=5.5,
         )
     with baca.scope(m[10]) as o:
@@ -920,9 +917,8 @@ def vc1(cache):
             "p >o",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.ltleaves(o)),
             "T1 =|",
-            pieces=baca.select.rleak(baca.select.ltleaves(o)),
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 15)) as o:
@@ -968,10 +964,9 @@ def vc2(cache):
             with_next_leaf=True,
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "P4 -> T4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 6)
@@ -982,9 +977,8 @@ def vc2(cache):
             "p >o",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.ltleaves(o)),
             "T1 =|",
-            pieces=baca.select.rleak(baca.select.ltleaves(o)),
             staff_padding=5.5,
         )
     for item in [(3, 8), (11, 15)]:
@@ -1026,10 +1020,9 @@ def cb1(cache):
             with_next_leaf=True,
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "P4 -> T4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=5.5,
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1040,9 +1033,8 @@ def cb1(cache):
             "p >o",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.ltleaves(o)),
             "T4 =|",
-            pieces=baca.select.rleak(baca.select.ltleaves(o)),
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 15)) as o:
@@ -1088,10 +1080,9 @@ def cb2(cache):
             with_next_leaf=True,
         )
         baca.mspanners.scp(
-            (),
+            [o.tleaves()],
             "P4 -> T4",
             bookend=True,
-            pieces=[o.tleaves()],
             staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1102,9 +1093,8 @@ def cb2(cache):
             "p >o",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.ltleaves(o)),
             "T4 =|",
-            pieces=baca.select.rleak(baca.select.ltleaves(o)),
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 15)) as o:
@@ -1142,18 +1132,16 @@ def composites(cache):
             baca.dynamic(o.phead(0), "p")
             if name in ("va", "vc1", "vc2"):
                 baca.mspanners.scp(
-                    (),
+                    [baca.select.rleak(baca.select.ltleaves(o))],
                     "T4 -> O",
                     bookend=True,
-                    pieces=[baca.select.rleak(baca.select.ltleaves(o))],
                     staff_padding=5.5,
                 )
             elif name in ("cb1", "cb2"):
                 baca.mspanners.scp(
-                    (),
+                    [baca.select.rleak(baca.select.ltleaves(o))],
                     "(T4) -> O",
                     bookend=True,
-                    pieces=[baca.select.rleak(baca.select.ltleaves(o))],
                     staff_padding=5.5,
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

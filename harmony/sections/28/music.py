@@ -632,10 +632,9 @@ def cb2(cache):
             bookend=False,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.lparts(o.leaves(), [2, 3]),
             "T4 -> P1 -> T4",
             bookend=True,
-            pieces=baca.select.lparts(o.leaves(), [2, 3]),
             staff_padding=3,
         )
         baca.markup(
@@ -680,10 +679,9 @@ def cb2(cache):
             right_broken=True,
         )
         baca.mspanners.scp(
-            (),
+            baca.select.lparts(o.rleaves(), [3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
             bookend=True,
-            pieces=baca.select.lparts(o.rleaves(), [3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
             right_broken=True,
             staff_padding=3,
         )

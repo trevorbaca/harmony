@@ -378,9 +378,8 @@ def vc1(m):
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.mspanners.scp(
-            (),
+            baca.select.plts(leaves),
             "P1 -> P3 -> P2 -> P4 ->",
-            pieces=baca.select.plts(leaves),
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -431,9 +430,8 @@ def vc2(m):
             "mf >o !",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.tleaves(o)),
             "P1 =|",
-            pieces=baca.select.rleak(baca.select.tleaves(o)),
             staff_padding=3,
         )
     with baca.scope(m.get(1, 3)) as o:
@@ -457,9 +455,8 @@ def cb1(m):
         baca.override.dls_staff_padding(o, 4)
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.mspanners.scp(
-            (),
+            baca.select.plts(leaves),
             "P1 -> P3 -> P2 -> P4 -> P1 ||",
-            pieces=baca.select.plts(leaves),
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -510,9 +507,8 @@ def cb2(m):
             "mf >o !",
         )
         baca.mspanners.scp(
-            (),
+            baca.select.rleak(baca.select.tleaves(o)),
             "P1 =|",
-            pieces=baca.select.rleak(baca.select.tleaves(o)),
             staff_padding=3 + 1,
         )
     with baca.scope(m.get(1, 3)) as o:
