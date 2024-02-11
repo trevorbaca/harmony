@@ -863,10 +863,10 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             left_broken=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -912,9 +912,9 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
     with baca.scope(m[7]) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -962,9 +962,9 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T1 -> P2 -> O",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
+            staff_padding=3,
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "A1")

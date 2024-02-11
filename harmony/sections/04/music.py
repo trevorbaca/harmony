@@ -615,8 +615,8 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
     with baca.scope(m[11]) as o:
         baca.flat_glissando(
@@ -633,8 +633,8 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[o.rleaves()],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)

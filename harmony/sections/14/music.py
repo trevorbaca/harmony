@@ -1009,9 +1009,9 @@ def composites(cache):
             baca.mspanners.scp(
                 (),
                 "T1 -> P1",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=True,
                 pieces=[o.tleaves()],
+                staff_padding=3,
             )
         with baca.scope(m.get(6, 9)) as o:
             baca.spanners.hairpin(
@@ -1034,9 +1034,9 @@ def composites(cache):
                 baca.mspanners.scp(
                     (),
                     "T1 -> P1",
-                    abjad.Tweak(r"- \tweak staff-padding 3"),
                     bookend=True,
                     pieces=[run],
+                    staff_padding=3,
                 )
         with baca.scope(m[11]) as o:
             pheads = baca.select.pheads(o)

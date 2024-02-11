@@ -194,10 +194,10 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T1 -> T4+",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             left_broken=True,
             pieces=[o.leaves()],
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         with baca.scope(o.rleaf(-1)) as u:

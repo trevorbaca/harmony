@@ -549,8 +549,8 @@ def va(cache):
         baca.mspanners.scp(
             (),
             "T1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
 
 
@@ -599,8 +599,8 @@ def vc1(cache):
         baca.mspanners.scp(
             (),
             "T1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[o.leaves()],
+            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(baca.select.lleak(o.leaves()), "Aqf3")
@@ -698,8 +698,8 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[o.leaves()],
+            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(baca.select.lleak(o.leaves()), "Dtqf2")

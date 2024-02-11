@@ -611,9 +611,9 @@ def va(cache):
         baca.mspanners.scp(
             (),
             "P2 -> P1 -> P3 -> P2",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o),
+            staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
         baca.override.tuplet_bracket_up(o)
@@ -663,9 +663,9 @@ def vc1(cache):
         baca.mspanners.scp(
             (),
             "P2 -> O -> P2 -> P1 -> P3",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -717,9 +717,9 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "O -> P2 -> P1",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -774,9 +774,9 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "P1 -> P2 -> O -> P2",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.plts(o.leaves()),
+            staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -833,9 +833,9 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P1 -> P2",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=[o.leaves()[:3]],
+            staff_padding=5.5,
         )
         baca.accent(o.pheads()[1:3])
         baca.stem_tremolo(o.plts()[:2])

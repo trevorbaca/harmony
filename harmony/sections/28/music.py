@@ -634,9 +634,9 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "T4 -> P1 -> T4",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
+            staff_padding=3,
         )
         baca.markup(
             o.pleaf(0),
@@ -682,10 +682,10 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=baca.select.lparts(o.rleaves(), [3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
             right_broken=True,
+            staff_padding=3,
         )
         baca.markup(
             o.pleaf(0),

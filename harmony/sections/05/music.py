@@ -616,8 +616,8 @@ def vc2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=[u],
+                staff_padding=3,
             )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F3"),
@@ -652,9 +652,9 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=[o.tleaves()],
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -715,9 +715,9 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "(T1) -> P2 -> O",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=True,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
+            staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
         for run in baca.select.runs(o):
@@ -736,8 +736,8 @@ def cb2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 pieces=[u],
+                staff_padding=5.5,
             )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "treble")

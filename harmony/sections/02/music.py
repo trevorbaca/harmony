@@ -759,8 +759,8 @@ def vc1(cache):
         baca.mspanners.scp(
             (),
             "P2 -> P4 -> P1 -> P3 ->",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.plts(leaves),
+            staff_padding=3,
         )
     with baca.scope(m[7]) as o:
         with baca.scope(o.leaf(1)) as u:
@@ -827,8 +827,8 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -878,8 +878,8 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -962,8 +962,8 @@ def cb1(cache):
         baca.mspanners.scp(
             (),
             "P2 -> P4 -> P1 ||",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.plts(leaves),
+            staff_padding=3,
         )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -1027,8 +1027,8 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1088,8 +1088,8 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "treble")

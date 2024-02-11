@@ -453,8 +453,8 @@ def va(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.pitch(o, "F4")
@@ -486,8 +486,8 @@ def vc1(m):
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "A2")
@@ -537,16 +537,16 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "P4 ||",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "G2")
@@ -601,16 +601,16 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "P4 ||",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "G#1")
@@ -660,16 +660,16 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "P4 ||",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
         baca.mspanners.scp(
             (),
             "T4 =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")

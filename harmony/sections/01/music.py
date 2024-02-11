@@ -380,8 +380,8 @@ def vc1(m):
         baca.mspanners.scp(
             (),
             "P1 -> P3 -> P2 -> P4 ->",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.plts(leaves),
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(1), "percussion")
@@ -433,8 +433,8 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -459,8 +459,8 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "P1 -> P3 -> P2 -> P4 -> P1 ||",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.plts(leaves),
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -512,8 +512,8 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            staff_padding=3 + 1,
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.override.dls_staff_padding(o, 4)

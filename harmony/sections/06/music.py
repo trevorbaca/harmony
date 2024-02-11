@@ -1146,8 +1146,8 @@ def vc2(m):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(o.tleaves())],
+            staff_padding=3,
         )
     with baca.scope(m.get(10, 15)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1190,8 +1190,8 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "T1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -1214,8 +1214,8 @@ def cb1(m):
             baca.mspanners.scp(
                 (),
                 "T1 -> P1 -> T1 -> P1",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=baca.select.lparts(u, [6, 5, 3, 2]),
+                staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -1249,9 +1249,9 @@ def cb1(m):
         baca.mspanners.scp(
             (),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.cmgroups(o.rleaves(), [1]),
             right_broken=True,
+            staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 4)
 
@@ -1267,8 +1267,8 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T1 =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=[baca.select.rleak(baca.select.ltleaves(o))],
+            staff_padding=3,
         )
     with baca.scope(m.get(3, 7)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
@@ -1281,8 +1281,8 @@ def cb2(m):
             baca.mspanners.scp(
                 (),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=baca.select.lparts(u, [3, 4, 4, 2, 3, 5]),
+                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         for run in baca.select.runs(o):
@@ -1301,8 +1301,8 @@ def cb2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=[u],
+                staff_padding=3,
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
@@ -1313,9 +1313,9 @@ def cb2(m):
         baca.mspanners.scp(
             (),
             "T1 -> P2 -> T1 -> P1 -> T1",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=True,
             pieces=baca.select.mgroups(o.leaves(), [2, 1, 1, 2]),
+            staff_padding=3,
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o, 4)
