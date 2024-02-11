@@ -778,7 +778,7 @@ def hp(m):
         baca.pitches(o, "F#4 G#4")
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mf")
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\baca-fingernail-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -810,7 +810,7 @@ def hp(m):
         baca.pitches(o, "F#4 G#4")
     with baca.scope(m.get(10, 14)) as o:
         baca.laissez_vibrer(o.ptails())
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\baca-fingernail-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -877,7 +877,7 @@ def va(cache):
             "mp-pp",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -910,7 +910,7 @@ def va(cache):
             "mp-pp",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -991,7 +991,7 @@ def vc1(cache):
             "mp-pp",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -1025,7 +1025,7 @@ def vc1(cache):
             "mp-pp",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),

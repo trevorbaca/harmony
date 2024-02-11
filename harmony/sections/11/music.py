@@ -453,7 +453,7 @@ def bfl(cache):
     with baca.scope(m[7]) as o:
         baca.breathe(o.pleaf(-1))
         for clpart in baca.select.clparts(o, [2]):
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -466,7 +466,7 @@ def bfl(cache):
         baca.breathe(pleaves)
         for clpart in baca.select.clparts(o, [4]):
             clpart = baca.select.rleak(clpart)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),

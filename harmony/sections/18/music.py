@@ -478,7 +478,7 @@ def bfl(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -489,7 +489,7 @@ def bfl(m):
         baca.pitch(o, "D4")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),

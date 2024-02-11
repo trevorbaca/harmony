@@ -207,7 +207,7 @@ def bfl(m):
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 9"),
@@ -225,7 +225,7 @@ def bfl(m):
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),

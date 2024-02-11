@@ -213,7 +213,7 @@ def bfl(m):
         )
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -236,7 +236,7 @@ def bfl(m):
     with baca.scope(m[9]) as o:
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -245,7 +245,7 @@ def bfl(m):
             )
     with baca.scope(m[10]) as o:
         with baca.scope(o.leaves()[1:]) as u:
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),

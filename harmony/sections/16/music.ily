@@ -569,16 +569,12 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''8.
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-dashed-line-with-hook
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 5.5
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \startTextSpan
       %! METRIC_MODULATION_SPANNER
