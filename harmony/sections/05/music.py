@@ -616,7 +616,7 @@ def vc2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                pieces=[u],
+                pieces=u,
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
@@ -736,7 +736,7 @@ def cb2(m):
             baca.mspanners.scp(
                 (),
                 "P1 =|",
-                pieces=[u],
+                pieces=u,
                 staff_padding=5.5,
             )
     with baca.scope(m[3]) as o:

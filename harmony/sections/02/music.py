@@ -827,7 +827,7 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            pieces=baca.select.rleak(baca.select.tleaves(o)),
             staff_padding=3,
         )
     with baca.scope(m.get(3, 5)) as o:
@@ -878,7 +878,7 @@ def vc2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            pieces=baca.select.rleak(baca.select.tleaves(o)),
             staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
@@ -1027,7 +1027,7 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            pieces=baca.select.rleak(baca.select.tleaves(o)),
             staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
@@ -1088,7 +1088,7 @@ def cb2(cache):
         baca.mspanners.scp(
             (),
             "P1 =|",
-            pieces=[baca.select.rleak(baca.select.tleaves(o))],
+            pieces=baca.select.rleak(baca.select.tleaves(o)),
             staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:

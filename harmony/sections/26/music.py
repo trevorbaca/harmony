@@ -799,7 +799,7 @@ def composites(cache):
                 baca.mspanners.scp(
                     (),
                     "P1 =|",
-                    pieces=[baca.select.rleak(baca.select.tleaves(o))],
+                    pieces=baca.select.rleak(baca.select.tleaves(o)),
                     staff_padding=3,
                 )
 
