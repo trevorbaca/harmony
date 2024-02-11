@@ -381,7 +381,7 @@ def bfl(cache):
             "o< mp >o",
             forbid_al_niente_to_bar_line=True,
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-g-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -428,7 +428,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[15]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -537,7 +537,7 @@ def hp(cache):
     with baca.scope(m.get(2, 12)) as o:
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(4, 7)) as o:
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
@@ -545,7 +545,7 @@ def hp(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
     with baca.scope(m.get(10, 11)) as o:
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "0 pul. / beat -> 8 pul. / beat -> 0 pul. / beat",
             abjad.Tweak(r"- \tweak staff-padding 3"),

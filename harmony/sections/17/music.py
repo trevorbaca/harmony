@@ -262,7 +262,7 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "D5")
         with baca.scope(o.leaves()[:3]) as u:
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),

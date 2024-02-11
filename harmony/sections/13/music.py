@@ -295,7 +295,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[4]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -318,7 +318,7 @@ def bfl(cache):
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),

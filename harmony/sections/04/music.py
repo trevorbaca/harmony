@@ -429,7 +429,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -477,7 +477,7 @@ def vc1(cache):
             "ff-p",
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -511,7 +511,7 @@ def vc2(cache):
             "ff-p",
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -562,7 +562,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),

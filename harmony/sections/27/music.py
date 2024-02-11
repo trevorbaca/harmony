@@ -356,7 +356,7 @@ def bfl(cache):
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
@@ -373,7 +373,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.dynamic(o.pleaf(0, grace=False), "pp-ppp")
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
@@ -383,7 +383,7 @@ def bfl(cache):
             lilypond_id=2,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "A =|",
             abjad.Tweak(r"- \tweak staff-padding 10"),

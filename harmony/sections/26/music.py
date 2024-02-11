@@ -364,7 +364,7 @@ def bfl(m):
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "(T) -> A -> (T)",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -383,7 +383,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
             leaves = baca.select.rleak(run)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),

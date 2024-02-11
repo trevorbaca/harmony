@@ -279,7 +279,7 @@ def bfl(cache):
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),

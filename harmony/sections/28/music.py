@@ -370,7 +370,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.override.dls_staff_padding(o, 4)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
