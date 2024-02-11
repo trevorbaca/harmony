@@ -446,9 +446,9 @@ def bfl(cache):
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=[run],
+                staff_padding=5.5,
             )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)

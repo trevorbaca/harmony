@@ -529,10 +529,10 @@ def bfl(cache):
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak direction #down"),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
             pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            staff_padding=8,
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.breathe(abjad.select.get(o.pleaves(), [1, 3]))
@@ -541,9 +541,9 @@ def bfl(cache):
             baca.mspanners.text(
                 (),
                 "T -> A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=baca.select.lparts(clpart, [1, 1 + 1]),
+                staff_padding=5.5,
             )
     with baca.scope(m.get(13, 14)) as o:
         cmgroups = baca.select.cmgroups(o, [1])
@@ -554,9 +554,9 @@ def bfl(cache):
             baca.mspanners.text(
                 (),
                 "T -> A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=baca.select.lparts(clpart, [2, 2 + 1]),
+                staff_padding=5.5,
             )
     with baca.scope(m[15]) as o:
         baca.stem_tremolo(o.pleaves()[-2:])
@@ -565,9 +565,9 @@ def bfl(cache):
         baca.mspanners.text(
             (),
             "T -> A =|",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
             pieces=baca.select.lparts(leaves, [2, 4]),
+            staff_padding=5.5,
         )
         baca.rspanners.metric_modulation(
             o.leaves()[-2:],

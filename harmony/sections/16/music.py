@@ -216,9 +216,9 @@ def bfl(m):
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=[run],
+                staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
@@ -239,19 +239,19 @@ def bfl(m):
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=[run],
+                staff_padding=5.5,
             )
     with baca.scope(m[10]) as o:
         with baca.scope(o.leaves()[1:]) as u:
             baca.mspanners.text(
                 (),
                 "A =|",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
                 pieces=[baca.select.rleak(u)],
                 right_broken=True,
+                staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(
                 u,
