@@ -454,10 +454,9 @@ def bfl(cache):
         baca.breathe(o.pleaf(-1))
         for clpart in baca.select.clparts(o, [2]):
             baca.mspanners.text(
-                (),
+                baca.select.lparts(o.rleaves(), [1, 1 + 1]),
                 "T -> A =|",
                 bookend=False,
-                pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
                 staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
@@ -467,10 +466,9 @@ def bfl(cache):
         for clpart in baca.select.clparts(o, [4]):
             clpart = baca.select.rleak(clpart)
             baca.mspanners.text(
-                (),
+                baca.select.lparts(clpart, [2, 2 + 1]),
                 "T -> A =|",
                 bookend=False,
-                pieces=baca.select.lparts(clpart, [2, 2 + 1]),
                 staff_padding=5.5,
             )
     with baca.scope(m.get(7, 8)) as o:

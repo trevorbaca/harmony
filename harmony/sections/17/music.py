@@ -263,11 +263,10 @@ def bfl(m):
         baca.pitch(o, "D5")
         with baca.scope(o.leaves()[:3]) as u:
             baca.mspanners.text(
-                (),
+                [u],
                 "A =|",
                 bookend=False,
                 left_broken=True,
-                pieces=[u],
                 staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(

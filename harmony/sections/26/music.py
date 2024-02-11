@@ -365,9 +365,8 @@ def bfl(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
         baca.mspanners.text(
-            (),
+            baca.select.lparts(o, [1, 1 + 1]),
             "(T) -> A -> (T)",
-            pieces=baca.select.lparts(o, [1, 1 + 1]),
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
@@ -384,9 +383,8 @@ def bfl(m):
             )
             leaves = baca.select.rleak(run)
             baca.mspanners.text(
-                (),
+                baca.select.lparts(leaves, [1, 1 + 1]),
                 "A -> T -> A",
-                pieces=baca.select.lparts(leaves, [1, 1 + 1]),
                 staff_padding=10,
             )
     with baca.scope(m[9]) as o:

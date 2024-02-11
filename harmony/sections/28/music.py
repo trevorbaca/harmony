@@ -371,10 +371,9 @@ def hp(cache):
         )
         baca.override.dls_staff_padding(o, 4)
         baca.mspanners.text(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
-            pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             staff_padding=3,
         )
         baca.markup(

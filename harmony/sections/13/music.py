@@ -296,12 +296,11 @@ def bfl(cache):
     with baca.scope(m[4]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
         baca.mspanners.text(
-            (),
+            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             bookend=False,
             direction=abjad.DOWN,
-            pieces=[baca.select.rleak(baca.select.tleaves(o, grace=False))],
             staff_padding=8,
         )
     with baca.scope(m[5]) as o:
@@ -319,10 +318,9 @@ def bfl(cache):
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
             baca.mspanners.text(
-                (),
+                baca.select.lparts(clpart, [1, 1 + 1]),
                 "T -> A =|",
                 bookend=False,
-                pieces=baca.select.lparts(clpart, [1, 1 + 1]),
                 staff_padding=5.5,
             )
     with baca.scope(m.get(1, 5)) as o:
