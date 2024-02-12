@@ -479,9 +479,8 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.mspanners.text(
-                [run],
+                run,
                 "A =|",
-                bookend=False,
                 staff_padding=3,
             )
     with baca.scope(m.get(5, 6)) as o:
@@ -489,9 +488,8 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.mspanners.text(
-                [run],
+                run,
                 "A =|",
-                bookend=False,
                 staff_padding=3,
             )
         baca.rspanners.metric_modulation(
