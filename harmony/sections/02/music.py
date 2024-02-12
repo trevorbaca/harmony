@@ -1007,8 +1007,9 @@ def cb2(cache):
         )
         baca.override.dls_staff_padding(o, 5)
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:

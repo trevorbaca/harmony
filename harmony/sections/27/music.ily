@@ -3937,12 +3937,6 @@ number.27.Contrabass.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
       %! SPANNER_START
-    - \baca-text-spanner-right-text "P2"
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
-      %! SPANNER_START
-    - \tweak bound-details.right.stencil-align-dir-y #center
-      %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
     \bacaStartTextSpanSCP
@@ -3960,6 +3954,14 @@ number.27.Contrabass.2.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
     ]
+      %! SPANNER_START
+    - \baca-dashed-line-with-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P2"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     - \tweak stencil ##f
     ~
 
@@ -3978,6 +3980,8 @@ number.27.Contrabass.2.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
         \pp
+          %! SPANNER_STOP
+        \bacaStopTextSpanSCP
           %! SPANNER_START
         - \baca-dashed-line-with-hook
           %! SPANNER_START

@@ -838,6 +838,7 @@ def vc1(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "T4 -> P1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:
@@ -905,6 +906,7 @@ def vc2(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "T4 -> P1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:
@@ -986,6 +988,7 @@ def cb1(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "T4 -> P1",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:
@@ -1000,36 +1003,39 @@ def cb1(cache):
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[9]) as o:
-        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [2, 2 + 1]),
+            baca.select.lparts(o.tleaves(), [2, 2]),
             "o< p >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],
             "O -> P4",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[10]) as o:
-        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [2, 2 + 1]),
+            baca.select.clparts(o.tleaves(), [2]),
             "o< p >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],
             "O -> P4",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[11]) as o:
-        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [2, 1 + 1]),
+            baca.select.lparts(o.tleaves(), [2, 1]),
             "o< p >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],
             "O -> P4",
+            do_not_rleak=True,
             staff_padding=3,
         ),
     with baca.scope(m.get(9, 11)) as o:
@@ -1100,6 +1106,7 @@ def cb2(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "T4 -> P1",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:

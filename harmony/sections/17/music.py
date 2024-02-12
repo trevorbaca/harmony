@@ -506,6 +506,7 @@ def vc1(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "T4 -> P1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:

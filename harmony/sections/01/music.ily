@@ -1809,7 +1809,7 @@ number.1.Contrabass.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 4.25
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -1848,7 +1848,7 @@ number.1.Contrabass.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "P3"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 4.25
       %! SPANNER_START
     \bacaStartTextSpanSCP
     - \tweak stencil ##f
@@ -1874,7 +1874,7 @@ number.1.Contrabass.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 4.25
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
@@ -1909,7 +1909,7 @@ number.1.Contrabass.1.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-text "P4"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 4.25
       %! SPANNER_START
     \bacaStartTextSpanSCP
     - \tweak stencil ##f
@@ -1927,11 +1927,11 @@ number.1.Contrabass.1.Music = {
     \bacaStopTextSpanSCP
     ]
       %! SPANNER_START
-    - \baca-invisible-line
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
       %! SPANNER_START
-    - \tweak staff-padding 3
+    - \tweak staff-padding 4.25
       %! SPANNER_START
     \bacaStartTextSpanSCP
     - \tweak stencil ##f
@@ -1939,8 +1939,6 @@ number.1.Contrabass.1.Music = {
 
     a,4
     :32
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
 
@@ -1973,6 +1971,8 @@ number.1.Contrabass.1.Music = {
     r4
       %! SPANNER_STOP
     \!
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 

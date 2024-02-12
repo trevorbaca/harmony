@@ -855,8 +855,9 @@ def cb1(cache):
             left_broken=True,
         )
         baca.mspanners.scp(
-            [o.leaves()],
+            [o],
             "P1 -> T1",
+            do_not_rleak=True,
             left_broken=True,
             staff_padding=3,
         )
@@ -900,8 +901,9 @@ def cb1(cache):
             "mf > p",
         )
         baca.mspanners.scp(
-            [o.leaves()],
+            [o],
             "P1 -> T1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -948,8 +950,9 @@ def cb2(m):
             "p < f",
         )
         baca.mspanners.scp(
-            baca.select.lparts(o.leaves(), [2, 3]),
+            baca.select.lparts(o, [2, 2]),
             "T1 -> P2 -> O",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
