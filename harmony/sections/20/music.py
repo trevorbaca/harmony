@@ -431,9 +431,10 @@ def va(m):
         baca.dynamic(o.phead(1), "p")
         with baca.scope(o.leaves()[3:]) as u:
             baca.mspanners.scp(
-                [baca.select.rleak(u)],
+                [u],
                 "P4 -> T1",
                 right_broken=True,
+                rleak=True,
                 staff_padding=3,
             )
             baca.rspanners.metric_modulation(
