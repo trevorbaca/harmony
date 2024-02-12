@@ -319,7 +319,7 @@ def bfl(cache):
             baca.mspanners.text(
                 baca.select.lparts(clpart, [1, 1 + 1]),
                 "T -> A =|",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(1, 5)) as o:

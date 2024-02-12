@@ -431,7 +431,7 @@ def vc1(cache):
         baca.piecewise.hairpin(
             baca.select.cmgroups(o.rleaves(), [2, 3]),
             "o< mp >o",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -494,7 +494,7 @@ def vc2(cache):
         baca.piecewise.hairpin(
             baca.select.cmgroups(o.rleaves(), [2, 3]),
             "o< mp >o",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -628,7 +628,7 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 2]),
             "o< ff >o",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.mspanners.scp(
             baca.select.lparts(o.leaves(), [2, 3]),

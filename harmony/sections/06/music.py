@@ -819,7 +819,7 @@ def hp(m):
         baca.piecewise.hairpin(
             baca.select.plts(o, exclude=baca.enums.HIDDEN),
             "mf f ff fff",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[15]) as o:
@@ -1200,7 +1200,7 @@ def cb1(m):
             baca.mspanners.scp(
                 baca.select.lparts(u, [6, 5, 3, 2]),
                 "T1 -> P1 -> T1 -> P1",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
@@ -1214,7 +1214,7 @@ def cb1(m):
         baca.piecewise.hairpin(
             baca.select.plts(o),
             "pp ppp",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[10]) as o:
@@ -1235,7 +1235,7 @@ def cb1(m):
         baca.mspanners.scp(
             baca.select.cmgroups(o.rleaves(), [1]),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
-            bookend=False,
+            do_not_bookend=True,
             right_broken=True,
             staff_padding=3,
         )
@@ -1261,12 +1261,12 @@ def cb2(m):
             baca.piecewise.hairpin(
                 baca.select.mgroups(u, [2, 1, 1, 2]),
                 "o< mp > p < f",
-                bookend=False,
+                do_not_bookend=True,
             )
             baca.mspanners.scp(
                 baca.select.lparts(u, [3, 4, 4, 2, 3, 5]),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:

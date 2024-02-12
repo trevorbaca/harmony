@@ -655,7 +655,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
-                bookend=False,
+                do_not_bookend=True,
             )
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
@@ -663,7 +663,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
-                bookend=False,
+                do_not_bookend=True,
             )
     for name in ["va", "vc2"]:
         m = cache[name]
@@ -671,14 +671,14 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.plts(o),
                 'pp p mp mf "f"',
-                bookend=False,
+                do_not_bookend=True,
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
         baca.piecewise.hairpin(
             baca.select.plts(o)[1:],
             'p mp mf "f"',
-            bookend=False,
+            do_not_bookend=True,
         )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
@@ -686,7 +686,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
-                bookend=False,
+                do_not_bookend=True,
             )
     for name in ["bfl", "hp", "va", "vc1", "vc2", "cb1"]:
         m = cache[name]

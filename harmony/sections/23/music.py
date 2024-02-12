@@ -487,7 +487,7 @@ def vc1(cache):
         baca.mspanners.scp(
             baca.select.mgroups(leaves, [1, 2]),
             "T -> P =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=3,
         )
 
@@ -573,7 +573,7 @@ def cb1(cache):
         baca.mspanners.scp(
             baca.select.mgroups(leaves, [1, 2]),
             "T -> P =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=3,
         )
 
