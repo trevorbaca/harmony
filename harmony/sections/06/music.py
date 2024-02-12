@@ -1145,8 +1145,9 @@ def vc2(m):
             "mf >o !",
         )
         baca.mspanners.scp(
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(10, 15)) as o:
@@ -1190,8 +1191,9 @@ def cb1(m):
             "o< p >o !",
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            o.tleaves(),
             "T1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -1207,15 +1209,17 @@ def cb1(m):
             )
     with baca.scope(m.get(4, 7)) as o:
         baca.flat_glissando(o.run(-1), "E1")
-        with baca.scope(baca.select.rleak(o.runs()[-1:])) as u:
+        with baca.scope(o.runs()[-1:]) as u:
             baca.piecewise.hairpin(
-                baca.select.lparts(u, [6, 5, 3, 2]),
+                baca.select.lparts(u, [6, 5, 3, 1]),
                 "o< mf > p < f",
+                rleak=True,
             )
             baca.mspanners.scp(
-                baca.select.lparts(u, [6, 5, 3, 2]),
+                baca.select.lparts(u, [6, 5, 3, 1]),
                 "T1 -> P1 -> T1 -> P1",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
@@ -1243,14 +1247,16 @@ def cb1(m):
             right_broken=True,
         )
         baca.piecewise.hairpin(
-            baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 2]),
+            baca.select.mgroups(o, [1, 1, 1, 1, 1, 1]),
             "o< mf > p < f > p < ff >o !",
             right_broken=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.cmgroups(o.rleaves(), [1]),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
             do_not_bookend=True,
+            do_not_rleak=True,
             right_broken=True,
             staff_padding=3,
         )
@@ -1266,22 +1272,25 @@ def cb2(m):
             "o< p >o !",
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            o.tleaves(),
             "T1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 7)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
-        with baca.scope(baca.select.rleak(o.tleaves())) as u:
+        with baca.scope(o.tleaves()) as u:
             baca.piecewise.hairpin(
-                baca.select.mgroups(u, [2, 1, 1, 2]),
+                baca.select.mgroups(u, [2, 1, 1, 1]),
                 "o< mp > p < f",
                 do_not_bookend=True,
+                rleak=True,
             )
             baca.mspanners.scp(
-                baca.select.lparts(u, [3, 4, 4, 2, 3, 5]),
+                baca.select.lparts(u, [3, 4, 4, 2, 3, 4]),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -1293,25 +1302,29 @@ def cb2(m):
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
-        with baca.scope(baca.select.rleak(o.tleaves())) as u:
+        with baca.scope(o.tleaves()) as u:
             baca.spanners.hairpin(
                 u,
                 "mf >o !",
+                rleak=True,
             )
             baca.mspanners.scp(
                 u,
                 "P1 =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
         baca.piecewise.hairpin(
-            baca.select.mgroups(o.rleaves(), [2, 1, 1, 3]),
+            baca.select.mgroups(o, [2, 1, 1, 2]),
             "o< f > p < ff >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.mgroups(o.leaves(), [2, 1, 1, 2]),
             "T1 -> P2 -> T1 -> P1 -> T1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 15)) as o:

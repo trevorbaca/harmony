@@ -587,6 +587,7 @@ def cb2(m):
             baca.mspanners.scp(
                 [o.leaves()],
                 "P1 -> T1",
+                do_not_rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[1]) as o:

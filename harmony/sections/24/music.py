@@ -368,8 +368,9 @@ def va(m):
         baca.pitch(o, "F4")
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o):
@@ -388,8 +389,9 @@ def va(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#3")
         baca.mspanners.scp(
-            baca.select.plts(o.leaves()),
+            o.plts(),
             "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
 
@@ -405,8 +407,9 @@ def vc1(m):
             baca.triple_staccato(u)
         # NOTE: text spanner must currently come before pitched trill spanner
         baca.mspanners.scp(
-            o.leaves()[5:12],
+            o.leaves()[5:11],
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o)[1:-1]:
@@ -420,13 +423,12 @@ def vc1(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
             )
-        runs = abjad.select.get(
-            abjad.select.runs(baca.select.rleak(o.leaves())), [0, -1]
-        )
+        runs = abjad.select.get(abjad.select.runs(o.rleaves()), [0, -1])
         for run in runs:
             baca.mspanners.scp(
-                baca.select.rleak(run),
+                run,
                 "P =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[4]) as o:
@@ -441,8 +443,9 @@ def vc1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
         baca.mspanners.scp(
-            baca.select.plts(o.leaves()),
+            o.plts(),
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
 
@@ -453,8 +456,9 @@ def vc2(m):
         baca.pitch(o, "F4")
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o):
@@ -475,8 +479,9 @@ def vc2(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#2")
         baca.mspanners.scp(
-            baca.select.plts(o.leaves()),
+            o.plts(),
             "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
 
@@ -492,8 +497,9 @@ def cb1(m):
             baca.triple_staccato(u)
         # NOTE: text spanner must currently come before pitched trill spanner
         baca.mspanners.scp(
-            o.leaves()[5:12],
+            o[5:11],
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o)[1:-1]:
@@ -507,14 +513,12 @@ def cb1(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",
             )
-        runs = abjad.select.get(
-            abjad.select.runs(baca.select.rleak(o.leaves())), [0, -1]
-        )
+        runs = abjad.select.get(abjad.select.runs(o.rleaves()), [0, -1])
         for run in runs:
-            run = baca.select.rleak(baca.select.ltleaves(run))
             baca.mspanners.scp(
                 run,
                 "P =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[4]) as o:
@@ -529,8 +533,9 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
         baca.mspanners.scp(
-            baca.select.plts(o.leaves()),
+            o.plts(),
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
 
@@ -541,8 +546,9 @@ def cb2(m):
         baca.pitch(o, "E4", do_not_transpose=True)
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o):
@@ -563,8 +569,9 @@ def cb2(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")
         baca.mspanners.scp(
-            baca.select.plts(o.leaves()),
+            o.plts(),
             "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
 
@@ -594,6 +601,7 @@ def composites(cache):
                 [o.leaves()],
                 "T2 -> T4",
                 tweak,
+                do_not_rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

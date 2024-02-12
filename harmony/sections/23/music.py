@@ -410,8 +410,9 @@ def va(cache):
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "ff")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            baca.select.tleaves(o),
             "P =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -426,8 +427,9 @@ def va(cache):
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
         baca.mspanners.scp(
-            baca.select.mgroups(o.leaves(), [2, 1]),
+            baca.select.mgroups(o, [2, 1]),
             "T -> P -> T",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -440,6 +442,7 @@ def va(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
 
@@ -453,8 +456,9 @@ def vc1(cache):
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "ff")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            o.tleaves(),
             "P =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -473,6 +477,7 @@ def vc1(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T -> P",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(6, 7)) as o:
@@ -485,9 +490,10 @@ def vc1(cache):
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.mspanners.scp(
-            baca.select.mgroups(leaves, [1, 2]),
+            baca.select.mgroups(leaves, [1, 1]),
             "T -> P =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=3,
         )
 
@@ -535,6 +541,7 @@ def vc2(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
 
@@ -548,8 +555,9 @@ def cb1(cache):
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "ff")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            o.tleaves(),
             "P =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -573,9 +581,10 @@ def cb1(cache):
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.mspanners.scp(
-            baca.select.mgroups(leaves, [1, 2]),
+            baca.select.mgroups(leaves, [1, 1]),
             "T -> P =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=3,
         )
 
@@ -607,6 +616,7 @@ def cb2(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "P3 -> T1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -619,6 +629,7 @@ def cb2(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
 
