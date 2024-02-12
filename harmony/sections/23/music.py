@@ -428,7 +428,6 @@ def va(cache):
         baca.mspanners.scp(
             baca.select.mgroups(o.leaves(), [2, 1]),
             "T -> P -> T",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -441,7 +440,6 @@ def va(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
-            bookend=True,
             staff_padding=3,
         )
 
@@ -475,7 +473,6 @@ def vc1(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T -> P",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m.get(6, 7)) as o:
@@ -490,6 +487,7 @@ def vc1(cache):
         baca.mspanners.scp(
             baca.select.mgroups(leaves, [1, 2]),
             "T -> P =|",
+            bookend=False,
             staff_padding=3,
         )
 
@@ -535,7 +533,6 @@ def vc2(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
-            bookend=True,
             staff_padding=3,
         )
 
@@ -576,6 +573,7 @@ def cb1(cache):
         baca.mspanners.scp(
             baca.select.mgroups(leaves, [1, 2]),
             "T -> P =|",
+            bookend=False,
             staff_padding=3,
         )
 
@@ -607,7 +605,6 @@ def cb2(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "P3 -> T1",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -620,7 +617,6 @@ def cb2(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
-            bookend=True,
             staff_padding=3,
         )
 

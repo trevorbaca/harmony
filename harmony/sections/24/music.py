@@ -390,7 +390,6 @@ def va(m):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
-            bookend=True,
             staff_padding=5.5,
         )
 
@@ -444,7 +443,6 @@ def vc1(m):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
-            bookend=True,
             staff_padding=5.5,
         )
 
@@ -479,7 +477,6 @@ def vc2(m):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
-            bookend=True,
             staff_padding=5.5,
         )
 
@@ -534,7 +531,6 @@ def cb1(m):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
-            bookend=True,
             staff_padding=5.5,
         )
 
@@ -569,7 +565,6 @@ def cb2(m):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
-            bookend=True,
             staff_padding=5.5,
         )
 
@@ -599,7 +594,6 @@ def composites(cache):
                 [o.leaves()],
                 "T2 -> T4",
                 tweak,
-                bookend=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

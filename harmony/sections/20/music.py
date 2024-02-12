@@ -433,7 +433,6 @@ def va(m):
             baca.mspanners.scp(
                 [baca.select.rleak(u)],
                 "P4 -> T1",
-                bookend=True,
                 right_broken=True,
                 staff_padding=3,
             )

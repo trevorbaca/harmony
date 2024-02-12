@@ -943,6 +943,7 @@ def cb1(cache):
         baca.mspanners.scp(
             baca.select.plts(leaves),
             "P2 -> P4 -> P1 ||",
+            bookend=False,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:

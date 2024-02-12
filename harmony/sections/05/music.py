@@ -651,7 +651,6 @@ def cb1(m):
         baca.mspanners.scp(
             [o.tleaves()],
             "P1 -> T1",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -713,7 +712,6 @@ def cb2(m):
         baca.mspanners.scp(
             baca.select.lparts(o.leaves(), [2, 3]),
             "(T1) -> P2 -> O",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:

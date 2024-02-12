@@ -600,7 +600,6 @@ def va(cache):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P2 -> P1 -> P3 -> P2",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -620,7 +619,6 @@ def vc1(cache):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P2 -> O -> P2 -> P1 -> P3",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -650,7 +648,6 @@ def vc2(cache):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "O -> P2 -> P1",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -682,7 +679,6 @@ def cb1(cache):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P1 -> P2 -> O -> P2",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -717,7 +713,6 @@ def cb2(cache):
         baca.mspanners.scp(
             baca.select.plts(o.leaves()),
             "P1 -> P2 -> O",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
