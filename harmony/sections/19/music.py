@@ -870,7 +870,7 @@ def va(cache):
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
-            with_next_leaf=True,
+            rleak=True,
         )
     for item in [(1, 2), (4, 9), 12]:
         with baca.scope(m.get(item)) as o:

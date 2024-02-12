@@ -698,7 +698,7 @@ def va(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.rspanners.xfb(
             o.pleaves(),

@@ -690,7 +690,7 @@ def va(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
             "f >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.rspanners.metric_modulation(
             baca.select.pleaves(o, grace=False)[:3],
@@ -762,7 +762,7 @@ def vc1(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 4),
@@ -915,7 +915,7 @@ def cb1(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())

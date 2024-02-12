@@ -810,7 +810,7 @@ def vc2(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 5),
         baca.mspanners.scp(
@@ -1000,7 +1000,7 @@ def cb2(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 5)
         baca.mspanners.scp(

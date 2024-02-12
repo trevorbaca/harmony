@@ -834,14 +834,14 @@ def va(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(5, 8)) as o:
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "f >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],
@@ -887,7 +887,7 @@ def vc1(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -895,7 +895,7 @@ def vc1(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "f >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 4 + 2)
         baca.mspanners.scp(
@@ -954,7 +954,7 @@ def vc2(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "f >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],
@@ -1001,7 +1001,7 @@ def cb1(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -1009,7 +1009,7 @@ def cb1(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "f >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],
@@ -1068,7 +1068,7 @@ def cb2(cache):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "f >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             [o.tleaves()],

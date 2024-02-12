@@ -250,7 +250,7 @@ def va(m):
         baca.spanners.hairpin(
             baca.select.tleaves(o),
             "mf >o !",
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -340,7 +340,7 @@ def composites(cache):
             baca.spanners.hairpin(
                 baca.select.tleaves(o),
                 "mp >o !",
-                with_next_leaf=True,
+                rleak=True,
             )
             with baca.scope(o.leaves()[-2:]) as u:
                 if name in ("va", "vc1", "vc2"):
@@ -372,7 +372,7 @@ def composites(cache):
             baca.spanners.hairpin(
                 baca.select.tleaves(o),
                 "o<| ff",
-                with_next_leaf=True,
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
