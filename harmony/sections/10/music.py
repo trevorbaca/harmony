@@ -871,7 +871,6 @@ def cb1(m):
         baca.mspanners.scp(
             baca.select.mgroups(o.leaves(), [1, 2]),
             "T4 -> O -> T4",
-            bookend=True,
             staff_padding=3,
         )
 
