@@ -586,9 +586,8 @@ def hp(cache):
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 4)
         baca.mspanners.text(
-            [o.rleaves()],
+            o.rleaves(),
             r"\baca-fingernail-markup =|",
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -644,10 +643,9 @@ def va(cache):
         m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.mspanners.text(
-            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            baca.select.rleak(baca.select.tleaves(o, grace=False)),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            bookend=False,
             direction=abjad.DOWN,
             staff_padding=8,
         )
@@ -680,10 +678,9 @@ def va(cache):
         m = cache[name]
     with baca.scope(m.get(4, 6)) as o:
         baca.mspanners.text(
-            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            baca.select.rleak(baca.select.tleaves(o, grace=False)),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            bookend=False,
             direction=abjad.DOWN,
             staff_padding=8,
         )
@@ -749,10 +746,9 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.mspanners.text(
-            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            baca.select.rleak(baca.select.tleaves(o, grace=False)),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            bookend=False,
             direction=abjad.DOWN,
             staff_padding=9,
         ),
@@ -887,10 +883,9 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.mspanners.text(
-            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            baca.select.rleak(baca.select.tleaves(o, grace=False)),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            bookend=False,
             direction=abjad.DOWN,
             staff_padding=8,
         )

@@ -214,9 +214,8 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.mspanners.text(
-                [run],
+                run,
                 "A =|",
-                bookend=False,
                 staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
@@ -236,17 +235,15 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.mspanners.text(
-                [run],
+                run,
                 "A =|",
-                bookend=False,
                 staff_padding=5.5,
             )
     with baca.scope(m[10]) as o:
         with baca.scope(o.leaves()[1:]) as u:
             baca.mspanners.text(
-                [baca.select.rleak(u)],
+                baca.select.rleak(u),
                 "A =|",
-                bookend=False,
                 right_broken=True,
                 staff_padding=5.5,
             )

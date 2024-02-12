@@ -382,10 +382,9 @@ def bfl(cache):
             forbid_al_niente_to_bar_line=True,
         )
         baca.mspanners.text(
-            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            baca.select.rleak(baca.select.tleaves(o, grace=False)),
             r"\harmony-g-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            bookend=False,
             direction=abjad.DOWN,
             staff_padding=8,
         )
@@ -428,10 +427,9 @@ def bfl(cache):
     with baca.scope(m[15]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
         baca.mspanners.text(
-            [baca.select.rleak(baca.select.tleaves(o, grace=False))],
+            baca.select.rleak(baca.select.tleaves(o, grace=False)),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
-            bookend=False,
             direction=abjad.DOWN,
             staff_padding=8,
         )

@@ -305,9 +305,8 @@ def bfl(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.mspanners.text(
-                [run],
+                run,
                 "A =|",
-                bookend=False,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(1, 5)) as o:
