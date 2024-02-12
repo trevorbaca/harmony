@@ -468,7 +468,7 @@ def vc1(cache):
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
             " o< p >o ! o< pp >o ! o< pp >o !",
             forbid_al_niente_to_bar_line=True,
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),
@@ -532,7 +532,7 @@ def vc2(cache):
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
             " o< pp >o ! o< p >o ! o< pp >o !",
             forbid_al_niente_to_bar_line=True,
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),
@@ -601,7 +601,7 @@ def cb1(cache):
             " o< mp >o ! o< mp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< p >o ! o< pp >o !",
             forbid_al_niente_to_bar_line=True,
-            with_next_leaf=True,
+            rleak=True,
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),

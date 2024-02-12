@@ -856,7 +856,7 @@ def vc1(cache):
             baca.spanners.hairpin(
                 run,
                 "mp -- !",
-                with_next_leaf=True,
+                rleak=True,
             )
             baca.rspanners.damp(
                 run,
