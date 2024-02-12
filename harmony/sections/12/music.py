@@ -539,7 +539,7 @@ def bfl(cache):
             baca.mspanners.text(
                 baca.select.lparts(clpart, [1, 1 + 1]),
                 "T -> A =|",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(13, 14)) as o:
@@ -551,7 +551,7 @@ def bfl(cache):
             baca.mspanners.text(
                 baca.select.lparts(clpart, [2, 2 + 1]),
                 "T -> A =|",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[15]) as o:
@@ -561,7 +561,7 @@ def bfl(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [2, 4]),
             "T -> A =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
         baca.rspanners.metric_modulation(
@@ -769,7 +769,7 @@ def hp(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 4]),
             "o< mf >o",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.markup(
             o.pleaf(0),

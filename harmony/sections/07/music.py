@@ -849,7 +849,7 @@ def cb1(cache):
         baca.piecewise.hairpin(
             [o.rleaves()],
             ">o",
-            bookend=False,
+            do_not_bookend=True,
             left_broken=True,
         )
         baca.mspanners.scp(

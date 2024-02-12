@@ -358,7 +358,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 3]),
             "pp < p >o",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),
@@ -664,7 +664,7 @@ def vc2(cache):
             baca.select.lparts(o, [1, 2, 3, 2]),
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            bookend=False,
+            do_not_bookend=True,
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -698,7 +698,7 @@ def cb1(cache):
             baca.select.lparts(o, [2, 3, 2]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            bookend=False,
+            do_not_bookend=True,
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:

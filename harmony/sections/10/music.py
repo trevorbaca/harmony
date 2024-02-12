@@ -857,7 +857,7 @@ def cb1(m):
         baca.mspanners.scp(
             baca.select.mgroups(o.rleaves(), [2, 1, 1, 1, 1, 2, 1, 1, 2]),
             "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=3,
         )
     with baca.scope(m.get(12, 15)) as o:
