@@ -365,26 +365,27 @@ def bfl(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
         baca.mspanners.text(
-            baca.select.lparts(o, [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(T) -> A -> (T)",
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            leaves = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 baca.select.tleaves(run),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
-            leaves = baca.select.rleak(run)
             baca.mspanners.text(
-                baca.select.lparts(leaves, [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
+                rleak=True,
                 staff_padding=10,
             )
     with baca.scope(m[9]) as o:
