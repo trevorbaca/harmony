@@ -450,8 +450,9 @@ def va(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb3")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            o.tleaves(),
             "T4 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(5, 10)) as o:

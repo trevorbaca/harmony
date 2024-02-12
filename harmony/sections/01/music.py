@@ -507,8 +507,9 @@ def cb2(m):
             "mf >o !",
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3 + 1,
         )
     with baca.scope(m.get(1, 3)) as o:
