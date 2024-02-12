@@ -1200,6 +1200,7 @@ def cb1(m):
             baca.mspanners.scp(
                 baca.select.lparts(u, [6, 5, 3, 2]),
                 "T1 -> P1 -> T1 -> P1",
+                bookend=False,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
@@ -1234,6 +1235,7 @@ def cb1(m):
         baca.mspanners.scp(
             baca.select.cmgroups(o.rleaves(), [1]),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
+            bookend=False,
             right_broken=True,
             staff_padding=3,
         )
@@ -1264,6 +1266,7 @@ def cb2(m):
             baca.mspanners.scp(
                 baca.select.lparts(u, [3, 4, 4, 2, 3, 5]),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
+                bookend=False,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -1294,7 +1297,6 @@ def cb2(m):
         baca.mspanners.scp(
             baca.select.mgroups(o.leaves(), [2, 1, 1, 2]),
             "T1 -> P2 -> T1 -> P1 -> T1",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 15)) as o:

@@ -855,7 +855,6 @@ def cb1(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "P1 -> T1",
-            bookend=True,
             left_broken=True,
             staff_padding=3,
         )
@@ -901,7 +900,6 @@ def cb1(cache):
         baca.mspanners.scp(
             [o.leaves()],
             "P1 -> T1",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -950,7 +948,6 @@ def cb2(m):
         baca.mspanners.scp(
             baca.select.lparts(o.leaves(), [2, 3]),
             "T1 -> P2 -> O",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:

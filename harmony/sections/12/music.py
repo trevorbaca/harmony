@@ -846,7 +846,6 @@ def va(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "P4 -> T4",
-            bookend=True,
             staff_padding=3,
         )
     with baca.scope(m[10]) as o:
@@ -902,7 +901,6 @@ def vc1(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "P4 -> T4",
-            bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[10]) as o:
@@ -961,7 +959,6 @@ def vc2(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "P4 -> T4",
-            bookend=True,
             staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1017,7 +1014,6 @@ def cb1(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "P4 -> T4",
-            bookend=True,
             staff_padding=5.5,
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1077,7 +1073,6 @@ def cb2(cache):
         baca.mspanners.scp(
             [o.tleaves()],
             "P4 -> T4",
-            bookend=True,
             staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 6)
@@ -1129,14 +1124,12 @@ def composites(cache):
                 baca.mspanners.scp(
                     [baca.select.rleak(baca.select.ltleaves(o))],
                     "T4 -> O",
-                    bookend=True,
                     staff_padding=5.5,
                 )
             elif name in ("cb1", "cb2"):
                 baca.mspanners.scp(
                     [baca.select.rleak(baca.select.ltleaves(o))],
                     "(T4) -> O",
-                    bookend=True,
                     staff_padding=5.5,
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
