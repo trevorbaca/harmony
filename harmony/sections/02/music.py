@@ -751,6 +751,7 @@ def vc1(cache):
         baca.mspanners.scp(
             baca.select.plts(leaves),
             "P2 -> P4 -> P1 -> P3 ->",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -814,8 +815,9 @@ def vc2(cache):
         )
         baca.override.dls_staff_padding(o, 5),
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 5)) as o:
@@ -862,8 +864,9 @@ def vc2(cache):
         )
         baca.override.dls_staff_padding(o, 4),
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.tleaves(o)),
+            o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
@@ -939,12 +942,12 @@ def cb1(cache):
             "f >o !",
         )
         baca.override.dls_staff_padding(o, 4),
-        leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.mspanners.scp(
-            baca.select.plts(leaves),
-            "P2 -> P4 -> P1 ||",
+            o.plts(),
+            "P2 -> P4 -> P1 =|",
             do_not_bookend=True,
-            staff_padding=3,
+            rleak=True,
+            staff_padding=4.25,
         )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "percussion")

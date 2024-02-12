@@ -612,14 +612,16 @@ def vc2(m):
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
-        with baca.scope(baca.select.rleak(o.tleaves())) as u:
+        with baca.scope(o.tleaves()) as u:
             baca.spanners.hairpin(
                 u,
                 "mf >o !",
+                rleak=True,
             )
             baca.mspanners.scp(
                 u,
                 "P1 =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
@@ -655,6 +657,7 @@ def cb1(m):
         baca.mspanners.scp(
             [o.tleaves()],
             "P1 -> T1",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -714,8 +717,9 @@ def cb2(m):
             left_broken=True,
         )
         baca.mspanners.scp(
-            baca.select.lparts(o.leaves(), [2, 3]),
+            baca.select.lparts(o, [2, 2]),
             "(T1) -> P2 -> O",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
@@ -727,14 +731,16 @@ def cb2(m):
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
-        with baca.scope(baca.select.rleak(o.tleaves())) as u:
+        with baca.scope(o.tleaves()) as u:
             baca.spanners.hairpin(
                 u,
                 "mf >o !",
+                rleak=True,
             )
             baca.mspanners.scp(
                 u,
                 "P1 =|",
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[3]) as o:
