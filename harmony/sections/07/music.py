@@ -719,9 +719,10 @@ def vc1(cache):
             left_broken=True,
         )
         baca.mspanners.bow_speed(
-            baca.select.rleak(o),
+            o,
             "scr. =|",
             staff_padding=3.5,
+            rleak=True,
             left_broken=True,
         )
     with baca.scope(m[2]) as o:
@@ -760,8 +761,9 @@ def vc1(cache):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.mspanners.bow_speed(
-                baca.select.rleak(o),
+                o,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
@@ -815,10 +817,10 @@ def vc2(cache):
         baca.pitch(o, "Eqf4"),
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:

@@ -483,8 +483,9 @@ def va(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.mspanners.bow_speed(
-                baca.select.rleak(run),
+                run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:
@@ -510,8 +511,9 @@ def va(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.mspanners.bow_speed(
-                baca.select.rleak(run),
+                run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
         baca.rspanners.metric_modulation(
@@ -531,8 +533,9 @@ def vc1(m):
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
             baca.mspanners.bow_speed(
-                baca.select.rleak(run),
+                run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:
@@ -594,8 +597,9 @@ def vc2(m):
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
             baca.mspanners.bow_speed(
-                baca.select.rleak(run),
+                run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:

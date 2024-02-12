@@ -530,8 +530,9 @@ def vc2(m):
             baca.pitch(o, "Dqf3")
             baca.dynamic(o.phead(0), "p")
             baca.mspanners.bow_speed(
-                baca.select.rleak(o),
+                o,
                 "poco scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[5]) as o:

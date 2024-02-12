@@ -394,9 +394,10 @@ def va(cache):
             left_broken=True,
         )
         baca.mspanners.bow_speed(
-            baca.select.rleak(o),
+            o,
             "poc. scr. =|",
             left_broken=True,
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -415,8 +416,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.mspanners.bow_speed(
-            baca.select.rleak(o),
+            o,
             "poco scr. =|",
+            rleak=True,
             staff_padding=3,
         )
 
