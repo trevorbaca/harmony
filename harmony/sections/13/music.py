@@ -544,8 +544,9 @@ def va(cache):
             "(mp) >o !",
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T1 =|",
+            rleak=True,
             staff_padding=3,
         )
 
@@ -595,6 +596,7 @@ def vc1(cache):
         baca.mspanners.scp(
             o.leaves(),
             "T1 =|",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -693,6 +695,7 @@ def cb1(cache):
         baca.mspanners.scp(
             o.leaves(),
             "T4 =|",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:

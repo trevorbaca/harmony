@@ -483,8 +483,9 @@ def vc1(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            o.tleaves(),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -533,8 +534,9 @@ def vc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "P4 ||",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[4]) as o:
@@ -595,15 +597,17 @@ def cb1(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "P4 ||",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -652,15 +656,17 @@ def cb2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "P4 ||",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:

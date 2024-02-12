@@ -550,6 +550,7 @@ def va(m):
         baca.mspanners.scp(
             [o.leaves()],
             "T4 -> O",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -562,7 +563,7 @@ def va(m):
             "o< ff >o !",
         )
         baca.mspanners.scp(
-            abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
+            abjad.select.partition_by_ratio(o, (4, 3)),
             "T4 -> O -> T4",
             staff_padding=5.5,
         )
@@ -576,6 +577,7 @@ def va(m):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
 
@@ -641,6 +643,7 @@ def vc2(m):
         baca.mspanners.scp(
             [o.leaves()],
             "T4 -> O",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
@@ -657,8 +660,9 @@ def vc2(m):
             "o< ff >o !",
         )
         baca.mspanners.scp(
-            abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
+            abjad.select.partition_by_ratio(o, (4, 3)),
             "T4 -> O -> T4",
+            do_not_rleak=True,
             staff_padding=7.5,
         )
     with baca.scope(m[12]) as o:
@@ -671,6 +675,7 @@ def vc2(m):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[13]) as o:
@@ -740,11 +745,11 @@ def cb2(m):
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
-            abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
+            abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff >o !",
         )
         baca.mspanners.scp(
-            abjad.select.partition_by_ratio(abjad.select.leaves(o.leaves()), (4, 3)),
+            abjad.select.partition_by_ratio(o, (4, 3)),
             "T4 -> O -> T4",
             staff_padding=3,
         )
@@ -760,6 +765,7 @@ def cb2(m):
         baca.mspanners.scp(
             [o.leaves()],
             "T2 -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
 
