@@ -374,6 +374,7 @@ def hp(cache):
             baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
+            do_not_rleak=True,
             staff_padding=3,
         )
         baca.markup(

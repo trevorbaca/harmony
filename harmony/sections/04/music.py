@@ -430,10 +430,11 @@ def va(cache):
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.mspanners.text(
-            baca.select.rleak(baca.select.tleaves(o, grace=False)),
+            baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -476,10 +477,11 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.mspanners.text(
-            baca.select.rleak(baca.select.tleaves(o, grace=False)),
+            baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -508,10 +510,11 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.mspanners.text(
-            baca.select.rleak(baca.select.tleaves(o, grace=False)),
+            baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -557,10 +560,11 @@ def cb1(cache):
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
         baca.mspanners.text(
-            baca.select.rleak(baca.select.tleaves(o, grace=False)),
+            baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
+            rleak=True,
             staff_padding=10,
         )
     for item in [(1, 6), 8, 11]:
