@@ -605,8 +605,9 @@ def cb2(m):
             'o< "mf" >o !',
         )
         baca.mspanners.scp(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            baca.select.ltleaves(o),
             "T1 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[11]) as o:
@@ -622,8 +623,9 @@ def cb2(m):
             right_broken=True,
         )
         baca.mspanners.scp(
-            o.rleaves(),
+            o,
             "T1 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 11)) as o:
