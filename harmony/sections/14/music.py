@@ -445,7 +445,6 @@ def bfl(cache):
             baca.mspanners.text(
                 run,
                 "A =|",
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(1, 11)) as o:

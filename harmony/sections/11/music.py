@@ -457,7 +457,6 @@ def bfl(cache):
                 baca.select.lparts(o, [1, 1]),
                 "T -> A =|",
                 do_not_bookend=True,
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
@@ -469,7 +468,6 @@ def bfl(cache):
                 baca.select.lparts(clpart, [2, 2]),
                 "T -> A =|",
                 do_not_bookend=True,
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(7, 8)) as o:

@@ -588,7 +588,6 @@ def hp(cache):
         baca.mspanners.text(
             o,
             r"\baca-fingernail-markup =|",
-            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -648,7 +647,6 @@ def va(cache):
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
         for run in abjad.select.runs(o, grace=True):
@@ -684,7 +682,6 @@ def va(cache):
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
         for run in abjad.select.runs(o, grace=True):
@@ -753,7 +750,6 @@ def vc1(cache):
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=9,
         ),
         for run in abjad.select.runs(o, grace=True):
@@ -890,7 +886,6 @@ def cb1(cache):
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
         for run in abjad.select.runs(o, grace=True):

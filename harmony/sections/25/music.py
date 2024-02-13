@@ -290,7 +290,6 @@ def bfl(m):
             baca.mspanners.text(
                 baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
-                rleak=True,
                 staff_padding=10,
             )
     with baca.scope(m.get(5, 10)) as o:

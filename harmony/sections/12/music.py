@@ -530,7 +530,6 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(11, 12)) as o:
@@ -540,7 +539,6 @@ def bfl(cache):
                 baca.select.lparts(clpart, [1, 1]),
                 "T -> A =|",
                 do_not_bookend=True,
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(13, 14)) as o:
@@ -552,7 +550,6 @@ def bfl(cache):
                 baca.select.lparts(clpart, [2, 2]),
                 "T -> A =|",
                 do_not_bookend=True,
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[15]) as o:
@@ -562,7 +559,6 @@ def bfl(cache):
             baca.select.lparts(o[:-1], [2, 3]),
             "T -> A =|",
             do_not_bookend=True,
-            rleak=True,
             staff_padding=5.5,
         )
         baca.rspanners.metric_modulation(

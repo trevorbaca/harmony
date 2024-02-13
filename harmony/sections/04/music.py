@@ -434,7 +434,6 @@ def va(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -481,7 +480,6 @@ def vc1(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -514,7 +512,6 @@ def vc2(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -564,7 +561,6 @@ def cb1(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=10,
         )
     for item in [(1, 6), 8, 11]:
