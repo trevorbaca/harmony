@@ -372,7 +372,6 @@ def va(m):
         baca.mspanners.scp(
             baca.select.ltleaves(o),
             "T4 =|",
-            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o):
@@ -411,7 +410,6 @@ def vc1(m):
         baca.mspanners.scp(
             o.leaves()[5:11],
             "T4 =|",
-            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o)[1:-1]:
@@ -430,7 +428,6 @@ def vc1(m):
             baca.mspanners.scp(
                 run,
                 "P =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[4]) as o:
@@ -460,7 +457,6 @@ def vc2(m):
         baca.mspanners.scp(
             baca.select.ltleaves(o),
             "T4 =|",
-            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o):
@@ -501,7 +497,6 @@ def cb1(m):
         baca.mspanners.scp(
             o[5:11],
             "T4 =|",
-            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o)[1:-1]:
@@ -520,7 +515,6 @@ def cb1(m):
             baca.mspanners.scp(
                 run,
                 "P =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[4]) as o:
@@ -550,7 +544,6 @@ def cb2(m):
         baca.mspanners.scp(
             baca.select.ltleaves(o),
             "T4 =|",
-            rleak=True,
             staff_padding=5.5,
         )
         for run in baca.select.runs(o):

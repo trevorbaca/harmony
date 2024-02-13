@@ -793,7 +793,6 @@ def composites(cache):
                 baca.mspanners.scp(
                     o.tleaves(),
                     "P1 =|",
-                    rleak=True,
                     staff_padding=3,
                 )
 

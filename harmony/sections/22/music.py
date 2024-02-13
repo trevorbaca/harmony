@@ -565,6 +565,7 @@ def va(m):
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "T4 -> O -> T4",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[12]) as o:
@@ -694,6 +695,7 @@ def cb1(m):
         baca.mspanners.scp(
             [o.leaves()],
             "T4 -> O",
+            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -751,6 +753,7 @@ def cb2(m):
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "T4 -> O -> T4",
+            do_not_rleak=True,
             staff_padding=3,
         )
         baca.override.dls_staff_padding(o, 4)
