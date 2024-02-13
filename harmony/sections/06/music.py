@@ -1237,6 +1237,7 @@ def cb1(m):
             right_broken=True,
         )
         baca.piecewise.hairpin(
+            # TODO
             baca.select.mgroups(o, [1, 1, 1, 1, 1, 1]),
             "o< mf > p < f > p < ff >o !",
             right_broken=True,

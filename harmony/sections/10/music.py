@@ -666,6 +666,7 @@ def va(m):
         ),
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
+            # TODO
             baca.select.mgroups(o, [3, 3]),
             "o< ff >o !",
             right_broken=True,
