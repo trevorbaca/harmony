@@ -284,10 +284,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         baca.piecewise.hairpin(
-            abjad.select.partition_by_ratio(
-                abjad.select.leaves(o.tleaves()),
-                (3, 4),
-            ),
+            abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
         )
         baca.rspanners.trill(
@@ -486,8 +483,9 @@ def va(cache):
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D4")
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "pp >o !",
+            rleak=True,
         )
         baca.mspanners.bow_speed(
             o,
@@ -681,10 +679,10 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.stem_tremolo(o.pleaves())
-            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
+                baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
+                rleak=True,
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.override.dynamic_text_x_offset(o.pleaf(-1), -0.25)
@@ -700,8 +698,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[5]) as o:
             baca.spanners.hairpin(
-                o.rleaves(),
+                o,
                 "f >o !",
+                rleak=True,
             )
         for n in [1, 5]:
             with baca.scope(m[n]) as o:

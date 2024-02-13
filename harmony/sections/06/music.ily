@@ -4039,10 +4039,8 @@ number.6.Cello.1.Music = {
     e'2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \f
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -4053,20 +4051,16 @@ number.6.Cello.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     - \tweak stencil ##f

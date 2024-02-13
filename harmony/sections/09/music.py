@@ -248,7 +248,7 @@ def va(m):
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
         baca.spanners.hairpin(
-            baca.select.tleaves(o),
+            o.tleaves(),
             "mf >o !",
             rleak=True,
         )
@@ -338,7 +338,7 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.override.tuplet_bracket_up(o)
             baca.spanners.hairpin(
-                baca.select.tleaves(o),
+                o.tleaves(),
                 "mp >o !",
                 rleak=True,
             )
@@ -370,7 +370,7 @@ def composites(cache):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
             baca.spanners.hairpin(
-                baca.select.tleaves(o),
+                o.tleaves(),
                 "o<| ff",
                 rleak=True,
             )

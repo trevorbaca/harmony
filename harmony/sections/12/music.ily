@@ -3306,27 +3306,21 @@ number.12.Viola.Music = {
     - \accent
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \baca-sffp
     ]
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     - \tweak stencil ##f
@@ -3931,26 +3925,20 @@ number.12.Cello.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \baca-sffp
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         ~
@@ -4488,26 +4476,20 @@ number.12.Cello.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \baca-sffp
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         ~
@@ -5150,26 +5132,20 @@ number.12.Contrabass.1.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \baca-sffp
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         \revert DynamicLineSpanner.staff-padding
@@ -5717,27 +5693,21 @@ number.12.Contrabass.2.Music = {
         - \accent
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \baca-sffp
         ]
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         - \tweak stencil ##f

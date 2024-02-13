@@ -319,10 +319,10 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 "f >o !",
+                rleak=True,
             )
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
@@ -430,9 +430,10 @@ def vc1(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
-            baca.select.cmgroups(o.rleaves(), [2, 3]),
+            baca.select.cmgroups(o, [2, 2]),
             "o< mp >o",
             do_not_bookend=True,
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -442,8 +443,9 @@ def vc1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [2, 3, 1 + 1]),
+            baca.select.lparts(o, [2, 3, 1]),
             "pp -- ! < mp >o !",
+            rleak=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -493,9 +495,10 @@ def vc2(cache):
         baca.pitches(o, "A5 C#6")
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
-            baca.select.cmgroups(o.rleaves(), [2, 3]),
+            baca.select.cmgroups(o, [2, 2]),
             "o< mp >o",
             do_not_bookend=True,
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -505,8 +508,9 @@ def vc2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2, 3, 2 + 1]),
+            baca.select.lparts(o, [1, 2, 3, 2]),
             "pp -- ! < mp -- ! >o !",
+            rleak=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -557,10 +561,10 @@ def cb1(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#4", do_not_transpose=True)
         for run in baca.select.runs(o):
-            rrun = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(rrun, [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -574,8 +578,9 @@ def cb1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [2, 3, 2 + 1]),
+            baca.select.lparts(o, [2, 3, 2]),
             "pp -- ! < mp >o !",
+            rleak=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -627,9 +632,10 @@ def cb2(cache):
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         )
         baca.piecewise.hairpin(
-            baca.select.mgroups(o.rleaves(), [3, 2]),
+            baca.select.mgroups(o, [3, 1]),
             "o< ff >o",
             do_not_bookend=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.lparts(o, [2, 2]),
@@ -645,8 +651,9 @@ def cb2(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [2, 1, 1 + 1]),
+            baca.select.lparts(o, [2, 1, 1]),
             "pp -- ! < mp >o !",
+            rleak=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -673,9 +680,10 @@ def cb2(cache):
             right_broken=True,
         )
         baca.piecewise.hairpin(
-            baca.select.mgroups(o.rleaves(), [2, 1, 2]),
+            baca.select.mgroups(o, [2, 1, 1]),
             "o< ff (ff) >o !",
             right_broken=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.lparts(o, [3, 2, 2, 3, 2, 2, 3, 2, 2, 7]),

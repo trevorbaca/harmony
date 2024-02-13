@@ -425,7 +425,7 @@ def perc1(cache):
     with baca.scope(m[5]) as o:
         baca.staff_lines(o.leaf(1, grace=False), 1)
         baca.spanners.hairpin(
-            o.leaves()[-3:],
+            o[-3:],
             "o<| f",
         )
         baca.markup(
@@ -436,11 +436,12 @@ def perc1(cache):
     with baca.scope(m[6]) as o:
         baca.laissez_vibrer(o.ptail(0))
         baca.spanners.hairpin(
-            baca.select.rleak(o.leaves()[:1]),
+            o[:1],
             "o<| mf",
+            rleak=True,
         )
         baca.spanners.hairpin(
-            o.leaves()[-2:],
+            o[-2:],
             "o<| f",
         )
     with baca.scope(m.get(5, 6)) as o:
@@ -936,8 +937,9 @@ def cb1(cache):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "f >o !",
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 4),
         baca.mspanners.scp(
@@ -998,7 +1000,7 @@ def cb2(cache):
         )
         baca.stem_tremolo(o.pleaves())
         baca.spanners.hairpin(
-            baca.select.tleaves(o),
+            o.tleaves(),
             "mf >o !",
             rleak=True,
         )

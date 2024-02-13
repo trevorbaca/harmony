@@ -356,9 +356,10 @@ def bfl(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 3]),
+            baca.select.lparts(o, [1, 2]),
             "pp < p >o",
             do_not_bookend=True,
+            rleak=True,
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),
@@ -398,7 +399,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
+                abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
             )
             baca.rspanners.trill(
@@ -489,10 +490,10 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 "f >o !",
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -625,7 +626,7 @@ def vc1(cache):
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
-            baca.select.plts(o),
+            o.plts(),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
@@ -780,10 +781,10 @@ def composites(cache):
             with baca.scope(m.get(item)) as o:
                 baca.clef(o.leaf(0), "bass")
                 for run in baca.select.runs(o):
-                    run = baca.select.rleak(run)
                     baca.spanners.hairpin(
                         run,
                         "o<| ff",
+                        rleak=True,
                     )
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)

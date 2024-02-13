@@ -266,10 +266,10 @@ def bfl(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 2 + 1]),
+            baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
+            rleak=True,
         )
         baca.rspanners.metric_modulation(
             o.leaves()[:2],
@@ -279,10 +279,10 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 1 + 1]),
+            baca.select.lparts(o.tleaves(), [1, 1]),
             "o<| f |>o !",
+            rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -311,8 +311,9 @@ def bfl(cache):
         )
         baca.breathe(o.pleaf(1))
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             'o< "f" >o !',
+            rleak=True,
         )
         for clpart in baca.select.clparts(o, [2]):
             baca.mspanners.text(
@@ -464,10 +465,10 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
-        leaves = baca.select.rleak(baca.select.tleaves(o))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 1 + 1]),
+            baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -507,9 +508,10 @@ def va(cache):
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
-            o.leaves()[:2],
+            o[:1],
             ">o !",
             left_broken=True,
+            rleak=True,
         )
         baca.spanners.hairpin(
             o.leaves(grace=False)[2:],
@@ -539,8 +541,9 @@ def va(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "D3")
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "(mp) >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.ltleaves(o),
@@ -555,9 +558,10 @@ def vc1(cache):
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
         baca.spanners.hairpin(
-            o.leaves()[:2],
+            o[:1],
             ">o !",
             left_broken=True,
+            rleak=True,
         )
         baca.spanners.hairpin(
             o.leaves(grace=False)[2:],
@@ -728,7 +732,7 @@ def cb2(cache):
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
         baca.spanners.hairpin(
-            o.leaves()[:-1],
+            o[:-1],
             "(mp) >o !",
         )
     with baca.scope(m.get(3, 5)) as o:

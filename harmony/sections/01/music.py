@@ -231,7 +231,7 @@ def perc1(m):
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         baca.spanners.hairpin(
-            o.leaves()[-2:],
+            o[-2:],
             "o<| f",
         )
         baca.markup(
@@ -243,12 +243,14 @@ def perc1(m):
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptail(0))
         baca.spanners.hairpin(
-            baca.select.rleak(o.leaves()[:1]),
+            o[:1],
             "o<| mf",
+            rleak=True,
         )
         baca.spanners.hairpin(
-            o.leaves()[-2:],
+            o[-2:-1],
             "o<| f",
+            rleak=True,
         )
     for n in [1, 2]:
         with baca.scope(m[n]) as o:
@@ -446,8 +448,9 @@ def cb1(m):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [4, 7]),
+            baca.select.lparts(o, [4, 6]),
             "o< f >o !",
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 4)
         baca.mspanners.scp(
