@@ -1237,11 +1237,10 @@ def cb1(m):
             right_broken=True,
         )
         baca.piecewise.hairpin(
-            # TODO
-            baca.select.mgroups(o, [1, 1, 1, 1, 1, 1]),
+            baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 1, 1]),
             "o< mf > p < f > p < ff >o !",
+            match=True,
             right_broken=True,
-            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.cmgroups(o.rleaves(), [1]),

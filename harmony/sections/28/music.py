@@ -680,11 +680,10 @@ def cb2(cache):
             right_broken=True,
         )
         baca.piecewise.hairpin(
-            # TODO
-            baca.select.mgroups(o, [2, 1, 1]),
+            baca.select.mgroups(o.rleaves(), [2, 1, 1, 1]),
             "o< ff (ff) >o !",
+            match=True,
             right_broken=True,
-            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.lparts(o, [3, 2, 2, 3, 2, 2, 3, 2, 2, 7]),

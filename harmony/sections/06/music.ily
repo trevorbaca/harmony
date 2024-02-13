@@ -5287,10 +5287,8 @@ number.6.Contrabass.1.Music = {
     e,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \ff
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
@@ -5309,20 +5307,16 @@ number.6.Contrabass.1.Music = {
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
 
