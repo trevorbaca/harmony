@@ -547,7 +547,6 @@ def va(cache):
         baca.mspanners.scp(
             baca.select.ltleaves(o),
             "T1 =|",
-            rleak=True,
             staff_padding=3,
         )
 

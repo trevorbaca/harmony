@@ -434,7 +434,6 @@ def va(m):
                 [u],
                 "P4 -> T1",
                 right_broken=True,
-                rleak=True,
                 staff_padding=3,
             )
             baca.rspanners.metric_modulation(

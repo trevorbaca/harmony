@@ -828,7 +828,6 @@ def cb2(cache):
             o.plts()[:2],
             "P1 -> P2 =|",
             do_not_bookend=True,
-            rleak=True,
             staff_padding=5.5,
         )
         baca.accent(o.pheads()[1:3])
