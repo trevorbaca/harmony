@@ -485,7 +485,6 @@ def va(m):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(6, 8)) as o:
@@ -533,7 +532,6 @@ def vc1(m):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 4)) as o:
@@ -627,7 +625,6 @@ def vc2(m):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(6, 8)) as o:

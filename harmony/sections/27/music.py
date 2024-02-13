@@ -643,7 +643,6 @@ def va(cache):
         baca.mspanners.bow_speed(
             o,
             "poco scr. =|",
-            rleak=True,
             staff_padding=3,
         )
         baca.markup(
@@ -699,7 +698,6 @@ def vc1(cache):
         baca.mspanners.bow_speed(
             o,
             "poco scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     for item in [(4, 5), 9]:
@@ -812,7 +810,6 @@ def cb1(cache):
         baca.mspanners.bow_speed(
             o,
             "poco scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     for item in [(4, 5), 9]:

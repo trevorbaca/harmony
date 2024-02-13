@@ -387,7 +387,6 @@ def va(m):
             o,
             "poco scr. =|",
             right_broken=True,
-            rleak=True,
             staff_padding=3,
         )
 
