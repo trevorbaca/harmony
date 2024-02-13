@@ -379,7 +379,7 @@ def bfl(m):
                 rleak=True,
             )
             baca.rspanners.trill(
-                baca.select.tleaves(run),
+                run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
             baca.mspanners.text(

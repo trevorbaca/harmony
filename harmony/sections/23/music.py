@@ -286,7 +286,7 @@ def bfl(cache):
         baca.pitch(o, "Eb3")
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            run = baca.select.rleak(baca.select.ltleaves(run))
+            run = baca.select.rleak(run)
         # TODO: indent?
         baca.rspanners.covered(
             run,

@@ -223,7 +223,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
+                abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
             )
             baca.rspanners.trill(
