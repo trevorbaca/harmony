@@ -680,6 +680,7 @@ def cb2(cache):
             right_broken=True,
         )
         baca.piecewise.hairpin(
+            # TODO
             baca.select.mgroups(o, [2, 1, 1]),
             "o< ff (ff) >o !",
             right_broken=True,

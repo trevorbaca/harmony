@@ -1004,6 +1004,7 @@ def composites(cache):
             baca.override.note_head_style_harmonic(o.pleaves())
             baca.flat_glissando(o.rleaves(), right_broken=True)
             baca.piecewise.hairpin(
+                # TODO
                 baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 1]),
                 "o<| mp |> pp pp <| mp |> ! <| mp |>o !",
                 right_broken=True,

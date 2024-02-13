@@ -616,8 +616,8 @@ def cb2(m):
             allow_hidden=True,
             right_broken=True,
         )
-        baca.piecewise.hairpin(
-            [o],
+        baca.spanners.hairpin(
+            o,
             "o< !",
             right_broken=True,
             rleak=True,
