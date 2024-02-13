@@ -258,7 +258,7 @@ def perc1(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.flat_glissando(
             o.run(0),
-            hide_stem_selector=lambda _: baca.select.pleaves(o.run(0))[1:-2],
+            hide_stem_selector=lambda _: o.run(0)[1:-2],
         )
         baca.flat_glissando(o.run(1), hide_middle_stems=True)
         library.brake_drum_staff_position(o)
