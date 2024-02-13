@@ -386,7 +386,6 @@ def bfl(cache):
             r"\harmony-g-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(11)) as o:
@@ -432,7 +431,6 @@ def bfl(cache):
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(1, 15)) as o:

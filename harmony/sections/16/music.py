@@ -215,7 +215,6 @@ def bfl(m):
             baca.mspanners.text(
                 run,
                 "A =|",
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
@@ -236,7 +235,6 @@ def bfl(m):
             baca.mspanners.text(
                 run,
                 "A =|",
-                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[10]) as o:
@@ -245,7 +243,6 @@ def bfl(m):
                 u,
                 "A =|",
                 right_broken=True,
-                rleak=True,
                 staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(

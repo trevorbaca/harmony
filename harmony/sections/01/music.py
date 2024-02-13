@@ -207,7 +207,6 @@ def bfl(cache):
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
-            rleak=True,
             staff_padding=8,
         )
         baca.override.dots_x_extent_false(abjad.select.leaves(o, grace=False))

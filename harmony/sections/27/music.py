@@ -359,7 +359,6 @@ def bfl(cache):
             baca.mspanners.text(
                 baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
-                rleak=True,
                 staff_padding=10,
             )
     with baca.scope(m.get(4, 5)) as o:
@@ -379,13 +378,11 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
             lilypond_id=2,
-            rleak=True,
             staff_padding=8,
         )
         baca.mspanners.text(
             o,
             "A =|",
-            rleak=True,
             staff_padding=10,
         )
     with baca.scope(m[5]) as o:

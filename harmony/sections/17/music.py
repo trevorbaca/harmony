@@ -266,7 +266,6 @@ def bfl(m):
                 u[:2],
                 "A =|",
                 left_broken=True,
-                rleak=True,
                 staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(
