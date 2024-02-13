@@ -7250,10 +7250,8 @@ number.28.Contrabass.2.Music = {
     a,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \baca-ff-parenthesized
       %! RIGHT_BROKEN
       %! SPANNER_STOP
@@ -7280,20 +7278,16 @@ number.28.Contrabass.2.Music = {
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
 

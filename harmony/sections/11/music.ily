@@ -2905,32 +2905,25 @@ number.11.Viola.Music = {
     a''4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
@@ -3590,32 +3583,25 @@ number.11.Cello.1.Music = {
     gqs'''!4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
@@ -4238,32 +4224,25 @@ number.11.Cello.2.Music = {
     fs''!4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
@@ -4931,32 +4910,25 @@ number.11.Contrabass.1.Music = {
     cs'''!4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
@@ -5585,32 +5557,25 @@ number.11.Contrabass.2.Music = {
     cqf'''!4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
     \mp
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding

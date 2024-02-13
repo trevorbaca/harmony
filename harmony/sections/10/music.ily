@@ -2750,10 +2750,8 @@ number.10.Viola.Music = {
         g4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \ff
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
@@ -2772,20 +2770,16 @@ number.10.Viola.Music = {
           %! SPANNER_START
         \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         \glissando
@@ -3822,10 +3816,8 @@ number.10.Cello.2.Music = {
         f,4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \ff
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
@@ -3844,20 +3836,16 @@ number.10.Cello.2.Music = {
           %! SPANNER_START
         \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         \glissando
@@ -4686,10 +4674,8 @@ number.10.Contrabass.2.Music = {
         a4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
         \ff
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
@@ -4708,20 +4694,16 @@ number.10.Contrabass.2.Music = {
           %! SPANNER_START
         \bacaStartTextSpanSCP
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
-          %! RIGHT_BROKEN
           %! SPANNER_START
         \>
         \glissando
