@@ -851,7 +851,6 @@ def va(cache):
         baca.mspanners.bow_speed(
             o.pleaves(),
             "scr. =|",
-            rleak=True,
             staff_padding=3,
         )
         baca.rspanners.metric_modulation(
@@ -890,7 +889,6 @@ def va(cache):
             baca.mspanners.bow_speed(
                 u,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
         baca.dynamic(o.phead(-1), "f")
@@ -925,7 +923,6 @@ def va(cache):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -948,13 +945,11 @@ def va(cache):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
         baca.mspanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     for item in [1, (6, 15)]:
@@ -973,7 +968,6 @@ def vc1(cache):
         baca.mspanners.bow_speed(
             o.pleaves(),
             "scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -1007,7 +1001,6 @@ def vc1(cache):
         baca.mspanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -1041,7 +1034,6 @@ def vc1(cache):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
@@ -1062,14 +1054,12 @@ def vc1(cache):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
         baca.mspanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
             right_broken=True,
-            rleak=True,
             staff_padding=3,
         )
         baca.dynamic(
@@ -1095,7 +1085,6 @@ def vc2(m):
         baca.mspanners.bow_speed(
             o.pleaves(),
             "scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -1108,7 +1097,6 @@ def vc2(m):
         baca.mspanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 4)) as o:
@@ -1133,7 +1121,6 @@ def vc2(m):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -1162,14 +1149,12 @@ def vc2(m):
             baca.mspanners.bow_speed(
                 run,
                 "scr. =|",
-                rleak=True,
                 staff_padding=3,
             )
         baca.mspanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
             right_broken=True,
-            rleak=True,
             staff_padding=3,
         )
         baca.dynamic(

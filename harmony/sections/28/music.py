@@ -398,7 +398,6 @@ def va(cache):
             o,
             "poc. scr. =|",
             left_broken=True,
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -419,7 +418,6 @@ def va(cache):
         baca.mspanners.bow_speed(
             o,
             "poco scr. =|",
-            rleak=True,
             staff_padding=3,
         )
 
