@@ -459,7 +459,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
             baca.piecewise.hairpin(
-                abjad.select.partition_by_ratio(abjad.select.leaves(u), (3, 4)),
+                abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mp >o !",
             )
             baca.rspanners.trill(
@@ -520,8 +520,9 @@ def perc1(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.laissez_vibrer(o.phead(1))
         baca.spanners.hairpin(
-            baca.select.rleak(o.pleaves()[1:]),
+            o.pleaves()[1:],
             "o< mf",
+            rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -567,8 +568,9 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
         baca.spanners.hairpin(
-            baca.select.rleak(o.pleaves()),
+            o.pleaves(),
             "o< mf",
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -579,22 +581,25 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
         baca.spanners.hairpin(
-            baca.select.rleak(o.pleaves()),
+            o.pleaves(),
             "o< mp",
+            rleak=True,
         )
     with baca.scope(m[10]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
         baca.spanners.hairpin(
-            baca.select.rleak(o.pleaves()),
+            o.pleaves(),
             "o< mp",
+            rleak=True,
         )
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
         baca.spanners.hairpin(
-            baca.select.rleak(o.pleaves()),
+            o.pleaves(),
             "o< mp",
+            rleak=True,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.override.tuplet_bracket_up(o)
@@ -732,10 +737,10 @@ def hp(m):
         with baca.scope(m[n]) as o:
             library.whisk_staff_position(o)
             baca.flat_glissando(o.pleaves())
-            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [1, 2 + 1]),
+                baca.select.lparts(o.tleaves(), [1, 2]),
                 'o< "mf" >o !',
+                rleak=True,
             )
     with baca.scope(m.get(9, 11)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -1139,10 +1144,10 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [2, 1 + 1]),
+                baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< mp >o !",
+                rleak=True,
             )
     for name in ["vc1", "vc2"]:
         m = cache[name]
@@ -1158,10 +1163,10 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [2, 1 + 1]),
+                baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< f >o !",
+                rleak=True,
             )
     for name in ["vc1", "vc2"]:
         m = cache[name]
@@ -1173,10 +1178,10 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[3]) as o:
             baca.stem_tremolo(o.pleaves())
-            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
+                baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
+                rleak=True,
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.override.dynamic_text_x_offset(o.pleaf(-1), -0.25)
@@ -1188,10 +1193,10 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[8]) as o:
-            leaves = baca.select.rleak(baca.select.tleaves(o))
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [1, 1 + 1]),
+                baca.select.lparts(o.tleaves(), [1, 1]),
                 "o< mp >o !",
+                rleak=True,
             )
     for name in ["vc1", "vc2"]:
         m = cache[name]

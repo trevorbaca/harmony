@@ -553,7 +553,6 @@ def vc1(m):
         leaves = o.rleaves(count=3)[1:]
         baca.piecewise.hairpin(
             baca.select.plts(leaves),
-            # '"ff" "f" mf mp p pp ppp ppp',
             '"f" mf mp p pp ppp ppp',
             do_not_bookend=True,
         )
@@ -764,8 +763,9 @@ def cb2(m):
                 hide_middle_note_heads=True,
             )
             baca.spanners.hairpin(
-                baca.select.rleak(run),
+                run,
                 "mf >o !",
+                rleak=True,
             )
             baca.mspanners.scp(
                 run,

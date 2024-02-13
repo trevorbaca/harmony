@@ -478,24 +478,24 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "Bb5")
         baca.pitch(o.runs()[1:], "E5")
         baca.stem_tremolo(o.pleaves())
-        leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            rleak=True,
         )
-        leaves = baca.select.rleak(o.leaves()[-2:])
         baca.piecewise.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[-2:], [1]),
             "o<| f |>o !",
             forbid_al_niente_to_bar_line=True,
+            rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "E5"),
         baca.stem_tremolo(o.pleaves())
-        leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            rleak=True,
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.rspanners.metric_modulation(
@@ -506,24 +506,24 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "Bb5")
         baca.pitch(o.runs()[1:], "E5")
         baca.stem_tremolo(o.pleaves())
-        leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            rleak=True,
         )
-        leaves = baca.select.rleak(abjad.select.leaves(o)[-2:])
         baca.piecewise.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[-2:], [1]),
             "o<| f |>o !",
             forbid_al_niente_to_bar_line=True,
+            rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E5"),
         baca.stem_tremolo(o.pleaves())
-        leaves = o.leaves()[:3]
         baca.piecewise.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            rleak=True,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.rspanners.metric_modulation(
@@ -619,8 +619,9 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         baca.spanners.hairpin(
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             "o< mf",
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -630,14 +631,16 @@ def perc1(m):
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
         baca.spanners.hairpin(
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             "o< f",
+            rleak=True,
         )
     with baca.scope(m[15]) as o:
         library.bass_drum_staff_position(o)
         baca.spanners.hairpin(
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             "o< ff",
+            rleak=True,
         )
     with baca.scope(m.get(10, 15)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -934,8 +937,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
         baca.spanners.hairpin(
-            baca.select.rleak(o.plts()[-1:]),
+            o.plts()[-1:],
             "f >o !",
+            rleak=True,
         )
         for run in baca.select.runs(o)[:-1]:
             baca.mspanners.bow_speed(
@@ -1061,10 +1065,11 @@ def vc1(cache):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.hairpin(
-            [baca.select.rleak(o.plts()[-1:])],
+        baca.spanners.hairpin(
+            o.plts()[-1:],
             "f >o !",
             right_broken=True,
+            rleak=True,
         )
         baca.override.dls_staff_padding(o, 4)
     for item in [1, (6, 7), (10, 15)]:
@@ -1128,8 +1133,9 @@ def vc2(m):
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.spanners.hairpin(
-            baca.select.rleak(o.tleaves()),
+            o.tleaves(),
             "mf >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             o.tleaves(),
@@ -1156,8 +1162,9 @@ def vc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.spanners.hairpin(
-            baca.select.rleak(o.plts()[-1:]),
+            o.plts()[-1:],
             "f >o !",
+            rleak=True,
         )
     for item in [1, (6, 7), (10, 15)]:
         with baca.scope(m.get(item)) as o:
@@ -1171,8 +1178,9 @@ def cb1(m):
         baca.pitch(o, "E1")
         baca.flat_glissando(o)
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [2, 4]),
+            baca.select.lparts(o, [2, 3]),
             "o< p >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             o.tleaves(),
@@ -1213,7 +1221,7 @@ def cb1(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.piecewise.hairpin(
-            baca.select.plts(o),
+            o.plts(),
             "pp ppp",
             do_not_bookend=True,
         )
@@ -1250,8 +1258,9 @@ def cb2(m):
         baca.pitch(o, "E1")
         baca.flat_glissando(o.pleaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [3, 3]),
+            baca.select.lparts(o, [3, 2]),
             "o< p >o !",
+            rleak=True,
         )
         baca.mspanners.scp(
             o.tleaves(),

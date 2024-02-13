@@ -323,7 +323,6 @@ def perc1(cache):
         baca.spanners.hairpin(
             o.tleaves(),
             "f > p",
-            debug=True,
         )
     with baca.scope(m.get(5, 6)) as o:
         library.purpleheart_staff_positions(o, [0, 2, 0, 2, 2])
@@ -601,8 +600,9 @@ def cb2(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Ab1")
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             'o< "mf" >o !',
+            rleak=True,
         )
         baca.mspanners.scp(
             baca.select.ltleaves(o),
@@ -617,9 +617,10 @@ def cb2(m):
             right_broken=True,
         )
         baca.piecewise.hairpin(
-            [o.rleaves()],
+            [o],
             "o< !",
             right_broken=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             o,

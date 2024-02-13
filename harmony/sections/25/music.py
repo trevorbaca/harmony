@@ -267,7 +267,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
+                abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
             )
             baca.rspanners.trill(
@@ -280,8 +280,9 @@ def bfl(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -304,7 +305,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                abjad.select.partition_by_ratio(abjad.select.leaves(run), (4, 5)),
+                abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
             )
             baca.rspanners.trill(
@@ -380,10 +381,10 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 "f >o !",
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),

@@ -230,18 +230,21 @@ def hp(cache):
         )
     with baca.scope(m[1]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "p < mf > p",
+            rleak=True,
         )
     with baca.scope(m[3]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            rleak=True,
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < ff > p",
+            rleak=True,
         )
     with baca.scope(m.get(8, 9)) as o:
         baca.pitch(o, "<C6 Db6 Eb6>")
@@ -267,18 +270,21 @@ def va(cache):
         )
     with baca.scope(m[2]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < mf > p",
+            rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            rleak=True,
         )
     with baca.scope(m.get(1, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -308,18 +314,21 @@ def vc1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "p < mf > p",
+            rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            rleak=True,
         )
     with baca.scope(m.get(2, 9)) as o:
         baca.pitch(o, "<C5 Db5 Eb5>")
@@ -335,7 +344,7 @@ def vc2(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "B2")
         baca.spanners.hairpin(
-            o.leaves()[-2:],
+            o[-2:],
             "(p) >o",
         )
         baca.rspanners.damp(
@@ -355,13 +364,15 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            rleak=True,
         )
     with baca.scope(m.get(3, 9)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -388,13 +399,15 @@ def cb1(cache):
         )
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "p < f > p",
+            rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            rleak=True,
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.pitch(o, "<C5 Db5 Eb5>", do_not_transpose=True)
@@ -410,7 +423,7 @@ def cb2(cache):
     with baca.scope(m.get(1, 4)) as o:
         baca.pitch(o, "Bb2")
         baca.spanners.hairpin(
-            o.leaves()[-2:],
+            o[-2:],
             "(p) >o",
         )
         baca.rspanners.damp(
@@ -430,8 +443,9 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            rleak=True,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "treble")

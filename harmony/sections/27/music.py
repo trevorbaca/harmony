@@ -348,9 +348,10 @@ def bfl(cache):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
                 forbid_al_niente_to_bar_line=True,
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -411,8 +412,9 @@ def bfl(cache):
     with baca.scope(m[7]) as o:
         baca.pitch(o, "Bb4")
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+            baca.select.lparts(o, [1, 1]),
             "pp < p >o !",
+            rleak=True,
         )
         baca.rspanners.trill(
             baca.select.tleaves(o),
@@ -513,10 +515,10 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaf(0))
         for run in baca.select.runs(o)[:1]:
-            run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 "f >o !",
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -716,10 +718,11 @@ def vc2(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
-            baca.select.lparts(o, [1, 2, 3, 2]),
+            baca.select.lparts(o, [1, 2, 3, 1]),
             "pp -- ! < mp -- ! >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             do_not_bookend=True,
+            rleak=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -772,10 +775,11 @@ def cb1(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.piecewise.hairpin(
-            baca.select.lparts(o, [2, 3, 2]),
+            baca.select.lparts(o, [2, 3, 1]),
             "pp -- ! < mp >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             do_not_bookend=True,
+            rleak=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -865,8 +869,9 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "A1")
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             "o< mp >o !",
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -901,8 +906,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[7]) as o:
             baca.piecewise.hairpin(
-                baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
+                baca.select.lparts(o, [1, 1, 1, 1]),
                 "o< mp >o ! o< mp >o !",
+                rleak=True,
             )
         with baca.scope(m.get(4, 5)) as o:
             baca.dynamic(o.phead(0), "pp")

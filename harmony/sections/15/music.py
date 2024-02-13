@@ -263,8 +263,9 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[3]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             "o< mp >o !",
+            rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf5")
@@ -274,8 +275,9 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             'o< "f" >o !',
+            rleak=True,
         )
         for clpart in baca.select.clparts(o, [2]):
             baca.mspanners.text(
@@ -493,10 +495,10 @@ def vc1(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                run = baca.select.rleak(run)
                 baca.spanners.hairpin(
                     run,
                     "o<| f",
+                    rleak=True,
                 )
             elif i == 1:
                 baca.spanners.hairpin(
@@ -550,10 +552,10 @@ def vc2(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                run = baca.select.rleak(run)
                 baca.spanners.hairpin(
                     run,
                     "o<| f",
+                    rleak=True,
                 )
             elif i == 1:
                 baca.spanners.hairpin(
@@ -612,10 +614,10 @@ def cb1(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                run = baca.select.rleak(run)
                 baca.spanners.hairpin(
                     run,
                     "o<| f",
+                    rleak=True,
                 )
             elif i == 1:
                 baca.spanners.hairpin(
@@ -669,10 +671,10 @@ def cb2(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                run = baca.select.rleak(run)
                 baca.spanners.hairpin(
                     run,
                     "o<| f",
+                    rleak=True,
                 )
             elif i == 1:
                 baca.spanners.hairpin(

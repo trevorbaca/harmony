@@ -187,9 +187,10 @@ def cb2(m):
         baca.pitch(o, "A1")
         baca.flat_glissando(o.leaves()[:1], left_broken=True)
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             ">o !",
             left_broken=True,
+            rleak=True,
         )
         baca.mspanners.scp(
             [o],
@@ -216,8 +217,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleaves(o), [1, 3]),
+                baca.select.lparts(o, [1, 2]),
                 "pp < p >o !",
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]

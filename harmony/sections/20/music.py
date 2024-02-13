@@ -228,8 +228,9 @@ def bfl(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 2]),
+                baca.select.lparts(run, [1, 1]),
                 "o< f >o !",
+                rleak=True,
             )
             if i == 0:
                 baca.rspanners.trill(
@@ -246,8 +247,9 @@ def bfl(m):
         baca.pitch(o, "Gqs5")
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -281,10 +283,10 @@ def perc1(m):
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.piecewise.hairpin(
-                baca.select.lparts(run, [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< pp >o !",
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -453,8 +455,9 @@ def vc1(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,

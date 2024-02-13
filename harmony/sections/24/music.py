@@ -200,8 +200,9 @@ def bfl(m):
         baca.pitch(o, "F5")
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 2 + 1]),
+                baca.select.lparts(run, [1, 2]),
                 "o< mf >o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -216,9 +217,10 @@ def bfl(m):
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
                 forbid_al_niente_to_bar_line=True,
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -275,10 +277,10 @@ def perc2(m):
     with baca.scope(m.get(1, 3)) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            run = baca.select.rleak(run)
             baca.spanners.hairpin(
                 run,
                 "o<| mf",
+                rleak=True,
             )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
@@ -413,8 +415,9 @@ def vc1(m):
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "F4")
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o<| mp |>o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -500,8 +503,9 @@ def cb1(m):
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "E4", do_not_transpose=True)
             baca.piecewise.hairpin(
-                baca.select.lparts(baca.select.rleak(run), [1, 1 + 1]),
+                baca.select.lparts(run, [1, 1]),
                 "o<| mp |>o !",
+                rleak=True,
             )
             baca.rspanners.trill(
                 run,
@@ -578,10 +582,10 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             for run in baca.select.runs(o):
-                run = baca.select.rleak(run)
                 baca.piecewise.hairpin(
-                    baca.select.lparts(run, [1, 1 + 1]),
+                    baca.select.lparts(run, [1, 1]),
                     "o<| mp |>o !",
+                    rleak=True,
                 )
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]
@@ -605,8 +609,9 @@ def composites(cache):
             baca.dynamic(o.phead(0), "pp")
         with baca.scope(m.get(7, 8)) as o:
             baca.spanners.hairpin(
-                o.rleaves(),
+                o,
                 "(pp) < f",
+                rleak=True,
             )
         with baca.scope(m.get(1, 9)) as o:
             baca.override.dls_staff_padding(o, 4)
