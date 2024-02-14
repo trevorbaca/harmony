@@ -7256,25 +7256,18 @@ number.28.Contrabass.2.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-solid-line-with-arrow
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-right-text "T4+"
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC

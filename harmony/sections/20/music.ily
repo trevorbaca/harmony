@@ -2223,25 +2223,18 @@ number.20.Viola.Music = {
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanMetricModulation
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-solid-line-with-arrow
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "P4"
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-right-text "T1"
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.right.stencil-align-dir-y #center
-      %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 3
-      %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanSCP
     - \tweak stencil ##f
