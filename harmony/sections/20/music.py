@@ -431,11 +431,11 @@ def va(m):
             baca.override.dls_staff_padding(u, 4)
         baca.triple_staccato(o.pheads()[1:])
         baca.dynamic(o.phead(1), "p")
-        with baca.scope(o.leaves()[3:]) as u:
+        with baca.scope(o[3:]) as u:
             baca.mspanners.scp(
-                [u],
+                [u.pheads()],
                 "P4 -> T1",
-                right_broken=True,
+                do_not_rleak=True,
                 staff_padding=3,
             )
             baca.rspanners.metric_modulation(
