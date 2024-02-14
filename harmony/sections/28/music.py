@@ -687,7 +687,7 @@ def cb2(cache):
         )
         baca.mspanners.scp(
             baca.select.lparts(o, [3, 2, 2, 3, 2, 2, 3, 2, 2, 7]),
-            "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
+            "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 ->",
             right_broken=True,
             staff_padding=3,
         )

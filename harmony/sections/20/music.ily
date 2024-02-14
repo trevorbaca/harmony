@@ -2267,6 +2267,8 @@ number.20.Viola.Music = {
 
     e8
     - \baca-staccati #3
+      %! SPANNER_STOP
+    \bacaStopTextSpanSCP
     ]
     - \tweak stencil ##f
     ~
@@ -2312,10 +2314,6 @@ number.20.Viola.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SPANNER_STOP
-    \bacaStopTextSpanSCP
 
 }
 
