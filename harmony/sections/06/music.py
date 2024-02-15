@@ -1201,7 +1201,6 @@ def cb1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(u, [6, 5, 3, 1]),
                 "o< mf > p < f",
-                rleak=True,
             )
             baca.mspanners.scp(
                 baca.select.lparts(u, [6, 5, 3, 1]),

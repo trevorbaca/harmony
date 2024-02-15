@@ -5006,16 +5006,6 @@ number.6.Contrabass.1.Music = {
     r4
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \<
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
