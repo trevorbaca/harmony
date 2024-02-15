@@ -1221,8 +1221,8 @@ def composites(cache):
         with baca.scope(m.get(9, 11)) as o:
             baca.piecewise.hairpin(
                 baca.select.clparts(o.tleaves(), [1]),
-                "! o< p >o",
                 # TODO: set to-barline ##t on final diminuendo:
+                "o< p >o",
             )
             baca.spanners.hairpin(o.rleaf(-1), "!")
     for name in ["va", "vc2"]:

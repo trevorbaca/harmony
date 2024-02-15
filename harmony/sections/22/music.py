@@ -345,8 +345,8 @@ def bfl(m):
         baca.pitch(o, "Gqs5")
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
-            "! o< mp >o",
             # TODO: set to-barline ##t on final diminuendo:
+            "o< mp >o",
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
@@ -610,7 +610,7 @@ def vc1(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             # TODO: set to-barline ##t on final diminuendo:
-            "! o< mp >o",
+            "o< mp >o",
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
@@ -705,7 +705,7 @@ def cb1(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             # TODO: set to-barline ##t on final diminuendo:
-            "! o< mp >o",
+            "o< mp >o",
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
