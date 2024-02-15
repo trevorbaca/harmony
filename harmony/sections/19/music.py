@@ -990,7 +990,6 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 2, 1]),
             "o<| mp |>o ! o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix

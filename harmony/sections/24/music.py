@@ -219,7 +219,6 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
-                forbid_al_niente_to_bar_line=True,
                 rleak=True,
             )
             baca.rspanners.trill(

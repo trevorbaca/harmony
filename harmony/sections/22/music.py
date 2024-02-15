@@ -347,7 +347,6 @@ def bfl(m):
             baca.select.clparts(o, [1]),
             "! o< mp >o",
             # TODO: set to-barline ##t on final diminuendo:
-            forbid_al_niente_to_bar_line=True,
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
@@ -610,9 +609,8 @@ def vc1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
-            "! o< mp >o",
             # TODO: set to-barline ##t on final diminuendo:
-            forbid_al_niente_to_bar_line=True,
+            "! o< mp >o",
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
@@ -706,9 +704,8 @@ def cb1(m):
         baca.pitch(o, "Cqf5")
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
-            "! o< mp >o",
             # TODO: set to-barline ##t on final diminuendo:
-            forbid_al_niente_to_bar_line=True,
+            "! o< mp >o",
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(

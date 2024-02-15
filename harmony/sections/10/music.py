@@ -379,7 +379,6 @@ def bfl(cache):
                 baca.select.pleaves(o, grace=False), [2, 1]
             ),
             "o< mp >o",
-            forbid_al_niente_to_bar_line=True,
         )
         baca.mspanners.text(
             baca.select.tleaves(o, grace=False),
@@ -392,19 +391,16 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
-            forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m.get(12)) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< f >o",
-            forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m.get(13)) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
-            forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.pitch(o.leaves(grace=False), "G4")

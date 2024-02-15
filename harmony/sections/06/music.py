@@ -486,7 +486,6 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o[-2:], [1]),
             "o<| f |>o !",
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
     with baca.scope(m[4]) as o:
@@ -514,7 +513,6 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o[-2:], [1]),
             "o<| f |>o !",
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -754,7 +752,6 @@ def hp(m):
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
             'o< "f" >o',
-            forbid_al_niente_to_bar_line=True,
         )
         baca.markup(
             o.pleaf(-2),
