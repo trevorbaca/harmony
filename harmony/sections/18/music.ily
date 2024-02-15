@@ -2461,8 +2461,6 @@ number.18.Viola.Music = {
     _ \baca-string-iv-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4126,8 +4124,6 @@ number.18.Cello.2.Music = {
     btqf'!4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5903,8 +5899,6 @@ number.18.Contrabass.2.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     ^ \baca-eleven-c
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
