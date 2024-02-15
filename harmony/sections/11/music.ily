@@ -618,9 +618,6 @@ number.11.BassFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
 
     <<
@@ -788,9 +785,6 @@ number.11.BassFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     \breathe
 
@@ -849,9 +843,6 @@ number.11.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -964,9 +955,6 @@ number.11.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1150,9 +1138,6 @@ number.11.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1582,9 +1567,6 @@ number.11.Percussion.1.Music = {
     - \tweak staff-padding 10
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
     \revert Stem.direction
@@ -1693,9 +1675,6 @@ number.11.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2221,9 +2200,6 @@ number.11.Harp.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     - \tweak stencil ##f
     ~
@@ -2381,10 +2357,6 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_START
     \>
     \repeatTie
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2460,9 +2432,6 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2638,9 +2607,6 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2922,9 +2888,6 @@ number.11.Viola.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -3105,9 +3068,6 @@ number.11.Cello.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
         \revert NoteHead.style
         \revert TupletBracket.direction
@@ -3163,9 +3123,6 @@ number.11.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -3600,9 +3557,6 @@ number.11.Cello.1.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -3711,10 +3665,6 @@ number.11.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_START
     \>
     \repeatTie
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3790,9 +3740,6 @@ number.11.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -4241,9 +4188,6 @@ number.11.Cello.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -4424,9 +4368,6 @@ number.11.Contrabass.1.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
         \revert NoteHead.style
         \revert TupletBracket.direction
@@ -4482,9 +4423,6 @@ number.11.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -4927,9 +4865,6 @@ number.11.Contrabass.1.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -5041,10 +4976,6 @@ number.11.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! LEFT_BROKEN
-      %! SPANNER_START
     \>
     \repeatTie
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -5122,9 +5053,6 @@ number.11.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -5572,9 +5500,6 @@ number.11.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>

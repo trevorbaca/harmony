@@ -470,7 +470,6 @@ def vc1(cache):
             " o< f >o ! o< mf >o ! o< mf >o !"
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
             " o< p >o ! o< pp >o ! o< pp >o !",
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
         baca.rspanners.trill(
@@ -536,7 +535,6 @@ def vc2(cache):
             " o< mf >o ! o< f >o ! o< mf >o !"
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
             " o< pp >o ! o< p >o ! o< pp >o !",
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
         baca.rspanners.trill(
@@ -606,7 +604,6 @@ def cb1(cache):
             " o< f >o ! o< mf >o ! o< mf >o !"
             " o< mp >o ! o< mp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< p >o ! o< pp >o !",
-            forbid_al_niente_to_bar_line=True,
             rleak=True,
         )
         baca.rspanners.trill(

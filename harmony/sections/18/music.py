@@ -1063,7 +1063,6 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "o<| mp |>o ! o<| mp |>o",
-            forbid_al_niente_to_bar_line=True,
         )
         baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
     with baca.scope(m.get(2, 3)) as o:
@@ -1224,7 +1223,6 @@ def composites(cache):
                 baca.select.clparts(o.tleaves(), [1]),
                 "! o< p >o",
                 # TODO: set to-barline ##t on final diminuendo:
-                forbid_al_niente_to_bar_line=True,
             )
             baca.spanners.hairpin(o.rleaf(-1), "!")
     for name in ["va", "vc2"]:

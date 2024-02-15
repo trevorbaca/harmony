@@ -378,7 +378,6 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
             "o< f >o",
-            forbid_al_niente_to_bar_line=True,
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
