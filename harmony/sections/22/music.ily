@@ -709,8 +709,6 @@ number.22.BassFlute.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! SPANNER_STOP
-    \!
-      %! SPANNER_STOP
     \bacaStopTextSpanCovered
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3101,8 +3099,6 @@ number.22.Cello.1.Music = {
     _ \baca-string-ii-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -4632,8 +4628,6 @@ number.22.Contrabass.1.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     ^ \baca-seven-d
-      %! SPANNER_STOP
-    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
