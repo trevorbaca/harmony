@@ -537,11 +537,13 @@ def perc1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o[:2], [1, 1]),
             "o< p > pp",
+            glue=True,
             rleak=True,
         ),
         baca.piecewise.hairpin(
             baca.select.lparts(o[5:7], [1, 1]),
             "pp < mp > pp",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -981,11 +983,13 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o[:2], [1, 1]),
                 "o<| p |> pp",
+                glue=True,
                 rleak=True,
             )
             baca.piecewise.hairpin(
                 baca.select.lparts(o[5:7], [1, 1]),
                 "pp <| mp |> pp",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(

@@ -434,7 +434,7 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 3)
         baca.staff_position(o, 2)
         baca.piecewise.hairpin(
-            [o.pleaves()],
+            o.pleaves(),
             "f mp",
         )
         baca.override.dls_staff_padding(o, 5)

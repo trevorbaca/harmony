@@ -751,6 +751,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o, [1, 1 + 1]),
                 "pp < p > pp",
+                glue=True,
             )
             if name != "va":
                 baca.clef(o.leaf(0), "treble")
