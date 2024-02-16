@@ -433,7 +433,7 @@ def perc1(m):
     with baca.scope(m.get(4, 5)) as o:
         baca.staff_lines(o.leaf(0), 3)
         baca.staff_position(o, 2)
-        baca.piecewise.hairpin(
+        baca.spanners.hairpin(
             o.pleaves(),
             "f mp",
         )
