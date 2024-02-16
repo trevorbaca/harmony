@@ -18,6 +18,7 @@
         "StringSectionStaffGroup",
         "Viola.Staff",
         "Viola.Music",
+        "Viola.Rests",
         "Cello.1.Staff",
         "Cello.1.Music",
         "Cello.2.Staff",
@@ -450,16 +451,6 @@
                 synthetic_offset=None,
                 value="1/4",
             ),
-        ],
-        "Viola.Music": [
-            baca.Memento(
-                context="Viola.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="\\baca-ff-scratch",
-            )
         ],
         "Viola.Staff": [
             baca.Memento(

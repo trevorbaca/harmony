@@ -2785,16 +2785,29 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-    ]
-
-      %! REPEAT_PITCH_CLASS_COLORING
-    \baca-repeat-pitch-class-coloring
-    c'8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-ff-scratch
+    ]
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #constante-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #blue
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \<
+
+      %! REPEAT_PITCH_CLASS_COLORING
+    \baca-repeat-pitch-class-coloring
+    c'8
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2808,15 +2821,52 @@ number.25.Viola.Music = {
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
 
-    % [Viola.Music measure 11]
-    \stopStaff
-    \once \override Staff.StaffSymbol.line-count = 0
-    \startStaff
-    R1 * 1/4
-      %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-      %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    <<
+
+        \context Voice = "Viola.Music"
+        {
+
+            % [Viola.Music measure 11]
+              %! INVISIBLE_MUSIC_COMMAND
+              %! NOTE
+            %@% \abjad-invisible-music
+              %! INVISIBLE_MUSIC_COLORING
+              %! NOTE
+            \abjad-invisible-music-coloring
+            \stopStaff
+            \once \override Staff.StaffSymbol.line-count = 0
+            \startStaff
+            \once \override Accidental.stencil = ##f
+            \once \override NoteColumn.ignore-collision = ##t
+              %! HIDDEN
+              %! NOTE
+            c'1 * 1/4
+              %! DURATION_MULTIPLIER
+              %! HIDDEN
+              %! NOTE
+            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+              %! SPANNER_STOP
+            \!
+              %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
+            \override Staff.BarLine.bar-extent = #'(-2 . 0)
+
+        }
+
+        \context Voice = "Viola.Rests"
+        {
+
+            % [Viola.Rests measure 11]
+              %! MULTIMEASURE_REST
+              %! REST_VOICE
+            R1 * 1/4
+              %! DURATION_MULTIPLIER
+              %! MULTIMEASURE_REST
+              %! REST_VOICE
+            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+
+        }
+
+    >>
 
 }
 

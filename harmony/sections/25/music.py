@@ -179,7 +179,7 @@ def VA(voice, time_signatures):
         time_signatures(5, 10),
         *(4, 4),
     )
-    mmrests(voice, time_signatures(11))
+    mmrests(voice, time_signatures(11), head=True)
 
 
 def VC1(voice, time_signatures):
@@ -461,6 +461,12 @@ def hp(m):
         )
 
 
+def y1():
+    return """
+    pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch -- !
+    """
+
+
 def va(cache):
     name = "va"
     m = cache[name]
@@ -481,14 +487,11 @@ def va(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
+        plts = baca.select.plts(o.rleaves())
         baca.piecewise.hairpin(
-            abjad.select.partition_by_counts(
-                baca.select.plts(o.rleaves()),
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-            ),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- !",
-            cyclic=True,
+            abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
+            y1(),
+            (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
