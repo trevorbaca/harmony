@@ -350,6 +350,7 @@ def bfl(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -401,6 +402,7 @@ def bfl(cache):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 run,
@@ -413,6 +415,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "pp < p >o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.trill(
@@ -872,6 +875,7 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mp >o !",
+            glue=True,
             rleak=True,
         )
         baca.markup(
@@ -909,6 +913,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o, [1, 1, 1, 1]),
                 "o< mp >o ! o< mp >o !",
+                glue=True,
                 rleak=True,
             )
         with baca.scope(m.get(4, 5)) as o:

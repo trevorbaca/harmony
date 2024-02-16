@@ -225,6 +225,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 run,
@@ -448,6 +449,7 @@ def vc1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 3, 1]),
             "pp -- ! < mp >o !",
+            glue=True,
             rleak=True,
         )
         baca.untie(o.leaves())
@@ -473,6 +475,7 @@ def vc1(cache):
             " o< f >o ! o< mf >o ! o< mf >o !"
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
             " o< p >o ! o< pp >o ! o< pp >o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.trill(
@@ -512,6 +515,7 @@ def vc2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 2, 3, 2]),
             "pp -- ! < mp -- ! >o !",
+            glue=True,
             rleak=True,
         )
         baca.untie(o.leaves())
@@ -538,6 +542,7 @@ def vc2(cache):
             " o< mf >o ! o< f >o ! o< mf >o !"
             " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
             " o< pp >o ! o< p >o ! o< pp >o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.trill(
@@ -565,6 +570,7 @@ def cb1(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -581,6 +587,7 @@ def cb1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 3, 2]),
             "pp -- ! < mp >o !",
+            glue=True,
             rleak=True,
         )
         baca.untie(o.leaves())
@@ -607,6 +614,7 @@ def cb1(cache):
             " o< f >o ! o< mf >o ! o< mf >o !"
             " o< mp >o ! o< mp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< p >o ! o< pp >o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.trill(
@@ -653,6 +661,7 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
             "pp -- ! < mp >o !",
+            glue=True,
             rleak=True,
         )
         baca.untie(o.leaves())

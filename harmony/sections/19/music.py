@@ -562,6 +562,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 u,
@@ -590,6 +591,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mf >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 u,
@@ -871,6 +873,7 @@ def va(cache):
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
+            glue=True,
             rleak=True,
         )
     for item in [(1, 2), (4, 9), 12]:
@@ -990,6 +993,7 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 2, 1]),
             "o<| mp |>o ! o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
+            glue=True,
             rleak=True,
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
@@ -1035,6 +1039,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
+                glue=True,
                 rleak=True,
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)
@@ -1047,6 +1052,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
     for name in ["vc1", "vc2"]:

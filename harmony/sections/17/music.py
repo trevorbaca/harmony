@@ -286,6 +286,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
+            glue=True,
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -682,6 +683,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
+                glue=True,
                 rleak=True,
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)

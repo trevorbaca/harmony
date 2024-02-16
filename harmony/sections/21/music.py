@@ -277,6 +277,7 @@ def bfl(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< f >o !",
+                glue=True,
                 rleak=True,
             )
             if i == 0:

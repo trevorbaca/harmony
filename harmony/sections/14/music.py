@@ -385,6 +385,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
+            glue=True,
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -404,6 +405,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -414,6 +416,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o !",
+            glue=True,
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -427,6 +430,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
+            glue=True,
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -634,6 +638,7 @@ def hp(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.markup(

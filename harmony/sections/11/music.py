@@ -433,6 +433,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.markup(o.pleaf(0), baca.levine_multiphonic(5))
@@ -476,6 +477,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 2, 2]),
             'o< "f" >o ! o< "f" >o !',
+            glue=True,
             rleak=True,
         )
         baca.markup(
@@ -491,6 +493,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.metric_modulation(
@@ -523,6 +526,7 @@ def perc1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.markup(
@@ -587,6 +591,7 @@ def perc1(m):
             baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 1]),
             "o< p > pp pp < p > pp < p >o !",
             abjad.Tweak(r"- \tweak staff-padding 10"),
+            glue=True,
             rleak=True,
         )
         baca.markup(
@@ -728,6 +733,7 @@ def hp(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.run(0), [1, 3]),
             'o< "f" >o !',
+            glue=True,
         )
         baca.override.dls_staff_padding(o, 6)
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
@@ -799,6 +805,7 @@ def vc1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             "o<| mp |>o !",
+            glue=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.rspanners.trill(
@@ -878,6 +885,7 @@ def cb1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             "o<| mp |>o !",
+            glue=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.rspanners.trill(
@@ -970,6 +978,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1]),
                 "o<| mp |>o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(

@@ -563,6 +563,7 @@ def hp(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 4),
@@ -722,6 +723,7 @@ def vc1(cache):
         baca.piecewise.hairpin(
             [o],
             ">o !",
+            glue=True,
             left_broken=True,
         )
         baca.mspanners.bow_speed(

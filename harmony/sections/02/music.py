@@ -757,6 +757,7 @@ def vc1(cache):
         baca.piecewise.hairpin(
             baca.select.mgroups(leaves, [1, 2]),
             "o< f >o !",
+            glue=True,
         )
         baca.override.dls_staff_padding(o, 6)
         leaves = baca.select.rleak(baca.select.ltleaves(o))

@@ -219,6 +219,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o, [1, 2]),
                 "pp < p >o !",
+                glue=True,
                 rleak=True,
             )
     for name in ["va", "vc1", "vc2"]:

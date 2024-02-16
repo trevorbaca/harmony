@@ -604,6 +604,7 @@ def cb2(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             'o< "mf" >o !',
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(
