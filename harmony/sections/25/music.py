@@ -197,7 +197,7 @@ def VC1(voice, time_signatures):
         time_signatures(5, 10),
         *(4, 3),
     )
-    mmrests(voice, time_signatures(11))
+    mmrests(voice, time_signatures(11), head=True)
 
 
 def VC2(voice, time_signatures):
@@ -215,7 +215,7 @@ def VC2(voice, time_signatures):
         time_signatures(5, 10),
         *(4, 2),
     )
-    mmrests(voice, time_signatures(11))
+    mmrests(voice, time_signatures(11), head=True)
 
 
 def CB1(voice, time_signatures):
@@ -233,7 +233,7 @@ def CB1(voice, time_signatures):
         time_signatures(5, 10),
         *(4, 1),
     )
-    mmrests(voice, time_signatures(11))
+    mmrests(voice, time_signatures(11), head=True)
 
 
 def CB2(voice, time_signatures):
@@ -251,7 +251,7 @@ def CB2(voice, time_signatures):
         time_signatures(5, 10),
         *(4, 0),
     )
-    mmrests(voice, time_signatures(11))
+    mmrests(voice, time_signatures(11), head=True)
 
 
 def bfl(m):
@@ -492,6 +492,7 @@ def va(cache):
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
+            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -527,14 +528,12 @@ def vc1(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
+        plts = baca.select.plts(o.rleaves())
         baca.piecewise.hairpin(
-            abjad.select.partition_by_counts(
-                baca.select.plts(o.rleaves()),
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-            ),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
-            " mf < ff-scratch -- !",
-            cyclic=True,
+            abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
+            y1(),
+            (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
+            match=True,
         )
         baca.override.note_head_transparent(o.leaves()[1:-1])
         baca.untie(o.leaves())
@@ -568,14 +567,12 @@ def vc2(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
+        plts = baca.select.plts(o.rleaves())
         baca.piecewise.hairpin(
-            abjad.select.partition_by_counts(
-                baca.select.plts(o.rleaves()),
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-            ),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- !",
-            cyclic=True,
+            abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
+            y1(),
+            (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
+            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -611,14 +608,12 @@ def cb1(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
+        plts = baca.select.plts(o.rleaves())
         baca.piecewise.hairpin(
-            abjad.select.partition_by_counts(
-                baca.select.plts(o.rleaves()),
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-            ),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- !",
-            cyclic=True,
+            abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
+            y1(),
+            (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
+            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -653,14 +648,12 @@ def cb2(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
+        plts = baca.select.plts(o.rleaves())
         baca.piecewise.hairpin(
-            abjad.select.partition_by_counts(
-                baca.select.plts(o.rleaves()),
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-            ),
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-            " < ff-scratch -- !",
-            cyclic=True,
+            abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
+            y1(),
+            (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
+            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
