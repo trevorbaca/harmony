@@ -350,6 +350,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.clparts(o, [1]),
                 "o<| f |>o !",
+                do_not_bookend=True,
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "Bb5")
@@ -358,12 +359,14 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
             "o<| f |>o !",
+            do_not_bookend=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
             "o<| mf |>o !",
+            do_not_bookend=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(3), -2)
     with baca.scope(m[6]) as o:
@@ -378,6 +381,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
             "o< f >o",
+            do_not_bookend=True,
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
@@ -396,6 +400,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(leaves, [1]),
             "o< f >o !",
+            do_not_bookend=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
