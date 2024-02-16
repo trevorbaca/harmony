@@ -485,6 +485,7 @@ def va(cache):
             ),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- !",
+            cyclic=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -527,6 +528,7 @@ def vc1(cache):
             ),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
             " mf < ff-scratch -- !",
+            cyclic=True,
         )
         baca.override.note_head_transparent(o.leaves()[1:-1])
         baca.untie(o.leaves())
@@ -567,6 +569,7 @@ def vc2(cache):
             ),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- !",
+            cyclic=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -609,6 +612,7 @@ def cb1(cache):
             ),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- !",
+            cyclic=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -650,6 +654,7 @@ def cb2(cache):
             ),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- !",
+            cyclic=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())

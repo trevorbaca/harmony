@@ -232,18 +232,21 @@ def hp(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "p < mf > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[3]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < ff > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(8, 9)) as o:
@@ -272,18 +275,21 @@ def va(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < mf > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(1, 9)) as o:
@@ -316,12 +322,14 @@ def vc1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "p < mf > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -366,6 +374,7 @@ def vc2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < f > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -401,12 +410,14 @@ def cb1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "p < f > p",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(4, 9)) as o:

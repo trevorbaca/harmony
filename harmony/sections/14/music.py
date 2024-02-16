@@ -728,7 +728,7 @@ def vc1(cache):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.piecewise.hairpin(
-            [o.plts()],
+            o.plts(),
             '"ff" "ff"',
         )
         baca.override.dls_staff_padding(o, 6)
