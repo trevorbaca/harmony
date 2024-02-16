@@ -347,6 +347,7 @@ def bfl(m):
             baca.select.clparts(o, [1]),
             # TODO: set to-barline ##t on final diminuendo:
             "o< mp >o",
+            do_not_bookend=True,
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
@@ -611,6 +612,7 @@ def vc1(m):
             baca.select.clparts(o, [1]),
             # TODO: set to-barline ##t on final diminuendo:
             "o< mp >o",
+            do_not_bookend=True,
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(
@@ -706,6 +708,7 @@ def cb1(m):
             baca.select.clparts(o, [1]),
             # TODO: set to-barline ##t on final diminuendo:
             "o< mp >o",
+            do_not_bookend=True,
         )
         baca.spanners.hairpin(o.rleaf(-1), "!")
         baca.rspanners.trill(

@@ -667,6 +667,7 @@ def vc1(cache):
             baca.select.plts(o),
             "pp -- ! < mp >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            do_not_bookend=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -851,6 +852,7 @@ def cb2(cache):
             baca.select.lparts(o, [2, 1, 1]),
             "pp -- ! < mp >o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            do_not_bookend=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())

@@ -242,6 +242,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "p < mp >",
+            do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.rspanners.trill(
@@ -260,6 +261,7 @@ def perc1(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "p < mp > p p < mp > p",
+            do_not_bookend=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -288,6 +290,7 @@ def perc1(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o, [1]),
             "p < mp >",
+            do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.markup(
@@ -679,6 +682,7 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.mgroups(o.rleaves(), [2, 1, 1, 1]),
             "o< ff (ff) >o !",
+            do_not_bookend=True,
             match=True,
             right_broken=True,
         )

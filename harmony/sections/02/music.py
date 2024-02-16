@@ -344,6 +344,7 @@ def bfl(cache):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p <| mf |> p",
+                do_not_bookend=True,
             )
         baca.override.dls_staff_padding(o, 3)
     with baca.scope(m[6]) as o:
@@ -390,24 +391,28 @@ def bfl(cache):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p <| mp |> p",
+                do_not_bookend=True,
             )
     with baca.scope(m[9]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p <| mf |> p",
+                do_not_bookend=True,
             ),
     with baca.scope(m[10]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p <| f |> p",
+                do_not_bookend=True,
             ),
     with baca.scope(m[11]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p <| ff |> p",
+                do_not_bookend=True,
             )
 
 
@@ -573,12 +578,14 @@ def hp(cache):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p < f > p",
+                do_not_bookend=True,
             )
     with baca.scope(m.get(2, 5)) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "(p) < f > p",
+                do_not_bookend=True,
             )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -616,24 +623,28 @@ def hp(cache):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p < mp > p",
+                do_not_bookend=True,
             )
     with baca.scope(m[9]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "(p) < mf > p",
+                do_not_bookend=True,
             ),
     with baca.scope(m[10]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "(p) < f > p",
+                do_not_bookend=True,
             ),
     with baca.scope(m[11]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "(p) < ff > p",
+                do_not_bookend=True,
             )
 
 

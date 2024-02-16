@@ -308,6 +308,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "o<| ff |> p",
+                do_not_bookend=True,
             )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F#3")
@@ -395,6 +396,7 @@ def hp(cache):
             baca.piecewise.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p < ff > p",
+                do_not_bookend=True,
             )
         baca.markup(
             o.pleaf(0),
