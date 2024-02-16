@@ -216,7 +216,7 @@ def composites(cache):
     for name in ["bfl", "va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(o, [1, 2]),
                 "pp < p >o !",
                 glue=True,

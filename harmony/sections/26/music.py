@@ -355,7 +355,7 @@ def bfl(m):
                 )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 2]),
             "pp < p >o",
             do_not_bookend=True,
@@ -373,7 +373,7 @@ def bfl(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
                 glue=True,
@@ -399,7 +399,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
                 glue=True,
@@ -627,7 +627,7 @@ def vc1(cache):
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             o.plts(),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -666,7 +666,7 @@ def vc2(cache):
         baca.pitch(o.pleaves()[1:-1], "C5")
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 2, 3, 2]),
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -701,7 +701,7 @@ def cb1(cache):
     with baca.scope(m[9]) as o:
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.override.note_head_transparent(o.pleaves()[1:-1])
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [2, 3, 2]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -737,7 +737,7 @@ def cb2(cache):
         baca.pitch(o.pleaves()[1:-1], "C5", do_not_transpose=True)
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -752,7 +752,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[4]) as o:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(o, [1, 1 + 1]),
                 "pp < p > pp",
                 glue=True,

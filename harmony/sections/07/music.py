@@ -347,7 +347,7 @@ def bfl(m):
         baca.pitch(o, "Bb5"),
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.clparts(o, [1]),
                 "o<| f |>o !",
                 do_not_bookend=True,
@@ -356,14 +356,14 @@ def bfl(m):
         baca.pitch(o, "Bb5")
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.clparts(leaves, [1]),
             "o<| f |>o !",
             do_not_bookend=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         leaves = baca.select.rleak(o.leaves()[-2:])
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.clparts(leaves, [1]),
             "o<| mf |>o !",
             do_not_bookend=True,
@@ -378,7 +378,7 @@ def bfl(m):
         baca.pitch(o.runs()[1:], "Bb5")
         baca.stem_tremolo(o.pleaves()[-2:])
         leaves = o.leaves()[-2:]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.clparts(leaves, [1]),
             "o< f >o",
             do_not_bookend=True,
@@ -397,7 +397,7 @@ def bfl(m):
         baca.pitch(o, "Bb5"),
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.clparts(leaves, [1]),
             "o< f >o !",
             do_not_bookend=True,
@@ -560,7 +560,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[2]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o !",
             glue=True,
@@ -720,7 +720,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E4")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [o],
             ">o !",
             glue=True,
@@ -853,7 +853,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.flat_glissando(o, "E1", left_broken=True)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [o],
             ">o",
             do_not_bookend=True,

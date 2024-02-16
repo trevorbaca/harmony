@@ -382,7 +382,7 @@ def bfl(cache):
             baca.override.accidental_font_size(u, -3),
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
             glue=True,
@@ -402,7 +402,7 @@ def bfl(cache):
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
             glue=True,
@@ -413,7 +413,7 @@ def bfl(cache):
             o,
             abjad.sequence.rotate(library.warble_pitches(), -1),
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp >o !",
             glue=True,
@@ -427,7 +427,7 @@ def bfl(cache):
             o,
             abjad.sequence.rotate(library.warble_pitches(), -2),
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
             glue=True,
@@ -567,7 +567,7 @@ def perc2(cache):
             '"ff"',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             '"ff" "ff" "f" "f" mf mp p pp',
             do_not_bookend=True,
@@ -635,7 +635,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[5]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
             glue=True,
@@ -733,7 +733,7 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             o.plts(),
             '"ff" "ff"',
             do_not_bookend=True,
@@ -778,7 +778,7 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "ff" "f" "f" mf mp p',
             do_not_bookend=True,
@@ -820,7 +820,7 @@ def vc2(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "ff"',
             do_not_bookend=True,
@@ -851,7 +851,7 @@ def vc2(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "ff" "f" mf mp p pp',
             do_not_bookend=True,

@@ -372,7 +372,7 @@ def vc1(m):
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
         baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [4, 5]),
             "o< f >o !",
             glue=True,
@@ -448,7 +448,7 @@ def cb1(m):
         baca.pitch(o, "A1")
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [4, 6]),
             "o< f >o !",
             glue=True,

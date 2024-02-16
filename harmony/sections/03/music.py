@@ -493,7 +493,7 @@ def va(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
             do_not_bookend=True,
@@ -509,7 +509,7 @@ def vc1(m):
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[2]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             "p mp",
             do_not_bookend=True,
@@ -551,7 +551,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         leaves = o.rleaves(count=3)[1:]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(leaves),
             '"f" mf mp p pp ppp ppp',
             do_not_bookend=True,
@@ -699,7 +699,7 @@ def cb1(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
             do_not_bookend=True,
@@ -782,7 +782,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.accent(o.pheads())
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
                 do_not_bookend=True,
