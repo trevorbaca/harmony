@@ -269,6 +269,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.metric_modulation(
@@ -282,6 +283,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[4]) as o:
@@ -313,6 +315,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             'o< "f" >o !',
+            glue=True,
             rleak=True,
         )
         for clpart in baca.select.clparts(o, [2]):
@@ -468,6 +471,7 @@ def hp(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.markup(

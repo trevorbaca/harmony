@@ -481,11 +481,13 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.clparts(o[-2:], [1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[4]) as o:
@@ -494,6 +496,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(3, 4)) as o:
@@ -508,11 +511,13 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
         baca.piecewise.hairpin(
             baca.select.clparts(o[-2:], [1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -521,6 +526,7 @@ def bfl(m):
         baca.piecewise.hairpin(
             baca.select.clparts(o[:2], [1]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(5, 6)) as o:
@@ -1180,6 +1186,7 @@ def cb1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [2, 3]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1261,6 +1268,7 @@ def cb2(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [3, 2]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1308,6 +1316,7 @@ def cb2(m):
         baca.piecewise.hairpin(
             baca.select.mgroups(o, [2, 1, 1, 2]),
             "o< f > p < ff >o !",
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(

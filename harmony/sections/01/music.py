@@ -375,6 +375,7 @@ def vc1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [4, 5]),
             "o< f >o !",
+            glue=True,
         )
         baca.mspanners.scp(
             o.plts(),
@@ -450,6 +451,7 @@ def cb1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [4, 6]),
             "o< f >o !",
+            glue=True,
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 4)

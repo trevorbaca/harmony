@@ -461,6 +461,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 u,
@@ -740,6 +741,7 @@ def hp(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 2]),
                 'o< "mf" >o !',
+                glue=True,
                 rleak=True,
             )
     with baca.scope(m.get(9, 11)) as o:
@@ -1008,6 +1010,7 @@ def cb1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [2, 2]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1020,6 +1023,7 @@ def cb1(cache):
         baca.piecewise.hairpin(
             baca.select.clparts(o.tleaves(), [2]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1032,6 +1036,7 @@ def cb1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [2, 1]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1147,6 +1152,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
     for name in ["vc1", "vc2"]:
@@ -1166,6 +1172,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< f >o !",
+                glue=True,
                 rleak=True,
             )
     for name in ["vc1", "vc2"]:
@@ -1181,6 +1188,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
+                glue=True,
                 rleak=True,
             )
             baca.override.dynamic_text_x_offset(o.pleaf(1), -3)
@@ -1196,6 +1204,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
     for name in ["vc1", "vc2"]:

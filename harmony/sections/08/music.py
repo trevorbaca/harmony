@@ -336,6 +336,7 @@ def vc1(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(2, 9)) as o:
@@ -381,6 +382,7 @@ def vc2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(3, 9)) as o:
@@ -456,6 +458,7 @@ def cb2(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p) < ff >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(5, 9)) as o:

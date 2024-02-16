@@ -230,6 +230,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< f >o !",
+                glue=True,
                 rleak=True,
             )
             if i == 0:
@@ -249,6 +250,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -286,6 +288,7 @@ def perc1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< pp >o !",
+                glue=True,
                 rleak=True,
             )
         baca.markup(
@@ -457,6 +460,7 @@ def vc1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(

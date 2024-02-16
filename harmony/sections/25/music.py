@@ -269,6 +269,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 run,
@@ -282,6 +283,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -307,6 +309,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 run,

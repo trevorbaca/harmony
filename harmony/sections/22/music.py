@@ -325,6 +325,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -377,6 +378,7 @@ def perc1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< pp >o !",
+                glue=True,
                 rleak=True,
             )
         baca.markup(
@@ -562,6 +564,7 @@ def va(m):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff >o !",
+            glue=True,
         )
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),
@@ -592,6 +595,7 @@ def vc1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -661,6 +665,7 @@ def vc2(m):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff >o !",
+            glue=True,
         )
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),
@@ -751,6 +756,7 @@ def cb2(m):
         baca.piecewise.hairpin(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff >o !",
+            glue=True,
         )
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),

@@ -268,6 +268,7 @@ def bfl(cache):
             baca.piecewise.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp >o !",
+                glue=True,
             )
             baca.rspanners.trill(
                 run,

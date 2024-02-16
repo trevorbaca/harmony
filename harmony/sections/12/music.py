@@ -484,6 +484,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o !",
+            glue=True,
             rleak=True,
         )
         baca.rspanners.metric_modulation(
@@ -495,18 +496,21 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mp >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[7]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< pp >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[2]) as o:
@@ -515,6 +519,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m[10]) as o:
@@ -582,6 +587,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 1]),
             'o< "f" >o ! o< p >o !' ' o< "f" >o ! o< p >o !' ' o< "f" >o ! o< f >o !',
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(1, 15)) as o:

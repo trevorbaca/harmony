@@ -202,6 +202,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 2]),
                 "o< mf >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -219,6 +220,7 @@ def bfl(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -416,6 +418,7 @@ def vc1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o<| mp |>o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -504,6 +507,7 @@ def cb1(m):
             baca.piecewise.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o<| mp |>o !",
+                glue=True,
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -584,6 +588,7 @@ def composites(cache):
                 baca.piecewise.hairpin(
                     baca.select.lparts(run, [1, 1]),
                     "o<| mp |>o !",
+                    glue=True,
                     rleak=True,
                 )
     for name in ["va", "vc2", "cb2"]:

@@ -412,6 +412,7 @@ def bfl(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 2]),
             "o< mp >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(13, 14)) as o:
@@ -445,6 +446,7 @@ def perc1(m):
         baca.piecewise.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< p >o !",
+            glue=True,
             rleak=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
@@ -737,6 +739,7 @@ def cb1(m):
         baca.piecewise.hairpin(
             baca.select.mgroups(o, [1, 1, 2]),
             "(pp) >o ! o< mf >o !",
+            glue=True,
             rleak=True,
         )
     with baca.scope(m.get(13, 15)) as o:
@@ -832,6 +835,7 @@ def composites(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1]),
                 "o<| mp |>o !",
+                glue=True,
                 rleak=True,
             )
     for name in ["vc1", "vc2", "cb2"]:
