@@ -283,7 +283,7 @@ def bfl(m):
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp >o !",
             glue=True,
@@ -680,7 +680,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.stem_tremolo(o.pleaves())
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
                 glue=True,

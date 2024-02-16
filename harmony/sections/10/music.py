@@ -374,7 +374,7 @@ def bfl(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[10]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.pleaves(o, grace=False), [2, 1]
             ),
@@ -389,19 +389,19 @@ def bfl(cache):
             staff_padding=8,
         )
     with baca.scope(m.get(11)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
             do_not_bookend=True,
         )
     with baca.scope(m.get(12)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< f >o",
             do_not_bookend=True,
         )
     with baca.scope(m.get(13)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
             do_not_bookend=True,
@@ -409,7 +409,7 @@ def bfl(cache):
     with baca.scope(m.get(11, 12)) as o:
         baca.pitch(o.leaves(grace=False), "G4")
     with baca.scope(m[14]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 2]),
             "o< mp >o !",
             glue=True,
@@ -443,7 +443,7 @@ def perc1(m):
     with baca.scope(m[2]) as o:
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< p >o !",
             glue=True,
@@ -620,7 +620,7 @@ def va(m):
             + [-5, -2, -3, -1, -4, -2, -5, -2],
         ),
         baca.glissando(o.tleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             do_not_bookend=True,
@@ -663,7 +663,7 @@ def vc1(m):
             + [-4, -2, -5, -3, -6, -3, -4, -2, -5, -3, -6, -3],
         ),
         baca.glissando(o.tleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             do_not_bookend=True,
@@ -709,7 +709,7 @@ def vc2(m):
             + [-4, -2, -5, -3, -6, -3],
         )
         baca.glissando(o.tleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             do_not_bookend=True,
@@ -736,7 +736,7 @@ def cb1(m):
             staff_padding=3,
         )
     with baca.scope(m.get(12, 15)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.mgroups(o, [1, 1, 2]),
             "(pp) >o ! o< mf >o !",
             glue=True,
@@ -785,7 +785,7 @@ def cb2(m):
             + [2, 4, 1, 3, 0, 3, 1, 3, 0, 2, -1, 2, 1, 3, 0, 2, -1, 2],
         )
         baca.glissando(o.tleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             do_not_bookend=True,
@@ -832,7 +832,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1]),
                 "o<| mp |>o !",
                 glue=True,

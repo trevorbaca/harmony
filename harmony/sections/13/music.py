@@ -266,7 +266,7 @@ def bfl(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
             glue=True,
@@ -280,7 +280,7 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o<| f |>o !",
             glue=True,
@@ -312,7 +312,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.breathe(o.pleaf(1))
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             'o< "f" >o !',
             glue=True,
@@ -468,7 +468,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
             glue=True,

@@ -305,7 +305,7 @@ def bfl(m):
         baca.pitch(o, "Ab4")
         baca.stem_tremolo(abjad.select.get(o.plts(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "o<| ff |> p",
                 do_not_bookend=True,
@@ -393,7 +393,7 @@ def hp(cache):
     with baca.scope(m[9]) as o:
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.clparts(clpart, [1]),
                 "p < ff > p",
                 do_not_bookend=True,
@@ -601,7 +601,7 @@ def cb2(m):
     with baca.scope(m.get(8, 9)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Ab1")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             'o< "mf" >o !',
             glue=True,
@@ -656,7 +656,7 @@ def composites(cache):
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
                 do_not_bookend=True,
@@ -664,7 +664,7 @@ def composites(cache):
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
                 do_not_bookend=True,
@@ -672,14 +672,14 @@ def composites(cache):
     for name in ["va", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 'pp p mp mf "f"',
                 do_not_bookend=True,
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             'p mp mf "f"',
             do_not_bookend=True,
@@ -687,7 +687,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
                 do_not_bookend=True,

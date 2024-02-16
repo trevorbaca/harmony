@@ -287,7 +287,7 @@ def bfl(m):
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3"),
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p",
             do_not_bookend=True,
@@ -449,7 +449,7 @@ def hp(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "C#4")
         baca.accent(o.pheads())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p",
             do_not_bookend=True,
@@ -557,7 +557,7 @@ def vc1(m):
             baca.override.clef_x_extent_false(u)
             baca.staff_lines(u, 5)
     with baca.scope(m[3]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             "p mp",
             do_not_bookend=True,
@@ -662,7 +662,7 @@ def cb1(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp ppp",
             do_not_bookend=True,
@@ -674,7 +674,7 @@ def cb1(m):
         baca.pitch(o, "Aqs4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p mp",
             do_not_bookend=True,
@@ -707,7 +707,7 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[1]) as o:
         baca.flat_glissando(o, "E1", left_broken=True)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [o],
             "o< f",
             glue=True,
@@ -743,7 +743,7 @@ def cb2(m):
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p",
             do_not_bookend=True,

@@ -199,7 +199,7 @@ def bfl(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o, "F5")
         for run in baca.select.runs(o):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(run, [1, 2]),
                 "o< mf >o !",
                 glue=True,
@@ -217,7 +217,7 @@ def bfl(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p >o !",
                 glue=True,
@@ -415,7 +415,7 @@ def vc1(m):
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "F4")
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o<| mp |>o !",
                 glue=True,
@@ -504,7 +504,7 @@ def cb1(m):
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "E4", do_not_transpose=True)
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o<| mp |>o !",
                 glue=True,
@@ -585,7 +585,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             for run in baca.select.runs(o):
-                baca.piecewise.hairpin(
+                baca.hairpinlib.hairpin(
                     baca.select.lparts(run, [1, 1]),
                     "o<| mp |>o !",
                     glue=True,

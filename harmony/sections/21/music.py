@@ -274,7 +274,7 @@ def bfl(cache):
         baca.pitch(o, "E5")
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< f >o !",
                 glue=True,

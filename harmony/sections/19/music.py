@@ -559,7 +559,7 @@ def bfl(m):
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mp >o !",
                 glue=True,
@@ -588,7 +588,7 @@ def bfl(m):
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mf >o !",
                 glue=True,
@@ -870,7 +870,7 @@ def va(cache):
     with baca.scope(m[2]) as o:
         baca.override.tuplet_bracket_up(o)
         baca.stem_tremolo(o.pleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
             glue=True,
@@ -990,7 +990,7 @@ def cb2(cache):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "E5", do_not_transpose=True)
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 2, 1]),
             "o<| mp |>o ! o<| mp |>o ! o<| mp |>o ! o<| mp |>o !",
             glue=True,
@@ -1036,7 +1036,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.stem_tremolo(o.pleaves())
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp |> pp pp <| mp |>o !",
                 glue=True,
@@ -1049,7 +1049,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.flat_glissando(o.pleaves())
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< mp >o !",
                 glue=True,
