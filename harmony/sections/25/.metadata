@@ -21,12 +21,16 @@
         "Viola.Rests",
         "Cello.1.Staff",
         "Cello.1.Music",
+        "Cello.1.Rests",
         "Cello.2.Staff",
         "Cello.2.Music",
+        "Cello.2.Rests",
         "Contrabass.1.Staff",
         "Contrabass.1.Music",
+        "Contrabass.1.Rests",
         "Contrabass.2.Staff",
         "Contrabass.2.Music",
+        "Contrabass.2.Rests",
     ],
     "bol_measure_numbers": [226, 232],
     "duration": "0'57''",
@@ -78,16 +82,6 @@
                 value="Bfl.",
             ),
         ],
-        "Cello.1.Music": [
-            baca.Memento(
-                context="Cello.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="\\baca-ff-scratch",
-            )
-        ],
         "Cello.1.Staff": [
             baca.Memento(
                 context="Cello.1.Music",
@@ -129,16 +123,6 @@
                 synthetic_offset=None,
                 value="Vc. I",
             ),
-        ],
-        "Cello.2.Music": [
-            baca.Memento(
-                context="Cello.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="\\baca-ff-scratch",
-            )
         ],
         "Cello.2.Staff": [
             baca.Memento(
@@ -182,16 +166,6 @@
                 value="Vc. II",
             ),
         ],
-        "Contrabass.1.Music": [
-            baca.Memento(
-                context="Contrabass.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="\\baca-ff-scratch",
-            )
-        ],
         "Contrabass.1.Staff": [
             baca.Memento(
                 context="Contrabass.1.Music",
@@ -233,16 +207,6 @@
                 synthetic_offset=None,
                 value="Cb. I",
             ),
-        ],
-        "Contrabass.2.Music": [
-            baca.Memento(
-                context="Contrabass.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="\\baca-ff-scratch",
-            )
         ],
         "Contrabass.2.Staff": [
             baca.Memento(
