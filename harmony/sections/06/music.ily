@@ -2302,6 +2302,8 @@ number.6.Harp.Music = {
     c'4 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

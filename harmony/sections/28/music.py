@@ -243,7 +243,6 @@ def bfl(m):
         baca.hairpinlib.hairpin(
             baca.select.clparts(o, [1]),
             "p < mp >",
-            do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.rspanners.trill(
@@ -262,7 +261,6 @@ def perc1(m):
         baca.hairpinlib.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
             "p < mp > p p < mp > p",
-            do_not_bookend=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -291,7 +289,6 @@ def perc1(m):
         baca.hairpinlib.hairpin(
             baca.select.clparts(o, [1]),
             "p < mp >",
-            do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.markup(
@@ -436,7 +433,6 @@ def vc1(cache):
         baca.hairpinlib.hairpin(
             baca.select.cmgroups(o, [2, 2]),
             "o< mp >o",
-            do_not_bookend=True,
             rleak=True,
         )
         baca.markup(
@@ -502,7 +498,6 @@ def vc2(cache):
         baca.hairpinlib.hairpin(
             baca.select.cmgroups(o, [2, 2]),
             "o< mp >o",
-            do_not_bookend=True,
             rleak=True,
         )
         baca.markup(
@@ -642,7 +637,6 @@ def cb2(cache):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o, [3, 1]),
             "o< ff >o",
-            do_not_bookend=True,
             rleak=True,
         )
         baca.mspanners.scp(
@@ -691,7 +685,6 @@ def cb2(cache):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [2, 1, 1, 1]),
             "o< ff (ff) >o !",
-            do_not_bookend=True,
             match=True,
             right_broken=True,
         )

@@ -734,9 +734,9 @@ def hp(m):
         library.whisk_staff_position(o)
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 'o< "f" >o !',
-                do_not_bookend=True,
+                glue=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -757,9 +757,10 @@ def hp(m):
         library.whisk_staff_position(o.pleaves()[-2:])
         leaves = o.pleaves()[-2:]
         baca.hairpinlib.hairpin(
-            baca.select.clparts(leaves, [1]),
-            'o< "f" >o',
-            do_not_bookend=True,
+            baca.select.lparts(leaves, [1, 1]),
+            'o< "f" >o !',
+            glue=True,
+            rleak=True,
         )
         baca.markup(
             o.pleaf(-2),
@@ -770,9 +771,9 @@ def hp(m):
         library.whisk_staff_position(o)
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 'o< "f" >o !',
-                do_not_bookend=True,
+                glue=True,
             )
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:
@@ -828,7 +829,6 @@ def hp(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o, exclude=baca.enums.HIDDEN),
             "mf f ff fff",
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[15]) as o:
@@ -1209,9 +1209,9 @@ def cb1(m):
         baca.flat_glissando(o.run(-1), "E1")
         with baca.scope(o.runs()[-1:]) as u:
             baca.hairpinlib.hairpin(
-                baca.select.lparts(u, [6, 5, 3, 1]),
+                baca.select.lparts(u, [6, 5, 4]),
                 "o< mf > p < f",
-                do_not_bookend=True,
+                glue=True,
             )
             baca.mspanners.scp(
                 baca.select.lparts(u, [6, 5, 3, 1]),
@@ -1230,7 +1230,6 @@ def cb1(m):
         baca.hairpinlib.hairpin(
             o.plts(),
             "pp ppp",
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[10]) as o:
@@ -1246,7 +1245,6 @@ def cb1(m):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 1, 1]),
             "o< mf > p < f > p < ff >o !",
-            do_not_bookend=True,
             match=True,
             right_broken=True,
         )
@@ -1282,7 +1280,6 @@ def cb2(m):
             baca.hairpinlib.hairpin(
                 baca.select.mgroups(u, [2, 1, 1, 1]),
                 "o< mp > p < f",
-                do_not_bookend=True,
                 rleak=True,
             )
             baca.mspanners.scp(

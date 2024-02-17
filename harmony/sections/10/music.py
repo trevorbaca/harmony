@@ -379,7 +379,6 @@ def bfl(cache):
                 baca.select.pleaves(o, grace=False), [2, 1]
             ),
             "o< mp >o",
-            do_not_bookend=True,
         )
         baca.mspanners.text(
             baca.select.tleaves(o, grace=False),
@@ -392,19 +391,16 @@ def bfl(cache):
         baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
-            do_not_bookend=True,
         )
     with baca.scope(m.get(12)) as o:
         baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< f >o",
-            do_not_bookend=True,
         )
     with baca.scope(m.get(13)) as o:
         baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
-            do_not_bookend=True,
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.pitch(o.leaves(grace=False), "G4")
@@ -623,8 +619,6 @@ def va(m):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
-            do_not_bookend=True,
-            match=True,
             right_broken=True,
         )
         baca.mspanners.scp(
@@ -664,9 +658,9 @@ def vc1(m):
         ),
         baca.glissando(o.tleaves())
         baca.hairpinlib.hairpin(
-            baca.select.mgroups(o.rleaves(), [3, 3, 1]),
+            baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o !",
-            do_not_bookend=True,
+            glue=True,
         )
         baca.mspanners.scp(
             baca.select.mgroups(o, [3, 2]),
@@ -712,7 +706,6 @@ def vc2(m):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
-            do_not_bookend=True,
             right_broken=True,
         )
         baca.mspanners.scp(
@@ -788,7 +781,6 @@ def cb2(m):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
-            do_not_bookend=True,
             right_broken=True,
         )
         baca.mspanners.scp(

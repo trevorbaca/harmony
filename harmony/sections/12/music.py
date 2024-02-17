@@ -776,7 +776,6 @@ def hp(cache):
         baca.hairpinlib.hairpin(
             baca.select.lparts(o.tleaves(), [1, 3]),
             "o< mf >o",
-            do_not_bookend=True,
             rleak=True,
         )
         baca.markup(

@@ -1019,7 +1019,6 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.lparts(o.rleaves(), [1, 1, 1, 1, 1, 1, 1, 1]),
                 "o<| mp |> pp pp <| mp |> ! <| mp |>o !",
-                do_not_bookend=True,
                 match=True,
                 right_broken=True,
             )

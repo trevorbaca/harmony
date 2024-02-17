@@ -306,9 +306,9 @@ def bfl(m):
         baca.stem_tremolo(abjad.select.get(o.plts(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "o<| ff |> p",
-                do_not_bookend=True,
+                glue=True,
             )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F#3")
@@ -394,9 +394,9 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p < ff > p",
-                do_not_bookend=True,
+                glue=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -659,7 +659,6 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
-                do_not_bookend=True,
             )
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
@@ -667,7 +666,6 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
-                do_not_bookend=True,
             )
     for name in ["va", "vc2"]:
         m = cache[name]
@@ -675,14 +673,12 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 'pp p mp mf "f"',
-                do_not_bookend=True,
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
         baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             'p mp mf "f"',
-            do_not_bookend=True,
         )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
@@ -690,7 +686,6 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
-                do_not_bookend=True,
             )
     for name in ["bfl", "hp", "va", "vc1", "vc2", "cb1"]:
         m = cache[name]

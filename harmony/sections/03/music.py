@@ -496,7 +496,6 @@ def va(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6),
 
@@ -512,7 +511,6 @@ def vc1(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             "p mp",
-            do_not_bookend=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
@@ -554,7 +552,6 @@ def vc1(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(leaves),
             '"f" mf mp p pp ppp ppp',
-            do_not_bookend=True,
         )
     with baca.scope(m[8]) as o:
         baca.override.tuplet_number_text(o.leaves(), r"\markup 5:4")
@@ -702,7 +699,6 @@ def cb1(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "f" mf mp p pp ppp ppp',
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
 
@@ -785,7 +781,6 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
-                do_not_bookend=True,
             )
 
 

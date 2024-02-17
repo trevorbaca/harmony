@@ -290,7 +290,6 @@ def bfl(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p",
-            do_not_bookend=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
@@ -452,7 +451,6 @@ def hp(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p",
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[4]) as o:
@@ -560,7 +558,6 @@ def vc1(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             "p mp",
-            do_not_bookend=True,
         )
     with baca.scope(m.get(2, 3)) as o:
         with baca.scope(o.pheads()[2:]) as u:
@@ -665,7 +662,6 @@ def cb1(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp ppp",
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[3]) as o:
@@ -677,7 +673,6 @@ def cb1(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p mp",
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o.plts()[:-1], 4)
         baca.rspanners.pizzicato(
@@ -746,7 +741,6 @@ def cb2(m):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             "pp p",
-            do_not_bookend=True,
         )
         baca.rspanners.pizzicato(
             baca.select.ltleaves(o),

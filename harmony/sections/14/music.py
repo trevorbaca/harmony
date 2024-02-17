@@ -570,7 +570,6 @@ def perc2(cache):
         baca.hairpinlib.hairpin(
             baca.select.plts(o)[1:],
             '"ff" "ff" "f" "f" mf mp p pp',
-            do_not_bookend=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -736,7 +735,6 @@ def vc1(cache):
         baca.hairpinlib.hairpin(
             o.plts(),
             '"ff" "ff"',
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
@@ -781,7 +779,6 @@ def vc1(cache):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "ff" "f" "f" mf mp p',
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[9]) as o:
@@ -823,7 +820,6 @@ def vc2(cache):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "ff"',
-            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
@@ -854,7 +850,6 @@ def vc2(cache):
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
             '"ff" "ff" "f" mf mp p pp',
-            do_not_bookend=True,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.rspanners.metric_modulation(

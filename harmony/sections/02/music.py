@@ -342,9 +342,9 @@ def bfl(cache):
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p <| mf |> p",
-                do_not_bookend=True,
+                glue=True,
             )
         baca.override.dls_staff_padding(o, 3)
     with baca.scope(m[6]) as o:
@@ -389,30 +389,30 @@ def bfl(cache):
     with baca.scope(m[8]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p <| mp |> p",
-                do_not_bookend=True,
+                glue=True,
             )
     with baca.scope(m[9]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p <| mf |> p",
-                do_not_bookend=True,
+                glue=True,
             ),
     with baca.scope(m[10]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p <| f |> p",
-                do_not_bookend=True,
+                glue=True,
             ),
     with baca.scope(m[11]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p <| ff |> p",
-                do_not_bookend=True,
+                glue=True,
             )
 
 
@@ -576,16 +576,16 @@ def hp(cache):
     with baca.scope(m[1]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p < f > p",
-                do_not_bookend=True,
+                glue=True,
             )
     with baca.scope(m.get(2, 5)) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "(p) < f > p",
-                do_not_bookend=True,
+                glue=True,
             )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -621,30 +621,30 @@ def hp(cache):
     with baca.scope(m[8]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "p < mp > p",
-                do_not_bookend=True,
+                glue=True,
             )
     with baca.scope(m[9]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "(p) < mf > p",
-                do_not_bookend=True,
+                glue=True,
             ),
     with baca.scope(m[10]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "(p) < f > p",
-                do_not_bookend=True,
+                glue=True,
             ),
     with baca.scope(m[11]) as o:
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(clpart, [1]),
+                baca.select.lparts(clpart, [1, 2]),
                 "(p) < ff > p",
-                do_not_bookend=True,
+                glue=True,
             )
 
 
