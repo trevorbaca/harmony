@@ -348,25 +348,24 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpinlib.hairpin(
-                baca.select.clparts(o, [1]),
+                baca.select.lparts(o, [1, 2]),
                 "o<| f |>o !",
-                do_not_bookend=True,
+                glue=True,
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "Bb5")
         baca.stem_tremolo(o.pleaves())
-        leaves = o.leaves()[:3]
         baca.hairpinlib.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.lparts(o[:3], [1, 2]),
             "o<| f |>o !",
-            do_not_bookend=True,
+            glue=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
-        leaves = baca.select.rleak(o.leaves()[-2:])
         baca.hairpinlib.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[-2:], [1, 1]),
             "o<| mf |>o !",
-            do_not_bookend=True,
+            glue=True,
+            rleak=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(3), -2)
     with baca.scope(m[6]) as o:
@@ -377,11 +376,9 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "G3")
         baca.pitch(o.runs()[1:], "Bb5")
         baca.stem_tremolo(o.pleaves()[-2:])
-        leaves = o.leaves()[-2:]
         baca.hairpinlib.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[-2:], [1]),
             "o< f >o",
-            do_not_bookend=True,
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
@@ -396,11 +393,10 @@ def bfl(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb5"),
         baca.stem_tremolo(o.pleaves())
-        leaves = o.leaves()[:3]
         baca.hairpinlib.hairpin(
-            baca.select.clparts(leaves, [1]),
+            baca.select.clparts(o[:3], [1, 2]),
             "o< f >o !",
-            do_not_bookend=True,
+            glue=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
@@ -856,9 +852,7 @@ def cb1(cache):
         baca.hairpinlib.hairpin(
             [o],
             ">o",
-            do_not_bookend=True,
             left_broken=True,
-            rleak=True,
         )
         baca.mspanners.scp(
             [o],
