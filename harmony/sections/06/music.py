@@ -1245,7 +1245,6 @@ def cb1(m):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 1, 1]),
             "o< mf > p < f > p < ff >o !",
-            match=True,
             right_broken=True,
         )
         baca.mspanners.scp(

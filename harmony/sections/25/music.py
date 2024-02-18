@@ -492,7 +492,6 @@ def va(cache):
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
-            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -533,7 +532,6 @@ def vc1(cache):
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
-            match=True,
         )
         baca.override.note_head_transparent(o.leaves()[1:-1])
         baca.untie(o.leaves())
@@ -572,7 +570,6 @@ def vc2(cache):
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
-            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -613,7 +610,6 @@ def cb1(cache):
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
-            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -653,7 +649,6 @@ def cb2(cache):
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
-            match=True,
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())

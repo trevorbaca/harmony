@@ -1544,6 +1544,11 @@ number.4.Harp.Music = {
 
     cs'!16
     - \accent
+      %! REDUNDANT_DYNAMIC_COLOR
+      %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
+      %! REDUNDANT_DYNAMIC
+    \f
     ]
     ~
 

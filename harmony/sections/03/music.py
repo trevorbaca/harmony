@@ -698,7 +698,7 @@ def cb1(m):
         baca.stem_tremolo(o.pleaves())
         baca.hairpinlib.hairpin(
             baca.select.plts(o),
-            '"ff" "f" mf mp p pp ppp ppp',
+            '"ff" "f" mf mp p pp ppp',
         )
         baca.override.dls_staff_padding(o, 6)
 
@@ -781,6 +781,7 @@ def composites(cache):
             baca.hairpinlib.hairpin(
                 baca.select.plts(o),
                 "pp p mp mf f",
+                extra_specifiers=True,
             )
 
 

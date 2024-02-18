@@ -687,7 +687,6 @@ def cb2(cache):
         baca.hairpinlib.hairpin(
             baca.select.mgroups(o.rleaves(), [2, 1, 1, 1]),
             "o< ff (ff) >o !",
-            match=True,
             right_broken=True,
         )
         baca.mspanners.scp(
