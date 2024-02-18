@@ -230,9 +230,9 @@ def perc1(m):
         baca.instrument_name(o.leaf(0), r"\harmony-percussion-i-markup")
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-2:],
-            "o<| f",
+            "o<|f",
         )
         baca.markup(
             o.pleaf(0),
@@ -242,9 +242,9 @@ def perc1(m):
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptail(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[:1],
-            "o<| mf",
+            "o<|mf",
             rleak=True,
         )
         baca.spanners.hairpin(
@@ -372,10 +372,9 @@ def vc1(m):
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
         baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
-        baca.hairpinlib.hairpin(
+        baca.hairpinlib.exact(
             baca.select.lparts(leaves, [4, 5]),
-            "o< f >o !",
-            glue=True,
+            "o< f>o!",
         )
         baca.mspanners.scp(
             o.plts(),
