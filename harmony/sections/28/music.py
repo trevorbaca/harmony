@@ -240,9 +240,10 @@ def bfl(m):
             leaves,
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpinlib.cyclic(
             baca.select.clparts(o, [1]),
             "p < mp >",
+            do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.rspanners.trill(
@@ -286,9 +287,10 @@ def perc1(m):
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -7]))
-        baca.hairpinlib.hairpin(
+        baca.hairpinlib.cyclic(
             baca.select.clparts(o, [1]),
             "p < mp >",
+            do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
         baca.markup(

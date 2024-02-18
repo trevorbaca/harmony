@@ -817,9 +817,10 @@ def vc2(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpinlib.cyclic(
             baca.select.plts(o),
-            '"ff" "ff"',
+            '"ff"',
+            do_not_bookend=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:

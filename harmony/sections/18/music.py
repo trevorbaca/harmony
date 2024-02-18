@@ -1228,10 +1228,11 @@ def composites(cache):
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:
-            baca.hairpinlib.hairpin(
+            baca.hairpinlib.cyclic(
                 baca.select.clparts(o.tleaves(), [1]),
                 # TODO: set to-barline ##t on final diminuendo:
                 "o< p >o",
+                do_not_bookend=True,
             )
             baca.spanners.hairpin(o.rleaf(-1), "!")
     for name in ["va", "vc2"]:
