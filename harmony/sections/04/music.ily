@@ -1544,11 +1544,6 @@ number.4.Harp.Music = {
 
     cs'!16
     - \accent
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
-    \pp
     ]
     ~
 
