@@ -374,7 +374,7 @@ def bfl(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[10]) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             abjad.select.partition_by_counts(
                 baca.select.pleaves(o, grace=False), [2, 1]
             ),
@@ -388,24 +388,24 @@ def bfl(cache):
             staff_padding=8,
         )
     with baca.scope(m.get(11)) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
         )
     with baca.scope(m.get(12)) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< f >o",
         )
     with baca.scope(m.get(13)) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf >o",
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.pitch(o.leaves(grace=False), "G4")
     with baca.scope(m[14]) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 2]),
             "o< mp >o !",
             glue=True,
@@ -439,7 +439,7 @@ def perc1(m):
     with baca.scope(m[2]) as o:
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< p >o !",
             glue=True,
@@ -488,7 +488,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(14)) as o:
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.rleaves(),
             "(p)>o!",
         )
@@ -547,7 +547,7 @@ def hp(cache):
             staff_padding=3,
         )
     with baca.scope(m.get(12)) as o:
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o,
             "(mf)>o!",
             rleak=True,
@@ -595,7 +595,7 @@ def va(m):
         with baca.scope(m[n]) as o:
             baca.pitch(o, "C#4")
             baca.flat_glissando(o.pleaves())
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 o.tleaves(),
                 "mf>o!",
                 rleak=True,
@@ -616,7 +616,7 @@ def va(m):
             + [-5, -2, -3, -1, -4, -2, -5, -2],
         ),
         baca.glissando(o.tleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             right_broken=True,
@@ -657,7 +657,7 @@ def vc1(m):
             + [-4, -2, -5, -3, -6, -3, -4, -2, -5, -3, -6, -3],
         ),
         baca.glissando(o.tleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff >o !",
             glue=True,
@@ -703,7 +703,7 @@ def vc2(m):
             + [-4, -2, -5, -3, -6, -3],
         )
         baca.glissando(o.tleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             right_broken=True,
@@ -729,7 +729,7 @@ def cb1(m):
             staff_padding=3,
         )
     with baca.scope(m.get(12, 15)) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.mgroups(o, [1, 1, 2]),
             "(pp) >o ! o< mf >o !",
             glue=True,
@@ -778,7 +778,7 @@ def cb2(m):
             + [2, 4, 1, 3, 0, 3, 1, 3, 0, 2, -1, 2, 1, 3, 0, 2, -1, 2],
         )
         baca.glissando(o.tleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff >o !",
             right_broken=True,
@@ -815,7 +815,7 @@ def composites(cache):
                         u,
                         staff_padding=8,
                     )
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 o[:1],
                 "mp>o!",
                 rleak=True,
@@ -824,7 +824,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
-            baca.hairpinlib.hairpin(
+            baca.hairpins.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1]),
                 "o<| mp |>o !",
                 glue=True,
@@ -837,7 +837,7 @@ def composites(cache):
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     o.tleaves(),
                     "o<|ff",
                     rleak=True,
