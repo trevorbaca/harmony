@@ -247,9 +247,9 @@ def perc1(m):
             "o<|mf",
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-2:-1],
-            "o<| f",
+            "o<|f",
             rleak=True,
         )
     for n in [1, 2]:
@@ -260,9 +260,9 @@ def perc1(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f > p",
+            "f>p",
         )
         baca.override.dls_staff_padding(o, 5.5)
         baca.markup(
@@ -291,9 +291,9 @@ def perc2(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f > p",
+            "f>p",
         )
         baca.override.dls_staff_padding(o, 5.5)
         baca.markup(
@@ -424,9 +424,9 @@ def vc2(m):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf >o !",
+            "mf>o!",
         )
         baca.mspanners.scp(
             o.tleaves(),
@@ -503,9 +503,9 @@ def cb2(m):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf >o !",
+            "mf>o!",
         )
         baca.mspanners.scp(
             o.tleaves(),

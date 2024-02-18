@@ -517,9 +517,9 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaf(0))
         for run in baca.select.runs(o)[:1]:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "f >o !",
+                "f>o!",
                 rleak=True,
             )
         baca.markup(

@@ -507,9 +507,9 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.phead(1))
         baca.dynamic(o.phead(0), "mp")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.rleak(o.pleaves()[1:]),
-            "o< mf",
+            "o<mf",
         )
         baca.markup(
             o.pleaf(0),
@@ -520,9 +520,9 @@ def perc1(cache):
         library.bass_drum_staff_position(o)
         baca.dynamic(o.phead(0), "mp")
         baca.laissez_vibrer(o.phead(1))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves()[1:],
-            "o< mf",
+            "o<mf",
             rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -568,9 +568,9 @@ def perc1(cache):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves(),
-            "o< mf",
+            "o<mf",
             rleak=True,
         )
         baca.markup(
@@ -581,25 +581,25 @@ def perc1(cache):
     with baca.scope(m[9]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves(),
-            "o< mp",
+            "o<mp",
             rleak=True,
         )
     with baca.scope(m[10]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves(),
-            "o< mp",
+            "o<mp",
             rleak=True,
         )
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptails())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves(),
-            "o< mp",
+            "o<mp",
             rleak=True,
         )
     with baca.scope(m.get(8, 11)) as o:
@@ -859,9 +859,9 @@ def vc1(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D3")
         for run in baca.select.runs(o):
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "mp -- !",
+                "mp--!",
                 rleak=True,
             )
             baca.rspanners.damp(
@@ -1221,9 +1221,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[6]) as o:
             baca.triple_staccato(o.pheads())
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "p < f",
+                "p<f",
             )
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]
@@ -1234,7 +1234,7 @@ def composites(cache):
                 "o< p >o",
                 do_not_bookend=True,
             )
-            baca.spanners.hairpin(o.rleaf(-1), "!")
+            baca.hairpinlib.exact([o.rleaf(-1)], "!")
     for name in ["va", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:

@@ -591,15 +591,15 @@ def cb2(m):
                 staff_padding=3,
             )
     with baca.scope(m[1]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf >o",
+            "mf>o",
             rleak=True,
         )
     with baca.scope(m[5]) as o:
@@ -623,9 +623,9 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1])
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run,
-                    "o<| f",
+                    "o<|f",
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

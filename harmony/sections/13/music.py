@@ -371,9 +371,9 @@ def perc1(cache):
     with baca.scope(m[5]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
         baca.markup(
             o.pleaf(0),
@@ -511,15 +511,15 @@ def va(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[:1],
-            ">o !",
+            ">o!",
             left_broken=True,
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[2:],
-            "mf >o !",
+            "mf>o!",
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -544,9 +544,9 @@ def va(cache):
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "D3")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "(mp) >o !",
+            "(mp)>o!",
             rleak=True,
         )
         baca.mspanners.scp(
@@ -561,15 +561,15 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[:1],
-            ">o !",
+            ">o!",
             left_broken=True,
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[2:],
-            "mf >o !",
+            "mf>o!",
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -595,9 +595,9 @@ def vc1(cache):
     with baca.scope(m[4]) as o:
         with baca.scope(o.plt(0)) as u:
             baca.pitch(u, "D2")
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 u,
-                "(mp) >o !",
+                "(mp)>o!",
             )
         baca.mspanners.scp(
             o.leaves(),
@@ -618,9 +618,9 @@ def vc2(cache):
             baca.pitch(u, "F3"),
             baca.stem_tremolo(u)
         baca.pitch(o.plts()[1:], "C3")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.rleak(o.plts()[:1]),
-            ">o !",
+            ">o!",
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
@@ -636,9 +636,9 @@ def vc2(cache):
         )
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves()[:-1],
-            "(mp) >o !",
+            "(mp)>o!",
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "C3")
@@ -654,14 +654,14 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves()[:2],
-            ">o !",
+            ">o!",
             left_broken=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[2:],
-            "mf >o !",
+            "mf>o!",
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "mp")
@@ -694,9 +694,9 @@ def cb1(cache):
             m = cache[name]
     with baca.scope(m[4]) as o:
         with baca.scope(o.plt(0)) as u:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 u,
-                "(mp) >o !",
+                "(mp)>o!",
             )
         baca.mspanners.scp(
             o.leaves(),
@@ -717,9 +717,9 @@ def cb2(cache):
             baca.pitch(u, "Eb2")
             baca.stem_tremolo(u)
         baca.pitch(o.plts()[1:], "B2")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.rleak(o.plts()[:1]),
-            ">o !",
+            ">o!",
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
@@ -735,9 +735,9 @@ def cb2(cache):
         )
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[:-1],
-            "(mp) >o !",
+            "(mp)>o!",
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "B2")

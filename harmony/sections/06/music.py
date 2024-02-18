@@ -622,9 +622,9 @@ def perc1(m):
     with baca.scope(m[10]) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "o< mf",
+            "o<mf",
             rleak=True,
         )
         baca.markup(
@@ -634,16 +634,16 @@ def perc1(m):
         )
     with baca.scope(m[11]) as o:
         library.bass_drum_staff_position(o)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "o< f",
+            "o<f",
             rleak=True,
         )
     with baca.scope(m[15]) as o:
         library.bass_drum_staff_position(o)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "o< ff",
+            "o<ff",
             rleak=True,
         )
     with baca.scope(m.get(10, 15)) as o:
@@ -942,9 +942,9 @@ def va(cache):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.plts()[-1:],
-            "f >o !",
+            "f>o!",
             rleak=True,
         )
         for run in baca.select.runs(o)[:-1]:
@@ -1071,9 +1071,9 @@ def vc1(cache):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.plts()[-1:],
-            "f >o !",
+            "f>o!",
             right_broken=True,
             rleak=True,
         )
@@ -1138,9 +1138,9 @@ def vc2(m):
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1167,9 +1167,9 @@ def vc2(m):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.plts()[-1:],
-            "f >o !",
+            "f>o!",
             rleak=True,
         )
     for item in [1, (6, 7), (10, 15)]:
@@ -1297,9 +1297,9 @@ def cb2(m):
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         with baca.scope(o.tleaves()) as u:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 u,
-                "mf >o !",
+                "mf>o!",
                 rleak=True,
             )
             baca.mspanners.scp(

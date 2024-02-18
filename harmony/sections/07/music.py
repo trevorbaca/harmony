@@ -434,9 +434,9 @@ def perc1(m):
     with baca.scope(m.get(4, 5)) as o:
         baca.staff_lines(o.leaf(0), 3)
         baca.staff_position(o, 2)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves(),
-            "f mp",
+            "f+mp",
         )
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
@@ -665,9 +665,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
     with baca.scope(m[6]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[1:2],
-            "pp >o !",
+            "pp>o!",
             rleak=True,
         )
     with baca.scope(m.get(4, 6)) as o:
@@ -698,9 +698,9 @@ def va(cache):
     with baca.scope(m.get(7, 8)) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
         baca.rspanners.xfb(
@@ -896,9 +896,9 @@ def cb1(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.flat_glissando(o, "E1")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf > p",
+            "mf>p",
         )
         baca.mspanners.scp(
             [o],
@@ -945,9 +945,9 @@ def cb2(m):
         )
     with baca.scope(m[6]) as o:
         baca.flat_glissando(o, "E1")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "p < f",
+            "p<f",
         )
         baca.mspanners.scp(
             baca.select.lparts(o, [2, 2]),
@@ -990,9 +990,9 @@ def composites(cache):
             for run in abjad.select.runs(o):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "o<| ff",
+                "o<|ff",
                 rleak=True,
             )
 

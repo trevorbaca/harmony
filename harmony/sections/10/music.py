@@ -488,9 +488,9 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(14)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.rleaves(),
-            "(p) >o !",
+            "(p)>o!",
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o.leaves(), 6)
@@ -547,9 +547,9 @@ def hp(cache):
             staff_padding=3,
         )
     with baca.scope(m.get(12)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "(mf) >o !",
+            "(mf)>o!",
             rleak=True,
         )
     with baca.scope(m.get(2, 12)) as o:
@@ -595,9 +595,9 @@ def va(m):
         with baca.scope(m[n]) as o:
             baca.pitch(o, "C#4")
             baca.flat_glissando(o.pleaves())
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "mf >o !",
+                "mf>o!",
                 rleak=True,
             )
             baca.rspanners.xfb(
@@ -815,9 +815,9 @@ def composites(cache):
                         u,
                         staff_padding=8,
                     )
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o[:1],
-                "mp >o !",
+                "mp>o!",
                 rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb2"]:
@@ -837,9 +837,9 @@ def composites(cache):
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     o.tleaves(),
-                    "o<| ff",
+                    "o<|ff",
                     rleak=True,
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

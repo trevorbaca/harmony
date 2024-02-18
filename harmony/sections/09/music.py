@@ -247,9 +247,9 @@ def va(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
         baca.markup(
@@ -337,9 +337,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.tuplet_bracket_up(o)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "mp >o !",
+                "mp>o!",
                 rleak=True,
             )
             with baca.scope(o.leaves()[-2:]) as u:
@@ -369,9 +369,9 @@ def composites(cache):
             for run in abjad.select.runs(o):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "o<| ff",
+                "o<|ff",
                 rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
