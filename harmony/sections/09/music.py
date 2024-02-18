@@ -247,7 +247,7 @@ def va(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "C#4")
         baca.flat_glissando(o.pleaves())
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.tleaves(),
             "mf>o!",
             rleak=True,
@@ -337,7 +337,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.override.tuplet_bracket_up(o)
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 o.tleaves(),
                 "mp>o!",
                 rleak=True,
@@ -369,7 +369,7 @@ def composites(cache):
             for run in abjad.select.runs(o):
                 leaf = baca.select.rleaf(run, -1)
                 baca.stop_on_string(leaf)
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 o.tleaves(),
                 "o<|ff",
                 rleak=True,

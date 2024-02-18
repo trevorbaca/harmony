@@ -262,7 +262,7 @@ def bfl(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mp >o !",
             glue=True,
@@ -275,7 +275,7 @@ def bfl(cache):
             r"\baca-seven-e-flat",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 1]),
             'o< "f" >o !',
             glue=True,
@@ -348,7 +348,7 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 "o<|f",
             )
@@ -478,7 +478,7 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 "o<|f",
             )
@@ -497,13 +497,13 @@ def vc1(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run,
                     "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run[:-1],
                     "o<|fff-scratch",
                 )
@@ -515,7 +515,7 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 "o<|f",
             )
@@ -554,13 +554,13 @@ def vc2(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run,
                     "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run[:-1],
                     "o<|fff-scratch",
                 )
@@ -572,7 +572,7 @@ def cb1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 "o<|f",
             )
@@ -616,13 +616,13 @@ def cb1(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run,
                     "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run[:-1],
                     "o<|fff-scratch",
                 )
@@ -634,7 +634,7 @@ def cb2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 "o<|f",
             )
@@ -673,13 +673,13 @@ def cb2(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run,
                     "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.hairpinlib.exact(
+                baca.hairpins.exact(
                     run[:-1],
                     "o<|fff-scratch",
                 )

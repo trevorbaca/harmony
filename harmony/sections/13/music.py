@@ -266,7 +266,7 @@ def bfl(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f |>o !",
             glue=True,
@@ -280,7 +280,7 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o<| f |>o !",
             glue=True,
@@ -312,7 +312,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.breathe(o.pleaf(1))
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 1]),
             'o< "f" >o !',
             glue=True,
@@ -371,7 +371,7 @@ def perc1(cache):
     with baca.scope(m[5]) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 run,
                 "o<|f",
             )
@@ -468,7 +468,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1]),
             "o< mf >o !",
             glue=True,
@@ -511,13 +511,13 @@ def va(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o[:1],
             ">o!",
             left_broken=True,
             rleak=True,
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.leaves(grace=False)[2:],
             "mf>o!",
         )
@@ -544,7 +544,7 @@ def va(cache):
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "D3")
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o,
             "(mp)>o!",
             rleak=True,
@@ -561,13 +561,13 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o[:1],
             ">o!",
             left_broken=True,
             rleak=True,
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.leaves(grace=False)[2:],
             "mf>o!",
         )
@@ -595,7 +595,7 @@ def vc1(cache):
     with baca.scope(m[4]) as o:
         with baca.scope(o.plt(0)) as u:
             baca.pitch(u, "D2")
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 u,
                 "(mp)>o!",
             )
@@ -618,7 +618,7 @@ def vc2(cache):
             baca.pitch(u, "F3"),
             baca.stem_tremolo(u)
         baca.pitch(o.plts()[1:], "C3")
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             baca.select.rleak(o.plts()[:1]),
             ">o!",
             left_broken=True,
@@ -636,7 +636,7 @@ def vc2(cache):
         )
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.leaves()[:-1],
             "(mp)>o!",
         )
@@ -654,12 +654,12 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaf(0))
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.leaves()[:2],
             ">o!",
             left_broken=True,
         )
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o.leaves(grace=False)[2:],
             "mf>o!",
         )
@@ -694,7 +694,7 @@ def cb1(cache):
             m = cache[name]
     with baca.scope(m[4]) as o:
         with baca.scope(o.plt(0)) as u:
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 u,
                 "(mp)>o!",
             )
@@ -717,7 +717,7 @@ def cb2(cache):
             baca.pitch(u, "Eb2")
             baca.stem_tremolo(u)
         baca.pitch(o.plts()[1:], "B2")
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             baca.select.rleak(o.plts()[:1]),
             ">o!",
             left_broken=True,
@@ -735,7 +735,7 @@ def cb2(cache):
         )
     with baca.scope(m[4]) as o:
         baca.repeat_tie(o.leaf(0))
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o[:-1],
             "(mp)>o!",
         )
