@@ -491,9 +491,9 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "f >o !",
+                "f>o!",
                 rleak=True,
             )
         baca.markup(
@@ -766,9 +766,9 @@ def composites(cache):
         with baca.scope(m[8]) as o:
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads()[1:])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o,
-                "o< f",
+                "o<f",
             )
         with baca.scope(m[9]) as o:
             baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
@@ -781,9 +781,9 @@ def composites(cache):
             with baca.scope(m.get(item)) as o:
                 baca.clef(o.leaf(0), "bass")
                 for run in baca.select.runs(o):
-                    baca.spanners.hairpin(
+                    baca.hairpinlib.exact(
                         run,
-                        "o<| ff",
+                        "o<|ff",
                         rleak=True,
                     )
                 for run in abjad.select.runs(o):

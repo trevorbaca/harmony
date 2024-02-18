@@ -690,9 +690,9 @@ def va(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.tleaves(o, grace=False),
-            "f >o !",
+            "f>o!",
             rleak=True,
         )
         baca.rspanners.metric_modulation(
@@ -744,9 +744,9 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
@@ -762,9 +762,9 @@ def vc1(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.tleaves(o, grace=False),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -830,9 +830,9 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[5]) as o:
@@ -898,9 +898,9 @@ def cb1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
@@ -916,9 +916,9 @@ def cb1(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.tleaves(o, grace=False),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
     with baca.scope(m.get(6, 9)) as o:
@@ -966,9 +966,9 @@ def cb2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B2")
@@ -1004,9 +1004,9 @@ def composites(cache):
     for name in ["va", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "o< mp",
+                "o<mp",
             )
             baca.mspanners.scp(
                 [o.tleaves()],
@@ -1015,21 +1015,21 @@ def composites(cache):
                 staff_padding=3,
             )
         with baca.scope(m.get(6, 9)) as o:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.run(0),
-                "o< mp",
+                "o<mp",
             )
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.run(1),
-                "o< mf",
+                "o<mf",
             )
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.run(2),
-                "o< f",
+                "o<f",
             )
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.run(3),
-                "o< ff",
+                "o<ff",
             )
             for run in baca.select.runs(o):
                 baca.mspanners.scp(

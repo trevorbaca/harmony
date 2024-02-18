@@ -348,9 +348,9 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
         baca.markup(
             o.pleaf(0),
@@ -478,9 +478,9 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
@@ -497,15 +497,15 @@ def vc1(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run,
-                    "o<| f",
+                    "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run[:-1],
-                    "o<| fff-scratch",
+                    "o<|fff-scratch",
                 )
 
 
@@ -515,9 +515,9 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[3]) as o:
         baca.literal(
@@ -554,15 +554,15 @@ def vc2(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run,
-                    "o<| f",
+                    "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run[:-1],
-                    "o<| fff-scratch",
+                    "o<|fff-scratch",
                 )
 
 
@@ -572,9 +572,9 @@ def cb1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[3]) as o:
         baca.literal(
@@ -616,15 +616,15 @@ def cb1(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run,
-                    "o<| f",
+                    "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run[:-1],
-                    "o<| fff-scratch",
+                    "o<|fff-scratch",
                 )
 
 
@@ -634,9 +634,9 @@ def cb2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 run,
-                "o<| f",
+                "o<|f",
             )
     with baca.scope(m[3]) as o:
         baca.literal(
@@ -673,15 +673,15 @@ def cb2(m):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run,
-                    "o<| f",
+                    "o<|f",
                     rleak=True,
                 )
             elif i == 1:
-                baca.spanners.hairpin(
+                baca.hairpinlib.exact(
                     run[:-1],
-                    "o<| fff-scratch",
+                    "o<|fff-scratch",
                 )
 
 

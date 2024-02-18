@@ -350,7 +350,7 @@ def bfl(m):
             "o< mp >o",
             do_not_bookend=True,
         )
-        baca.spanners.hairpin(o.rleaf(-1), "!")
+        baca.hairpinlib.exact([o.rleaf(-1)], "!")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -546,9 +546,9 @@ def va(m):
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "o< f",
+            "o<f",
         )
         baca.mspanners.scp(
             [o.leaves()],
@@ -575,9 +575,9 @@ def va(m):
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "pp >o !",
+            "pp>o!",
         )
         baca.mspanners.scp(
             [o.leaves()],
@@ -618,7 +618,7 @@ def vc1(m):
             "o< mp >o",
             do_not_bookend=True,
         )
-        baca.spanners.hairpin(o.rleaf(-1), "!")
+        baca.hairpinlib.exact([o.rleaf(-1)], "!")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
@@ -643,9 +643,9 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 1.5)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "o< f",
+            "o<f",
         )
         baca.mspanners.scp(
             [o.leaves()],
@@ -676,9 +676,9 @@ def vc2(m):
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "pp >o !",
+            "pp>o!",
         )
         baca.mspanners.scp(
             [o.leaves()],
@@ -695,9 +695,9 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "o< f",
+            "o<f",
         )
         baca.mspanners.scp(
             [o.leaves()],
@@ -715,7 +715,7 @@ def cb1(m):
             "o< mp >o",
             do_not_bookend=True,
         )
-        baca.spanners.hairpin(o.rleaf(-1), "!")
+        baca.hairpinlib.exact([o.rleaf(-1)], "!")
         baca.rspanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
@@ -768,9 +768,9 @@ def cb2(m):
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "pp >o !",
+            "pp>o!",
         )
         baca.override.dls_staff_padding(o, 4)
         baca.mspanners.scp(

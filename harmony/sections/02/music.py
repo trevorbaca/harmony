@@ -429,9 +429,9 @@ def perc1(cache):
         m = cache[name]
     with baca.scope(m[5]) as o:
         baca.staff_lines(o.leaf(1, grace=False), 1)
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-3:],
-            "o<| f",
+            "o<|f",
         )
         baca.markup(
             o.pleaf(0, grace=False),
@@ -440,14 +440,14 @@ def perc1(cache):
         )
     with baca.scope(m[6]) as o:
         baca.laissez_vibrer(o.ptail(0))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[:1],
-            "o<| mf",
+            "o<|mf",
             rleak=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-2:],
-            "o<| f",
+            "o<|f",
         )
     with baca.scope(m.get(5, 6)) as o:
         with baca.scope(o.plts(grace=False)) as u:
@@ -460,9 +460,9 @@ def perc1(cache):
     with baca.scope(m[7]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f > p",
+            "f>p",
         )
         baca.override.dls_staff_padding(o, 5.5),
         baca.markup(
@@ -528,9 +528,9 @@ def perc2(m):
     with baca.scope(m[7]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f > p",
+            "f>p",
         )
         baca.override.dls_staff_padding(o, 5.5),
         baca.markup(
@@ -545,9 +545,9 @@ def perc2(m):
         library.tam_tam_staff_position(o)
         baca.flat_glissando(o, hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "p < mf",
+            "p<mf",
         )
         baca.override.dls_staff_padding(o, 6.5)
         baca.markup(
@@ -707,9 +707,9 @@ def va(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 11)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[:-1],
-            "p < ff",
+            "p<ff",
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.mspanners.text(
@@ -795,9 +795,9 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 11)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[:-1],
-            "p < ff",
+            "p<ff",
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.mspanners.text(
@@ -821,9 +821,9 @@ def vc2(cache):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(o.pleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             baca.select.tleaves(o),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 5),
@@ -870,9 +870,9 @@ def vc2(cache):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(o.pleaves(grace=False))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf >o !",
+            "mf>o!",
         )
         baca.override.dls_staff_padding(o, 4),
         baca.mspanners.scp(
@@ -891,9 +891,9 @@ def vc2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 11)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[:-1],
-            "p < ff",
+            "p<ff",
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.mspanners.text(
@@ -948,9 +948,9 @@ def cb1(cache):
         baca.pitch(o, "A1"),
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "f >o !",
+            "f>o!",
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 4),
@@ -986,9 +986,9 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 11)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[:-1],
-            "p < ff",
+            "p<ff",
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
         baca.mspanners.text(
@@ -1011,9 +1011,9 @@ def cb2(cache):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(o.pleaves())
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "mf >o !",
+            "mf>o!",
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 5)
@@ -1070,9 +1070,9 @@ def cb2(cache):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(o.pleaves(grace=False))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "mf >o !",
+            "mf>o!",
         )
         baca.override.dls_staff_padding(o, 3),
         baca.mspanners.scp(
@@ -1096,9 +1096,9 @@ def cb2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 11)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.leaves(grace=False)[:-1],
-            "p < ff",
+            "p<ff",
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
         baca.mspanners.text(

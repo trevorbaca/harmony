@@ -321,15 +321,15 @@ def perc1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f > p",
+            "f>p",
         )
     with baca.scope(m.get(5, 6)) as o:
         library.purpleheart_staff_positions(o, [0, 2, 0, 2, 2])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "p < f",
+            "p<f",
         )
     with baca.scope(m[9]) as o:
         library.purpleheart_staff_positions(o, [-2], allow_obgc_mutation=True)
@@ -348,15 +348,15 @@ def perc1(cache):
 def perc2(m):
     with baca.scope(m[1]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f > p",
+            "f>p",
         )
     with baca.scope(m.get(5, 6)) as o:
         library.purpleheart_staff_positions(o, [2])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "p < f",
+            "p<f",
         )
     with baca.scope(m[8]) as o:
         baca.dynamic(o.phead(0), "p-sub")
@@ -619,9 +619,9 @@ def cb2(m):
             allow_hidden=True,
             right_broken=True,
         )
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "o< !",
+            "o<!",
             right_broken=True,
             rleak=True,
         )

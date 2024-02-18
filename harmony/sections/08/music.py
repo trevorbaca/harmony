@@ -352,9 +352,9 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "B2")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-2:],
-            "(p) >o",
+            "(p)>o",
         )
         baca.rspanners.damp(
             o,
@@ -435,9 +435,9 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.pitch(o, "Bb2")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-2:],
-            "(p) >o",
+            "(p)>o",
         )
         baca.rspanners.damp(
             o,

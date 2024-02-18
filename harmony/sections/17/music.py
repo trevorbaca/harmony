@@ -483,9 +483,9 @@ def va(cache):
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D4")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "pp >o !",
+            "pp>o!",
             rleak=True,
         )
         baca.mspanners.bow_speed(
@@ -525,9 +525,9 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f <| fff-scratch",
+            "f<|fff-scratch",
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
@@ -569,9 +569,9 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f <| fff-scratch",
+            "f<|fff-scratch",
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
@@ -613,9 +613,9 @@ def cb1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f <| fff-scratch",
+            "f<|fff-scratch",
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3")
@@ -657,9 +657,9 @@ def cb2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.tleaves(),
-            "f <| fff-scratch",
+            "f<|fff-scratch",
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D3")
@@ -692,16 +692,16 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o.tleaves(),
-                "p < f",
+                "p<f",
             )
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[5]) as o:
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 o,
-                "f >o !",
+                "f>o!",
                 rleak=True,
             )
         for n in [1, 5]:
