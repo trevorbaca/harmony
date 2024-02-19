@@ -347,7 +347,7 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p>o!",
                 rleak=True,
@@ -398,7 +398,7 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
@@ -410,7 +410,7 @@ def bfl(cache):
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "Bb4")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "pp< p>o!",
             rleak=True,
@@ -514,7 +514,7 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaf(0))
         for run in baca.select.runs(o)[:1]:
-            baca.hairpins.exact(
+            baca.hairpin(
                 run,
                 "f>o!",
                 rleak=True,
@@ -663,7 +663,7 @@ def vc1(cache):
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.plts(o),
             "pp-- !< mp>o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -716,7 +716,7 @@ def vc2(cache):
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 2, 3, 1]),
             "pp-- !< mp-- !>o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -772,7 +772,7 @@ def cb1(cache):
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [2, 3, 1]),
             "pp-- !< mp>o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -845,7 +845,7 @@ def cb2(cache):
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
             "pp-- !< mp>o",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -865,7 +865,7 @@ def cb2(cache):
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "A1")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mp>o!",
             rleak=True,
@@ -902,7 +902,7 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[7]) as o:
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(o, [1, 1, 1, 1]),
                 "o< mp>o !o< mp>o!",
                 rleak=True,

@@ -265,7 +265,7 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
@@ -434,7 +434,7 @@ def va(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
         )
@@ -529,7 +529,7 @@ def vc2(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
         )
@@ -602,7 +602,7 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "E1")
         baca.flat_glissando(o)
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "ff>o",
             rleak=True,
@@ -616,7 +616,7 @@ def cb2(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
         )

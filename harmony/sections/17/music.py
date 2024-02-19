@@ -283,7 +283,7 @@ def bfl(m):
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
-        baca.hairpins.exact(
+        baca.hairpin(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp>o!",
         )
@@ -482,7 +482,7 @@ def va(cache):
             )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "D4")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
             rleak=True,
@@ -524,7 +524,7 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -568,7 +568,7 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -612,7 +612,7 @@ def cb1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -656,7 +656,7 @@ def cb2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -679,7 +679,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             baca.stem_tremolo(o.pleaves())
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 1, 2, 1, 1]),
                 "o<| mp|> pp pp<| mp|>o!",
                 rleak=True,
@@ -690,14 +690,14 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.hairpins.exact(
+            baca.hairpin(
                 o.tleaves(),
                 "p<f",
             )
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[5]) as o:
-            baca.hairpins.exact(
+            baca.hairpin(
                 o,
                 "f>o!",
                 rleak=True,

@@ -402,7 +402,7 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -430,7 +430,7 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -469,7 +469,7 @@ def cb1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )
@@ -519,7 +519,7 @@ def cb2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f<|fff-scratch",
         )

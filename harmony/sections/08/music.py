@@ -229,19 +229,19 @@ def hp(cache):
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[1]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "p< mf>p",
             rleak=True,
         )
     with baca.scope(m[3]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< f>p",
             rleak=True,
         )
     with baca.scope(m[5]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< ff>p",
             rleak=True,
@@ -269,19 +269,19 @@ def va(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m[2]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< mf>p",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< f>p",
             rleak=True,
         )
     with baca.scope(m[6]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< ff>o!",
             rleak=True,
@@ -313,19 +313,19 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m[2]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "p< mf>p",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< f>p",
             rleak=True,
         )
     with baca.scope(m[6]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< ff>o!",
             rleak=True,
@@ -343,7 +343,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "B2")
-        baca.hairpins.exact(
+        baca.hairpin(
             o[-2:],
             "(p)>o",
         )
@@ -363,13 +363,13 @@ def vc2(cache):
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< f>p",
             rleak=True,
         )
     with baca.scope(m[6]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< ff>o!",
             rleak=True,
@@ -398,13 +398,13 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m[4]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "p< f>p",
             rleak=True,
         )
     with baca.scope(m[6]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< ff>o!",
             rleak=True,
@@ -422,7 +422,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.pitch(o, "Bb2")
-        baca.hairpins.exact(
+        baca.hairpin(
             o[-2:],
             "(p)>o",
         )
@@ -442,7 +442,7 @@ def cb2(cache):
     with baca.scope(m[5]) as o:
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[6]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "(p)< ff>o!",
             rleak=True,
