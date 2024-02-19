@@ -481,7 +481,7 @@ def bfl(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mf>o!",
             rleak=True,
@@ -492,19 +492,19 @@ def bfl(cache):
             staff_padding=8,
         )
     with baca.scope(m[3]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< mp>o!",
             rleak=True,
         )
     with baca.scope(m[5]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< p>o!",
             rleak=True,
         )
     with baca.scope(m[7]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "o< pp>o!",
             rleak=True,
@@ -512,7 +512,7 @@ def bfl(cache):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o.tleaves(), [1, 2]),
             "o<| f|>o!",
             rleak=True,
@@ -579,7 +579,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.pitch(o.leaves()[-2:], "B4")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 1]),
             'o< "f">o !o< p>o !o< "f">o !o< p>o !o< "f">o !o< f>o!',
             rleak=True,
@@ -659,7 +659,7 @@ def perc1(cache):
         with baca.scope(m[n]) as o:
             library.bass_drum_staff_position(o)
             for run in baca.select.runs(o):
-                baca.hairpins.exact(
+                baca.hairpin(
                     run,
                     "o<|f",
                 )
@@ -767,7 +767,7 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m.get(2, 4)) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o.tleaves(), [1, 3]),
             "o< mf>o",
             rleak=True,
@@ -832,14 +832,14 @@ def va(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(2, 4)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf>o!",
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(5, 8)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.tleaves(o),
             "f>o!",
             rleak=True,
@@ -852,7 +852,7 @@ def va(cache):
         )
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D3")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p>o",
         )
@@ -886,7 +886,7 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf>o!",
             rleak=True,
@@ -894,7 +894,7 @@ def vc1(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 8)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.tleaves(o),
             "f>o!",
             rleak=True,
@@ -908,7 +908,7 @@ def vc1(cache):
         )
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D2")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p>o",
         )
@@ -954,7 +954,7 @@ def vc2(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 8)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f>o!",
             rleak=True,
@@ -968,7 +968,7 @@ def vc2(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D2")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p>o",
         )
@@ -1002,7 +1002,7 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.tleaves(o, grace=False),
             "mf>o!",
             rleak=True,
@@ -1010,7 +1010,7 @@ def cb1(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 8)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f>o!",
             rleak=True,
@@ -1024,7 +1024,7 @@ def cb1(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D2")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p>o",
         )
@@ -1070,7 +1070,7 @@ def cb2(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(3, 8)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f>o!",
             rleak=True,
@@ -1084,7 +1084,7 @@ def cb2(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D2")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p>o",
         )
@@ -1106,7 +1106,7 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
             baca.flat_glissando(o, left_broken=True)
-            baca.hairpins.exact(
+            baca.hairpin(
                 o,
                 ">o!",
                 left_broken=True,
@@ -1145,7 +1145,7 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads())
             baca.dynamic(o.pheads()[1:-1], "sffp")
-            baca.hairpins.exact(
+            baca.hairpin(
                 o.plts()[-1:],
                 "sffp>o!",
                 right_broken=True,

@@ -227,7 +227,7 @@ def bfl(m):
         baca.pitch(o, "E5")
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< f>o!",
                 rleak=True,
@@ -246,7 +246,7 @@ def bfl(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gqs5")
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp>o!",
                 rleak=True,
@@ -283,7 +283,7 @@ def perc1(m):
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< pp>o!",
                 rleak=True,
@@ -400,7 +400,7 @@ def va(m):
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "o<mf",
         )
@@ -454,7 +454,7 @@ def vc1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< mp>o!",
                 rleak=True,
@@ -489,7 +489,7 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 2)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "o<mf",
         )
@@ -512,7 +512,7 @@ def cb1(m):
     with baca.scope(m[2]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "o<mf",
         )
@@ -573,7 +573,7 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1]),
-                baca.hairpins.exact(
+                baca.hairpin(
                     run,
                     "o<|f",
                 )

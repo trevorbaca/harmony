@@ -230,7 +230,7 @@ def perc1(m):
         baca.instrument_name(o.leaf(0), r"\harmony-percussion-i-markup")
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
-        baca.hairpins.exact(
+        baca.hairpin(
             o[-2:],
             "o<|f",
         )
@@ -242,12 +242,12 @@ def perc1(m):
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptail(0))
-        baca.hairpins.exact(
+        baca.hairpin(
             o[:1],
             "o<|mf",
             rleak=True,
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             o[-2:-1],
             "o<|f",
             rleak=True,
@@ -260,7 +260,7 @@ def perc1(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f>p",
         )
@@ -291,7 +291,7 @@ def perc2(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [0, 0, -2, 0, -2])
-        baca.hairpins.exact(
+        baca.hairpin(
             o.tleaves(),
             "f>p",
         )
@@ -372,7 +372,7 @@ def vc1(m):
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
         baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(leaves, [4, 5]),
             "o< f>o!",
         )
@@ -424,7 +424,7 @@ def vc2(m):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "mf>o!",
         )
@@ -447,7 +447,7 @@ def cb1(m):
         baca.pitch(o, "A1")
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [4, 6]),
             "o< f>o!",
             rleak=True,
@@ -502,7 +502,7 @@ def cb2(m):
             hide_middle_note_heads=True,
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "mf>o!",
         )

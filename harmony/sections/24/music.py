@@ -199,7 +199,7 @@ def bfl(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o, "F5")
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 2]),
                 "o< mf>o!",
                 rleak=True,
@@ -216,7 +216,7 @@ def bfl(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< p>o!",
                 rleak=True,
@@ -276,7 +276,7 @@ def perc2(m):
     with baca.scope(m.get(1, 3)) as o:
         library.bass_drum_staff_position(o)
         for run in baca.select.runs(o):
-            baca.hairpins.exact(
+            baca.hairpin(
                 run,
                 "o<|mf",
                 rleak=True,
@@ -382,7 +382,7 @@ def va(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
         )
@@ -413,7 +413,7 @@ def vc1(m):
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "F4")
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o<| mp|>o!",
                 rleak=True,
@@ -470,7 +470,7 @@ def vc2(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
         )
@@ -501,7 +501,7 @@ def cb1(m):
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "E4", do_not_transpose=True)
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o<| mp|>o!",
                 rleak=True,
@@ -558,7 +558,7 @@ def cb2(m):
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D3 C#3")
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "pp>o!",
         )
@@ -581,7 +581,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             for run in baca.select.runs(o):
-                baca.hairpins.exact(
+                baca.hairpin(
                     baca.select.lparts(run, [1, 1]),
                     "o<| mp|>o!",
                     rleak=True,
@@ -607,7 +607,7 @@ def composites(cache):
             baca.flat_glissando(o)
             baca.dynamic(o.phead(0), "pp")
         with baca.scope(m.get(7, 8)) as o:
-            baca.hairpins.exact(
+            baca.hairpin(
                 o,
                 "(pp)<f",
                 rleak=True,

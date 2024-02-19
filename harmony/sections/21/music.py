@@ -274,7 +274,7 @@ def bfl(cache):
         baca.pitch(o, "E5")
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(run, [1, 1]),
                 "o< f>o!",
                 rleak=True,
@@ -590,13 +590,13 @@ def cb2(m):
                 staff_padding=3,
             )
     with baca.scope(m[1]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "mf>o!",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "mf>o",
             rleak=True,
@@ -622,7 +622,7 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.stop_on_string(run[-1])
-                baca.hairpins.exact(
+                baca.hairpin(
                     run,
                     "o<|f",
                 )
