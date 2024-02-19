@@ -347,24 +347,21 @@ def bfl(m):
         baca.pitch(o, "Bb5"),
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(o, [1, 2]),
-                "o<| f |>o !",
-                glue=True,
+                "o<| f|>o!",
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "Bb5")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o[:3], [1, 2]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[-2:], [1, 1]),
-            "o<| mf |>o !",
-            glue=True,
+            "o<| mf|>o!",
             rleak=True,
         )
         baca.override.dynamic_text_x_offset(o.pleaf(3), -2)
@@ -376,9 +373,9 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "G3")
         baca.pitch(o.runs()[1:], "Bb5")
         baca.stem_tremolo(o.pleaves()[-2:])
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[-2:], [1]),
-            "o< f >o",
+            "o< f>o",
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
@@ -393,10 +390,9 @@ def bfl(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb5"),
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[:3], [1, 2]),
-            "o< f >o !",
-            glue=True,
+            "o< f>o!",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
@@ -556,10 +552,9 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[2]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            "o< mf >o !",
-            glue=True,
+            "o< mf>o!",
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 4),
@@ -716,10 +711,9 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E4")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             [o],
-            ">o !",
-            glue=True,
+            ">o!",
             left_broken=True,
         )
         baca.mspanners.bow_speed(
@@ -849,7 +843,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.flat_glissando(o, "E1", left_broken=True)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             [o],
             ">o",
             left_broken=True,

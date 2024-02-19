@@ -478,25 +478,22 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "Bb5")
         baca.pitch(o.runs()[1:], "E5")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[:2], [1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[-2:], [1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "E5"),
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[:2], [1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m.get(3, 4)) as o:
@@ -508,25 +505,22 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "Bb5")
         baca.pitch(o.runs()[1:], "E5")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[:2], [1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[-2:], [1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E5"),
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.clparts(o[:2], [1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m.get(5, 6)) as o:
@@ -733,10 +727,9 @@ def hp(m):
         baca.staff_lines(o.leaf(0), 1)
         library.whisk_staff_position(o)
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(clpart, [1, 2]),
-                'o< "f" >o !',
-                glue=True,
+                'o< "f">o!',
             )
         baca.markup(
             o.pleaf(0),
@@ -756,10 +749,9 @@ def hp(m):
             baca.staff_lines(u, 1),
         library.whisk_staff_position(o.pleaves()[-2:])
         leaves = o.pleaves()[-2:]
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(leaves, [1, 1]),
-            'o< "f" >o !',
-            glue=True,
+            'o< "f">o!',
             rleak=True,
         )
         baca.markup(
@@ -770,10 +762,9 @@ def hp(m):
     with baca.scope(m[5]) as o:
         library.whisk_staff_position(o)
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(clpart, [1, 2]),
-                'o< "f" >o !',
-                glue=True,
+                'o< "f">o!',
             )
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:
@@ -826,7 +817,7 @@ def hp(m):
     with baca.scope(m.get(13, 14)) as o:
         baca.pitches(o, "F#4 G#4")
     with baca.scope(m.get(10, 14)) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o, exclude=baca.enums.HIDDEN),
             "mf f ff fff",
         )
@@ -1183,10 +1174,9 @@ def cb1(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E1")
         baca.flat_glissando(o)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [2, 3]),
-            "o< p >o !",
-            glue=True,
+            "o< p>o!",
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1208,10 +1198,9 @@ def cb1(m):
     with baca.scope(m.get(4, 7)) as o:
         baca.flat_glissando(o.run(-1), "E1")
         with baca.scope(o.runs()[-1:]) as u:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(u, [6, 5, 4]),
-                "o< mf > p < f",
-                glue=True,
+                "o< mf> p<f",
             )
             baca.mspanners.scp(
                 baca.select.lparts(u, [6, 5, 3, 1]),
@@ -1227,7 +1216,7 @@ def cb1(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             o.plts(),
             "pp ppp",
         )
@@ -1242,9 +1231,9 @@ def cb1(m):
             allow_hidden=True,
             right_broken=True,
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 1, 1]),
-            "o< mf > p < f > p < ff >o !",
+            "o< mf> p< f> p< ff>o !",
             right_broken=True,
         )
         baca.mspanners.scp(
@@ -1262,10 +1251,9 @@ def cb2(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "E1")
         baca.flat_glissando(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [3, 2]),
-            "o< p >o !",
-            glue=True,
+            "o< p>o!",
             rleak=True,
         )
         baca.mspanners.scp(
@@ -1276,9 +1264,9 @@ def cb2(m):
     with baca.scope(m.get(3, 7)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
         with baca.scope(o.tleaves()) as u:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.mgroups(u, [2, 1, 1, 1]),
-                "o< mp > p < f",
+                "o< mp> p< f",
                 rleak=True,
             )
             baca.mspanners.scp(
@@ -1309,10 +1297,9 @@ def cb2(m):
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.mgroups(o, [2, 1, 1, 2]),
-            "o< f > p < ff >o !",
-            glue=True,
+            "o< f> p< ff>o!",
             rleak=True,
         )
         baca.mspanners.scp(

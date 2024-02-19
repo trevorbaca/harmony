@@ -382,10 +382,9 @@ def bfl(cache):
             baca.override.accidental_font_size(u, -3),
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -402,10 +401,9 @@ def bfl(cache):
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 2]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m[6]) as o:
@@ -413,10 +411,9 @@ def bfl(cache):
             o,
             abjad.sequence.rotate(library.warble_pitches(), -1),
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -427,10 +424,9 @@ def bfl(cache):
             o,
             abjad.sequence.rotate(library.warble_pitches(), -2),
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
         )
         baca.rspanners.trill(
             o.tleaves(),
@@ -567,7 +563,7 @@ def perc2(cache):
             '"ff"',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o)[1:],
             '"ff" "ff" "f" "f" mf mp p pp',
         )
@@ -634,10 +630,9 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[5]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 1]),
-            "o< mf >o !",
-            glue=True,
+            "o< mf>o!",
             rleak=True,
         )
         baca.markup(
@@ -732,7 +727,7 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             o.plts(),
             '"ff" "ff"',
         )
@@ -776,7 +771,7 @@ def vc1(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             '"ff" "ff" "f" "f" mf mp p',
         )
@@ -848,7 +843,7 @@ def vc2(cache):
         library.bridge_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             '"ff" "ff" "f" mf mp p pp',
         )

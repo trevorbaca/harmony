@@ -305,10 +305,9 @@ def bfl(m):
         baca.pitch(o, "Ab4")
         baca.stem_tremolo(abjad.select.get(o.plts(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(clpart, [1, 2]),
-                "o<| ff |> p",
-                glue=True,
+                "o<| ff|>p",
             )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F#3")
@@ -393,10 +392,9 @@ def hp(cache):
     with baca.scope(m[9]) as o:
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(clpart, [1, 2]),
-                "p < ff > p",
-                glue=True,
+                "p< ff>p",
             )
         baca.markup(
             o.pleaf(0),
@@ -601,10 +599,9 @@ def cb2(m):
     with baca.scope(m.get(8, 9)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Ab1")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            'o< "mf" >o !',
-            glue=True,
+            'o< "mf">o!',
             rleak=True,
         )
         baca.mspanners.scp(
@@ -656,7 +653,7 @@ def composites(cache):
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.plts(o),
                 "pp p mp mf f f",
                 extra_specifiers=True,
@@ -664,7 +661,7 @@ def composites(cache):
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
                 extra_specifiers=True,
@@ -672,21 +669,21 @@ def composites(cache):
     for name in ["va", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.plts(o),
                 'pp p mp mf "f"',
                 extra_specifiers=True,
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o)[1:],
             'p mp mf "f"',
         )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.plts(o),
                 "mf mp p pp pp pp",
                 extra_specifiers=True,

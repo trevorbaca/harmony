@@ -287,7 +287,7 @@ def bfl(m):
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3"),
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             "pp p",
         )
@@ -448,7 +448,7 @@ def hp(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "C#4")
         baca.accent(o.pheads())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             "pp p",
         )
@@ -555,7 +555,7 @@ def vc1(m):
             baca.override.clef_x_extent_false(u)
             baca.staff_lines(u, 5)
     with baca.scope(m[3]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o)[1:],
             "p mp",
         )
@@ -659,7 +659,7 @@ def cb1(m):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             "pp ppp",
         )
@@ -670,7 +670,7 @@ def cb1(m):
         baca.pitch(o, "Aqs4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             "pp p mp",
         )
@@ -702,10 +702,9 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[1]) as o:
         baca.flat_glissando(o, "E1", left_broken=True)
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             [o],
-            "o< f",
-            glue=True,
+            "o<f",
             left_broken=True,
         )
         baca.mspanners.scp(
@@ -738,7 +737,7 @@ def cb2(m):
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.plts(o),
             "pp p",
         )

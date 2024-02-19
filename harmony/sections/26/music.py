@@ -355,9 +355,9 @@ def bfl(m):
                 )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 2]),
-            "pp < p >o",
+            "pp< p>o",
             rleak=True,
         )
         baca.rspanners.trill(
@@ -372,10 +372,9 @@ def bfl(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o< p >o !",
-                glue=True,
+                "o< p>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -398,10 +397,9 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 abjad.select.partition_by_ratio(run, (4, 5)),
-                "o< mp >o !",
-                glue=True,
+                "o< mp>o!",
             )
             baca.rspanners.trill(
                 run,
@@ -626,9 +624,9 @@ def vc1(cache):
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             o.plts(),
-            "pp -- ! < mp >",
+            "pp-- !< mp>",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         baca.untie(o.leaves())
@@ -664,9 +662,9 @@ def vc2(cache):
         baca.pitch(o.pleaves()[1:-1], "C5")
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 2, 3, 2]),
-            "pp -- ! < mp -- ! >",
+            "pp-- !< mp-- !>",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
     for item in [(1, 2), (5, 7), 10]:
@@ -698,9 +696,9 @@ def cb1(cache):
     with baca.scope(m[9]) as o:
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.override.note_head_transparent(o.pleaves()[1:-1])
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [2, 3, 2]),
-            "pp -- ! < mp >",
+            "pp-- !< mp>",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
     for item in [(1, 2), (5, 7), 10]:
@@ -733,9 +731,9 @@ def cb2(cache):
         baca.pitch(o.pleaves()[1:-1], "C5", do_not_transpose=True)
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [2, 1, 1]),
-            "pp -- ! < mp >",
+            "pp-- !< mp>",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
     for item in [(1, 2), (5, 7), 10]:
@@ -747,10 +745,9 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[4]) as o:
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(o, [1, 1 + 1]),
-                "pp < p > pp",
-                glue=True,
+                "pp< p>pp",
             )
             if name != "va":
                 baca.clef(o.leaf(0), "treble")

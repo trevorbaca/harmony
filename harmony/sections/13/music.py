@@ -266,10 +266,9 @@ def bfl(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 2]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
         baca.rspanners.metric_modulation(
@@ -280,10 +279,9 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 1]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
@@ -312,10 +310,9 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.breathe(o.pleaf(1))
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            'o< "f" >o !',
-            glue=True,
+            'o< "f">o!',
             rleak=True,
         )
         for clpart in baca.select.clparts(o, [2]):
@@ -468,10 +465,9 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 1]),
-            "o< mf >o !",
-            glue=True,
+            "o< mf>o!",
             rleak=True,
         )
         baca.markup(
