@@ -266,10 +266,9 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 abjad.select.partition_by_ratio(run, (4, 5)),
-                "o< mp >o !",
-                glue=True,
+                "o< mp>o!",
             )
             baca.rspanners.trill(
                 run,
@@ -280,10 +279,9 @@ def bfl(m):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o< p >o !",
-                glue=True,
+                "o< p>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -306,10 +304,9 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 abjad.select.partition_by_ratio(run, (4, 5)),
-                "o< mp >o !",
-                glue=True,
+                "o< mp>o!",
             )
             baca.rspanners.trill(
                 run,
@@ -463,7 +460,7 @@ def hp(m):
 
 def y1():
     return """
-    pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch -- !
+    pp-- !< mp-- !> p< mf-- !> mp< f-scratch-- !> mf< ff-scratch-- !
     """
 
 
@@ -488,7 +485,7 @@ def va(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         plts = baca.select.plts(o.rleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
@@ -528,7 +525,7 @@ def vc1(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         plts = baca.select.plts(o.rleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
@@ -566,7 +563,7 @@ def vc2(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         plts = baca.select.plts(o.rleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
@@ -606,7 +603,7 @@ def cb1(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         plts = baca.select.plts(o.rleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),
@@ -645,7 +642,7 @@ def cb2(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         plts = baca.select.plts(o.rleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
             (abjad.Tweak(r"- \tweak to-barline ##t"), -2),

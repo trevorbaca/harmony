@@ -199,10 +199,9 @@ def bfl(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o, "F5")
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 2]),
-                "o< mf >o !",
-                glue=True,
+                "o< mf>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -217,10 +216,9 @@ def bfl(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o< p >o !",
-                glue=True,
+                "o< p>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -415,10 +413,9 @@ def vc1(m):
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "F4")
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o<| mp |>o !",
-                glue=True,
+                "o<| mp|>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -504,10 +501,9 @@ def cb1(m):
         )
         for run in baca.select.runs(o)[1:-1]:
             baca.pitch(run, "E4", do_not_transpose=True)
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o<| mp |>o !",
-                glue=True,
+                "o<| mp|>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -585,10 +581,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             for run in baca.select.runs(o):
-                baca.hairpins.hairpin(
+                baca.hairpins.exact(
                     baca.select.lparts(run, [1, 1]),
-                    "o<| mp |>o !",
-                    glue=True,
+                    "o<| mp|>o!",
                     rleak=True,
                 )
     for name in ["va", "vc2", "cb2"]:

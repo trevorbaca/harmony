@@ -265,10 +265,9 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 abjad.select.partition_by_ratio(run, (4, 5)),
-                "o< mp >o !",
-                glue=True,
+                "o< mp>o!",
             )
             baca.rspanners.trill(
                 run,

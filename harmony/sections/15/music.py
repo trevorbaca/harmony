@@ -262,10 +262,9 @@ def bfl(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
             rleak=True,
         )
     with baca.scope(m[4]) as o:
@@ -275,10 +274,9 @@ def bfl(cache):
             r"\baca-seven-e-flat",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            'o< "f" >o !',
-            glue=True,
+            'o< "f">o!',
             rleak=True,
         )
         for clpart in baca.select.clparts(o, [2]):

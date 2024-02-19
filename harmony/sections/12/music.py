@@ -481,10 +481,9 @@ def bfl(cache):
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            "o< mf >o !",
-            glue=True,
+            "o< mf>o!",
             rleak=True,
         )
         baca.rspanners.metric_modulation(
@@ -493,33 +492,29 @@ def bfl(cache):
             staff_padding=8,
         )
     with baca.scope(m[3]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            "o< mp >o !",
-            glue=True,
+            "o< mp>o!",
             rleak=True,
         )
     with baca.scope(m[5]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            "o< p >o !",
-            glue=True,
+            "o< p>o!",
             rleak=True,
         )
     with baca.scope(m[7]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1]),
-            "o< pp >o !",
-            glue=True,
+            "o< pp>o!",
             rleak=True,
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 2]),
-            "o<| f |>o !",
-            glue=True,
+            "o<| f|>o!",
             rleak=True,
         )
     with baca.scope(m[10]) as o:
@@ -584,10 +579,9 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.pitch(o.leaves()[-2:], "B4")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 1]),
-            'o< "f" >o ! o< p >o !' ' o< "f" >o ! o< p >o !' ' o< "f" >o ! o< f >o !',
-            glue=True,
+            'o< "f">o !o< p>o !o< "f">o !o< p>o !o< "f">o !o< f>o!',
             rleak=True,
         )
     with baca.scope(m.get(1, 15)) as o:
@@ -773,9 +767,9 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m.get(2, 4)) as o:
         baca.stem_tremolo(o.pleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o.tleaves(), [1, 3]),
-            "o< mf >o",
+            "o< mf>o",
             rleak=True,
         )
         baca.markup(

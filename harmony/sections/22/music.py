@@ -322,10 +322,9 @@ def bfl(m):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "Gqs5")
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o< mp >o !",
-                glue=True,
+                "o< mp>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -375,10 +374,9 @@ def perc1(m):
         library.triangle_staff_position(o)
         baca.stem_tremolo(o.pleaves())
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o< pp >o !",
-                glue=True,
+                "o< pp>o!",
                 rleak=True,
             )
         baca.markup(
@@ -561,10 +559,9 @@ def va(m):
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.select.partition_by_ratio(o, (4, 3)),
-            "o< ff >o !",
-            glue=True,
+            "o< ff>o!",
         )
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),
@@ -592,10 +589,9 @@ def vc1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(run, [1, 1]),
-                "o< mp >o !",
-                glue=True,
+                "o< mp>o!",
                 rleak=True,
             )
             baca.rspanners.trill(
@@ -662,10 +658,9 @@ def vc2(m):
         baca.override.tuplet_bracket_staff_padding(o, 3)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.select.partition_by_ratio(o, (4, 3)),
-            "o< ff >o !",
-            glue=True,
+            "o< ff>o!",
         )
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),
@@ -753,10 +748,9 @@ def cb2(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             abjad.select.partition_by_ratio(o, (4, 3)),
-            "o< ff >o !",
-            glue=True,
+            "o< ff>o!",
         )
         baca.mspanners.scp(
             abjad.select.partition_by_ratio(o, (4, 3)),

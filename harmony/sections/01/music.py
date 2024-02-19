@@ -447,10 +447,9 @@ def cb1(m):
         baca.pitch(o, "A1")
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [4, 6]),
-            "o< f >o !",
-            glue=True,
+            "o< f>o!",
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 4)
