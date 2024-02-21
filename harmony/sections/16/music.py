@@ -301,6 +301,7 @@ def perc2(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.pheads(), "pp")
         baca.markup(
@@ -310,6 +311,7 @@ def perc2(m):
         )
     with baca.scope(m.get(9, 10)) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(1, 10)) as o:

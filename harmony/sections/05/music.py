@@ -414,6 +414,7 @@ def perc2(m):
         library.tam_tam_staff_position(o)
         baca.flat_glissando(
             baca.select.rleak(o.pleaves()[1:]),
+            "C4",
             right_broken=True,
         )
         baca.stem_tremolo(o.pleaves())

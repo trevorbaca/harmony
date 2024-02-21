@@ -672,6 +672,7 @@ def perc2(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "pp")
         baca.override.dls_staff_padding(o, 6)
@@ -701,6 +702,7 @@ def perc2(cache):
         baca.staff_lines(o.leaf(0), 1)
         baca.override.tuplet_bracket_up(o)
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(
             o.phead(0),

@@ -433,6 +433,7 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[3]) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p-ancora")
         baca.markup(
@@ -452,6 +453,7 @@ def perc2(m):
         )
     with baca.scope(m.get(5, 10)) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(
             o.phead(0),

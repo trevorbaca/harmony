@@ -200,13 +200,14 @@ def perc2(m):
         library.tam_tam_staff_position(o)
         baca.flat_glissando(
             o,
+            "C4",
             hide_middle_stems=True,
             left_broken=True,
         )
         baca.stem_tremolo(o.pleaf(-1))
     with baca.scope(m.get(8, 9)) as o:
         library.tam_tam_staff_position(o)
-        baca.flat_glissando(o, hide_middle_stems=True)
+        baca.flat_glissando(o, "C4", hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.dynamic(o.phead(0), "pp")
         baca.override.dls_staff_padding(o, 6)

@@ -483,7 +483,7 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m.get(1, 2)) as o:
         library.tam_tam_staff_position(o)
-        baca.flat_glissando(o.pleaves(), hide_middle_stems=True)
+        baca.flat_glissando(o.pleaves(), "C4", hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.dynamic(o.phead(0), "p")
         baca.markup(
@@ -513,11 +513,12 @@ def perc2(m):
     with baca.scope(m.get(4, 6)) as o:
         with baca.scope(o.run(0)) as u:
             library.tam_tam_staff_position(u)
-            baca.flat_glissando(u, hide_middle_stems=True)
+            baca.flat_glissando(u, "C4", hide_middle_stems=True)
     with baca.scope(m[8]) as o:
         library.tam_tam_staff_position(o)
         baca.flat_glissando(
             baca.select.rleak(o.pleaves()),
+            "C4",
             hide_middle_stems=True,
             right_broken=True,
         )

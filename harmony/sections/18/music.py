@@ -644,6 +644,7 @@ def perc2(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
@@ -653,6 +654,7 @@ def perc2(cache):
         )
     with baca.scope(m[6]) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
     with baca.scope(m[8]) as o:
