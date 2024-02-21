@@ -676,8 +676,7 @@ def cb1(m):
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.pitch(o, "E1"),
-        baca.flat_glissando(o)
+        baca.flat_glissando(o, "E1")
         baca.hairpin(
             o,
             "mf>p",
@@ -739,8 +738,7 @@ def cb2(m):
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.pitch(o, "E1")
-        baca.flat_glissando(o)
+        baca.flat_glissando(o, "E1")
         baca.hairpin(
             o,
             "p<f",

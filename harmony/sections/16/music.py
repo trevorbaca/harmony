@@ -375,9 +375,9 @@ def va(m):
                 staff_padding=3,
             )
     with baca.scope(m.get(9, 10)) as o:
-        baca.pitch(o, "D4"),
         baca.flat_glissando(
             o.rleaves(),
+            "D4",
             hide_middle_stems=True,
             right_broken=True,
         )

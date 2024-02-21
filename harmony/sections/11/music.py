@@ -760,8 +760,7 @@ def va(m):
             rleak=True,
         )
     with baca.scope(m[6]) as o:
-        baca.pitch(o, "C#4")
-        baca.flat_glissando(o.pleaves())
+        baca.flat_glissando(o.pleaves(), "C#4")
         baca.hairpin(
             o.tleaves(),
             "mf>o!",

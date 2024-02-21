@@ -633,9 +633,10 @@ def va(cache):
             baca.stem_tremolo(u)
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m[9]) as o:
-        baca.pitch(o.rleaves(), "Gqf3", allow_hidden=True)
         baca.flat_glissando(
             o.rleaves(),
+            "Gqf3",
+            allow_hidden=True,
             hide_middle_stems=True,
             right_broken=True,
         )

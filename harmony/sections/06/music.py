@@ -1179,8 +1179,7 @@ def vc2(m):
 
 def cb1(m):
     with baca.scope(m[1]) as o:
-        baca.pitch(o, "E1")
-        baca.flat_glissando(o)
+        baca.flat_glissando(o, "E1")
         baca.hairpin(
             baca.select.lparts(o, [2, 3]),
             "o< p>o!",
@@ -1256,8 +1255,7 @@ def cb1(m):
 
 def cb2(m):
     with baca.scope(m[1]) as o:
-        baca.pitch(o, "E1")
-        baca.flat_glissando(o.pleaves())
+        baca.flat_glissando(o.pleaves(), "E1")
         baca.hairpin(
             baca.select.lparts(o, [3, 2]),
             "o< p>o!",
