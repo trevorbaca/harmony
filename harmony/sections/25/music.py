@@ -469,8 +469,7 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.pitch(o, "Ab4")
-        baca.flat_glissando(o)
+        baca.flat_glissando(o, "Ab4")
         baca.dynamic(o.phead(0), "mp")
         baca.rspanners.xfb(
             o.pleaves(),

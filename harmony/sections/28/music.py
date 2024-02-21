@@ -233,12 +233,13 @@ def bfl(m):
                 ),
             )
     with baca.scope(m.get(7, 10)) as o:
-        baca.pitch(o, "A4")
         leaves = o.leaves()[:-6]
         baca.flat_glissando(
             leaves,
+            "A4",
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
+        baca.pitch(o.leaves()[-6:], "A4")
         baca.hairpins.cyclic(
             baca.select.clparts(o, [1]),
             "p < mp >",
@@ -390,9 +391,9 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
-        baca.pitch(o, "Gqf3")
         baca.flat_glissando(
             o,
+            "Gqf3",
             hide_middle_stems=True,
             left_broken=True,
         )
@@ -410,8 +411,7 @@ def va(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(7, 10)) as o:
-        baca.pitch(o, "E3")
-        baca.flat_glissando(o, hide_middle_stems=True)
+        baca.flat_glissando(o, "E3", hide_middle_stems=True)
         baca.dynamic(
             o.phead(0),
             "p-sempre",
@@ -622,12 +622,13 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
-        baca.pitch(o, "A1")
         baca.flat_glissando(
             o.leaves()[:-1],
+            "A1",
             hide_middle_stems=True,
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         )
+        baca.pitch(o[-1:], "A1")
         baca.hairpin(
             baca.select.mgroups(o, [3, 1]),
             "o< ff>o",

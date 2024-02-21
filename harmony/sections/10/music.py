@@ -517,8 +517,7 @@ def hp(cache):
     with baca.scope(m.get(2, 12)) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m.get(2, 3)) as o:
-        baca.pitch(o, "F#3")
-        baca.flat_glissando(o, hide_middle_stems=True)
+        baca.flat_glissando(o, "F#3", hide_middle_stems=True)
     with baca.scope(m.get(4, 11)) as o:
         baca.pitch(o, "<F#3 Gb3>")
         cache.rebuild()
@@ -591,8 +590,7 @@ def va(m):
         baca.clef(o.leaf(0), "alto")
     for n in [3, 8]:
         with baca.scope(m[n]) as o:
-            baca.pitch(o, "C#4")
-            baca.flat_glissando(o.pleaves())
+            baca.flat_glissando(o.pleaves(), "C#4")
             baca.hairpin(
                 o.tleaves(),
                 "mf>o!",
@@ -716,8 +714,7 @@ def cb1(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F3"),
     with baca.scope(m.get(2, 12)) as o:
-        baca.pitch(o, "F#1")
-        baca.flat_glissando(o)
+        baca.flat_glissando(o, "F#1")
         baca.dynamic(o.phead(0), "pp")
         baca.mspanners.scp(
             baca.select.mgroups(o, [2, 1, 1, 1, 1, 2, 1, 1, 1]),

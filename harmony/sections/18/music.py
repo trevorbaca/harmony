@@ -793,8 +793,8 @@ def va(cache):
     with baca.scope(m.get(9, 11)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "G4")
-        baca.flat_glissando(o.leaves()[:-1])
+        baca.flat_glissando(o.leaves()[:-1], "G4")
+        baca.pitch(o[-1], "G4")
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
@@ -934,10 +934,9 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "E5", do_not_transpose=True),
         for run in baca.select.runs(o):
             # NOTE: currently glissando must lexically precede trill spanner
-            baca.flat_glissando(run)
+            baca.flat_glissando(run, "E5", do_not_transpose=True)
             baca.rspanners.trill(
                 run,
                 alteration="Fqs5",
@@ -997,10 +996,9 @@ def cb1(cache):
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "E5", do_not_transpose=True)
         for run in baca.select.runs(o):
             # NOTE: currently glissando must lexically precede trill spanner
-            baca.flat_glissando(run)
+            baca.flat_glissando(run, "E5", do_not_transpose=True)
             baca.rspanners.trill(
                 run,
                 alteration="Fqs5",
@@ -1123,9 +1121,9 @@ def cb2(cache):
         )
     with baca.scope(m.get(9, 11)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "E5", do_not_transpose=True)
         # NOTE: currently glissando must lexically precede trill spanner
-        baca.flat_glissando(o.leaves()[:-1])
+        baca.flat_glissando(o.leaves()[:-1], "E5", do_not_transpose=True)
+        baca.pitch(o[-1:], "E5", do_not_transpose=True)
         baca.rspanners.trill(
             baca.select.tleaves(o),
             # large right padding because open-volta follows in next section

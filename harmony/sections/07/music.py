@@ -697,8 +697,7 @@ def va(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
-        baca.pitch(o, "C#4")
-        baca.flat_glissando(o.pleaves())
+        baca.flat_glissando(o.pleaves(), "C#4")
         baca.hairpin(
             o.tleaves(),
             "mf>o!",
