@@ -648,11 +648,12 @@ def perc2(m):
     with baca.scope(m[1]) as o:
         with baca.scope(o.pleaves()) as u:
             library.tam_tam_staff_position(u)
-            baca.flat_glissando(u, left_broken=True)
+            baca.flat_glissando(u, "C4", left_broken=True)
             baca.stem_tremolo(u)
         baca.damp(o.rest(0))
     with baca.scope(m[3]) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(
             o.phead(0),
@@ -662,9 +663,11 @@ def perc2(m):
     with baca.scope(m[4]) as o:
         library.damp_rest_after_each_ptail(o)
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.dynamic(o.phead(0), "mp")
     with baca.scope(m[5]) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m.get(6, 7)) as o:

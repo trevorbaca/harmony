@@ -492,7 +492,6 @@ def t(argument):
 
 
 def tam_tam_staff_position(o):
-    baca.staff_position(o, 0)
     baca.override.stem_down(o.pleaves())
     baca.override.tuplet_bracket_up(o)
 

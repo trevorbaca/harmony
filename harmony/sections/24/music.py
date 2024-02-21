@@ -301,7 +301,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(0), 1)
         with baca.scope(o.run(0)) as u:
             library.tam_tam_staff_position(u)
-            baca.flat_glissando(u)
+            baca.flat_glissando(u, "C4")
         library.purpleheart_staff_positions(o.leaves()[-2:], [2])
         baca.stem_tremolo(abjad.select.get(o.pheads(), [0, 2])),
         baca.dynamic(o.phead(0), "p")

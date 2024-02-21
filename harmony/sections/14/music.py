@@ -574,6 +574,7 @@ def perc2(cache):
         )
     with baca.scope(m[11]) as o:
         library.tam_tam_staff_position(o)
+        baca.staff_position(o, 0)
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
