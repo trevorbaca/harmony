@@ -1019,9 +1019,20 @@ number.18.Percussion.1.Music = {
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
     % [Percussion.1.Music measure 5]
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
+    \override Dots.transparent = ##t
+    \override Stem.transparent = ##t
     c'2
-    \glissando
 
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    \revert Dots.transparent
+    \revert Stem.transparent
     c'16
     \revert Stem.direction
 
