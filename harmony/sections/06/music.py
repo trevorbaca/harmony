@@ -729,6 +729,7 @@ def hp(m):
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
                 baca.select.lparts(clpart, [1, 2]),
@@ -751,6 +752,7 @@ def hp(m):
             baca.clef(u, "percussion"),
             baca.staff_lines(u, 1),
         library.whisk_staff_position(o.pleaves()[-2:])
+        baca.staff_position(o.pleaves()[-2:], 0)
         leaves = o.pleaves()[-2:]
         baca.hairpin(
             baca.select.lparts(leaves, [1, 1]),
@@ -764,6 +766,7 @@ def hp(m):
         )
     with baca.scope(m[5]) as o:
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
                 baca.select.lparts(clpart, [1, 2]),
@@ -831,6 +834,7 @@ def hp(m):
             baca.clef(u, "percussion"),
             baca.staff_lines(u, 1),
         library.whisk_staff_position(o.pleaves()[-2:])
+        baca.staff_position(o.pleaves()[-2:], 0)
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o.leaves()[-3:], 6)
         baca.markup(
