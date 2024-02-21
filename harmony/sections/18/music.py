@@ -738,7 +738,7 @@ def hp(m):
     for n in [9, 10, 11]:
         with baca.scope(m[n]) as o:
             library.whisk_staff_position(o)
-            baca.flat_glissando(o.pleaves())
+            baca.flat_glissando(o.pleaves(), "C4")
             baca.hairpin(
                 baca.select.lparts(o.tleaves(), [1, 2]),
                 'o< "mf">o!',

@@ -584,6 +584,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 6),
         baca.markup(

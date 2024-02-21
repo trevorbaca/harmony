@@ -538,6 +538,7 @@ def hp(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6)
         baca.rspanners.metric_modulation(
@@ -568,6 +569,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         baca.dynamic(o.phead(0), '"f"')
         baca.dynamic(o.phead(-1), "mf")
         baca.override.dls_staff_padding(o, 6)
@@ -606,12 +608,15 @@ def hp(cache):
             baca.clef(u, "percussion")
             baca.staff_lines(u, 1),
             library.whisk_staff_position(u)
+            baca.staff_position(u, 0)
             baca.markup(u, r"\baca-whisk-markup")
             baca.dynamic(u, '"f"')
             baca.override.dls_staff_padding(u, 6 + 2)
         library.whisk_staff_position(o.pleaf(-1))
+        baca.staff_position(o.pleaf(-1), 0)
     with baca.scope(m[8]) as o:
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6 + 2)
     with baca.scope(m.get(7, 8)) as o:

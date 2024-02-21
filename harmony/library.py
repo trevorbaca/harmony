@@ -526,7 +526,6 @@ def warble_pitches():
 
 
 def whisk_staff_position(argument):
-    baca.staff_position(argument, 0)
     baca.override.stem_down(baca.select.pleaves(argument))
     baca.override.tuplet_bracket_up(argument)
 

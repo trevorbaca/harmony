@@ -437,6 +437,7 @@ def hp(m):
             )
     with baca.scope(m.get(2, 3)) as o:
         library.whisk_staff_position(o)
+        baca.staff_position(o, 0)
         baca.rspanners.metric_modulation(
             o.leaves()[1:7],
             staff_padding=10.5,
