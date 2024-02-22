@@ -659,10 +659,9 @@ def va(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.interpolate_pitches(o, "D#3", "E3")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "D#3 E3",
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
         baca.markup(
@@ -697,11 +696,9 @@ def va(cache):
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
-            baca.interpolate_pitches(run, "D#3", "E3")
-        for run in baca.select.runs(o):
-            baca.basic_glissando(
+            baca.flat_glissando(
                 run,
-                hide_middle_note_heads=True,
+                "D#3 E3",
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.markup(
@@ -875,10 +872,9 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.interpolate_pitches(o, "F2", "E2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "F2 E2",
         )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.markup(
@@ -917,10 +913,9 @@ def cb1(cache):
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
-            baca.interpolate_pitches(run, "F2", "E2")
-            baca.basic_glissando(
+            baca.flat_glissando(
                 run,
-                hide_middle_note_heads=True,
+                "F2 E2",
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.markup(
@@ -941,10 +936,9 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.interpolate_pitches(o, "D#2", "E2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "D#2 E2",
         )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.markup(
@@ -971,10 +965,9 @@ def cb2(cache):
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
-            baca.interpolate_pitches(run, "D#2", "E2")
-            baca.basic_glissando(
+            baca.flat_glissando(
                 run,
-                hide_middle_note_heads=True,
+                "D#2 E2",
             )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.markup(

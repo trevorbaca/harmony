@@ -803,10 +803,9 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.tuplet_bracket_down(o)
-        baca.interpolate_pitches(o, "G2", "F2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "G2 F2",
         )
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
@@ -851,10 +850,9 @@ def vc2(cache):
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
-        baca.interpolate_pitches(o, "G2", "F2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "G2 F2",
         )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.hairpin(
@@ -991,10 +989,9 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.interpolate_pitches(o, "G2", "F#2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "G2 F#2",
         )
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
@@ -1049,10 +1046,9 @@ def cb2(cache):
                 staff_padding=3 + 1,
             )
     with baca.scope(m[7]) as o:
-        baca.interpolate_pitches(o, "G2", "F#2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "G2 F#2",
         )
         baca.stem_tremolo(o.pleaves(grace=False))
         baca.hairpin(
