@@ -706,13 +706,11 @@ number.16.Percussion.1.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
+    \override Dots.transparent = ##t
+    \override Stem.transparent = ##t
     c'2.
 
     % [Percussion.1.Music measure 3]
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     c'2.
 
     % [Percussion.1.Music measure 4]
@@ -722,6 +720,8 @@ number.16.Percussion.1.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
+    \revert Dots.transparent
+    \revert Stem.transparent
     c'16
 
     r8.
@@ -794,6 +794,8 @@ number.16.Percussion.1.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
+    \override Dots.transparent = ##t
+    \override Stem.transparent = ##t
     c'4
 
     c'4
@@ -802,6 +804,8 @@ number.16.Percussion.1.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
+    \revert Dots.transparent
+    \revert Stem.transparent
     c'16
     \revert Stem.direction
 

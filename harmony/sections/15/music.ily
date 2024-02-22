@@ -816,11 +816,11 @@ number.15.Percussion.1.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
+    \override Dots.transparent = ##t
+    \override Stem.transparent = ##t
     d'2
 
     % [Percussion.1.Music measure 8]
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'2.
 
     % [Percussion.1.Music measure 9]
@@ -828,6 +828,8 @@ number.15.Percussion.1.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
+    \revert Dots.transparent
+    \revert Stem.transparent
     d'2.
     \revert Stem.direction
     \revert TupletBracket.direction
