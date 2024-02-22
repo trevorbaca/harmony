@@ -1132,7 +1132,6 @@ def vc2(m):
             baca.interpolate_pitches(run, "G2", "F2")
             baca.basic_glissando(
                 run,
-                allow_repeats=True,
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
@@ -1285,7 +1284,6 @@ def cb2(m):
             baca.interpolate_pitches(run, "G2", "F#2")
             baca.basic_glissando(
                 run,
-                allow_repeats=True,
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
