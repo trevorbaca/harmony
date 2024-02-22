@@ -545,7 +545,7 @@ def perc1(m):
     with baca.scope(m[1]) as o:
         with baca.scope(o.pleaves()[:1]) as u:
             library.triangle_staff_position(u)
-            baca.flat_glissando(u, left_broken=True)
+            baca.flat_glissando_without_pitch(u, left_broken=True)
             baca.stem_tremolo(u)
         baca.damp(o.rest(0))
         with baca.scope(o.pleaf(-1)) as u:

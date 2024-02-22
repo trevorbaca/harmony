@@ -353,7 +353,7 @@ def perc1(m):
         baca.staff_lines(abjad.select.leaf(o, 0), 1)
     with baca.scope(m[5]) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando(
+        baca.flat_glissando_without_pitch(
             baca.select.rleak(o.pleaves()[1:]),
             right_broken=True,
         )

@@ -257,7 +257,7 @@ def bfl(m):
 def perc1(m):
     with baca.scope(m.get(1, 4)) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando(o.pleaves(), hide_middle_stems=True)
+        baca.flat_glissando_without_pitch(o.pleaves(), hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
@@ -282,7 +282,7 @@ def perc1(m):
         )
     with baca.scope(m.get(7, 10)) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando(
+        baca.flat_glissando_without_pitch(
             o.leaves()[:-6],
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
@@ -366,7 +366,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(7, 10)) as o:
-        baca.flat_glissando(o, hide_middle_stems=True)
+        baca.flat_glissando_without_pitch(o, hide_middle_stems=True)
         baca.dynamic(
             o.phead(0),
             "mp-sempre",
