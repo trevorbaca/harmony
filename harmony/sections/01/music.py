@@ -418,10 +418,9 @@ def vc2(m):
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
-        baca.interpolate_pitches(o, "G2", "F2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "G2 F2",
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
         baca.hairpin(
@@ -495,10 +494,9 @@ def cb2(m):
                 staff_padding=3 + 1,
             )
     with baca.scope(m[3]) as o:
-        baca.interpolate_pitches(o, "G2", "F#2")
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
+            "G2 F#2",
         )
         baca.stem_tremolo(baca.select.pleaves(o, grace=False))
         baca.hairpin(

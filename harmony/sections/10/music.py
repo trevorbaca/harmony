@@ -729,8 +729,7 @@ def cb1(m):
             rleak=True,
         )
     with baca.scope(m.get(13, 15)) as o:
-        baca.interpolate_pitches(o, "F#2", "D2")
-        baca.basic_glissando(o.tleaves(), hide_middle_note_heads=True)
+        baca.flat_glissando(o.tleaves(), "F#2 D2")
         baca.mspanners.scp(
             baca.select.mgroups(o, [1, 1]),
             "T4 -> O -> T4",
