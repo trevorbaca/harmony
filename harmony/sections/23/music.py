@@ -518,7 +518,7 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(4, 6)) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.flat_glissando(o, "Dqf3", hide_middle_stems=True)
+        baca.multistage_glissando(o, "Dqf3", hide_middle_stems=True)
         baca.dynamic(o.phead(0), "p")
         baca.mspanners.bow_speed(
             o,
@@ -599,7 +599,7 @@ def cb2(cache):
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.flat_glissando(o, "E1")
+        baca.multistage_glissando(o, "E1")
         baca.hairpin(
             o,
             "ff>o",

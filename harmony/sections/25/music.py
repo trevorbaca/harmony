@@ -368,7 +368,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(0), 1)
     with baca.scope(m.get(2, 3)) as o:
         library.tam_tam_staff_position(o)
-        baca.flat_glissando(o.pleaves(), "C4")
+        baca.multistage_glissando(o.pleaves(), "C4")
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "p")
         baca.markup(
@@ -469,7 +469,7 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.flat_glissando(o, "Ab4")
+        baca.multistage_glissando(o, "Ab4")
         baca.dynamic(o.phead(0), "mp")
         baca.rspanners.xfb(
             o.pleaves(),
