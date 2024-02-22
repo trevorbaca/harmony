@@ -1307,15 +1307,6 @@ number.6.Percussion.1.Music = {
     % [Percussion.1.Music measure 1]
       %! REAPPLIED_CLEF
     \clef "percussion"
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \hide NoteHead
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Accidental.stencil = ##f
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override NoteHead.no-ledgers = ##t
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -1329,10 +1320,6 @@ number.6.Percussion.1.Music = {
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \harmony-perc-i-markup
@@ -1725,15 +1712,6 @@ number.6.Percussion.2.Music = {
     % [Percussion.2.Music measure 1]
       %! REAPPLIED_CLEF
     \clef "percussion"
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \hide NoteHead
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Accidental.stencil = ##f
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override NoteHead.no-ledgers = ##t
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -1745,10 +1723,6 @@ number.6.Percussion.2.Music = {
     \override DynamicLineSpanner.staff-padding = 6
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \harmony-perc-ii-markup

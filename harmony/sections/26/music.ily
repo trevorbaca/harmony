@@ -1478,14 +1478,6 @@ number.26.Percussion.2.Music = {
     {
 
         % [Percussion.2.Music measure 8]
-        \hide NoteHead
-        \override Accidental.stencil = ##f
-        \override NoteColumn.glissando-skip = ##t
-        \override NoteHead.no-ledgers = ##t
-        \revert Accidental.stencil
-        \revert NoteColumn.glissando-skip
-        \revert NoteHead.no-ledgers
-        \undo \hide NoteHead
         c'1
         :32
         \revert Stem.direction

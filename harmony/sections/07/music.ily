@@ -1222,18 +1222,6 @@ number.7.Percussion.2.Music = {
     \glissando
 
     % [Percussion.2.Music measure 2]
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \override Dots.transparent = ##t
-    \override Stem.transparent = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
-    \revert Dots.transparent
-    \revert Stem.transparent
     c'2.
     :32
     \revert Stem.direction
@@ -1335,55 +1323,7 @@ number.7.Percussion.2.Music = {
       %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \hide NoteHead
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override NoteColumn.glissando-skip = ##t
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override NoteHead.no-ledgers = ##t
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override Dots.transparent = ##t
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override Stem.transparent = ##t
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert Accidental.stencil
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert NoteColumn.glissando-skip
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert NoteHead.no-ledgers
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \undo \hide NoteHead
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert Dots.transparent
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert Stem.transparent
       %! ANCHOR_NOTE
     \stopStaff
       %! ANCHOR_NOTE
@@ -1399,6 +1339,9 @@ number.7.Percussion.2.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SHOW_TO_JOIN_BROKEN_SPANNERS
+    %@% \glissando
 
 }
 

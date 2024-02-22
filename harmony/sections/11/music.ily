@@ -1623,15 +1623,6 @@ number.11.Percussion.2.Music = {
     % [Percussion.2.Music measure 1]
       %! REAPPLIED_CLEF
     \clef "percussion"
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \hide NoteHead
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Accidental.stencil = ##f
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override NoteHead.no-ledgers = ##t
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -1643,10 +1634,6 @@ number.11.Percussion.2.Music = {
     \override DynamicLineSpanner.staff-padding = 6
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \harmony-perc-ii-markup
@@ -2612,14 +2599,6 @@ number.11.Viola.Music = {
     \>
     \glissando
 
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
     cs'!4
 
     <<

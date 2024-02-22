@@ -1214,21 +1214,6 @@ number.17.Viola.Music = {
     % [Viola.Music measure 1]
       %! REAPPLIED_CLEF
     \clef "alto"
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \hide NoteHead
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Accidental.stencil = ##f
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override NoteHead.no-ledgers = ##t
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Dots.transparent = ##t
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Stem.transparent = ##t
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -1283,15 +1268,6 @@ number.17.Viola.Music = {
     \set Staff.shortInstrumentName = \harmony-va-markup %@%
 
     % [Viola.Music measure 2]
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override NoteColumn.glissando-skip = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
-    \revert Dots.transparent
-    \revert Stem.transparent
     d'1
 
     <<

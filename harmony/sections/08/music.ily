@@ -785,18 +785,6 @@ number.8.Percussion.2.Music = {
     \glissando
 
     % [Percussion.2.Music measure 9]
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \override Dots.transparent = ##t
-    \override Stem.transparent = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
-    \revert Dots.transparent
-    \revert Stem.transparent
     c'2.
     :32
     \revert DynamicLineSpanner.staff-padding
