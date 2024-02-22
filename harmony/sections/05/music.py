@@ -582,7 +582,7 @@ def vc1(m):
             o,
             [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
         )
-        baca.basic_glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves())
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
 
@@ -603,7 +603,6 @@ def vc2(m):
             baca.interpolate_pitches(run, "G2", "F2"),
             baca.basic_glissando(
                 run,
-                allow_repeats=True,
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
@@ -635,7 +634,7 @@ def vc2(m):
             o,
             [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
         )
-        baca.basic_glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves())
         baca.override.dls_staff_padding(o, 5.5)
 
 
@@ -695,7 +694,7 @@ def cb1(m):
             o,
             [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
         )
-        baca.basic_glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves())
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
 
@@ -717,7 +716,6 @@ def cb2(m):
             baca.interpolate_pitches(run, "G2", "F#2"),
             baca.basic_glissando(
                 run,
-                allow_repeats=True,
                 hide_middle_note_heads=True,
             )
         baca.stem_tremolo(o.pleaves(grace=False))
@@ -758,7 +756,7 @@ def cb2(m):
             o,
             [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
         )
-        baca.basic_glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves())
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
 
