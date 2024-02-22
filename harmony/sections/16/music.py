@@ -256,11 +256,11 @@ def bfl(m):
 
 def perc1(m):
     with baca.scope(m.get(1, 6)) as o:
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             o.run(0),
             hide_middle_stems=True,
         )
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             o.run(1),
             hide_middle_stems=True,
         )
@@ -289,7 +289,7 @@ def perc1(m):
         )
     with baca.scope(m.get(9, 10)) as o:
         library.brake_drum_staff_position(o)
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             o.pleaves(),
             hide_middle_stems=True,
         )

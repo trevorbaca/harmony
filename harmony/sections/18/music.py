@@ -542,7 +542,7 @@ def perc1(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.brake_drum_staff_position(o)
-        baca.flat_glissando_without_pitch(o.pleaves(), hide_middle_stems=True)
+        baca.multistage_glissando(o.pleaves(), hide_middle_stems=True)
         baca.dynamic(o.phead(0), "p")
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
@@ -922,7 +922,7 @@ def vc2(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(9, 11)) as o:
-        baca.flat_glissando_without_pitch(o.leaves()[:-1])
+        baca.multistage_glissando(o.leaves()[:-1])
     for item in [8, (9, 11)]:
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "Btqf4")
@@ -1139,7 +1139,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             # excluded cb1 because of current gliss / pitch trill order contention
-            baca.flat_glissando_without_pitch(o.pleaves())
+            baca.multistage_glissando(o.pleaves())
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
@@ -1158,7 +1158,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             # excluded cb1 because of gliss / pitch trill order contention
-            baca.flat_glissando_without_pitch(o.pleaves())
+            baca.multistage_glissando(o.pleaves())
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
@@ -1188,7 +1188,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[8]) as o:
             # excluded cb1 because of current gliss / trill order contention
-            baca.flat_glissando_without_pitch(o.pleaves())
+            baca.multistage_glissando(o.pleaves())
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[8]) as o:

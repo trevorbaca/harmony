@@ -716,7 +716,7 @@ def perc2(cache):
         )
     with baca.scope(m.get(10, 12)) as o:
         library.bass_drum_staff_position(o)
-        baca.flat_glissando_without_pitch(o, hide_middle_stems=True)
+        baca.multistage_glissando(o, hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pheads(), [0, -1]))
         baca.dynamic(o.phead(0), "p")
         baca.markup(
@@ -1108,7 +1108,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
-            baca.flat_glissando_without_pitch(o, left_broken=True)
+            baca.multistage_glissando(o, left_broken=True)
             baca.hairpin(
                 o,
                 ">o!",

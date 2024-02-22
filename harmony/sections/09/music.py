@@ -209,7 +209,7 @@ def perc2(m):
             r"\baca-bd-sponge-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             baca.select.rleak(o.pleaves()[-1:]),
             right_broken=True,
         )
