@@ -562,39 +562,7 @@ number.9.Percussion.2.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \hide NoteHead
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override NoteColumn.glissando-skip = ##t
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override NoteHead.no-ledgers = ##t
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert Accidental.stencil
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert NoteColumn.glissando-skip
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert NoteHead.no-ledgers
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \undo \hide NoteHead
       %! ANCHOR_NOTE
     \stopStaff
       %! ANCHOR_NOTE
@@ -610,6 +578,9 @@ number.9.Percussion.2.Music = {
       %! HIDDEN
       %! NOTE
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+      %! ANCHOR_NOTE
+      %! SHOW_TO_JOIN_BROKEN_SPANNERS
+    %@% \glissando
       %! ANCHOR_NOTE
     \revert Stem.direction
       %! ANCHOR_NOTE
@@ -783,14 +754,6 @@ number.9.Viola.Music = {
     \>
     \glissando
 
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
     cs'!4
 
     % [Viola.Music measure 2]

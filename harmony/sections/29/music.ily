@@ -1139,15 +1139,6 @@ number.29.Contrabass.2.Music = {
     % [Contrabass.2.Music measure 1]
       %! REAPPLIED_CLEF
     \clef "bass"
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \hide NoteHead
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override Accidental.stencil = ##f
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! LEFT_BROKEN
-    \override NoteHead.no-ledgers = ##t
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -1160,10 +1151,6 @@ number.29.Contrabass.2.Music = {
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
     \set Staff.instrumentName = \harmony-cb-ii-markup

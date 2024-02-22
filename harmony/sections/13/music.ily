@@ -1280,14 +1280,6 @@ number.13.Percussion.2.Music = {
     ^ \baca-bd-fingertips-markup
     \glissando
 
-    \hide NoteHead
-    \override Accidental.stencil = ##f
-    \override NoteColumn.glissando-skip = ##t
-    \override NoteHead.no-ledgers = ##t
-    \revert Accidental.stencil
-    \revert NoteColumn.glissando-skip
-    \revert NoteHead.no-ledgers
-    \undo \hide NoteHead
     b4
     \revert Stem.direction
     \revert TupletBracket.direction

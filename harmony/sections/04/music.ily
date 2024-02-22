@@ -4086,39 +4086,7 @@ number.4.Contrabass.2.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \hide NoteHead
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override NoteColumn.glissando-skip = ##t
-      %! ANCHOR_NOTE
-      %! RIGHT_BROKEN
-      %! SHOW_TO_JOIN_BROKEN_SPANNERS
-    \override NoteHead.no-ledgers = ##t
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert Accidental.stencil
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert NoteColumn.glissando-skip
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \revert NoteHead.no-ledgers
-      %! ANCHOR_NOTE
-      %! HIDE_TO_JOIN_BROKEN_SPANNERS
-      %! RIGHT_BROKEN
-    \undo \hide NoteHead
       %! ANCHOR_NOTE
     \stopStaff
       %! ANCHOR_NOTE
@@ -4141,6 +4109,9 @@ number.4.Contrabass.2.Music = {
       %! ANCHOR_NOTE
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
+      %! ANCHOR_NOTE
+      %! SHOW_TO_JOIN_BROKEN_SPANNERS
+    %@% \glissando
 
 }
 
