@@ -610,7 +610,7 @@ def cb2(m):
             staff_padding=5.5,
         )
     with baca.scope(m[11]) as o:
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.rleaves(),
             "E1",
             allow_hidden=True,

@@ -648,7 +648,7 @@ def perc2(m):
     with baca.scope(m[1]) as o:
         with baca.scope(o.pleaves()) as u:
             library.tam_tam_staff_position(u)
-            baca.flat_glissando(u, "C4", left_broken=True)
+            baca.multistage_glissando(u, "C4", left_broken=True)
             baca.stem_tremolo(u)
         baca.damp(o.rest(0))
     with baca.scope(m[3]) as o:
@@ -1129,7 +1129,7 @@ def vc2(m):
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "bass")
         for run in baca.select.runs(o):
-            baca.flat_glissando(
+            baca.multistage_glissando(
                 run,
                 "G2 F2",
             )
@@ -1177,7 +1177,7 @@ def vc2(m):
 
 def cb1(m):
     with baca.scope(m[1]) as o:
-        baca.flat_glissando(o, "E1")
+        baca.multistage_glissando(o, "E1")
         baca.hairpin(
             baca.select.lparts(o, [2, 3]),
             "o< p>o!",
@@ -1200,7 +1200,7 @@ def cb1(m):
                 staff_padding=3,
             )
     with baca.scope(m.get(4, 7)) as o:
-        baca.flat_glissando(o.run(-1), "E1")
+        baca.multistage_glissando(o.run(-1), "E1")
         with baca.scope(o.runs()[-1:]) as u:
             baca.hairpin(
                 baca.select.lparts(u, [6, 5, 4]),
@@ -1229,7 +1229,7 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
     with baca.scope(m.get(10, 15)) as o:
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.rleaves(),
             "E1",
             allow_hidden=True,
@@ -1253,7 +1253,7 @@ def cb1(m):
 
 def cb2(m):
     with baca.scope(m[1]) as o:
-        baca.flat_glissando(o.pleaves(), "E1")
+        baca.multistage_glissando(o.pleaves(), "E1")
         baca.hairpin(
             baca.select.lparts(o, [3, 2]),
             "o< p>o!",
@@ -1265,7 +1265,7 @@ def cb2(m):
             staff_padding=3,
         )
     with baca.scope(m.get(3, 7)) as o:
-        baca.flat_glissando(o.pleaves(), "E1")
+        baca.multistage_glissando(o.pleaves(), "E1")
         with baca.scope(o.tleaves()) as u:
             baca.hairpin(
                 baca.select.mgroups(u, [2, 1, 1, 1]),
@@ -1280,7 +1280,7 @@ def cb2(m):
             )
     with baca.scope(m[8]) as o:
         for run in baca.select.runs(o):
-            baca.flat_glissando(
+            baca.multistage_glissando(
                 run,
                 "G2 F#2",
             )
@@ -1297,7 +1297,7 @@ def cb2(m):
                 staff_padding=3,
             )
     with baca.scope(m.get(10, 15)) as o:
-        baca.flat_glissando(o.pleaves(), "E1")
+        baca.multistage_glissando(o.pleaves(), "E1")
         baca.hairpin(
             baca.select.mgroups(o, [2, 1, 1, 2]),
             "o< f> p< ff>o!",

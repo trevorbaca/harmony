@@ -659,7 +659,7 @@ def va(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "D#3 E3",
         )
@@ -696,7 +696,7 @@ def va(cache):
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
-            baca.flat_glissando(
+            baca.multistage_glissando(
                 run,
                 "D#3 E3",
             )
@@ -872,7 +872,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "F2 E2",
         )
@@ -913,7 +913,7 @@ def cb1(cache):
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
-            baca.flat_glissando(
+            baca.multistage_glissando(
                 run,
                 "F2 E2",
             )
@@ -936,7 +936,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "D#2 E2",
         )
@@ -965,7 +965,7 @@ def cb2(cache):
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
-            baca.flat_glissando(
+            baca.multistage_glissando(
                 run,
                 "D#2 E2",
             )

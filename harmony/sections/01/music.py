@@ -418,7 +418,7 @@ def vc2(m):
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "G2 F2",
         )
@@ -494,7 +494,7 @@ def cb2(m):
                 staff_padding=3 + 1,
             )
     with baca.scope(m[3]) as o:
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "G2 F#2",
         )
