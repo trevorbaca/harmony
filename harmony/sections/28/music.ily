@@ -640,8 +640,8 @@ number.28.BassFlute.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
+    \override Dots.transparent = ##t
+    \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -660,8 +660,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -680,8 +678,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -700,8 +696,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -720,8 +714,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -740,8 +732,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -757,8 +747,6 @@ number.28.BassFlute.Music = {
     \<
 
     % [BassFlute.Music measure 8]
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''1.. * 1/7
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -779,8 +767,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -799,8 +785,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -819,8 +803,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -839,8 +821,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -859,8 +839,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -879,8 +857,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -896,8 +872,6 @@ number.28.BassFlute.Music = {
     \>
 
     % [BassFlute.Music measure 9]
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''1.. * 1/7
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -918,8 +892,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -938,8 +910,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -958,8 +928,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -978,8 +946,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -998,8 +964,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1018,8 +982,6 @@ number.28.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1039,6 +1001,8 @@ number.28.BassFlute.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
+    \revert Dots.transparent
+    \revert Stem.transparent
     a''1.. * 1/7
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1419,8 +1383,8 @@ number.28.Percussion.1.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
+    \override Dots.transparent = ##t
+    \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1439,8 +1403,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1459,8 +1421,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1479,8 +1439,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1499,8 +1457,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1519,8 +1475,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1536,8 +1490,6 @@ number.28.Percussion.1.Music = {
     \<
 
     % [Percussion.1.Music measure 8]
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'1.. * 1/7
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1558,8 +1510,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1578,8 +1528,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1598,8 +1546,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1618,8 +1564,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1638,8 +1582,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1658,8 +1600,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1675,8 +1615,6 @@ number.28.Percussion.1.Music = {
     \>
 
     % [Percussion.1.Music measure 9]
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'1.. * 1/7
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1697,8 +1635,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1717,8 +1653,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1737,8 +1671,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1757,8 +1689,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1777,8 +1707,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1797,8 +1725,6 @@ number.28.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1818,6 +1744,8 @@ number.28.Percussion.1.Music = {
     \revert NoteColumn.glissando-skip
     \revert NoteHead.no-ledgers
     \undo \hide NoteHead
+    \revert Dots.transparent
+    \revert Stem.transparent
     d'1.. * 1/7
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -6852,8 +6780,6 @@ number.28.Contrabass.2.Music = {
     \override NoteHead.no-ledgers = ##t
     \override Dots.transparent = ##t
     \override Stem.transparent = ##t
-    \once \override Dots.transparent = ##t
-    \once \override Stem.transparent = ##t
     a,2
 
     % [Contrabass.2.Music measure 3]

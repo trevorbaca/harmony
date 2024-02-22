@@ -360,7 +360,7 @@ def perc1(m):
     with baca.scope(m.get(7, 9)) as o:
         baca.flat_glissando_without_pitch(
             o.pleaves(),
-            hide_stem_selector=lambda _: abjad.select.leaves(o.pleaves())[2:-1],
+            hide_middle_stems=True,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.dynamic(o.phead(0), '"f"')
