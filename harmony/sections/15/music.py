@@ -358,7 +358,7 @@ def perc1(m):
     with baca.scope(m.get(5, 9)) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 9)) as o:
-        baca.flat_glissando(
+        baca.flat_glissando_without_pitch(
             o.pleaves(),
             hide_stem_selector=lambda _: abjad.select.leaves(o.pleaves())[2:-1],
         )

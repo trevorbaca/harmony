@@ -439,7 +439,7 @@ def perc1(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         library.brake_drum_staff_position(o)
-        baca.flat_glissando(o)
+        baca.flat_glissando_without_pitch(o)
         baca.dynamic(o.phead(0), '"f"')
         baca.markup(
             o.pleaf(0),

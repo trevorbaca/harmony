@@ -477,7 +477,7 @@ def perc1(m):
         )
     with baca.scope(m.get(10, 14)) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando(o)
+        baca.flat_glissando_without_pitch(o)
         baca.stem_tremolo(abjad.select.get(o.pheads(), [0, -1]))
         baca.dynamic(o.phead(0), "p")
         baca.markup(
@@ -497,12 +497,12 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m.get(1, 7)) as o:
         library.bass_drum_staff_position(o)
-        baca.flat_glissando(o, left_broken=True)
+        baca.flat_glissando_without_pitch(o, left_broken=True)
         baca.stem_tremolo(o.phead(-1))
     with baca.scope(m.get(10, 15)) as o:
         with baca.scope(o.rleaves()) as u:
             library.bass_drum_staff_position(u, allow_hidden=True)
-            baca.flat_glissando(u, right_broken=True)
+            baca.flat_glissando_without_pitch(u, right_broken=True)
         baca.stem_tremolo(o.phead(0))
         baca.dynamic(
             o.phead(0),
@@ -523,7 +523,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 11)) as o:
-        baca.flat_glissando(o, hide_middle_stems=True)
+        baca.flat_glissando_without_pitch(o, hide_middle_stems=True)
     with baca.scope(m.get(12)) as o:
         baca.pitch(o, "F#3")
     with baca.scope(m.get(2, 12)) as o:

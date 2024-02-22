@@ -394,7 +394,7 @@ def perc1(m):
         )
     with baca.scope(m.get(5, 10)) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando(o, hide_middle_stems=True)
+        baca.flat_glissando_without_pitch(o, hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.dynamic(
             o.phead(0),
