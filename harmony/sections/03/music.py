@@ -589,7 +589,7 @@ def vc2(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.interpolate_pitches(o, "G2", "F2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -626,7 +626,7 @@ def vc2(m):
         baca.clef(o.leaf(0), "bass")
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "G2", "F2"),
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -706,7 +706,7 @@ def cb2(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.interpolate_pitches(o, "G2", "F#2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -751,7 +751,7 @@ def cb2(m):
     with baca.scope(m.get(6, 8)) as o:
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "G2", "F#2"),
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,

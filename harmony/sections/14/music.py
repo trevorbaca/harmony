@@ -660,7 +660,7 @@ def va(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.interpolate_pitches(o, "D#3", "E3")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -700,7 +700,7 @@ def va(cache):
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "D#3", "E3")
         for run in baca.select.runs(o):
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -714,7 +714,7 @@ def va(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(o, "D4 Eb4")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
 
@@ -878,7 +878,7 @@ def cb1(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.interpolate_pitches(o, "F2", "E2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -921,7 +921,7 @@ def cb1(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "F2", "E2")
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -935,7 +935,7 @@ def cb1(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(o, "E3 D#3")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
 
@@ -946,7 +946,7 @@ def cb2(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.interpolate_pitches(o, "D#2", "E2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -977,7 +977,7 @@ def cb2(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "D#2", "E2")
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -991,7 +991,7 @@ def cb2(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(o, "C#3 D3")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
 

@@ -382,7 +382,7 @@ def va(m):
             )
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D4 C#4")
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.hairpin(
             o,
             "pp>o!",
@@ -470,7 +470,7 @@ def vc2(m):
         baca.clef(o.leaf(-1), "bass")
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D3 C#3")
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.hairpin(
             o,
             "pp>o!",
@@ -558,7 +558,7 @@ def cb2(m):
         baca.clef(o.leaf(-1), "bass")
     with baca.scope(m[4]) as o:
         baca.pitches(o, "D3 C#3")
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.hairpin(
             o,
             "pp>o!",

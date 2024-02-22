@@ -456,7 +456,7 @@ def hp(m):
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[4]) as o:
         baca.pitches(o, "F4 D4 A4 G3 B3 E3")
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.hairpin(
             o,
             '"f">o!',
@@ -582,7 +582,7 @@ def vc1(m):
             o,
             [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
         )
-        baca.glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves(), allow_repeats=True)
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
 
@@ -601,7 +601,7 @@ def vc2(m):
         baca.clef(o.leaf(0), "bass")
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "G2", "F2"),
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -635,7 +635,7 @@ def vc2(m):
             o,
             [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
         )
-        baca.glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves(), allow_repeats=True)
         baca.override.dls_staff_padding(o, 5.5)
 
 
@@ -695,7 +695,7 @@ def cb1(m):
             o,
             [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
         )
-        baca.glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves(), allow_repeats=True)
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
 
@@ -715,7 +715,7 @@ def cb2(m):
     with baca.scope(m[2]) as o:
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "G2", "F#2"),
-            baca.glissando(
+            baca.basic_glissando(
                 run,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -758,7 +758,7 @@ def cb2(m):
             o,
             [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
         )
-        baca.glissando(o.tleaves(), allow_repeats=True)
+        baca.basic_glissando(o.tleaves(), allow_repeats=True)
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
 

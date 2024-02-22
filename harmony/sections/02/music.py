@@ -804,7 +804,7 @@ def vc2(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.tuplet_bracket_down(o)
         baca.interpolate_pitches(o, "G2", "F2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -853,7 +853,7 @@ def vc2(cache):
             )
     with baca.scope(m[7]) as o:
         baca.interpolate_pitches(o, "G2", "F2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -994,7 +994,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.interpolate_pitches(o, "G2", "F#2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -1053,7 +1053,7 @@ def cb2(cache):
             )
     with baca.scope(m[7]) as o:
         baca.interpolate_pitches(o, "G2", "F#2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
