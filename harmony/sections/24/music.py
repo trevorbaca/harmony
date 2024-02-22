@@ -605,7 +605,7 @@ def composites(cache):
         with baca.scope(m.get(5, 9)) as o:
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads())
-            baca.flat_glissando_without_pitch(o)
+            baca.multistage_glissando(o)
             baca.dynamic(o.phead(0), "pp")
         with baca.scope(m.get(7, 8)) as o:
             baca.hairpin(

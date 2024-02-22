@@ -234,7 +234,7 @@ def bfl(m):
             )
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A4")
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             m[7, 9],
             hide_middle_stems=True,
             rleak=True,
@@ -256,7 +256,7 @@ def bfl(m):
 def perc1(m):
     with baca.scope(m.get(1, 4)) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando_without_pitch(o.pleaves(), hide_middle_stems=True)
+        baca.multistage_glissando(o.pleaves(), hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
@@ -281,7 +281,7 @@ def perc1(m):
         )
     with baca.scope(m.get(7, 10)) as o:
         library.triangle_staff_position(o)
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             m[7, 9],
             hide_middle_stems=True,
             rleak=True,
@@ -366,7 +366,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(7, 10)) as o:
-        baca.flat_glissando_without_pitch(o, hide_middle_stems=True)
+        baca.multistage_glissando(o, hide_middle_stems=True)
         baca.dynamic(
             o.phead(0),
             "mp-sempre",
@@ -623,7 +623,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.pitch(o, "A1")
-        baca.flat_glissando_without_pitch(
+        baca.multistage_glissando(
             o.leaves()[:-1],
             hide_middle_stems=True,
         )

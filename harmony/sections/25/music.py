@@ -681,7 +681,7 @@ def composites(cache):
         with baca.scope(m[3]) as o:
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads()[1:])
-            baca.flat_glissando_without_pitch(o)
+            baca.multistage_glissando(o)
             baca.dynamic(o.phead(0), "f")
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

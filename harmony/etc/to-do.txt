@@ -16,8 +16,7 @@ TO-DO
 
 6.  Make whisk spanner.
 
-7.  Hide dots when stems are hidden.
-    In baca.flat_glissando() 
+7.  Hide dots when stems are hidden in glissandi.
 
 8.  Renotate 5-quarter durations as 4:5 monads throughout.
 
