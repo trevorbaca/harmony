@@ -419,7 +419,7 @@ def vc2(m):
             )
     with baca.scope(m[3]) as o:
         baca.interpolate_pitches(o, "G2", "F2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -497,7 +497,7 @@ def cb2(m):
             )
     with baca.scope(m[3]) as o:
         baca.interpolate_pitches(o, "G2", "F#2")
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,

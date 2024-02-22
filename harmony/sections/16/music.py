@@ -353,7 +353,7 @@ def va(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.pitches(o, "D4 Eb4")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
         baca.dynamic(o.phead(0), "ppp")
         pheads = baca.select.pheads(o)
         pheads = [_ for _ in pheads if abjad.get.duration(_) >= abjad.Duration((1, 8))]
@@ -450,7 +450,7 @@ def cb1(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.pitches(o, "E3 D#3")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
@@ -478,7 +478,7 @@ def cb1(m):
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(o, "E3 D#3")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
@@ -500,7 +500,7 @@ def cb2(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.pitches(o, "C#3 D3")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
@@ -528,7 +528,7 @@ def cb2(m):
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(o, "C#3 D3")
         for run in baca.select.runs(o):
-            baca.glissando(run, allow_repeats=True)
+            baca.basic_glissando(run, allow_repeats=True)
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
