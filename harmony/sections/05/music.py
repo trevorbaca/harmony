@@ -455,12 +455,9 @@ def hp(m):
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[4]) as o:
-        # baca.pitches(o, "F4 D4 A4 G3 B3 E3")
-        # baca.basic_glissando(o.tleaves())
         baca.multistage_glissando(
             o.tleaves(),
             "F4 D4 A4 G3 B3 E3",
-            debug=True,
         )
         baca.hairpin(
             o,
