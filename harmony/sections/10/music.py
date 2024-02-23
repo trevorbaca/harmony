@@ -611,7 +611,7 @@ def va(m):
             + [0, -3, 0, -2, 0, -3, -1, -4, -1, -2, 0, -3, -1, -4, -1, -3, -1, -4, -2]
             + [-5, -2, -3, -1, -4, -2, -5, -2],
         ),
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff>o !",
@@ -652,7 +652,7 @@ def vc1(m):
             + [0, -3, -1, -4, -1, -3, -1, -4, -2, -5, -2, -3, -1, -4, -2, -5, -2]
             + [-4, -2, -5, -3, -6, -3, -4, -2, -5, -3, -6, -3],
         ),
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff>o!",
@@ -697,7 +697,7 @@ def vc2(m):
             + [-1, -4, -2, -5, -2, -3, -1, -4, -2, -5, -2, -4, -2, -5, -3, -6, -3]
             + [-4, -2, -5, -3, -6, -3],
         )
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff>o !",
@@ -769,7 +769,7 @@ def cb2(m):
             [5, 6, 3, 5, 2, 5, 3, 5, 2, 4, 1, 4, 3, 5, 2, 4, 1, 4, 2, 4, 1, 3, 0, 3]
             + [2, 4, 1, 3, 0, 3, 1, 3, 0, 2, -1, 2, 1, 3, 0, 2, -1, 2],
         )
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             baca.select.mgroups(o.rleaves(), [3, 3, 1]),
             "o< ff>o !",

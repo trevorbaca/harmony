@@ -400,7 +400,7 @@ def va(m):
     with baca.scope(m[2]) as o:
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             o,
             "o<mf",
@@ -489,7 +489,7 @@ def vc2(m):
     with baca.scope(m[2]) as o:
         baca.override.tuplet_bracket_staff_padding(o, 2)
         baca.pitches(o, "Gb4 F4")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             o,
             "o<mf",
@@ -512,7 +512,7 @@ def cb1(m):
         baca.pitch(o, "Dtqf4")
     with baca.scope(m[2]) as o:
         baca.pitches(o, "D2 C#2")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             o,
             "o<mf",

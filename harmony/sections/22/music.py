@@ -545,7 +545,7 @@ def va(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             o,
             "o<f",
@@ -560,7 +560,7 @@ def va(m):
         baca.clef(o.leaf(0), "alto")
         baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff>o!",
@@ -640,7 +640,7 @@ def vc2(m):
         baca.override.tuplet_bracket_up(o)
         baca.override.tuplet_bracket_staff_padding(o, 1.5)
         baca.pitches(o, "Gb4 F4")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             o,
             "o<f",
@@ -659,7 +659,7 @@ def vc2(m):
         baca.override.tuplet_bracket_up(o)
         baca.override.tuplet_bracket_staff_padding(o, 3)
         baca.pitches(o, "Gb4 F4")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff>o!",
@@ -691,7 +691,7 @@ def cb1(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "D2 C#2")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             o,
             "o<f",
@@ -749,7 +749,7 @@ def cb2(m):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "D2 C#2")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             abjad.select.partition_by_ratio(o, (4, 3)),
             "o< ff>o!",

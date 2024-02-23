@@ -430,7 +430,7 @@ def vc1(cache):
     with baca.scope(m.get(1, 4)) as o:
         baca.pitches(o, "E6 C#6")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             baca.select.cmgroups(o, [2, 2]),
             "o< mp>o",
@@ -493,7 +493,7 @@ def vc2(cache):
     with baca.scope(m.get(1, 4)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitches(o, "A5 C#6")
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.hairpin(
             baca.select.cmgroups(o, [2, 2]),
             "o< mp>o",
