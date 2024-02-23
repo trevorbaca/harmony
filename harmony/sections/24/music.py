@@ -301,7 +301,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(0), 1)
         with baca.scope(o.run(0)) as u:
             library.tam_tam_staff_position(u)
-            baca.multistage_glissando(u, "C4")
+            baca.glissando(u, "C4")
         library.purpleheart_staff_positions(o.leaves()[-2:], [2])
         baca.stem_tremolo(abjad.select.get(o.pheads(), [0, 2])),
         baca.dynamic(o.phead(0), "p")
@@ -605,7 +605,7 @@ def composites(cache):
         with baca.scope(m.get(5, 9)) as o:
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads())
-            baca.multistage_glissando(o)
+            baca.glissando(o)
             baca.dynamic(o.phead(0), "pp")
         with baca.scope(m.get(7, 8)) as o:
             baca.hairpin(

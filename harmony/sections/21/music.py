@@ -581,7 +581,7 @@ def cb2(m):
         baca.clef(o.leaf(0), "bass")
     for n in [1, 4]:
         with baca.scope(m[n]) as o:
-            baca.multistage_glissando(o, "E1")
+            baca.glissando(o, "E1")
             baca.mspanners.scp(
                 [o.leaves()],
                 "P1 -> T1",

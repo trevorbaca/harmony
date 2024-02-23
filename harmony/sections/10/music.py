@@ -477,7 +477,7 @@ def perc1(m):
         )
     with baca.scope(m.get(10, 14)) as o:
         library.triangle_staff_position(o)
-        baca.multistage_glissando(o)
+        baca.glissando(o)
         baca.stem_tremolo(abjad.select.get(o.pheads(), [0, -1]))
         baca.dynamic(o.phead(0), "p")
         baca.markup(
@@ -497,12 +497,12 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m.get(1, 7)) as o:
         library.bass_drum_staff_position(o)
-        baca.multistage_glissando(o, left_broken=True)
+        baca.glissando(o, left_broken=True)
         baca.stem_tremolo(o.phead(-1))
     with baca.scope(m.get(10, 15)) as o:
         with baca.scope(o.rleaves()) as u:
             library.bass_drum_staff_position(u, allow_hidden=True)
-            baca.multistage_glissando(u, right_broken=True)
+            baca.glissando(u, right_broken=True)
         baca.stem_tremolo(o.phead(0))
         baca.dynamic(
             o.phead(0),
@@ -517,13 +517,13 @@ def hp(cache):
     with baca.scope(m.get(2, 12)) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m.get(2, 3)) as o:
-        baca.multistage_glissando(o, "F#3", hide_middle_stems=True)
+        baca.glissando(o, "F#3", hide_middle_stems=True)
     with baca.scope(m.get(4, 11)) as o:
         baca.pitch(o, "<F#3 Gb3>")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 11)) as o:
-        baca.multistage_glissando(o, hide_middle_stems=True)
+        baca.glissando(o, hide_middle_stems=True)
     with baca.scope(m.get(12)) as o:
         baca.pitch(o, "F#3")
     with baca.scope(m.get(2, 12)) as o:
@@ -590,7 +590,7 @@ def va(m):
         baca.clef(o.leaf(0), "alto")
     for n in [3, 8]:
         with baca.scope(m[n]) as o:
-            baca.multistage_glissando(o.pleaves(), "C#4")
+            baca.glissando(o.pleaves(), "C#4")
             baca.hairpin(
                 o.tleaves(),
                 "mf>o!",
@@ -714,7 +714,7 @@ def cb1(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F3"),
     with baca.scope(m.get(2, 12)) as o:
-        baca.multistage_glissando(o, "F#1")
+        baca.glissando(o, "F#1")
         baca.dynamic(o.phead(0), "pp")
         baca.mspanners.scp(
             baca.select.mgroups(o, [2, 1, 1, 1, 1, 2, 1, 1, 1]),
@@ -729,7 +729,7 @@ def cb1(m):
             rleak=True,
         )
     with baca.scope(m.get(13, 15)) as o:
-        baca.multistage_glissando(o.tleaves(), "F#2 D2")
+        baca.glissando(o.tleaves(), "F#2 D2")
         baca.mspanners.scp(
             baca.select.mgroups(o, [1, 1]),
             "T4 -> O -> T4",

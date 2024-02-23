@@ -476,7 +476,7 @@ def perc2(m):
         )
     with baca.scope(m.get(7, 8)) as o:
         library.tam_tam_staff_position(o)
-        baca.multistage_glissando(o.pleaves(), "C4")
+        baca.glissando(o.pleaves(), "C4")
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "p")
         baca.markup(

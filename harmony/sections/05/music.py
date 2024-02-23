@@ -353,7 +353,7 @@ def perc1(m):
         baca.staff_lines(abjad.select.leaf(o, 0), 1)
     with baca.scope(m[5]) as o:
         library.triangle_staff_position(o)
-        baca.multistage_glissando(
+        baca.glissando(
             baca.select.rleak(o.pleaves()[1:]),
             right_broken=True,
         )
@@ -412,7 +412,7 @@ def perc2(m):
         baca.staff_lines(abjad.select.leaf(o, 0), 1)
     with baca.scope(m[5]) as o:
         library.tam_tam_staff_position(o)
-        baca.multistage_glissando(
+        baca.glissando(
             baca.select.rleak(o.pleaves()[1:]),
             "C4",
             right_broken=True,
@@ -455,7 +455,7 @@ def hp(m):
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[4]) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "F4 D4 A4 G3 B3 E3",
         )
@@ -602,7 +602,7 @@ def vc2(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         for run in baca.select.runs(o):
-            baca.multistage_glissando(
+            baca.glissando(
                 run,
                 "G2 F2",
             )
@@ -642,7 +642,7 @@ def vc2(m):
 def cb1(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(o, "E1")
+        baca.glissando(o, "E1")
         baca.hairpin(
             o,
             "mf>p",
@@ -701,7 +701,7 @@ def cb1(m):
 
 def cb2(m):
     with baca.scope(m[1]) as o:
-        baca.multistage_glissando(o, "E1", left_broken=True)
+        baca.glissando(o, "E1", left_broken=True)
         baca.hairpin(
             [o],
             "o<f",
@@ -714,7 +714,7 @@ def cb2(m):
         )
     with baca.scope(m[2]) as o:
         for run in baca.select.runs(o):
-            baca.multistage_glissando(
+            baca.glissando(
                 run,
                 "G2 F#2",
             )

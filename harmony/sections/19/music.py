@@ -1043,7 +1043,7 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.multistage_glissando(o.pleaves())
+            baca.glissando(o.pleaves())
             baca.hairpin(
                 baca.select.lparts(o.tleaves(), [2, 1]),
                 "o< mp>o!",

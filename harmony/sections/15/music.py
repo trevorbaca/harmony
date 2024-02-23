@@ -358,7 +358,7 @@ def perc1(m):
     with baca.scope(m.get(5, 9)) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 9)) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.pleaves(),
             hide_middle_stems=True,
         )

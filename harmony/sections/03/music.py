@@ -588,7 +588,7 @@ def vc1(m):
 def vc2(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "G2 F2",
         )
@@ -623,7 +623,7 @@ def vc2(m):
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")
         for run in baca.select.runs(o):
-            baca.multistage_glissando(
+            baca.glissando(
                 run,
                 "G2 F2",
             )
@@ -672,7 +672,7 @@ def cb1(m):
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(o, "E1")
+        baca.glissando(o, "E1")
         baca.hairpin(
             o,
             "mf>p",
@@ -701,7 +701,7 @@ def cb1(m):
 def cb2(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "G2 F#2",
         )
@@ -732,7 +732,7 @@ def cb2(m):
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(o, "E1")
+        baca.glissando(o, "E1")
         baca.hairpin(
             o,
             "p<f",
@@ -744,7 +744,7 @@ def cb2(m):
         )
     with baca.scope(m.get(6, 8)) as o:
         for run in baca.select.runs(o):
-            baca.multistage_glissando(
+            baca.glissando(
                 run,
                 "G2 F#2",
             )

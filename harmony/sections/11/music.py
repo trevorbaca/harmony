@@ -532,7 +532,7 @@ def perc1(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         library.triangle_staff_position(o)
-        baca.multistage_glissando(o.pleaves())
+        baca.glissando(o.pleaves())
         baca.stem_tremolo(o.pleaves()),
         baca.hairpin(
             baca.select.lparts(o[:2], [1, 1]),
@@ -579,7 +579,7 @@ def perc1(m):
             )
     with baca.scope(m[10]) as o:
         library.triangle_staff_position(o)
-        baca.multistage_glissando(o.leaves()[:-1])
+        baca.glissando(o.leaves()[:-1])
         baca.stem_tremolo(o.pheads())
         baca.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 1]),
@@ -599,7 +599,7 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[1]) as o:
         library.bass_drum_staff_position(o)
-        baca.multistage_glissando(o, left_broken=True)
+        baca.glissando(o, left_broken=True)
         baca.stem_tremolo(o.pleaf(-1))
         baca.hairpin(
             o,
@@ -760,7 +760,7 @@ def va(m):
             rleak=True,
         )
     with baca.scope(m[6]) as o:
-        baca.multistage_glissando(o.pleaves(), "C#4")
+        baca.glissando(o.pleaves(), "C#4")
         baca.hairpin(
             o.tleaves(),
             "mf>o!",
@@ -979,7 +979,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 5)) as o:
-            baca.multistage_glissando(o.pleaves())
+            baca.glissando(o.pleaves())
             baca.override.note_head_style_harmonic(o.pleaves())
             baca.hairpin(
                 baca.select.lparts(o[:2], [1, 1]),
@@ -1005,7 +1005,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[10]) as o:
             baca.override.note_head_style_harmonic(o.pleaves())
-            baca.multistage_glissando(o.rleaves(), right_broken=True)
+            baca.glissando(o.rleaves(), right_broken=True)
             baca.hairpin(
                 baca.select.lparts(o.rleaves(), [1, 1, 1, 1, 1, 1, 1, 1]),
                 "o<| mp|> pp pp<| mp|> !<| mp|>o !",
