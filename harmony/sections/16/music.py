@@ -256,11 +256,11 @@ def bfl(m):
 
 def perc1(m):
     with baca.scope(m.get(1, 6)) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.run(0),
             hide_middle_stems=True,
         )
-        baca.multistage_glissando(
+        baca.glissando(
             o.run(1),
             hide_middle_stems=True,
         )
@@ -289,7 +289,7 @@ def perc1(m):
         )
     with baca.scope(m.get(9, 10)) as o:
         library.brake_drum_staff_position(o)
-        baca.multistage_glissando(
+        baca.glissando(
             o.pleaves(),
             hide_middle_stems=True,
         )
@@ -381,7 +381,7 @@ def va(m):
                 staff_padding=3,
             )
     with baca.scope(m.get(9, 10)) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.rleaves(),
             "D4",
             hide_middle_stems=True,

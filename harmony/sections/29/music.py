@@ -184,7 +184,7 @@ def cb1(m):
 
 def cb2(m):
     with baca.scope(m[1]) as o:
-        baca.multistage_glissando(o.leaves()[:1], "A1", left_broken=True)
+        baca.glissando(o.leaves()[:1], "A1", left_broken=True)
         baca.pitch(o[1:], "A1")
         baca.hairpin(
             o,

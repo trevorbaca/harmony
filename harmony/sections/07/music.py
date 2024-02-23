@@ -483,7 +483,7 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m.get(1, 2)) as o:
         library.tam_tam_staff_position(o)
-        baca.multistage_glissando(o.pleaves(), "C4", hide_middle_stems=True)
+        baca.glissando(o.pleaves(), "C4", hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.dynamic(o.phead(0), "p")
         baca.markup(
@@ -513,10 +513,10 @@ def perc2(m):
     with baca.scope(m.get(4, 6)) as o:
         with baca.scope(o.run(0)) as u:
             library.tam_tam_staff_position(u)
-            baca.multistage_glissando(u, "C4", hide_middle_stems=True)
+            baca.glissando(u, "C4", hide_middle_stems=True)
     with baca.scope(m[8]) as o:
         library.tam_tam_staff_position(o)
-        baca.multistage_glissando(
+        baca.glissando(
             baca.select.rleak(o.pleaves()),
             "C4",
             hide_middle_stems=True,
@@ -697,7 +697,7 @@ def va(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
-        baca.multistage_glissando(o.pleaves(), "C#4")
+        baca.glissando(o.pleaves(), "C#4")
         baca.hairpin(
             o.tleaves(),
             "mf>o!",
@@ -847,7 +847,7 @@ def cb1(cache):
     name = "cb1"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.multistage_glissando(o, "E1", left_broken=True)
+        baca.glissando(o, "E1", left_broken=True)
         baca.hairpin(
             [o],
             ">o",
@@ -894,7 +894,7 @@ def cb1(cache):
             baca.override.note_head_style_harmonic(run)
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(o, "E1")
+        baca.glissando(o, "E1")
         baca.hairpin(
             o,
             "mf>p",
@@ -943,7 +943,7 @@ def cb2(m):
             staff_padding=3,
         )
     with baca.scope(m[6]) as o:
-        baca.multistage_glissando(o, "E1")
+        baca.glissando(o, "E1")
         baca.hairpin(
             o,
             "p<f",

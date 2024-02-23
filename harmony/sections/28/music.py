@@ -234,7 +234,7 @@ def bfl(m):
             )
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A4")
-        baca.multistage_glissando(
+        baca.glissando(
             m[7, 9],
             hide_middle_stems=True,
             rleak=True,
@@ -256,7 +256,7 @@ def bfl(m):
 def perc1(m):
     with baca.scope(m.get(1, 4)) as o:
         library.triangle_staff_position(o)
-        baca.multistage_glissando(o.pleaves(), hide_middle_stems=True)
+        baca.glissando(o.pleaves(), hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
@@ -281,7 +281,7 @@ def perc1(m):
         )
     with baca.scope(m.get(7, 10)) as o:
         library.triangle_staff_position(o)
-        baca.multistage_glissando(
+        baca.glissando(
             m[7, 9],
             hide_middle_stems=True,
             rleak=True,
@@ -366,7 +366,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(7, 10)) as o:
-        baca.multistage_glissando(o, hide_middle_stems=True)
+        baca.glissando(o, hide_middle_stems=True)
         baca.dynamic(
             o.phead(0),
             "mp-sempre",
@@ -391,7 +391,7 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o,
             "Gqf3",
             hide_middle_stems=True,
@@ -411,7 +411,7 @@ def va(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(7, 10)) as o:
-        baca.multistage_glissando(o, "E3", hide_middle_stems=True)
+        baca.glissando(o, "E3", hide_middle_stems=True)
         baca.dynamic(
             o.phead(0),
             "p-sempre",
@@ -623,7 +623,7 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.pitch(o, "A1")
-        baca.multistage_glissando(
+        baca.glissando(
             o.leaves()[:-1],
             hide_middle_stems=True,
         )
@@ -668,7 +668,7 @@ def cb2(cache):
         baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m.get(7, 10)) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.multistage_glissando(
+        baca.glissando(
             o.rleaves(),
             "A1",
             allow_hidden=True,

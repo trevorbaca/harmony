@@ -439,7 +439,7 @@ def perc1(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         library.brake_drum_staff_position(o)
-        baca.multistage_glissando(o)
+        baca.glissando(o)
         baca.dynamic(o.phead(0), '"f"')
         baca.markup(
             o.pleaf(0),
@@ -633,7 +633,7 @@ def va(cache):
             baca.stem_tremolo(u)
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m[9]) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.rleaves(),
             "Gqf3",
             allow_hidden=True,

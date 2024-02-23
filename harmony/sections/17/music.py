@@ -466,7 +466,7 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.multistage_glissando(o, "D4", hide_middle_stems=True, left_broken=True)
+        baca.glissando(o, "D4", hide_middle_stems=True, left_broken=True)
         baca.mspanners.bow_speed(
             o,
             "poco scr. =|",

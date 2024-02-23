@@ -209,7 +209,7 @@ def perc2(m):
             r"\baca-bd-sponge-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.multistage_glissando(
+        baca.glissando(
             baca.select.rleak(o.pleaves()[-1:]),
             right_broken=True,
         )
@@ -245,7 +245,7 @@ def hp(cache):
 
 def va(m):
     with baca.scope(m[1]) as o:
-        baca.multistage_glissando(o.pleaves(), "C#4")
+        baca.glissando(o.pleaves(), "C#4")
         baca.hairpin(
             o.tleaves(),
             "mf>o!",

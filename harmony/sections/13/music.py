@@ -420,7 +420,7 @@ def perc2(cache):
         )
         with baca.scope(o.plt(0)) as u:
             library.bass_drum_staff_position(u)
-            baca.multistage_glissando(u)
+            baca.glissando(u)
         baca.stem_tremolo(baca.select.plt(o, 0))
         with baca.scope(o.pleaf(-1)) as u:
             library.brake_drum_staff_position(u)

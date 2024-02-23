@@ -504,7 +504,7 @@ def perc2(m):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 4)) as o:
         library.tam_tam_staff_position(o)
-        baca.multistage_glissando(o, "C4", hide_middle_stems=True)
+        baca.glissando(o, "C4", hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(baca.select.pleaves(o), [0, -1]))
     with baca.scope(m[5]) as o:
         baca.dynamic(o.phead(0), "mf")
@@ -538,7 +538,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(0), 1)
         baca.override.tuplet_bracket_up(o)
         library.tam_tam_staff_position(o)
-        baca.multistage_glissando(o, "C4", hide_middle_stems=True)
+        baca.glissando(o, "C4", hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.hairpin(
             o,
@@ -803,7 +803,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.override.tuplet_bracket_down(o)
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "G2 F2",
         )
@@ -850,7 +850,7 @@ def vc2(cache):
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "G2 F2",
         )
@@ -989,7 +989,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "G2 F#2",
         )
@@ -1046,7 +1046,7 @@ def cb2(cache):
                 staff_padding=3 + 1,
             )
     with baca.scope(m[7]) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             "G2 F#2",
         )
