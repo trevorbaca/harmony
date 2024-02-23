@@ -584,7 +584,10 @@ def vc1(m):
             o,
             [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
         )
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+        )
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
 
@@ -631,11 +634,16 @@ def vc2(m):
     with baca.scope(m.get(4, 5)) as o:
         # TODO: promote into rhythm
         baca.untie(o.pleaves())
-        baca.staff_positions(
+#        baca.staff_positions(
+#            o,
+#            [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
+#        )
+        baca.glissando(
             o,
-            [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
+            "2 -3 0 -2 4 -2 1 -1 5 -1 2 0 6 0 4 2 3 8",
+            # do_not_hide_middle_note_heads=True,
+            staff_position=True,
         )
-        baca.basic_glissando(o.tleaves())
         baca.override.dls_staff_padding(o, 5.5)
 
 
