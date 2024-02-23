@@ -709,7 +709,10 @@ def va(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(o, "D4 Eb4")
         for run in baca.select.runs(o):
-            baca.basic_glissando(run)
+            baca.glissando(
+                run,
+                do_not_hide_middle_note_heads=True,
+            )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
 
@@ -926,7 +929,10 @@ def cb1(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(o, "E3 D#3")
         for run in baca.select.runs(o):
-            baca.basic_glissando(run)
+            baca.glissando(
+                run,
+                do_not_hide_middle_note_heads=True,
+            )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
 
@@ -978,7 +984,10 @@ def cb2(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(o, "C#3 D3")
         for run in baca.select.runs(o):
-            baca.basic_glissando(run)
+            baca.glissando(
+                run,
+                do_not_hide_middle_note_heads=True,
+            )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
 

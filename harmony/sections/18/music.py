@@ -763,7 +763,10 @@ def va(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.pitches(o, "D4 Eb4")
         for run in baca.select.runs(o):
-            baca.basic_glissando(run)
+            baca.glissando(
+                run,
+                do_not_hide_middle_note_heads=True,
+            )
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
@@ -970,7 +973,10 @@ def cb1(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "E3 D#3")
         for run in baca.select.runs(o):
-            baca.basic_glissando(run)
+            baca.glissando(
+                run,
+                do_not_hide_middle_note_heads=True,
+            )
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
@@ -1086,7 +1092,10 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitches(o, "C#3 D3")
         for run in baca.select.runs(o):
-            baca.basic_glissando(run)
+            baca.glissando(
+                run,
+                do_not_hide_middle_note_heads=True,
+            )
         baca.dynamic(o.phead(0), "ppp")
         pheads = [
             _
