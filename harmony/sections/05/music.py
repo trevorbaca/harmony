@@ -578,15 +578,10 @@ def vc1(m):
         )
         baca.override.dls_staff_padding(o.leaves()[4:-1], 4)
     with baca.scope(m.get(4, 5)) as o:
-        # TODO: promote into rhythm
-        baca.untie(o.pleaves())
-        baca.staff_positions(
-            o,
-            [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
-        )
         baca.glissando(
             o,
-            do_not_hide_middle_note_heads=True,
+            "2 3 -3 0 -2 4 -2 1 -1 5 -1 2 0 6 0 4 2 8",
+            staff_position=True,
         )
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
@@ -632,16 +627,9 @@ def vc2(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(4, 5)) as o:
-        # TODO: promote into rhythm
-        baca.untie(o.pleaves())
-#        baca.staff_positions(
-#            o,
-#            [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
-#        )
         baca.glissando(
             o,
             "2 -3 0 -2 4 -2 1 -1 5 -1 2 0 6 0 4 2 3 8",
-            # do_not_hide_middle_note_heads=True,
             staff_position=True,
         )
         baca.override.dls_staff_padding(o, 5.5)
@@ -697,13 +685,11 @@ def cb1(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
-        # TODO: promote into rhythm
-        baca.untie(o.pleaves())
-        baca.staff_positions(
-            o,
-            [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
+        baca.glissando(
+            o.tleaves(),
+            "9 3 6 0 2 1 4 -2 0 -1 2 -4 -2 -3 0 -5 -4 -6",
+            staff_position=True,
         )
-        baca.basic_glissando(o.tleaves())
         baca.override.dls_staff_padding(baca.select.lleak(o.leaves()), 5.5)
 
 
@@ -758,13 +744,11 @@ def cb2(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
-        # TODO: promote into rhythm
-        baca.untie(o.pleaves())
-        baca.staff_positions(
+        baca.glissando(
             o,
-            [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
+            "9 3 6 0 2 1 4 -2 0 -1 2 -4 -2 -3 0 -5 -4 -6",
+            staff_position=True,
         )
-        baca.basic_glissando(o.tleaves())
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
 
