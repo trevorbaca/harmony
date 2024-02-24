@@ -343,7 +343,7 @@ def perc1(cache):
         baca.dynamic(o.rest(1), "f")
         baca.markup(
             o.leaf(0, grace=False),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[3]) as o:
@@ -362,7 +362,7 @@ def perc1(cache):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[5]) as o:
@@ -374,7 +374,7 @@ def perc1(cache):
             )
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-superball-markup",
+            r"\baca-boxed-bd-superball-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -398,7 +398,7 @@ def perc2(cache):
         baca.dynamic(o.rest(1), "f")
         baca.markup(
             o.leaf(0, grace=False),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[3]) as o:
@@ -415,7 +415,7 @@ def perc2(cache):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-fingertips-markup",
+            r"\baca-boxed-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         with baca.scope(o.plt(0)) as u:
@@ -427,7 +427,7 @@ def perc2(cache):
             baca.dynamic(u, "f")
             baca.markup(
                 u,
-                r"\baca-brake-drum-markup",
+                r"\baca-boxed-brake-drum-markup",
                 abjad.Tweak(r"- \tweak self-alignment-X 0.5"),
                 abjad.Tweak(r"- \tweak staff-padding 6"),
             )

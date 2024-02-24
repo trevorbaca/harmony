@@ -862,7 +862,7 @@ number.3.Percussion.1.Music = {
     \mf
     - \tweak self-alignment-X 1
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 
@@ -1086,7 +1086,7 @@ number.3.Percussion.2.Music = {
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 5
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -1198,7 +1198,7 @@ number.3.Percussion.2.Music = {
     \mf
     - \tweak self-alignment-X 1
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.2.Music measure 5]
@@ -1232,7 +1232,7 @@ number.3.Percussion.2.Music = {
     \f
     - \tweak self-alignment-X 0.25
     - \tweak staff-padding 6
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START

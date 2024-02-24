@@ -1669,7 +1669,7 @@ number.2.Percussion.1.Music = {
     \override TupletBracket.direction = #up
     b8
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -1818,7 +1818,7 @@ number.2.Percussion.1.Music = {
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 6
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2097,7 +2097,7 @@ number.2.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-p-ancora
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
     \glissando
@@ -2158,7 +2158,7 @@ number.2.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \mf
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -2243,7 +2243,7 @@ number.2.Percussion.2.Music = {
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 3
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2296,7 +2296,7 @@ number.2.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \p
         - \tweak staff-padding 6
-        ^ \baca-tam-tam-markup
+        ^ \baca-boxed-tam-tam-markup
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START

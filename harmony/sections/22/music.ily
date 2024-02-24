@@ -1557,7 +1557,7 @@ number.22.Percussion.1.Music = {
     d'4 * 1/2
     :32
     - \tweak staff-padding 7
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -1610,7 +1610,7 @@ number.22.Percussion.1.Music = {
       %! REDUNDANT_DYNAMIC
     \pp
     - \tweak staff-padding 7
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
     - \tweak stencil ##f
     ~
 
@@ -1652,7 +1652,7 @@ number.22.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-pp-ancora
     - \tweak staff-padding 7
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
     \glissando
 
     % [Percussion.1.Music measure 6]
@@ -1731,7 +1731,7 @@ number.22.Percussion.1.Music = {
           %! REDUNDANT_DYNAMIC
         \baca-pp-ancora
         - \tweak staff-padding 7
-        ^ \baca-slate-scrape-markup
+        ^ \baca-boxed-slate-scrape-markup
         - \tweak stencil ##f
         ~
 
@@ -1826,7 +1826,7 @@ number.22.Percussion.2.Music = {
     \baca-p-ancora
     \laissezVibrer
     - \tweak staff-padding 8
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
 
     r4
     \revert TupletBracket.direction
@@ -1847,7 +1847,7 @@ number.22.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         - \tweak staff-padding 8
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r8.
 
@@ -1884,7 +1884,7 @@ number.22.Percussion.2.Music = {
     \baca-p-sempre
     \laissezVibrer
     - \tweak staff-padding 8
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
 
     r2
 
@@ -1952,7 +1952,7 @@ number.22.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         - \tweak staff-padding 8
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r8.
 

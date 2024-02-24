@@ -605,7 +605,7 @@ number.17.Percussion.1.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(2 . 0)
@@ -661,7 +661,7 @@ number.17.Percussion.1.Music = {
     \f
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -784,7 +784,7 @@ number.17.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
 
     % [Percussion.1.Music measure 5]
       %! EXPLICIT_CLEF
@@ -825,7 +825,7 @@ number.17.Percussion.1.Music = {
     \f
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.1.Music measure 6]
@@ -859,7 +859,7 @@ number.17.Percussion.2.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(2 . 0)
@@ -909,7 +909,7 @@ number.17.Percussion.2.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1010,7 +1010,7 @@ number.17.Percussion.2.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 

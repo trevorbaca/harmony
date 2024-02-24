@@ -1139,7 +1139,7 @@ number.14.Percussion.1.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
 }
 
@@ -1198,7 +1198,7 @@ number.14.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-f-ancora
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1248,7 +1248,7 @@ number.14.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
 
     d'4
 
@@ -1367,7 +1367,7 @@ number.14.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-f-ancora
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -1418,7 +1418,7 @@ number.14.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-paper-towel-markup
+    ^ \baca-boxed-brake-drum-paper-towel-markup
     \revert DynamicLineSpanner.staff-padding
 
 }
@@ -1442,7 +1442,7 @@ number.14.Percussion.2.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
 }
 
@@ -1523,7 +1523,7 @@ number.14.Percussion.2.Music = {
         \baca-effort-ff
         - \tweak self-alignment-X 0.75
         - \tweak staff-padding 6
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r16
 
@@ -1682,7 +1682,7 @@ number.14.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \baca-effort-ff
         - \tweak staff-padding 6
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r8.
 
@@ -1874,7 +1874,7 @@ number.14.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-pp-ancora
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     \revert DynamicLineSpanner.staff-padding
 
 }

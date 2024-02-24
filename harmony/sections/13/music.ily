@@ -751,7 +751,7 @@ number.13.Percussion.1.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
 }
 
@@ -977,7 +977,7 @@ number.13.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-p-ancora
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -987,7 +987,7 @@ number.13.Percussion.1.Music = {
     \override TupletBracket.direction = #up
     b4 * 3/4
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! EXPLICIT_DYNAMIC
@@ -1053,7 +1053,7 @@ number.13.Percussion.2.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
 }
 
@@ -1277,7 +1277,7 @@ number.13.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-p-ancora
     - \tweak staff-padding 6
-    ^ \baca-bd-fingertips-markup
+    ^ \baca-boxed-bd-fingertips-markup
     \glissando
 
     b4
@@ -1295,7 +1295,7 @@ number.13.Percussion.2.Music = {
     \f
     - \tweak self-alignment-X 0.5
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook

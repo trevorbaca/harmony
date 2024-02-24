@@ -1229,7 +1229,7 @@ number.19.Percussion.1.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
@@ -1254,7 +1254,7 @@ number.19.Percussion.1.Music.item.2 = {
       %! EXPLICIT_DYNAMIC
     \baca-ff-sempre
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
@@ -1340,7 +1340,7 @@ number.19.Percussion.1.Music.item.8 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     r4
     \revert DynamicLineSpanner.staff-padding
@@ -1462,7 +1462,7 @@ number.19.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-then-superball-markup
+    ^ \baca-boxed-bd-struck-then-superball-markup
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -1906,7 +1906,7 @@ number.19.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
     - \tweak stencil ##f
     ~
 
@@ -2093,7 +2093,7 @@ number.19.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
     - \tweak stencil ##f
     ~
       %! -PARTS
@@ -2169,7 +2169,7 @@ number.19.Percussion.2.Music.item.2 = {
       %! EXPLICIT_DYNAMIC
     \baca-ff-sempre
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
@@ -2255,7 +2255,7 @@ number.19.Percussion.2.Music.item.8 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     r4
     \revert DynamicLineSpanner.staff-padding
@@ -2393,7 +2393,7 @@ number.19.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     c'8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2794,7 +2794,7 @@ number.19.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         - \tweak staff-padding 6
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r8.
 
@@ -2979,7 +2979,7 @@ number.19.Percussion.2.Music = {
         \mp
         \laissezVibrer
         - \tweak staff-padding 6
-        ^ \baca-bd-struck-markup
+        ^ \baca-boxed-bd-struck-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook

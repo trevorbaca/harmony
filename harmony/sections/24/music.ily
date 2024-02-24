@@ -1853,7 +1853,7 @@ number.24.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
     - \tweak stencil ##f
@@ -1932,7 +1932,7 @@ number.24.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-pp-ancora
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
 
     % [Percussion.1.Music measure 5]
     \override Stem.direction = #down
@@ -1946,7 +1946,7 @@ number.24.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-p-sempre
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
 
     r16
 
@@ -2099,7 +2099,7 @@ number.24.Percussion.2.Music = {
     \startStaff
     b8
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! EXPLICIT_DYNAMIC
@@ -2295,7 +2295,7 @@ number.24.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     r8.
 
@@ -2329,7 +2329,7 @@ number.24.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     \glissando
 
     % [Percussion.2.Music measure 8]
@@ -2376,7 +2376,7 @@ number.24.Percussion.2.Music = {
         \ff
         - \tweak self-alignment-X 1
         - \tweak staff-padding 5
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook

@@ -1223,7 +1223,7 @@ number.28.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
@@ -1330,7 +1330,7 @@ number.28.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-f-sempre
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     r8.
 
@@ -1363,7 +1363,7 @@ number.28.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"7"
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1964,7 +1964,7 @@ number.28.Percussion.2.Music = {
     \p
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2024,7 +2024,7 @@ number.28.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 6
-    ^ \baca-slate-brush-markup
+    ^ \baca-boxed-slate-brush-markup
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2099,7 +2099,7 @@ number.28.Percussion.2.Music = {
     \laissezVibrer
     - \tweak self-alignment-X 0.25
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
 
     % [Percussion.2.Music measure 8]
     r2.

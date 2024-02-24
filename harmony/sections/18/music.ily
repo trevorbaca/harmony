@@ -797,7 +797,7 @@ number.18.Percussion.1.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(2 . 0)
@@ -847,7 +847,7 @@ number.18.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-then-superball-markup
+    ^ \baca-boxed-bd-struck-then-superball-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1012,7 +1012,7 @@ number.18.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-paper-towel-markup
+    ^ \baca-boxed-brake-drum-paper-towel-markup
     \glissando
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -1074,7 +1074,7 @@ number.18.Percussion.1.Music = {
     \f
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -1121,7 +1121,7 @@ number.18.Percussion.1.Music = {
     b8
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1252,7 +1252,7 @@ number.18.Percussion.2.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(2 . 0)
@@ -1300,7 +1300,7 @@ number.18.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1421,7 +1421,7 @@ number.18.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     - \tweak stencil ##f
     ~
 
@@ -1472,7 +1472,7 @@ number.18.Percussion.2.Music = {
     \f
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     r8
 
@@ -1516,7 +1516,7 @@ number.18.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \ff
         - \tweak staff-padding 6
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook

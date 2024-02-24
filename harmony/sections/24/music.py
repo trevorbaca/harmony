@@ -240,7 +240,7 @@ def perc1(m):
         baca.dynamic(o.phead(0), "mp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[4]) as o:
@@ -253,7 +253,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -265,7 +265,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 9)) as o:
@@ -284,7 +284,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-superball-markup",
+            r"\baca-boxed-bd-superball-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[5]) as o:
@@ -294,7 +294,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m.get(7, 9)) as o:
@@ -308,7 +308,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o.leaves()[:-2], 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-tam-tam-markup",
+            r"\baca-boxed-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         with baca.scope(o.pleaf(-1)) as u:
@@ -317,7 +317,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(-2), 3)
         baca.markup(
             o.leaf(-1),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )

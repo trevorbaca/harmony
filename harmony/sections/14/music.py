@@ -463,7 +463,7 @@ def perc1(cache):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-brake-drum-markup",
+            r"\baca-boxed-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[4]) as o:
@@ -471,7 +471,7 @@ def perc1(cache):
         baca.dynamic(o.phead(0), '"f"')
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 4)) as o:
@@ -490,7 +490,7 @@ def perc1(cache):
         baca.dynamic(o.rest(1), "f")
         baca.markup(
             o.leaf(0, grace=False),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[6]) as o:
@@ -503,7 +503,7 @@ def perc1(cache):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-brake-drum-markup",
+            r"\baca-boxed-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[9]) as o:
@@ -513,7 +513,7 @@ def perc1(cache):
         baca.dynamic(o.phead(0), "p")
         baca.markup(
             o.pleaf(0),
-            r"\baca-brake-drum-paper-towel-markup",
+            r"\baca-boxed-brake-drum-paper-towel-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(6, 11)) as o:
@@ -530,7 +530,7 @@ def perc2(cache):
         baca.dynamic(o.pheads(), '"ff"')
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
@@ -550,7 +550,7 @@ def perc2(cache):
         baca.dynamic(o.rest(1), "f")
         baca.markup(
             o.leaf(0, grace=False),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m.get(6, 9)) as o:
@@ -569,7 +569,7 @@ def perc2(cache):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[11]) as o:
@@ -582,7 +582,7 @@ def perc2(cache):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-tam-tam-markup",
+            r"\baca-boxed-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(6, 11)) as o:

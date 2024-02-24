@@ -835,7 +835,7 @@ number.23.Percussion.1.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
     \revert TupletBracket.direction
 
     % [Percussion.1.Music measure 2]
@@ -899,7 +899,7 @@ number.23.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     - \tweak staff-padding 7
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
 
     % [Percussion.1.Music measure 8]
     \override TupletBracket.direction = #up
@@ -921,7 +921,7 @@ number.23.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \baca-pp-ancora
         - \tweak staff-padding 7
-        ^ \baca-slate-scrape-markup
+        ^ \baca-boxed-slate-scrape-markup
         - \tweak stencil ##f
         ~
 
@@ -1057,7 +1057,7 @@ number.23.Percussion.2.Music = {
     \baca-pp-ancora
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -1100,7 +1100,7 @@ number.23.Percussion.2.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 8
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -1125,7 +1125,7 @@ number.23.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         - \tweak staff-padding 8
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r16
 

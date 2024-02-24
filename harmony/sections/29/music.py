@@ -147,7 +147,7 @@ def perc1(m):
             baca.damp(u)
         baca.markup(
             o.pleaf(0),
-            r"\baca-brake-drum-markup",
+            r"\baca-boxed-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 2)) as o:

@@ -1332,7 +1332,7 @@ number.27.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
     - \tweak stencil ##f
     ~
 
@@ -1367,7 +1367,7 @@ number.27.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-paper-towel-markup
+    ^ \baca-boxed-brake-drum-paper-towel-markup
     \glissando
 
     % [Percussion.1.Music measure 5]
@@ -1393,7 +1393,7 @@ number.27.Percussion.1.Music = {
         \f
         - \tweak self-alignment-X 0
         - \tweak staff-padding 6
-        ^ \baca-brake-drum-markup
+        ^ \baca-boxed-brake-drum-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -1453,7 +1453,7 @@ number.27.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-paper-towel-markup
+    ^ \baca-boxed-brake-drum-paper-towel-markup
     \revert DynamicLineSpanner.staff-padding
 
 }
@@ -1567,7 +1567,7 @@ number.27.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \p
         - \tweak staff-padding 6
-        ^ \baca-tam-tam-markup
+        ^ \baca-boxed-tam-tam-markup
         \revert DynamicLineSpanner.staff-padding
 
     }
@@ -1589,7 +1589,7 @@ number.27.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     r8
 
@@ -1632,7 +1632,7 @@ number.27.Percussion.2.Music = {
         \f
         - \tweak self-alignment-X 0
         - \tweak staff-padding 6
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -1674,7 +1674,7 @@ number.27.Percussion.2.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
 
     r8.
 

@@ -187,7 +187,7 @@ def perc1(m):
         baca.dynamic(o.phead(0), '"f"')
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[2]) as o:
@@ -206,7 +206,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "mp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-sponge-markup",
+            r"\baca-boxed-bd-sponge-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         baca.glissando(
@@ -217,7 +217,7 @@ def perc2(m):
         baca.dynamic(o.pleaf(-1), "p")
         baca.markup(
             o.pleaf(-1),
-            r"\baca-bd-fingertips-markup",
+            r"\baca-boxed-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )

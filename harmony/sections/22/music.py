@@ -381,7 +381,7 @@ def perc1(m):
             )
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
         )
     with baca.scope(m[4]) as o:
@@ -389,7 +389,7 @@ def perc1(m):
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -403,7 +403,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
         )
     with baca.scope(m[12]) as o:
@@ -423,7 +423,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
         )
     with baca.scope(m.get(1, 13)) as o:
@@ -438,7 +438,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "p-ancora")
         baca.markup(
             o.pleaf(0),
-            r"\baca-tam-tam-markup",
+            r"\baca-boxed-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m[4]) as o:
@@ -448,7 +448,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -462,7 +462,7 @@ def perc2(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-tam-tam-markup",
+            r"\baca-boxed-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m[13]) as o:
@@ -472,7 +472,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(1, 13)) as o:

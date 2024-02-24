@@ -967,7 +967,7 @@ number.7.Percussion.1.Music = {
     \mp
     - \tweak self-alignment-X 0.75
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.1.Music measure 2]
@@ -988,7 +988,7 @@ number.7.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -1029,7 +1029,7 @@ number.7.Percussion.1.Music = {
     \f
     - \tweak self-alignment-X -0.75
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     r8.
 
@@ -1077,7 +1077,7 @@ number.7.Percussion.1.Music = {
     \mf
     - \tweak self-alignment-X 1
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
     \revert TupletBracket.direction
 
     % [Percussion.1.Music measure 7]
@@ -1094,7 +1094,7 @@ number.7.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-brush-markup
+    ^ \baca-boxed-slate-brush-markup
 
     r8
 
@@ -1148,7 +1148,7 @@ number.7.Percussion.1.Music = {
     \f
     - \tweak self-alignment-X -0.75
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
     r8.
 
@@ -1218,7 +1218,7 @@ number.7.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     \glissando
 
     % [Percussion.2.Music measure 2]
@@ -1285,7 +1285,7 @@ number.7.Percussion.2.Music = {
     \mf
     - \tweak self-alignment-X 1
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     % [Percussion.2.Music measure 7]
     R1 * 6/4
@@ -1303,7 +1303,7 @@ number.7.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     \glissando
     \revert DynamicLineSpanner.staff-padding
 

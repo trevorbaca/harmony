@@ -264,7 +264,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[5]) as o:
@@ -276,7 +276,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-brake-drum-markup",
+            r"\baca-boxed-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(7, 10)) as o:
@@ -295,7 +295,7 @@ def perc1(m):
         baca.dynamic(o.rleaf(-1), "p")
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 10)) as o:
@@ -312,7 +312,7 @@ def perc2(m):
         baca.laissez_vibrer(o.ptails())
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m[5]) as o:
@@ -330,7 +330,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(7, 10)) as o:
@@ -346,7 +346,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
