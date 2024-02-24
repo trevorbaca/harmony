@@ -1165,7 +1165,7 @@ number.26.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-ff
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1304,7 +1304,7 @@ number.26.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     r8.
 
@@ -1323,7 +1323,7 @@ number.26.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \baca-effort-ff
         - \tweak staff-padding 6
-        ^ \baca-slate-scrape-markup
+        ^ \baca-boxed-slate-scrape-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -1424,7 +1424,7 @@ number.26.Percussion.2.Music = {
         \mp
         \laissezVibrer
         - \tweak staff-padding 6
-        ^ \baca-bd-struck-markup
+        ^ \baca-boxed-bd-struck-markup
 
         r8.
         \revert TupletBracket.direction
@@ -1470,7 +1470,7 @@ number.26.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -1497,7 +1497,7 @@ number.26.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 6
-    ^ \baca-slate-brush-markup
+    ^ \baca-boxed-slate-brush-markup
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1548,7 +1548,7 @@ number.26.Percussion.2.Music = {
         \ff
         - \tweak self-alignment-X 1
         - \tweak staff-padding 5
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook

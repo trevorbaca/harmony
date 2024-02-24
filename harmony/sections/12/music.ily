@@ -1629,7 +1629,7 @@ number.12.Percussion.1.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
 }
 
@@ -1693,7 +1693,7 @@ number.12.Percussion.1.Music = {
     \mf
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1843,7 +1843,7 @@ number.12.Percussion.1.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -1963,7 +1963,7 @@ number.12.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     r8
 
@@ -1998,7 +1998,7 @@ number.12.Percussion.1.Music = {
     \override TupletBracket.direction = #up
     b4 * 3/4
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! EXPLICIT_DYNAMIC
@@ -2096,7 +2096,7 @@ number.12.Percussion.2.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
 
 }
 
@@ -2153,7 +2153,7 @@ number.12.Percussion.2.Music = {
     \pp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2272,7 +2272,7 @@ number.12.Percussion.2.Music = {
     \baca-pp-sempre
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4
@@ -2340,7 +2340,7 @@ number.12.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-bd-fingertips-markup
+    ^ \baca-boxed-bd-fingertips-markup
     \glissando
 
     % [Percussion.2.Music measure 11]
@@ -2374,7 +2374,7 @@ number.12.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
     - \tweak stencil ##f
     ~
 

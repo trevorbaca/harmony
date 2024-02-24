@@ -689,7 +689,7 @@ number.16.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-p-sempre
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-paper-towel-markup
+    ^ \baca-boxed-brake-drum-paper-towel-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
     \glissando
@@ -763,7 +763,7 @@ number.16.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
 
     % [Percussion.1.Music measure 9]
     \override Stem.direction = #up
@@ -774,7 +774,7 @@ number.16.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-paper-towel-markup
+    ^ \baca-boxed-brake-drum-paper-towel-markup
     \glissando
 
     % [Percussion.1.Music measure 10]
@@ -846,7 +846,7 @@ number.16.Percussion.2.Music = {
       %! REDUNDANT_DYNAMIC
     \pp
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
     - \tweak stencil ##f

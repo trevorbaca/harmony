@@ -326,7 +326,7 @@ def perc1(m):
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[3]) as o:
@@ -338,7 +338,7 @@ def perc1(m):
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m[4]) as o:
@@ -352,7 +352,7 @@ def perc1(m):
             )
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-superball-markup",
+            r"\baca-boxed-bd-superball-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -371,7 +371,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(4, 10)) as o:
@@ -384,7 +384,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "f")
         baca.markup(
             o.pleaf(0),
-            r"\baca-brake-drum-markup",
+            r"\baca-boxed-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 4)) as o:
@@ -395,7 +395,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m.get(6, 7)) as o:

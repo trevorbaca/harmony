@@ -446,7 +446,7 @@ def perc1(m):
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[3]) as o:
@@ -459,7 +459,7 @@ def perc1(m):
         )
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-brush-markup",
+            r"\baca-boxed-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[7]) as o:
@@ -482,7 +482,7 @@ def perc1(m):
         baca.dynamic(o.phead(0), "p")
         baca.markup(
             o.pleaf(0),
-            r"\baca-triangle-markup",
+            r"\baca-boxed-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(14)) as o:

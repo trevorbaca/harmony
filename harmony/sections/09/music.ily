@@ -384,7 +384,7 @@ number.9.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-brush-markup
+    ^ \baca-boxed-slate-brush-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -518,7 +518,7 @@ number.9.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 6
-    ^ \baca-bd-sponge-markup
+    ^ \baca-boxed-bd-sponge-markup
 
     r16
 
@@ -547,7 +547,7 @@ number.9.Percussion.2.Music = {
     \p
     - \tweak self-alignment-X 0.25
     - \tweak staff-padding 6
-    ^ \baca-bd-fingertips-markup
+    ^ \baca-boxed-bd-fingertips-markup
     \glissando
     \revert DynamicLineSpanner.staff-padding
 

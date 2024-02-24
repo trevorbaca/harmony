@@ -1387,7 +1387,7 @@ number.10.Percussion.1.Music = {
     d'4 * 1/2
     :32
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -1445,7 +1445,7 @@ number.10.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-brush-markup
+    ^ \baca-boxed-slate-brush-markup
 
     r8
 
@@ -1629,7 +1629,7 @@ number.10.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
     \glissando
 
     % [Percussion.1.Music measure 11]

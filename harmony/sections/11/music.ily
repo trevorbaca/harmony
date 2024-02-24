@@ -1058,7 +1058,7 @@ number.11.Percussion.1.Music = {
     \mf
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1104,7 +1104,7 @@ number.11.Percussion.1.Music = {
     d'4 * 1/2
     :32
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -1292,7 +1292,7 @@ number.11.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-brush-markup
+    ^ \baca-boxed-slate-brush-markup
 
     r8
 
@@ -1329,7 +1329,7 @@ number.11.Percussion.1.Music = {
     \override TupletBracket.direction = #up
     b4 * 3/4
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! EXPLICIT_DYNAMIC
@@ -1420,7 +1420,7 @@ number.11.Percussion.1.Music = {
     d'4 * 1/2
     :32
     - \tweak staff-padding 6
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -1687,7 +1687,7 @@ number.11.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     - \tweak stencil ##f
     ~
 
@@ -1763,7 +1763,7 @@ number.11.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -1804,7 +1804,7 @@ number.11.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-effort-f
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
@@ -1841,7 +1841,7 @@ number.11.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 5.5
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     - \tweak stencil ##f
     ~
 

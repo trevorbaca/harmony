@@ -693,7 +693,7 @@ number.21.Percussion.1.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -739,7 +739,7 @@ number.21.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \p
         - \tweak staff-padding 5
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
 
         a16
@@ -809,7 +809,7 @@ number.21.Percussion.1.Music = {
     \mp
     \laissezVibrer
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/3
@@ -825,7 +825,7 @@ number.21.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \baca-mp-ancora
         - \tweak staff-padding 6
-        ^ \baca-brake-drum-paper-towel-markup
+        ^ \baca-boxed-brake-drum-paper-towel-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -913,7 +913,7 @@ number.21.Percussion.2.Music = {
     \pp
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -958,7 +958,7 @@ number.21.Percussion.2.Music = {
         \mp
         \laissezVibrer
         - \tweak staff-padding 6
-        ^ \baca-bd-struck-markup
+        ^ \baca-boxed-bd-struck-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-dashed-line-with-hook
@@ -1036,7 +1036,7 @@ number.21.Percussion.2.Music = {
     \pp
     \laissezVibrer
     - \tweak staff-padding 4
-    ^ \baca-glockenspiel-markup
+    ^ \baca-boxed-glockenspiel-markup
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -1080,7 +1080,7 @@ number.21.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-bd-fingertips-markup
+    ^ \baca-boxed-bd-fingertips-markup
     - \tweak stencil ##f
     ~
       %! EXPLICIT_CLEF_REDRAW_COLOR

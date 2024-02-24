@@ -1364,7 +1364,7 @@ number.6.Percussion.1.Music = {
     \mp
     - \tweak self-alignment-X 1
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
 
     % [Percussion.1.Music measure 2]
     \stopStaff
@@ -1401,7 +1401,7 @@ number.6.Percussion.1.Music = {
     \f
     - \tweak self-alignment-X 0.75
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.1.Music measure 4]
@@ -1428,7 +1428,7 @@ number.6.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     - \tweak staff-padding 6
-    ^ \baca-bd-struck-markup
+    ^ \baca-boxed-bd-struck-markup
     ~
 
     b4
@@ -1471,7 +1471,7 @@ number.6.Percussion.1.Music = {
     \f
     - \tweak self-alignment-X 0.75
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.1.Music measure 6]
@@ -1501,7 +1501,7 @@ number.6.Percussion.1.Music = {
     \mf
     - \tweak self-alignment-X 0.75
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 
@@ -1539,7 +1539,7 @@ number.6.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \f
         - \tweak staff-padding 5
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
 
         c'8
@@ -1598,7 +1598,7 @@ number.6.Percussion.1.Music = {
     \startStaff
     b8
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1833,7 +1833,7 @@ number.6.Percussion.2.Music = {
     \mf
     - \tweak self-alignment-X 0.75
     - \tweak staff-padding 6
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     % [Percussion.2.Music measure 7]
     r1
@@ -1861,7 +1861,7 @@ number.6.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     - \tweak staff-padding 5
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
     [
 
     c'16
@@ -1923,7 +1923,7 @@ number.6.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-f-sempre
     - \tweak staff-padding 5
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     r8.
 

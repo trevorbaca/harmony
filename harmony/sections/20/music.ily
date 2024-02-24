@@ -930,7 +930,7 @@ number.20.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \p
         - \tweak staff-padding 6
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
 
         a16
@@ -985,7 +985,7 @@ number.20.Percussion.1.Music = {
     d'4 * 1/2
     :32
     - \tweak staff-padding 7
-    ^ \baca-triangle-markup
+    ^ \baca-boxed-triangle-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
@@ -1040,7 +1040,7 @@ number.20.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-pp-sempre
     - \tweak staff-padding 7
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
     - \tweak stencil ##f
     ~
 
@@ -1347,7 +1347,7 @@ number.20.Percussion.2.Music = {
     \p
     \laissezVibrer
     - \tweak staff-padding 8
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
 
     r4
     \revert TupletBracket.direction
@@ -1371,7 +1371,7 @@ number.20.Percussion.2.Music = {
           %! EXPLICIT_DYNAMIC
         \baca-pp-sempre
         - \tweak staff-padding 8
-        ^ \baca-slate-brush-markup
+        ^ \baca-boxed-slate-brush-markup
 
         r8.
 

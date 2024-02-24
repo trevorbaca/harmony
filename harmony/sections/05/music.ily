@@ -578,7 +578,7 @@ number.5.Percussion.1.Music = {
     \mf
     - \tweak self-alignment-X 1
     - \tweak staff-padding 7
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 
@@ -611,7 +611,7 @@ number.5.Percussion.1.Music = {
           %! EXPLICIT_DYNAMIC
         \p
         - \tweak staff-padding 6
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -777,7 +777,7 @@ number.5.Percussion.1.Music = {
       %! REDUNDANT_DYNAMIC
     \p
     - \tweak staff-padding 8
-    ^ \baca-triangle-small-beater-markup
+    ^ \baca-boxed-triangle-small-beater-markup
     ~
 
     d'1
@@ -953,7 +953,7 @@ number.5.Percussion.2.Music = {
     \mf
     - \tweak self-alignment-X 1
     - \tweak staff-padding 7
-    ^ \baca-brake-drum-markup
+    ^ \baca-boxed-brake-drum-markup
 
     % [Percussion.2.Music measure 2]
       %! EXPLICIT_STAFF_LINES_COLOR
@@ -977,7 +977,7 @@ number.5.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-purpleheart-markup
+    ^ \baca-boxed-purpleheart-markup
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1137,7 +1137,7 @@ number.5.Percussion.2.Music = {
       %! REDUNDANT_DYNAMIC
     \p
     - \tweak staff-padding 6
-    ^ \baca-tam-tam-markup
+    ^ \baca-boxed-tam-tam-markup
     ~
 
     c'1

@@ -321,7 +321,7 @@ def perc1(m):
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-struck-markup",
+            r"\baca-boxed-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[2]) as o:
@@ -331,7 +331,7 @@ def perc1(m):
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[4]) as o:
@@ -342,7 +342,7 @@ def perc1(m):
         baca.dynamic(o.phead(0), "mp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-struck-markup",
+            r"\baca-boxed-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         with baca.scope(o.pleaf(1)) as u:
@@ -350,7 +350,7 @@ def perc1(m):
             baca.dynamic(u, "mp-ancora")
             baca.markup(
                 u,
-                r"\baca-brake-drum-paper-towel-markup",
+                r"\baca-boxed-brake-drum-paper-towel-markup",
                 abjad.Tweak(r"- \tweak staff-padding 6"),
             )
     with baca.scope(m[5]) as o:
@@ -373,7 +373,7 @@ def perc2(m):
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
         baca.override.dls_staff_padding(o.leaves()[:2], 4)
@@ -384,7 +384,7 @@ def perc2(m):
             baca.dynamic(u, "mp")
             baca.markup(
                 u,
-                r"\baca-bd-struck-markup",
+                r"\baca-boxed-bd-struck-markup",
                 abjad.Tweak(r"- \tweak staff-padding 6"),
             )
     with baca.scope(m[2]) as o:
@@ -406,7 +406,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m[5]) as o:
@@ -419,7 +419,7 @@ def perc2(m):
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-bd-fingertips-markup",
+            r"\baca-boxed-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
 

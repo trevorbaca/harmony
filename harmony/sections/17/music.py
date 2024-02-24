@@ -323,7 +323,7 @@ def perc1(cache):
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m[2]) as o:
@@ -337,7 +337,7 @@ def perc1(cache):
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.leaf(2, grace=False),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[4]) as o:
@@ -351,7 +351,7 @@ def perc1(cache):
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-slate-scrape-markup",
+            r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[5]) as o:
@@ -363,7 +363,7 @@ def perc1(cache):
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
-            r"\baca-glockenspiel-markup",
+            r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
 
@@ -379,7 +379,7 @@ def perc2(cache):
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
-            r"\baca-tam-tam-markup",
+            r"\baca-boxed-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[2]) as o:
@@ -392,7 +392,7 @@ def perc2(cache):
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.leaf(2, grace=False),
-            r"\baca-purpleheart-markup",
+            r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
     with baca.scope(m[4]) as o:
@@ -404,7 +404,7 @@ def perc2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.markup(
             o.pleaf(0),
-            r"\baca-tam-tam-markup",
+            r"\baca-boxed-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(4, 5)) as o:

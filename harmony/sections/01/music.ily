@@ -656,7 +656,7 @@ number.1.Percussion.1.Music = {
     b4 * 3/4
     - \tweak self-alignment-X 0.25
     - \tweak staff-padding 6
-    ^ \baca-bd-superball-markup
+    ^ \baca-boxed-bd-superball-markup
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
       %! EXPLICIT_DYNAMIC
@@ -786,7 +786,7 @@ number.1.Percussion.1.Music = {
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 6
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -866,7 +866,7 @@ number.1.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \mf
     - \tweak staff-padding 6
-    ^ \baca-slate-scrape-markup
+    ^ \baca-boxed-slate-scrape-markup
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Percussion”)"
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -953,7 +953,7 @@ number.1.Percussion.2.Music = {
         \f
         - \tweak self-alignment-X 0.25
         - \tweak staff-padding 6
-        ^ \baca-purpleheart-markup
+        ^ \baca-boxed-purpleheart-markup
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
