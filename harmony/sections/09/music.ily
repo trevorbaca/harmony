@@ -1507,7 +1507,7 @@ number.9.Contrabass.2.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
       %! SPANNER_START
     - \tweak staff-padding 6.5
       %! SPANNER_START
