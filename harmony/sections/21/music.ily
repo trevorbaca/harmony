@@ -1575,7 +1575,7 @@ number.21.Viola.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-pizz-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-pizz-markup
           %! SPANNER_START
         - \tweak staff-padding 8
           %! SPANNER_START
