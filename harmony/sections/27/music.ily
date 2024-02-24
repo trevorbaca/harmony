@@ -1237,7 +1237,7 @@ number.27.BassFlute.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \ff
-    ^ \baca-jet-whistle-markup
+    ^ \baca-boxed-jet-whistle-markup
 
     r2
 

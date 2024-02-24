@@ -675,7 +675,7 @@ number.22.BassFlute.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-covered-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -1425,7 +1425,7 @@ number.22.BassFlute.Music = {
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-covered-markup
           %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+        - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
