@@ -424,7 +424,7 @@ number.5.BassFlute.Music = {
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+    - \tweak bound-details.left-broken.text \baca-parenthesized-cov-markup
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -471,7 +471,7 @@ number.5.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
     \ff
     - \tweak staff-padding 4
-    ^ \baca-jet-whistle-markup
+    ^ \baca-boxed-jet-whistle-markup
     [
 
     f'16
@@ -497,7 +497,7 @@ number.5.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
     \baca-ff-ancora
     - \tweak staff-padding 4
-    ^ \baca-jet-whistle-markup
+    ^ \baca-boxed-jet-whistle-markup
 
     e'16
     \revert NoteHead.style

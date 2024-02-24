@@ -423,7 +423,7 @@ def bfl(cache):
         baca.pitch(o, "G3")
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "ff")
-        baca.markup(o.pleaf(0), r"\baca-jet-whistle-markup")
+        baca.markup(o.pleaf(0), r"\baca-boxed-jet-whistle-markup")
     with baca.scope(m.get(1, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
 
