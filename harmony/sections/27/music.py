@@ -676,7 +676,7 @@ def vc1(cache):
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
-            "<A4 B4 C5>",
+            "A4:B4:C5",
         )
         cache.rebuild()
         m = cache[name]
@@ -729,7 +729,7 @@ def vc2(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
-            "<G4 Ab4 Bb4>",
+            "G4:Ab4:Bb4",
         )
         cache.rebuild()
         m = cache[name]
@@ -785,7 +785,7 @@ def cb1(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
-            "<A4 B4 C5>",
+            "A4:B4:C5",
             do_not_transpose=True,
         )
         cache.rebuild()
@@ -857,7 +857,7 @@ def cb2(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
-            "<G4 Ab4 Bb4>",
+            "G4:Ab4:Bb4",
             do_not_transpose=True,
         )
         cache.rebuild()
