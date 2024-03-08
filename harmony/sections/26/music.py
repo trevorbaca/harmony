@@ -689,7 +689,7 @@ def cb1(cache):
         baca.untie(o.leaves())
         baca.pitch(
             abjad.select.get(baca.select.pleaves(o), [0, -1]),
-            "<A4 B4 C5>",
+            "A4:B4:C5",
             do_not_transpose=True,
         )
         cache.rebuild()
@@ -723,7 +723,7 @@ def cb2(cache):
         baca.untie(o.leaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
-            "<G4 Ab4 Bb4>",
+            "G4:Ab4:Bb4",
             do_not_transpose=True,
         )
         cache.rebuild()
