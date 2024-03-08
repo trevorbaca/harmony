@@ -460,7 +460,7 @@ def hp(cache):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
-        baca.pitch(o, "<B2 C3 Db3>")
+        baca.pitch(o, "B2:C3:Db3")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[1]) as o:

@@ -492,11 +492,11 @@ def va(cache):
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
-        baca.pitch(o.leaf(0), "<G4 Ab4 Bb4>")
+        baca.pitch(o.leaf(0), "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(5, 10)) as o:
-        baca.pitch(o.leaf(-1), "<G4 Ab4 Bb4>")
+        baca.pitch(o.leaf(-1), "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(5, 10)) as o:
@@ -510,7 +510,7 @@ def vc1(cache):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<A4 B4 C5>")
+        baca.pitch(o, "A4:B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -548,7 +548,7 @@ def vc2(cache):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<G4 Ab4 Bb4>")
+        baca.pitch(o, "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -588,7 +588,7 @@ def cb1(cache):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<A4 B4 C5>", do_not_transpose=True)
+        baca.pitch(o, "A4:B4:C5", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -627,7 +627,7 @@ def cb2(cache):
         baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<G4 Ab4 Bb4>", do_not_transpose=True)
+        baca.pitch(o, "G4:Ab4:Bb4", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:

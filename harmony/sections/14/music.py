@@ -613,7 +613,7 @@ def hp(cache):
         baca.override.dls_staff_padding(o, 7)
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<B4 C5>")
+        baca.pitch(o, "B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[4]) as o:
@@ -626,7 +626,7 @@ def hp(cache):
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.pitch(o, "<B2 C3 Db3>")
+        baca.pitch(o, "B2:C3:Db3")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[5]) as o:

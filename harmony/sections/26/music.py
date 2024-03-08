@@ -524,7 +524,7 @@ def hp(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<C#5 D5>")
+        baca.pitch(o, "C#5:D5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
@@ -536,7 +536,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak padding 1.5"),
         )
     with baca.scope(m.get(5, 6)) as o:
-        baca.pitch(o, "<C#5 D5>")
+        baca.pitch(o, "C#5:D5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(5, 6)) as o:
@@ -571,7 +571,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
     with baca.scope(m[10]) as o:
-        baca.pitch(o, "<C#5 D5>")
+        baca.pitch(o, "C#5:D5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[10]) as o:
@@ -604,7 +604,7 @@ def va(cache):
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
-        baca.pitch(o, "<G4 Ab4 Bb4>")
+        baca.pitch(o, "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[9]) as o:
@@ -631,7 +631,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         baca.untie(o.leaves())
-        baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "<A4 B4 C5>")
+        baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "A4:B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[9]) as o:
@@ -656,7 +656,7 @@ def vc2(cache):
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.untie(o.leaves())
-        baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "<G4 Ab4 Bb4>")
+        baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[9]) as o:

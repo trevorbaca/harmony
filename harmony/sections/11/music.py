@@ -426,7 +426,7 @@ def bfl(cache):
     name = "bfl"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.pitch(o, "<Eb3 Eb4 Bb4>")
+        baca.pitch(o, "Eb3:Eb4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[1]) as o:
@@ -484,7 +484,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m[10]) as o:
-        baca.pitch(o, "<Eb3 Eb4 Bb4>")
+        baca.pitch(o, "Eb3:Eb4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[10]) as o:
@@ -693,7 +693,7 @@ def hp(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         with baca.scope(o.pleaf(0)) as u:
-            baca.pitch(u, "<B5 C#6>")
+            baca.pitch(u, "B5:C#6")
             cache.rebuild()
             m = cache[name]
     with baca.scope(m[6]) as o:

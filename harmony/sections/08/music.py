@@ -219,7 +219,7 @@ def hp(cache):
     with baca.scope(m.get(1, 6)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
-        baca.pitch(o, "<B5 C6 D6>")
+        baca.pitch(o, "B5:C6:D6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 6)) as o:
@@ -248,7 +248,7 @@ def hp(cache):
             rleak=True,
         )
     with baca.scope(m.get(8, 9)) as o:
-        baca.pitch(o, "<C6 Db6 Eb6>")
+        baca.pitch(o, "C6:Db6:Eb6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 9)) as o:
@@ -289,7 +289,7 @@ def va(cache):
         )
     with baca.scope(m.get(1, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
-        baca.pitch(o, "<B4 C5 D5>")
+        baca.pitch(o, "B4:C5:D5")
         cache.rebuild()
         m = cache[name]
 
@@ -332,7 +332,7 @@ def vc1(cache):
             rleak=True,
         )
     with baca.scope(m.get(2, 9)) as o:
-        baca.pitch(o, "<C5 Db5 Eb5>")
+        baca.pitch(o, "C5:Db5:Eb5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
@@ -377,7 +377,7 @@ def vc2(cache):
         )
     with baca.scope(m.get(3, 9)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<B4 C5 D5>")
+        baca.pitch(o, "B4:C5:D5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
@@ -411,7 +411,7 @@ def cb1(cache):
             rleak=True,
         )
     with baca.scope(m.get(4, 9)) as o:
-        baca.pitch(o, "<C5 Db5 Eb5>", do_not_transpose=True)
+        baca.pitch(o, "C5:Db5:Eb5", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
@@ -450,7 +450,7 @@ def cb2(cache):
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<B4 C5 D5>", do_not_transpose=True)
+        baca.pitch(o, "B4:C5:D5", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
