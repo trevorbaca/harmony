@@ -362,7 +362,7 @@ def hp(cache):
         baca.override.dls_staff_padding(o, 4 + 2)
         baca.laissez_vibrer(o.ptails())
     with baca.scope(m.get(7, 10)) as o:
-        baca.pitch(o, "<E3 Fb3>")
+        baca.pitch(o, "E3:Fb3")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(7, 10)) as o:
@@ -404,7 +404,7 @@ def va(cache):
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
-        baca.pitch(o, "<G4 Ab4 Bb4>")
+        baca.pitch(o, "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[5]) as o:

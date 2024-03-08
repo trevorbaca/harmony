@@ -258,7 +258,7 @@ def bfl(cache):
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
-        baca.pitch(o, "<Eb3 Eb4 Bb4>")
+        baca.pitch(o, "Eb3:Eb4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -410,7 +410,7 @@ def hp(cache):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.damp(o.rest(0))
-        baca.pitch(o, "<B4 C5>")
+        baca.pitch(o, "B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[1]) as o:
@@ -433,7 +433,7 @@ def hp(cache):
         baca.dynamic(o.phead(0), "f-ancora")
     for n in [5, 9]:
         with baca.scope(m[n]) as o:
-            baca.pitch(o, "<B4 C5>")
+            baca.pitch(o, "B4:C5")
             cache.rebuild()
             m = cache[name]
         with baca.scope(m[n]) as o:

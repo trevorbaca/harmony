@@ -335,7 +335,7 @@ def hp(cache):
         baca.override.dls_staff_padding(o, 4 + 3)
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<B4 C5>")
+        baca.pitch(o, "B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[8]) as o:

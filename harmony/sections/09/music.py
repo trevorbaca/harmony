@@ -229,7 +229,7 @@ def hp(cache):
     name = "hp"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.pitch(o, "<B5 C#6>")
+        baca.pitch(o, "B5:C#6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[1]) as o:

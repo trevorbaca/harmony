@@ -556,7 +556,7 @@ def hp(cache):
     name = "hp"
     m = cache[name]
     with baca.scope(m.get(1, 5)) as o:
-        baca.pitch(o, "<G#4 A4 B4>")
+        baca.pitch(o, "G#4:A4:B4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 5)) as o:
@@ -600,7 +600,7 @@ def hp(cache):
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 6),
     with baca.scope(m.get(8, 11)) as o:
-        baca.pitch(o, "<G#4 A4 B4>")
+        baca.pitch(o, "G#4:A4:B4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(8, 11)) as o:

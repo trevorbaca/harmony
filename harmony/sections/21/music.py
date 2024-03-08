@@ -294,7 +294,7 @@ def bfl(cache):
         baca.markup(o.pleaf(0), baca.levine_multiphonic(42))
     for n in [1, 4]:
         with baca.scope(m[n]) as o:
-            baca.pitch(o, "<B3 Dqf4>")
+            baca.pitch(o, "B3:Dqf4")
             cache.rebuild()
             m = cache[name]
         with baca.scope(m[n]) as o:

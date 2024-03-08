@@ -549,7 +549,7 @@ def hp(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
-        baca.pitch(o, "<B5 C6 D6>")
+        baca.pitch(o, "B5:C6:D6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -591,7 +591,7 @@ def hp(cache):
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
-        baca.pitch(o.plt(0), "<B5 C#6>")
+        baca.pitch(o.plt(0), "B5:C#6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[7]) as o:
@@ -728,7 +728,7 @@ def vc1(cache):
             left_broken=True,
         )
     with baca.scope(m[2]) as o:
-        baca.pitch(o, "<C5 Db5 Eb5>")
+        baca.pitch(o, "C5:Db5:Eb5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -796,7 +796,7 @@ def vc2(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<B4 C5 D5>")
+        baca.pitch(o, "B4:C5:D5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -862,7 +862,7 @@ def cb1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<C5 Db5 Eb5>", do_not_transpose=True)
+        baca.pitch(o, "C5:Db5:Eb5", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:

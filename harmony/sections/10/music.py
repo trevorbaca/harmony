@@ -519,7 +519,7 @@ def hp(cache):
     with baca.scope(m.get(2, 3)) as o:
         baca.glissando(o, "F#3", hide_middle_stems=True)
     with baca.scope(m.get(4, 11)) as o:
-        baca.pitch(o, "<F#3 Gb3>")
+        baca.pitch(o, "F#3:Gb3")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 11)) as o:

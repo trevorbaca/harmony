@@ -815,7 +815,7 @@ def hp(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(4, 9)) as o:
-        baca.pitch(o, "<G6 A6 Bb6>")
+        baca.pitch(o, "G6:A6:Bb6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 9)) as o:
@@ -834,7 +834,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak X-offset 3"),
         )
     with baca.scope(m[12]) as o:
-        baca.pitch(o, "<G6 A6 Bb6>")
+        baca.pitch(o, "G6:A6:Bb6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[12]) as o:
@@ -875,7 +875,7 @@ def va(cache):
         )
     for item in [(1, 2), (4, 9), 12]:
         with baca.scope(m.get(item)) as o:
-            baca.pitch(o, "<G#5 A5 Bb5>")
+            baca.pitch(o, "G#5:A5:Bb5")
             cache.rebuild()
             m = cache[name]
         with baca.scope(m.get(item)) as o:
@@ -904,7 +904,7 @@ def vc1(cache):
         )
     for item in [1, (4, 9), 12]:
         with baca.scope(m.get(item)) as o:
-            baca.pitch(o, "<G#5 A5 Bb5>")
+            baca.pitch(o, "G#5:A5:Bb5")
             cache.rebuild()
             m = cache[name]
         with baca.scope(m.get(item)) as o:
@@ -923,7 +923,7 @@ def vc2(cache):
     m = cache[name]
     for item in [1, (4, 9), 12]:
         with baca.scope(m.get(item)) as o:
-            baca.pitch(o, "<A5 Bb5 Cb6>")
+            baca.pitch(o, "A5:Bb5:Cb6")
             cache.rebuild()
             m = cache[name]
         with baca.scope(m.get(item)) as o:
@@ -955,7 +955,7 @@ def cb1(cache):
     m = cache[name]
     for item in [1, (4, 9), 12]:
         with baca.scope(m.get(item)) as o:
-            baca.pitch(o, "<B5 C6 Db6>", do_not_transpose=True)
+            baca.pitch(o, "B5:C6:Db6", do_not_transpose=True)
             cache.rebuild()
             m = cache[name]
         with baca.scope(m.get(item)) as o:
@@ -1002,7 +1002,7 @@ def cb2(cache):
             alteration="Fqs5",
         )
     with baca.scope(m.get(4, 9)) as o:
-        baca.pitch(o, "<A#5 B5 C6>", do_not_transpose=True)
+        baca.pitch(o, "A#5:B5:C6", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 9)) as o:

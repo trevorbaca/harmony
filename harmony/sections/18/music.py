@@ -757,7 +757,7 @@ def va(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "<G#5 A5 Bb5>")
+        baca.pitch(o, "G#5:A5:Bb5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
@@ -820,7 +820,7 @@ def vc1(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m[3]) as o:
-        baca.pitch(o, "<G#5 A5 Bb5>")
+        baca.pitch(o, "G#5:A5:Bb5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -888,7 +888,7 @@ def vc2(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m[3]) as o:
-        baca.pitch(o, "<A5 Bb5 Cb6>")
+        baca.pitch(o, "A5:Bb5:Cb6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -946,7 +946,7 @@ def cb1(cache):
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[2]) as o:
-        baca.pitch(o, "<B5 C6 Db6>", do_not_transpose=True)
+        baca.pitch(o, "B5:C6:Db6", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -958,7 +958,7 @@ def cb1(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m[3]) as o:
-        baca.pitch(o, "<B5 C6 Db6>", do_not_transpose=True)
+        baca.pitch(o, "B5:C6:Db6", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
@@ -1073,7 +1073,7 @@ def cb2(cache):
         baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
     with baca.scope(m.get(2, 3)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<A#5 B5 C6>", do_not_transpose=True)
+        baca.pitch(o, "A#5:B5:C6", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(2, 3)) as o:

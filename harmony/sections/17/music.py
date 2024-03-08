@@ -438,7 +438,7 @@ def hp(cache):
         baca.override.dls_staff_padding(o, 5)
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<B4 C5>")
+        baca.pitch(o, "B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[4]) as o:
@@ -509,7 +509,7 @@ def vc1(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "<G#5 A5 Bb5>")
+        baca.pitch(o, "G#5:A5:Bb5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -553,7 +553,7 @@ def vc2(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "<A5 Bb5 Cb6>")
+        baca.pitch(o, "A5:Bb5:Cb6")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -597,7 +597,7 @@ def cb1(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "<B5 C6 Db6>", do_not_transpose=True)
+        baca.pitch(o, "B5:C6:Db6", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -641,7 +641,7 @@ def cb2(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "<A#5 B5 C6>", do_not_transpose=True)
+        baca.pitch(o, "A#5:B5:C6", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:

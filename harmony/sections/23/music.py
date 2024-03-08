@@ -276,7 +276,7 @@ def bfl(cache):
                 ),
             )
     with baca.scope(m.get(4, 6)) as o:
-        baca.pitch(o, "<B3 Dqf4>")
+        baca.pitch(o, "B3:Dqf4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 6)) as o:
@@ -415,7 +415,7 @@ def va(cache):
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
-        baca.pitch(o, "<G4 Ab4 Bb4>")
+        baca.pitch(o, "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -461,7 +461,7 @@ def vc1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<A4 B4 C5>")
+        baca.pitch(o, "A4:B4:C5")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -510,7 +510,7 @@ def vc2(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<G4 Ab4 Bb4>")
+        baca.pitch(o, "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -555,7 +555,7 @@ def cb1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.pitch(o, "<A4 B4 C5>", do_not_transpose=True)
+        baca.pitch(o, "A4:B4:C5", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
@@ -587,7 +587,7 @@ def cb2(cache):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "treble")
     with baca.scope(m[2]) as o:
-        baca.pitch(o, "<G4 Ab4 Bb4>", do_not_transpose=True)
+        baca.pitch(o, "G4:Ab4:Bb4", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:

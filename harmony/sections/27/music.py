@@ -624,7 +624,7 @@ def va(cache):
             staff_padding=3,
         )
     with baca.scope(m.get(5, 6)) as o:
-        baca.pitch(o.plts(), "<G4 Ab4 Bb4>")
+        baca.pitch(o.plts(), "G4:Ab4:Bb4")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(5, 6)) as o:
