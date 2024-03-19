@@ -763,7 +763,7 @@ def perc2(cache):
         )
     with baca.scope(m[13]) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         library.bass_drum_staff_position(o)
         baca.accent(o.phead(0))
         baca.laissez_vibrer(o.ptails())
@@ -866,7 +866,7 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
             baca.select.clparts(o.tleaves(), [1]),
@@ -984,7 +984,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "E5", do_not_transpose=True)
         baca.hairpin(

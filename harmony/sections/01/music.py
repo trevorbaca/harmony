@@ -371,7 +371,7 @@ def vc1(m):
         baca.short_instrument_name(o.leaf(0), "Vc. I", library.manifests)
         baca.instrument_name(o.leaf(0), r"\harmony-cello-i-markup")
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
-        baca.override.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_direction_down(o)
         leaves = baca.select.rleaves(o, count=2)
         baca.hairpin(
             baca.select.lparts(leaves, [4, 5]),

@@ -501,7 +501,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[4]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 4)) as o:
         library.tam_tam_staff_position(o)
         baca.glissando(o, "C4", hide_middle_stems=True)
@@ -536,7 +536,7 @@ def perc2(m):
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         library.tam_tam_staff_position(o)
         baca.glissando(o, "C4", hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
@@ -738,7 +738,7 @@ def vc1(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m[6]) as o:
-        baca.override.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_direction_down(o)
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o.rleaves(), "A2")
         baca.stem_tremolo(baca.select.pleaves(baca.select.rleaves(o)))
@@ -802,7 +802,7 @@ def vc2(cache):
     name = "vc2"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.override.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_direction_down(o)
         baca.glissando(
             o.tleaves(),
             "G2 F2",

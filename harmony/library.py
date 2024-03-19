@@ -66,8 +66,8 @@ def appoggiato_pitches_g():
 
 def bass_drum_staff_position(argument, *, allow_hidden=False):
     baca.staff_position(argument, -1, allow_hidden=allow_hidden)
-    baca.override.stem_down(baca.select.pleaves(argument))
-    baca.override.tuplet_bracket_up(argument)
+    baca.override.stem_direction_down(baca.select.pleaves(argument))
+    baca.override.tuplet_bracket_direction_up(argument)
 
 
 def bl(argument):
@@ -80,13 +80,13 @@ def br(argument):
 
 def bridge_staff_position(o):
     baca.staff_position(o, 0)
-    baca.override.stem_down(o.pleaves())
-    baca.override.tuplet_bracket_up(o)
+    baca.override.stem_direction_down(o.pleaves())
+    baca.override.tuplet_bracket_direction_up(o)
 
 
 def brake_drum_staff_position(o):
     baca.staff_position(o, 0)
-    baca.override.stem_up(o.pleaves())
+    baca.override.stem_direction_up(o.pleaves())
 
 
 def cerulean_counts():
@@ -429,8 +429,8 @@ def part_manifest():
 def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
     assert isinstance(positions, list), repr(positions)
     assert all(_ in (-2, 0, 2) for _ in positions), repr(positions)
-    baca.override.stem_down(baca.select.pleaves(o))
-    baca.override.tuplet_bracket_up(o)
+    baca.override.stem_direction_down(baca.select.pleaves(o))
+    baca.override.tuplet_bracket_direction_up(o)
     baca.override.tuplet_bracket_staff_padding(o, 0.5)
     baca.staff_positions(o, positions, allow_obgc_mutation=allow_obgc_mutation)
 
@@ -483,8 +483,8 @@ def rt(argument):
 
 def slate_staff_position(argument):
     baca.staff_position(argument, 1)
-    baca.override.stem_down(baca.select.pleaves(argument))
-    baca.override.tuplet_bracket_up(argument)
+    baca.override.stem_direction_down(baca.select.pleaves(argument))
+    baca.override.tuplet_bracket_direction_up(argument)
 
 
 def t(argument):
@@ -492,13 +492,13 @@ def t(argument):
 
 
 def tam_tam_staff_position(o):
-    baca.override.stem_down(o.pleaves())
-    baca.override.tuplet_bracket_up(o)
+    baca.override.stem_direction_down(o.pleaves())
+    baca.override.tuplet_bracket_direction_up(o)
 
 
 def triangle_staff_position(o):
     baca.staff_position(o, 1)
-    baca.override.stem_up(o.pleaves())
+    baca.override.stem_direction_up(o.pleaves())
 
 
 def unbeam(music, pattern=True):
@@ -526,8 +526,8 @@ def warble_pitches():
 
 
 def whisk_staff_position(argument):
-    baca.override.stem_down(baca.select.pleaves(argument))
-    baca.override.tuplet_bracket_up(argument)
+    baca.override.stem_direction_down(baca.select.pleaves(argument))
+    baca.override.tuplet_bracket_direction_up(argument)
 
 
 def written(music, pair, pattern):

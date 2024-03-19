@@ -602,7 +602,7 @@ def va(m):
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.untie(o.pleaves())
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.repeat_tie(o.leaf(1))
         baca.pitches(abjad.select.get(o.plts(), [0, -1]), "F#4 D3")
         baca.staff_positions(
@@ -774,7 +774,7 @@ def cb2(m):
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.repeat_tie(o.leaf(1))
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.pitches(abjad.select.get(o.plts(), [0, -1]), "F#3 D2")
         baca.staff_positions(
             o.plts()[1:-1],

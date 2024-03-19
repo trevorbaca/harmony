@@ -447,7 +447,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[6]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         library.brake_drum_staff_position(o)
         baca.dynamic(o.phead(0), "f")
         baca.markup(
@@ -510,7 +510,7 @@ def perc2(m):
         )
     with baca.scope(m[6]) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         library.slate_staff_position(o.pleaf(0))
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaf(0))
@@ -579,7 +579,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m[6]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.dynamic(o.phead(0), "f-ancora")
     with baca.scope(m[7]) as o:
         baca.dynamic(o.phead(0), "mf")
@@ -613,7 +613,7 @@ def va(cache):
             staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.markup(o.phead(-1), r"\baca-quasi-bisb-markup")
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o.plts()[:-1], "Ab4")
@@ -822,7 +822,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.override.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_direction_down(o)
         baca.pitch(o.leaves()[:4], "F#1")
         baca.pitch(o.plts()[-3:], "Gb2")
         baca.mspanners.scp(

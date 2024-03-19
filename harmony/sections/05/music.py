@@ -567,7 +567,7 @@ def vc1(m):
             baca.pitch(u, "F#3")
             baca.accent(u)
         baca.dynamic(o.pleaf(2), "mf")
-        baca.override.tuplet_bracket_up(o.leaves()[3:])
+        baca.override.tuplet_bracket_direction_up(o.leaves()[3:])
         baca.rspanners.metric_modulation(
             o.leaves()[4:10],
             staff_padding=5.5,

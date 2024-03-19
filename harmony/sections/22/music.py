@@ -543,7 +543,7 @@ def hp(m):
 
 def va(m):
     with baca.scope(m.get(1, 3)) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(
             o,
@@ -562,7 +562,7 @@ def va(m):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "alto")
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(
             o,
@@ -645,7 +645,7 @@ def vc1(m):
 
 def vc2(m):
     with baca.scope(m.get(1, 3)) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.override.tuplet_bracket_staff_padding(o, 1.5)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(
@@ -668,7 +668,7 @@ def vc2(m):
         baca.override.rest_extra_offset(o.rest(-1), (-2, 0))
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "tenor")
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.override.tuplet_bracket_staff_padding(o, 3)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(

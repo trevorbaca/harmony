@@ -602,7 +602,7 @@ def perc1(cache):
             rleak=True,
         )
     with baca.scope(m.get(8, 11)) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.override.dls_staff_padding(o, 6)
 
 
@@ -670,7 +670,7 @@ def perc2(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[11]) as o:
         baca.staff_lines(o.leaf(0), 3)
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         library.purpleheart_staff_positions(o, [0])
         baca.dynamic(o.phead(0), "ff")
         baca.override.dls_staff_padding(o, 5)

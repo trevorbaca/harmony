@@ -335,7 +335,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.override.tuplet_bracket_up(o)
+            baca.override.tuplet_bracket_direction_up(o)
             baca.hairpin(
                 o.tleaves(),
                 "mp>o!",

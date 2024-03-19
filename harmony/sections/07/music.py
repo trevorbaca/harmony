@@ -369,7 +369,7 @@ def bfl(m):
         baca.pitch(o, "Ab3")
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[7]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.pitch(o.runs()[:1], "G3")
         baca.pitch(o.runs()[1:], "Bb5")
         baca.stem_tremolo(o.pleaves()[-2:])
