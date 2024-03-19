@@ -830,7 +830,7 @@ def vc2(cache):
             )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[5]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         with baca.scope(o.leaf(1)) as u:
             baca.clef(u, "percussion")
             baca.staff_lines(u, 1)

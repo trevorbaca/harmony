@@ -351,7 +351,7 @@ def perc2(m):
 
 def hp(m):
     with baca.scope(m[1]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.pitches(o, "F5 E5 Eb5")
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.pheads())
@@ -398,7 +398,7 @@ def va(m):
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(
             o,

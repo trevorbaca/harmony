@@ -529,7 +529,7 @@ def bfl(m):
             staff_padding=8,
         )
     with baca.scope(m.get(3, 6)) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(7, 8)) as o:
@@ -774,7 +774,7 @@ def hp(m):
             )
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.rspanners.metric_modulation(
             o.leaves()[4:8],
             staff_padding=5.5,
@@ -829,7 +829,7 @@ def hp(m):
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[15]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         with baca.scope(o.rest(-1)) as u:
             baca.clef(u, "percussion"),
             baca.staff_lines(u, 1),

@@ -479,7 +479,7 @@ def vc1(cache):
             staff_padding=3,
         )
     with baca.scope(m.get(6, 7)) as o:
-        baca.override.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_direction_down(o)
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
         baca.rspanners.metric_modulation(
@@ -564,7 +564,7 @@ def cb1(cache):
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m.get(6, 7)) as o:
-        baca.override.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_direction_down(o)
         baca.pitch(o, "E1")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")

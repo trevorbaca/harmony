@@ -507,7 +507,7 @@ def vc1(cache):
     name = "vc1"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "A4:B4:C5")
@@ -545,7 +545,7 @@ def vc2(cache):
     name = "vc2"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "G4:Ab4:Bb4")
@@ -585,7 +585,7 @@ def cb1(cache):
     name = "cb1"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "A4:B4:C5", do_not_transpose=True)
@@ -624,7 +624,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "G4:Ab4:Bb4", do_not_transpose=True)

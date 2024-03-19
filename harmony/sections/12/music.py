@@ -700,7 +700,7 @@ def perc2(cache):
         )
     with baca.scope(m.get(3, 8)) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         library.tam_tam_staff_position(o)
         baca.staff_position(o, 0)
         baca.laissez_vibrer(o.ptails())
@@ -1157,7 +1157,7 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(13, 15)) as o:
-            baca.override.tuplet_bracket_up(o)
+            baca.override.tuplet_bracket_direction_up(o)
 
 
 @baca.build.timed("make_score")

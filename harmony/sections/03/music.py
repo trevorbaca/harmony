@@ -504,7 +504,7 @@ def vc1(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.override.tuplet_number_text(o.leaf(1), r"\markup 5:4")
-        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_direction_up(o)
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[2]) as o:
@@ -567,7 +567,7 @@ def vc1(m):
             baca.override.stem_extra_offset(u, (-2, 0))
             baca.override.stem_tremolo_extra_offset(u, (-2, 0))
         with baca.scope(o.leaves()[-5:]) as u:
-            baca.override.tuplet_bracket_up(u)
+            baca.override.tuplet_bracket_direction_up(u)
             baca.override.dls_staff_padding(u, 4.5)
         baca.pitch(o.leaves()[4:], "F#3")
         baca.accent(baca.select.pheads(o.leaves()[4:]))
