@@ -980,10 +980,10 @@ def persist_score(score, environment):
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
     )
-    baca.tags.deactivate(
+    baca.section.deactivate_tags(
         score,
     )
-    baca.tags.activate(
+    baca.section.activate_tags(
         score,
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.STAGE_NUMBER,
