@@ -54,13 +54,13 @@ def GLOBALS(skips, rests):
         r"\harmony-text-fourteen",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[10 - 1],
         r"\harmony-text-fifteen",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 cerulean_counts = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]

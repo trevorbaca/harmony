@@ -52,14 +52,14 @@ def GLOBALS(skips, rests, first_measure_number):
         abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
         abjad.Tweak(r"- \tweak font-size 10"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[4 - 1],
         r"\harmony-repeat-three-markup",
         abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
         abjad.Tweak(r"- \tweak font-size 4"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.ONLY_PARTS)
+    baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
     baca.override.text_script_extra_offset(skips[:-1], (1.5, 12))
     baca.open_volta(skips[4 - 1], first_measure_number)
     baca.close_volta(skips[6 - 1], first_measure_number)
@@ -73,13 +73,13 @@ def GLOBALS(skips, rests, first_measure_number):
         r"\harmony-text-twenty-five",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[8 - 1],
         r"\harmony-text-twenty-six",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def BFL(voice, time_signatures):
