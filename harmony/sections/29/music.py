@@ -37,7 +37,7 @@ def GLOBALS(skips, rests):
         r"\harmony-text-twenty-eight",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def BFL(voice, time_signatures):
@@ -209,7 +209,7 @@ def cb2(m):
             wrappers.extend(
                 baca.override.rehearsal_mark_self_alignment_x(u, abjad.RIGHT)
             )
-            baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+            baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def composites(cache):

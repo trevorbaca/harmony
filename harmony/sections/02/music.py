@@ -45,7 +45,7 @@ def GLOBALS(skips, rests):
         r"\harmony-text-one",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     for index, string in ((12 - 1, "fermata"),):
         baca.global_fermata(rests[index], string)
 

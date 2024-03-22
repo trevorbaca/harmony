@@ -56,13 +56,13 @@ def GLOBALS(skips, rests):
         r"\harmony-text-nine",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[9 - 1],
         r"\harmony-text-ten",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def BFL(voice, time_signatures):

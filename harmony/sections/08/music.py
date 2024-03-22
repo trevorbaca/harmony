@@ -40,7 +40,7 @@ def GLOBALS(skips, rests, first_measure_number):
         r"\harmony-text-seven",
         abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
     )
-    baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
+    baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
 
 def BFL(voice, time_signatures):
