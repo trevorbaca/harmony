@@ -1139,11 +1139,6 @@ number.28.BassFlute.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
     \stopStaff
@@ -1884,11 +1879,6 @@ number.28.Percussion.1.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
     \stopStaff
@@ -2142,11 +2132,6 @@ number.28.Percussion.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -2503,11 +2488,6 @@ number.28.Viola.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -3880,11 +3860,6 @@ number.28.Cello.1.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -5268,11 +5243,6 @@ number.28.Cello.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -6672,11 +6642,6 @@ number.28.Contrabass.1.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE

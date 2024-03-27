@@ -812,11 +812,6 @@ number.5.Percussion.1.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
@@ -1172,11 +1167,6 @@ number.5.Percussion.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -1742,11 +1732,6 @@ number.5.Viola.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
     \stopStaff
@@ -2153,11 +2138,6 @@ number.5.Cello.1.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
     \stopStaff
@@ -2493,11 +2473,6 @@ number.5.Cello.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
@@ -2913,11 +2888,6 @@ number.5.Contrabass.1.Music = {
       %! NOTE
     \abjad-invisible-music-coloring
       %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
-      %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
     \stopStaff
@@ -3317,11 +3287,6 @@ number.5.Contrabass.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
     \abjad-invisible-music-coloring
-      %! ANCHOR_NOTE
-      %! HIDDEN
-      %! NOTE
-      %! NOT_YET_PITCHED_COLORING
-    \baca-not-yet-pitched-coloring
       %! ANCHOR_NOTE
     \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
