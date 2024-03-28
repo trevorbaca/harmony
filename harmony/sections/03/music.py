@@ -311,9 +311,10 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
             descriptor=r"\baca-cov-markup =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -325,8 +326,9 @@ def bfl(m):
             "mf-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:
@@ -514,8 +516,9 @@ def vc1(m):
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
         baca.rspanners.metric_modulation(
@@ -573,9 +576,10 @@ def vc1(m):
         baca.accent(baca.select.pheads(o.leaves()[4:]))
         baca.dynamic(o.phead(-2), "mf")
         with baca.scope(o.leaves()[4:]) as u:
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 u,
                 right_broken=True,
+                rleak=True,
                 staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(
@@ -606,8 +610,9 @@ def vc2(m):
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:

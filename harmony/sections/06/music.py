@@ -535,8 +535,9 @@ def bfl(m):
     with baca.scope(m.get(7, 8)) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
 
@@ -1105,16 +1106,18 @@ def vc2(m):
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(o.runs()[:1]) as u:
             baca.pitch(u, "B2"),
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 u,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o.tleaves(),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(6, 7)) as o:
@@ -1195,8 +1198,9 @@ def cb1(m):
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(o.runs()[:1]) as u:
             baca.pitch(u, "Bb2")
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 u,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(4, 7)) as o:

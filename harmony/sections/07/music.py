@@ -379,8 +379,9 @@ def bfl(m):
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:7]) as u:
-            baca.rspanners.covered(
+            baca.spanners.covered(
                 u,
+                rleak=True,
                 staff_padding=3,
             )
             baca.rspanners.metric_modulation(
@@ -789,9 +790,10 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2"),
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -809,8 +811,9 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2"),
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[6]) as o:
@@ -834,9 +837,10 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
             right_broken=True,
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:
@@ -927,8 +931,9 @@ def cb2(m):
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "Bb2"),
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -938,8 +943,9 @@ def cb2(m):
             "p-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[6]) as o:
@@ -964,9 +970,10 @@ def cb2(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb2")
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
             right_broken=True,
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:

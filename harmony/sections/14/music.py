@@ -395,8 +395,9 @@ def bfl(cache):
         baca.pitch(o, "E3")
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -783,14 +784,16 @@ def vc1(cache):
         baca.staff_lines(o.leaf(0), 5)
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[11]) as o:
         for run in baca.select.runs(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
         baca.dynamic(
@@ -867,8 +870,9 @@ def vc2(cache):
         )
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
 
@@ -967,8 +971,9 @@ def cb2(cache):
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(6, 9)) as o:
@@ -1048,8 +1053,9 @@ def composites(cache):
                 "ppp",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
             )
-            baca.rspanners.half_clt(
+            baca.spanners.half_clt(
                 baca.select.ltleaves(o),
+                rleak=True,
                 staff_padding=8,
             )
 

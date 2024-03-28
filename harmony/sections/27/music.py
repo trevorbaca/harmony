@@ -757,9 +757,10 @@ def vc2(cache):
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.ltleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
             staff_padding=3,
         )
     for item in [(4, 5), 9]:
@@ -847,9 +848,10 @@ def cb2(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
-        baca.rspanners.damp(
+        baca.spanners.damp(
             abjad.select.leaves(o)[4:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[6]) as o:
@@ -887,8 +889,9 @@ def cb2(cache):
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     for item in [(4, 5), 9]:
@@ -918,9 +921,10 @@ def composites(cache):
             )
         with baca.scope(m.get(4, 5)) as o:
             baca.dynamic(o.phead(0), "pp")
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 baca.select.ltleaves(o),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+                rleak=True,
                 staff_padding=3,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

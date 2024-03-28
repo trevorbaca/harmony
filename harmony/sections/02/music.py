@@ -376,9 +376,10 @@ def bfl(cache):
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 3),
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
             descriptor=r"\baca-cov-markup =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
@@ -672,8 +673,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
         for plt in baca.select.plts(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 plt,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
@@ -845,8 +847,9 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 plt,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[7]) as o:
@@ -1041,8 +1044,9 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),
         for plt in baca.select.plts(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 plt,
+                rleak=True,
                 staff_padding=3 + 1,
             )
     with baca.scope(m[7]) as o:

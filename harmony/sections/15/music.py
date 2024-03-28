@@ -253,8 +253,9 @@ def bfl(cache):
         baca.pitch(o, "E3")
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -301,9 +302,10 @@ def bfl(cache):
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
             if i == 0:
-                baca.rspanners.covered(
+                baca.spanners.covered(
                     run,
                     descriptor=r"\baca-cov-markup =|",
+                    rleak=True,
                     staff_padding=3,
                 )
             elif i == 1:

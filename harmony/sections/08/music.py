@@ -165,9 +165,10 @@ def bfl(m):
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 4)
         with baca.scope(o.leaves()[1:]) as u:
-            baca.rspanners.covered(
+            baca.spanners.covered(
                 u,
                 right_broken=True,
+                rleak=True,
                 staff_padding=5.5,
             )
             baca.rspanners.metric_modulation(
@@ -348,10 +349,11 @@ def vc2(cache):
             o[-2:],
             "(p)>o",
         )
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 6)) as o:
@@ -427,10 +429,11 @@ def cb2(cache):
             o[-2:],
             "(p)>o",
         )
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(5, 6)) as o:

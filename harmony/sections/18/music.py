@@ -779,8 +779,9 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             full=True,
         )
-        baca.rspanners.half_clt(
+        baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -837,8 +838,9 @@ def vc1(cache):
         baca.pitch(o, "D#3")
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[6]) as o:
@@ -868,8 +870,9 @@ def vc1(cache):
                 "mp--!",
                 rleak=True,
             )
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
 
@@ -905,8 +908,9 @@ def vc2(cache):
         baca.pitch(o, "C#3")
         baca.dynamic(o.phead(0), "pp")
         for run in baca.select.runs(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[6]) as o:
@@ -990,8 +994,9 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.rspanners.half_clt(
+        baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[6]) as o:
@@ -1110,8 +1115,9 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 4"),
             full=True,
         )
-        baca.rspanners.half_clt(
+        baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[6]) as o:

@@ -281,8 +281,9 @@ def bfl(m):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -572,8 +573,9 @@ def vc1(m):
             o.leaves()[4:10],
             staff_padding=5.5,
         )
-        baca.rspanners.damp(
+        baca.spanners.damp(
             abjad.select.leaves(o)[4:],
+            rleak=True,
             staff_padding=8,
         )
         baca.override.dls_staff_padding(o.leaves()[4:-1], 4)
@@ -620,8 +622,9 @@ def vc2(m):
         baca.pitch(o, "F3"),
         baca.accent(o.phead(0))
         baca.dynamic(o.phead(0), "pp")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 3)) as o:
@@ -777,8 +780,9 @@ def strings(cache):
                 abjad.Tweak(r"- \tweak staff-padding 4"),
                 full=True,
             )
-            baca.rspanners.half_clt(
+            baca.spanners.half_clt(
                 baca.select.ltleaves(o),
+                rleak=True,
                 staff_padding=8,
             )
 
