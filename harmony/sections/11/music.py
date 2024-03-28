@@ -802,9 +802,10 @@ def vc1(m):
             "o<| mp|>o!",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         # TODO: pitched trill suppresses start of text spanner
@@ -881,9 +882,10 @@ def cb1(m):
             "o<| mp|>o!",
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
-        baca.rspanners.trill(
+        baca.spanners.trill(
             abjad.select.leaves(o)[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         # TODO: pitched trill suppresses start of text spanner
@@ -973,8 +975,9 @@ def composites(cache):
                 "o<| mp|>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -991,8 +994,9 @@ def composites(cache):
                 "pp<| mp|>pp",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -1011,9 +1015,10 @@ def composites(cache):
                 "o<| mp|> pp pp<| mp|> !<| mp|>o !",
                 right_broken=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
                 right_broken=True,
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

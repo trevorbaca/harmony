@@ -360,9 +360,10 @@ def bfl(m):
             "pp< p>o",
             rleak=True,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
         )
         baca.mspanners.text(
             baca.select.lparts(o, [1, 1]),
@@ -377,9 +378,10 @@ def bfl(m):
                 "o< p>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                rleak=True,
             )
             baca.mspanners.text(
                 baca.select.lparts(run, [1, 1]),
@@ -401,11 +403,12 @@ def bfl(m):
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                rleak=True,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -590,10 +593,11 @@ def va(cache):
     m = cache[name]
     with baca.scope(m.get(4, 7)) as o:
         baca.pitch(o, "Bb4")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
+            rleak=True,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
@@ -752,10 +756,11 @@ def composites(cache):
             )
             if name != "va":
                 baca.clef(o.leaf(0), "treble")
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     baca.select.tleaves(o),
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                     alteration="Cb5",
+                    rleak=True,
                 )
             if name in ("vc1", "vc2"):
                 baca.pitch(o, "Bb4")

@@ -352,9 +352,10 @@ def bfl(cache):
                 "o< p>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                rleak=True,
             )
             baca.mspanners.text(
                 baca.select.lparts(run, [1, 1]),
@@ -402,11 +403,12 @@ def bfl(cache):
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                rleak=True,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "Bb4")
@@ -415,9 +417,10 @@ def bfl(cache):
             "pp< p>o!",
             rleak=True,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "G3")
@@ -689,10 +692,11 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
+            rleak=True,
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -745,10 +749,11 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
+            rleak=True,
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -801,9 +806,10 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "bass")

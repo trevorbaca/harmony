@@ -233,15 +233,17 @@ def bfl(m):
                 rleak=True,
             )
             if i == 0:
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     run,
                     alteration="m2",
+                    rleak=True,
                 )
             elif i == 1:
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                     alteration="m2",
+                    rleak=True,
                 )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gqs5")
@@ -251,10 +253,11 @@ def bfl(m):
                 "o< mp>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
+                rleak=True,
             )
     with baca.scope(m.get(3, 10)) as o:
         baca.pitch(o, "Eb3")
@@ -464,9 +467,10 @@ def vc1(m):
                 "o< mp>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),

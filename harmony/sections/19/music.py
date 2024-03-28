@@ -563,12 +563,13 @@ def bfl(m):
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 u,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                rleak=True,
             )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "F3")
@@ -591,12 +592,13 @@ def bfl(m):
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mf>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 u,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                rleak=True,
             )
     for n in [11, 13]:
         with baca.scope(m[n]) as o:
@@ -997,9 +999,10 @@ def cb2(cache):
             o.leaves()[1:7],
             staff_padding=8,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             alteration="Fqs5",
+            rleak=True,
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.pitch(o, "A#5:B5:C6", do_not_transpose=True)
@@ -1052,8 +1055,9 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

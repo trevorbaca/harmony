@@ -269,11 +269,12 @@ def bfl(cache):
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                rleak=True,
             )
     with baca.scope(m.get(4, 6)) as o:
         baca.pitch(o, "B3:Dqf4")

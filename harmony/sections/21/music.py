@@ -280,15 +280,17 @@ def bfl(cache):
                 rleak=True,
             )
             if i == 0:
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     run,
                     alteration="m2",
+                    rleak=True,
                 )
             elif i == 1:
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
                     alteration="m2",
+                    rleak=True,
                 )
     with baca.scope(m[1]) as o:
         baca.markup(o.pleaf(0), baca.levine_multiphonic(42))

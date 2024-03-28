@@ -462,12 +462,13 @@ def bfl(m):
                 abjad.select.partition_by_ratio(u, (3, 4)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 u,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                rleak=True,
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "D4")
@@ -940,9 +941,10 @@ def cb1(cache):
         for run in baca.select.runs(o):
             # NOTE: currently glissando must lexically precede trill spanner
             baca.glissando(run, "E5", do_not_transpose=True)
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 alteration="Fqs5",
+                rleak=True,
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[2]) as o:
@@ -1005,9 +1007,10 @@ def cb1(cache):
         for run in baca.select.runs(o):
             # NOTE: currently glissando must lexically precede trill spanner
             baca.glissando(run, "E5", do_not_transpose=True)
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 alteration="Fqs5",
+                rleak=True,
             )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
     with baca.scope(m[9]) as o:
@@ -1133,12 +1136,13 @@ def cb2(cache):
         # NOTE: currently glissando must lexically precede trill spanner
         baca.glissando(o.leaves()[:-1], "E5", do_not_transpose=True)
         baca.pitch(o[-1:], "E5", do_not_transpose=True)
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             # large right padding because open-volta follows in next section
             abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="Fqs5",
+            rleak=True,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-c")
 
@@ -1160,8 +1164,9 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
@@ -1179,8 +1184,9 @@ def composites(cache):
     for name in ["vc1", "vc2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
@@ -1210,8 +1216,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[8]) as o:
             # excluded cb1 because of current gliss / trill order contention
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
@@ -1239,11 +1246,12 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:
             # excluded cb2 because of gliss / trill order contention
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
                 # large right padding because open-volta follows in next section
                 abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
