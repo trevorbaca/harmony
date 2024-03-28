@@ -214,9 +214,10 @@ def bfl(cache):
         baca.pitch(o, "F3")
         baca.dynamic(o.phead(0), "mf")
         baca.override.dls_staff_padding(o, 3)
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
             descriptor=r"\baca-cov-markup =|",
+            rleak=True,
             staff_padding=3,
         )
 
@@ -349,8 +350,9 @@ def va(m):
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 4)
         for plt in baca.select.plts(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 plt,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
@@ -413,8 +415,9 @@ def vc2(m):
         baca.pitch(o, "B3")
         baca.dynamic(o.phead(0), "mp")
         for plt in baca.select.plts(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 plt,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[3]) as o:
@@ -489,8 +492,9 @@ def cb2(m):
         )
         baca.dynamic(o.phead(0), "mp")
         for plt in baca.select.plts(o):
-            baca.rspanners.damp(
+            baca.spanners.damp(
                 plt,
+                rleak=True,
                 staff_padding=3 + 1,
             )
     with baca.scope(m[3]) as o:

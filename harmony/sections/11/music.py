@@ -443,8 +443,9 @@ def bfl(cache):
         baca.pitch(o, "G3")
     with baca.scope(m.get(5, 6)) as o:
         with baca.scope(o.leaves()[1:8]) as u:
-            baca.rspanners.covered(
+            baca.spanners.covered(
                 u,
+                rleak=True,
                 staff_padding=3,
             )
             baca.rspanners.metric_modulation(

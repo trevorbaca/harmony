@@ -289,8 +289,9 @@ def bfl(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
         # TODO: indent?
-        baca.rspanners.covered(
+        baca.spanners.covered(
             run,
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 8)) as o:

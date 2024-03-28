@@ -526,8 +526,9 @@ def vcs(cache):
     for name in ["vc1", "vc2"]:
         for item in [(1, 6), 8, 11]:
             with baca.scope(cache[name].get(item)) as o:
-                baca.rspanners.damp(
+                baca.spanners.damp(
                     baca.select.ltleaves(o),
+                    rleak=True,
                     staff_padding=5.5,
                 )
 

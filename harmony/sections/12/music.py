@@ -950,8 +950,9 @@ def vc2(cache):
         baca.pitch(o, "C3")
         baca.clef(o.leaf(0), "bass")
         baca.dynamic(o.phead(0), "mp")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -1066,8 +1067,9 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 2)) as o:

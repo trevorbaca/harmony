@@ -158,9 +158,10 @@ def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "G3")
         with baca.scope(o.leaves()[:2]) as u:
-            baca.rspanners.covered(
+            baca.spanners.covered(
                 u,
                 left_broken=True,
+                rleak=True,
                 staff_padding=3,
             )
             baca.rspanners.metric_modulation(
@@ -172,8 +173,9 @@ def bfl(m):
         baca.pitch(o, "Gb3")
         baca.color_fingerings(o.pheads(), [0, 1, 2])
         baca.dynamic(o.phead(0), "mp")
-        baca.rspanners.covered(
+        baca.spanners.covered(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 2)) as o:

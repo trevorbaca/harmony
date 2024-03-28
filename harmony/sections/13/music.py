@@ -620,8 +620,9 @@ def vc2(cache):
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o.plts()[1:],
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -639,8 +640,9 @@ def vc2(cache):
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "C3")
         baca.pitch(o.plts()[1:], "F3")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o.plts()[:1],
+            rleak=True,
             staff_padding=3,
         )
 
@@ -719,8 +721,9 @@ def cb2(cache):
             left_broken=True,
         )
         baca.dynamic(o.pleaf(-1), "mp")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o.plts()[1:],
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -738,8 +741,9 @@ def cb2(cache):
     with baca.scope(m.get(3, 5)) as o:
         baca.pitch(o.plts()[:1], "B2")
         baca.pitch(o.plts()[1:], "Eb2")
-        baca.rspanners.damp(
+        baca.spanners.damp(
             o.plts()[:1],
+            rleak=True,
             staff_padding=3,
         )
 
