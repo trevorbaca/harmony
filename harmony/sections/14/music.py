@@ -386,9 +386,10 @@ def bfl(cache):
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp>o!",
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+            rleak=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "E3")
@@ -415,9 +416,10 @@ def bfl(cache):
             abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
             "o< mp>o!",
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+            rleak=True,
         )
     with baca.scope(m[9]) as o:
         baca.pitches(
@@ -428,9 +430,10 @@ def bfl(cache):
             abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
             "o< mp>o!",
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.tleaves(),
             abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+            rleak=True,
         )
     with baca.scope(m.get(6, 9)) as o:
         with baca.scope(o.tleaves()) as u:

@@ -270,11 +270,12 @@ def bfl(m):
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                rleak=True,
             )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#5")
@@ -284,9 +285,10 @@ def bfl(m):
                 "o< p>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                rleak=True,
             )
             baca.mspanners.text(
                 baca.select.lparts(run, [1, 1]),
@@ -308,11 +310,12 @@ def bfl(m):
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                rleak=True,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)

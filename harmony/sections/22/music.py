@@ -327,10 +327,11 @@ def bfl(m):
                 "o< mp>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
+                rleak=True,
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Eb3")
@@ -350,11 +351,12 @@ def bfl(m):
             do_not_bookend=True,
         )
         baca.hairpin([o.rleaf(-1)], "!")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="A5",
+            rleak=True,
         )
     with baca.scope(m[13]) as o:
         baca.pitch(o, "Eb3")
@@ -604,9 +606,10 @@ def vc1(m):
                 "o< mp>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -625,10 +628,11 @@ def vc1(m):
             do_not_bookend=True,
         )
         baca.hairpin([o.rleaf(-1)], "!")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -733,10 +737,11 @@ def cb1(m):
             do_not_bookend=True,
         )
         baca.hairpin([o.rleaf(-1)], "!")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            rleak=True,
         )
         baca.markup(o.pleaf(0), r"\baca-seven-d")
         baca.markup(

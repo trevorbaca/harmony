@@ -130,9 +130,10 @@ def CB2(voice, time_signatures):
 def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Bb4")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o.leaves(), 4)
@@ -175,10 +176,11 @@ def hp(m):
 def cb1(m):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Bb4", do_not_transpose=True)
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
+            rleak=True,
         )
 
 
@@ -225,10 +227,11 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[1]) as o:
             baca.pitch(o, "Bb4")
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 baca.select.tleaves(o),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 alteration="Cb5",
+                rleak=True,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

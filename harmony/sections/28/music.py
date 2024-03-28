@@ -226,11 +226,12 @@ def bfl(m):
                 abjad.select.partition_by_ratio(run, (4, 5)),
                 "o< mp>o!",
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(
                     r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
                 ),
+                rleak=True,
             )
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A4")
@@ -245,9 +246,10 @@ def bfl(m):
             do_not_bookend=True,
         )
         baca.dynamic(o.rleaf(-1), "p")
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -477,11 +479,12 @@ def vc1(cache):
             " p>o !o< pp>o !o< pp>o!",
             rleak=True,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
             harmonic=True,
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -545,11 +548,12 @@ def vc2(cache):
             " pp>o !o< p>o !o< pp>o!",
             rleak=True,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
             harmonic=True,
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
@@ -572,9 +576,10 @@ def cb1(cache):
                 "o< mp>o!",
                 rleak=True,
             )
-            baca.rspanners.trill(
+            baca.spanners.trill(
                 run,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                rleak=True,
             )
         baca.markup(
             o.pleaf(0),
@@ -614,9 +619,10 @@ def cb1(cache):
             " p>o !o< p>o !o< pp>o!",
             rleak=True,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),

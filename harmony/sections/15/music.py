@@ -307,13 +307,15 @@ def bfl(cache):
                     staff_padding=3,
                 )
             elif i == 1:
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     run,
+                    rleak=True,
                 )
             elif i == 2:
-                baca.rspanners.trill(
+                baca.spanners.trill(
                     run,
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                    rleak=True,
                 )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
