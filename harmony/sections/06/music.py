@@ -859,9 +859,10 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.pleaves(),
             "scr. =|",
+            rleak=True,
             staff_padding=3,
         )
         baca.spanners.metric_modulation(
@@ -897,9 +898,10 @@ def va(cache):
     with baca.scope(m[4]) as o:
         with baca.scope(baca.select.runs(o)[-1:]) as u:
             baca.pitch(u, "Eb3")
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 u,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
         baca.dynamic(o.phead(-1), "f")
@@ -930,9 +932,10 @@ def va(cache):
     with baca.scope(m.get(6, 7)) as o:
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -953,14 +956,16 @@ def va(cache):
             rleak=True,
         )
         for run in baca.select.runs(o)[:-1]:
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     for item in [1, (6, 15)]:
@@ -976,9 +981,10 @@ def vc1(cache):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.dynamic(o.phead(0), "f")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.pleaves(),
             "scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -1008,9 +1014,10 @@ def vc1(cache):
     with baca.scope(m[4]) as o:
         baca.pitch(o.plt(-1), "E4")
         baca.dynamic(o.phead(-1), "f")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -1040,9 +1047,10 @@ def vc1(cache):
     with baca.scope(m.get(6, 7)) as o:
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
@@ -1060,15 +1068,17 @@ def vc1(cache):
         baca.staff_lines(o.leaf(0), 5)
     with baca.scope(m.get(10, 15)) as o:
         for run in baca.select.runs(o)[:-1]:
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
             right_broken=True,
+            rleak=True,
             staff_padding=3,
         )
         baca.dynamic(
@@ -1092,9 +1102,10 @@ def vc2(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.dynamic(o.phead(0), "f")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.pleaves(),
             "scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -1104,9 +1115,10 @@ def vc2(m):
         baca.clef(o.phead(-1), "treble")
         baca.pitch(o.plt(-1), "Eqf4")
         baca.dynamic(o.phead(-1), "f")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 4)) as o:
@@ -1130,9 +1142,10 @@ def vc2(m):
         baca.clef(o.leaf(0), "treble")
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -1156,15 +1169,17 @@ def vc2(m):
     with baca.scope(m.get(10, 15)) as o:
         baca.clef(o.leaf(0), "treble")
         for run in baca.select.runs(o)[:-1]:
-            baca.mspanners.bow_speed(
+            baca.spanners.bow_speed(
                 run,
                 "scr. =|",
+                rleak=True,
                 staff_padding=3,
             )
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o.runs()[-1:],
             "scr. =|",
             right_broken=True,
+            rleak=True,
             staff_padding=3,
         )
         baca.dynamic(

@@ -789,9 +789,10 @@ def va(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D4"),
         baca.dynamic(o.phead(0), "pp")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:

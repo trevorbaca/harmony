@@ -395,10 +395,11 @@ def va(m):
             right_broken=True,
         )
         baca.dynamic(o.phead(0), "pp")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o,
             "poco scr. =|",
             right_broken=True,
+            rleak=True,
             staff_padding=3,
         )
 
