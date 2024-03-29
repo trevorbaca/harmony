@@ -650,9 +650,10 @@ def va(cache):
             right_broken=True,
         )
         baca.dynamic(o.phead(0), "p")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            rleak=True,
             staff_padding=3,
         )
         baca.markup(
@@ -706,9 +707,10 @@ def vc1(cache):
         )
     with baca.scope(m[9]) as o:
         baca.dynamic(o.phead(0), "p")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     for item in [(4, 5), 9]:
@@ -821,9 +823,10 @@ def cb1(cache):
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.dynamic(o.phead(0), "p")
-        baca.mspanners.bow_speed(
+        baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            rleak=True,
             staff_padding=3,
         )
     for item in [(4, 5), 9]:
