@@ -2279,7 +2279,9 @@ number.25.Harp.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -2301,7 +2303,9 @@ number.25.Harp.Music = {
     r4
 
     % [Harp.Music measure 7]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Harp.Music measure 8]
     r16
@@ -2314,7 +2318,9 @@ number.25.Harp.Music = {
     r4
 
     % [Harp.Music measure 9]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Harp.Music measure 10]
     r16

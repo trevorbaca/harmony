@@ -1598,7 +1598,9 @@ number.27.Percussion.2.Music = {
     r1
 
     % [Percussion.2.Music measure 5]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.2.Music measure 6]
@@ -1894,7 +1896,9 @@ number.27.Harp.Music = {
     r1
 
     % [Harp.Music measure 5]
-    r1.
+    R1 * 6/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
 
     % [Harp.Music measure 6]
     \override TupletBracket.direction = #up

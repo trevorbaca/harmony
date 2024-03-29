@@ -1970,13 +1970,19 @@ number.28.Percussion.2.Music = {
     r4
 
     % [Percussion.2.Music measure 2]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     % [Percussion.2.Music measure 3]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     % [Percussion.2.Music measure 4]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.2.Music measure 5]
@@ -2216,13 +2222,19 @@ number.28.Harp.Music = {
     r4
 
     % [Harp.Music measure 2]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     % [Harp.Music measure 3]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     % [Harp.Music measure 4]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
     \revert DynamicLineSpanner.staff-padding
 
     % [Harp.Music measure 5]
@@ -5356,7 +5368,9 @@ number.28.Contrabass.1.Music = {
     \>
 
     % [Contrabass.1.Music measure 2]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP
@@ -5398,7 +5412,9 @@ number.28.Contrabass.1.Music = {
     \revert NoteHead.style
 
     % [Contrabass.1.Music measure 4]
-    r2
+    R1 * 2/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"2" #"4"
       %! SPANNER_STOP
     \!
       %! SPANNER_STOP

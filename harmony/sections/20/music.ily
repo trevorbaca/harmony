@@ -1764,7 +1764,9 @@ number.20.Harp.Music = {
     r2
 
     % [Harp.Music measure 5]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Harp.Music measure 6]
     fs'!8
@@ -1785,7 +1787,9 @@ number.20.Harp.Music = {
     r2
 
     % [Harp.Music measure 8]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Harp.Music measure 9]
     fs'!8
@@ -3092,7 +3096,9 @@ number.20.Cello.2.Music = {
     }
 
     % [Cello.2.Music measure 7]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
@@ -3741,7 +3747,9 @@ number.20.Contrabass.2.Music = {
     r4
 
     % [Contrabass.2.Music measure 5]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
@@ -3805,7 +3813,9 @@ number.20.Contrabass.2.Music = {
     r8.
 
     % [Contrabass.2.Music measure 8]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Contrabass.2.Music measure 9]
     r4
