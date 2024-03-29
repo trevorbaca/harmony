@@ -491,8 +491,9 @@ def bfl(m):
                 "A =|",
                 staff_padding=3,
             )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.run(0),
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 6)) as o:
@@ -680,10 +681,11 @@ def perc2(cache):
             r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.runs()[-1:],
-            staff_padding=10.5,
             right_broken=True,
+            rleak=True,
+            staff_padding=10.5,
         )
 
 
@@ -710,7 +712,7 @@ def hp(m):
         baca.override.dls_staff_padding(o, 7)
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Db1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         baca.laissez_vibrer(o.ptails())
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.dynamic(o.phead(0), "f")
@@ -1092,8 +1094,9 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(4, 5)) as o:

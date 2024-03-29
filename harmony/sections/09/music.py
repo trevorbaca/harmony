@@ -164,9 +164,10 @@ def bfl(m):
                 rleak=True,
                 staff_padding=3,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
                 left_broken=True,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[2]) as o:
@@ -258,8 +259,9 @@ def va(m):
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -312,8 +314,9 @@ def cb2(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "ff")
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             baca.select.tleaves(o),
+            rleak=True,
             staff_padding=6.5,
         )
         baca.markup(
@@ -345,23 +348,27 @@ def composites(cache):
             )
             with baca.scope(o.leaves()[-2:]) as u:
                 if name in ("va", "vc1", "vc2"):
-                    baca.rspanners.xfb(
+                    baca.spanners.xfb(
                         u,
+                        rleak=True,
                         staff_padding=5.5,
                     )
-                    baca.rspanners.metric_modulation(
+                    baca.spanners.metric_modulation(
                         u,
                         right_broken=True,
+                        rleak=True,
                         staff_padding=8,
                     )
                 elif name == "cb1":
-                    baca.rspanners.xfb(
+                    baca.spanners.xfb(
                         u,
+                        rleak=True,
                         staff_padding=8,
                     )
-                    baca.rspanners.metric_modulation(
+                    baca.spanners.metric_modulation(
                         u,
                         right_broken=True,
+                        rleak=True,
                         staff_padding=10.5,
                     )
     for name in ["vc1", "vc2", "cb1", "cb2"]:

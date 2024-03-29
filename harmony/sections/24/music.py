@@ -323,9 +323,10 @@ def perc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[-1:],
             right_broken=True,
+            rleak=True,
             staff_padding=10.5,
         )
 
@@ -439,8 +440,9 @@ def vc1(m):
         baca.pitch(o, "F4"),
         baca.triple_staccato(o.phead(0))
     with baca.scope(m.get(3, 4)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:-1],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -529,8 +531,9 @@ def cb1(m):
         baca.pitch(o, "E4", do_not_transpose=True)
         baca.triple_staccato(o.phead(0))
     with baca.scope(m.get(3, 4)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:-1],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:

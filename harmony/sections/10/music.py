@@ -335,8 +335,9 @@ def bfl(cache):
                 rleak=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=8,
             )
     with baca.scope(m.get(2, 3)) as o:
@@ -347,8 +348,9 @@ def bfl(cache):
                 rleak=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=8,
             )
     with baca.scope(m[7]) as o:
@@ -363,8 +365,9 @@ def bfl(cache):
                 rleak=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=8,
             )
     with baca.scope(m[10]) as o:
@@ -474,8 +477,9 @@ def perc1(m):
     with baca.scope(m.get(3, 8)) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(10, 14)) as o:
@@ -600,8 +604,9 @@ def va(m):
                 "mf>o!",
                 rleak=True,
             )
-            baca.rspanners.xfb(
+            baca.spanners.xfb(
                 o.pleaves(),
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(10, 15)) as o:
@@ -811,23 +816,27 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             with baca.scope(o.leaves()[:2]) as u:
                 if name in ("va", "vc1", "vc2"):
-                    baca.rspanners.metric_modulation(
+                    baca.spanners.metric_modulation(
                         u,
                         left_broken=True,
+                        rleak=True,
                         staff_padding=8,
                     )
-                    baca.rspanners.xfb(
+                    baca.spanners.xfb(
                         u,
+                        rleak=True,
                         staff_padding=5.5,
                     )
                 elif name == "cb1":
-                    baca.rspanners.metric_modulation(
+                    baca.spanners.metric_modulation(
                         u,
                         left_broken=True,
+                        rleak=True,
                         staff_padding=10.5,
                     )
-                    baca.rspanners.xfb(
+                    baca.spanners.xfb(
                         u,
+                        rleak=True,
                         staff_padding=8,
                     )
             baca.hairpin(

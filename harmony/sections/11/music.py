@@ -448,8 +448,9 @@ def bfl(cache):
                 rleak=True,
                 staff_padding=3,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[7]) as o:
@@ -494,9 +495,10 @@ def bfl(cache):
             "o< mf>o!",
             rleak=True,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.runs()[-1:],
             right_broken=True,
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 10)) as o:
@@ -637,8 +639,9 @@ def perc2(m):
     with baca.scope(m[7]) as o:
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(6, 7)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:],
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m[8]) as o:
@@ -679,12 +682,12 @@ def hp(cache):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "C1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "C1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(
             o.phead(0),
@@ -717,8 +720,9 @@ def hp(cache):
         baca.pitch(o, "E4")
         baca.snap_pizzicato(o.pheads())
     with baca.scope(m.get(6, 7)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[5:],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(1, 7)) as o:
@@ -743,7 +747,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "C1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 4)
@@ -772,8 +776,9 @@ def va(m):
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[8]) as o:
@@ -810,8 +815,9 @@ def vc1(m):
         )
     with baca.scope(m.get(1, 2)) as o:
         # TODO: pitched trill suppresses start of text spanner
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.tleaves(),
+            rleak=True,
             staff_padding=12,
         )
     with baca.scope(m[6]) as o:
@@ -890,8 +896,9 @@ def cb1(m):
         )
     with baca.scope(m.get(1, 2)) as o:
         # TODO: pitched trill suppresses start of text spanner
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.tleaves(),
+            rleak=True,
             staff_padding=10.5,
         )
     for item in [(1, 2), (4, 5), 10]:
@@ -1045,8 +1052,9 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(6, 7)) as o:
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 o.leaves()[4:],
+                rleak=True,
                 staff_padding=5.5,
             )
 

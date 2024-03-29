@@ -488,15 +488,16 @@ def hp(m):
         baca.pitch(o, "D5")
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
@@ -518,7 +519,7 @@ def hp(m):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(
             o.phead(0),
@@ -536,9 +537,10 @@ def hp(m):
             abjad.Tweak(r"- \tweak self-alignment-X 0"),
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[-1:],
             right_broken=True,
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m.get(1, 13)) as o:
@@ -643,8 +645,9 @@ def vc1(m):
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:8],
+            rleak=True,
             staff_padding=8,
         )
 
@@ -769,8 +772,9 @@ def cb2(m):
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:

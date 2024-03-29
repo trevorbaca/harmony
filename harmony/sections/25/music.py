@@ -337,8 +337,9 @@ def perc1(m):
     with baca.scope(m[3]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(2, 3)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:7],
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -362,9 +363,10 @@ def perc1(m):
 def perc2(m):
     with baca.scope(m[1]) as o:
         baca.staff_position(o, 2)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[2]) as o:
@@ -441,8 +443,9 @@ def hp(m):
     with baca.scope(m.get(2, 3)) as o:
         library.whisk_staff_position(o)
         baca.staff_position(o, 0)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:7],
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -474,8 +477,9 @@ def va(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.glissando(o, "Ab4")
         baca.dynamic(o.phead(0), "mp")
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -675,8 +679,9 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             baca.dynamic(o.phead(0), "pp")
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 baca.select.tleaves(o),
+                rleak=True,
                 staff_padding=8,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

@@ -497,8 +497,9 @@ def bfl(m):
             rleak=True,
         )
     with baca.scope(m.get(3, 4)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             abjad.select.leaves(o)[3:7],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[5]) as o:
@@ -524,8 +525,9 @@ def bfl(m):
             rleak=True,
         )
     with baca.scope(m.get(5, 6)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[3:7],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(3, 6)) as o:
@@ -776,8 +778,9 @@ def hp(m):
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.tuplet_bracket_direction_up(o)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[4:8],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -806,8 +809,9 @@ def hp(m):
     with baca.scope(m.get(7, 8)) as o:
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 6),
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             baca.select.rleak(baca.select.tleaves(o), count=1),
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[10]) as o:
@@ -843,9 +847,10 @@ def hp(m):
             r"\baca-whisk-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             baca.select.pleaves(o),
             right_broken=True,
+            rleak=True,
             staff_padding=5.5,
         )
 
@@ -859,9 +864,10 @@ def va(cache):
             "scr. =|",
             staff_padding=3,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[3]) as o:

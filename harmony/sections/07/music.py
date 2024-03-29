@@ -384,8 +384,9 @@ def bfl(m):
                 rleak=True,
                 staff_padding=3,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=8,
             )
     with baca.scope(m[8]) as o:
@@ -398,8 +399,9 @@ def bfl(m):
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
         baca.override.tuplet_bracket_staff_padding(o, 6.5)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[4:8],
+            rleak=True,
             staff_padding=11.5,
         )
     with baca.scope(m.get(1, 8)) as o:
@@ -542,9 +544,10 @@ def hp(cache):
         baca.staff_position(o, 0)
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
@@ -621,8 +624,9 @@ def hp(cache):
         baca.dynamic(o.phead(0), '"f"')
         baca.override.dls_staff_padding(o, 6 + 2)
     with baca.scope(m.get(7, 8)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[5:9],
+            rleak=True,
             staff_padding=8,
         )
 
@@ -656,8 +660,9 @@ def va(cache):
         for run in abjad.select.runs(o, grace=True):
             baca.override.note_head_style_harmonic(run)
         baca.espressivo(baca.select.pheads(o, grace=False)[1:])
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[7:11],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
@@ -693,8 +698,9 @@ def va(cache):
             baca.override.note_head_style_harmonic(run)
         baca.espressivo(o.pheads(grace=False)[1:])
     with baca.scope(m.get(5, 6)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:5],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
@@ -704,8 +710,9 @@ def va(cache):
             "mf>o!",
             rleak=True,
         )
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 8)) as o:
@@ -774,9 +781,10 @@ def vc1(cache):
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[-4:])
         baca.dynamic(o.phead(0), "pp")
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[-4:],
             right_broken=True,
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 8)) as o:

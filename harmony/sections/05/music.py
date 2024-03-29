@@ -384,10 +384,11 @@ def perc2(m):
                 abjad.Tweak(r"- \tweak self-alignment-X 1"),
                 abjad.Tweak(r"- \tweak staff-padding 7"),
             )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             baca.select.runs(o)[:1],
-            staff_padding=5.5,
             left_broken=True,
+            rleak=True,
+            staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -500,12 +501,14 @@ def va(m):
     with baca.scope(m.get(3, 4)) as o:
         baca.pitch(o, "F3")
         with baca.scope(o.leaves()[1:10]) as u:
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=8,
             )
-            baca.rspanners.xfb(
+            baca.spanners.xfb(
                 u,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[5]) as o:
@@ -517,10 +520,11 @@ def va(m):
                 "scr. =|",
                 staff_padding=3,
             )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o,
-            staff_padding=5.5,
             right_broken=True,
+            rleak=True,
+            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -569,8 +573,9 @@ def vc1(m):
             baca.accent(u)
         baca.dynamic(o.pleaf(2), "mf")
         baca.override.tuplet_bracket_direction_up(o.leaves()[3:])
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[4:10],
+            rleak=True,
             staff_padding=5.5,
         )
         baca.spanners.damp(
@@ -674,8 +679,9 @@ def cb1(m):
             "pp p mp",
         )
         baca.override.dls_staff_padding(o.plts()[:-1], 4)
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
@@ -736,8 +742,9 @@ def cb2(m):
             baca.select.plts(o),
             "pp p",
         )
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
         baca.markup(

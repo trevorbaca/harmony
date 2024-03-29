@@ -268,9 +268,10 @@ def bfl(m):
                 left_broken=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u[:2],
                 left_broken=True,
+                rleak=True,
                 staff_padding=8,
             )
     with baca.scope(m[2]) as o:
@@ -305,8 +306,9 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 rleak=True,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
+                rleak=True,
                 staff_padding=9,
             )
     with baca.scope(m.get(1, 5)) as o:
@@ -433,7 +435,7 @@ def hp(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Db1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
@@ -455,7 +457,7 @@ def hp(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Db1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f-ancora")
@@ -479,8 +481,9 @@ def va(cache):
         baca.pitch(o, "F4")
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
-            baca.rspanners.xfb(
+            baca.spanners.xfb(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[5]) as o:
