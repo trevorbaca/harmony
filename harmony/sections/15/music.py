@@ -281,10 +281,11 @@ def bfl(cache):
             rleak=True,
         )
         for clpart in baca.select.clparts(o, [2]):
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(clpart, [1, 1]),
                 "T -> A =|",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=5.5,
             )
         baca.breathe(o.pleaf(1))

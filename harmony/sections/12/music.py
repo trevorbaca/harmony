@@ -529,21 +529,23 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[10]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.breathe(abjad.select.get(o.pleaves(), [1, 3]))
         for clpart in baca.select.clparts(o, [2]):
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(clpart, [1, 1]),
                 "T -> A =|",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(13, 14)) as o:
@@ -551,19 +553,21 @@ def bfl(cache):
         pleaves = [baca.select.pleaf(_, -1) for _ in cmgroups]
         baca.breathe(pleaves)
         for clpart in baca.select.clparts(o, [4]):
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(clpart, [2, 2]),
                 "T -> A =|",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[15]) as o:
         baca.stem_tremolo(o.pleaves()[-2:])
         baca.override.dynamic_text_x_offset(o.pleaf(-1), -0.75)
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.lparts(o[:-1], [2, 3]),
             "T -> A =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=5.5,
         )
         baca.spanners.metric_modulation(

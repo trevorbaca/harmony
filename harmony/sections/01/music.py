@@ -202,11 +202,12 @@ def bfl(cache):
             "mf-mp",
         )
         baca.override.dls_staff_padding(o, 5)
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
+            rleak=True,
             staff_padding=8,
         )
         baca.override.dots_x_extent_false(abjad.select.leaves(o, grace=False))

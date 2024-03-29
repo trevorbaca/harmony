@@ -209,9 +209,10 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 rleak=True,
             )
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(run, [1, 2]),
                 "A -> T -> A",
+                rleak=True,
                 staff_padding=9,
             )
     with baca.scope(m.get(5, 9)) as o:
@@ -227,9 +228,10 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 rleak=True,
             )
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
+                rleak=True,
                 staff_padding=10,
             )
     with baca.scope(m.get(1, 9)) as o:

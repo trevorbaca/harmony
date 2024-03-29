@@ -446,9 +446,10 @@ def bfl(cache):
         baca.pitch(o, "D5")
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
-            baca.mspanners.text(
+            baca.spanners.text(
                 run,
                 "A =|",
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(1, 11)) as o:
