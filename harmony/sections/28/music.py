@@ -648,9 +648,10 @@ def cb2(cache):
             "o< ff>o",
             rleak=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.lparts(o, [2, 2]),
             "T4 -> P1 -> T4",
+            rleak=True,
             staff_padding=3,
         )
         baca.markup(
@@ -695,10 +696,11 @@ def cb2(cache):
             "o< ff (ff)>o !",
             right_broken=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.lparts(o, [3, 2, 2, 3, 2, 2, 3, 2, 2, 7]),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 ->",
             right_broken=True,
+            rleak=True,
             staff_padding=3,
         )
         baca.markup(

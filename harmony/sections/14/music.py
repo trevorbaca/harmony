@@ -1010,10 +1010,9 @@ def composites(cache):
                 o.tleaves(),
                 "o<mp",
             )
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 [o.tleaves()],
                 "T1 -> P1",
-                do_not_rleak=True,
                 staff_padding=3,
             )
         with baca.scope(m.get(6, 9)) as o:
@@ -1034,10 +1033,9 @@ def composites(cache):
                 "o<ff",
             )
             for run in baca.select.runs(o):
-                baca.mspanners.scp(
+                baca.spanners.scp(
                     [run],
                     "T1 -> P1",
-                    do_not_rleak=True,
                     staff_padding=3,
                 )
         with baca.scope(m[11]) as o:
