@@ -454,9 +454,10 @@ def hp(cache):
 def va(m):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "T4 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -487,9 +488,10 @@ def vc1(m):
             )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Aqf3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -537,16 +539,18 @@ def vc2(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.ltleaves(o),
             "P4 ||",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -599,16 +603,18 @@ def cb1(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.ltleaves(o),
             "P4 ||",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:
@@ -656,16 +662,18 @@ def cb2(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.ltleaves(o),
             "P4 ||",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.ltleaves(o),
             "T4 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 9)) as o:

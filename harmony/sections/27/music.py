@@ -357,9 +357,10 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 rleak=True,
             )
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
+                rleak=True,
                 staff_padding=10,
             )
     with baca.scope(m.get(4, 5)) as o:
@@ -373,17 +374,19 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m.get(4, 5)) as o:
         baca.dynamic(o.pleaf(0, grace=False), "pp-ppp")
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
             lilypond_id=2,
+            rleak=True,
             staff_padding=8,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             o,
             "A =|",
+            rleak=True,
             staff_padding=10,
         )
     with baca.scope(m[5]) as o:
@@ -614,10 +617,9 @@ def va(cache):
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.plts(o),
             "P2 -> P1 -> P3 -> P2",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
@@ -668,10 +670,9 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.plts(o.leaves()),
             "P2 -> O -> P2 -> P1 -> P3",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -723,10 +724,9 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "O -> P2 -> P1",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -781,10 +781,9 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#1")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O -> P2",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -841,10 +840,11 @@ def cb2(cache):
         baca.override.tuplet_bracket_direction_down(o)
         baca.pitch(o.leaves()[:4], "F#1")
         baca.pitch(o.plts()[-3:], "Gb2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts()[:2],
             "P1 -> P2 =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=5.5,
         )
         baca.accent(o.pheads()[1:3])

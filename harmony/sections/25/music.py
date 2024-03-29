@@ -484,10 +484,9 @@ def va(cache):
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P2 -> P1 -> P3 -> P2",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -523,10 +522,9 @@ def vc1(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P2 -> O -> P2 -> P1 -> P3",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -561,10 +559,9 @@ def vc2(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "O -> P2 -> P1",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -601,10 +598,9 @@ def cb1(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O -> P2",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -640,10 +636,9 @@ def cb2(cache):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(5, 10)) as o:

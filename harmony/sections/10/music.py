@@ -630,9 +630,10 @@ def va(m):
             "o< ff>o !",
             right_broken=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o, [3, 2]),
             "T1 -> P1 -> T1",
+            rleak=True,
             staff_padding=8,
         )
 
@@ -675,9 +676,10 @@ def vc1(m):
             baca.select.mgroups(o.rleaves(), [3, 4]),
             "o< ff>o!",
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o, [3, 2]),
             "T1 -> P1 -> T1",
+            rleak=True,
             staff_padding=8,
         )
 
@@ -726,9 +728,10 @@ def vc2(m):
             "o< ff>o !",
             right_broken=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o, [3, 2]),
             "T1 -> P1 -> T1",
+            rleak=True,
             staff_padding=8,
         )
 
@@ -739,10 +742,11 @@ def cb1(m):
     with baca.scope(m.get(2, 12)) as o:
         baca.glissando(o, "F#1")
         baca.dynamic(o.phead(0), "pp")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o, [2, 1, 1, 1, 1, 2, 1, 1, 1]),
             "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(12, 15)) as o:
@@ -753,9 +757,10 @@ def cb1(m):
         )
     with baca.scope(m.get(13, 15)) as o:
         baca.glissando(o.tleaves(), "F#2 D2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o, [1, 1]),
             "T4 -> O -> T4",
+            rleak=True,
             staff_padding=3,
         )
 
@@ -803,9 +808,10 @@ def cb2(m):
             "o< ff>o !",
             right_broken=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o, [3, 2]),
             "T4 -> P1 -> T4",
+            rleak=True,
             staff_padding=8,
         )
 

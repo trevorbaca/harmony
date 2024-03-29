@@ -754,10 +754,9 @@ def vc1(cache):
         )
         baca.override.dls_staff_padding(o, 6)
         leaves = baca.select.rleak(baca.select.ltleaves(o))
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.plts(leaves),
             "P2 -> P4 -> P1 -> P3 ->",
-            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[7]) as o:
@@ -819,9 +818,10 @@ def vc2(cache):
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 5),
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 5)) as o:
@@ -866,9 +866,10 @@ def vc2(cache):
             "mf>o!",
         )
         baca.override.dls_staff_padding(o, 4),
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
@@ -946,10 +947,11 @@ def cb1(cache):
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 4),
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P2 -> P4 -> P1 =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=4.25,
         )
     with baca.scope(m[7]) as o:
@@ -1007,9 +1009,10 @@ def cb2(cache):
             rleak=True,
         )
         baca.override.dls_staff_padding(o, 5)
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
@@ -1064,9 +1067,10 @@ def cb2(cache):
             "mf>o!",
         )
         baca.override.dls_staff_padding(o, 3),
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:

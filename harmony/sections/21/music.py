@@ -468,11 +468,10 @@ def va(m):
             baca.pitch(o, "E4")
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 [o],
                 "P4 -> T1",
                 left_broken=True,
-                do_not_rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[1]) as o:
@@ -513,10 +512,9 @@ def vc1(m):
             baca.pitch(o, "E2")
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 [o.tleaves()],
                 "T -> P",
-                do_not_rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[5]) as o:
@@ -567,10 +565,9 @@ def cb1(m):
             baca.pitch(o, "E1")
             baca.triple_staccato(o.pheads())
             baca.dynamic(o.phead(0), "p")
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 [o.tleaves()],
                 "T -> P",
-                do_not_rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[5]) as o:
@@ -594,10 +591,9 @@ def cb2(m):
     for n in [1, 4]:
         with baca.scope(m[n]) as o:
             baca.glissando(o, "E1")
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 [o.leaves()],
                 "P1 -> T1",
-                do_not_rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[1]) as o:

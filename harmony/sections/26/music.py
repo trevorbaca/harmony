@@ -606,10 +606,9 @@ def va(cache):
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P2 -> P1 -> P3 -> P2",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -626,10 +625,9 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P2 -> O -> P2 -> P1 -> P3",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -656,10 +654,9 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "O -> P2 -> P1",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -687,10 +684,9 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O -> P2",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -721,10 +717,9 @@ def cb2(cache):
     m = cache[name]
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O",
-            do_not_rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -797,9 +792,10 @@ def composites(cache):
                 for run in abjad.select.runs(o):
                     leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
-                baca.mspanners.scp(
+                baca.spanners.scp(
                     o.tleaves(),
                     "P1 =|",
+                    rleak=True,
                     staff_padding=3,
                 )
 

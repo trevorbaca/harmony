@@ -1161,9 +1161,10 @@ def vc2(m):
             "mf>o!",
             rleak=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(10, 15)) as o:
@@ -1207,9 +1208,10 @@ def cb1(m):
             "o< p>o!",
             rleak=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "T1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -1231,10 +1233,11 @@ def cb1(m):
                 baca.select.lparts(u, [6, 5, 4]),
                 "o< mf> p<f",
             )
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 baca.select.lparts(u, [6, 5, 3, 1]),
                 "T1 -> P1 -> T1 -> P1",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(1, 7)) as o:
@@ -1265,11 +1268,10 @@ def cb1(m):
             "o< mf> p< f> p< ff>o !",
             right_broken=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.cmgroups(o.rleaves(), [1]),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
             do_not_bookend=True,
-            do_not_rleak=True,
             right_broken=True,
             staff_padding=3,
         )
@@ -1284,9 +1286,10 @@ def cb2(m):
             "o< p>o!",
             rleak=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             o.tleaves(),
             "T1 =|",
+            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(3, 7)) as o:
@@ -1297,10 +1300,11 @@ def cb2(m):
                 "o< mp> p< f",
                 rleak=True,
             )
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 baca.select.lparts(u, [3, 4, 4, 2, 3, 4]),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[8]) as o:
@@ -1316,9 +1320,10 @@ def cb2(m):
                 "mf>o!",
                 rleak=True,
             )
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 u,
                 "P1 =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(10, 15)) as o:
@@ -1328,10 +1333,9 @@ def cb2(m):
             "o< f> p< ff>o!",
             rleak=True,
         )
-        baca.mspanners.scp(
+        baca.spanners.scp(
             baca.select.mgroups(o.leaves(), [2, 1, 1, 2]),
             "T1 -> P2 -> T1 -> P1 -> T1",
-            do_not_rleak=True,
             staff_padding=3,
         )
     with baca.scope(m.get(1, 15)) as o:

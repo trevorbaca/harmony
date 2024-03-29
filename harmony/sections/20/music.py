@@ -444,10 +444,9 @@ def va(m):
         baca.triple_staccato(o.pheads()[1:])
         baca.dynamic(o.phead(1), "p")
         with baca.scope(o[3:]) as u:
-            baca.mspanners.scp(
+            baca.spanners.scp(
                 [u.pheads()],
                 "P4 -> T1",
-                do_not_rleak=True,
                 staff_padding=3,
             )
             baca.spanners.metric_modulation(
