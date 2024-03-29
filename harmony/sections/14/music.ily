@@ -2230,7 +2230,9 @@ number.14.Viola.Music = {
     r4
 
     % [Viola.Music measure 2]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Viola.Music measure 3]
     \stopStaff
@@ -2444,7 +2446,9 @@ number.14.Viola.Music = {
 
 
     % [Viola.Music measure 8]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Viola.Music measure 9]
     \afterGrace
@@ -3752,7 +3756,9 @@ number.14.Contrabass.1.Music = {
     r4
 
     % [Contrabass.1.Music measure 2]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Contrabass.1.Music measure 3]
     \stopStaff
@@ -4254,7 +4260,9 @@ number.14.Contrabass.2.Music = {
     r4
 
     % [Contrabass.2.Music measure 2]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Contrabass.2.Music measure 3]
     \stopStaff

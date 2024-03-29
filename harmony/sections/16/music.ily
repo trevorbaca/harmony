@@ -437,7 +437,9 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     % [BassFlute.Music measure 4]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [BassFlute.Music measure 5]
     d'''2.
@@ -900,7 +902,9 @@ number.16.Percussion.2.Music = {
     r4
 
     % [Percussion.2.Music measure 6]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     \revert TupletBracket.direction
 
     % [Percussion.2.Music measure 7]
@@ -1055,7 +1059,9 @@ number.16.Harp.Music = {
     r4
 
     % [Harp.Music measure 6]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     \revert DynamicLineSpanner.staff-padding
 
     % [Harp.Music measure 7]
@@ -1277,7 +1283,9 @@ number.16.Viola.Music = {
     r4
 
     % [Viola.Music measure 4]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Viola.Music measure 5]
     d'8
@@ -1611,7 +1619,9 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     % [Cello.1.Music measure 4]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Cello.1.Music measure 5]
     ds!2.
@@ -1906,7 +1916,9 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     % [Cello.2.Music measure 4]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Cello.2.Music measure 5]
     cs!2.
@@ -2200,7 +2212,9 @@ number.16.Contrabass.1.Music = {
     r4
 
     % [Contrabass.1.Music measure 4]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Contrabass.1.Music measure 5]
     e'8
@@ -2537,7 +2551,9 @@ number.16.Contrabass.2.Music = {
     r4
 
     % [Contrabass.2.Music measure 4]
-    r2.
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Contrabass.2.Music measure 5]
     cs'!8

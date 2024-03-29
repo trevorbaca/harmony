@@ -1836,7 +1836,9 @@ number.6.Percussion.2.Music = {
     ^ \baca-boxed-brake-drum-markup
 
     % [Percussion.2.Music measure 7]
-    r1
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
     \revert DynamicLineSpanner.staff-padding
 
     % [Percussion.2.Music measure 8]

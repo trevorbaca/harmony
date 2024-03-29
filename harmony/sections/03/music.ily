@@ -943,11 +943,9 @@ number.3.Percussion.1.Music = {
     r4
 
     % [Percussion.1.Music measure 7]
-    r2
-
-    r4
-
-    r4
+    R1 * 4/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 4/5

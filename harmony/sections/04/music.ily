@@ -922,9 +922,9 @@ number.4.Percussion.1.Music = {
     r4
 
     % [Percussion.1.Music measure 4]
-    r2
-
-    r4
+    R1 * 3/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Percussion.1.Music measure 5]
     \override TupletBracket.direction = #up
