@@ -456,10 +456,11 @@ def bfl(cache):
     with baca.scope(m[7]) as o:
         baca.breathe(o.pleaf(-1))
         for clpart in baca.select.clparts(o, [2]):
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(o, [1, 1]),
                 "T -> A =|",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
@@ -467,10 +468,11 @@ def bfl(cache):
         pleaves = [baca.select.pleaf(_, -1) for _ in cmgroups]
         baca.breathe(pleaves)
         for clpart in baca.select.clparts(o, [4]):
-            baca.mspanners.text(
+            baca.spanners.text(
                 baca.select.lparts(clpart, [2, 2]),
                 "T -> A =|",
                 do_not_bookend=True,
+                rleak=True,
                 staff_padding=5.5,
             )
     with baca.scope(m.get(7, 8)) as o:

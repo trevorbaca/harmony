@@ -478,17 +478,19 @@ def bfl(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         for run in baca.select.runs(o):
-            baca.mspanners.text(
+            baca.spanners.text(
                 run,
                 "A =|",
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o, "D4")
         for run in baca.select.runs(o):
-            baca.mspanners.text(
+            baca.spanners.text(
                 run,
                 "A =|",
+                rleak=True,
                 staff_padding=3,
             )
         baca.spanners.metric_modulation(
