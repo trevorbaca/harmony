@@ -241,7 +241,7 @@ def bfl(m):
             elif i == 1:
                 baca.spanners.trill(
                     run,
-                    abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+                    baca.postevent.bound_details_right_padding(3),
                     alteration="m2",
                     rleak=True,
                 )
@@ -255,9 +255,9 @@ def bfl(m):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="A5",
                 rleak=True,
+                staff_padding=3,
             )
     with baca.scope(m.get(3, 10)) as o:
         baca.pitch(o, "Eb3")
@@ -280,7 +280,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            staff_padding=6,
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -295,7 +295,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 7"),
+            staff_padding=7,
         )
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -304,12 +304,12 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 7"),
+            staff_padding=7,
         )
 
 
@@ -333,7 +333,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            staff_padding=8,
         )
     with baca.scope(m.get(3, 10)) as o:
         baca.override.tuplet_bracket_staff_padding(o, 3)
@@ -343,12 +343,12 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            staff_padding=8,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -381,12 +381,12 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-sons-xylophoniques-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            staff_padding=4,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -429,7 +429,7 @@ def va(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(9, 10)) as o:
@@ -473,13 +473,13 @@ def vc1(m):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                staff_padding=3,
                 rleak=True,
             )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            staff_padding=1.5,
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -489,7 +489,7 @@ def vc1(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.override.dls_staff_padding(o, 6)
 
@@ -517,7 +517,7 @@ def vc2(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.override.dls_staff_padding(o, 6)
 
@@ -543,7 +543,7 @@ def cb1(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[10]) as o:
@@ -565,7 +565,7 @@ def cb2(m):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            self_alignment_x=-0.9,
         )
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o.leaves()[1:], 6)
