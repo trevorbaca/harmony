@@ -693,8 +693,9 @@ def va(cache):
             "f>o!",
             rleak=True,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             baca.select.pleaves(o, grace=False)[:3],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(6, 9)) as o:
@@ -853,8 +854,9 @@ def vc2(cache):
             '"ff" "ff" "f" mf mp p pp',
         )
     with baca.scope(m.get(5, 6)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:-4],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(5, 9)) as o:

@@ -246,9 +246,10 @@ def bfl(m):
                 right_broken=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
                 right_broken=True,
+                rleak=True,
                 staff_padding=8,
             )
     with baca.scope(m.get(1, 10)) as o:
@@ -381,8 +382,9 @@ def va(m):
         baca.pitch(o, "F4")
         baca.dynamic(o.phead(0), "p")
         for run in baca.select.runs(o):
-            baca.rspanners.xfb(
+            baca.spanners.xfb(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m.get(9, 10)) as o:

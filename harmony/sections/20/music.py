@@ -318,9 +318,10 @@ def perc2(m):
         library.bass_drum_staff_position(o)
         baca.accent(o.pheads())
         baca.laissez_vibrer(o.ptails())
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[2]) as o:
@@ -363,13 +364,14 @@ def hp(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
-        baca.rspanners.ottava(o.tleaves(), -1)
+        baca.spanners.ottava(o.tleaves(), -1, rleak=True)
         baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.pheads())
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m.get(1, 2)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:-1],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(3, 10)) as o:
@@ -397,8 +399,9 @@ def va(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            baca.rspanners.xfb(
+            baca.spanners.xfb(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[2]) as o:
@@ -447,10 +450,11 @@ def va(m):
                 do_not_rleak=True,
                 staff_padding=3,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
-                staff_padding=8,
                 right_broken=True,
+                rleak=True,
+                staff_padding=8,
             )
 
 
@@ -567,8 +571,9 @@ def cb2(m):
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o.leaves()[1:], 6)
     with baca.scope(m.get(2, 4)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             abjad.select.leaves(o)[1:],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[10]) as o:

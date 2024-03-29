@@ -486,9 +486,10 @@ def bfl(cache):
             "o< mf>o!",
             rleak=True,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o,
             left_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[3]) as o:
@@ -565,9 +566,10 @@ def bfl(cache):
             do_not_bookend=True,
             staff_padding=5.5,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[-2:],
             right_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.get(11, 15)) as o:

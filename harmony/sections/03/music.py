@@ -521,8 +521,9 @@ def vc1(m):
             rleak=True,
             staff_padding=5.5,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:8],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[4]) as o:
@@ -582,10 +583,11 @@ def vc1(m):
                 rleak=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
                 staff_padding=8,
                 right_broken=True,
+                rleak=True,
             )
 
 
@@ -665,8 +667,9 @@ def cb1(m):
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
         baca.markup(o.pleaf(0), r"\baca-eleven-e")
@@ -726,8 +729,9 @@ def cb2(m):
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             baca.select.ltleaves(o),
+            rleak=True,
             staff_padding=5.5,
         )
         baca.markup(

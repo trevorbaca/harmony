@@ -449,8 +449,9 @@ def perc1(cache):
         with baca.scope(o.plts(grace=False)) as u:
             library.bass_drum_staff_position(u)
             baca.override.dls_staff_padding(u, 6),
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves(grace=False)[2:7],
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
@@ -517,8 +518,9 @@ def perc2(m):
         )
     with baca.scope(m.get(5, 6)) as o:
         library.slate_staff_position(o)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             baca.select.runs(o)[:1],
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
@@ -769,8 +771,9 @@ def vc1(cache):
             baca.dynamic(u, '"ff"')
             baca.override.dls_staff_padding(u, 6),
     with baca.scope(m.get(6, 7)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:4],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
@@ -900,10 +903,11 @@ def cb1(cache):
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:3],
-            staff_padding=5.5,
             left_broken=True,
+            rleak=True,
+            staff_padding=5.5,
         )
     with baca.scope(m.get(2, 5)) as o:
         baca.clef(o.leaf(0), "treble")

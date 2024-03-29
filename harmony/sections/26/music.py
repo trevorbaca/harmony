@@ -437,8 +437,9 @@ def perc1(m):
     with baca.scope(m[8]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:-1],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -460,8 +461,9 @@ def perc1(m):
     with baca.scope(m[10]) as o:
         library.slate_staff_position(o)
     with baca.scope(m.get(9, 10)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[3:-1],
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m.get(1, 10)) as o:
@@ -516,9 +518,10 @@ def perc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             abjad.select.leaves(o)[-1:],
             right_broken=True,
+            rleak=True,
             staff_padding=10.5,
         )
 
@@ -567,8 +570,9 @@ def hp(cache):
     with baca.scope(m.get(7, 8)) as o:
         library.whisk_staff_position(o)
         baca.staff_position(o, 0)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:-1],
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[9]) as o:

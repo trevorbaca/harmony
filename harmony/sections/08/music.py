@@ -171,9 +171,10 @@ def bfl(m):
                 rleak=True,
                 staff_padding=5.5,
             )
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u,
                 right_broken=True,
+                rleak=True,
                 staff_padding=8,
             )
 
@@ -301,10 +302,11 @@ def vc1(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[1:])
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o,
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             left_broken=True,
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(2, 6)) as o:

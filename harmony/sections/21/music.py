@@ -359,8 +359,9 @@ def perc1(m):
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[2:-1],
+            rleak=True,
             staff_padding=10.5,
         )
 
@@ -395,8 +396,9 @@ def perc2(m):
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:]) as u:
             baca.override.dls_staff_padding(u, 6),
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 u[:-1],
+                rleak=True,
                 staff_padding=10.5,
             )
     with baca.scope(m[4]) as o:
@@ -450,9 +452,10 @@ def hp(m):
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[-3:],
             right_broken=True,
+            rleak=True,
             staff_padding=8,
         ),
     with baca.scope(m.get(1, 5)) as o:
@@ -473,17 +476,19 @@ def va(m):
                 staff_padding=3,
             )
     with baca.scope(m[1]) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o,
             left_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
         for run in baca.select.runs(o):
-            baca.rspanners.xfb(
+            baca.spanners.xfb(
                 run,
+                rleak=True,
                 staff_padding=3,
             )
     with baca.scope(m[5]) as o:
@@ -491,8 +496,9 @@ def va(m):
         baca.laissez_vibrer(o.ptails())
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "mf")
-        baca.rspanners.pizzicato(
+        baca.spanners.pizzicato(
             baca.select.rleak(o.tleaves()),
+            rleak=True,
             staff_padding=8,
         )
     for n in [2, 5]:
@@ -516,8 +522,9 @@ def vc1(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=5.5,
         )
     for n in [2, 5]:
@@ -541,8 +548,9 @@ def vc2(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=3,
         )
     for n in [2, 5]:
@@ -567,8 +575,9 @@ def cb1(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=5.5,
         )
     for n in [2, 5]:
@@ -605,8 +614,9 @@ def cb2(m):
     with baca.scope(m[5]) as o:
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "pp")
-        baca.rspanners.xfb(
+        baca.spanners.xfb(
             o.pleaves(),
+            rleak=True,
             staff_padding=3,
         )
     for n in [2, 5]:

@@ -271,9 +271,10 @@ def bfl(cache):
             "o<| f|>o!",
             rleak=True,
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:2],
             left_broken=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[3]) as o:
@@ -435,8 +436,9 @@ def perc2(cache):
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             abjad.select.leaves(o)[3:],
+            rleak=True,
             staff_padding=10.5,
         )
 
@@ -486,16 +488,18 @@ def hp(cache):
             baca.dynamic(u, "f-ancora")
             baca.snap_pizzicato(u)
     with baca.scope(m.get(3, 4)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             abjad.select.leaves(o)[1:8],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E4")
         baca.snap_pizzicato(o.pheads())
     with baca.scope(m.get(4, 5)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             abjad.select.leaves(o)[6:],
+            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(1, 5)) as o:
@@ -764,8 +768,9 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(4, 5)) as o:
-            baca.rspanners.metric_modulation(
+            baca.spanners.metric_modulation(
                 o.leaves()[-4:],
+                rleak=True,
                 staff_padding=8,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

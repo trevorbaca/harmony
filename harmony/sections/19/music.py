@@ -705,9 +705,10 @@ def perc2(cache):
     with baca.scope(m[1]) as o:
         baca.dynamic(o.rest(1), "ff-ancora")
         baca.override.dls_staff_padding(o, 5)
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[:1],
             left_broken=True,
+            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m[2]) as o:
@@ -778,9 +779,10 @@ def perc2(cache):
             r"\baca-boxed-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[-1:],
             right_broken=True,
+            rleak=True,
             staff_padding=10.5,
         )
 
@@ -823,7 +825,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(4, 9)) as o:
-        baca.rspanners.ottava(o.tleaves())
+        baca.spanners.ottava(o.tleaves(), rleak=True)
         baca.override.ottava_bracket_staff_padding(o, 5.5)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(
@@ -842,7 +844,7 @@ def hp(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[12]) as o:
-        baca.rspanners.ottava(o.tleaves())
+        baca.spanners.ottava(o.tleaves(), rleak=True)
         baca.override.ottava_bracket_staff_padding(o, 5.5)
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
@@ -997,8 +999,9 @@ def cb2(cache):
             rleak=True,
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[1:7],
+            rleak=True,
             staff_padding=8,
         )
         baca.spanners.trill(
@@ -1026,8 +1029,9 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "pp")
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(12, 13)) as o:
-        baca.rspanners.metric_modulation(
+        baca.spanners.metric_modulation(
             o.leaves()[4:],
+            rleak=True,
             staff_padding=5.5,
         )
 
