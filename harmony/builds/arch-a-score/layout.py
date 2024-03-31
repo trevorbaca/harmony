@@ -35,7 +35,7 @@ def main():
     ]
     eol_fermata_spacing = (1, 132)
     mol_fermata_spacing = (1, 172)
-    spacing = baca.make_layout(
+    layout = baca.make_layout(
         baca.page(
             1,
             baca.system(
@@ -388,7 +388,7 @@ def main():
             baca.region(268, mol_fermata_spacing),
         ),
     )
-    baca.section.make_layout_ly(spacing)
+    baca.section.make_layout_ly(layout)
 
 
 if __name__ == "__main__":
