@@ -913,19 +913,19 @@ def persist_score(score, environment):
 
 def make_layout():
     distances = [18, (32), (26, 26, 32), (26, 26, 26, 26, 32)]
-    layout = baca.make_layout(
-        baca.page(
+    layout = baca.layout.layout(
+        baca.layout.page(
             1,
-            baca.system(measure=1, y_offset=40, distances=distances),
+            baca.layout.System(1, y_offset=40, distances=distances),
         ),
-        baca.page(
+        baca.layout.page(
             2,
-            baca.system(measure=8, y_offset=40, distances=distances),
+            baca.layout.System(8, y_offset=40, distances=distances),
         ),
-        spacing=(1, 40),
-        overrides=(baca.region([11], (1, 288)),),
+        default_spacing=(1, 40),
+        spacing_overrides=(baca.layout.Override([11], (1, 288)),),
     )
-    baca.section.make_layout_ly(layout)
+    baca.section.write_layout_ly(layout)
 
 
 def main():
