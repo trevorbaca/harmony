@@ -33,7 +33,7 @@ def main():
         261,
         268,
     ]
-    spacing = baca.make_layout(
+    layout = baca.make_layout(
         baca.page(
             1,
             baca.system(
@@ -205,7 +205,7 @@ def main():
             baca.region(text_measure_numbers, (1, 288)),
         ),
     )
-    baca.section.make_layout_ly(spacing)
+    baca.section.make_layout_ly(layout)
 
 
 if __name__ == "__main__":
