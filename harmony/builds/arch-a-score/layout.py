@@ -35,7 +35,7 @@ def main():
     ]
     eol_fermata_spacing = (1, 132)
     mol_fermata_spacing = (1, 172)
-    layout = baca.layout.Layout(
+    breaks = baca.layout.Breaks(
         baca.layout.Page(
             1,
             baca.layout.System(
@@ -312,6 +312,8 @@ def main():
             68,
             baca.layout.System(266, y_offset=32, distances=distances),
         ),
+    )
+    spacing = baca.layout.Spacing(
         default_spacing=(1, 40),
         spacing_overrides=(
             # baca.layout.Override(text_measure_numbers, (1, 288)),
@@ -388,7 +390,7 @@ def main():
             baca.layout.Override(268, mol_fermata_spacing),
         ),
     )
-    baca.build.write_layout_ly(layout)
+    baca.build.write_layout_ly(breaks, spacing)
 
 
 if __name__ == "__main__":
