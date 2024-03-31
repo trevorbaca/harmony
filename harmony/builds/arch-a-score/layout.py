@@ -35,8 +35,8 @@ def main():
     ]
     eol_fermata_spacing = (1, 132)
     mol_fermata_spacing = (1, 172)
-    layout = baca.layout.layout(
-        baca.layout.page(
+    layout = baca.layout.Layout(
+        baca.layout.Page(
             1,
             baca.layout.System(
                 measure=1,
@@ -44,271 +44,271 @@ def main():
                 distances=[22, (28), (25, 25, 28), (25, 25, 25, 25, 28)],
             ),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             2,
             baca.layout.System(4, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             3,
             baca.layout.System(8, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             4,
             baca.layout.System(12, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             5,
             baca.layout.System(16, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             6,
             baca.layout.System(21, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             7,
             baca.layout.System(25, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             8,
             baca.layout.System(29, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             9,
             baca.layout.System(34, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             10,
             baca.layout.System(37, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             11,
             baca.layout.System(40, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             12,
             baca.layout.System(45, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             13,
             baca.layout.System(49, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             14,
             baca.layout.System(53, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             15,
             baca.layout.System(58, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             16,
             baca.layout.System(61, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             17,
             baca.layout.System(65, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             18,
             baca.layout.System(68, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             19,
             baca.layout.System(73, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             20,
             baca.layout.System(77, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             21,
             baca.layout.System(81, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             22,
             baca.layout.System(85, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             23,
             baca.layout.System(89, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             24,
             baca.layout.System(94, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             25,
             baca.layout.System(98, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             26,
             baca.layout.System(101, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             27,
             baca.layout.System(105, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             28,
             baca.layout.System(109, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             29,
             baca.layout.System(113, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             30,
             baca.layout.System(117, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             31,
             baca.layout.System(121, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             32,
             baca.layout.System(125, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             33,
             baca.layout.System(130, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             34,
             baca.layout.System(133, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             35,
             baca.layout.System(137, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             36,
             baca.layout.System(141, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             37,
             baca.layout.System(145, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             38,
             baca.layout.System(149, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             39,
             baca.layout.System(154, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             40,
             baca.layout.System(157, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             41,
             baca.layout.System(161, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             42,
             baca.layout.System(165, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             43,
             baca.layout.System(169, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             44,
             baca.layout.System(173, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             45,
             baca.layout.System(178, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             46,
             baca.layout.System(181, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             47,
             baca.layout.System(185, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             48,
             baca.layout.System(189, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             49,
             baca.layout.System(194, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             50,
             baca.layout.System(197, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             51,
             baca.layout.System(201, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             52,
             baca.layout.System(205, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             53,
             baca.layout.System(209, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             54,
             baca.layout.System(213, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             55,
             baca.layout.System(217, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             56,
             baca.layout.System(221, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             57,
             baca.layout.System(225, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             58,
             baca.layout.System(228, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             59,
             baca.layout.System(232, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             60,
             baca.layout.System(235, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             61,
             baca.layout.System(240, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             62,
             baca.layout.System(245, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             63,
             baca.layout.System(249, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             64,
             baca.layout.System(252, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             65,
             baca.layout.System(256, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             66,
             baca.layout.System(260, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             67,
             baca.layout.System(263, y_offset=32, distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             68,
             baca.layout.System(266, y_offset=32, distances=distances),
         ),
