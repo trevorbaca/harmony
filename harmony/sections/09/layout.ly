@@ -21,7 +21,7 @@
               %! BREAK
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -32,7 +32,7 @@
 
             % [PageLayout measure 2]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -47,7 +47,7 @@
             % [anchor skip]
               %! ANCHOR_SKIP
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #4
+            \baca-new-strict-spacing-section #1 #4
               %! ANCHOR_SKIP
             \baca-time-signature-transparent
               %! ANCHOR_SKIP
