@@ -304,7 +304,7 @@ def bfl(m):
         with baca.scope(baca.select.runs(o)[:1]) as u:
             baca.spanners.trill(
                 u,
-                abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                baca.postevent.bound_details_right_padding(2),
                 rleak=True,
             )
             baca.spanners.metric_modulation(

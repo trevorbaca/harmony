@@ -532,7 +532,7 @@ def bfl(cache):
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
+            baca.postevent.bound_details_right_padding(5),
             abjad.Tweak(r"- \tweak direction #down"),
             direction=abjad.DOWN,
             rleak=True,
@@ -1125,7 +1125,7 @@ def composites(cache):
             )
             baca.spanners.trill(
                 o,
-                abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                baca.postevent.bound_details_right_padding(2),
                 left_broken=True,
                 rleak=True,
             )

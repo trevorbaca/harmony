@@ -509,7 +509,7 @@ def vc2(cache):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
+            baca.postevent.bound_details_right_padding(5),
             rleak=True,
             staff_padding=3,
         )

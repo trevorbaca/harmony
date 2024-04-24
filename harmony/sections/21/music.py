@@ -288,7 +288,7 @@ def bfl(cache):
             elif i == 1:
                 baca.spanners.trill(
                     run,
-                    abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+                    baca.postevent.bound_details_right_padding(3),
                     alteration="m2",
                     rleak=True,
                 )
