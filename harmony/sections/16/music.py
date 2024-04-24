@@ -350,7 +350,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.clef(o.leaf(0), "bass")

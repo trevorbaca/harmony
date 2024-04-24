@@ -582,7 +582,7 @@ def cb1(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-iv-markup",
-                abjad.Tweak(r"- \tweak padding 1.5"),
+                baca.postevent.padding(1.5),
                 direction=abjad.DOWN,
             )
     for item in [(1, 8), 11]:
@@ -603,7 +603,7 @@ def cb2(m):
             o.pleaf(0),
             r"\baca-string-iv-markup",
             abjad.Tweak(r"- \tweak X-offset 2.5"),
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(8, 9)) as o:

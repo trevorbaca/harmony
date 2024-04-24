@@ -242,7 +242,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
 
 
@@ -291,7 +291,7 @@ def cb1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m[2]) as o:
@@ -305,7 +305,7 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m[2]) as o:

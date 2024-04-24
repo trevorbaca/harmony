@@ -47,13 +47,13 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[2 - 1],
         r"\harmony-text-twelve",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[6 - 1],
         r"\harmony-text-thirteen",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -528,7 +528,7 @@ def va(cache):
         baca.markup(
             o.pleaf(0),
             r"\harmony-half-harm-pressure-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o.plts()[:1], "Bb3")
@@ -579,7 +579,7 @@ def vc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\harmony-half-harm-pressure-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o.plts()[:1], "Aqf3")
@@ -672,7 +672,7 @@ def cb1(cache):
         baca.markup(
             o.pleaf(0),
             r"\harmony-half-harm-pressure-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o.plts()[:1], "Dtqf3", allow_obgc_mutation=True)

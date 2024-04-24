@@ -51,7 +51,7 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[3 - 1],
         r"\harmony-text-twenty-four",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -542,7 +542,7 @@ def hp(cache):
         baca.markup(
             o.pheads(),
             r"\baca-lv-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o, "C#5:D5")
@@ -554,7 +554,7 @@ def hp(cache):
         baca.markup(
             o.pheads(),
             r"\baca-lv-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m.get(1, 6)) as o:
         baca.override.dls_staff_padding(o, 4 + 2)
@@ -591,7 +591,7 @@ def hp(cache):
         baca.markup(
             o.pheads(),
             r"\baca-lv-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
 
 
@@ -637,7 +637,7 @@ def vc1(cache):
         baca.hairpin(
             o.plts(),
             "pp-- !< mp>",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
         baca.untie(o.leaves())
         baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "A4:B4:C5")
@@ -674,7 +674,7 @@ def vc2(cache):
         baca.hairpin(
             baca.select.lparts(o, [1, 2, 3, 2]),
             "pp-- !< mp-- !>",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -707,7 +707,7 @@ def cb1(cache):
         baca.hairpin(
             baca.select.lparts(o, [2, 3, 2]),
             "pp-- !< mp>",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -741,7 +741,7 @@ def cb2(cache):
         baca.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
             "pp-- !< mp>",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:

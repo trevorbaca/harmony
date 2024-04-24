@@ -53,7 +53,7 @@ def GLOBALS(skips, rests, first_measure_number):
     wrappers = baca.markup(
         skips[9 - 1],
         r"\harmony-text-eleven",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -935,7 +935,7 @@ def vc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-eleven-e-flat",
-            abjad.Tweak(r"- \tweak extra-offset #'(-2 . 0)"),
+            baca.postevent.extra_offset((-2, 0)),
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
         )
     with baca.scope(m.get(11, 15)) as o:
@@ -943,7 +943,7 @@ def vc1(cache):
             o.pleaf(0),
             r"\baca-eleven-e-flat",
             abjad.Tweak(r"- \tweak X-offset 3"),
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
 
 
@@ -1052,7 +1052,7 @@ def cb1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-e-flat",
-            abjad.Tweak(r"- \tweak extra-offset #'(-2 . 0)"),
+            baca.postevent.extra_offset((-2, 0)),
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
         )
     with baca.scope(m.get(11, 15)) as o:
@@ -1060,7 +1060,7 @@ def cb1(cache):
             o.pleaf(0),
             r"\baca-seven-e-flat",
             abjad.Tweak(r"- \tweak X-offset 3"),
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
 
 

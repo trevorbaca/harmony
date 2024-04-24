@@ -49,13 +49,13 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[3 - 1],
         r"\harmony-text-two",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[5 - 1],
         r"\harmony-text-three",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 

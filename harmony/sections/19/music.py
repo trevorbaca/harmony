@@ -56,13 +56,13 @@ def GLOBALS(skips, rests, first_measure_number):
     wrappers = baca.markup(
         skips[3 - 1],
         r"\harmony-text-eighteen",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[10 - 1],
         r"\harmony-text-nineteen",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -889,7 +889,7 @@ def va(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-i-markup",
-                abjad.Tweak(r"- \tweak padding 1"),
+                baca.postevent.padding(1),
             )
     with baca.scope(m[12]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -906,7 +906,7 @@ def vc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
     for item in [1, (4, 9), 12]:
         with baca.scope(m.get(item)) as o:
@@ -918,7 +918,7 @@ def vc1(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-i-markup",
-                abjad.Tweak(r"- \tweak padding 1"),
+                baca.postevent.padding(1),
             )
     with baca.scope(m[12]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -937,7 +937,7 @@ def vc2(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-i-markup",
-                abjad.Tweak(r"- \tweak padding 1"),
+                baca.postevent.padding(1),
             )
     with baca.scope(m[2]) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -945,7 +945,7 @@ def vc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
     with baca.scope(m[12]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -969,7 +969,7 @@ def cb1(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-iii-markup",
-                abjad.Tweak(r"- \tweak padding 1"),
+                baca.postevent.padding(1),
             )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -978,7 +978,7 @@ def cb1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-i-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1018,7 +1018,7 @@ def cb2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
     with baca.scope(m.get(11, 13)) as o:
         baca.clef(o.leaf(0), "percussion")
