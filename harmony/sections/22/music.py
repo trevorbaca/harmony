@@ -354,7 +354,7 @@ def bfl(m):
         baca.hairpin([o.rleaf(-1)], "!")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            baca.postevent.bound_details_right_padding(3),
             baca.postevent.staff_padding(3),
             alteration="A5",
             rleak=True,
@@ -631,7 +631,7 @@ def vc1(m):
         baca.hairpin([o.rleaf(-1)], "!")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
+            baca.postevent.bound_details_right_padding(2.5),
             baca.postevent.staff_padding(3),
             rleak=True,
         )
@@ -737,7 +737,7 @@ def cb1(m):
         baca.hairpin([o.rleaf(-1)], "!")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
+            baca.postevent.bound_details_right_padding(2.5),
             baca.postevent.staff_padding(3),
             rleak=True,
         )

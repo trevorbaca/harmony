@@ -132,7 +132,7 @@ def bfl(m):
         baca.pitch(o, "Bb4")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            baca.postevent.bound_details_right_padding(2),
             rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -178,7 +178,7 @@ def cb1(m):
         baca.pitch(o, "Bb4", do_not_transpose=True)
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            baca.postevent.bound_details_right_padding(2),
             alteration="Cb5",
             rleak=True,
         )
@@ -228,7 +228,7 @@ def composites(cache):
             baca.pitch(o, "Bb4")
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                baca.postevent.bound_details_right_padding(2),
                 alteration="Cb5",
                 rleak=True,
             )

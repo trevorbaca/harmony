@@ -812,7 +812,7 @@ def vc1(m):
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.spanners.trill(
             o.leaves()[-2:],
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            baca.postevent.bound_details_right_padding(2.75),
             rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -893,7 +893,7 @@ def cb1(m):
         baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.spanners.trill(
             abjad.select.leaves(o)[-2:],
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            baca.postevent.bound_details_right_padding(2.75),
             rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:

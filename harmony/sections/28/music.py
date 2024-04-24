@@ -248,7 +248,7 @@ def bfl(m):
         baca.dynamic(o.rleaf(-1), "p")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            baca.postevent.bound_details_right_padding(3),
             rleak=True,
         )
     with baca.scope(m.get(1, 10)) as o:
@@ -482,7 +482,7 @@ def vc1(cache):
         )
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            baca.postevent.bound_details_right_padding(3),
             alteration="E6",
             harmonic=True,
             rleak=True,
@@ -551,7 +551,7 @@ def vc2(cache):
         )
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            baca.postevent.bound_details_right_padding(3),
             alteration="C#6",
             harmonic=True,
             rleak=True,
@@ -579,7 +579,7 @@ def cb1(cache):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                baca.postevent.bound_details_right_padding(2),
                 rleak=True,
             )
         baca.markup(
@@ -622,7 +622,7 @@ def cb1(cache):
         )
         baca.spanners.trill(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            baca.postevent.bound_details_right_padding(3),
             rleak=True,
         )
         baca.markup(

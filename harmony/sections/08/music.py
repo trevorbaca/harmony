@@ -304,7 +304,7 @@ def vc1(cache):
         baca.espressivo(o.pheads()[1:])
         baca.spanners.metric_modulation(
             o,
-            abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
+            baca.postevent.bound_details_right_padding(4.5),
             left_broken=True,
             rleak=True,
             staff_padding=5.5,
@@ -353,7 +353,7 @@ def vc2(cache):
         )
         baca.spanners.damp(
             o,
-            abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
+            baca.postevent.bound_details_right_padding(4.5),
             left_broken=True,
             rleak=True,
             staff_padding=3,
@@ -433,7 +433,7 @@ def cb2(cache):
         )
         baca.spanners.damp(
             o,
-            abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
+            baca.postevent.bound_details_right_padding(4.5),
             left_broken=True,
             rleak=True,
             staff_padding=3,
