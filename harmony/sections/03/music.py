@@ -359,7 +359,7 @@ def perc1(m):
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(6, 8)) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -389,7 +389,7 @@ def perc2(m):
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
-            abjad.Tweak(r"- \tweak staff-padding 5"),
+            baca.postevent.staff_padding(5),
         )
     with baca.scope(m[2]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
@@ -409,7 +409,7 @@ def perc2(m):
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(6, 8)) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -452,7 +452,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-pdlt-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")

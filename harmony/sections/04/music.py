@@ -401,7 +401,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "C#4")

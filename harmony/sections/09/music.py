@@ -191,7 +191,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[2]) as o:
         baca.accent(o.pheads())
@@ -210,7 +210,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-sponge-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
         baca.glissando(
             baca.select.rleak(o.pleaves()[-1:]),
@@ -222,7 +222,7 @@ def perc2(m):
             o.pleaf(-1),
             r"\baca-boxed-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -257,7 +257,7 @@ def va(m):
         baca.markup(
             o.pleaf(0),
             r"\harmony-match-harp-decay-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
         baca.spanners.xfb(
             o.pleaves(),
@@ -279,7 +279,7 @@ def vc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-eleven-a",
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            baca.postevent.staff_padding(1.5),
         )
 
 
@@ -327,12 +327,12 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-thirteen-a",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.postevent.staff_padding(3),
         )
         baca.markup(
             o.phead(-1),
             r"\baca-fourteen-a",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.postevent.staff_padding(3),
         )
 
 

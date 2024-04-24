@@ -329,7 +329,7 @@ def bfl(m):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                baca.postevent.staff_padding(3),
                 alteration="A5",
                 rleak=True,
             )
@@ -355,7 +355,7 @@ def bfl(m):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.postevent.staff_padding(3),
             alteration="A5",
             rleak=True,
         )
@@ -386,7 +386,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 7"),
+            baca.postevent.staff_padding(7),
         )
     with baca.scope(m[4]) as o:
         library.slate_staff_position(o)
@@ -394,7 +394,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 7"),
+            baca.postevent.staff_padding(7),
         )
     with baca.scope(m.get(5, 10)) as o:
         library.triangle_staff_position(o)
@@ -408,7 +408,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 7"),
+            baca.postevent.staff_padding(7),
         )
     with baca.scope(m[12]) as o:
         library.triangle_staff_position(o)
@@ -428,7 +428,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 7"),
+            baca.postevent.staff_padding(7),
         )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -443,7 +443,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
         )
     with baca.scope(m[4]) as o:
         library.slate_staff_position(o)
@@ -453,7 +453,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
         )
     with baca.scope(m.get(5, 10)) as o:
         library.tam_tam_staff_position(o)
@@ -467,7 +467,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
         )
     with baca.scope(m[13]) as o:
         library.slate_staff_position(o)
@@ -477,7 +477,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
         )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -512,7 +512,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-sons-xylophoniques-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
     with baca.scope(m.get(3, 10)) as o:
         baca.override.ottava_bracket_staff_padding(o, 8)
@@ -535,7 +535,7 @@ def hp(m):
             o.pleaf(0),
             r"\baca-sons-xylophoniques-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0"),
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
         baca.spanners.metric_modulation(
             o.leaves()[-1:],
@@ -609,13 +609,13 @@ def vc1(m):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                baca.postevent.staff_padding(3),
                 rleak=True,
             )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            baca.postevent.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -632,13 +632,13 @@ def vc1(m):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.postevent.staff_padding(3),
             rleak=True,
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            baca.postevent.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -738,14 +738,14 @@ def cb1(m):
         baca.spanners.trill(
             baca.select.tleaves(o),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.postevent.staff_padding(3),
             rleak=True,
         )
         baca.markup(o.pleaf(0), r"\baca-seven-d")
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            baca.postevent.staff_padding(1.5),
             direction=abjad.DOWN,
         )
 

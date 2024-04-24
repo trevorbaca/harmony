@@ -193,7 +193,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
 
 
@@ -229,7 +229,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5"),
+            baca.postevent.staff_padding(5),
         )
     with baca.scope(m[1]) as o:
         baca.hairpin(
