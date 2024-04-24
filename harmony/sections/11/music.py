@@ -485,7 +485,7 @@ def bfl(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-e-flat",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
         )
     with baca.scope(m[10]) as o:
         baca.pitch(o, "Eb3:Eb4:Bb4")
@@ -518,7 +518,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -533,7 +533,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(4, 5)) as o:
         library.triangle_staff_position(o)
@@ -561,7 +561,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[7]) as o:
         library.bass_drum_staff_position(o)
@@ -573,7 +573,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[8]) as o:
         library.bass_drum_staff_position(o)
@@ -589,13 +589,13 @@ def perc1(m):
         baca.hairpin(
             baca.select.lparts(o.tleaves(), [1, 1, 1, 1, 1, 1, 1]),
             "o< p> pp pp< p> pp< p>o!",
-            abjad.Tweak(r"- \tweak staff-padding 10"),
+            baca.postevent.staff_padding(10),
             rleak=True,
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -619,7 +619,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(4, 5)) as o:
         library.tam_tam_staff_position(o)
@@ -636,7 +636,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[7]) as o:
         library.brake_drum_staff_position(o)
@@ -652,7 +652,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[10]) as o:
         library.tam_tam_staff_position(o)
@@ -662,7 +662,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -679,7 +679,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-sons-xylophoniques-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -743,7 +743,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-whisk-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[10]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -776,7 +776,7 @@ def va(m):
         baca.markup(
             o.pleaf(0),
             r"\harmony-match-harp-decay-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
         baca.spanners.xfb(
             o.pleaves(),
@@ -961,7 +961,7 @@ def cb2(m):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-fourteen-d",
-                abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                baca.postevent.staff_padding(5.5),
             )
             baca.markup(
                 o.pleaf(0),

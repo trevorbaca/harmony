@@ -455,7 +455,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         baca.accent(o.pheads())
@@ -468,7 +468,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[7]) as o:
         baca.accent(o.pheads())
@@ -492,7 +492,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(14)) as o:
         baca.hairpin(
@@ -560,19 +560,19 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\harmony-rh-bow-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
     with baca.scope(m.get(4)) as o:
         baca.markup(
             o.pleaf(0),
             r"\harmony-rh-bow-plus-lh-bow-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
     with baca.scope(m.get(12)) as o:
         baca.markup(
             o.pleaf(0),
             r"\harmony-rh-bow-only-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o.leaves(), 4)
@@ -705,7 +705,7 @@ def vc2(m):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-eleven-a",
-                abjad.Tweak(r"- \tweak staff-padding 1.5"),
+                baca.postevent.staff_padding(1.5),
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.untie(o.pleaves())

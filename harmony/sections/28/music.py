@@ -267,7 +267,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[5]) as o:
         library.brake_drum_staff_position(o)
@@ -279,7 +279,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(7, 10)) as o:
         library.triangle_staff_position(o)
@@ -298,7 +298,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -315,7 +315,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -333,7 +333,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(7, 10)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -350,7 +350,7 @@ def perc2(m):
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
 
 
@@ -384,7 +384,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\harmony-rh-bow-plus-lh-bow-markup",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
 
 

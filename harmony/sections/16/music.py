@@ -278,7 +278,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-paper-towel-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[8]) as o:
         library.slate_staff_position(o)
@@ -290,7 +290,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(9, 10)) as o:
         library.brake_drum_staff_position(o)
@@ -302,7 +302,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-paper-towel-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -318,7 +318,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(9, 10)) as o:
         library.tam_tam_staff_position(o)
@@ -373,7 +373,7 @@ def va(m):
         pheads = [_ for _ in pheads if abjad.get.duration(_) >= abjad.Duration((1, 8))]
         baca.alternate_bow_strokes(
             pheads,
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            baca.postevent.staff_padding(1.5),
             full=True,
         )
         baca.spanners.half_clt(
@@ -483,7 +483,7 @@ def cb1(m):
         ]
         baca.alternate_bow_strokes(
             pheads,
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
             full=True,
         )
         baca.spanners.half_clt(
@@ -515,7 +515,7 @@ def cb1(m):
         ]
         baca.alternate_bow_strokes(
             pheads,
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
             full=True,
         )
         baca.spanners.half_clt(
@@ -541,7 +541,7 @@ def cb2(m):
         ]
         baca.alternate_bow_strokes(
             pheads,
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
             full=True,
         )
         baca.spanners.half_clt(
@@ -573,7 +573,7 @@ def cb2(m):
         ]
         baca.alternate_bow_strokes(
             pheads,
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
             full=True,
         )
         baca.spanners.half_clt(

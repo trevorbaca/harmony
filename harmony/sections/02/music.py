@@ -433,7 +433,7 @@ def perc1(cache):
         baca.markup(
             o.pleaf(0, grace=False),
             r"\baca-boxed-bd-superball-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[6]) as o:
         baca.laissez_vibrer(o.ptail(0))
@@ -501,7 +501,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[4]) as o:
         baca.override.tuplet_bracket_direction_up(o)
@@ -515,7 +515,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(5, 6)) as o:
         library.slate_staff_position(o)
@@ -536,7 +536,7 @@ def perc2(m):
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
+            baca.postevent.staff_padding(3),
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -552,7 +552,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
 
 
@@ -570,7 +570,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         ),
     with baca.scope(m[1]) as o:
         for clpart in baca.select.clparts(o, [3]):
@@ -594,7 +594,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-whisk-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -613,7 +613,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak staff-padding 4"),
+            baca.postevent.staff_padding(4),
         )
         baca.override.dls_staff_padding(o, 3),
     with baca.scope(m[8]) as o:
@@ -674,7 +674,7 @@ def va(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-a",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
         for plt in baca.select.plts(o):
             baca.spanners.damp(

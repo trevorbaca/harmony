@@ -287,7 +287,7 @@ def bfl(m):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(r"- \tweak staff-padding 3"),
+                baca.postevent.staff_padding(3),
                 rleak=True,
             )
             baca.spanners.text(
@@ -333,7 +333,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         library.slate_staff_position(o)
@@ -353,7 +353,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[10]) as o:
         library.brake_drum_staff_position(o)
@@ -380,7 +380,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(5, 9)) as o:
         library.slate_staff_position(o)
@@ -395,7 +395,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[10]) as o:
         library.slate_staff_position(o)
@@ -411,7 +411,7 @@ def perc2(m):
             o.pleaf(2),
             r"\baca-boxed-slate-scrape-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0"),
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -428,7 +428,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-pince-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[2]) as o:
         with baca.scope(o.pleaf(0)) as u:
@@ -439,7 +439,7 @@ def hp(m):
             baca.markup(
                 u,
                 r"\baca-whisk-markup",
-                abjad.Tweak(r"- \tweak staff-padding 8"),
+                baca.postevent.staff_padding(8),
             )
     with baca.scope(m.get(2, 3)) as o:
         library.whisk_staff_position(o)

@@ -240,7 +240,7 @@ def perc1(m):
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptail(0))
@@ -288,7 +288,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -320,7 +320,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-whisk-markup",
-            abjad.Tweak(r"- \tweak staff-padding 6"),
+            baca.postevent.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -346,7 +346,7 @@ def va(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-a",
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            baca.postevent.staff_padding(5.5),
         )
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 4)
