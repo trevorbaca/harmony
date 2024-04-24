@@ -693,7 +693,7 @@ def cb1(m):
             o.pleaf(0),
             r"\baca-string-iv-markup",
             abjad.Tweak(r"- \tweak X-offset 2.5"),
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -756,7 +756,7 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")

@@ -424,7 +424,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "Eb4")
@@ -446,7 +446,7 @@ def hp(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-lv-markup",
-                abjad.Tweak(r"- \tweak padding 1.5"),
+                baca.postevent.padding(1.5),
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4 + 2)

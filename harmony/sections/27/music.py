@@ -56,7 +56,7 @@ def GLOBALS(skips, rests, first_measure_number):
     wrappers = baca.markup(
         skips[4 - 1],
         r"\harmony-repeat-three-markup",
-        abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
+        baca.postevent.extra_offset((0, 9)),
         abjad.Tweak(r"- \tweak font-size 4"),
     )
     baca.tags.tag(wrappers, baca.tags.ONLY_PARTS)
@@ -71,13 +71,13 @@ def GLOBALS(skips, rests, first_measure_number):
     wrappers = baca.markup(
         skips[2 - 1],
         r"\harmony-text-twenty-five",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[8 - 1],
         r"\harmony-text-twenty-six",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -680,7 +680,7 @@ def vc1(cache):
         baca.hairpin(
             baca.select.plts(o),
             "pp-- !< mp>o",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -734,7 +734,7 @@ def vc2(cache):
         baca.hairpin(
             baca.select.lparts(o, [1, 2, 3, 1]),
             "pp-- !< mp-- !>o",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
             rleak=True,
         )
         baca.untie(o.leaves())
@@ -791,7 +791,7 @@ def cb1(cache):
         baca.hairpin(
             baca.select.lparts(o, [2, 3, 1]),
             "pp-- !< mp>o",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
             rleak=True,
         )
         baca.untie(o.leaves())
@@ -869,7 +869,7 @@ def cb2(cache):
         baca.hairpin(
             baca.select.lparts(o, [2, 1, 1]),
             "pp-- !< mp>o",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())

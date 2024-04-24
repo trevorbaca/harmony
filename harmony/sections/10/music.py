@@ -52,7 +52,7 @@ def GLOBALS(skips, rests, first_measure_number):
     wrappers = baca.markup(
         skips[9 - 1],
         r"\harmony-text-eight",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -591,7 +591,7 @@ def va(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m[3]) as o:
@@ -650,7 +650,7 @@ def vc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     for n in [3, 8]:
@@ -696,7 +696,7 @@ def vc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     for n in [3, 8]:
@@ -775,7 +775,7 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m[3]) as o:
@@ -786,7 +786,7 @@ def cb2(m):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-iii-markup",
-                abjad.Tweak(r"- \tweak padding 1"),
+                baca.postevent.padding(1),
                 direction=abjad.DOWN,
             )
     with baca.scope(m.get(10, 15)) as o:

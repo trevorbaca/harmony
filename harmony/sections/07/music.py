@@ -51,7 +51,7 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[3 - 1],
         r"\harmony-text-six",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -606,7 +606,7 @@ def hp(cache):
             baca.markup(
                 u,
                 r"\baca-lv-markup",
-                abjad.Tweak(r"- \tweak padding 1.5"),
+                baca.postevent.padding(1.5),
             )
             baca.override.dls_staff_padding(u, 4 + 2),
         with baca.scope(o.pleaf(-2)) as u:
@@ -846,7 +846,7 @@ def vc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-eleven-a",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -929,7 +929,7 @@ def cb1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m[8]) as o:
@@ -979,7 +979,7 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            abjad.Tweak(r"- \tweak padding 1"),
+            baca.postevent.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m[8]) as o:
@@ -1003,7 +1003,7 @@ def composites(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-quasi-bisb-markup",
-                abjad.Tweak(r"- \tweak padding 1.5"),
+                baca.postevent.padding(1.5),
             )
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

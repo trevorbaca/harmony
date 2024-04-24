@@ -38,7 +38,7 @@ def GLOBALS(skips, rests, first_measure_number):
     wrappers = baca.markup(
         skips[7 - 1],
         r"\harmony-text-seven",
-        abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+        baca.postevent.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -269,7 +269,7 @@ def va(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-quasi-bisb-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m[2]) as o:
         baca.hairpin(
@@ -314,7 +314,7 @@ def vc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-quasi-bisb-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m[2]) as o:
         baca.hairpin(
@@ -363,7 +363,7 @@ def vc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-quasi-bisb-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -400,7 +400,7 @@ def cb1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-quasi-bisb-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
@@ -443,7 +443,7 @@ def cb2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-quasi-bisb-markup",
-            abjad.Tweak(r"- \tweak padding 1.5"),
+            baca.postevent.padding(1.5),
         )
     with baca.scope(m[5]) as o:
         baca.dynamic(o.phead(0), "p")
@@ -472,7 +472,7 @@ def composites(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-quasi-bisb-ancora-markup",
-                abjad.Tweak(r"- \tweak padding 1.5"),
+                baca.postevent.padding(1.5),
             )
 
 
