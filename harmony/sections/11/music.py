@@ -556,7 +556,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             '"f"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -628,7 +628,7 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "mp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
     with baca.scope(m[6]) as o:
         library.brake_drum_staff_position(o)
@@ -694,7 +694,7 @@ def hp(cache):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -708,14 +708,14 @@ def hp(cache):
             baca.dynamic(
                 u,
                 "f-ancora",
-                abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                baca.postevent.self_alignment_x(-0.9),
             )
         with baca.scope(o.phead(-1)) as u:
             baca.pitch(u, "E4")
             baca.dynamic(
                 u,
                 "f-ancora",
-                abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                baca.postevent.self_alignment_x(-0.9),
             )
             baca.snap_pizzicato(u)
     with baca.scope(m[7]) as o:
@@ -842,7 +842,7 @@ def vc1(m):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-eleven-d",
-                abjad.Tweak(r"- \tweak X-offset 2.5"),
+                baca.postevent.x_offset(2.5),
                 direction=abjad.DOWN,
             )
             baca.markup(
@@ -917,7 +917,7 @@ def cb1(m):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-fifteen-d",
-                abjad.Tweak(r"- \tweak X-offset 2.5"),
+                baca.postevent.x_offset(2.5),
                 direction=abjad.DOWN,
             )
             baca.markup(

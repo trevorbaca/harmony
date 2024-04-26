@@ -431,7 +431,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             '"ff"-ancora',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m[7]) as o:
         library.slate_staff_position(o)
@@ -517,7 +517,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
             baca.postevent.staff_padding(5),
         )
         baca.spanners.metric_modulation(

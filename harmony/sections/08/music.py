@@ -186,8 +186,8 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
-            abjad.Tweak(r"- \tweak X-extent #'(0 . 0)"),
+            baca.postevent.self_alignment_x(-0.75),
+            baca.postevent.x_extent_zero(),
         )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(

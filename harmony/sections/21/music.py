@@ -445,7 +445,7 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m[5]) as o:
         baca.override.tuplet_bracket_direction_up(o)

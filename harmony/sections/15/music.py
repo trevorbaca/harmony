@@ -298,7 +298,7 @@ def bfl(cache):
         baca.dynamic(
             o.phead(2),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
@@ -372,7 +372,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(2),
             '"f"-sempre',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -467,7 +467,7 @@ def va(m):
         baca.dynamic(
             o.phead(2),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         for run in baca.select.runs(o):
             baca.spanners.xfb(
@@ -538,7 +538,7 @@ def vc2(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.scp(
             baca.select.ltleaves(o),
@@ -596,13 +596,13 @@ def cb1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-e-flat",
-            abjad.Tweak(r"- \tweak X-offset 3"),
+            baca.postevent.x_offset(3),
         )
         baca.triple_staccato(o.pheads())
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.scp(
             baca.select.ltleaves(o),
@@ -661,7 +661,7 @@ def cb2(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.scp(
             baca.select.ltleaves(o),

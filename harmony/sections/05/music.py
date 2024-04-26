@@ -307,7 +307,7 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "ff-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
         baca.markup(
             o.pleaf(0),
@@ -327,7 +327,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
             baca.postevent.staff_padding(7),
         )
     with baca.scope(m[2]) as o:
@@ -381,7 +381,7 @@ def perc2(m):
             baca.markup(
                 u,
                 r"\baca-boxed-brake-drum-markup",
-                abjad.Tweak(r"- \tweak self-alignment-X 1"),
+                baca.postevent.self_alignment_x(1),
                 baca.postevent.staff_padding(7),
             )
         baca.spanners.metric_modulation(
@@ -692,7 +692,7 @@ def cb1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            abjad.Tweak(r"- \tweak X-offset 2.5"),
+            baca.postevent.x_offset(2.5),
             baca.postevent.padding(1),
             direction=abjad.DOWN,
         )

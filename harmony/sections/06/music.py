@@ -559,7 +559,7 @@ def perc1(m):
             baca.markup(
                 u,
                 r"\baca-boxed-bd-struck-markup",
-                abjad.Tweak(r"- \tweak self-alignment-X 1"),
+                baca.postevent.self_alignment_x(1),
                 baca.postevent.staff_padding(6),
             )
     with baca.scope(m[3]) as o:
@@ -570,7 +570,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
+            baca.postevent.self_alignment_x(0.75),
             baca.postevent.staff_padding(5),
         )
     with baca.scope(m[4]) as o:
@@ -592,7 +592,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
+            baca.postevent.self_alignment_x(0.75),
             baca.postevent.staff_padding(5),
         )
     with baca.scope(m[6]) as o:
@@ -603,7 +603,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
+            baca.postevent.self_alignment_x(0.75),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m[8]) as o:
@@ -661,7 +661,7 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "p-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
     with baca.scope(m[4]) as o:
         library.damp_rest_after_each_ptail(o)
@@ -680,7 +680,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
+            baca.postevent.self_alignment_x(0.75),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(1, 7)) as o:
@@ -701,7 +701,7 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
         baca.markup(
             o.pleaf(0),
@@ -725,7 +725,7 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         library.damp_rest_after_each_ptail(o)
     with baca.scope(m[3]) as o:
@@ -803,7 +803,7 @@ def hp(m):
     with baca.scope(m[7]) as o:
         baca.damp(
             o.rest(-1),
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
         )
     with baca.scope(m[8]) as o:
         baca.damp(o.rest(-1))
@@ -888,12 +888,12 @@ def va(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "mp-pp",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.text(
             baca.select.rleak(o.tleaves(grace=False), count=1),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -921,12 +921,12 @@ def va(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "mp-pp",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -952,7 +952,7 @@ def va(cache):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
         baca.hairpin(
             o.plts()[-1:],
@@ -1006,12 +1006,12 @@ def vc1(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "mp-pp",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.text(
             baca.select.rleak(o.tleaves(grace=False), count=1),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -1040,12 +1040,12 @@ def vc1(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "mp-pp",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -1090,7 +1090,7 @@ def vc1(cache):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.hairpin(
             o.plts()[-1:],
@@ -1192,7 +1192,7 @@ def vc2(m):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.hairpin(
             o.plts()[-1:],

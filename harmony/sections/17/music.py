@@ -351,7 +351,7 @@ def perc1(cache):
         baca.dynamic(
             o.phead(0),
             '"f"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(

@@ -654,7 +654,7 @@ def perc1(cache):
         baca.dynamic(
             o.rest(1),
             "ff-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 5)
         baca.markup(
@@ -738,7 +738,7 @@ def perc2(cache):
         baca.dynamic(
             o.rest(1),
             "ff-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 5)
     with baca.scope(m[11]) as o:
@@ -831,13 +831,13 @@ def hp(cache):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 4 + 2)
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak X-offset 3"),
+            baca.postevent.x_offset(3),
         )
     with baca.scope(m[12]) as o:
         baca.pitch(o, "G6:A6:Bb6")
@@ -1086,7 +1086,7 @@ def composites(cache):
             baca.dynamic(
                 o.phead(0),
                 "fff-scratch",
-                abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                baca.postevent.self_alignment_x(-0.9),
             )
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
     for name in ["va", "vc1", "vc2", "cb1"]:
