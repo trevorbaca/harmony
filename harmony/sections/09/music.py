@@ -221,7 +221,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(-1),
             r"\baca-boxed-bd-fingertips-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+            baca.postevent.self_alignment_x(0.25),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(1, 2)) as o:

@@ -314,7 +314,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "mp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m[7]) as o:
         library.triangle_staff_position(o)
@@ -330,7 +330,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -350,7 +350,7 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
@@ -603,7 +603,7 @@ def cb2(cache):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.clef(o.leaf(0), "bass")

@@ -324,7 +324,7 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "mf-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
         baca.spanners.covered(
             baca.select.ltleaves(o),
@@ -358,7 +358,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(6, 8)) as o:
@@ -388,7 +388,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+            baca.postevent.self_alignment_x(0.25),
             baca.postevent.staff_padding(5),
         )
     with baca.scope(m[2]) as o:
@@ -408,7 +408,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(6, 8)) as o:
@@ -418,7 +418,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+            baca.postevent.self_alignment_x(0.25),
             abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
         )
     with baca.scope(m[6]) as o:
@@ -471,7 +471,7 @@ def va(m):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m[2]) as o:
         library.bridge_staff_position(o)
@@ -552,7 +552,7 @@ def vc1(m):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         leaves = o.rleaves(count=3)[1:]
         baca.hairpin(
@@ -663,7 +663,7 @@ def cb1(m):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 6),
         baca.override.rest_extra_offset(o.rest(-1), (-0.75, 0))

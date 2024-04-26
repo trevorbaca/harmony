@@ -403,7 +403,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -416,14 +416,14 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m[13]) as o:
         library.slate_staff_position(o)
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -462,7 +462,7 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
         baca.markup(
             o.pleaf(0),
@@ -507,7 +507,7 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "p-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -524,7 +524,7 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            baca.postevent.self_alignment_x(-0.75),
         )
     with baca.scope(m[13]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -534,7 +534,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-sons-xylophoniques-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0"),
+            baca.postevent.self_alignment_x(0),
             baca.postevent.staff_padding(4),
         )
         baca.spanners.metric_modulation(
@@ -761,7 +761,7 @@ def cb2(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.override.dls_staff_padding(o, 6)

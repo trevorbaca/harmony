@@ -274,7 +274,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -343,13 +343,13 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "mp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+            baca.postevent.self_alignment_x(0.25),
         )
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+            baca.postevent.self_alignment_x(0.25),
             baca.postevent.staff_padding(4),
         )
 
@@ -372,7 +372,7 @@ def hp(cache):
         baca.dynamic(
             o.phead(0),
             "mp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 4)
         baca.spanners.text(
@@ -417,7 +417,7 @@ def va(cache):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.bow_speed(
             o,

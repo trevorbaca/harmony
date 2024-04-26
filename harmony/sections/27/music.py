@@ -377,7 +377,7 @@ def bfl(cache):
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             lilypond_id=2,
             rleak=True,
@@ -459,7 +459,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0"),
+            baca.postevent.self_alignment_x(0),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m[7]) as o:
@@ -531,7 +531,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0"),
+            baca.postevent.self_alignment_x(0),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m[7]) as o:

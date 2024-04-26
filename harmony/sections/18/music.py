@@ -475,7 +475,7 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         for run in baca.select.runs(o):
             baca.spanners.text(

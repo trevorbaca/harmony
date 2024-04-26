@@ -389,7 +389,7 @@ def bfl(cache):
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-g-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -433,7 +433,7 @@ def bfl(cache):
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -463,7 +463,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             '"f"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -516,7 +516,7 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "p-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
 
 

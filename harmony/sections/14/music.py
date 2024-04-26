@@ -464,7 +464,7 @@ def perc1(cache):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -504,7 +504,7 @@ def perc1(cache):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -536,7 +536,7 @@ def perc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
+            baca.postevent.self_alignment_x(0.75),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(1, 4)) as o:
@@ -566,7 +566,7 @@ def perc2(cache):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.hairpin(
             baca.select.plts(o)[1:],
@@ -583,7 +583,7 @@ def perc2(cache):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -801,7 +801,7 @@ def vc1(cache):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
     for n in [9, 11]:
         with baca.scope(m[n]) as o:
@@ -869,7 +869,7 @@ def vc2(cache):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
@@ -1052,7 +1052,7 @@ def composites(cache):
             baca.dynamic(
                 o.phead(0),
                 "ppp",
-                abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                baca.postevent.self_alignment_x(-0.9),
             )
             baca.spanners.half_clt(
                 baca.select.ltleaves(o),

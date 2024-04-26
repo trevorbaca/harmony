@@ -209,7 +209,7 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "p-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         for run in baca.select.runs(o):
             baca.spanners.text(
@@ -223,7 +223,7 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "p-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.spanners.trill(
             baca.select.tleaves(o),
@@ -273,7 +273,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -285,7 +285,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             '"f"',
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),

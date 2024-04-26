@@ -253,7 +253,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -265,7 +265,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -322,7 +322,7 @@ def perc2(m):
         baca.markup(
             o.leaf(-1),
             r"\baca-boxed-purpleheart-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
             baca.postevent.staff_padding(5),
         )
         baca.spanners.metric_modulation(
@@ -359,7 +359,7 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "p-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(

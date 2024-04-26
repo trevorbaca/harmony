@@ -328,7 +328,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "p-ancora",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -348,7 +348,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -410,7 +410,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(2),
             r"\baca-boxed-slate-scrape-markup",
-            abjad.Tweak(r"- \tweak self-alignment-X 0"),
+            baca.postevent.self_alignment_x(0),
             baca.postevent.staff_padding(6),
         )
     with baca.scope(m.get(2, 10)) as o:
@@ -457,7 +457,7 @@ def hp(m):
         baca.dynamic(
             o.phead(0),
             "f-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 4 + 3)
         baca.markup(

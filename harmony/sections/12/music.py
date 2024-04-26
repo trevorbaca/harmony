@@ -533,7 +533,7 @@ def bfl(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             baca.postevent.bound_details_right_padding(5),
-            abjad.Tweak(r"- \tweak direction #down"),
+            baca.postevent.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -713,7 +713,7 @@ def perc2(cache):
         baca.dynamic(
             o.phead(0),
             "pp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            baca.postevent.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
@@ -936,13 +936,13 @@ def vc1(cache):
             o.pleaf(0),
             r"\baca-eleven-e-flat",
             baca.postevent.extra_offset((-2, 0)),
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
         )
     with baca.scope(m.get(11, 15)) as o:
         baca.markup(
             o.pleaf(0),
             r"\baca-eleven-e-flat",
-            abjad.Tweak(r"- \tweak X-offset 3"),
+            baca.postevent.x_offset(3),
             baca.postevent.padding(1),
         )
 
@@ -1053,13 +1053,13 @@ def cb1(cache):
             o.pleaf(0),
             r"\baca-seven-e-flat",
             baca.postevent.extra_offset((-2, 0)),
-            abjad.Tweak(r"- \tweak self-alignment-X 1"),
+            baca.postevent.self_alignment_x(1),
         )
     with baca.scope(m.get(11, 15)) as o:
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-e-flat",
-            abjad.Tweak(r"- \tweak X-offset 3"),
+            baca.postevent.x_offset(3),
             baca.postevent.padding(1),
         )
 
