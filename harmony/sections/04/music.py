@@ -338,7 +338,7 @@ def perc1(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "f-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 5.5)
@@ -401,7 +401,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "C#4")
@@ -427,13 +427,13 @@ def va(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "ff-p",
-            baca.postevent.self_alignment_x(-0.5),
+            baca.tweak.self_alignment_x(-0.5),
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-            baca.postevent.direction_down(),
+            baca.tweak.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -476,12 +476,12 @@ def vc1(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "ff-p",
-            baca.postevent.self_alignment_x(-0.5),
+            baca.tweak.self_alignment_x(-0.5),
         )
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-            baca.postevent.direction_down(),
+            baca.tweak.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -509,12 +509,12 @@ def vc2(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "ff-p",
-            baca.postevent.self_alignment_x(-0.5),
+            baca.tweak.self_alignment_x(-0.5),
         )
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-            baca.postevent.direction_down(),
+            baca.tweak.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=8,
@@ -559,13 +559,13 @@ def cb1(cache):
         baca.dynamic(
             o.leaf(0, grace=False),
             "ff-p",
-            baca.postevent.self_alignment_x(-0.5),
+            baca.tweak.self_alignment_x(-0.5),
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
         baca.spanners.text(
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-            baca.postevent.direction_down(),
+            baca.tweak.direction_down(),
             direction=abjad.DOWN,
             rleak=True,
             staff_padding=10,
@@ -582,7 +582,7 @@ def cb1(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-string-iv-markup",
-                baca.postevent.padding(1.5),
+                baca.tweak.padding(1.5),
                 direction=abjad.DOWN,
             )
     for item in [(1, 8), 11]:
@@ -602,8 +602,8 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            baca.postevent.x_offset(2.5),
-            baca.postevent.padding(1),
+            baca.tweak.x_offset(2.5),
+            baca.tweak.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(8, 9)) as o:

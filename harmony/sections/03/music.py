@@ -49,13 +49,13 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[3 - 1],
         r"\harmony-text-two",
-        baca.postevent.extra_offset((4, -30)),
+        baca.tweak.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
     wrappers = baca.markup(
         skips[5 - 1],
         r"\harmony-text-three",
-        baca.postevent.extra_offset((4, -30)),
+        baca.tweak.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -324,7 +324,7 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "mf-sempre",
-            baca.postevent.self_alignment_x(-0.75),
+            baca.tweak.self_alignment_x(-0.75),
         )
         baca.spanners.covered(
             baca.select.ltleaves(o),
@@ -358,8 +358,8 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            baca.postevent.self_alignment_x(1),
-            baca.postevent.staff_padding(6),
+            baca.tweak.self_alignment_x(1),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(6, 8)) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -388,8 +388,8 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.self_alignment_x(0.25),
-            baca.postevent.staff_padding(5),
+            baca.tweak.self_alignment_x(0.25),
+            baca.tweak.staff_padding(5),
         )
     with baca.scope(m[2]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
@@ -408,8 +408,8 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            baca.postevent.self_alignment_x(1),
-            baca.postevent.staff_padding(6),
+            baca.tweak.self_alignment_x(1),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(6, 8)) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -418,8 +418,8 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.self_alignment_x(0.25),
-            baca.postevent.staff_padding(5 + 1),
+            baca.tweak.self_alignment_x(0.25),
+            baca.tweak.staff_padding(5 + 1),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
@@ -452,7 +452,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-pdlt-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -471,7 +471,7 @@ def va(m):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
     with baca.scope(m[2]) as o:
         library.bridge_staff_position(o)
@@ -552,7 +552,7 @@ def vc1(m):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         leaves = o.rleaves(count=3)[1:]
         baca.hairpin(
@@ -663,7 +663,7 @@ def cb1(m):
         baca.dynamic(
             o.phead(0),
             '"ff"',
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 6),
         baca.override.rest_extra_offset(o.rest(-1), (-0.75, 0))

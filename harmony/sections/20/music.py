@@ -241,7 +241,7 @@ def bfl(m):
             elif i == 1:
                 baca.spanners.trill(
                     run,
-                    baca.postevent.bound_details_right_padding(3),
+                    baca.tweak.bound_details_right_padding(3),
                     alteration="m2",
                     rleak=True,
                 )
