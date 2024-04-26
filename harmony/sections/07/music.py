@@ -567,7 +567,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak padding 2.5"),
+            baca.postevent.padding(2.5),
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -806,7 +806,7 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
             baca.select.tleaves(o),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
+            baca.postevent.bound_details_right_padding(4),
             rleak=True,
             staff_padding=3,
         )
