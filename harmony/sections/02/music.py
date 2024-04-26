@@ -467,7 +467,7 @@ def perc1(cache):
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
             baca.postevent.self_alignment_x(0.25),
-            abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
+            baca.postevent.staff_padding(5 + 1),
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.staff_position(
@@ -1056,7 +1056,7 @@ def cb2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-eleven-a",
-            abjad.Tweak(rf"- \tweak staff-padding {5.5 + 1}"),
+            baca.postevent.staff_padding(5.5 + 1),
         )
         baca.dynamic(o.phead(0), "mp")
         baca.override.dls_staff_padding(o, 3),

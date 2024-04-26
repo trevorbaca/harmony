@@ -1144,7 +1144,7 @@ def cb2(cache):
         baca.spanners.trill(
             baca.select.tleaves(o),
             # large right padding because open-volta follows in next section
-            abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
+            baca.postevent.bound_details_right_padding(6),
             baca.postevent.staff_padding(3),
             alteration="Fqs5",
             rleak=True,
@@ -1254,7 +1254,7 @@ def composites(cache):
             baca.spanners.trill(
                 baca.select.tleaves(o),
                 # large right padding because open-volta follows in next section
-                abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
+                baca.postevent.bound_details_right_padding(6),
                 baca.postevent.staff_padding(3),
                 rleak=True,
             )

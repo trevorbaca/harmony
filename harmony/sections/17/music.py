@@ -291,7 +291,7 @@ def bfl(m):
         )
         baca.spanners.trill(
             o.tleaves(),
-            abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+            baca.postevent.bound_details_left_text(r"\harmony-d-d-sharp-markup"),
             baca.postevent.staff_padding(8),
             rleak=True,
         )

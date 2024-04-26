@@ -431,7 +431,7 @@ def perc2(cache):
             baca.markup(
                 u,
                 r"\baca-boxed-brake-drum-markup",
-                abjad.Tweak(r"- \tweak self-alignment-X 0.5"),
+                baca.postevent.self_alignment_x(0.5),
                 baca.postevent.staff_padding(6),
             )
     with baca.scope(m[5]) as o:

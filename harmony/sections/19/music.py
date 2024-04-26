@@ -852,7 +852,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-bisb-markup",
-            abjad.Tweak(r"- \tweak X-offset 4"),
+            baca.postevent.x_offset(4),
             baca.postevent.staff_padding(4),
         )
     for n in [11, 13]:

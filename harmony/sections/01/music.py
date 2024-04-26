@@ -271,7 +271,7 @@ def perc1(m):
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
             baca.postevent.self_alignment_x(0.25),
-            abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
+            baca.postevent.staff_padding(5 + 1),
         )
 
 
@@ -302,7 +302,7 @@ def perc2(m):
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
             baca.postevent.self_alignment_x(0.25),
-            abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
+            baca.postevent.staff_padding(5 + 1),
         )
 
 
@@ -494,7 +494,7 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-eleven-a",
-            abjad.Tweak(rf"- \tweak staff-padding {5.5 + 1}"),
+            baca.postevent.staff_padding(5.5 + 1),
         )
         baca.dynamic(o.phead(0), "mp")
         for plt in baca.select.plts(o):
