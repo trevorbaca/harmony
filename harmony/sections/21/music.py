@@ -1,4 +1,3 @@
-import abjad
 import baca
 
 from harmony import library
