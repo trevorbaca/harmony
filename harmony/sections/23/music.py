@@ -306,7 +306,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-struck-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(4, 6)) as o:
         library.bass_drum_staff_position(o)
@@ -314,7 +314,7 @@ def perc1(m):
         baca.dynamic(
             o.phead(0),
             "mp-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
     with baca.scope(m[7]) as o:
         library.triangle_staff_position(o)
@@ -323,19 +323,19 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            baca.postevent.staff_padding(7),
+            baca.tweak.staff_padding(7),
         )
     with baca.scope(m[8]) as o:
         library.slate_staff_position(o)
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            baca.postevent.staff_padding(7),
+            baca.tweak.staff_padding(7),
         )
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -350,13 +350,13 @@ def perc2(m):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -367,7 +367,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-struck-markup",
-            baca.postevent.staff_padding(8),
+            baca.tweak.staff_padding(8),
         )
     with baca.scope(m[8]) as o:
         library.slate_staff_position(o)
@@ -377,7 +377,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            baca.postevent.staff_padding(8),
+            baca.tweak.staff_padding(8),
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -400,7 +400,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-xyl-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
 
 
@@ -509,7 +509,7 @@ def vc2(cache):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
-            baca.postevent.bound_details_right_padding(5),
+            baca.tweak.bound_details_right_padding(5),
             rleak=True,
             staff_padding=3,
         )
@@ -603,7 +603,7 @@ def cb2(cache):
         baca.dynamic(
             o.phead(0),
             "pp-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.clef(o.leaf(0), "bass")

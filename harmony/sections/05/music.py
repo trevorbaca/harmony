@@ -299,7 +299,7 @@ def bfl(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-jet-whistle-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3"),
@@ -307,12 +307,12 @@ def bfl(m):
         baca.dynamic(
             o.phead(0),
             "ff-ancora",
-            baca.postevent.self_alignment_x(-0.75),
+            baca.tweak.self_alignment_x(-0.75),
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-jet-whistle-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m.get(2, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -327,8 +327,8 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            baca.postevent.self_alignment_x(1),
-            baca.postevent.staff_padding(7),
+            baca.tweak.self_alignment_x(1),
+            baca.tweak.staff_padding(7),
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -340,7 +340,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
@@ -364,7 +364,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-small-beater-markup",
-            baca.postevent.staff_padding(8),
+            baca.tweak.staff_padding(8),
         )
 
 
@@ -381,8 +381,8 @@ def perc2(m):
             baca.markup(
                 u,
                 r"\baca-boxed-brake-drum-markup",
-                baca.postevent.self_alignment_x(1),
-                baca.postevent.staff_padding(7),
+                baca.tweak.self_alignment_x(1),
+                baca.tweak.staff_padding(7),
             )
         baca.spanners.metric_modulation(
             baca.select.runs(o)[:1],
@@ -400,7 +400,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
@@ -425,7 +425,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
 
 
@@ -438,7 +438,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-pdlt-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -469,7 +469,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-tuning-key-glissando-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
         baca.override.dls_staff_padding(o, 6.5)
     with baca.scope(m[5]) as o:
@@ -692,8 +692,8 @@ def cb1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            baca.postevent.x_offset(2.5),
-            baca.postevent.padding(1),
+            baca.tweak.x_offset(2.5),
+            baca.tweak.padding(1),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(4, 5)) as o:
@@ -756,7 +756,7 @@ def cb2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iv-markup",
-            baca.postevent.padding(1),
+            baca.tweak.padding(1),
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -790,7 +790,7 @@ def strings(cache):
             ]
             baca.alternate_bow_strokes(
                 pheads,
-                baca.postevent.staff_padding(4),
+                baca.tweak.staff_padding(4),
                 full=True,
             )
             baca.spanners.half_clt(

@@ -46,7 +46,7 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[6 - 1],
         r"\harmony-text-sixteen",
-        baca.postevent.extra_offset((4, -30)),
+        baca.tweak.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -291,8 +291,8 @@ def bfl(m):
         )
         baca.spanners.trill(
             o.tleaves(),
-            baca.postevent.bound_details_left_text(r"\harmony-d-d-sharp-markup"),
-            baca.postevent.staff_padding(8),
+            baca.tweak.bound_details_left_text(r"\harmony-d-d-sharp-markup"),
+            baca.tweak.staff_padding(8),
             rleak=True,
         )
     with baca.scope(m[4]) as o:
@@ -304,7 +304,7 @@ def bfl(m):
         with baca.scope(baca.select.runs(o)[:1]) as u:
             baca.spanners.trill(
                 u,
-                baca.postevent.bound_details_right_padding(2),
+                baca.tweak.bound_details_right_padding(2),
                 rleak=True,
             )
             baca.spanners.metric_modulation(
@@ -329,7 +329,7 @@ def perc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -343,7 +343,7 @@ def perc1(cache):
         baca.markup(
             o.leaf(2, grace=False),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.staff_padding(5),
+            baca.tweak.staff_padding(5),
         )
     with baca.scope(m[4]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -351,13 +351,13 @@ def perc1(cache):
         baca.dynamic(
             o.phead(0),
             '"f"',
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -369,7 +369,7 @@ def perc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
 
 
@@ -385,7 +385,7 @@ def perc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -398,7 +398,7 @@ def perc2(cache):
         baca.markup(
             o.leaf(2, grace=False),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.staff_padding(5),
+            baca.tweak.staff_padding(5),
         )
     with baca.scope(m[4]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -410,7 +410,7 @@ def perc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -453,7 +453,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
-            baca.postevent.padding(1.5),
+            baca.tweak.padding(1.5),
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -523,7 +523,7 @@ def vc1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-i-markup",
-            baca.postevent.staff_padding(1.5),
+            baca.tweak.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m[4]) as o:
@@ -565,7 +565,7 @@ def vc2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-i-markup",
-            baca.postevent.staff_padding(1.5),
+            baca.tweak.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m[4]) as o:
@@ -607,7 +607,7 @@ def cb1(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            baca.postevent.staff_padding(1.5),
+            baca.tweak.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m[4]) as o:
@@ -649,7 +649,7 @@ def cb2(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
-            baca.postevent.staff_padding(1.5),
+            baca.tweak.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m[4]) as o:

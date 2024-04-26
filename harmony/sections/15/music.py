@@ -273,7 +273,7 @@ def bfl(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-e-flat",
-            baca.postevent.staff_padding(8),
+            baca.tweak.staff_padding(8),
         )
         baca.hairpin(
             baca.select.lparts(o, [1, 1]),
@@ -298,7 +298,7 @@ def bfl(cache):
         baca.dynamic(
             o.phead(2),
             "p-sempre",
-            baca.postevent.self_alignment_x(-0.75),
+            baca.tweak.self_alignment_x(-0.75),
         )
         runs = baca.select.runs(o)
         for i, run in enumerate(runs):
@@ -317,7 +317,7 @@ def bfl(cache):
             elif i == 2:
                 baca.spanners.trill(
                     run,
-                    baca.postevent.bound_details_right_padding(2),
+                    baca.tweak.bound_details_right_padding(2),
                     rleak=True,
                 )
     with baca.scope(m.get(1, 10)) as o:
@@ -332,7 +332,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -344,7 +344,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-glockenspiel-markup",
-            baca.postevent.staff_padding(4),
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -358,7 +358,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-bd-superball-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(5, 9)) as o:
         library.slate_staff_position(o)
@@ -372,12 +372,12 @@ def perc1(m):
         baca.dynamic(
             o.phead(2),
             '"f"-sempre',
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(4, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -390,7 +390,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(1, 4)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -401,7 +401,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            baca.postevent.staff_padding(5),
+            baca.tweak.staff_padding(5),
         )
     with baca.scope(m.get(6, 7)) as o:
         library.purpleheart_staff_positions(o, [-2, 0, 2, 0, 2, -2])
@@ -424,7 +424,7 @@ def hp(cache):
         baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
-            baca.postevent.padding(1.5),
+            baca.tweak.padding(1.5),
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "Eb4")
@@ -446,7 +446,7 @@ def hp(cache):
             baca.markup(
                 o.pleaf(0),
                 r"\baca-lv-markup",
-                baca.postevent.padding(1.5),
+                baca.tweak.padding(1.5),
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4 + 2)
@@ -467,7 +467,7 @@ def va(m):
         baca.dynamic(
             o.phead(2),
             "p-sempre",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         for run in baca.select.runs(o):
             baca.spanners.xfb(
@@ -538,7 +538,7 @@ def vc2(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.spanners.scp(
             baca.select.ltleaves(o),
@@ -596,13 +596,13 @@ def cb1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-seven-e-flat",
-            baca.postevent.x_offset(3),
+            baca.tweak.x_offset(3),
         )
         baca.triple_staccato(o.pheads())
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.spanners.scp(
             baca.select.ltleaves(o),
@@ -661,7 +661,7 @@ def cb2(m):
         baca.dynamic(
             o.phead(0),
             "f-ancora",
-            baca.postevent.self_alignment_x(-0.9),
+            baca.tweak.self_alignment_x(-0.9),
         )
         baca.spanners.scp(
             baca.select.ltleaves(o),

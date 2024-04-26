@@ -35,7 +35,7 @@ def GLOBALS(skips, rests):
     wrappers = baca.markup(
         skips[3 - 1],
         r"\harmony-text-twenty-eight",
-        baca.postevent.extra_offset((4, -30)),
+        baca.tweak.extra_offset((4, -30)),
     )
     baca.tags.tag(wrappers, baca.tags.NOT_PARTS)
 
@@ -132,7 +132,7 @@ def bfl(m):
         baca.pitch(o, "Bb4")
         baca.spanners.trill(
             baca.select.tleaves(o),
-            baca.postevent.bound_details_right_padding(2),
+            baca.tweak.bound_details_right_padding(2),
             rleak=True,
         )
     with baca.scope(m.get(1, 2)) as o:
@@ -149,7 +149,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-brake-drum-markup",
-            baca.postevent.staff_padding(6),
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o.leaves(), 6)
@@ -178,7 +178,7 @@ def cb1(m):
         baca.pitch(o, "Bb4", do_not_transpose=True)
         baca.spanners.trill(
             baca.select.tleaves(o),
-            baca.postevent.bound_details_right_padding(2),
+            baca.tweak.bound_details_right_padding(2),
             alteration="Cb5",
             rleak=True,
         )
@@ -228,7 +228,7 @@ def composites(cache):
             baca.pitch(o, "Bb4")
             baca.spanners.trill(
                 baca.select.tleaves(o),
-                baca.postevent.bound_details_right_padding(2),
+                baca.tweak.bound_details_right_padding(2),
                 alteration="Cb5",
                 rleak=True,
             )
