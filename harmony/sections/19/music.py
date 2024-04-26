@@ -565,9 +565,7 @@ def bfl(m):
             )
             baca.spanners.trill(
                 u,
-                abjad.Tweak(
-                    r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
-                ),
+                baca.tweak.bound_details_left_text(r"\harmony-d-d-sharp-markup"),
                 baca.tweak.staff_padding(8),
                 rleak=True,
             )
@@ -595,9 +593,7 @@ def bfl(m):
             )
             baca.spanners.trill(
                 u,
-                abjad.Tweak(
-                    r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
-                ),
+                baca.tweak.bound_details_left_text(r"\harmony-d-d-sharp-markup"),
                 baca.tweak.staff_padding(8),
                 rleak=True,
             )

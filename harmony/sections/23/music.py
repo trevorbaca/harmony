@@ -271,9 +271,7 @@ def bfl(cache):
             )
             baca.spanners.trill(
                 run,
-                abjad.Tweak(
-                    r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"
-                ),
+                baca.tweak.bound_details_left_text(r"\harmony-d-d-sharp-markup"),
                 rleak=True,
             )
     with baca.scope(m.get(4, 6)) as o:
