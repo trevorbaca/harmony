@@ -280,7 +280,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-purpleheart-markup",
-            staff_padding=6,
+            baca.tweak.staff_padding(6),
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -295,7 +295,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-triangle-markup",
-            staff_padding=7,
+            baca.tweak.staff_padding(7),
         )
     with baca.scope(m.get(2, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -309,7 +309,7 @@ def perc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-scrape-markup",
-            staff_padding=7,
+            baca.tweak.staff_padding(7),
         )
 
 
@@ -333,7 +333,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-tam-tam-markup",
-            staff_padding=8,
+            baca.tweak.staff_padding(8),
         )
     with baca.scope(m.get(3, 10)) as o:
         baca.override.tuplet_bracket_staff_padding(o, 3)
@@ -348,7 +348,7 @@ def perc2(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-boxed-slate-brush-markup",
-            staff_padding=8,
+            baca.tweak.staff_padding(8),
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -386,7 +386,7 @@ def hp(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-sons-xylophoniques-markup",
-            staff_padding=4,
+            baca.tweak.staff_padding(4),
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -479,7 +479,7 @@ def vc1(m):
         baca.markup(
             o.pleaf(0),
             r"\baca-string-ii-markup",
-            staff_padding=1.5,
+            baca.tweak.staff_padding(1.5),
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(1, 2)) as o:
