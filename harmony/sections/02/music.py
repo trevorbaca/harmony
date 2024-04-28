@@ -369,9 +369,9 @@ def bfl(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3"),
@@ -379,9 +379,9 @@ def bfl(cache):
         baca.override.dls_staff_padding(o, 3),
         baca.spanners.covered(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(3),
             descriptor=r"\baca-cov-markup =|",
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.pitch(o, "Ab4")
@@ -452,8 +452,8 @@ def perc1(cache):
             baca.override.dls_staff_padding(u, 6),
         baca.spanners.metric_modulation(
             o.leaves(grace=False)[2:7],
+            baca.tweak.staff_padding(10.5),
             rleak=True,
-            staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -521,8 +521,8 @@ def perc2(m):
         library.slate_staff_position(o)
         baca.spanners.metric_modulation(
             baca.select.runs(o)[:1],
+            baca.tweak.staff_padding(10.5),
             rleak=True,
-            staff_padding=10.5,
         )
     with baca.scope(m[7]) as o:
         baca.staff_lines(o.leaf(0), 3)
@@ -663,9 +663,9 @@ def va(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Gqf4"),
@@ -679,8 +679,8 @@ def va(cache):
         for plt in baca.select.plts(o):
             baca.spanners.damp(
                 plt,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -712,9 +712,9 @@ def va(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
 
 
@@ -739,9 +739,9 @@ def vc1(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -761,7 +761,7 @@ def vc1(cache):
         baca.spanners.scp(
             baca.select.plts(leaves),
             "P2 -> P4 -> P1 -> P3 ->",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[7]) as o:
         with baca.scope(o.leaf(1)) as u:
@@ -776,8 +776,8 @@ def vc1(cache):
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[1:4],
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -801,9 +801,9 @@ def vc1(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
 
 
@@ -826,8 +826,8 @@ def vc2(cache):
         baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -846,9 +846,9 @@ def vc2(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -858,8 +858,8 @@ def vc2(cache):
         for plt in baca.select.plts(o):
             baca.spanners.damp(
                 plt,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[7]) as o:
         baca.glissando(
@@ -875,8 +875,8 @@ def vc2(cache):
         baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -898,9 +898,9 @@ def vc2(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
 
 
@@ -913,9 +913,9 @@ def cb1(cache):
         baca.stem_tremolo(o.pleaves())
         baca.spanners.metric_modulation(
             o.leaves()[:3],
+            baca.tweak.staff_padding(5.5),
             left_broken=True,
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(2, 5)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -940,9 +940,9 @@ def cb1(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(10),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=10,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -958,9 +958,9 @@ def cb1(cache):
         baca.spanners.scp(
             o.plts(),
             "P2 -> P4 -> P1 =|",
+            baca.tweak.staff_padding(4.25),
             do_not_bookend=True,
             rleak=True,
-            staff_padding=4.25,
         )
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -997,9 +997,9 @@ def cb1(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(10),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=10,
         )
 
 
@@ -1021,8 +1021,8 @@ def cb2(cache):
         baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1046,9 +1046,9 @@ def cb2(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(10),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=10,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1063,8 +1063,8 @@ def cb2(cache):
         for plt in baca.select.plts(o):
             baca.spanners.damp(
                 plt,
+                baca.tweak.staff_padding(3 + 1),
                 rleak=True,
-                staff_padding=3 + 1,
             )
     with baca.scope(m[7]) as o:
         baca.glissando(
@@ -1080,8 +1080,8 @@ def cb2(cache):
         baca.spanners.scp(
             o.tleaves(),
             "P1 =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1108,9 +1108,9 @@ def cb2(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(10),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=10,
         )
 
 

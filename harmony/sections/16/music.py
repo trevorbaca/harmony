@@ -215,8 +215,8 @@ def bfl(m):
             baca.spanners.text(
                 run,
                 "A =|",
+                baca.tweak.staff_padding(5.5),
                 rleak=True,
-                staff_padding=5.5,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
@@ -237,23 +237,23 @@ def bfl(m):
             baca.spanners.text(
                 run,
                 "A =|",
+                baca.tweak.staff_padding(5.5),
                 rleak=True,
-                staff_padding=5.5,
             )
     with baca.scope(m[10]) as o:
         with baca.scope(o.leaves()[1:]) as u:
             baca.spanners.text(
                 u,
                 "A =|",
+                baca.tweak.staff_padding(5.5),
                 right_broken=True,
                 rleak=True,
-                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,
+                baca.tweak.staff_padding(8),
                 right_broken=True,
                 rleak=True,
-                staff_padding=8,
             )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -378,8 +378,8 @@ def va(m):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F4")
@@ -387,8 +387,8 @@ def va(m):
         for run in baca.select.runs(o):
             baca.spanners.xfb(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m.get(9, 10)) as o:
         baca.glissando(
@@ -401,9 +401,9 @@ def va(m):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            baca.tweak.staff_padding(3),
             right_broken=True,
             rleak=True,
-            staff_padding=3,
         )
 
 
@@ -414,8 +414,8 @@ def vc1(m):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "A2")
@@ -432,8 +432,8 @@ def vc1(m):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
 
 
@@ -444,8 +444,8 @@ def vc2(m):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G2")
@@ -462,8 +462,8 @@ def vc2(m):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
 
 
@@ -488,8 +488,8 @@ def cb1(m):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G#1")
@@ -520,8 +520,8 @@ def cb1(m):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
 
 
@@ -546,8 +546,8 @@ def cb2(m):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
@@ -578,8 +578,8 @@ def cb2(m):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
 
 

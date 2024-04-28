@@ -197,8 +197,8 @@ def cb2(m):
         baca.spanners.scp(
             [o],
             "T1 -> T4+",
+            baca.tweak.staff_padding(3),
             left_broken=True,
-            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         with baca.scope(o.rleaf(-1)) as u:

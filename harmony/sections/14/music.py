@@ -397,8 +397,8 @@ def bfl(cache):
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.covered(
             baca.select.tleaves(o),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")
@@ -449,8 +449,8 @@ def bfl(cache):
             baca.spanners.text(
                 run,
                 "A =|",
+                baca.tweak.staff_padding(5.5),
                 rleak=True,
-                staff_padding=5.5,
             )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -696,8 +696,8 @@ def va(cache):
         )
         baca.spanners.metric_modulation(
             baca.select.pleaves(o, grace=False)[:3],
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -788,15 +788,15 @@ def vc1(cache):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[11]) as o:
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
         baca.dynamic(
             o.phead(0),
@@ -857,8 +857,8 @@ def vc2(cache):
     with baca.scope(m.get(5, 6)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[1:-4],
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -875,8 +875,8 @@ def vc2(cache):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
 
 
@@ -976,8 +976,8 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.spanners.damp(
             baca.select.tleaves(o),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -1014,7 +1014,7 @@ def composites(cache):
             baca.spanners.scp(
                 [o.tleaves()],
                 "T1 -> P1",
-                staff_padding=3,
+                baca.tweak.staff_padding(3),
             )
         with baca.scope(m.get(6, 9)) as o:
             baca.hairpin(
@@ -1037,7 +1037,7 @@ def composites(cache):
                 baca.spanners.scp(
                     [run],
                     "T1 -> P1",
-                    staff_padding=3,
+                    baca.tweak.staff_padding(3),
                 )
         with baca.scope(m[11]) as o:
             pheads = baca.select.pheads(o)
@@ -1056,8 +1056,8 @@ def composites(cache):
             )
             baca.spanners.half_clt(
                 baca.select.ltleaves(o),
+                baca.tweak.staff_padding(8),
                 rleak=True,
-                staff_padding=8,
             )
 
 

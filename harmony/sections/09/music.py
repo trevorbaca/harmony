@@ -160,15 +160,15 @@ def bfl(m):
         with baca.scope(o.leaves()[:2]) as u:
             baca.spanners.covered(
                 u,
+                baca.tweak.staff_padding(3),
                 left_broken=True,
                 rleak=True,
-                staff_padding=3,
             )
             baca.spanners.metric_modulation(
                 u,
+                baca.tweak.staff_padding(5.5),
                 left_broken=True,
                 rleak=True,
-                staff_padding=5.5,
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gb3")
@@ -176,8 +176,8 @@ def bfl(m):
         baca.dynamic(o.phead(0), "mp")
         baca.spanners.covered(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -261,8 +261,8 @@ def va(m):
         )
         baca.spanners.xfb(
             o.pleaves(),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "C4")
@@ -316,8 +316,8 @@ def cb2(m):
         baca.dynamic(o.phead(0), "ff")
         baca.spanners.pizzicato(
             baca.select.tleaves(o),
+            baca.tweak.staff_padding(6.5),
             rleak=True,
-            staff_padding=6.5,
         )
         baca.markup(
             o.pheads(),
@@ -350,26 +350,26 @@ def composites(cache):
                 if name in ("va", "vc1", "vc2"):
                     baca.spanners.xfb(
                         u,
+                        baca.tweak.staff_padding(5.5),
                         rleak=True,
-                        staff_padding=5.5,
                     )
                     baca.spanners.metric_modulation(
                         u,
+                        baca.tweak.staff_padding(8),
                         right_broken=True,
                         rleak=True,
-                        staff_padding=8,
                     )
                 elif name == "cb1":
                     baca.spanners.xfb(
                         u,
+                        baca.tweak.staff_padding(8),
                         rleak=True,
-                        staff_padding=8,
                     )
                     baca.spanners.metric_modulation(
                         u,
+                        baca.tweak.staff_padding(10.5),
                         right_broken=True,
                         rleak=True,
-                        staff_padding=10.5,
                     )
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

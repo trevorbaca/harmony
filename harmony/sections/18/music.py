@@ -479,8 +479,8 @@ def bfl(m):
             baca.spanners.text(
                 run,
                 "A =|",
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o, "D4")
@@ -488,13 +488,13 @@ def bfl(m):
             baca.spanners.text(
                 run,
                 "A =|",
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
         baca.spanners.metric_modulation(
             o.run(0),
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 6)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -683,9 +683,9 @@ def perc2(cache):
         )
         baca.spanners.metric_modulation(
             o.runs()[-1:],
+            baca.tweak.staff_padding(10.5),
             right_broken=True,
             rleak=True,
-            staff_padding=10.5,
         )
 
 
@@ -783,8 +783,8 @@ def va(cache):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D4"),
@@ -792,8 +792,8 @@ def va(cache):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "alto")
@@ -843,15 +843,15 @@ def vc1(cache):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
         baca.spanners.scp(
             [o.tleaves()],
             "T4 -> P1",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -874,8 +874,8 @@ def vc1(cache):
             )
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
 
 
@@ -912,15 +912,15 @@ def vc2(cache):
         for run in baca.select.runs(o):
             baca.spanners.damp(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
         baca.spanners.scp(
             [o.tleaves()],
             "T4 -> P1",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -997,15 +997,15 @@ def cb1(cache):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
         baca.spanners.scp(
             [o.tleaves()],
             "T4 -> P1",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1027,7 +1027,7 @@ def cb1(cache):
         baca.spanners.scp(
             [o.tleaves()],
             "O -> P4",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[10]) as o:
         baca.hairpin(
@@ -1038,7 +1038,7 @@ def cb1(cache):
         baca.spanners.scp(
             [o.tleaves()],
             "O -> P4",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[11]) as o:
         baca.hairpin(
@@ -1049,7 +1049,7 @@ def cb1(cache):
         baca.spanners.scp(
             [o.tleaves()],
             "O -> P4",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         ),
     with baca.scope(m.get(9, 11)) as o:
         baca.pitch(o, "E5", do_not_transpose=True)
@@ -1091,8 +1091,8 @@ def cb2(cache):
         )
         baca.spanners.metric_modulation(
             baca.select.tleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1115,15 +1115,15 @@ def cb2(cache):
         )
         baca.spanners.half_clt(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")
         baca.spanners.scp(
             [o.tleaves()],
             "T4 -> P1",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G3")

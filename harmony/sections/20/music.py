@@ -255,17 +255,17 @@ def bfl(m):
             )
             baca.spanners.trill(
                 run,
+                baca.tweak.staff_padding(3, grob="TrillSpanner"),
                 alteration="A5",
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m.get(3, 10)) as o:
         baca.pitch(o, "Eb3")
         baca.dynamic(o.phead(0), "pp-sempre")
         baca.spanners.covered(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -320,9 +320,9 @@ def perc2(m):
         baca.laissez_vibrer(o.ptails())
         baca.spanners.metric_modulation(
             o.leaves()[:2],
+            baca.tweak.staff_padding(8),
             left_broken=True,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[2]) as o:
         library.tam_tam_staff_position(o)
@@ -371,8 +371,8 @@ def hp(m):
     with baca.scope(m.get(1, 2)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[1:-1],
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m.get(3, 10)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -401,8 +401,8 @@ def va(m):
         for run in baca.select.runs(o):
             baca.spanners.xfb(
                 run,
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     with baca.scope(m[2]) as o:
         baca.override.tuplet_bracket_direction_up(o)
@@ -447,13 +447,13 @@ def va(m):
             baca.spanners.scp(
                 [u.pheads()],
                 "P4 -> T1",
-                staff_padding=3,
+                baca.tweak.staff_padding(3),
             )
             baca.spanners.metric_modulation(
                 u,
+                baca.tweak.staff_padding(8),
                 right_broken=True,
                 rleak=True,
-                staff_padding=8,
             )
 
 
@@ -473,7 +473,7 @@ def vc1(m):
             )
             baca.spanners.trill(
                 run,
-                staff_padding=3,
+                baca.tweak.staff_padding(3),
                 rleak=True,
             )
         baca.markup(
@@ -572,8 +572,8 @@ def cb2(m):
     with baca.scope(m.get(2, 4)) as o:
         baca.spanners.metric_modulation(
             abjad.select.leaves(o)[1:],
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[10]) as o:
         baca.override.rest_extra_offset(o.rest(-1), (-1.5, 0))

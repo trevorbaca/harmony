@@ -167,15 +167,15 @@ def bfl(m):
         with baca.scope(o.leaves()[1:]) as u:
             baca.spanners.covered(
                 u,
+                baca.tweak.staff_padding(5.5),
                 right_broken=True,
                 rleak=True,
-                staff_padding=5.5,
             )
             baca.spanners.metric_modulation(
                 u,
+                baca.tweak.staff_padding(8),
                 right_broken=True,
                 rleak=True,
-                staff_padding=8,
             )
 
 
@@ -305,9 +305,9 @@ def vc1(cache):
         baca.spanners.metric_modulation(
             o,
             baca.tweak.bound_details_right_padding(4.5),
+            baca.tweak.staff_padding(5.5),
             left_broken=True,
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(2, 6)) as o:
         baca.stem_tremolo(o.pleaves())
@@ -354,9 +354,9 @@ def vc2(cache):
         baca.spanners.damp(
             o,
             baca.tweak.bound_details_right_padding(4.5),
+            baca.tweak.staff_padding(3),
             left_broken=True,
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(3, 6)) as o:
         baca.stem_tremolo(o.pleaves())
@@ -434,9 +434,9 @@ def cb2(cache):
         baca.spanners.damp(
             o,
             baca.tweak.bound_details_right_padding(4.5),
+            baca.tweak.staff_padding(3),
             left_broken=True,
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.stem_tremolo(o.pleaves())
