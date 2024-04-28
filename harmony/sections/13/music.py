@@ -273,9 +273,9 @@ def bfl(cache):
         )
         baca.spanners.metric_modulation(
             o.leaves()[:2],
+            baca.tweak.staff_padding(8),
             left_broken=True,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
@@ -300,9 +300,9 @@ def bfl(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "Dtqf5")
@@ -321,9 +321,9 @@ def bfl(cache):
             baca.spanners.text(
                 baca.select.lparts(clpart, [1, 1]),
                 "T -> A =|",
+                baca.tweak.staff_padding(5.5),
                 do_not_bookend=True,
                 rleak=True,
-                staff_padding=5.5,
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -440,8 +440,8 @@ def perc2(cache):
         baca.override.dls_staff_padding(o, 6)
         baca.spanners.metric_modulation(
             abjad.select.leaves(o)[3:],
+            baca.tweak.staff_padding(10.5),
             rleak=True,
-            staff_padding=10.5,
         )
 
 
@@ -492,8 +492,8 @@ def hp(cache):
     with baca.scope(m.get(3, 4)) as o:
         baca.spanners.metric_modulation(
             abjad.select.leaves(o)[1:8],
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E4")
@@ -501,8 +501,8 @@ def hp(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.spanners.metric_modulation(
             abjad.select.leaves(o)[6:],
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -554,8 +554,8 @@ def va(cache):
         baca.spanners.scp(
             baca.select.ltleaves(o),
             "T1 =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
 
 
@@ -605,7 +605,7 @@ def vc1(cache):
         baca.spanners.scp(
             o.leaves(),
             "T1 =|",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[5]) as o:
         baca.pitch(baca.select.lleak(o.leaves()), "Aqf3")
@@ -628,8 +628,8 @@ def vc2(cache):
         baca.dynamic(o.pleaf(-1), "mp")
         baca.spanners.damp(
             o.plts()[1:],
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(
@@ -648,8 +648,8 @@ def vc2(cache):
         baca.pitch(o.plts()[1:], "F3")
         baca.spanners.damp(
             o.plts()[:1],
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
 
 
@@ -705,7 +705,7 @@ def cb1(cache):
         baca.spanners.scp(
             o.leaves(),
             "T4 =|",
-            staff_padding=3,
+            baca.tweak.staff_padding(3),
         )
     with baca.scope(m[5]) as o:
         baca.pitch(baca.select.lleak(o.leaves()), "Dtqf2")
@@ -728,8 +728,8 @@ def cb2(cache):
         baca.dynamic(o.pleaf(-1), "mp")
         baca.spanners.damp(
             o.plts()[1:],
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(
@@ -748,8 +748,8 @@ def cb2(cache):
         baca.pitch(o.plts()[1:], "Eb2")
         baca.spanners.damp(
             o.plts()[:1],
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
 
 
@@ -771,8 +771,8 @@ def composites(cache):
         with baca.scope(m.get(4, 5)) as o:
             baca.spanners.metric_modulation(
                 o.leaves()[-4:],
+                baca.tweak.staff_padding(8),
                 rleak=True,
-                staff_padding=8,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

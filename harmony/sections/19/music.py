@@ -574,8 +574,8 @@ def bfl(m):
         baca.dynamic(o.phead(0), "mf")
         baca.spanners.covered(
             o,
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m[12]) as o:
         baca.pitches(
@@ -605,8 +605,8 @@ def bfl(m):
                 run = baca.select.rleak(run)
                 baca.spanners.covered(
                     run,
+                    baca.tweak.staff_padding(5.5),
                     rleak=True,
-                    staff_padding=5.5,
                 )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -703,9 +703,9 @@ def perc2(cache):
         baca.override.dls_staff_padding(o, 5)
         baca.spanners.metric_modulation(
             o.leaves()[:1],
+            baca.tweak.staff_padding(10.5),
             left_broken=True,
             rleak=True,
-            staff_padding=10.5,
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -777,9 +777,9 @@ def perc2(cache):
         )
         baca.spanners.metric_modulation(
             o.leaves()[-1:],
+            baca.tweak.staff_padding(10.5),
             right_broken=True,
             rleak=True,
-            staff_padding=10.5,
         )
 
 
@@ -997,8 +997,8 @@ def cb2(cache):
         # TODO: text spanner currently must precede pitched trill spanner; fix
         baca.spanners.metric_modulation(
             o.leaves()[1:7],
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
         baca.spanners.trill(
             baca.select.tleaves(o),
@@ -1027,8 +1027,8 @@ def cb2(cache):
     with baca.scope(m.get(12, 13)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[4:],
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
 
 

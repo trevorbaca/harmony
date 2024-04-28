@@ -360,8 +360,8 @@ def bfl(cache):
             baca.spanners.text(
                 baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
+                baca.tweak.staff_padding(10),
                 rleak=True,
-                staff_padding=10,
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o.plts(grace=False), "Ab3")
@@ -378,16 +378,16 @@ def bfl(cache):
             baca.select.tleaves(o, grace=False),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             baca.tweak.direction_down(),
+            baca.tweak.staff_padding(8),
             direction=abjad.DOWN,
             lilypond_id=2,
             rleak=True,
-            staff_padding=8,
         )
         baca.spanners.text(
             o,
             "A =|",
+            baca.tweak.staff_padding(10),
             rleak=True,
-            staff_padding=10,
         )
     with baca.scope(m[5]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "pp-ppp")
@@ -467,8 +467,8 @@ def perc1(m):
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
             baca.select.rleak(o.tleaves(), count=1),
+            baca.tweak.staff_padding(10.5),
             rleak=True,
-            staff_padding=10.5,
         )
     with baca.scope(m[9]) as o:
         library.brake_drum_staff_position(o)
@@ -487,9 +487,9 @@ def perc2(m):
         baca.staff_position(o, 2)
         baca.spanners.metric_modulation(
             o.leaves()[:1],
+            baca.tweak.staff_padding(8),
             left_broken=True,
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -544,8 +544,8 @@ def perc2(m):
     with baca.scope(m.get(6, 7)) as o:
         baca.spanners.metric_modulation(
             baca.select.rleak(o.tleaves(), count=1),
+            baca.tweak.staff_padding(10.5),
             rleak=True,
-            staff_padding=10.5,
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -595,8 +595,8 @@ def hp(m):
         baca.snap_pizzicato(o.pheads())
         baca.spanners.metric_modulation(
             baca.select.rleak(o.tleaves(), count=1),
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(4, 9)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -610,15 +610,15 @@ def va(cache):
         baca.dynamic(o.phead(0), "mp")
         baca.spanners.xfb(
             o,
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
         baca.spanners.scp(
             baca.select.plts(o),
             "P2 -> P1 -> P3 -> P2",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[5]) as o:
         baca.override.tuplet_bracket_direction_up(o)
@@ -629,8 +629,8 @@ def va(cache):
         baca.spanners.xfb(
             o.plt(0),
             baca.tweak.bound_details_right_padding(5),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o.plts(), "G4:Ab4:Bb4")
@@ -653,8 +653,8 @@ def va(cache):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
         baca.markup(
             o.pleaf(0),
@@ -671,7 +671,7 @@ def vc1(cache):
         baca.spanners.scp(
             baca.select.plts(o.leaves()),
             "P2 -> O -> P2 -> P1 -> P3",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -709,8 +709,8 @@ def vc1(cache):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     for item in [(4, 5), 9]:
         with baca.scope(m.get(item)) as o:
@@ -725,7 +725,7 @@ def vc2(cache):
         baca.spanners.scp(
             o.plts(),
             "O -> P2 -> P1",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -766,8 +766,8 @@ def vc2(cache):
         baca.spanners.damp(
             baca.select.ltleaves(o),
             baca.tweak.bound_details_right_padding(3),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     for item in [(4, 5), 9]:
         with baca.scope(m.get(item)) as o:
@@ -782,7 +782,7 @@ def cb1(cache):
         baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O -> P2",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -823,8 +823,8 @@ def cb1(cache):
         baca.spanners.bow_speed(
             o,
             "poco scr. =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     for item in [(4, 5), 9]:
         with baca.scope(m.get(item)) as o:
@@ -841,9 +841,9 @@ def cb2(cache):
         baca.spanners.scp(
             o.plts()[:2],
             "P1 -> P2 =|",
+            baca.tweak.staff_padding(5.5),
             do_not_bookend=True,
             rleak=True,
-            staff_padding=5.5,
         )
         baca.accent(o.pheads()[1:3])
         baca.stem_tremolo(o.plts()[:2])
@@ -852,15 +852,15 @@ def cb2(cache):
     with baca.scope(m.get(3, 4)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[4:12],
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.spanners.damp(
             abjad.select.leaves(o)[4:],
             baca.tweak.bound_details_right_padding(3),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -899,8 +899,8 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "p")
         baca.spanners.damp(
             baca.select.ltleaves(o),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     for item in [(4, 5), 9]:
         with baca.scope(m.get(item)) as o:
@@ -932,8 +932,8 @@ def composites(cache):
             baca.spanners.damp(
                 baca.select.ltleaves(o),
                 baca.tweak.bound_details_right_padding(3),
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

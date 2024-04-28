@@ -350,9 +350,9 @@ def bfl(m):
             for run in baca.select.runs(o):
                 baca.spanners.covered(
                     run,
+                    baca.tweak.staff_padding(3),
                     descriptor=r"\baca-cov-markup =|",
                     rleak=True,
-                    staff_padding=3,
                 )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Bb4")
@@ -369,8 +369,8 @@ def bfl(m):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "(T) -> A -> (T)",
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
@@ -388,8 +388,8 @@ def bfl(m):
             baca.spanners.text(
                 baca.select.lparts(run, [1, 1]),
                 "A -> T -> A",
+                baca.tweak.staff_padding(10),
                 rleak=True,
-                staff_padding=10,
             )
     with baca.scope(m[9]) as o:
         baca.pitches(
@@ -439,8 +439,8 @@ def perc1(m):
     with baca.scope(m.get(7, 8)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[2:-1],
+            baca.tweak.staff_padding(5.5),
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
         with baca.scope(o.pleaf(0)) as u:
@@ -463,8 +463,8 @@ def perc1(m):
     with baca.scope(m.get(9, 10)) as o:
         baca.spanners.metric_modulation(
             o.leaves()[3:-1],
+            baca.tweak.staff_padding(10.5),
             rleak=True,
-            staff_padding=10.5,
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 6)
@@ -520,9 +520,9 @@ def perc2(m):
         )
         baca.spanners.metric_modulation(
             abjad.select.leaves(o)[-1:],
+            baca.tweak.staff_padding(10.5),
             right_broken=True,
             rleak=True,
-            staff_padding=10.5,
         )
 
 
@@ -572,8 +572,8 @@ def hp(cache):
         baca.staff_position(o, 0)
         baca.spanners.metric_modulation(
             o.leaves()[1:-1],
+            baca.tweak.staff_padding(8),
             rleak=True,
-            staff_padding=8,
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -609,7 +609,7 @@ def va(cache):
         baca.spanners.scp(
             o.plts(),
             "P2 -> P1 -> P3 -> P2",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "G4:Ab4:Bb4")
@@ -628,7 +628,7 @@ def vc1(cache):
         baca.spanners.scp(
             o.plts(),
             "P2 -> O -> P2 -> P1 -> P3",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -657,7 +657,7 @@ def vc2(cache):
         baca.spanners.scp(
             o.plts(),
             "O -> P2 -> P1",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -687,7 +687,7 @@ def cb1(cache):
         baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O -> P2",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -720,7 +720,7 @@ def cb2(cache):
         baca.spanners.scp(
             o.plts(),
             "P1 -> P2 -> O",
-            staff_padding=5.5,
+            baca.tweak.staff_padding(5.5),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -795,8 +795,8 @@ def composites(cache):
                 baca.spanners.scp(
                     o.tleaves(),
                     "P1 =|",
+                    baca.tweak.staff_padding(3),
                     rleak=True,
-                    staff_padding=3,
                 )
 
 
