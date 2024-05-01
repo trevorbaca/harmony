@@ -491,7 +491,7 @@ def va(cache):
         baca.hairpin(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
-            (baca.tweak.to_bar_line_true(), -2),
+            baca.tweak.to_bar_line_true(index=-2),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -530,7 +530,7 @@ def vc1(cache):
         baca.hairpin(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
-            (baca.tweak.to_bar_line_true(), -2),
+            baca.tweak.to_bar_line_true(index=-2),
         )
         baca.override.note_head_transparent(o.leaves()[1:-1])
         baca.untie(o.leaves())
@@ -567,7 +567,7 @@ def vc2(cache):
         baca.hairpin(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
-            (baca.tweak.to_bar_line_true(), -2),
+            baca.tweak.to_bar_line_true(index=-2),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -606,7 +606,7 @@ def cb1(cache):
         baca.hairpin(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
-            (baca.tweak.to_bar_line_true(), -2),
+            baca.tweak.to_bar_line_true(index=-2),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -644,7 +644,7 @@ def cb2(cache):
         baca.hairpin(
             abjad.sequence.partition_by_counts(plts, 11 * [1] + [2] + [1]),
             y1(),
-            (baca.tweak.to_bar_line_true(), -2),
+            baca.tweak.to_bar_line_true(index=-2),
         )
         baca.untie(o.leaves())
         baca.override.note_head_style_harmonic_black(o.pleaves())
