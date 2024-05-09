@@ -33,7 +33,7 @@
 <<
 
     \context GlobalContext = "GlobalContext"
-    <<
+    {
 
         \context PageLayout = "PageLayout"
         {   %*% PageLayout
@@ -44,7 +44,7 @@
               %! BREAK
             \baca-lbsd #90 #'(22 28 25 25 28 25 25 25 25 28)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -55,7 +55,7 @@
 
             % [PageLayout measure 2]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -68,7 +68,7 @@
 
             % [PageLayout measure 3]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -83,7 +83,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -96,7 +96,7 @@
 
             % [PageLayout measure 5]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -109,7 +109,7 @@
 
             % [PageLayout measure 6]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -122,7 +122,7 @@
 
             % [PageLayout measure 7]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -137,7 +137,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -150,7 +150,7 @@
 
             % [PageLayout measure 9]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -163,7 +163,7 @@
 
             % [PageLayout measure 10]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -176,7 +176,7 @@
 
             % [PageLayout measure 11]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -191,7 +191,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -204,7 +204,7 @@
 
             % [PageLayout measure 13]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -217,7 +217,7 @@
 
             % [PageLayout measure 14]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -230,7 +230,7 @@
 
             % [PageLayout measure 15]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -245,7 +245,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -258,7 +258,7 @@
 
             % [PageLayout measure 17]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -271,7 +271,7 @@
 
             % [PageLayout measure 18]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -284,7 +284,7 @@
 
             % [PageLayout measure 19]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #16
+            \baca-new-strict-spacing-section #1 #16
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -297,7 +297,7 @@
 
             % [PageLayout measure 20]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -312,7 +312,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -325,7 +325,7 @@
 
             % [PageLayout measure 22]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -338,7 +338,7 @@
 
             % [PageLayout measure 23]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -351,7 +351,7 @@
 
             % [PageLayout measure 24]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -366,7 +366,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -379,7 +379,7 @@
 
             % [PageLayout measure 26]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -392,7 +392,7 @@
 
             % [PageLayout measure 27]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -405,7 +405,7 @@
 
             % [PageLayout measure 28]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -420,7 +420,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -433,7 +433,7 @@
 
             % [PageLayout measure 30]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #4
+            \baca-new-strict-spacing-section #1 #4
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -446,7 +446,7 @@
 
             % [PageLayout measure 31]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -459,7 +459,7 @@
 
             % [PageLayout measure 32]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -472,7 +472,7 @@
 
             % [PageLayout measure 33]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #96
+            \baca-new-strict-spacing-section #35 #96
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -487,7 +487,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -500,7 +500,7 @@
 
             % [PageLayout measure 35]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -513,7 +513,7 @@
 
             % [PageLayout measure 36]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -528,7 +528,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -541,7 +541,7 @@
 
             % [PageLayout measure 38]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -554,7 +554,7 @@
 
             % [PageLayout measure 39]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -569,7 +569,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #16
+            \baca-new-strict-spacing-section #1 #16
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -582,7 +582,7 @@
 
             % [PageLayout measure 41]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -595,7 +595,7 @@
 
             % [PageLayout measure 42]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #16
+            \baca-new-strict-spacing-section #1 #16
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -608,7 +608,7 @@
 
             % [PageLayout measure 43]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #16
+            \baca-new-strict-spacing-section #1 #16
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -621,7 +621,7 @@
 
             % [PageLayout measure 44]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #384
+            \baca-new-strict-spacing-section #35 #384
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -636,7 +636,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #36
+            \baca-new-strict-spacing-section #1 #36
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -649,7 +649,7 @@
 
             % [PageLayout measure 46]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #36
+            \baca-new-strict-spacing-section #1 #36
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -662,7 +662,7 @@
 
             % [PageLayout measure 47]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #36
+            \baca-new-strict-spacing-section #1 #36
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -675,7 +675,7 @@
 
             % [PageLayout measure 48]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -690,7 +690,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -703,7 +703,7 @@
 
             % [PageLayout measure 50]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -716,7 +716,7 @@
 
             % [PageLayout measure 51]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -729,7 +729,7 @@
 
             % [PageLayout measure 52]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -744,7 +744,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -757,7 +757,7 @@
 
             % [PageLayout measure 54]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -770,7 +770,7 @@
 
             % [PageLayout measure 55]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -783,7 +783,7 @@
 
             % [PageLayout measure 56]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -796,7 +796,7 @@
 
             % [PageLayout measure 57]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -811,7 +811,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -824,7 +824,7 @@
 
             % [PageLayout measure 59]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -837,7 +837,7 @@
 
             % [PageLayout measure 60]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -852,7 +852,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -865,7 +865,7 @@
 
             % [PageLayout measure 62]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -878,7 +878,7 @@
 
             % [PageLayout measure 63]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -891,7 +891,7 @@
 
             % [PageLayout measure 64]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -906,7 +906,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -919,7 +919,7 @@
 
             % [PageLayout measure 66]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -932,7 +932,7 @@
 
             % [PageLayout measure 67]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -947,7 +947,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -960,7 +960,7 @@
 
             % [PageLayout measure 69]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -973,7 +973,7 @@
 
             % [PageLayout measure 70]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -986,7 +986,7 @@
 
             % [PageLayout measure 71]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -999,7 +999,7 @@
 
             % [PageLayout measure 72]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1014,7 +1014,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -1027,7 +1027,7 @@
 
             % [PageLayout measure 74]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1040,7 +1040,7 @@
 
             % [PageLayout measure 75]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1053,7 +1053,7 @@
 
             % [PageLayout measure 76]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1068,7 +1068,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -1081,7 +1081,7 @@
 
             % [PageLayout measure 78]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1094,7 +1094,7 @@
 
             % [PageLayout measure 79]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1107,7 +1107,7 @@
 
             % [PageLayout measure 80]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1122,7 +1122,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -1135,7 +1135,7 @@
 
             % [PageLayout measure 82]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1148,7 +1148,7 @@
 
             % [PageLayout measure 83]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1161,7 +1161,7 @@
 
             % [PageLayout measure 84]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1176,7 +1176,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -1189,7 +1189,7 @@
 
             % [PageLayout measure 86]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1202,7 +1202,7 @@
 
             % [PageLayout measure 87]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1215,7 +1215,7 @@
 
             % [PageLayout measure 88]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1230,7 +1230,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1243,7 +1243,7 @@
 
             % [PageLayout measure 90]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1256,7 +1256,7 @@
 
             % [PageLayout measure 91]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1269,7 +1269,7 @@
 
             % [PageLayout measure 92]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1282,7 +1282,7 @@
 
             % [PageLayout measure 93]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1297,7 +1297,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -1310,7 +1310,7 @@
 
             % [PageLayout measure 95]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1323,7 +1323,7 @@
 
             % [PageLayout measure 96]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1336,7 +1336,7 @@
 
             % [PageLayout measure 97]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1351,7 +1351,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -1364,7 +1364,7 @@
 
             % [PageLayout measure 99]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1377,7 +1377,7 @@
 
             % [PageLayout measure 100]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -1392,7 +1392,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1405,7 +1405,7 @@
 
             % [PageLayout measure 102]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -1418,7 +1418,7 @@
 
             % [PageLayout measure 103]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1431,7 +1431,7 @@
 
             % [PageLayout measure 104]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -1446,7 +1446,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1459,7 +1459,7 @@
 
             % [PageLayout measure 106]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -1472,7 +1472,7 @@
 
             % [PageLayout measure 107]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1485,7 +1485,7 @@
 
             % [PageLayout measure 108]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1500,7 +1500,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1513,7 +1513,7 @@
 
             % [PageLayout measure 110]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1526,7 +1526,7 @@
 
             % [PageLayout measure 111]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1539,7 +1539,7 @@
 
             % [PageLayout measure 112]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1554,7 +1554,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -1567,7 +1567,7 @@
 
             % [PageLayout measure 114]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -1580,7 +1580,7 @@
 
             % [PageLayout measure 115]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1593,7 +1593,7 @@
 
             % [PageLayout measure 116]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -1608,7 +1608,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -1621,7 +1621,7 @@
 
             % [PageLayout measure 118]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1634,7 +1634,7 @@
 
             % [PageLayout measure 119]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1647,7 +1647,7 @@
 
             % [PageLayout measure 120]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #768
+            \baca-new-strict-spacing-section #35 #768
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1662,7 +1662,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -1675,7 +1675,7 @@
 
             % [PageLayout measure 122]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1688,7 +1688,7 @@
 
             % [PageLayout measure 123]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1701,7 +1701,7 @@
 
             % [PageLayout measure 124]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #576
+            \baca-new-strict-spacing-section #35 #576
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -1716,7 +1716,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -1729,7 +1729,7 @@
 
             % [PageLayout measure 126]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1742,7 +1742,7 @@
 
             % [PageLayout measure 127]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1755,7 +1755,7 @@
 
             % [PageLayout measure 128]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1768,7 +1768,7 @@
 
             % [PageLayout measure 129]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -1783,7 +1783,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1796,7 +1796,7 @@
 
             % [PageLayout measure 131]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1809,7 +1809,7 @@
 
             % [PageLayout measure 132]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -1824,7 +1824,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1837,7 +1837,7 @@
 
             % [PageLayout measure 134]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1850,7 +1850,7 @@
 
             % [PageLayout measure 135]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1863,7 +1863,7 @@
 
             % [PageLayout measure 136]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1878,7 +1878,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1891,7 +1891,7 @@
 
             % [PageLayout measure 138]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1904,7 +1904,7 @@
 
             % [PageLayout measure 139]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1917,7 +1917,7 @@
 
             % [PageLayout measure 140]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 2/4
@@ -1932,7 +1932,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1945,7 +1945,7 @@
 
             % [PageLayout measure 142]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1958,7 +1958,7 @@
 
             % [PageLayout measure 143]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1971,7 +1971,7 @@
 
             % [PageLayout measure 144]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -1986,7 +1986,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -1999,7 +1999,7 @@
 
             % [PageLayout measure 146]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2012,7 +2012,7 @@
 
             % [PageLayout measure 147]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #4
+            \baca-new-strict-spacing-section #1 #4
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2025,7 +2025,7 @@
 
             % [PageLayout measure 148]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2040,7 +2040,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2053,7 +2053,7 @@
 
             % [PageLayout measure 150]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2066,7 +2066,7 @@
 
             % [PageLayout measure 151]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -2079,7 +2079,7 @@
 
             % [PageLayout measure 152]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2092,7 +2092,7 @@
 
             % [PageLayout measure 153]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #96
+            \baca-new-strict-spacing-section #35 #96
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2107,7 +2107,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2120,7 +2120,7 @@
 
             % [PageLayout measure 155]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -2133,7 +2133,7 @@
 
             % [PageLayout measure 156]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2148,7 +2148,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2161,7 +2161,7 @@
 
             % [PageLayout measure 158]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2174,7 +2174,7 @@
 
             % [PageLayout measure 159]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2187,7 +2187,7 @@
 
             % [PageLayout measure 160]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2202,7 +2202,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2215,7 +2215,7 @@
 
             % [PageLayout measure 162]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -2228,7 +2228,7 @@
 
             % [PageLayout measure 163]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2241,7 +2241,7 @@
 
             % [PageLayout measure 164]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #576
+            \baca-new-strict-spacing-section #35 #576
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2256,7 +2256,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2269,7 +2269,7 @@
 
             % [PageLayout measure 166]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2282,7 +2282,7 @@
 
             % [PageLayout measure 167]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2295,7 +2295,7 @@
 
             % [PageLayout measure 168]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2310,7 +2310,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2323,7 +2323,7 @@
 
             % [PageLayout measure 170]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2336,7 +2336,7 @@
 
             % [PageLayout measure 171]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -2349,7 +2349,7 @@
 
             % [PageLayout measure 172]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #576
+            \baca-new-strict-spacing-section #35 #576
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2364,7 +2364,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -2377,7 +2377,7 @@
 
             % [PageLayout measure 174]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2390,7 +2390,7 @@
 
             % [PageLayout measure 175]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -2403,7 +2403,7 @@
 
             % [PageLayout measure 176]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2416,7 +2416,7 @@
 
             % [PageLayout measure 177]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2431,7 +2431,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2444,7 +2444,7 @@
 
             % [PageLayout measure 179]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -2457,7 +2457,7 @@
 
             % [PageLayout measure 180]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2472,7 +2472,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2485,7 +2485,7 @@
 
             % [PageLayout measure 182]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2498,7 +2498,7 @@
 
             % [PageLayout measure 183]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2511,7 +2511,7 @@
 
             % [PageLayout measure 184]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2526,7 +2526,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2539,7 +2539,7 @@
 
             % [PageLayout measure 186]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2552,7 +2552,7 @@
 
             % [PageLayout measure 187]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2565,7 +2565,7 @@
 
             % [PageLayout measure 188]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2580,7 +2580,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2593,7 +2593,7 @@
 
             % [PageLayout measure 190]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2606,7 +2606,7 @@
 
             % [PageLayout measure 191]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -2619,7 +2619,7 @@
 
             % [PageLayout measure 192]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2632,7 +2632,7 @@
 
             % [PageLayout measure 193]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2647,7 +2647,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -2660,7 +2660,7 @@
 
             % [PageLayout measure 195]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -2673,7 +2673,7 @@
 
             % [PageLayout measure 196]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2688,7 +2688,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2701,7 +2701,7 @@
 
             % [PageLayout measure 198]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2714,7 +2714,7 @@
 
             % [PageLayout measure 199]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2727,7 +2727,7 @@
 
             % [PageLayout measure 200]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2742,7 +2742,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2755,7 +2755,7 @@
 
             % [PageLayout measure 202]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2768,7 +2768,7 @@
 
             % [PageLayout measure 203]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2781,7 +2781,7 @@
 
             % [PageLayout measure 204]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2796,7 +2796,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \pageBreak
             s1 * 3/4
@@ -2809,7 +2809,7 @@
 
             % [PageLayout measure 206]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2822,7 +2822,7 @@
 
             % [PageLayout measure 207]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2835,7 +2835,7 @@
 
             % [PageLayout measure 208]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #768
+            \baca-new-strict-spacing-section #35 #768
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2850,7 +2850,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -2863,7 +2863,7 @@
 
             % [PageLayout measure 210]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -2876,7 +2876,7 @@
 
             % [PageLayout measure 211]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #4
+            \baca-new-strict-spacing-section #1 #4
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -2889,7 +2889,7 @@
 
             % [PageLayout measure 212]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -2904,7 +2904,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -2917,7 +2917,7 @@
 
             % [PageLayout measure 214]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -2930,7 +2930,7 @@
 
             % [PageLayout measure 215]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -2943,7 +2943,7 @@
 
             % [PageLayout measure 216]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2958,7 +2958,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -2971,7 +2971,7 @@
 
             % [PageLayout measure 218]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2984,7 +2984,7 @@
 
             % [PageLayout measure 219]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -2997,7 +2997,7 @@
 
             % [PageLayout measure 220]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 3/4
@@ -3012,7 +3012,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 4/4
@@ -3025,7 +3025,7 @@
 
             % [PageLayout measure 222]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3038,7 +3038,7 @@
 
             % [PageLayout measure 223]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3051,7 +3051,7 @@
 
             % [PageLayout measure 224]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3066,7 +3066,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -3079,7 +3079,7 @@
 
             % [PageLayout measure 226]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3092,7 +3092,7 @@
 
             % [PageLayout measure 227]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3107,7 +3107,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -3120,7 +3120,7 @@
 
             % [PageLayout measure 229]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3133,7 +3133,7 @@
 
             % [PageLayout measure 230]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3146,7 +3146,7 @@
 
             % [PageLayout measure 231]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #480
+            \baca-new-strict-spacing-section #35 #480
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3161,7 +3161,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3174,7 +3174,7 @@
 
             % [PageLayout measure 233]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3187,7 +3187,7 @@
 
             % [PageLayout measure 234]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3202,7 +3202,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3215,7 +3215,7 @@
 
             % [PageLayout measure 236]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3228,7 +3228,7 @@
 
             % [PageLayout measure 237]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #12
+            \baca-new-strict-spacing-section #1 #12
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3241,7 +3241,7 @@
 
             % [PageLayout measure 238]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #12
+            \baca-new-strict-spacing-section #1 #12
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3254,7 +3254,7 @@
 
             % [PageLayout measure 239]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3269,7 +3269,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3282,7 +3282,7 @@
 
             % [PageLayout measure 241]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3295,7 +3295,7 @@
 
             % [PageLayout measure 242]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3308,7 +3308,7 @@
 
             % [PageLayout measure 243]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3321,7 +3321,7 @@
 
             % [PageLayout measure 244]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -3336,7 +3336,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3349,7 +3349,7 @@
 
             % [PageLayout measure 246]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -3362,7 +3362,7 @@
 
             % [PageLayout measure 247]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #20
+            \baca-new-strict-spacing-section #1 #20
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3375,7 +3375,7 @@
 
             % [PageLayout measure 248]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #3168
+            \baca-new-strict-spacing-section #35 #3168
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3390,7 +3390,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 5/4
@@ -3403,7 +3403,7 @@
 
             % [PageLayout measure 250]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3416,7 +3416,7 @@
 
             % [PageLayout measure 251]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3431,7 +3431,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3444,7 +3444,7 @@
 
             % [PageLayout measure 253]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 2/4
@@ -3457,7 +3457,7 @@
 
             % [PageLayout measure 254]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3470,7 +3470,7 @@
 
             % [PageLayout measure 255]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #288
+            \baca-new-strict-spacing-section #35 #288
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3485,7 +3485,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #56
+            \baca-new-strict-spacing-section #1 #56
               %! BREAK
             \pageBreak
             s1 * 2/4
@@ -3498,7 +3498,7 @@
 
             % [PageLayout measure 257]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #56
+            \baca-new-strict-spacing-section #1 #56
               %! BREAK
             \noBreak
             s1 * 2/4
@@ -3511,7 +3511,7 @@
 
             % [PageLayout measure 258]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #56
+            \baca-new-strict-spacing-section #1 #56
               %! BREAK
             \noBreak
             s1 * 2/4
@@ -3524,7 +3524,7 @@
 
             % [PageLayout measure 259]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #1344
+            \baca-new-strict-spacing-section #35 #1344
               %! BREAK
             \noBreak
             s1 * 2/4
@@ -3539,7 +3539,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3552,7 +3552,7 @@
 
             % [PageLayout measure 261]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #172
+            \baca-new-strict-spacing-section #1 #172
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3565,7 +3565,7 @@
 
             % [PageLayout measure 262]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #576
+            \baca-new-strict-spacing-section #35 #576
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3580,7 +3580,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \pageBreak
             s1 * 7/4
@@ -3593,7 +3593,7 @@
 
             % [PageLayout measure 264]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #40
+            \baca-new-strict-spacing-section #1 #40
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3606,7 +3606,7 @@
 
             % [PageLayout measure 265]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #960
+            \baca-new-strict-spacing-section #35 #960
               %! BREAK
             \noBreak
             s1 * 7/4
@@ -3621,7 +3621,7 @@
               %! BREAK
             \baca-lbsd #32 #'(20 34 31 31 34 31 31 31 31 34)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \pageBreak
             s1 * 6/4
@@ -3634,7 +3634,7 @@
 
             % [PageLayout measure 267]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #24
+            \baca-new-strict-spacing-section #1 #24
               %! BREAK
             \noBreak
             s1 * 6/4
@@ -3647,7 +3647,7 @@
 
             % [PageLayout measure 268]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #4128
+            \baca-new-strict-spacing-section #35 #4128
               %! BREAK
             \noBreak
             s1 * 1/4
@@ -3656,6 +3656,6 @@
 
         }   %*% PageLayout
 
-    >>
+    }
 
 >>
