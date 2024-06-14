@@ -390,7 +390,7 @@ def main():
             baca.layout.Override(268, mol_fermata_spacing),
         ),
     )
-    baca.build.write_layout_ly(breaks, spacing)
+    baca.build.write_layout_ily(breaks, spacing)
 
 
 if __name__ == "__main__":
