@@ -866,7 +866,7 @@ number.6.BassFlute.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5
+    \tuplet 5/6
     {
 
         r4.
@@ -1034,7 +1034,7 @@ number.6.BassFlute.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5
+    \tuplet 5/6
     {
 
         r4.
@@ -1162,7 +1162,7 @@ number.6.BassFlute.Music = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6
+    \tuplet 6/5
     {
 
         r4
@@ -1513,7 +1513,7 @@ number.6.Percussion.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.1.Music measure 8]
@@ -1556,7 +1556,7 @@ number.6.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1872,7 +1872,7 @@ number.6.Percussion.2.Music = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r16
@@ -2190,7 +2190,7 @@ number.6.Harp.Music = {
     - \baca-damp
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6
+    \tuplet 6/5
     {
 
           %! EXPLICIT_CLEF
@@ -2328,7 +2328,7 @@ number.6.Harp.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Harp.Music measure 6]
@@ -2383,7 +2383,7 @@ number.6.Harp.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2419,7 +2419,7 @@ number.6.Harp.Music = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6
+    \tuplet 6/5
     {
 
         r16
@@ -2515,7 +2515,7 @@ number.6.Harp.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Harp.Music measure 10]
@@ -2567,7 +2567,7 @@ number.6.Harp.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2588,7 +2588,7 @@ number.6.Harp.Music = {
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Harp.Music measure 13]
@@ -2610,7 +2610,7 @@ number.6.Harp.Music = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2635,7 +2635,7 @@ number.6.Harp.Music = {
     r8.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6
+    \tuplet 6/5
     {
 
           %! EXPLICIT_CLEF
@@ -3742,7 +3742,7 @@ number.6.Cello.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 8]

@@ -526,7 +526,7 @@ number.23.BassFlute.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9
+    \tuplet 9/8
     {
 
         r32
@@ -722,7 +722,7 @@ number.23.BassFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [BassFlute.Music measure 8]
@@ -753,7 +753,7 @@ number.23.BassFlute.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         ef'8
@@ -908,7 +908,7 @@ number.23.Percussion.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -930,7 +930,7 @@ number.23.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         d'4
@@ -1110,7 +1110,7 @@ number.23.Percussion.2.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.2.Music measure 8]
@@ -1136,7 +1136,7 @@ number.23.Percussion.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -1547,7 +1547,7 @@ number.23.Viola.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         \override Stem.direction = #down
@@ -1565,7 +1565,7 @@ number.23.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         c'8
@@ -1765,7 +1765,7 @@ number.23.Cello.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         e,4
@@ -1856,7 +1856,7 @@ number.23.Cello.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -1876,7 +1876,7 @@ number.23.Cello.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -1904,7 +1904,7 @@ number.23.Cello.1.Staff = <<
 number.23.Cello.2.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Cello.2.Music measure 1]
@@ -2003,7 +2003,7 @@ number.23.Cello.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Cello.2.Music measure 4]
@@ -2141,7 +2141,7 @@ number.23.Cello.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         \override Stem.direction = #down
@@ -2159,7 +2159,7 @@ number.23.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8.
@@ -2314,7 +2314,7 @@ number.23.Contrabass.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         e,4

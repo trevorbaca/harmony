@@ -579,7 +579,7 @@ number.18.BassFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9
+    \tuplet 9/8
     {
 
         % [BassFlute.Music measure 3]
@@ -1174,7 +1174,7 @@ number.18.Percussion.1.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.1.Music measure 10]
@@ -1492,7 +1492,7 @@ number.18.Percussion.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         % [Percussion.2.Music measure 11]
@@ -2559,7 +2559,7 @@ number.18.Viola.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Viola.Music measure 10]
@@ -4155,7 +4155,7 @@ number.18.Cello.2.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.2.Music measure 10]
@@ -5269,7 +5269,7 @@ number.18.Contrabass.2.Music = {
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         % [Contrabass.2.Music measure 2]
@@ -5861,7 +5861,7 @@ number.18.Contrabass.2.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Contrabass.2.Music measure 10]

@@ -708,7 +708,7 @@ number.21.Percussion.1.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.1.Music measure 2]
@@ -749,7 +749,7 @@ number.21.Percussion.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r16
@@ -809,7 +809,7 @@ number.21.Percussion.1.Music = {
     ^ \baca-boxed-bd-struck-markup
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3
+    \tuplet 3/5
     {
 
         r4
@@ -922,7 +922,7 @@ number.21.Percussion.2.Music = {
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3
+    \tuplet 3/5
     {
 
         r2
@@ -1221,7 +1221,7 @@ number.21.Harp.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r2
@@ -1548,7 +1548,7 @@ number.21.Viola.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r16
@@ -1580,7 +1580,7 @@ number.21.Viola.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -1659,7 +1659,7 @@ number.21.Cello.1.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         e,4
@@ -1793,7 +1793,7 @@ number.21.Cello.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         e,4
@@ -2268,7 +2268,7 @@ number.21.Contrabass.1.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         e,4
@@ -2402,7 +2402,7 @@ number.21.Contrabass.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         e,4

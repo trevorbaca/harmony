@@ -490,7 +490,7 @@ number.28.BassFlute.Music = {
     %@% ^ \baca-duration-multiplier-markup #"2" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14
+    \tuplet 14/12
     {
 
         % [BassFlute.Music measure 5]

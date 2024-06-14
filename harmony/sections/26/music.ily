@@ -986,7 +986,7 @@ number.26.BassFlute.Music = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14
+    \tuplet 14/12
     {
 
         % [BassFlute.Music measure 9]
@@ -1313,7 +1313,7 @@ number.26.Percussion.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5
+    \tuplet 5/3
     {
 
         \override Stem.direction = #down
@@ -1410,7 +1410,7 @@ number.26.Percussion.2.Music = {
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         % [Percussion.2.Music measure 2]
@@ -1476,7 +1476,7 @@ number.26.Percussion.2.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Percussion.2.Music measure 8]
@@ -1528,7 +1528,7 @@ number.26.Percussion.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -1664,7 +1664,7 @@ number.26.Harp.Music = {
     \set Staff.shortInstrumentName = \harmony-hp-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1687,7 +1687,7 @@ number.26.Harp.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1725,7 +1725,7 @@ number.26.Harp.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1748,7 +1748,7 @@ number.26.Harp.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1880,7 +1880,7 @@ number.26.Harp.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Harp.Music measure 10]

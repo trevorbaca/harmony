@@ -728,7 +728,7 @@ number.7.BassFlute.Music = {
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -765,7 +765,7 @@ number.7.BassFlute.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -789,7 +789,7 @@ number.7.BassFlute.Music = {
     \bacaStopTextSpanMetricModulation
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         r4
@@ -1611,7 +1611,7 @@ number.7.Harp.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Harp.Music measure 6]
@@ -1666,7 +1666,7 @@ number.7.Harp.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1683,7 +1683,7 @@ number.7.Harp.Music = {
     \stopTextSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1704,7 +1704,7 @@ number.7.Harp.Music = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         r4
@@ -1949,7 +1949,7 @@ number.7.Viola.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5
+    \tuplet 5/3
     {
 
           %! ONE_VOICE_COMMAND
@@ -2094,7 +2094,7 @@ number.7.Viola.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5
+    \tuplet 5/6
     {
 
         bf8
@@ -2500,7 +2500,7 @@ number.7.Cello.1.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5
+    \tuplet 5/3
     {
 
         bf'4
