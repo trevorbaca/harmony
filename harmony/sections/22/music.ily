@@ -661,7 +661,7 @@ number.22.BassFlute.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8.
@@ -691,7 +691,7 @@ number.22.BassFlute.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         ef'16
@@ -1411,7 +1411,7 @@ number.22.BassFlute.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -1438,7 +1438,7 @@ number.22.BassFlute.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         ef'16
@@ -1612,7 +1612,7 @@ number.22.Percussion.1.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         d'8
@@ -1623,7 +1623,7 @@ number.22.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1713,7 +1713,7 @@ number.22.Percussion.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1735,7 +1735,7 @@ number.22.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         d'4
@@ -1829,7 +1829,7 @@ number.22.Percussion.2.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.2.Music measure 4]
@@ -1853,7 +1853,7 @@ number.22.Percussion.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         d'8
@@ -1934,7 +1934,7 @@ number.22.Percussion.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.2.Music measure 13]
@@ -2365,7 +2365,7 @@ number.22.Viola.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Viola.Music measure 3]
@@ -2402,7 +2402,7 @@ number.22.Viola.Music = {
 
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Viola.Music measure 4]
@@ -2450,7 +2450,7 @@ number.22.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -2462,7 +2462,7 @@ number.22.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -2531,7 +2531,7 @@ number.22.Viola.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Viola.Music measure 6]
@@ -2551,7 +2551,7 @@ number.22.Viola.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Viola.Music measure 7]
@@ -2574,7 +2574,7 @@ number.22.Viola.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Viola.Music measure 8]
@@ -2593,7 +2593,7 @@ number.22.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         cs'16
@@ -2610,7 +2610,7 @@ number.22.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         d'8
@@ -2658,7 +2658,7 @@ number.22.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Viola.Music measure 9]
@@ -2677,7 +2677,7 @@ number.22.Viola.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         d'16
@@ -2800,7 +2800,7 @@ number.22.Viola.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2937,7 +2937,7 @@ number.22.Cello.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 4]
@@ -2996,7 +2996,7 @@ number.22.Cello.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         c'8.
@@ -3744,7 +3744,7 @@ number.22.Cello.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 13]
@@ -3791,7 +3791,7 @@ number.22.Cello.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         c'8.
@@ -3896,7 +3896,7 @@ number.22.Cello.2.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         gf'4
@@ -3929,7 +3929,7 @@ number.22.Cello.2.Music = {
 
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.2.Music measure 4]
@@ -3975,7 +3975,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8.
@@ -3988,7 +3988,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         c'16
@@ -3999,7 +3999,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r16
@@ -4072,7 +4072,7 @@ number.22.Cello.2.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         f'8
@@ -4092,7 +4092,7 @@ number.22.Cello.2.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         gf'8
@@ -4106,7 +4106,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         f'8
@@ -4119,7 +4119,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Cello.2.Music measure 8]
@@ -4168,7 +4168,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         gf'!8
@@ -4265,7 +4265,7 @@ number.22.Cello.2.Music = {
 
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.2.Music measure 13]
@@ -4312,7 +4312,7 @@ number.22.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         c'8

@@ -1806,7 +1806,7 @@ number.2.Percussion.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2127,7 +2127,7 @@ number.2.Percussion.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Percussion.2.Music measure 4]
@@ -2225,7 +2225,7 @@ number.2.Percussion.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r8
@@ -2274,7 +2274,7 @@ number.2.Percussion.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Percussion.2.Music measure 8]
@@ -2327,7 +2327,7 @@ number.2.Percussion.2.Music = {
     c'2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Percussion.2.Music measure 11]
@@ -3618,7 +3618,7 @@ number.2.Viola.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -4381,7 +4381,7 @@ number.2.Cello.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3
+    \tuplet 3/5
     {
 
         % [Cello.1.Music measure 6]
@@ -4488,7 +4488,7 @@ number.2.Cello.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         \once \override DynamicLineSpanner.staff-padding = 6
@@ -4949,7 +4949,7 @@ number.2.Cello.2.Music.item.7 = {
 number.2.Cello.2.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Cello.2.Music measure 1]
@@ -6733,7 +6733,7 @@ number.2.Contrabass.2.Music.item.7 = {
 number.2.Contrabass.2.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Contrabass.2.Music measure 1]

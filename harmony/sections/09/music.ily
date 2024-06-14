@@ -640,7 +640,7 @@ number.9.Harp.Music = {
     \set Staff.shortInstrumentName = \harmony-hp-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -762,7 +762,7 @@ number.9.Viola.Music = {
     \bacaStopTextSpanBowSpeed
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         c'2.
@@ -929,7 +929,7 @@ number.9.Cello.1.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         b'2.
@@ -1098,7 +1098,7 @@ number.9.Cello.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         dqs'!2.
@@ -1274,7 +1274,7 @@ number.9.Contrabass.1.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         f'2.

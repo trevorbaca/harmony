@@ -769,7 +769,7 @@ number.1.Percussion.1.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -930,7 +930,7 @@ number.1.Percussion.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r8
@@ -1300,7 +1300,7 @@ number.1.Viola.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1402,7 +1402,7 @@ number.1.Cello.1.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3
+    \tuplet 3/5
     {
 
         a,4
@@ -1453,7 +1453,7 @@ number.1.Cello.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3
+    \tuplet 3/5
     {
 
         % [Cello.1.Music measure 2]
@@ -1546,7 +1546,7 @@ number.1.Cello.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         \once \override DynamicLineSpanner.staff-padding = 6
@@ -1965,7 +1965,7 @@ number.1.Contrabass.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r4.

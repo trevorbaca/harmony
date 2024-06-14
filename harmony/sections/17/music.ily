@@ -432,7 +432,7 @@ number.17.BassFlute.Music = {
     \stopTextSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9
+    \tuplet 9/8
     {
 
         % [BassFlute.Music measure 2]
@@ -1132,7 +1132,7 @@ number.17.Harp.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8

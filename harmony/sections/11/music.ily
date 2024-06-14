@@ -2045,7 +2045,7 @@ number.11.Harp.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -2971,7 +2971,7 @@ number.11.Cello.1.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         r8
@@ -3332,7 +3332,7 @@ number.11.Cello.1.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         aqf8
@@ -3944,7 +3944,7 @@ number.11.Cello.2.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         f8
@@ -3965,7 +3965,7 @@ number.11.Cello.2.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         f4
@@ -4271,7 +4271,7 @@ number.11.Contrabass.1.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3
+    \tuplet 3/4
     {
 
         r8
@@ -4638,7 +4638,7 @@ number.11.Contrabass.1.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         dtqf'8
@@ -5267,7 +5267,7 @@ number.11.Contrabass.2.Music = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         ef8.

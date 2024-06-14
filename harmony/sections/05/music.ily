@@ -585,7 +585,7 @@ number.5.Percussion.1.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.1.Music measure 2]
@@ -635,7 +635,7 @@ number.5.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -657,7 +657,7 @@ number.5.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Percussion.1.Music measure 3]
@@ -687,7 +687,7 @@ number.5.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -988,7 +988,7 @@ number.5.Percussion.2.Music = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r16
@@ -1040,7 +1040,7 @@ number.5.Percussion.2.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r8
@@ -1574,7 +1574,7 @@ number.5.Viola.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         % [Viola.Music measure 3]
@@ -1843,7 +1843,7 @@ number.5.Cello.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 2]
@@ -1900,7 +1900,7 @@ number.5.Cello.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
           %! EXPLICIT_CLEF

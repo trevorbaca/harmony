@@ -438,7 +438,7 @@ number.8.BassFlute.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -475,7 +475,7 @@ number.8.BassFlute.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4

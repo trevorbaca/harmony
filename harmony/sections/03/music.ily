@@ -727,7 +727,7 @@ number.3.Percussion.1.Music = {
     \set Staff.shortInstrumentName = \harmony-perc-i-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -764,7 +764,7 @@ number.3.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Percussion.1.Music measure 2]
@@ -794,7 +794,7 @@ number.3.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -874,7 +874,7 @@ number.3.Percussion.1.Music = {
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Percussion.1.Music measure 6]
@@ -916,7 +916,7 @@ number.3.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r8
@@ -950,7 +950,7 @@ number.3.Percussion.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.1.Music measure 8]
@@ -983,7 +983,7 @@ number.3.Percussion.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1061,7 +1061,7 @@ number.3.Percussion.2.Music = {
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r8
@@ -1129,7 +1129,7 @@ number.3.Percussion.2.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r8
@@ -1237,7 +1237,7 @@ number.3.Percussion.2.Music = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r8
@@ -1297,7 +1297,7 @@ number.3.Percussion.2.Music = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7
+    \tuplet 7/4
     {
 
         r16
@@ -1625,7 +1625,7 @@ number.3.Viola.Music = {
     \set Staff.shortInstrumentName = \harmony-va-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1740,7 +1740,7 @@ number.3.Viola.Music = {
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Viola.Music measure 6]
@@ -1790,7 +1790,7 @@ number.3.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1811,7 +1811,7 @@ number.3.Viola.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r16
@@ -1830,7 +1830,7 @@ number.3.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8.
@@ -1849,7 +1849,7 @@ number.3.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Viola.Music measure 7]
@@ -1869,7 +1869,7 @@ number.3.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -1888,7 +1888,7 @@ number.3.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8.
@@ -1907,7 +1907,7 @@ number.3.Viola.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r16
@@ -1991,7 +1991,7 @@ number.3.Cello.1.Music = {
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         \once \override TupletNumber.text = \markup 5:4
@@ -2169,7 +2169,7 @@ number.3.Cello.1.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 6]
@@ -2218,7 +2218,7 @@ number.3.Cello.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         c'16
@@ -2235,7 +2235,7 @@ number.3.Cello.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r4
@@ -2254,7 +2254,7 @@ number.3.Cello.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 7]
@@ -2274,7 +2274,7 @@ number.3.Cello.1.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r4
@@ -2293,7 +2293,7 @@ number.3.Cello.1.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         c'16
@@ -2309,7 +2309,7 @@ number.3.Cello.1.Music = {
 
     }
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.1.Music measure 8]
@@ -2344,7 +2344,7 @@ number.3.Cello.1.Music = {
 
     }
 
-    \times 4/5
+    \tuplet 5/4
     {
 
           %! EXPLICIT_CLEF

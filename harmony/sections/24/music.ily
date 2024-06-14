@@ -2353,7 +2353,7 @@ number.24.Percussion.2.Music = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
           %! EXPLICIT_STAFF_LINES_COLOR
@@ -3283,7 +3283,7 @@ number.24.Viola.Staff = <<
 number.24.Cello.1.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Cello.1.Music measure 1]
@@ -3477,7 +3477,7 @@ number.24.Cello.1.Music = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4
@@ -4345,7 +4345,7 @@ number.24.Cello.2.Staff = <<
 number.24.Contrabass.1.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Contrabass.1.Music measure 1]
@@ -4539,7 +4539,7 @@ number.24.Contrabass.1.Music = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r4

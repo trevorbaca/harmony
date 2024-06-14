@@ -1020,7 +1020,7 @@ number.27.BassFlute.Music = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14
+    \tuplet 14/12
     {
 
         % [BassFlute.Music measure 6]
@@ -1381,7 +1381,7 @@ number.27.Percussion.1.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5
+    \tuplet 5/6
     {
 
         r8
@@ -1547,7 +1547,7 @@ number.27.Percussion.2.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         % [Percussion.2.Music measure 3]
@@ -1619,7 +1619,7 @@ number.27.Percussion.2.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5
+    \tuplet 5/6
     {
 
         r8
@@ -1907,7 +1907,7 @@ number.27.Harp.Music = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5
+    \tuplet 5/6
     {
 
         r8
@@ -2200,7 +2200,7 @@ number.27.Viola.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4
+    \tuplet 4/5
     {
 
         \override NoteHead.style = #'harmonic-black
@@ -3881,7 +3881,7 @@ number.27.Contrabass.2.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         gf!16

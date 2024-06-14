@@ -931,7 +931,7 @@ number.15.Percussion.2.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Percussion.2.Music measure 5]
@@ -981,7 +981,7 @@ number.15.Percussion.2.Music = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r16
@@ -1011,7 +1011,7 @@ number.15.Percussion.2.Music = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5
+    \tuplet 5/4
     {
 
         r16
@@ -1111,7 +1111,7 @@ number.15.Harp.Music = {
     \set Staff.shortInstrumentName = \harmony-hp-markup %@%
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1167,7 +1167,7 @@ number.15.Harp.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1203,7 +1203,7 @@ number.15.Harp.Music = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3
+    \tuplet 3/2
     {
 
         r8
@@ -1797,7 +1797,7 @@ number.15.Cello.2.Music = {
     \f
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/10
+    \tuplet 10/8
     {
 
         % [Cello.2.Music measure 3]
@@ -2071,7 +2071,7 @@ number.15.Contrabass.1.Music = {
     \f
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/11
+    \tuplet 11/8
     {
 
         % [Contrabass.1.Music measure 3]
@@ -2352,7 +2352,7 @@ number.15.Contrabass.2.Music = {
     \f
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/12
+    \tuplet 12/8
     {
 
         % [Contrabass.2.Music measure 3]
