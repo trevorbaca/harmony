@@ -223,7 +223,7 @@ number.8.Skips = {
     % [Skips measure 8]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
-    \bar ".|:"
+    \bar ".|:-|"
       %! MEASURE_70
       %! NOT_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 2)
