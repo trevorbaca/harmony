@@ -1,3 +1,5 @@
+\version "2.25.16"
+
 % page_count = 1
 % measure_count = 3 + 1
 % time_signatures = [
