@@ -39,7 +39,7 @@
 \score {
     <<
         \keepWithTag PercussionII {
-            \include "layout.ly"
+            \include "layout.ily"
         }
         \keepWithTag PercussionII {
             \include "../_sections/01.ly"

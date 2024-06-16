@@ -39,7 +39,7 @@
 \score {
     <<
         \keepWithTag Viola {
-            \include "layout.ly"
+            \include "layout.ily"
         }
         \keepWithTag Viola {
             \include "../_sections/01.ly"

@@ -39,7 +39,7 @@
 \score {
     <<
         \keepWithTag ContrabassII {
-            \include "layout.ly"
+            \include "layout.ily"
         }
         \keepWithTag ContrabassII {
             \include "../_sections/01.ly"
