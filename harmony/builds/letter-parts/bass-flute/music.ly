@@ -39,7 +39,7 @@
 \score {
     <<
         \keepWithTag BassFlute {
-            \include "layout.ly"
+            \include "layout.ily"
         }
         \keepWithTag BassFlute {
             \include "../_sections/01.ly"

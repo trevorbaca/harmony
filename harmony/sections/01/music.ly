@@ -9,7 +9,7 @@
     <<
 
         {
-            \include "layout.ly"
+            \include "layout.ily"
         }
 
         \context Score = "Score"

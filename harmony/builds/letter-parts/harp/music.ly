@@ -39,7 +39,7 @@
 \score {
     <<
         \keepWithTag Harp {
-            \include "layout.ly"
+            \include "layout.ily"
         }
         \keepWithTag Harp {
             \include "../_sections/01.ly"

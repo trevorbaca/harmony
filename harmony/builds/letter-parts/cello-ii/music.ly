@@ -39,7 +39,7 @@
 \score {
     <<
         \keepWithTag CelloII {
-            \include "layout.ly"
+            \include "layout.ily"
         }
         \keepWithTag CelloII {
             \include "../_sections/01.ly"
