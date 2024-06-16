@@ -1,3 +1,4 @@
+\version "2.25.13"
 #(set-global-staff-size 16)
 
 \header {
@@ -7,7 +8,7 @@
         \override #'(font-name . "Adobe Garamond Pro")
         \abs-fontsize #10
         "(contrabass 2 part)"
-        \vspace #4
+        \combine \null \vspace #4
     }
 }
 

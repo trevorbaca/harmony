@@ -1,3 +1,4 @@
+\version "2.25.13"
 \include "../../stylesheet.ily"
 
 #(set-default-paper-size "letter")
@@ -22,15 +23,15 @@
         \override #'(font-name . "Adobe Garamond Pro Italic")
         \abs-fontsize #13
         "to Jonathan Hepfer"
-        \vspace #1
+        \combine \null \vspace #1
         \override #'(font-name . "Adobe Garamond Pro Bold")
         \abs-fontsize #20
         \line { ( HARMONY ) }
-        \vspace #0.5
+        \combine \null \vspace #0.5
         \override #'(font-name . "Adobe Garamond Pro Italic")
         \abs-fontsize #13
         "for narrator & nine players"
-        \vspace #1
+        \combine \null \vspace #1
     }
 }
 
