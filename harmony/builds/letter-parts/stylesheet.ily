@@ -23,15 +23,15 @@
         \override #'(font-name . "Adobe Garamond Pro Italic")
         \abs-fontsize #13
         "to Jonathan Hepfer"
-        \combine \null \vspace #1
+        \combine \null \combine \null \vspace #1
         \override #'(font-name . "Adobe Garamond Pro Bold")
         \abs-fontsize #20
         \line { ( HARMONY ) }
-        \combine \null \vspace #0.5
+        \combine \null \combine \null \vspace #0.5
         \override #'(font-name . "Adobe Garamond Pro Italic")
         \abs-fontsize #13
         "for narrator & nine players"
-        \combine \null \vspace #1
+        \combine \null \combine \null \vspace #1
     }
 }
 
