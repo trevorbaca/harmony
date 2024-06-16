@@ -8,7 +8,7 @@
         \override #'(font-name . "Adobe Garamond Pro")
         \abs-fontsize #10
         "(contrabass 2 part)"
-        \combine \null \combine \null \vspace #4
+        \combine \null \combine \null \combine \null \vspace #4
     }
 }
 
