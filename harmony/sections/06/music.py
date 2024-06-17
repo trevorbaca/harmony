@@ -1451,6 +1451,7 @@ def make_layout(environment):
         environment.metadata["time_signatures"],
         spacing,
         first_measure_number=environment.first_measure_number,
+        has_anchor_skip=environment.metadata["has_anchor_skip"],
     )
 
 
