@@ -158,7 +158,7 @@ def main():
     time_signatures = baca.build.accumulate_time_signatures(sections_directory)
     fmns = baca.build.accumulate_fermata_measure_numbers(sections_directory)
     baca.build.write_layout_ily(
-        breaks, time_signatures, spacing, fermata_measure_numbers=fmns
+        breaks, time_signatures, fermata_measure_numbers=fmns, spacing=spacing
     )
 
 
