@@ -1,3 +1,6 @@
+import os
+import pathlib
+
 import baca
 
 
@@ -150,7 +153,10 @@ def main():
         default=(1, 32),
         overrides=(baca.layout.Override(empty_measures, (1, 4)),),
     )
-    baca.build.write_layout_ily(breaks, spacing)
+    build_directory = pathlib.Path(os.getcwd())
+    sections_directory = baca.path.get_contents_directory(build_directory) / "sections"
+    time_signatures = baca.build.accumulate_time_signatures(sections_directory)
+    baca.build.write_layout_ily(breaks, time_signatures, spacing)
 
 
 if __name__ == "__main__":
