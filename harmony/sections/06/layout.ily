@@ -212,7 +212,6 @@
               %! SPACING
             %@% \bacaStartTextSpanSPM
 
-              %! ANCHOR_SKIP
             % [anchor skip]
               %! ANCHOR_SKIP
               %! SPACING_COMMAND
