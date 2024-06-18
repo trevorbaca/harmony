@@ -1,10 +1,7 @@
-import os
-import pathlib
-
 import baca
 
 
-def main():
+def main(environment):
     distances = [18, (32), (26, 26, 32), (26, 26, 26, 26, 32)]
     text_measure_numbers = [
         15,
@@ -210,14 +207,16 @@ def main():
             baca.layout.Override(text_measure_numbers, (1, 288)),
         ),
     )
-    build_directory = pathlib.Path(os.getcwd())
-    sections_directory = baca.path.get_contents_directory(build_directory) / "sections"
-    time_signatures = baca.build.accumulate_time_signatures(sections_directory)
-    fmns = baca.build.accumulate_fermata_measure_numbers(sections_directory)
-    baca.build.write_layout_ily(
-        breaks, time_signatures, fermata_measure_numbers=fmns, spacing=spacing
+    return baca.build.write_layout_ily(
+        breaks,
+        environment.time_signatures,
+        fermata_measure_numbers=environment.fermata_measure_numbers,
+        spacing=spacing,
     )
 
 
 if __name__ == "__main__":
-    main()
+    environment = baca.build.read_build_directory_environment()
+    lilypond_file, bol_measure_numbers = main(environment)
+    baca.build.persist_layout_ily(environment.build_directory, lilypond_file)
+    baca.build.write_bol_metadata(environment.build_directory, bol_measure_numbers)
