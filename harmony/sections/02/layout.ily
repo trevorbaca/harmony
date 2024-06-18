@@ -1,7 +1,6 @@
 \version "2.25.16"
 
 
-
 \context Score = "Score"
 <<
 
