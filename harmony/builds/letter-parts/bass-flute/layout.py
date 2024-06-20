@@ -161,5 +161,5 @@ def main(environment):
 if __name__ == "__main__":
     environment = baca.build.read_build_directory_environment()
     lilypond_file, bol_measure_numbers = main(environment)
-    baca.build.persist_layout_ily(environment.build_directory, lilypond_file)
+    baca.build.persist_build_layout_ily(environment.build_directory, lilypond_file)
     baca.build.write_bol_metadata(environment.build_directory, bol_measure_numbers)
