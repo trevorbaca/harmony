@@ -207,7 +207,7 @@ def main(environment):
             baca.layout.Override(text_measure_numbers, (1, 288)),
         ),
     )
-    return baca.build.write_layout_ily(
+    return baca.section.make_layout_score(
         breaks,
         environment.time_signatures,
         fermata_measure_numbers=environment.fermata_measure_numbers,
