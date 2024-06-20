@@ -1177,7 +1177,9 @@ def main():
         persist_score(score, environment)
     if environment.arguments.layout:
         lilypond_file, bol_measure_numbers = make_layout(environment)
-        baca.build.persist_layout_ily(environment.section_directory, lilypond_file)
+        baca.build.persist_section_layout_ily(
+            environment.section_directory, lilypond_file
+        )
         baca.build.write_bol_metadata(
             environment.section_directory, bol_measure_numbers
         )
