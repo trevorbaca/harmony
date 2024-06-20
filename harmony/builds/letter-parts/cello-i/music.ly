@@ -36,42 +36,44 @@
 \include "../_sections/28.ily"
 \include "../_sections/29.ily"
 
-
-\score {
-    <<
-        \keepWithTag CelloI {
-            \page-layout-score
-        }
-        \keepWithTag CelloI {
-            \include "../_sections/01.ly"
-            \include "../_sections/02.ly"
-            \include "../_sections/03.ly"
-            \include "../_sections/04.ly"
-            \include "../_sections/05.ly"
-            \include "../_sections/06.ly"
-            \include "../_sections/07.ly"
-            \include "../_sections/08.ly"
-            \include "../_sections/09.ly"
-            \include "../_sections/10.ly"
-            \include "../_sections/11.ly"
-            \include "../_sections/12.ly"
-            \include "../_sections/13.ly"
-            \include "../_sections/14.ly"
-            \include "../_sections/15.ly"
-            \include "../_sections/16.ly"
-            \include "../_sections/17.ly"
-            \include "../_sections/18.ly"
-            \include "../_sections/19.ly"
-            \include "../_sections/20.ly"
-            \include "../_sections/21.ly"
-            \include "../_sections/22.ly"
-            \include "../_sections/23.ly"
-            \include "../_sections/24.ly"
-            \include "../_sections/25.ly"
-            \include "../_sections/26.ly"
-            \include "../_sections/27.ly"
-            \include "../_sections/28.ly"
-            \include "../_sections/29.ly"
-        }
-    >>
+\score
+{
+  <<
+    \keepWithTag CelloI
+    {
+      \page-layout-score
+    }
+    \keepWithTag CelloI
+    {
+      \include "../_sections/01.ly"
+      \include "../_sections/02.ly"
+      \include "../_sections/03.ly"
+      \include "../_sections/04.ly"
+      \include "../_sections/05.ly"
+      \include "../_sections/06.ly"
+      \include "../_sections/07.ly"
+      \include "../_sections/08.ly"
+      \include "../_sections/09.ly"
+      \include "../_sections/10.ly"
+      \include "../_sections/11.ly"
+      \include "../_sections/12.ly"
+      \include "../_sections/13.ly"
+      \include "../_sections/14.ly"
+      \include "../_sections/15.ly"
+      \include "../_sections/16.ly"
+      \include "../_sections/17.ly"
+      \include "../_sections/18.ly"
+      \include "../_sections/19.ly"
+      \include "../_sections/20.ly"
+      \include "../_sections/21.ly"
+      \include "../_sections/22.ly"
+      \include "../_sections/23.ly"
+      \include "../_sections/24.ly"
+      \include "../_sections/25.ly"
+      \include "../_sections/26.ly"
+      \include "../_sections/27.ly"
+      \include "../_sections/28.ly"
+      \include "../_sections/29.ly"
+    }
+  >>
 }
