@@ -1,16 +1,19 @@
 \version "2.25.16"
-\header {
-    subtitle = \markup
-        \column {
-            \override #'(font-name . "Adobe Garamond Pro")
-            \fontsize #3
-            "(percussion 2 part)"
-            \fontsize #3
-            " "
-            \null
-        }
+
+\header
+{
+  subtitle = \markup
+    \column {
+      \override #'(font-name . "Adobe Garamond Pro")
+      \fontsize #3
+      "(percussion 2 part)"
+      \fontsize #3
+      " "
+      \null
+    }
 }
 
-\layout {
-    ragged-right = ##f
+\layout
+{
+  ragged-right = ##f
 }
