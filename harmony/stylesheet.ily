@@ -198,9 +198,6 @@
     \remove Bar_number_engraver
     \remove Metronome_mark_engraver
     \remove System_start_delimiter_engraver
-    % necessary for uniform overlapping polyrhythms with accidentals
-    % should be managed region-by-region in score:
-    %\override Accidental.X-extent = ##f
     \override BarLine.hair-thickness = 0.5
     \override BarLine.X-extent = #'(0 . 0)
     \override Beam.damping = 99
@@ -223,11 +220,8 @@
     \override StemTremolo.flag-count = 4
     \override StemTremolo.slope = 0.5
     \override TextScript.font-name = #"Palatino"
-    % DISCOVERY: overriding TextScript.X-extent = ##f
-    %      makes LilyPond ignore self-alignment-X tweaks;
-    %      probably should never be done at stylesheet level.
-    % NOTE:    may be best to override NO text script properties.
     \override TextSpanner.to-barline = ##t
+    \override TrillPitchAccidental.avoid-slur = #'ignore
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletBracket.padding = 2
     \override TupletNumber.font-size = 1
