@@ -192,96 +192,77 @@
         }   %*% PageLayout
 
         \context GlobalSkips = "Breaks"
-        {
+        {   %*% Breaks
 
             % [Breaks measure 1]
-              %! BREAK
             \autoPageBreaksOff
-              %! BREAK
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
-              %! BREAK
             \pageBreak
             s1 * 6/4
 
             % [Breaks measure 2]
-              %! BREAK
             \noBreak
             s1 * 4/4
 
             % [Breaks measure 3]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 4]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 5]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 6]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 7]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 8]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 9]
-              %! BREAK
             \noBreak
             s1 * 1/4
 
             % [Breaks measure 10]
-              %! BREAK
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
-              %! BREAK
             \pageBreak
             s1 * 6/4
 
             % [Breaks measure 11]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 12]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 13]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 14]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [Breaks measure 15]
-              %! BREAK
             \noBreak
             s1 * 6/4
 
             % [anchor skip]
-              %! BREAK
             \noBreak
               %! ANCHOR_SKIP
             s1 * 1/4
 
-        }
+        }   %*% Breaks
 
     >>
 
