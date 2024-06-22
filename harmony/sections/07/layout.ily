@@ -7,43 +7,6 @@
     \context GlobalContext = "GlobalContext"
     <<
 
-        \context PageLayout = "PageLayout"
-        {   %*% PageLayout
-
-            % [PageLayout measure 1]
-            s1 * 4/4
-
-            % [PageLayout measure 2]
-            s1 * 3/4
-
-            % [PageLayout measure 3]
-            s1 * 1/4
-
-            % [PageLayout measure 4]
-            s1 * 4/4
-
-            % [PageLayout measure 5]
-            s1 * 4/4
-
-            % [PageLayout measure 6]
-            s1 * 5/4
-
-            % [PageLayout measure 7]
-            s1 * 6/4
-
-            % [PageLayout measure 8]
-            s1 * 4/4
-
-            % [anchor skip]
-              %! ANCHOR_SKIP
-            s1 * 1/4
-              %! ANCHOR_SKIP
-            \once \override Score.BarLine.transparent = ##t
-              %! ANCHOR_SKIP
-            \once \override Score.SpanBar.transparent = ##t
-
-        }   %*% PageLayout
-
         \context GlobalSkips = "Breaks"
         {   %*% Breaks
 
