@@ -108,15 +108,6 @@
   }
   \context
   {
-    \name PageLayout
-    \type Engraver_group
-    \consists Text_engraver
-    \consists \alternateTextSpannerEngraver
-
-    \override TextSpanner.font-size = 6
-  }
-  \context
-  {
     \name GlobalContext
     \type Engraver_group
     \consists Axis_group_engraver
@@ -130,7 +121,6 @@
     \accepts GlobalSkips
     \defaultchild GlobalSkips
     \accepts GlobalRests
-    \accepts PageLayout
     \override BarNumber.Y-extent = ##f
     % TODO: hide in score:
     %\override BarNumber.break-visibility = #end-of-line-invisible
