@@ -5,8 +5,6 @@ number.9.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #blue
     \bar ".|:-|"
       %! MEASURE_72
       %! NOT_MOL
@@ -14,8 +12,6 @@ number.9.Skips = {
       %! MEASURE_72
       %! ONLY_MOL
 %%% \once \override Score.BarLine.X-extent = #'(0 . 3)
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -114,11 +110,6 @@ number.9.Skips = {
       %! ANCHOR_SKIP
     % [anchor skip]
       %! ANCHOR_SKIP
-    \baca-time-signature-transparent
-      %! ANCHOR_SKIP
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 1/4
-      %! ANCHOR_SKIP
     s1 * 1/4
       %! ANCHOR_SKIP
       %! CLOCK_TIME
@@ -139,6 +130,53 @@ number.9.Skips = {
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP
     \once \override Score.SpanBar.transparent = ##t
+
+}
+
+
+number.9.TimeSignatures = {
+
+    % [TimeSignatures measure 1]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
+    s1 * 6/4
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "1"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "72"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [TimeSignatures measure 2]
+    s1 * 6/4
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
+      %! LOCAL_MEASURE_NUMBER
+    - \baca-start-lmn-left-only "2"
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStartTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "73"
+      %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN
+
+    % [anchor skip]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #blue
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 1/4
+      %! ANCHOR_SKIP
+    s1 * 1/4
+      %! LOCAL_MEASURE_NUMBER
+    \bacaStopTextSpanLMN
+      %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN
 
 }
 
