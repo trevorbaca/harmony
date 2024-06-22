@@ -20,6 +20,9 @@
                 \context GlobalSkips = "Skips"
                 { \number.27.Skips }
 
+                \context GlobalSkips = "TimeSignatures"
+                { \number.27.TimeSignatures }
+
             >>
 
             \context MusicContext = "MusicContext"
