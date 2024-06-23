@@ -12,6 +12,8 @@ number.9.Skips = {
       %! MEASURE_72
       %! ONLY_MOL
 %%% \once \override Score.BarLine.X-extent = #'(0 . 3)
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=144
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR

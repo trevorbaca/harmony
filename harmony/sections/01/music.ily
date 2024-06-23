@@ -3,6 +3,8 @@
 number.1.Skips = {
 
     % [Skips measure 1]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
     s1 * 6/4
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
@@ -68,6 +70,8 @@ number.1.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 3]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT

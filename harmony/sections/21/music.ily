@@ -12,6 +12,8 @@ number.21.Skips = {
       %! MEASURE_191
       %! ONLY_MOL
 %%% \once \override Score.BarLine.X-extent = #'(0 . 3)
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -70,6 +72,8 @@ number.21.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 2]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
     s1 * 4/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -160,6 +164,8 @@ number.21.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 4]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -221,6 +227,8 @@ number.21.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 5]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT

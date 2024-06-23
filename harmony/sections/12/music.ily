@@ -5,6 +5,8 @@ number.12.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -63,6 +65,8 @@ number.12.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 2]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=144
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -124,6 +128,8 @@ number.12.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 3]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -315,6 +321,8 @@ number.12.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 10]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=48
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -383,6 +391,8 @@ number.12.Skips = {
       %! MEASURE_109
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 3)
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
