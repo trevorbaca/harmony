@@ -5,6 +5,8 @@ number.13.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=144
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -115,6 +117,8 @@ number.13.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 4]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=48
     s1 * 6/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -176,6 +180,8 @@ number.13.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 5]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=96
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT

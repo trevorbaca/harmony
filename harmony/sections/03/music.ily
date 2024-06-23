@@ -5,6 +5,8 @@ number.3.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
+      %! EXPLICIT_METRONOME_MARK
+    \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
@@ -63,6 +65,8 @@ number.3.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 2]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=72
     s1 * 3/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -149,6 +153,8 @@ number.3.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 4]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=48
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
@@ -235,6 +241,8 @@ number.3.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 6]
+      %! EXPLICIT_METRONOME_MARK
+    \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
     s1 * 5/4
       %! CLOCK_TIME
     %@% \bacaStopTextSpanCT
