@@ -5,7 +5,7 @@ number.25.Skips = {
     % [Skips measure 1]
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=144
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
@@ -65,7 +65,7 @@ number.25.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 2]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
     s1 * 6/4
       %! CLOCK_TIME
@@ -128,7 +128,7 @@ number.25.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 3]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=48
     s1 * 5/4
       %! CLOCK_TIME
@@ -216,7 +216,7 @@ number.25.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 5]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo \markup \abjad-metronome-mark-markup #2 #0 #1 #"57.6"
     s1 * 6/4
       %! CLOCK_TIME

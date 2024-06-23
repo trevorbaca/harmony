@@ -12,7 +12,7 @@ number.19.Skips = {
       %! MEASURE_168
       %! ONLY_MOL
 %%% \once \override Score.BarLine.X-extent = #'(0 . 3)
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=96
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
@@ -76,7 +76,7 @@ number.19.Skips = {
       %! MEASURE_169
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 1.5)
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=72
     s1 * 4/4
       %! CLOCK_TIME
@@ -164,7 +164,7 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 4]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=96
     s1 * 5/4
       %! CLOCK_TIME
@@ -357,7 +357,7 @@ number.19.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 11]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=144
     s1 * 4/4
       %! CLOCK_TIME
@@ -420,7 +420,7 @@ number.19.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 12]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=96
     s1 * 5/4
       %! CLOCK_TIME
@@ -483,7 +483,7 @@ number.19.Skips = {
     \bacaStartTextSpanSNM
 
     % [Skips measure 13]
-      %! EXPLICIT_METRONOME_MARK
+      %! LILYPOND_TEMPO_COMMAND
     \tempo 4=144
     s1 * 4/4
       %! CLOCK_TIME
