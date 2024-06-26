@@ -71,69 +71,6 @@
 
         }   %*% SpacingCommands
 
-        \context GlobalSkips = "SpacingAnnotations"
-        {   %*% SpacingAnnotations
-
-            % [SpacingAnnotations measure 1]
-            s1 * 6/4
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/40]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [SpacingAnnotations measure 2]
-            s1 * 4/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/40]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [SpacingAnnotations measure 3]
-            s1 * 1/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/4]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [SpacingAnnotations measure 4]
-            s1 * 3/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/40]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [SpacingAnnotations measure 5]
-            s1 * 5/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/40]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [SpacingAnnotations measure 6]
-            s1 * 1/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-              %! SPACING
-            %@% - \baca-start-spm-left-only "[1/288]"
-              %! SPACING
-            %@% \bacaStartTextSpanSPM
-
-            % [anchor skip]
-              %! ANCHOR_SKIP
-            s1 * 1/4
-              %! SPACING
-            %@% \bacaStopTextSpanSPM
-
-        }   %*% SpacingAnnotations
-
     >>
 
 }
