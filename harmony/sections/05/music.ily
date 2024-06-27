@@ -1319,7 +1319,7 @@ number.5.Harp.Music = {
       %! MEASURE_36
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
-    \once \override Staff.Clef.whiteout = 2
+    \once \override Staff.Clef.whiteout = ##t
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f

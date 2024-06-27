@@ -442,7 +442,7 @@ def hp(m):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.override.clef_whiteout(o.leaf(0), 2)
+        baca.override.clef_whiteout_true(o.leaf(0))
         baca.pitch(o, "G1")
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
