@@ -2242,7 +2242,7 @@ number.14.Viola.Music = {
     \set Staff.shortInstrumentName = \harmony-va-markup %@%
 
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
     _ \baca-string-iv-markup
@@ -2416,7 +2416,7 @@ number.14.Viola.Music = {
 
     % [Viola.Music measure 6]
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     ds!1
     :32
     _ \baca-string-iv-markup
@@ -2462,7 +2462,7 @@ number.14.Viola.Music = {
     % [Viola.Music measure 7]
     r2.
 
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
       %! SPANNER_START
@@ -2510,7 +2510,7 @@ number.14.Viola.Music = {
     %@% ^ \baca-duration-multiplier-markup #"4" #"4"
 
     % [Viola.Music measure 9]
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
       %! SPANNER_START
@@ -2554,7 +2554,7 @@ number.14.Viola.Music = {
 
     r2
 
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
       %! SPANNER_START
@@ -3768,7 +3768,7 @@ number.14.Contrabass.1.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
 
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
     _ \baca-string-iv-markup
@@ -3947,7 +3947,7 @@ number.14.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 6]
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     f1
     :32
     _ \baca-string-iv-markup
@@ -3993,7 +3993,7 @@ number.14.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 7]
     r2
 
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
       %! SPANNER_START
@@ -4040,7 +4040,7 @@ number.14.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 8]
     r2.
 
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
       %! SPANNER_START
@@ -4085,7 +4085,7 @@ number.14.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 9]
     r2.
 
-    \afterGrace
+    \afterGrace 15/16
     f4
     :32
       %! SPANNER_START
@@ -4272,7 +4272,7 @@ number.14.Contrabass.2.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup %@%
 
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
     _ \baca-string-iv-markup
@@ -4414,7 +4414,7 @@ number.14.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 6]
     \override NoteHead.style = #'harmonic
-    \afterGrace
+    \afterGrace 15/16
     ds!1
     :32
     _ \baca-string-iv-markup
@@ -4462,7 +4462,7 @@ number.14.Contrabass.2.Music = {
     % [Contrabass.2.Music measure 7]
     r2.
 
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
       %! SPANNER_START
@@ -4507,7 +4507,7 @@ number.14.Contrabass.2.Music = {
     % [Contrabass.2.Music measure 8]
     r2
 
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
       %! SPANNER_START
@@ -4554,7 +4554,7 @@ number.14.Contrabass.2.Music = {
     % [Contrabass.2.Music measure 9]
     r2.
 
-    \afterGrace
+    \afterGrace 15/16
     ds!4
     :32
       %! SPANNER_START

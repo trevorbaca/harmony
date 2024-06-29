@@ -2579,7 +2579,7 @@ number.3.Cello.2.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g,8
     :32
     {
@@ -3345,7 +3345,7 @@ number.3.Contrabass.2.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g8
     :32
     {

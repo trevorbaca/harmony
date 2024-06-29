@@ -1988,7 +1988,7 @@ number.20.Viola.Music = {
 
     }
 
-    \afterGrace
+    \afterGrace 15/16
     cs'2
     \glissando
     \repeatTie
@@ -2939,7 +2939,7 @@ number.20.Cello.2.Music = {
 
     }
 
-    \afterGrace
+    \afterGrace 15/16
     f'4
     \glissando
     {
@@ -3387,7 +3387,7 @@ number.20.Contrabass.1.Music = {
     ]
     ~
 
-    \afterGrace
+    \afterGrace 15/16
     cs2
     \glissando
     {
