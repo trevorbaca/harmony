@@ -1427,7 +1427,7 @@ number.5.Harp.Music = {
     g4
     \glissando
 
-    \afterGrace
+    \afterGrace 15/16
     b4
     \glissando
     {
@@ -2333,7 +2333,7 @@ number.5.Cello.2.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g,8
     :32
     {
@@ -3102,7 +3102,7 @@ number.5.Contrabass.2.Music = {
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    \afterGrace
+    \afterGrace 15/16
     g8
     :32
     {

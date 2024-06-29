@@ -3027,7 +3027,7 @@ number.24.Viola.Music = {
     \stopTrillSpan
 
     % [Viola.Music measure 4]
-    \afterGrace
+    \afterGrace 15/16
     d'2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4102,7 +4102,7 @@ number.24.Cello.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     % [Cello.2.Music measure 4]
-    \afterGrace
+    \afterGrace 15/16
     d2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5172,7 +5172,7 @@ number.24.Contrabass.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     % [Contrabass.2.Music measure 4]
-    \afterGrace
+    \afterGrace 15/16
     d'2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

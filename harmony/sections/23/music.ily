@@ -1518,7 +1518,7 @@ number.23.Viola.Music = {
     \bacaStopTextSpanSCP
 
     % [Viola.Music measure 7]
-    \afterGrace
+    \afterGrace 15/16
     d'2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2113,7 +2113,7 @@ number.23.Cello.2.Music = {
     dqf!1.
 
     % [Cello.2.Music measure 7]
-    \afterGrace
+    \afterGrace 15/16
     d2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2656,7 +2656,7 @@ number.23.Contrabass.2.Music = {
     \bacaStopTextSpanSCP
 
     % [Contrabass.2.Music measure 7]
-    \afterGrace
+    \afterGrace 15/16
     d2.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
