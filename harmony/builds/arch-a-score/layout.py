@@ -315,7 +315,7 @@ def main(environment):
     )
     spacing = baca.layout.Spacing(
         default=(1, 40),
-        overrides=(
+        strict_overrides=(
             # baca.layout.Override(text_measure_numbers, (1, 288)),
             # baca.layout.Override(text_measure_numbers, (1, 144)),
             baca.layout.Override(text_measure_numbers, eol_fermata_spacing),
