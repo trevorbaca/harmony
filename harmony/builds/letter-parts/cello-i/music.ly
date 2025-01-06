@@ -1,7 +1,7 @@
 % (HARMONY) (2019) cello i part
 % part_identifier = 'VC1'
 
-\version "2.25.19"
+\version "2.25.22"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"

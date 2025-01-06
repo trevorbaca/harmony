@@ -1,6 +1,6 @@
 % ( H A R M O N Y ) (2019) for narrator & nine players
 
-\version "2.25.19"
+\version "2.25.22"
 
 \include "stylesheet.ily"
 \include "layout.ily"
