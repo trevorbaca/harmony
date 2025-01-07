@@ -1,6 +1,12 @@
 ( H A R M O N Y )
 =================
 
+[![Python 3.12](
+    https://img.shields.io/badge/python-3.12-blue.svg)](
+    https://www.python.org/downloads/release/python-312/)
+[![Python 3.13](
+    https://img.shields.io/badge/python-3.13-blue.svg)](
+    https://www.python.org/downloads/release/python-313/)
 ![Build Status](
     https://github.com/trevorbaca/harmony/actions/workflows/main.yml/badge.svg)
 [![Code style: black](
