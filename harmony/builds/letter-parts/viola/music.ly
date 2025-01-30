@@ -1,7 +1,7 @@
 % (HARMONY) (2019) viola part
 % part_identifier = 'VA'
 
-\version "2.25.22"
+\version "2.25.23"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"
