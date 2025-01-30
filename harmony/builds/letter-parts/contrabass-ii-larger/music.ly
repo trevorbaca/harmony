@@ -1,7 +1,7 @@
 % (HARMONY) (2019) contrabass ii part
 % part_identifier = 'CB2'
 
-\version "2.25.22"
+\version "2.25.23"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"

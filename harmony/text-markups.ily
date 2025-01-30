@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.23"
 #(define-markup-command
     (harmony-text layout props markup)
     (markup?)
