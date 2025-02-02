@@ -7,53 +7,71 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+env:
+  PYTHONUNBUFFERED: TRUE
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        lilypond-version: ["2.25.23"]
         python-version: ["3.12", "3.13"]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Check out repository
+      uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
+
+    - name: Cache dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: >
+          ${{ runner.os }}-pip-
+          ${{ matrix.python-version }}-
+          ${{ hashFiles('ci/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ matrix.python-version }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+
+    - name: Write environment variables
+      run: |
+        PATH="/tmp/lilypond-${{ matrix.lilypond-version }}/bin:home/runner/bin:$PATH"
+        echo "PATH=$PATH" >> $GITHUB_ENV
 
     - name: Log environment variables
       run: |
         echo "HOME: $HOME"
         echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
         echo "PATH: $PATH"
+        echo "PYTHONUNBUFFERED: ${PYTHONUNBUFFERED:-not set}"
         echo "PYTHONPATH: ${PYTHONPATH:-not set}"
 
     - name: Install LilyPond
-      uses: Abjad/install-lilypond@v2.25.23
+      uses: Abjad/install-lilypond@main
+      with:
+        lilypond-version: ${{ matrix.lilypond-version }}
 
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         python -m pip install -r ci/requirements.txt --no-cache-dir
 
-    - name: Log dependencies
-      run: |
-        black --version
-        flake8 --version
-        isort --version
-        pip --version
-        pytest --version
-
     - name: Install Abjad trevor/dev branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        python -m pip install /tmp/abjad
-        echo Priming Abjad parser tables ...
-        import="import abjad; from abjad.parsers"
-        python -c "${import}.parser import LilyPondParser; LilyPondParser()"
-        python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
-        python -c "${import}.scheme import SchemeParser; SchemeParser()"
+        # include -e for access to abjad/scr/prime_parser_tables.py
+        python -m pip install -e /tmp/abjad
+
+    - name: Prime parser tables
+      run: |
+        /tmp/abjad/scr/prime_parser_tables.py
 
     - name: Install rmakers
       run: |
@@ -63,15 +81,20 @@ jobs:
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
+        # include -e for access to baca/scr/doctest, test-sections, ...
         python -m pip install -e /tmp/baca
 
-    - name: Install this score
+    - name: Install this package
       run: |
         python -m pip install .
 
-    - name: List installed packages
+    - name: Log Python dependencies
       run: |
-        python -m pip list
+        black --version
+        flake8 --version
+        isort --version
+        pip --version
+        pytest --version
 
     - name: Run checks
       run: |
@@ -81,19 +104,14 @@ jobs:
 
     - name: Run doctest
       run: |
-        export PATH=/home/runner/bin:$PATH
         /tmp/baca/scr/doctest $GITHUB_WORKSPACE
 
     - name: Test sections
       run: |
-        export PATH=/tmp/lilypond-2.25.23/bin:/tmp/baca/scr:/home/runner/bin:$PATH
-        export PYTHONUNBUFFERED=TRUE
         /tmp/baca/scr/test-sections
 
     - name: Test score builds
       run: |
-        export PATH=/tmp/lilypond-2.25.23/bin:/tmp/baca/scr:/home/runner/bin:$PATH
-        export PYTHONUNBUFFERED=TRUE
         NAME=$(basename $GITHUB_WORKSPACE)
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
         if [ -d $BUILDS_DIRECTORY ]; then
