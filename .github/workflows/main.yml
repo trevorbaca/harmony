@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 env:
+  GC_FREE_SPACE_DIVISOR: 10
   PYTHONUNBUFFERED: TRUE
 
 jobs:
@@ -48,6 +49,7 @@ jobs:
     - name: Log environment variables
       run: |
         echo "HOME: $HOME"
+        echo "GC_FREE_SPACE_DIVISOR: $GC_FREE_SPACE_DIVISOR"
         echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
         echo "PATH: $PATH"
         echo "PYTHONUNBUFFERED: ${PYTHONUNBUFFERED:-not set}"
@@ -106,8 +108,15 @@ jobs:
       run: |
         /tmp/baca/scr/doctest $GITHUB_WORKSPACE
 
+    - name: Set cores to get stored in /cores
+      run: |
+        sudo mkdir /cores
+        sudo chmod 777 /cores
+        sudo bash -c 'echo "/cores/%e.%p.%t" > /proc/sys/kernel/core_pattern'
+
     - name: Test sections
       run: |
+        ulimit -c unlimited
         /tmp/baca/scr/test-sections
 
     - name: Test score builds
@@ -119,3 +128,9 @@ jobs:
           /tmp/baca/scr/test-score-build-music
         fi
         cd $GITHUB_WORKSPACE
+
+    - uses: actions/upload-artifact@v4
+      if: ${{ failure() }}
+      with:
+        name: cores
+        path: /cores
