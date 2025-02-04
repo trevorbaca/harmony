@@ -1,0 +1,29 @@
+# LaTeX
+*.aux
+*.log
+*.gz
+
+# macOS
+.DS_Store
+
+# mypy
+.mypy_cache
+
+# output
+*.midi
+*.pdf
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.coverage
+.pytest_cache
+htmlcov
+
+# python
+*.egg
+*.egg-info
+*.py[cod]
+__pycache__
