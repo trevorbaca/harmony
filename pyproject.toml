@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "harmony"
-version = "1.0.0"
+version = "3.21"
 description = "( H A R M O NY ) (2019) for narrator & nine players"
 authors = [{ name = "Trevor Bača", email = "trevor.baca@gmail.com" }]
 license = { text = "MIT" }
