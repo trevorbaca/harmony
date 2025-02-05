@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmony"
+version = "1.0.0"
+description = "( H A R M O NY ) (2019) for narrator & nine players"
+authors = [{ name = "Trevor Bača", email = "trevor.baca@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["abjad", "lilypond", "music composition", "music notation"]
+dependencies = [
+    "abjad>=3.21",
+    "black",
+    "flake8",
+    "isort",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/trevorbaca/harmony"
+
+[tool.setuptools.packages.find]
+where = ["."]
