@@ -1,3 +1,6 @@
+.PHONY: black-check black-reformat clean flake8 install isort-check isort-reformat \
+	pytest reformat lint
+
 black-check:
 	black --check --diff .
 
@@ -15,7 +18,7 @@ flake8:
 	flake8 ${flake_exclude} ${flake_ignore} ${flake_options}
 
 install:
-	pip install -e .
+	python -m pip install -e .
 
 isort-check:
 	isort --case-sensitive --check-only --line-width=88 --multi-line=3 \
@@ -33,6 +36,3 @@ pytest:
 reformat: black-reformat isort-reformat
 
 lint: black-check flake8 isort-check
-
-.PHONY: black-check black-reformat clean flake8 install isort-check isort-reformat \
-	pytest reformat lint
