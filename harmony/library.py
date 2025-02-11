@@ -7,10 +7,16 @@ from abjadext import rmakers
 
 
 def _reference_meters():
-    return (
-        abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
-        abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
+    meters = []
+    strings = (
+        "(5/4 (1/4 1/4 1/4 1/4 1/4))",
+        "(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))",
     )
+    for string in strings:
+        rtc = abjad.rhythmtrees.parse(string)[0]
+        meter = abjad.Meter(rtc)
+        meters.append(meter)
+    return meters
 
 
 def AG(*arguments):
