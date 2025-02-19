@@ -22,13 +22,13 @@ install:
 
 isort-check:
 	isort --case-sensitive --check-only --line-width=88 --multi-line=3 \
-	      --thirdparty=abjad --thirdparty=abjadext --thirdparty=baca \
-	      --thirdparty=ply --thirdparty=uqbar --trailing-comma --use-parentheses .
+	      --thirdparty=abjad --thirdparty=baca --thirdparty=ply \
+		  --thirdparty=rmakers --thirdparty=uqbar --trailing-comma --use-parentheses .
 
 isort-reformat:
 	isort --case-sensitive --line-width=88 --multi-line=3 \
-	      --thirdparty=abjad --thirdparty=abjadext --thirdparty=baca \
-	      --thirdparty=ply --thirdparty=uqbar --trailing-comma --use-parentheses .
+	      --thirdparty=abjad --thirdparty=baca --thirdparty=ply \
+		  --thirdparty=rmakers --thirdparty=uqbar --trailing-comma --use-parentheses .
 
 pytest:
 	pytest .
