@@ -22,5 +22,6 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/trevorbaca/harmony"
 
-[tool.setuptools.packages.find]
-where = ["."]
+[tool.setuptools]
+packages = ["harmony"]
+package-dir = { "" = "source" }
