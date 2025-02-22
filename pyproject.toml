@@ -11,13 +11,7 @@ license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.12"
 keywords = ["abjad", "lilypond", "music composition", "music notation"]
-dependencies = [
-    "abjad>=3.21",
-    "black",
-    "flake8",
-    "isort",
-    "pytest",
-]
+dependencies = ["abjad>=3.21"]
 
 [project.urls]
 Homepage = "https://github.com/trevorbaca/harmony"
