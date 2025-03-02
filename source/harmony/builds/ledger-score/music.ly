@@ -1,6 +1,6 @@
 % ( HARMONY ) (2019) for narrator & nine players
 
-\version "2.25.23"
+\version "2.25.24"
 
 \include "stylesheet.ily"
 \include "layout.ily"
