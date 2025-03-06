@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        lilypond-version: ["2.25.23"]
+        lilypond-version: ["2.25.24"]
         python-version: ["3.12", "3.13"]
 
     steps:
@@ -83,7 +83,7 @@ jobs:
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        # include -e for access to baca/scr/doctest-baca.py, test-sections.py, ...
+        # include -e for access to baca/scripts/doctest-baca.py, test-sections.py, ...
         python -m pip install -e /tmp/baca
 
     - name: Install this package
@@ -106,7 +106,7 @@ jobs:
 
     - name: Run doctest-baca.py
       run: |
-        /tmp/baca/scr/doctest-baca.py $GITHUB_WORKSPACE
+        /tmp/baca/scripts/doctest-baca.py $GITHUB_WORKSPACE
 
     - name: Set cores to get stored in /cores
       run: |
@@ -117,7 +117,7 @@ jobs:
     - name: Test sections
       run: |
         ulimit -c unlimited
-        /tmp/baca/scr/test-sections.py
+        /tmp/baca/scripts/test-sections.py
 
     - name: Test score builds
       run: |
@@ -125,7 +125,7 @@ jobs:
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
         if [ -d $BUILDS_DIRECTORY ]; then
           cd $BUILDS_DIRECTORY
-          /tmp/baca/scr/test-score-build-music.py
+          /tmp/baca/scripts/test-score-build-music.py
         fi
         cd $GITHUB_WORKSPACE
 
