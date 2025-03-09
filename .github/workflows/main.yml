@@ -28,19 +28,6 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Cache dependencies
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pip
-        key: >
-          ${{ runner.os }}-pip-
-          ${{ matrix.python-version }}-
-          ${{ hashFiles('ci/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-${{ matrix.python-version }}-
-          ${{ runner.os }}-pip-
-          ${{ runner.os }}-
-
     - name: Write environment variables
       run: |
         PATH="/tmp/lilypond-${{ matrix.lilypond-version }}/bin:home/runner/bin:$PATH"
@@ -60,16 +47,13 @@ jobs:
       with:
         lilypond-version: ${{ matrix.lilypond-version }}
 
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install -r ci/requirements.txt --no-cache-dir
-
     - name: Install Abjad trevor/dev branch
       run: |
+        # editable install -e for access to abjad/scripts/prime_parser_tables.py
+        # [dev] extras for black, flake8, etc
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        # include -e for access to abjad/scripts/prime_parser_tables.py
-        python -m pip install -e /tmp/abjad
+        python -m pip install --upgrade pip
+        python -m pip install -e "/tmp/abjad[dev]"
 
     - name: Prime parser tables
       run: |
@@ -82,8 +66,8 @@ jobs:
 
     - name: Install Bača
       run: |
-        git clone https://github.com/trevorbaca/baca.git /tmp/baca
         # include -e for access to baca/scripts/doctest-baca.py, test-sections.py, ...
+        git clone https://github.com/trevorbaca/baca.git /tmp/baca
         python -m pip install -e /tmp/baca
 
     - name: Install this package
@@ -98,7 +82,7 @@ jobs:
         pip --version
         pytest --version
 
-    - name: Run checks
+    - name: Run lints
       run: |
         make black-check
         make flake8
