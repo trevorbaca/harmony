@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.2.Skips = {
+number.2.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -452,7 +453,8 @@ number.2.Skips = {
 }
 
 
-number.2.TimeSignatures = {
+number.2.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -538,7 +540,8 @@ number.2.TimeSignatures = {
 }
 
 
-number.2.Rests = {
+number.2.Rests =
+{
 
     % [Rests measure 1]
     R1 * 4/4
@@ -588,7 +591,8 @@ number.2.Rests = {
 }
 
 
-number.2.BassFlute.Music.item.1 = {
+number.2.BassFlute.Music.item.1 =
+{
 
     \voiceTwo
     a'8.
@@ -616,7 +620,8 @@ number.2.BassFlute.Music.item.1 = {
 }
 
 
-number.2.BassFlute.Music.item.2 = {
+number.2.BassFlute.Music.item.2 =
+{
 
     \voiceTwo
     a'4..
@@ -630,7 +635,8 @@ number.2.BassFlute.Music.item.2 = {
 }
 
 
-number.2.BassFlute.Music = {
+number.2.BassFlute.Music =
+{
 
     % [BassFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1054,7 +1060,9 @@ number.2.BassFlute.Music = {
         }
 
         \context Voice = "BassFlute.Music"
-        { \number.2.BassFlute.Music.item.1 }
+        {
+            \number.2.BassFlute.Music.item.1
+        }
 
     >>
 
@@ -1098,7 +1106,9 @@ number.2.BassFlute.Music = {
         }
 
         \context Voice = "BassFlute.Music"
-        { \number.2.BassFlute.Music.item.2 }
+        {
+            \number.2.BassFlute.Music.item.2
+        }
 
     >>
 
@@ -1370,18 +1380,24 @@ number.2.BassFlute.Music = {
 }
 
 
-number.2.BassFlute.Staff = <<
+number.2.BassFlute.Staff =
+<<
 
     \context GlobalRests = "Rests"
-    { \number.2.Rests }
+    {
+        \number.2.Rests
+    }
 
     \context Voice = "BassFlute.Music"
-    { \number.2.BassFlute.Music }
+    {
+        \number.2.BassFlute.Music
+    }
 
 >>
 
 
-number.2.Percussion.1.Music.item.1 = {
+number.2.Percussion.1.Music.item.1 =
+{
 
     \voiceTwo
     r1
@@ -1389,25 +1405,8 @@ number.2.Percussion.1.Music.item.1 = {
 }
 
 
-number.2.Percussion.1.Music.item.2 = {
-
-    \voiceTwo
-    r1
-
-    r4
-
-}
-
-
-number.2.Percussion.1.Music.item.3 = {
-
-    \voiceTwo
-    r1
-
-}
-
-
-number.2.Percussion.1.Music.item.4 = {
+number.2.Percussion.1.Music.item.2 =
+{
 
     \voiceTwo
     r1
@@ -1417,7 +1416,28 @@ number.2.Percussion.1.Music.item.4 = {
 }
 
 
-number.2.Percussion.1.Music.item.5 = {
+number.2.Percussion.1.Music.item.3 =
+{
+
+    \voiceTwo
+    r1
+
+}
+
+
+number.2.Percussion.1.Music.item.4 =
+{
+
+    \voiceTwo
+    r1
+
+    r4
+
+}
+
+
+number.2.Percussion.1.Music.item.5 =
+{
 
     \voiceTwo
     r2
@@ -1425,7 +1445,8 @@ number.2.Percussion.1.Music.item.5 = {
 }
 
 
-number.2.Percussion.1.Music.item.6 = {
+number.2.Percussion.1.Music.item.6 =
+{
 
     \override DynamicLineSpanner.staff-padding = 5.5
     \voiceTwo
@@ -1441,7 +1462,8 @@ number.2.Percussion.1.Music.item.6 = {
 }
 
 
-number.2.Percussion.1.Music.item.7 = {
+number.2.Percussion.1.Music.item.7 =
+{
 
     \voiceTwo
     r1
@@ -1456,7 +1478,8 @@ number.2.Percussion.1.Music.item.7 = {
 }
 
 
-number.2.Percussion.1.Music.item.8 = {
+number.2.Percussion.1.Music.item.8 =
+{
 
     \voiceTwo
     r1
@@ -1471,7 +1494,8 @@ number.2.Percussion.1.Music.item.8 = {
 }
 
 
-number.2.Percussion.1.Music.item.9 = {
+number.2.Percussion.1.Music.item.9 =
+{
 
     \voiceTwo
     r1
@@ -1487,7 +1511,8 @@ number.2.Percussion.1.Music.item.9 = {
 }
 
 
-number.2.Percussion.1.Music = {
+number.2.Percussion.1.Music =
+{
 
     <<
 
@@ -1561,7 +1586,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.1 }
+        {
+            \number.2.Percussion.1.Music.item.1
+        }
 
     >>
 
@@ -1597,7 +1624,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.2 }
+        {
+            \number.2.Percussion.1.Music.item.2
+        }
 
     >>
 
@@ -1633,7 +1662,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.3 }
+        {
+            \number.2.Percussion.1.Music.item.3
+        }
 
     >>
 
@@ -1669,7 +1700,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.4 }
+        {
+            \number.2.Percussion.1.Music.item.4
+        }
 
     >>
 
@@ -1705,7 +1738,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.5 }
+        {
+            \number.2.Percussion.1.Music.item.5
+        }
 
     >>
 
@@ -1948,7 +1983,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.6 }
+        {
+            \number.2.Percussion.1.Music.item.6
+        }
 
     >>
 
@@ -1996,7 +2033,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.7 }
+        {
+            \number.2.Percussion.1.Music.item.7
+        }
 
     >>
 
@@ -2044,7 +2083,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.8 }
+        {
+            \number.2.Percussion.1.Music.item.8
+        }
 
     >>
 
@@ -2092,7 +2133,9 @@ number.2.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.2.Percussion.1.Music.item.9 }
+        {
+            \number.2.Percussion.1.Music.item.9
+        }
 
     >>
 
@@ -2111,15 +2154,19 @@ number.2.Percussion.1.Music = {
 }
 
 
-number.2.Percussion.1.Staff = <<
+number.2.Percussion.1.Staff =
+<<
 
     \context Voice = "Percussion.1.Music"
-    { \number.2.Percussion.1.Music }
+    {
+        \number.2.Percussion.1.Music
+    }
 
 >>
 
 
-number.2.Percussion.2.Music = {
+number.2.Percussion.2.Music =
+{
 
     % [Percussion.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2420,15 +2467,19 @@ number.2.Percussion.2.Music = {
 }
 
 
-number.2.Percussion.2.Staff = <<
+number.2.Percussion.2.Staff =
+<<
 
     \context Voice = "Percussion.2.Music"
-    { \number.2.Percussion.2.Music }
+    {
+        \number.2.Percussion.2.Music
+    }
 
 >>
 
 
-number.2.Harp.Music = {
+number.2.Harp.Music =
+{
 
     % [Harp.Music measure 1]
       %! EXPLICIT_CLEF
@@ -3087,15 +3138,19 @@ number.2.Harp.Music = {
 }
 
 
-number.2.Harp.Staff = <<
+number.2.Harp.Staff =
+<<
 
     \context Voice = "Harp.Music"
-    { \number.2.Harp.Music }
+    {
+        \number.2.Harp.Music
+    }
 
 >>
 
 
-number.2.Viola.Music.item.1 = {
+number.2.Viola.Music.item.1 =
+{
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -3119,7 +3174,8 @@ number.2.Viola.Music.item.1 = {
 }
 
 
-number.2.Viola.Music.item.2 = {
+number.2.Viola.Music.item.2 =
+{
 
     \voiceTwo
     af!2.
@@ -3132,7 +3188,8 @@ number.2.Viola.Music.item.2 = {
 }
 
 
-number.2.Viola.Music.item.3 = {
+number.2.Viola.Music.item.3 =
+{
 
     \voiceTwo
     af!2
@@ -3151,7 +3208,8 @@ number.2.Viola.Music.item.3 = {
 }
 
 
-number.2.Viola.Music.item.4 = {
+number.2.Viola.Music.item.4 =
+{
 
     \voiceTwo
     af!2
@@ -3170,7 +3228,8 @@ number.2.Viola.Music.item.4 = {
 }
 
 
-number.2.Viola.Music.item.5 = {
+number.2.Viola.Music.item.5 =
+{
 
     \voiceTwo
     af!1
@@ -3183,7 +3242,8 @@ number.2.Viola.Music.item.5 = {
 }
 
 
-number.2.Viola.Music.item.6 = {
+number.2.Viola.Music.item.6 =
+{
 
     \voiceTwo
     af!1
@@ -3197,7 +3257,8 @@ number.2.Viola.Music.item.6 = {
 }
 
 
-number.2.Viola.Music.item.7 = {
+number.2.Viola.Music.item.7 =
+{
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -3233,7 +3294,8 @@ number.2.Viola.Music.item.7 = {
 }
 
 
-number.2.Viola.Music.item.8 = {
+number.2.Viola.Music.item.8 =
+{
 
     \voiceTwo
     af!1
@@ -3246,7 +3308,8 @@ number.2.Viola.Music.item.8 = {
 }
 
 
-number.2.Viola.Music.item.9 = {
+number.2.Viola.Music.item.9 =
+{
 
     \voiceTwo
     af!1
@@ -3259,7 +3322,8 @@ number.2.Viola.Music.item.9 = {
 }
 
 
-number.2.Viola.Music.item.10 = {
+number.2.Viola.Music.item.10 =
+{
 
     \voiceTwo
     af!1
@@ -3278,7 +3342,8 @@ number.2.Viola.Music.item.10 = {
 }
 
 
-number.2.Viola.Music = {
+number.2.Viola.Music =
+{
 
     <<
 
@@ -3356,7 +3421,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.1 }
+        {
+            \number.2.Viola.Music.item.1
+        }
 
     >>
 
@@ -3395,7 +3462,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.2 }
+        {
+            \number.2.Viola.Music.item.2
+        }
 
     >>
 
@@ -3437,7 +3506,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.3 }
+        {
+            \number.2.Viola.Music.item.3
+        }
 
     >>
 
@@ -3483,7 +3554,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.4 }
+        {
+            \number.2.Viola.Music.item.4
+        }
 
     >>
 
@@ -3533,7 +3606,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.5 }
+        {
+            \number.2.Viola.Music.item.5
+        }
 
     >>
 
@@ -3588,7 +3663,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.6 }
+        {
+            \number.2.Viola.Music.item.6
+        }
 
     >>
 
@@ -3777,7 +3854,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.7 }
+        {
+            \number.2.Viola.Music.item.7
+        }
 
     >>
 
@@ -3832,7 +3911,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.8 }
+        {
+            \number.2.Viola.Music.item.8
+        }
 
     >>
 
@@ -3887,7 +3968,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.9 }
+        {
+            \number.2.Viola.Music.item.9
+        }
 
     >>
 
@@ -3942,7 +4025,9 @@ number.2.Viola.Music = {
         }
 
         \context Voice = "Viola.Music"
-        { \number.2.Viola.Music.item.10 }
+        {
+            \number.2.Viola.Music.item.10
+        }
 
     >>
 
@@ -3998,15 +4083,19 @@ number.2.Viola.Music = {
 }
 
 
-number.2.Viola.Staff = <<
+number.2.Viola.Staff =
+<<
 
     \context Voice = "Viola.Music"
-    { \number.2.Viola.Music }
+    {
+        \number.2.Viola.Music
+    }
 
 >>
 
 
-number.2.Cello.1.Music.item.1 = {
+number.2.Cello.1.Music.item.1 =
+{
 
     \voiceTwo
     af!4
@@ -4035,7 +4124,8 @@ number.2.Cello.1.Music.item.1 = {
 }
 
 
-number.2.Cello.1.Music.item.2 = {
+number.2.Cello.1.Music.item.2 =
+{
 
     \voiceTwo
     af!2
@@ -4054,7 +4144,8 @@ number.2.Cello.1.Music.item.2 = {
 }
 
 
-number.2.Cello.1.Music.item.3 = {
+number.2.Cello.1.Music.item.3 =
+{
 
     \voiceTwo
     af!2.
@@ -4073,7 +4164,8 @@ number.2.Cello.1.Music.item.3 = {
 }
 
 
-number.2.Cello.1.Music.item.4 = {
+number.2.Cello.1.Music.item.4 =
+{
 
     \voiceTwo
     af!1
@@ -4087,7 +4179,8 @@ number.2.Cello.1.Music.item.4 = {
 }
 
 
-number.2.Cello.1.Music.item.5 = {
+number.2.Cello.1.Music.item.5 =
+{
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -4123,7 +4216,8 @@ number.2.Cello.1.Music.item.5 = {
 }
 
 
-number.2.Cello.1.Music.item.6 = {
+number.2.Cello.1.Music.item.6 =
+{
 
     \voiceTwo
     af!1
@@ -4136,7 +4230,8 @@ number.2.Cello.1.Music.item.6 = {
 }
 
 
-number.2.Cello.1.Music.item.7 = {
+number.2.Cello.1.Music.item.7 =
+{
 
     \voiceTwo
     af!1
@@ -4149,7 +4244,8 @@ number.2.Cello.1.Music.item.7 = {
 }
 
 
-number.2.Cello.1.Music.item.8 = {
+number.2.Cello.1.Music.item.8 =
+{
 
     \voiceTwo
     af!1
@@ -4168,7 +4264,8 @@ number.2.Cello.1.Music.item.8 = {
 }
 
 
-number.2.Cello.1.Music = {
+number.2.Cello.1.Music =
+{
 
     % [Cello.1.Music measure 1]
       %! EXPLICIT_CLEF
@@ -4250,7 +4347,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.1 }
+        {
+            \number.2.Cello.1.Music.item.1
+        }
 
     >>
 
@@ -4292,7 +4391,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.2 }
+        {
+            \number.2.Cello.1.Music.item.2
+        }
 
     >>
 
@@ -4338,7 +4439,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.3 }
+        {
+            \number.2.Cello.1.Music.item.3
+        }
 
     >>
 
@@ -4388,7 +4491,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.4 }
+        {
+            \number.2.Cello.1.Music.item.4
+        }
 
     >>
 
@@ -4640,7 +4745,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.5 }
+        {
+            \number.2.Cello.1.Music.item.5
+        }
 
     >>
 
@@ -4695,7 +4802,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.6 }
+        {
+            \number.2.Cello.1.Music.item.6
+        }
 
     >>
 
@@ -4750,7 +4859,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.7 }
+        {
+            \number.2.Cello.1.Music.item.7
+        }
 
     >>
 
@@ -4805,7 +4916,9 @@ number.2.Cello.1.Music = {
         }
 
         \context Voice = "Cello.1.Music"
-        { \number.2.Cello.1.Music.item.8 }
+        {
+            \number.2.Cello.1.Music.item.8
+        }
 
     >>
 
@@ -4859,15 +4972,19 @@ number.2.Cello.1.Music = {
 }
 
 
-number.2.Cello.1.Staff = <<
+number.2.Cello.1.Staff =
+<<
 
     \context Voice = "Cello.1.Music"
-    { \number.2.Cello.1.Music }
+    {
+        \number.2.Cello.1.Music
+    }
 
 >>
 
 
-number.2.Cello.2.Music.item.1 = {
+number.2.Cello.2.Music.item.1 =
+{
 
     \voiceTwo
     af!2
@@ -4896,7 +5013,8 @@ number.2.Cello.2.Music.item.1 = {
 }
 
 
-number.2.Cello.2.Music.item.2 = {
+number.2.Cello.2.Music.item.2 =
+{
 
     \voiceTwo
     af!2.
@@ -4909,7 +5027,8 @@ number.2.Cello.2.Music.item.2 = {
 }
 
 
-number.2.Cello.2.Music.item.3 = {
+number.2.Cello.2.Music.item.3 =
+{
 
     \voiceTwo
     af!1
@@ -4923,7 +5042,8 @@ number.2.Cello.2.Music.item.3 = {
 }
 
 
-number.2.Cello.2.Music.item.4 = {
+number.2.Cello.2.Music.item.4 =
+{
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -4959,7 +5079,8 @@ number.2.Cello.2.Music.item.4 = {
 }
 
 
-number.2.Cello.2.Music.item.5 = {
+number.2.Cello.2.Music.item.5 =
+{
 
     \voiceTwo
     af!1
@@ -4972,7 +5093,8 @@ number.2.Cello.2.Music.item.5 = {
 }
 
 
-number.2.Cello.2.Music.item.6 = {
+number.2.Cello.2.Music.item.6 =
+{
 
     \voiceTwo
     af!1
@@ -4985,7 +5107,8 @@ number.2.Cello.2.Music.item.6 = {
 }
 
 
-number.2.Cello.2.Music.item.7 = {
+number.2.Cello.2.Music.item.7 =
+{
 
     \voiceTwo
     af!1
@@ -5004,7 +5127,8 @@ number.2.Cello.2.Music.item.7 = {
 }
 
 
-number.2.Cello.2.Music = {
+number.2.Cello.2.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 4/5
@@ -5162,7 +5286,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.1 }
+        {
+            \number.2.Cello.2.Music.item.1
+        }
 
     >>
 
@@ -5208,7 +5334,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.2 }
+        {
+            \number.2.Cello.2.Music.item.2
+        }
 
     >>
 
@@ -5259,7 +5387,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.3 }
+        {
+            \number.2.Cello.2.Music.item.3
+        }
 
     >>
 
@@ -5449,7 +5579,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.4 }
+        {
+            \number.2.Cello.2.Music.item.4
+        }
 
     >>
 
@@ -5504,7 +5636,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.5 }
+        {
+            \number.2.Cello.2.Music.item.5
+        }
 
     >>
 
@@ -5559,7 +5693,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.6 }
+        {
+            \number.2.Cello.2.Music.item.6
+        }
 
     >>
 
@@ -5614,7 +5750,9 @@ number.2.Cello.2.Music = {
         }
 
         \context Voice = "Cello.2.Music"
-        { \number.2.Cello.2.Music.item.7 }
+        {
+            \number.2.Cello.2.Music.item.7
+        }
 
     >>
 
@@ -5668,15 +5806,19 @@ number.2.Cello.2.Music = {
 }
 
 
-number.2.Cello.2.Staff = <<
+number.2.Cello.2.Staff =
+<<
 
     \context Voice = "Cello.2.Music"
-    { \number.2.Cello.2.Music }
+    {
+        \number.2.Cello.2.Music
+    }
 
 >>
 
 
-number.2.Contrabass.1.Music.item.1 = {
+number.2.Contrabass.1.Music.item.1 =
+{
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -5700,7 +5842,8 @@ number.2.Contrabass.1.Music.item.1 = {
 }
 
 
-number.2.Contrabass.1.Music.item.2 = {
+number.2.Contrabass.1.Music.item.2 =
+{
 
     \voiceTwo
     af!4
@@ -5719,7 +5862,8 @@ number.2.Contrabass.1.Music.item.2 = {
 }
 
 
-number.2.Contrabass.1.Music.item.3 = {
+number.2.Contrabass.1.Music.item.3 =
+{
 
     \voiceTwo
     af!4
@@ -5738,7 +5882,8 @@ number.2.Contrabass.1.Music.item.3 = {
 }
 
 
-number.2.Contrabass.1.Music.item.4 = {
+number.2.Contrabass.1.Music.item.4 =
+{
 
     \voiceTwo
     af!2.
@@ -5757,7 +5902,8 @@ number.2.Contrabass.1.Music.item.4 = {
 }
 
 
-number.2.Contrabass.1.Music.item.5 = {
+number.2.Contrabass.1.Music.item.5 =
+{
 
     \voiceTwo
     af!2.
@@ -5771,7 +5917,8 @@ number.2.Contrabass.1.Music.item.5 = {
 }
 
 
-number.2.Contrabass.1.Music.item.6 = {
+number.2.Contrabass.1.Music.item.6 =
+{
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -5807,7 +5954,8 @@ number.2.Contrabass.1.Music.item.6 = {
 }
 
 
-number.2.Contrabass.1.Music.item.7 = {
+number.2.Contrabass.1.Music.item.7 =
+{
 
     \voiceTwo
     af!1
@@ -5820,7 +5968,8 @@ number.2.Contrabass.1.Music.item.7 = {
 }
 
 
-number.2.Contrabass.1.Music.item.8 = {
+number.2.Contrabass.1.Music.item.8 =
+{
 
     \voiceTwo
     af!1
@@ -5833,7 +5982,8 @@ number.2.Contrabass.1.Music.item.8 = {
 }
 
 
-number.2.Contrabass.1.Music.item.9 = {
+number.2.Contrabass.1.Music.item.9 =
+{
 
     \voiceTwo
     af!1
@@ -5852,7 +6002,8 @@ number.2.Contrabass.1.Music.item.9 = {
 }
 
 
-number.2.Contrabass.1.Music = {
+number.2.Contrabass.1.Music =
+{
 
     % [Contrabass.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -5995,7 +6146,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.1 }
+        {
+            \number.2.Contrabass.1.Music.item.1
+        }
 
     >>
 
@@ -6045,7 +6198,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.2 }
+        {
+            \number.2.Contrabass.1.Music.item.2
+        }
 
     >>
 
@@ -6099,7 +6254,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.3 }
+        {
+            \number.2.Contrabass.1.Music.item.3
+        }
 
     >>
 
@@ -6145,7 +6302,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.4 }
+        {
+            \number.2.Contrabass.1.Music.item.4
+        }
 
     >>
 
@@ -6195,7 +6354,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.5 }
+        {
+            \number.2.Contrabass.1.Music.item.5
+        }
 
     >>
 
@@ -6424,7 +6585,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.6 }
+        {
+            \number.2.Contrabass.1.Music.item.6
+        }
 
     >>
 
@@ -6479,7 +6642,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.7 }
+        {
+            \number.2.Contrabass.1.Music.item.7
+        }
 
     >>
 
@@ -6534,7 +6699,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.8 }
+        {
+            \number.2.Contrabass.1.Music.item.8
+        }
 
     >>
 
@@ -6589,7 +6756,9 @@ number.2.Contrabass.1.Music = {
         }
 
         \context Voice = "Contrabass.1.Music"
-        { \number.2.Contrabass.1.Music.item.9 }
+        {
+            \number.2.Contrabass.1.Music.item.9
+        }
 
     >>
 
@@ -6643,15 +6812,19 @@ number.2.Contrabass.1.Music = {
 }
 
 
-number.2.Contrabass.1.Staff = <<
+number.2.Contrabass.1.Staff =
+<<
 
     \context Voice = "Contrabass.1.Music"
-    { \number.2.Contrabass.1.Music }
+    {
+        \number.2.Contrabass.1.Music
+    }
 
 >>
 
 
-number.2.Contrabass.2.Music.item.1 = {
+number.2.Contrabass.2.Music.item.1 =
+{
 
     \voiceTwo
     af!2
@@ -6680,7 +6853,8 @@ number.2.Contrabass.2.Music.item.1 = {
 }
 
 
-number.2.Contrabass.2.Music.item.2 = {
+number.2.Contrabass.2.Music.item.2 =
+{
 
     \voiceTwo
     af!2.
@@ -6693,7 +6867,8 @@ number.2.Contrabass.2.Music.item.2 = {
 }
 
 
-number.2.Contrabass.2.Music.item.3 = {
+number.2.Contrabass.2.Music.item.3 =
+{
 
     \voiceTwo
     af!1
@@ -6707,7 +6882,8 @@ number.2.Contrabass.2.Music.item.3 = {
 }
 
 
-number.2.Contrabass.2.Music.item.4 = {
+number.2.Contrabass.2.Music.item.4 =
+{
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -6743,7 +6919,8 @@ number.2.Contrabass.2.Music.item.4 = {
 }
 
 
-number.2.Contrabass.2.Music.item.5 = {
+number.2.Contrabass.2.Music.item.5 =
+{
 
     \voiceTwo
     af!1
@@ -6756,7 +6933,8 @@ number.2.Contrabass.2.Music.item.5 = {
 }
 
 
-number.2.Contrabass.2.Music.item.6 = {
+number.2.Contrabass.2.Music.item.6 =
+{
 
     \voiceTwo
     af!1
@@ -6769,7 +6947,8 @@ number.2.Contrabass.2.Music.item.6 = {
 }
 
 
-number.2.Contrabass.2.Music.item.7 = {
+number.2.Contrabass.2.Music.item.7 =
+{
 
     \voiceTwo
     af!1
@@ -6788,7 +6967,8 @@ number.2.Contrabass.2.Music.item.7 = {
 }
 
 
-number.2.Contrabass.2.Music = {
+number.2.Contrabass.2.Music =
+{
 
     \tweak text #tuplet-number::calc-fraction-text
     \tuplet 4/5
@@ -6956,7 +7136,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.1 }
+        {
+            \number.2.Contrabass.2.Music.item.1
+        }
 
     >>
 
@@ -7010,7 +7192,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.2 }
+        {
+            \number.2.Contrabass.2.Music.item.2
+        }
 
     >>
 
@@ -7061,7 +7245,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.3 }
+        {
+            \number.2.Contrabass.2.Music.item.3
+        }
 
     >>
 
@@ -7253,7 +7439,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.4 }
+        {
+            \number.2.Contrabass.2.Music.item.4
+        }
 
     >>
 
@@ -7308,7 +7496,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.5 }
+        {
+            \number.2.Contrabass.2.Music.item.5
+        }
 
     >>
 
@@ -7363,7 +7553,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.6 }
+        {
+            \number.2.Contrabass.2.Music.item.6
+        }
 
     >>
 
@@ -7418,7 +7610,9 @@ number.2.Contrabass.2.Music = {
         }
 
         \context Voice = "Contrabass.2.Music"
-        { \number.2.Contrabass.2.Music.item.7 }
+        {
+            \number.2.Contrabass.2.Music.item.7
+        }
 
     >>
 
@@ -7474,9 +7668,12 @@ number.2.Contrabass.2.Music = {
 }
 
 
-number.2.Contrabass.2.Staff = <<
+number.2.Contrabass.2.Staff =
+<<
 
     \context Voice = "Contrabass.2.Music"
-    { \number.2.Contrabass.2.Music }
+    {
+        \number.2.Contrabass.2.Music
+    }
 
 >>

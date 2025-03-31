@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.18.Skips = {
+number.18.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -443,7 +444,8 @@ number.18.Skips = {
 }
 
 
-number.18.TimeSignatures = {
+number.18.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -535,7 +537,8 @@ number.18.TimeSignatures = {
 }
 
 
-number.18.Rests = {
+number.18.Rests =
+{
 
     % [Rests measure 1]
     R1 * 4/4
@@ -582,7 +585,8 @@ number.18.Rests = {
 }
 
 
-number.18.BassFlute.Music = {
+number.18.BassFlute.Music =
+{
 
     % [BassFlute.Music measure 1]
       %! REAPPLIED_CLEF
@@ -833,18 +837,24 @@ number.18.BassFlute.Music = {
 }
 
 
-number.18.BassFlute.Staff = <<
+number.18.BassFlute.Staff =
+<<
 
     \context GlobalRests = "Rests"
-    { \number.18.Rests }
+    {
+        \number.18.Rests
+    }
 
     \context Voice = "BassFlute.Music"
-    { \number.18.BassFlute.Music }
+    {
+        \number.18.BassFlute.Music
+    }
 
 >>
 
 
-number.18.Percussion.1.Music.item.1 = {
+number.18.Percussion.1.Music.item.1 =
+{
 
     \voiceTwo
     r8.
@@ -866,7 +876,8 @@ number.18.Percussion.1.Music.item.1 = {
 }
 
 
-number.18.Percussion.1.Music = {
+number.18.Percussion.1.Music =
+{
 
     % [Percussion.1.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1045,7 +1056,9 @@ number.18.Percussion.1.Music = {
         }
 
         \context Voice = "Percussion.1.Music"
-        { \number.18.Percussion.1.Music.item.1 }
+        {
+            \number.18.Percussion.1.Music.item.1
+        }
 
     >>
 
@@ -1291,15 +1304,19 @@ number.18.Percussion.1.Music = {
 }
 
 
-number.18.Percussion.1.Staff = <<
+number.18.Percussion.1.Staff =
+<<
 
     \context Voice = "Percussion.1.Music"
-    { \number.18.Percussion.1.Music }
+    {
+        \number.18.Percussion.1.Music
+    }
 
 >>
 
 
-number.18.Percussion.2.Music.item.1 = {
+number.18.Percussion.2.Music.item.1 =
+{
 
     \voiceTwo
     r8.
@@ -1322,7 +1339,8 @@ number.18.Percussion.2.Music.item.1 = {
 }
 
 
-number.18.Percussion.2.Music = {
+number.18.Percussion.2.Music =
+{
 
     % [Percussion.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1453,7 +1471,9 @@ number.18.Percussion.2.Music = {
         }
 
         \context Voice = "Percussion.2.Music"
-        { \number.18.Percussion.2.Music.item.1 }
+        {
+            \number.18.Percussion.2.Music.item.1
+        }
 
     >>
 
@@ -1632,15 +1652,19 @@ number.18.Percussion.2.Music = {
 }
 
 
-number.18.Percussion.2.Staff = <<
+number.18.Percussion.2.Staff =
+<<
 
     \context Voice = "Percussion.2.Music"
-    { \number.18.Percussion.2.Music }
+    {
+        \number.18.Percussion.2.Music
+    }
 
 >>
 
 
-number.18.Harp.Music = {
+number.18.Harp.Music =
+{
 
     % [Harp.Music measure 1]
       %! EXPLICIT_CLEF
@@ -2018,15 +2042,19 @@ number.18.Harp.Music = {
 }
 
 
-number.18.Harp.Staff = <<
+number.18.Harp.Staff =
+<<
 
     \context Voice = "Harp.Music"
-    { \number.18.Harp.Music }
+    {
+        \number.18.Harp.Music
+    }
 
 >>
 
 
-number.18.Viola.Music = {
+number.18.Viola.Music =
+{
 
     % [Viola.Music measure 1]
       %! REAPPLIED_CLEF
@@ -2960,15 +2988,19 @@ number.18.Viola.Music = {
 }
 
 
-number.18.Viola.Staff = <<
+number.18.Viola.Staff =
+<<
 
     \context Voice = "Viola.Music"
-    { \number.18.Viola.Music }
+    {
+        \number.18.Viola.Music
+    }
 
 >>
 
 
-number.18.Cello.1.Music = {
+number.18.Cello.1.Music =
+{
 
     % [Cello.1.Music measure 1]
       %! EXPLICIT_CLEF
@@ -3608,15 +3640,19 @@ number.18.Cello.1.Music = {
 }
 
 
-number.18.Cello.1.Staff = <<
+number.18.Cello.1.Staff =
+<<
 
     \context Voice = "Cello.1.Music"
-    { \number.18.Cello.1.Music }
+    {
+        \number.18.Cello.1.Music
+    }
 
 >>
 
 
-number.18.Cello.2.Music = {
+number.18.Cello.2.Music =
+{
 
     % [Cello.2.Music measure 1]
       %! EXPLICIT_CLEF
@@ -4556,15 +4592,19 @@ number.18.Cello.2.Music = {
 }
 
 
-number.18.Cello.2.Staff = <<
+number.18.Cello.2.Staff =
+<<
 
     \context Voice = "Cello.2.Music"
-    { \number.18.Cello.2.Music }
+    {
+        \number.18.Cello.2.Music
+    }
 
 >>
 
 
-number.18.Contrabass.1.Music = {
+number.18.Contrabass.1.Music =
+{
 
     % [Contrabass.1.Music measure 1]
       %! EXPLICIT_CLEF
@@ -5226,15 +5266,19 @@ number.18.Contrabass.1.Music = {
 }
 
 
-number.18.Contrabass.1.Staff = <<
+number.18.Contrabass.1.Staff =
+<<
 
     \context Voice = "Contrabass.1.Music"
-    { \number.18.Contrabass.1.Music }
+    {
+        \number.18.Contrabass.1.Music
+    }
 
 >>
 
 
-number.18.Contrabass.2.Music = {
+number.18.Contrabass.2.Music =
+{
 
     % [Contrabass.2.Music measure 1]
       %! REAPPLIED_CLEF
@@ -6261,9 +6305,12 @@ number.18.Contrabass.2.Music = {
 }
 
 
-number.18.Contrabass.2.Staff = <<
+number.18.Contrabass.2.Staff =
+<<
 
     \context Voice = "Contrabass.2.Music"
-    { \number.18.Contrabass.2.Music }
+    {
+        \number.18.Contrabass.2.Music
+    }
 
 >>
