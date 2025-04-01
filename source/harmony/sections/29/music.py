@@ -203,7 +203,7 @@ def cb2(m):
     with baca.scope(m[3]) as o:
         with baca.scope(o.rleaf(-1)) as u:
             wrappers = []
-            wrappers.extend(baca.mark(u, r"\harmony-colophon-markup"))
+            wrappers.extend(baca.rehearsal_mark(u, r"\harmony-colophon-markup"))
             wrappers.extend(baca.override.rehearsal_mark_direction_down(u))
             wrappers.extend(baca.override.rehearsal_mark_extra_offset(u, (92, 8)))
             wrappers.extend(baca.override.rehearsal_mark_padding(u, 12))
