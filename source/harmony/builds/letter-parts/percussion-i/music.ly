@@ -1,7 +1,7 @@
 % (HARMONY) (2019) percussion i part
 % part_identifier = 'PERC1'
 
-\version "2.25.24"
+\version "2.25.25"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"
