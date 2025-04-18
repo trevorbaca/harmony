@@ -315,7 +315,7 @@ def make_phjc_rhythm(
         pleaves = abjad.select.get(pleaves, rest_pleaves)
         rmakers.force_rest(pleaves, tag=tag)
     rmakers.rewrite_rest_filled(voice_, tag=tag)
-    rmakers.denominator(voice_, (1, 8))
+    rmakers.denominator(voice_, abjad.Duration(1, 8))
     rmakers.force_fraction(voice_)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     plts = baca.select.plts(voice_)
@@ -404,7 +404,7 @@ def make_warble_rhythm(
     rmakers.beam(voice_, tag=tag)
     rmakers.extract_trivial(voice_)
     rmakers.force_fraction(voice_)
-    rmakers.denominator(voice_, (1, 16))
+    rmakers.denominator(voice_, abjad.Duration(1, 16))
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -541,7 +541,8 @@ def written(music, pair, pattern):
     pleaves = baca.select.pleaves(music)
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
-    rmakers.written_duration(pleaves, pair)
+    duration = abjad.Duration(pair)
+    rmakers.written_duration(pleaves, duration)
 
 
 instruments = {
