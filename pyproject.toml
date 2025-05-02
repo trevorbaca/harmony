@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "harmony"
-version = "3.23"
+version = "3.24"
 description = "( H A R M O NY ) (2019) for narrator & nine players"
 authors = [{ name = "Trevor Bača", email = "trevor.baca@gmail.com" }]
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.12"
 keywords = ["abjad", "lilypond", "music composition", "music notation"]
-dependencies = ["abjad>=3.23"]
+dependencies = ["abjad>=3.24"]
 
 [project.urls]
 Homepage = "https://github.com/trevorbaca/harmony"
