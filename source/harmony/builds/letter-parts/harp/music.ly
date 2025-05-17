@@ -1,7 +1,7 @@
 % (HARMONY) (2019) harp part
 % part_identifier = 'HP'
 
-\version "2.25.25"
+\version "2.25.26"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"

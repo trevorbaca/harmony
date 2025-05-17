@@ -1,4 +1,4 @@
-\version "2.25.25"
+\version "2.25.26"
 \include "baca.ily"
 \include "text-markups.ily"
 

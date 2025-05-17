@@ -1,7 +1,7 @@
 % (HARMONY) (2019) contrabass i part
 % part_identifier = 'CB1'
 
-\version "2.25.25"
+\version "2.25.26"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"
