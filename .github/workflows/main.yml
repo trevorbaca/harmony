@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        lilypond-version: ["2.25.25"]
+        lilypond-version: ["2.25.26"]
         python-version: ["3.12", "3.13"]
 
     steps:
