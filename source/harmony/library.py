@@ -299,7 +299,7 @@ def make_phjc_rhythm(
         durations, weights, cyclic=True, overhang=True
     )
     durations = [abjad.sequence.flatten(_) for _ in durations]
-    durations = [[sum(_)] for _ in durations]
+    durations = [sum(_) for _ in durations]
     tag = baca.helpers.function_name(inspect.currentframe())
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -391,6 +391,7 @@ def make_warble_rhythm(
         durations = abjad.sequence.split(
             durations, divisions_, cyclic=True, overhang=True
         )
+    durations = abjad.sequence.flatten(durations, depth=-1)
     tuplets = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
