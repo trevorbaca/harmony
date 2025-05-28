@@ -6,6 +6,12 @@ import baca
 import rmakers
 
 
+def _force_fraction(argument):
+    for tuplet in abjad.select.tuplets(argument):
+        tweak_string = abjad.Tuplet.tuplet_number_calc_fraction_text_tweak_string
+        abjad.tweak(tuplet, tweak_string)
+
+
 def _reference_meters():
     meters = []
     strings = (
@@ -272,10 +278,10 @@ def make_one_beat_tuplets(
     rmakers.rewrite_rest_filled(voice_, tag=tag)
     rmakers.rewrite_sustained(voice_, tag=tag)
     rmakers.extract_trivial(voice_)
-    rmakers.force_fraction(voice_)
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
+    _force_fraction(voice_)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
@@ -316,7 +322,6 @@ def make_phjc_rhythm(
         rmakers.force_rest(pleaves, tag=tag)
     rmakers.rewrite_rest_filled(voice_, tag=tag)
     rmakers.denominator(voice_, abjad.Duration(1, 8))
-    rmakers.force_fraction(voice_)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
@@ -326,6 +331,7 @@ def make_phjc_rhythm(
     rmakers.force_rest(leaves, tag=tag)
     rmakers.beam(voice_, tag=tag)
     rmakers.extract_trivial(voice_)
+    _force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -404,8 +410,8 @@ def make_warble_rhythm(
     rmakers.rewrite_sustained(voice_, tag=tag)
     rmakers.beam(voice_, tag=tag)
     rmakers.extract_trivial(voice_)
-    rmakers.force_fraction(voice_)
     rmakers.denominator(voice_, abjad.Duration(1, 16))
+    _force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -477,8 +483,8 @@ def rhythm(
     )
     for tuplet in abjad.select.tuplets(voice_):
         rmakers.beam([tuplet])
-    rmakers.force_fraction(voice_)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    _force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
