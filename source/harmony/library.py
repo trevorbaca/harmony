@@ -410,7 +410,7 @@ def make_warble_rhythm(
     rmakers.rewrite_sustained(voice_, tag=tag)
     rmakers.beam(voice_, tag=tag)
     rmakers.extract_trivial(voice_)
-    rmakers.denominator(voice_, abjad.Duration(1, 16))
+    baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 16)
     _force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
