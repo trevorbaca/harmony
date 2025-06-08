@@ -321,7 +321,7 @@ def make_phjc_rhythm(
         pleaves = abjad.select.get(pleaves, rest_pleaves)
         rmakers.force_rest(pleaves, tag=tag)
     rmakers.rewrite_rest_filled(voice_, tag=tag)
-    rmakers.denominator(voice_, abjad.Duration(1, 8))
+    baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 8)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
