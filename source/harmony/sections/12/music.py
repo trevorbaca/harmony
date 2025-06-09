@@ -290,6 +290,7 @@ def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=()):
     durations = [sum(_) for _ in lists]
     tuplets = rmakers.even_division(durations, [4], extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 4)
     rmakers.trivialize(voice_)
     rmakers.rewrite_dots(voice_, tag=tag)
     if rest_except is not None:
