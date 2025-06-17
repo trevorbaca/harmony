@@ -8,7 +8,7 @@ import rmakers
 
 def _force_fraction(argument):
     for tuplet in abjad.select.tuplets(argument):
-        tweak_string = abjad.Tuplet.tuplet_number_calc_fraction_text_tweak_string
+        tweak_string = r"\tweak text #tuplet-number::calc-fraction-text"
         abjad.tweak(tuplet, tweak_string)
 
 
