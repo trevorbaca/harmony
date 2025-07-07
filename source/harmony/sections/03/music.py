@@ -203,7 +203,7 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    voice.extend(r"r4 \times 4/5 { r8 c8. r16 c8. r16 }")
+    voice.extend(r"r4 \tuplet 5/4 { r8 c8. r16 c8. r16 }")
     library.make_tessera(
         voice,
         time_signatures(2),
@@ -223,7 +223,7 @@ def VC1(voice, time_signatures):
         library.cerulean_counts()[2:],
         extra_counts=[1],
     )
-    voice.extend(r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }")
+    voice.extend(r"\tuplet 5/4 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }")
     baca.section.append_anchor_note(voice)
 
 
