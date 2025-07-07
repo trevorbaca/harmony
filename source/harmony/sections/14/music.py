@@ -383,7 +383,7 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
         baca.hairpin(
-            abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
+            abjad.select.partition_by_proportion(o.tleaves(), (3, 4)),
             "o< mp>o!",
         )
         baca.spanners.trill(
@@ -414,7 +414,9 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -1),
         )
         baca.hairpin(
-            abjad.select.partition_by_ratio(abjad.select.leaves(o.tleaves()), (3, 4)),
+            abjad.select.partition_by_proportion(
+                abjad.select.leaves(o.tleaves()), (3, 4)
+            ),
             "o< mp>o!",
         )
         baca.spanners.trill(
@@ -428,7 +430,7 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -2),
         )
         baca.hairpin(
-            abjad.select.partition_by_ratio(o.tleaves(), (3, 4)),
+            abjad.select.partition_by_proportion(o.tleaves(), (3, 4)),
             "o< mp>o!",
         )
         baca.spanners.trill(

@@ -575,11 +575,11 @@ def va(m):
             do_not_untie=True,
         )
         baca.hairpin(
-            abjad.select.partition_by_ratio(o, (4, 3)),
+            abjad.select.partition_by_proportion(o, (4, 3)),
             "o< ff>o!",
         )
         baca.spanners.scp(
-            abjad.select.partition_by_ratio(o, (4, 3)),
+            abjad.select.partition_by_proportion(o, (4, 3)),
             "T4 -> O -> T4",
             baca.tweak.staff_padding(5.5),
         )
@@ -682,11 +682,11 @@ def vc2(m):
             do_not_untie=True,
         )
         baca.hairpin(
-            abjad.select.partition_by_ratio(o, (4, 3)),
+            abjad.select.partition_by_proportion(o, (4, 3)),
             "o< ff>o!",
         )
         baca.spanners.scp(
-            abjad.select.partition_by_ratio(o, (4, 3)),
+            abjad.select.partition_by_proportion(o, (4, 3)),
             "T4 -> O -> T4",
             baca.tweak.staff_padding(7.5),
         )
@@ -779,11 +779,11 @@ def cb2(m):
             do_not_untie=True,
         )
         baca.hairpin(
-            abjad.select.partition_by_ratio(o, (4, 3)),
+            abjad.select.partition_by_proportion(o, (4, 3)),
             "o< ff>o!",
         )
         baca.spanners.scp(
-            abjad.select.partition_by_ratio(o, (4, 3)),
+            abjad.select.partition_by_proportion(o, (4, 3)),
             "T4 -> O -> T4",
             baca.tweak.staff_padding(3),
         )
