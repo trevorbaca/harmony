@@ -267,7 +267,7 @@ def make_one_beat_tuplets(
     time_signatures,
     counts,
     *,
-    extra_counts=(),
+    extra_counts=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
@@ -294,7 +294,7 @@ def make_phjc_rhythm(
     weights,
     counts,
     *,
-    extra_counts=(),
+    extra_counts=None,
     rest=None,
     rest_pleaves=None,
 ):
@@ -386,7 +386,7 @@ def make_warble_rhythm(
     time_signatures,
     *,
     sixteenths=None,
-    extra_counts=(),
+    extra_counts=None,
     rest=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
