@@ -419,7 +419,7 @@ def make_warble_rhythm(
 
 def mmrests(voice, time_signatures, *, head=False):
     if head:
-        music = baca.make_mmrests(time_signatures, head=voice.name)
+        music = baca.make_mmrests(time_signatures, head=voice.get_name())
     else:
         music = baca.make_mmrests(time_signatures)
     voice.extend(music)
@@ -479,7 +479,7 @@ def rhythm(
         do_not_rewrite_meter=do_not_rewrite_meter,
         reference_meters=_reference_meters(),
         tag=tag,
-        voice_name=voice.name,
+        voice_name=voice.get_name(),
     )
     for tuplet in abjad.select.tuplets(voice_):
         rmakers.beam([tuplet])
