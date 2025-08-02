@@ -282,7 +282,7 @@ def make_one_beat_tuplets(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
     _force_fraction(voice_)
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
@@ -322,7 +322,7 @@ def make_phjc_rhythm(
         rmakers.force_rest(pleaves, tag=tag)
     rmakers.rewrite_rest_filled(voice_, tag=tag)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 8)
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
     rmakers.force_rest(lists, tag=tag)
@@ -375,7 +375,7 @@ def make_tessera(
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -483,7 +483,7 @@ def rhythm(
     )
     for tuplet in abjad.select.tuplets(voice_):
         rmakers.beam([tuplet])
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     _force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
@@ -548,7 +548,7 @@ def written(music, pair, pattern):
     pleaves = baca.select.pleaves(music)
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
-    duration = abjad.Duration(pair)
+    duration = abjad.Duration(*pair)
     rmakers.written_duration(pleaves, duration)
 
 

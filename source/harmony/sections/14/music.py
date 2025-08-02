@@ -602,7 +602,7 @@ def perc1_perc2(cache):
         with baca.scope(m[5]) as o:
             rests = abjad.select.rests(o)
             rests = [
-                _ for _ in rests if abjad.get.duration(_) >= abjad.Duration((1, 2))
+                _ for _ in rests if abjad.get.duration(_) >= abjad.Duration(1, 2)
             ]
             baca.override.dots_extra_offset(rests, (2, 0))
             baca.override.dots_x_extent_false(rests)
@@ -1044,7 +1044,7 @@ def composites(cache):
         with baca.scope(m[11]) as o:
             pheads = baca.select.pheads(o)
             pheads = [
-                _ for _ in pheads if abjad.get.duration(_) >= abjad.Duration((1, 8))
+                _ for _ in pheads if abjad.get.duration(_) >= abjad.Duration(1, 8)
             ]
             baca.alternate_bow_strokes(
                 pheads,

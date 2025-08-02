@@ -786,7 +786,7 @@ def strings(cache):
         with baca.scope(m.get(4, 5)) as o:
             pheads = baca.select.pheads(o)
             pheads = [
-                _ for _ in pheads if abjad.get.duration(_) >= abjad.Duration((1, 8))
+                _ for _ in pheads if abjad.get.duration(_) >= abjad.Duration(1, 8)
             ]
             baca.alternate_bow_strokes(
                 pheads,
