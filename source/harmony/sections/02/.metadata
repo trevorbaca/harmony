@@ -73,7 +73,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -81,7 +81,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -125,7 +125,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -133,7 +133,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -177,7 +177,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -185,7 +185,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -229,7 +229,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -237,7 +237,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -281,7 +281,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -289,7 +289,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -325,7 +325,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -333,7 +333,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -377,7 +377,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=3,
             ),
             baca.Memento(
@@ -385,7 +385,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=3,
             ),
             baca.Memento(
@@ -429,7 +429,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=1,
             ),
             baca.Memento(
@@ -437,7 +437,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=1,
             ),
             baca.Memento(
@@ -509,7 +509,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
@@ -517,7 +517,7 @@
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
-                synthetic_offset=ValueOffset(Fraction(99, 1)),
+                synthetic_offset=Offset(Fraction(99, 1)),
                 value=5,
             ),
             baca.Memento(
