@@ -283,7 +283,7 @@ def HP(voice, time_signatures):
 
 def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=None):
     tag = abjad.Tag("rimbalzandi()")
-    durations = [_.duration() for _ in time_signatures]
+    durations = abjad.duration.durations(time_signatures)
     lists = abjad.sequence.partition_by_counts(
         durations, [2], cyclic=True, overhang=True
     )
