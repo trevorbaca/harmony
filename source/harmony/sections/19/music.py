@@ -791,7 +791,7 @@ def perc1_perc2(cache):
                 rests = [
                     _
                     for _ in abjad.select.rests(o)
-                    if abjad.get.duration(_) >= abjad.Duration(1, 2)
+                    if abjad.get.duration(_) >= abjad.ValueDuration(1, 2)
                 ]
                 for rest in rests:
                     baca.override.dots_extra_offset(rest, (1, 0))

@@ -283,7 +283,7 @@ def HP(voice, time_signatures):
 
 def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=None):
     tag = abjad.Tag("rimbalzandi()")
-    durations = abjad.duration.durations(time_signatures)
+    durations = abjad.duration.value_durations(time_signatures)
     lists = abjad.sequence.partition_by_counts(
         durations, [2], cyclic=True, overhang=True
     )
@@ -748,7 +748,9 @@ def perc1_perc2(cache):
         m = cache[name]
         with baca.scope(m[2]) as o:
             rests = abjad.select.rests(o)
-            rests = [_ for _ in rests if abjad.get.duration(_) >= abjad.Duration(1, 2)]
+            rests = [
+                _ for _ in rests if abjad.get.duration(_) >= abjad.ValueDuration(1, 2)
+            ]
             baca.override.dots_extra_offset(rests, (1, 0))
             baca.override.dots_x_extent_false(rests)
             baca.override.rest_x_extent_zero(rests)

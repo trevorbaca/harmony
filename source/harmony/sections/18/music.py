@@ -696,7 +696,7 @@ def perc1_perc2(cache):
             rests = [
                 x
                 for x in abjad.select.rests(o)
-                if abjad.get.duration(x) >= abjad.Duration(1, 2)
+                if abjad.get.duration(x) >= abjad.ValueDuration(1, 2)
             ]
             baca.override.dots_extra_offset(rests, (2, 0))
             baca.override.dots_x_extent_false(rests)
@@ -774,7 +774,7 @@ def va(cache):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,
@@ -988,7 +988,7 @@ def cb1(cache):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,
@@ -1106,7 +1106,7 @@ def cb2(cache):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,

@@ -33,7 +33,7 @@ def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
     return baca.rhythm.OBGC(
         grace_note_numerators,
         nongrace_note_numerator,
-        grace_leaf_duration=abjad.Duration(1, 20),
+        grace_leaf_duration=abjad.ValueDuration(1, 20),
     )
 
 
@@ -270,7 +270,7 @@ def make_one_beat_tuplets(
     extra_counts=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
-    durations = abjad.duration.durations(time_signatures)
+    durations = abjad.duration.value_durations(time_signatures)
     durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
@@ -282,7 +282,7 @@ def make_one_beat_tuplets(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
     _force_fraction(voice_)
-    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.ValueDuration(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
@@ -298,7 +298,7 @@ def make_phjc_rhythm(
     rest=None,
     rest_pleaves=None,
 ):
-    durations = abjad.duration.durations(time_signatures)
+    durations = abjad.duration.value_durations(time_signatures)
     durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
     durations = abjad.sequence.partition_by_counts(
@@ -322,7 +322,7 @@ def make_phjc_rhythm(
         rmakers.force_rest(pleaves, tag=tag)
     rmakers.rewrite_rest_filled(voice_, tag=tag)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 8)
-    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.ValueDuration(1, 8), tag=tag)
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
     rmakers.force_rest(lists, tag=tag)
@@ -365,7 +365,7 @@ def make_tessera(
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.helpers.function_name(inspect.currentframe())
-    durations = abjad.duration.durations(time_signatures)
+    durations = abjad.duration.value_durations(time_signatures)
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest_plt is not None:
@@ -375,7 +375,7 @@ def make_tessera(
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.ValueDuration(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -390,9 +390,9 @@ def make_warble_rhythm(
     rest=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
-    durations = abjad.duration.durations(time_signatures)
+    durations = abjad.duration.value_durations(time_signatures)
     if sixteenths is not None:
-        divisions_ = [abjad.Duration(_, 16) for _ in sixteenths]
+        divisions_ = [abjad.ValueDuration(_, 16) for _ in sixteenths]
         durations = [sum(durations)]
         durations = abjad.sequence.split(
             durations, divisions_, cyclic=True, overhang=True
@@ -483,7 +483,7 @@ def rhythm(
     )
     for tuplet in abjad.select.tuplets(voice_):
         rmakers.beam([tuplet])
-    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.ValueDuration(1, 8), tag=tag)
     _force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
@@ -548,7 +548,7 @@ def written(music, pair, pattern):
     pleaves = baca.select.pleaves(music)
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
-    duration = abjad.Duration(*pair)
+    duration = abjad.ValueDuration(*pair)
     rmakers.written_duration(pleaves, duration)
 
 
@@ -563,13 +563,13 @@ instruments = {
 
 
 metronome_marks = {
-    "48": abjad.MetronomeMark(abjad.Duration(1, 4), 48),
+    "48": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 48),
     "57 3/5": abjad.MetronomeMark(
-        abjad.Duration(1, 4), fractions.Fraction(288, 5), decimal=True
+        abjad.ValueDuration(1, 4), fractions.Fraction(288, 5), decimal=True
     ),
-    "72": abjad.MetronomeMark(abjad.Duration(1, 4), 72),
-    "96": abjad.MetronomeMark(abjad.Duration(1, 4), 96),
-    "144": abjad.MetronomeMark(abjad.Duration(1, 4), 144),
+    "72": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 72),
+    "96": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 96),
+    "144": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 144),
     # slower
     "2.=4": abjad.MetricModulation(
         left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")

@@ -370,7 +370,9 @@ def va(m):
             )
         baca.dynamic(o.phead(0), "ppp")
         pheads = baca.select.pheads(o)
-        pheads = [_ for _ in pheads if abjad.get.duration(_) >= abjad.Duration(1, 8)]
+        pheads = [
+            _ for _ in pheads if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
+        ]
         baca.alternate_bow_strokes(
             pheads,
             baca.tweak.staff_padding(1.5),
@@ -479,7 +481,7 @@ def cb1(m):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,
@@ -511,7 +513,7 @@ def cb1(m):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,
@@ -537,7 +539,7 @@ def cb2(m):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,
@@ -569,7 +571,7 @@ def cb2(m):
         pheads = [
             _
             for _ in baca.select.pheads(o)
-            if abjad.get.duration(_) >= abjad.Duration(1, 8)
+            if abjad.get.duration(_) >= abjad.ValueDuration(1, 8)
         ]
         baca.alternate_bow_strokes(
             pheads,
