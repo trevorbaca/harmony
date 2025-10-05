@@ -45,7 +45,7 @@ def after_grace_each_run(components):
     tag = baca.helpers.function_name(inspect.currentframe())
     for run in abjad.select.runs(components):
         leaf = abjad.select.leaf(run, -1)
-        rmakers.after_grace_container(leaf, [1], tag=tag)
+        rmakers.after_grace_container([leaf], [1], tag=tag)
 
 
 def appoggiato_pitches_d_flat_3():
@@ -518,8 +518,7 @@ def unbeam(music, pattern=True):
     leaves = abjad.select.leaves(music)
     if pattern is not True:
         leaves = abjad.select.get(leaves, pattern)
-    for leaf in leaves:
-        rmakers.unbeam(leaf)
+    rmakers.unbeam(leaves)
 
 
 def untie(music, pattern=True):
