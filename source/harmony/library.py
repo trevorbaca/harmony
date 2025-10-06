@@ -329,7 +329,8 @@ def make_phjc_rhythm(
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.force_rest(leaves, tag=tag)
-    rmakers.beam(voice_, tag=tag)
+    leaf_lists = [_[:] for _ in tuplets]
+    rmakers.beam(leaf_lists, tag=tag)
     rmakers.extract_trivial(voice_)
     _force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
@@ -408,7 +409,9 @@ def make_warble_rhythm(
     rmakers.force_rest(leaves, tag=tag)
     rmakers.rewrite_rest_filled(voice_, tag=tag)
     rmakers.rewrite_sustained(voice_, tag=tag)
-    rmakers.beam(voice_, tag=tag)
+    tuplets = abjad.select.tuplets(voice_)
+    leaf_lists = [_[:] for _ in tuplets]
+    rmakers.beam(leaf_lists, tag=tag)
     rmakers.extract_trivial(voice_)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 16)
     _force_fraction(voice_)
@@ -481,8 +484,13 @@ def rhythm(
         tag=tag,
         voice_name=voice.name(),
     )
+    """
     for tuplet in abjad.select.tuplets(voice_):
-        rmakers.beam([tuplet])
+        rmakers.beam([tuplet[:]])
+    """
+    tuplets = abjad.select.tuplets(voice_)
+    leaf_lists = [_[:] for _ in tuplets]
+    rmakers.beam(leaf_lists)
     rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     _force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
