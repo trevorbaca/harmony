@@ -297,7 +297,7 @@ def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=None):
         leaves = abjad.select.leaves(voice_)
         leaves = abjad.select.exclude(leaves, rest_except)
         rmakers.force_rest(leaves, tag=tag)
-    rmakers.force_diminution(voice_)
+    rmakers.force_diminution(tuplets)
     rmakers.extract_trivial(tuplets)
     library._force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
