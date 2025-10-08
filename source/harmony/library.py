@@ -316,7 +316,8 @@ def make_phjc_rhythm(
             tuplets = tuplets[rest]
         else:
             tuplets = abjad.select.get(tuplets, rest)
-        rmakers.force_rest(tuplets, tag=tag)
+        leaves = abjad.select.leaves(tuplets)
+        rmakers.force_rest(leaves, tag=tag)
     if rest_pleaves is not None:
         pleaves = baca.select.pleaves(voice_)
         pleaves = abjad.select.get(pleaves, rest_pleaves)
@@ -326,7 +327,8 @@ def make_phjc_rhythm(
     rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
-    rmakers.force_rest(lists, tag=tag)
+    leaves = abjad.select.leaves(lists)
+    rmakers.force_rest(leaves, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.force_rest(leaves, tag=tag)
@@ -405,7 +407,8 @@ def make_warble_rhythm(
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
         tuplets = abjad.select.get(tuplets, rest)
-        rmakers.force_rest(tuplets, tag=tag)
+        leaves = abjad.select.leaves(tuplets)
+        rmakers.force_rest(leaves, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.force_rest(leaves, tag=tag)
