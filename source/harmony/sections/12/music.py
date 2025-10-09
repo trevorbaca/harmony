@@ -292,7 +292,8 @@ def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=None):
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 4)
     rmakers.trivialize(voice_)
-    rmakers.rewrite_dots(voice_, tag=tag)
+    tuplets = abjad.select.tuplets(voice_)
+    rmakers.respell_tuplets_without_dots(tuplets, tag=tag)
     if rest_except is not None:
         leaves = abjad.select.leaves(voice_)
         leaves = abjad.select.exclude(leaves, rest_except)
