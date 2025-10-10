@@ -494,10 +494,6 @@ def rhythm(
         tag=tag,
         voice_name=voice.name(),
     )
-    """
-    for tuplet in abjad.select.tuplets(voice_):
-        rmakers.beam([tuplet[:]])
-    """
     tuplets = abjad.select.tuplets(voice_)
     leaf_lists = [_[:] for _ in tuplets]
     rmakers.beam(leaf_lists)
