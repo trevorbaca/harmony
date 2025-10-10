@@ -275,8 +275,8 @@ def make_one_beat_tuplets(
     durations = baca.sequence.quarters(durations)
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.rewrite_rest_filled(voice_, tag=tag)
-    rmakers.rewrite_sustained(voice_, tag=tag)
+    rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
+    rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     rmakers.extract_trivial(tuplets)
     rmakers.rewrite_meter(
@@ -323,7 +323,8 @@ def make_phjc_rhythm(
         pleaves = baca.select.pleaves(voice_)
         pleaves = abjad.select.get(pleaves, rest_pleaves)
         rmakers.force_rest(pleaves, tag=tag)
-    rmakers.rewrite_rest_filled(voice_, tag=tag)
+    tuplets = abjad.select.tuplets(voice_)
+    rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 8)
     leaves = abjad.select.leaves(voice_)
     rmakers.force_repeat_tie(leaves, threshold=abjad.Duration(1, 8), tag=tag)
@@ -415,8 +416,8 @@ def make_warble_rhythm(
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.force_rest(leaves, tag=tag)
-    rmakers.rewrite_rest_filled(voice_, tag=tag)
-    rmakers.rewrite_sustained(voice_, tag=tag)
+    rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
+    rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaf_lists = [_[:] for _ in tuplets]
     rmakers.beam(leaf_lists, tag=tag)
