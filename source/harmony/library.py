@@ -45,7 +45,9 @@ def after_grace_each_run(components):
     tag = baca.helpers.function_name(inspect.currentframe())
     for run in abjad.select.runs(components):
         leaf = abjad.select.leaf(run, -1)
-        rmakers.after_grace_container([leaf], [1], tag=tag)
+        grace_note = abjad.Note("c'8", tag=tag)
+        container = abjad.AfterGraceContainer([grace_note], tag=tag)
+        abjad.attach(container, leaf)
 
 
 def appoggiato_pitches_d_flat_3():
