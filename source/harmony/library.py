@@ -533,7 +533,7 @@ def unbeam(music, pattern=True):
     leaves = abjad.select.leaves(music)
     if pattern is not True:
         leaves = abjad.select.get(leaves, pattern)
-    rmakers.unbeam(leaves)
+    rmakers.unbeam_leaves(leaves)
 
 
 def untie(music, pattern=True):

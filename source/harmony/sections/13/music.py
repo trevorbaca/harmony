@@ -182,7 +182,8 @@ def VC1(voice, time_signatures):
         ["+", 2],
         time_signatures(4),
     )
-    rmakers.unbeam(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.unbeam_leaves(leaves)
     rhythm(
         voice,
         6 * [4],
@@ -205,7 +206,8 @@ def VC2(voice, time_signatures):
         ["+", 2],
         time_signatures(4),
     )
-    rmakers.unbeam(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.unbeam_leaves(leaves)
     rhythm(
         voice,
         6 * [4],
@@ -228,7 +230,8 @@ def CB1(voice, time_signatures):
         ["+", 2],
         time_signatures(4),
     )
-    rmakers.unbeam(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.unbeam_leaves(leaves)
     rhythm(
         voice,
         6 * [4],
@@ -251,7 +254,8 @@ def CB2(voice, time_signatures):
         ["+", 2],
         time_signatures(4),
     )
-    rmakers.unbeam(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.unbeam_leaves(leaves)
     rhythm(
         voice,
         6 * [4],
