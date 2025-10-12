@@ -212,7 +212,8 @@ def VA(voice, time_signatures):
         [-8, AG([2], 4), "-"],
         time_signatures(1, 2),
     )
-    rmakers.untie(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.untie_leaves(leaves)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -230,7 +231,8 @@ def VA(voice, time_signatures):
         [AG([2], 16), -12, AG([2], 4), -16, AG([2], 4), -8, AG([2], 4)],
         time_signatures(6, 9),
     )
-    rmakers.untie(components)
+    leaves = abjad.select.leaves(components)
+    rmakers.untie_leaves(leaves)
     mmrests(voice, time_signatures(10))
     rhythm(
         voice,

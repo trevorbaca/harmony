@@ -541,7 +541,7 @@ def untie(music, pattern=True):
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
     for pleaf in pleaves:
-        rmakers.untie([pleaf])
+        rmakers.untie_leaves([pleaf])
 
 
 def w(real_n, written_n):
