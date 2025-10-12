@@ -562,8 +562,8 @@ def written(music, pair, pattern):
     pleaves = baca.select.pleaves(music)
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
-    duration = abjad.Duration(*pair)
-    rmakers.written_duration(pleaves, duration)
+    written_duration = abjad.Duration(*pair)
+    rmakers.respell_leaves_written_duration_and_dmp(pleaves, written_duration)
 
 
 instruments = {
