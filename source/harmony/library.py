@@ -320,11 +320,11 @@ def make_phjc_rhythm(
         else:
             tuplets = abjad.select.get(tuplets, rest)
         leaves = abjad.select.leaves(tuplets)
-        rmakers.force_rest(leaves, tag=tag)
+        rmakers.replace_leaves_with_rests(leaves, tag=tag)
     if rest_pleaves is not None:
         pleaves = baca.select.pleaves(voice_)
         pleaves = abjad.select.get(pleaves, rest_pleaves)
-        rmakers.force_rest(pleaves, tag=tag)
+        rmakers.replace_leaves_with_rests(pleaves, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 8)
@@ -333,10 +333,10 @@ def make_phjc_rhythm(
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
     leaves = abjad.select.leaves(lists)
-    rmakers.force_rest(leaves, tag=tag)
+    rmakers.replace_leaves_with_rests(leaves, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
-    rmakers.force_rest(leaves, tag=tag)
+    rmakers.replace_leaves_with_rests(leaves, tag=tag)
     leaf_lists = [_[:] for _ in tuplets]
     rmakers.beam_runs(leaf_lists, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
@@ -380,7 +380,7 @@ def make_tessera(
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest_plt is not None:
         plt = baca.select.plt(voice_, rest_plt)
-        rmakers.force_rest(plt, tag=tag)
+        rmakers.replace_leaves_with_rests(plt, tag=tag)
     rmakers.extract_trivial_tuplets(tuplets)
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
@@ -414,10 +414,10 @@ def make_warble_rhythm(
     if rest is not None:
         tuplets = abjad.select.get(tuplets, rest)
         leaves = abjad.select.leaves(tuplets)
-        rmakers.force_rest(leaves, tag=tag)
+        rmakers.replace_leaves_with_rests(leaves, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
-    rmakers.force_rest(leaves, tag=tag)
+    rmakers.replace_leaves_with_rests(leaves, tag=tag)
     rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
     rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)

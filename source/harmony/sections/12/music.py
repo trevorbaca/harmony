@@ -297,7 +297,7 @@ def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=None):
     if rest_except is not None:
         leaves = abjad.select.leaves(voice_)
         leaves = abjad.select.exclude(leaves, rest_except)
-        rmakers.force_rest(leaves, tag=tag)
+        rmakers.replace_leaves_with_rests(leaves, tag=tag)
     rmakers.toggle_augmented_tuplets(tuplets)
     rmakers.extract_trivial_tuplets(tuplets)
     library._force_fraction(voice_)
