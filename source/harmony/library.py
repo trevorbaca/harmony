@@ -286,7 +286,9 @@ def make_one_beat_tuplets(
     )
     _force_fraction(voice_)
     leaves = abjad.select.leaves(voice_)
-    rmakers.force_repeat_tie(leaves, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.replace_ties_with_repeat_ties(
+        leaves, threshold=abjad.Duration(1, 8), tag=tag
+    )
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
@@ -329,7 +331,9 @@ def make_phjc_rhythm(
     rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 8)
     leaves = abjad.select.leaves(voice_)
-    rmakers.force_repeat_tie(leaves, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.replace_ties_with_repeat_ties(
+        leaves, threshold=abjad.Duration(1, 8), tag=tag
+    )
     plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
     leaves = abjad.select.leaves(lists)
@@ -386,7 +390,9 @@ def make_tessera(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
     leaves = abjad.select.leaves(voice_)
-    rmakers.force_repeat_tie(leaves, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.replace_ties_with_repeat_ties(
+        leaves, threshold=abjad.Duration(1, 8), tag=tag
+    )
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -500,7 +506,9 @@ def rhythm(
     leaf_lists = [_[:] for _ in tuplets]
     rmakers.beam_runs(leaf_lists)
     leaves = abjad.select.leaves(voice_)
-    rmakers.force_repeat_tie(leaves, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.replace_ties_with_repeat_ties(
+        leaves, threshold=abjad.Duration(1, 8), tag=tag
+    )
     _force_fraction(voice_)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
