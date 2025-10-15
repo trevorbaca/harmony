@@ -280,7 +280,7 @@ def make_one_beat_tuplets(
     rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
     rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
-    rmakers.extract_trivial(tuplets)
+    rmakers.extract_trivial_tuplets(tuplets)
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
@@ -340,7 +340,7 @@ def make_phjc_rhythm(
     leaf_lists = [_[:] for _ in tuplets]
     rmakers.beam_runs(leaf_lists, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
-    rmakers.extract_trivial(tuplets)
+    rmakers.extract_trivial_tuplets(tuplets)
     _force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
@@ -381,7 +381,7 @@ def make_tessera(
     if rest_plt is not None:
         plt = baca.select.plt(voice_, rest_plt)
         rmakers.force_rest(plt, tag=tag)
-    rmakers.extract_trivial(tuplets)
+    rmakers.extract_trivial_tuplets(tuplets)
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
@@ -424,7 +424,7 @@ def make_warble_rhythm(
     leaf_lists = [_[:] for _ in tuplets]
     rmakers.beam_runs(leaf_lists, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
-    rmakers.extract_trivial(tuplets)
+    rmakers.extract_trivial_tuplets(tuplets)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 16)
     _force_fraction(voice_)
     music = abjad.mutate.eject_contents(voice_)
