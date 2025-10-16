@@ -358,7 +358,7 @@ def CB1(voice, time_signatures):
         time_signatures(2),
     )
     leaves = abjad.select.leaves(components)
-    rmakers.untie_leaves(leaves)
+    rmakers.detach_ties_from_leaves(leaves)
     rhythm(
         voice,
         3 * [w(2, 4), h(w(2, 4))] + ["-"],

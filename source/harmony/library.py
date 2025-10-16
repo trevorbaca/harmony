@@ -141,7 +141,7 @@ def invisible(music, pattern=True):
     pleaves = baca.select.pleaves(music)
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
-    rmakers.invisible_music(pleaves, tag=tag)
+    rmakers.attach_invisible_music_commands_to_leaves(pleaves, tag=tag)
 
 
 def make_empty_score():
@@ -472,14 +472,14 @@ def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
 def repeat_tie(components):
     tag = baca.helpers.function_name(inspect.currentframe())
     for leaf in abjad.select.leaves(components):
-        rmakers.repeat_tie([leaf], tag=tag)
+        rmakers.attach_repeat_ties_to_pleaves([leaf], tag=tag)
 
 
 def repeat_tie_runs(components):
     tag = baca.helpers.function_name(inspect.currentframe())
     runs = abjad.select.runs(components)
     lists = [_[1:] for _ in runs]
-    rmakers.repeat_tie(lists, tag=tag)
+    rmakers.attach_repeat_ties_to_pleaves(lists, tag=tag)
 
 
 def rhythm(
@@ -543,7 +543,7 @@ def unbeam(music, pattern=True):
     leaves = abjad.select.leaves(music)
     if pattern is not True:
         leaves = abjad.select.get(leaves, pattern)
-    rmakers.unbeam_leaves(leaves)
+    rmakers.detach_beams_from_leaves(leaves)
 
 
 def untie(music, pattern=True):
@@ -551,7 +551,7 @@ def untie(music, pattern=True):
     if pattern is not True:
         pleaves = abjad.select.get(pleaves, pattern)
     for pleaf in pleaves:
-        rmakers.untie_leaves([pleaf])
+        rmakers.detach_ties_from_leaves([pleaf])
 
 
 def w(real_n, written_n):

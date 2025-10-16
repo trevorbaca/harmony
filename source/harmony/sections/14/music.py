@@ -213,7 +213,7 @@ def VA(voice, time_signatures):
         time_signatures(1, 2),
     )
     leaves = abjad.select.leaves(components)
-    rmakers.untie_leaves(leaves)
+    rmakers.detach_ties_from_leaves(leaves)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -232,7 +232,7 @@ def VA(voice, time_signatures):
         time_signatures(6, 9),
     )
     leaves = abjad.select.leaves(components)
-    rmakers.untie_leaves(leaves)
+    rmakers.detach_ties_from_leaves(leaves)
     mmrests(voice, time_signatures(10))
     rhythm(
         voice,

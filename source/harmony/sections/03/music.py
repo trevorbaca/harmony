@@ -252,7 +252,7 @@ def VC2(voice, time_signatures):
         time_signatures(6, 8),
     )
     leaves = abjad.select.leaves(components)
-    rmakers.untie_leaves(leaves)
+    rmakers.detach_ties_from_leaves(leaves)
     library.after_grace_each_run(components)
 
 
@@ -305,7 +305,7 @@ def CB2(voice, time_signatures):
         time_signatures(6, 8),
     )
     leaves = abjad.select.leaves(components)
-    rmakers.untie_leaves(leaves)
+    rmakers.detach_ties_from_leaves(leaves)
     library.after_grace_each_run(components)
 
 
