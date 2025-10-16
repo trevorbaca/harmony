@@ -342,7 +342,7 @@ def make_phjc_rhythm(
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.replace_leaves_with_rests(leaves, tag=tag)
     leaf_lists = [_[:] for _ in tuplets]
-    rmakers.beam_runs(leaf_lists, tag=tag)
+    rmakers.attach_beams_to_runs_by_leaf_list(leaf_lists, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     rmakers.extract_trivial_tuplets(tuplets)
     _force_fraction(voice_)
@@ -428,7 +428,7 @@ def make_warble_rhythm(
     rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaf_lists = [_[:] for _ in tuplets]
-    rmakers.beam_runs(leaf_lists, tag=tag)
+    rmakers.attach_beams_to_runs_by_leaf_list(leaf_lists, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     rmakers.extract_trivial_tuplets(tuplets)
     baca.rhythm.set_tuplet_ratios_in_terms_of(voice_, 16)
@@ -504,7 +504,7 @@ def rhythm(
     )
     tuplets = abjad.select.tuplets(voice_)
     leaf_lists = [_[:] for _ in tuplets]
-    rmakers.beam_runs(leaf_lists)
+    rmakers.attach_beams_to_runs_by_leaf_list(leaf_lists)
     leaves = abjad.select.leaves(voice_)
     rmakers.replace_ties_with_repeat_ties(
         leaves, threshold=abjad.Duration(1, 8), tag=tag
