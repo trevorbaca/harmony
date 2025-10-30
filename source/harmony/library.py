@@ -275,7 +275,9 @@ def make_one_beat_tuplets(
     durations = abjad.duration.durations(time_signatures)
     durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
-    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
+    tuplets = rmakers.make_talea_tuplets(
+        durations, counts, 16, extra_counts=extra_counts, tag=tag
+    )
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     rmakers.rewrite_rest_filled_tuplets(tuplets, tag=tag)
     rmakers.rewrite_sustained_tuplets(tuplets, tag=tag)
@@ -313,7 +315,9 @@ def make_phjc_rhythm(
     durations = [abjad.sequence.flatten(_) for _ in durations]
     durations = [sum(_) for _ in durations]
     tag = baca.helpers.function_name(inspect.currentframe())
-    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
+    tuplets = rmakers.make_talea_tuplets(
+        durations, counts, 16, extra_counts=extra_counts, tag=tag
+    )
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
         tuplets = abjad.select.tuplets(voice_)
@@ -380,7 +384,9 @@ def make_tessera(
         counts = list(new_counts)
     tag = baca.helpers.function_name(inspect.currentframe())
     durations = abjad.duration.durations(time_signatures)
-    tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
+    tuplets = rmakers.make_talea_tuplets(
+        durations, counts, 16, advance=advance, tag=tag
+    )
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest_plt is not None:
         plt = baca.select.plt(voice_, rest_plt)
@@ -415,7 +421,9 @@ def make_warble_rhythm(
             durations, divisions_, cyclic=True, overhang=True
         )
     durations = abjad.sequence.flatten(durations, depth=-1)
-    tuplets = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
+    tuplets = rmakers.make_talea_tuplets(
+        durations, [1], 32, extra_counts=extra_counts, tag=tag
+    )
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
         tuplets = abjad.select.get(tuplets, rest)
